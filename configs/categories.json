@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "category_scope": "whole_fashion_instances",
+  "categories": [
+    {"id": 1, "name": "top", "name_zh": "上衣"},
+    {"id": 2, "name": "pants", "name_zh": "裤子"},
+    {"id": 3, "name": "skirt", "name_zh": "裙子"},
+    {"id": 4, "name": "outerwear", "name_zh": "外套"},
+    {"id": 5, "name": "dress", "name_zh": "连衣裙"},
+    {"id": 6, "name": "shoes", "name_zh": "鞋子"},
+    {"id": 7, "name": "bag", "name_zh": "包包"},
+    {"id": 8, "name": "accessory", "name_zh": "配饰"}
+  ],
+  "source_mapping_status": "to_be_implemented_and_reviewed"
+}

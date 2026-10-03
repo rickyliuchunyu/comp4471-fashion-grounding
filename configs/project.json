@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "course": ["COMP 4471", "ELEC 4240"],
+  "term": "Fall 2026",
+  "team_size": 3,
+  "team_assignments": "undecided",
+  "repository_visibility": "public",
+  "status": "planning_documents_created",
+  "runtime_implemented": false,
+  "scope": {
+    "segmentation_classes": 8,
+    "grounding_target": "single_whole_fashion_instance",
+    "part_localization_in_core_scope": false,
+    "query_languages": ["zh", "en"]
+  },
+  "compute_recommendation": {
+    "platform": "AutoDL",
+    "instance_type": "standard_container",
+    "gpu": "RTX 3090",
+    "gpu_count": 1,
+    "gpu_memory_gb": 24,
+    "billing": "pay_as_you_go",
+    "instance_created": false,
+    "environment_verified": false
+  },
+  "models": {
+    "segmentation": "public_pretrained_Mask2Former_R50_then_new_finetuning",
+    "candidate_visual_encoder": "DINOv2_ViT_S14",
+    "candidate_text_encoder": "BGE_M3",
+    "learned_alignment_required": true,
+    "trained": false
+  },
+  "deadlines": {
+    "proposal": "2026-10-05T23:59:00+08:00",
+    "milestone": "2026-11-06T23:59:00+08:00",
+    "final_report": "2026-12-05T23:59:00+08:00"
+  }
+}
