@@ -1,0 +1,7 @@
+experiment_id,owner,description,git_commit,config_path,data_manifest_sha256,seed,weights_origin,run_dir,mask_ap,target_selection_accuracy,mean_target_mask_iou,mean_latency_ms,p95_latency_ms,status
+S1,,single_source_vs_mixed_source,,,,,,,,,,,,planned
+S2,,source_sampling_ablation,,,,,,,,,,,,planned
+S3,,precision_or_resolution_ablation,,,,,,,,,,,,planned
+L1,,category_and_position_rules,,,,,,,,,,,,planned
+L2,,learned_region_text_matching,,,,,,,,,,,,planned
+L3,,explicit_spatial_feature_ablation,,,,,,,,,,,,planned
