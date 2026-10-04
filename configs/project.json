@@ -5,7 +5,9 @@
   "team_size": 3,
   "team_assignments": "undecided",
   "repository_visibility": "public",
-  "status": "planning_documents_created",
+  "status": "technical_specification_created_runtime_not_implemented",
+  "technical_plan_config": "configs/training_plan.json",
+  "source_mapping_config": "configs/source_category_mapping.json",
   "runtime_implemented": false,
   "scope": {
     "segmentation_classes": 8,

@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
   "illustrative_only": true,
-  "image_id": "example-image-001",
+  "image_id": 100001,
   "image_size_wh": [1000, 800],
   "query": "左边的包",
   "status": "illustrative_success",
   "selected_candidate": {
     "candidate_id": "example-prediction-bag-left",
+    "decoder_query_id": 12,
     "category_id": 7,
     "category_name": "bag",
     "bbox_xyxy": [100, 250, 300, 550],

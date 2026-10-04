@@ -2,6 +2,9 @@ experiment_id,owner,description,git_commit,config_path,data_manifest_sha256,seed
 S1,,single_source_vs_mixed_source,,,,,,,,,,,,planned
 S2,,source_sampling_ablation,,,,,,,,,,,,planned
 S3,,precision_or_resolution_ablation,,,,,,,,,,,,planned
+S4,,naive_vs_source_aware_partial_label_loss,,,,,,,,,,,,planned
 L1,,category_and_position_rules,,,,,,,,,,,,planned
 L2,,learned_region_text_matching,,,,,,,,,,,,planned
 L3,,explicit_spatial_feature_ablation,,,,,,,,,,,,planned
+L4,,mask_pooling_vs_crop_cls_optional,,,,,,,,,,,,planned
+L5,,counterfactual_query_diagnostic,,,,,,,,,,,,planned

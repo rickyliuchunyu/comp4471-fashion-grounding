@@ -11,5 +11,6 @@
     {"id": 7, "name": "bag", "name_zh": "包包"},
     {"id": 8, "name": "accessory", "name_zh": "配饰"}
   ],
-  "source_mapping_status": "to_be_implemented_and_reviewed"
+  "source_mapping_status": "source_ids_verified_project_mapping_proposed_converter_not_implemented",
+  "source_mapping_config": "configs/source_category_mapping.json"
 }

@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "status": "proposed_not_runtime_config",
+  "runtime_implemented": false,
+  "environment_verified": false,
+  "measured_gpu_memory_gb": null,
+  "required_before_running": [
+    "Pin base code commits and environment versions after compatibility check.",
+    "Download checkpoints and record URL, revision and SHA256.",
+    "Implement and verify the source-aware criterion before mixed training.",
+    "Freeze data manifests and mapping version.",
+    "Run a smoke check and record peak GPU memory."
+  ],
+  "data": {
+    "mapping_config": "configs/source_category_mapping.json",
+    "split_seed": 2026,
+    "validation_dev_fraction": 0.5,
+    "grounding_source": "fashionpedia",
+    "annotation_targets": {
+      "train_images": 600,
+      "dev_images": 150,
+      "test_images": 150,
+      "semantic_queries_per_image": 2,
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "counts_are_planned": true
+    }
+  },
+  "segmentation": {
+    "architecture": "Mask2Former_R50_instance",
+    "project_num_classes": 8,
+    "no_object_training_id": 8,
+    "num_queries": 100,
+    "hidden_dim": 256,
+    "num_attention_heads": 8,
+    "decoder_predictions_including_initial": 10,
+    "weights_origin": "public_COCO_instance_checkpoint_to_be_selected",
+    "checkpoint_url": null,
+    "checkpoint_sha256": null,
+    "classifier_init": "xavier_uniform_weight_zero_bias",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "backbone_lr_multiplier": 0.1,
+    "weight_decay": 0.05,
+    "images_per_optimizer_update": 2,
+    "microbatch_images": 2,
+    "accumulation_steps": 1,
+    "max_optimizer_updates": 20000,
+    "warmup_updates": 500,
+    "warmup_start_lr_factor": 0.001,
+    "lr_milestone_updates": [
+      12000,
+      16000
+    ],
+    "lr_decay": 0.1,
+    "amp": true,
+    "gradient_clip_full_model_norm": 0.01,
+    "gradient_clip_norm_type": 2,
+    "lsj_output_size": 768,
+    "lsj_scale_range": [
+      0.1,
+      2
+    ],
+    "rgb_input_range": [
+      0,
+      255
+    ],
+    "pixel_mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "pixel_std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "class_loss_weight": 2,
+    "mask_bce_loss_weight": 5,
+    "dice_loss_weight": 5,
+    "no_object_query_weight": 0.1,
+    "train_num_points": 12544,
+    "oversample_ratio": 3,
+    "importance_sample_ratio": 0.75,
+    "auxiliary_loss": true,
+    "mixed_unmatched_classification": "partial_label_log_probability",
+    "df2_unmatched_allowed_training_ids": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_sampling": {
+      "fashionpedia": 0.5,
+      "deepfashion2": 0.5
+    },
+    "seed": 42,
+    "dev_evaluation_interval_updates": 2000
+  },
+  "candidates": {
+    "decoder": "one_foreground_class_per_query",
+    "mask_logit_threshold": 0,
+    "score_threshold": 0.5,
+    "dev_score_threshold_options": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "max_candidates": 100,
+    "mask_nms": false,
+    "empty_mask_policy": "discard",
+    "coco_ap_decoder": "upstream_instance_inference"
+  },
+  "visual_encoder": {
+    "model": "dinov2_vits14",
+    "frozen": true,
+    "feature_dim": 384,
+    "patch_size": 14,
+    "long_edge": 518,
+    "pad_right_bottom_to_multiple": 14,
+    "rgb_input_range": [
+      0,
+      1
+    ],
+    "pixel_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "pixel_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "pooling": "area_weighted_mask_patch_pooling",
+    "pooling_epsilon": 0.000001,
+    "zero_pool_fallback": "expanded_crop_cls",
+    "crop_margin_per_side_fraction": 0.2,
+    "checkpoint_revision": null
+  },
+  "text_encoder": {
+    "model": "BAAI/bge-m3",
+    "representation": "dense",
+    "frozen": true,
+    "feature_dim": 1024,
+    "max_tokens": 128,
+    "truncation_policy": "reject_for_review",
+    "checkpoint_revision": null
+  },
+  "grounding": {
+    "visual_projection_dims": [
+      384,
+      256,
+      256
+    ],
+    "text_projection_dims": [
+      1024,
+      512,
+      256
+    ],
+    "hidden_activation": "GELU",
+    "projection_hidden_dropout": 0.1,
+    "l2_normalize_projected": true,
+    "temperature": 0.07,
+    "dev_temperature_options": [
+      0.03,
+      0.07,
+      0.1
+    ],
+    "hard_category_filter": false,
+    "geometry_dim": 12,
+    "geometry_embedding_dims": [
+      12,
+      64,
+      64
+    ],
+    "text_geometry_ranker_dims": [
+      320,
+      128,
+      1
+    ],
+    "loss": "within_image_target_cross_entropy",
+    "exclude_single_candidate_queries_from_training": true,
+    "desired_same_class_hard_query_fraction": 0.5,
+    "max_candidates": 100,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "batch_queries": 32,
+    "max_epochs": 30,
+    "early_stopping_patience_epochs": 5,
+    "checkpoint_selection": "oracle_dev_selection_accuracy",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "stage_b_predicted_candidate_adaptation": false,
+    "cache_projected_features": false
+  },
+  "evaluation": {
+    "prediction_gt_matching": "confidence_greedy_same_class_mask_iou",
+    "match_iou_threshold": 0.5,
+    "success_mask_iou_threshold": 0.5,
+    "bootstrap_unit": "image",
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 42,
+    "latency_warmup_repetitions": 20,
+    "latency_measured_repetitions": 100,
+    "gpu_synchronization": true,
+    "run_final_test_after_method_lock": true
+  }
+}
