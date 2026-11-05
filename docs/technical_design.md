@@ -132,6 +132,8 @@ rank 在同候选类别内计算为 0–1 次序；单实例取 0.5，坐标并�
 
 E1 优先使用 [SAM 3](https://github.com/facebookresearch/sam3)，需检查权重访问与运行环境。否则在正式测试前登记替代为 [Grounding DINO + SAM 2](https://github.com/IDEA-Research/Grounded-SAM-2)。完整描述输入，默认取置信度最高的非空实例，固定 tie-break；不使用 GT 框、点或最佳 IoU 挑选输出。原生中文与固定翻译流程如都测试，分别命名和计时。概念的全部实例分割不自动等于唯一实例指代能力。
 
+扩展的实施范围与优先级见 [扩展计划](extension_plan.md)：优先细化 X3 区域输入对照，并复用既有语言诊断；交互纠正、拒绝与多目标仅为独立可选任务，不修改本文的单目标输出和排序损失。
+
 X1 保留 DINOv2 ViT-S/14 + BGE-M3 投影对照，可参考历史提交的实现设计；将其应用到当前相同数据、候选和预算后才构成有效对照。X2 数据效率，X3 mask 背景抑制，X4 英文 Marqo-FashionSigLIP，X5 DeepFashion2 共有五类分割实验，详见实验计划。
 
 X5 的 FP-only 与 FP+DF2 都使用相同五类头、匹配训练预算、初始化和评估类别。两源都只把共有五类定义为前景，其他类别不进入前景标注和 AP；这是五类任务的范围选择，不是保留八类头却缺少三类正监督。这套实验不能直接冒充八类 S0。当前不实现八类 source-aware partial-label loss。
