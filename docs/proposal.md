@@ -1,4 +1,6 @@
-# 自然语言引导的八类服饰实例分割 Proposal 草稿
+# 历史 Proposal 草稿（2026-10-04）
+
+> 本文保留早期草稿供追溯，不是用户提供的已提交版本，也不是当前实施方案。实际提交正文见 [提交版](proposal_submitted.md)，当前变化见 [2026-11-05 调整](revision_20261105.md)。以下日期、待办及方法均为历史内容。
 
 英文标题：Natural Language Guided Selection of Fashion Instances
 

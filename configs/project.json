@@ -1,6 +1,9 @@
 {
-  "schema_version": 1,
-  "course": ["COMP 4471", "ELEC 4240"],
+  "schema_version": 2,
+  "course": [
+    "COMP 4471",
+    "ELEC 4240"
+  ],
   "term": "Fall 2026",
   "team_size": 3,
   "team_assignments": "undecided",
@@ -13,28 +16,44 @@
     "segmentation_classes": 8,
     "grounding_target": "single_whole_fashion_instance",
     "part_localization_in_core_scope": false,
-    "query_languages": ["zh", "en"]
+    "query_languages": [
+      "zh",
+      "en"
+    ]
   },
   "compute_recommendation": {
-    "platform": "AutoDL",
-    "instance_type": "standard_container",
-    "gpu": "RTX 3090",
     "gpu_count": 1,
     "gpu_memory_gb": 24,
-    "billing": "pay_as_you_go",
+    "platform": null,
     "instance_created": false,
-    "environment_verified": false
+    "environment_verified": false,
+    "budget_confirmed": false
   },
   "models": {
-    "segmentation": "public_pretrained_Mask2Former_R50_then_new_finetuning",
-    "candidate_visual_encoder": "DINOv2_ViT_S14",
-    "candidate_text_encoder": "BGE_M3",
-    "learned_alignment_required": true,
+    "segmentation": "public_pretrained_Mask2Former_R50_finetune_on_Fashionpedia",
+    "vision_language_encoder": "google/siglip2-base-patch16-224",
+    "frozen_dual_encoder": true,
+    "grounding": "appearance_residual_ranker_plus_optional_text_conditioned_geometry",
+    "original_dinov2_bge_m3": "optional_X1_comparison",
+    "external_baseline": "E1_SAM3_or_GroundingDINO_plus_SAM2_selected_before_test",
     "trained": false
   },
   "deadlines": {
     "proposal": "2026-10-05T23:59:00+08:00",
     "milestone": "2026-11-06T23:59:00+08:00",
     "final_report": "2026-12-05T23:59:00+08:00"
-  }
+  },
+  "plan_version": "2026-11-05",
+  "revision_document": "docs/revision_20261105.md",
+  "proposal": {
+    "status": "submitted_as_reported_by_user",
+    "body_record": "docs/proposal_submitted.md",
+    "independently_verified_submission_receipt": false
+  },
+  "research_questions": [
+    "zero_shot_region_text_matching",
+    "small_data_fashion_adaptation",
+    "learned_spatial_features_vs_rules_and_candidate_error_decomposition"
+  ],
+  "deadline_verification": "historical_course_record_current_page_login_required_2026_11_05"
 }

@@ -1,8 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "illustrative_only": true,
   "image_id": 100001,
-  "image_size_wh": [1000, 800],
+  "image_size_wh": [
+    1000,
+    800
+  ],
   "query": "左边的包",
   "status": "illustrative_success",
   "selected_candidate": {
@@ -10,11 +13,19 @@
     "decoder_query_id": 12,
     "category_id": 7,
     "category_name": "bag",
-    "bbox_xyxy": [100, 250, 300, 550],
+    "bbox_xyxy": [
+      100,
+      250,
+      300,
+      550
+    ],
     "bbox_right_bottom_exclusive": true,
     "mask_reference": "illustrative-placeholder-no-mask-file",
     "segmentation_confidence": null,
     "grounding_score": null
   },
-  "run_id": "illustrative-no-model-run"
+  "run_id": "illustrative-no-model-run",
+  "method_id": "M2",
+  "candidate_source": "illustrative_not_real_prediction",
+  "plan_version": "2026-11-05"
 }

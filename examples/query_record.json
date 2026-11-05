@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "illustrative_only": true,
   "query_id": "example-query-001",
   "semantic_query_id": "example-semantic-001",
@@ -12,10 +12,19 @@
   "target_instance_id": 700001,
   "target_category_id": 7,
   "same_category_instance_count": 2,
-  "query_types": ["category", "spatial"],
+  "query_types": [
+    "category",
+    "spatial"
+  ],
   "spatial_reference": "image_view",
   "annotation_version": "illustrative-v1",
   "annotator": "example-person-A",
   "reviewer": "example-person-B",
-  "review_status": "illustrative_not_real_annotation"
+  "review_status": "illustrative_not_real_annotation",
+  "target_source_category_id": 24,
+  "target_source_category_name": "bag, wallet",
+  "same_source_category_instance_count": 2,
+  "authorship": "illustrative_human_example",
+  "template_family": null,
+  "paraphrase_group_id": null
 }

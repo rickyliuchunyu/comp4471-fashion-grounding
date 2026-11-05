@@ -1,32 +1,52 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "proposed_not_runtime_config",
   "runtime_implemented": false,
   "environment_verified": false,
   "measured_gpu_memory_gb": null,
   "required_before_running": [
-    "Pin base code commits and environment versions after compatibility check.",
-    "Download checkpoints and record URL, revision and SHA256.",
-    "Implement and verify the source-aware criterion before mixed training.",
-    "Freeze data manifests and mapping version.",
-    "Run a smoke check and record peak GPU memory."
+    "Implement the pipeline; this JSON is a plan, not an executable training config.",
+    "Pin base code, checkpoint revisions and processor after compatibility checks.",
+    "Freeze image-group splits, annotation provenance and manifests.",
+    "Verify shared SigLIP feature dimension and reconstruct upstream logits.",
+    "Run smoke checks and measure peak memory before fixing compute budget."
   ],
   "data": {
     "mapping_config": "configs/source_category_mapping.json",
     "split_seed": 2026,
-    "validation_dev_fraction": 0.5,
     "grounding_source": "fashionpedia",
-    "annotation_targets": {
-      "train_images": 600,
-      "dev_images": 150,
-      "test_images": 150,
-      "semantic_queries_per_image": 2,
-      "languages": [
-        "zh",
-        "en"
+    "segmentation_source": "fashionpedia",
+    "preserve_official_split_boundaries": true,
+    "official_validation_policy": "group_disjoint_dev_and_project_holdout_remainder_unused",
+    "image_targets": {
+      "pilot_train": [
+        100,
+        200
       ],
-      "counts_are_planned": true
-    }
+      "segmentation_train": [
+        5000,
+        10000
+      ],
+      "grounding_train": [
+        800,
+        1200
+      ],
+      "dev": [
+        200,
+        300
+      ],
+      "project_test": [
+        300,
+        500
+      ]
+    },
+    "semantic_queries_per_image_soft_target": 2,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "test_authorship": "independently_human_authored_and_cross_reviewed",
+    "counts_are_planned": true
   },
   "segmentation": {
     "architecture": "Mask2Former_R50_instance",
@@ -85,19 +105,13 @@
     "oversample_ratio": 3,
     "importance_sample_ratio": 0.75,
     "auxiliary_loss": true,
-    "mixed_unmatched_classification": "partial_label_log_probability",
-    "df2_unmatched_allowed_training_ids": [
-      5,
-      6,
-      7,
-      8
-    ],
     "source_sampling": {
-      "fashionpedia": 0.5,
-      "deepfashion2": 0.5
+      "fashionpedia": 1.0
     },
     "seed": 42,
-    "dev_evaluation_interval_updates": 2000
+    "dev_evaluation_interval_updates": 2000,
+    "classification_loss": "upstream_cross_entropy",
+    "experiment_id": "S0"
   },
   "candidates": {
     "decoder": "one_foreground_class_per_query",
@@ -113,78 +127,50 @@
     "empty_mask_policy": "discard",
     "coco_ap_decoder": "upstream_instance_inference"
   },
-  "visual_encoder": {
-    "model": "dinov2_vits14",
-    "frozen": true,
-    "feature_dim": 384,
-    "patch_size": 14,
-    "long_edge": 518,
-    "pad_right_bottom_to_multiple": 14,
-    "rgb_input_range": [
-      0,
-      1
-    ],
-    "pixel_mean": [
-      0.485,
-      0.456,
-      0.406
-    ],
-    "pixel_std": [
-      0.229,
-      0.224,
-      0.225
-    ],
-    "pooling": "area_weighted_mask_patch_pooling",
-    "pooling_epsilon": 0.000001,
-    "zero_pool_fallback": "expanded_crop_cls",
-    "crop_margin_per_side_fraction": 0.2,
-    "checkpoint_revision": null
-  },
-  "text_encoder": {
-    "model": "BAAI/bge-m3",
-    "representation": "dense",
-    "frozen": true,
-    "feature_dim": 1024,
-    "max_tokens": 128,
-    "truncation_policy": "reject_for_review",
-    "checkpoint_revision": null
-  },
   "grounding": {
-    "visual_projection_dims": [
-      384,
-      256,
-      256
+    "core_methods": [
+      "B0",
+      "B1",
+      "B2",
+      "M1",
+      "M2"
     ],
-    "text_projection_dims": [
-      1024,
-      512,
-      256
-    ],
-    "hidden_activation": "GELU",
-    "projection_hidden_dropout": 0.1,
-    "l2_normalize_projected": true,
-    "temperature": 0.07,
-    "dev_temperature_options": [
-      0.03,
-      0.07,
-      0.1
-    ],
-    "hard_category_filter": false,
+    "appearance_ranker": {
+      "input": "concat(v,t,v*t)",
+      "input_dim_expression": "3*D",
+      "hidden_dim": 256,
+      "output_dim": 1,
+      "activation": "GELU",
+      "dropout": 0.1,
+      "final_layer_zero_init": true
+    },
     "geometry_dim": 12,
     "geometry_embedding_dims": [
       12,
       64,
       64
     ],
-    "text_geometry_ranker_dims": [
-      320,
-      128,
-      1
+    "geometry_ranker": {
+      "input_dim_expression": "D+64",
+      "hidden_dim": 128,
+      "output_dim": 1,
+      "activation": "GELU",
+      "final_layer_zero_init": true
+    },
+    "geometry_ties": "average_rank",
+    "geometry_singleton_rank": 0.5,
+    "hard_category_filter_learned_methods": false,
+    "b2_rule_weight_dev_options": [
+      0,
+      1,
+      2,
+      5,
+      10
     ],
+    "b2_selected_rule_weight": null,
     "loss": "within_image_target_cross_entropy",
     "exclude_single_candidate_queries_from_training": true,
     "desired_same_class_hard_query_fraction": 0.5,
-    "max_candidates": 100,
     "optimizer": "AdamW",
     "learning_rate": 0.0003,
     "weight_decay": 0.01,
@@ -198,7 +184,7 @@
       44
     ],
     "stage_b_predicted_candidate_adaptation": false,
-    "cache_projected_features": false
+    "cache_trainable_outputs": false
   },
   "evaluation": {
     "prediction_gt_matching": "confidence_greedy_same_class_mask_iou",
@@ -210,6 +196,80 @@
     "latency_warmup_repetitions": 20,
     "latency_measured_repetitions": 100,
     "gpu_synchronization": true,
-    "run_final_test_after_method_lock": true
+    "run_final_test_after_method_lock": true,
+    "coverage_metrics": [
+      "class_agnostic_geometric_recall_at_0_5",
+      "one_to_one_same_class_matched_coverage"
+    ]
+  },
+  "plan_version": "2026-11-05",
+  "vision_language_encoder": {
+    "model": "google/siglip2-base-patch16-224",
+    "checkpoint_revision": null,
+    "checkpoint_sha256": null,
+    "processor_revision": null,
+    "frozen": true,
+    "feature_dim": null,
+    "feature_dim_policy": "read_config_and_assert_equal_image_text_forward_dimensions",
+    "image_input": "tight_candidate_bbox_rgb_crop_then_official_processor",
+    "image_size": 224,
+    "mask_background_suppression": false,
+    "normalize_features": true,
+    "score": "exp(checkpoint_logit_scale)*dot(v,t)+checkpoint_logit_bias",
+    "logit_scale_bias_frozen": true,
+    "text_length_policy": "checkpoint_processor_recipe_reject_overlength_no_silent_truncation",
+    "max_text_tokens": null,
+    "native_languages": [
+      "zh",
+      "en"
+    ]
+  },
+  "external_baseline": {
+    "experiment_id": "E1",
+    "preferred": "SAM3",
+    "fallback": "GroundingDINO_plus_SAM2",
+    "selected_system": null,
+    "checkpoint_revision": null,
+    "selection_policy": "highest_confidence_nonempty_mask_stable_index_tiebreak",
+    "input_prompt": "full_query",
+    "use_ground_truth_prompts": false,
+    "translation_mode": "separate_experiment_if_used",
+    "select_on_dev_before_test": true
+  },
+  "optional_experiments": {
+    "X1": {
+      "description": "dinov2_bge_m3_original_method_comparison",
+      "enabled": false
+    },
+    "X2": {
+      "description": "image_level_language_data_efficiency",
+      "enabled": false
+    },
+    "X3": {
+      "description": "crop_vs_mask_background_suppression",
+      "enabled": false
+    },
+    "X4": {
+      "description": "english_fashion_encoder_comparison",
+      "enabled": false
+    },
+    "X5": {
+      "description": "shared_five_class_fp_vs_fp_df2",
+      "enabled": false,
+      "project_category_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classifier_num_classes": 5,
+      "source_aware_eight_class_loss": false,
+      "fp_non_target_policy": "excluded_from_foreground_and_AP_in_the_five_class_task",
+      "mixed_source_sampling": {
+        "fashionpedia": 0.5,
+        "deepfashion2": 0.5
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 # 课程要求与交付
 
-来源：[COMP 4471 / ELEC 4240 课程项目页面](https://course.cse.ust.hk/comp4471/project.html)。以下为 2026 年 10 月 3 日读取的要求整理，提交前再检查课程页面与 Canvas 通知。时间均为香港时间。
+来源：[COMP 4471 / ELEC 4240 课程项目页面](https://course.cse.ust.hk/comp4471/project.html)。以下为 2026 年 10 月 3 日读取的要求整理，提交前再检查课程页面与 Canvas 通知。时间均为香港时间。2026-11-05 再次请求课程页面返回登录限制，以下截止和格式沿用先前记录，尚未重新核实；提交前以 Canvas 最新通知为准。
 
 ## 提交内容
 
@@ -34,7 +34,7 @@
 
 ## 当前提交准备状态
 
-- 已有 [Proposal 草稿](proposal.md)，英文正文为一个段落。
-- 三名成员信息待填写，提交前由三人核对范围。
-- 尚未提交 Canvas，尚无 Milestone 或 Final 新实验结果。
+- 用户已提供并说明提交过 proposal；正文存于 [提交版](proposal_submitted.md)，不等于独立核验 Canvas 回执。
+- [早期草稿](proposal.md) 作为历史保留，当前执行方案见 [调整记录](revision_20261105.md)。
+- 仓库目前仍为计划与接口规范，没有课程模型运行结果；milestone/final 的实际提交状态未在此核验。
 - [实验计划](experiment_plan.md) 是后续执行依据，不是已完成的实验报告。
