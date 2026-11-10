@@ -2,24 +2,29 @@
 
 版本 `2026-11-05`。本文是待实现规范，当前没有以下运行入口。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
 
+2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下仍为待实现接口。
+
 ## 1. 建议结构
 
 ```text
 src/fashion_grounding/             # 待创建
+  data/schema.py                  # 公共读写和验证，data_eval 维护
   data/convert.py                 # FP 八类转换，保留源细类
   data/splits.py                  # 去重、分组和冻结 manifest
   data/queries.py                 # 双语、改写、唯一目标和复核检查
   segmentation/train.py          # Mask2Former 官方 trainer 适配
   segmentation/predict.py        # 固定候选解码与原图 mask
   encoders/siglip.py              # 对应 revision 的双编码器和 processor
-  grounding/rules.py              # B0 类别规则、B2 方位分数
+  baselines/category_position.py # B0，data_eval 负责
+  grounding/rules.py              # B2 方位分数，grounding 负责
   grounding/heads.py              # M1 残差与 M2 空间网络
   grounding/train.py              # 冻结特征上的排序训练
   external/predict.py             # E1 独立系统适配，不读取 GT
   evaluation/matching.py          # 同类一对一关联
   evaluation/metrics.py           # IoU、选择、覆盖、配对与分组统计
   evaluation/latency.py           # 首次与缓存场景
-  demo/app.py                    # 图片、文字、叠图与错误状态
+  pipeline.py                    # 最小接通，segmentation 协调
+  demo/app.py                    # 图片、文字、叠图与错误状态，data_eval 负责
 ```
 
 不新增主线 source-aware criterion。X5 若启用，另建两源一致的五类前景训练/评估配置，验证后再登记。
@@ -65,7 +70,7 @@ CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用�
 
 每个 run_id 对应独立目录，保存 resolved_config、environment、源码 commit、权重来源与 hash、数据 manifest hash、训练日志、dev/test 指标、全查询预测及失败状态、latency 和错误案例。final test 仅在锁定方案后生成。checkpoint 保存 optimizer/scheduler/scaler 和随机状态；恢复日志记录起始 update，不拼接不同训练。
 
-只将小型配置、指标与证据索引提交 GitHub。图片、权重、缓存和大输出使用团队共享存储，当前位置待定。
+只将小型配置、指标与证据索引提交 GitHub。图片、权重、缓存和大输出按 [AutoDL 目录规划](team_workflow.md#7-autodl-与多-codex-同时工作) 组织，实际实例和目录仍待创建与验证。
 
 ## 4. 实现检查顺序
 

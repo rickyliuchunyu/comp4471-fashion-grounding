@@ -6,7 +6,7 @@
   ],
   "term": "Fall 2026",
   "team_size": 3,
-  "team_assignments": "undecided",
+  "team_assignments": "provisional_2026-11-10",
   "repository_visibility": "public",
   "status": "technical_specification_created_runtime_not_implemented",
   "technical_plan_config": "configs/training_plan.json",
@@ -24,10 +24,11 @@
   "compute_recommendation": {
     "gpu_count": 1,
     "gpu_memory_gb": 24,
-    "platform": null,
+    "platform": "AutoDL",
     "instance_created": false,
     "environment_verified": false,
-    "budget_confirmed": false
+    "budget_confirmed": false,
+    "platform_selected_by_user": true
   },
   "models": {
     "segmentation": "public_pretrained_Mask2Former_R50_finetune_on_Fashionpedia",
@@ -55,5 +56,31 @@
     "small_data_fashion_adaptation",
     "learned_spatial_features_vs_rules_and_candidate_error_decomposition"
   ],
-  "deadline_verification": "historical_course_record_current_page_login_required_2026_11_05"
+  "deadline_verification": "historical_course_record_current_page_login_required_2026_11_05",
+  "team_assignment_details": {
+    "status": "provisional",
+    "document": "docs/team_workflow.md",
+    "roles": {
+      "segmentation": {
+        "member_name": "Liu Chunyu",
+        "github_username": "rickyliuchunyu",
+        "task_document": "docs/roles/segmentation.md"
+      },
+      "grounding": {
+        "member_label": "member_A",
+        "member_name": null,
+        "github_username": null,
+        "task_document": "docs/roles/grounding.md"
+      },
+      "data_eval": {
+        "member_label": "member_B",
+        "member_name": null,
+        "github_username": null,
+        "task_document": "docs/roles/data_eval.md"
+      }
+    },
+    "github_collaborator_access_verified": false,
+    "ssh_access_verified": false,
+    "shared_annotation_and_cross_review": true
+  }
 }
