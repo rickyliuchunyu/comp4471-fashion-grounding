@@ -25,10 +25,14 @@
     "gpu_count": 1,
     "gpu_memory_gb": 24,
     "platform": "AutoDL",
-    "instance_created": false,
+    "instance_created": true,
     "environment_verified": false,
     "budget_confirmed": false,
-    "platform_selected_by_user": true
+    "platform_selected_by_user": true,
+    "inventory_document": "docs/handoffs/segmentation/server_inventory.md",
+    "observed_gpu": "NVIDIA GeForce RTX 3090",
+    "basic_torch_cuda_detection_verified": true,
+    "model_forward_backward_verified": false
   },
   "models": {
     "segmentation": "public_pretrained_Mask2Former_R50_finetune_on_Fashionpedia",
@@ -81,7 +85,9 @@
     },
     "github_collaborator_access_verified": false,
     "ssh_access_verified": false,
-    "shared_annotation_and_cross_review": true
+    "shared_annotation_and_cross_review": true,
+    "initiator_ssh_access_verified": true,
+    "ssh_access_verification_scope": "ssh_access_verified remains false until all intended team members are verified; initiator only verified"
   },
   "progress_document": "docs/status.md",
   "artifact_contract_document": "docs/artifact_contract.md",
