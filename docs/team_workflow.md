@@ -20,7 +20,7 @@ B 负责数据流程和评估代码，并不负责独自写完所有描述；三
 
 ## 2. 每个成员及其 Codex 的开工顺序
 
-1. 读根目录 AGENTS.md、README 和本文，确认当前用户对应的角色。A/B 未绑定时，由当前用户自报角色；不要根据作者名单顺序推断。
+1. 先查 [状态表](status.md) 和 [最近交接](handoffs/README.md)，再读根目录 AGENTS.md、README 和本文，确认当前用户对应的角色。A/B 未绑定时，由当前用户自报角色；不要根据作者名单顺序推断。
 2. 阅读 [完整工作流程](workflow.md)，按已有交接证据找到当前阶段；再读对应任务卡及其引用的技术/数据/评估规范。历史 proposal 仅作参考，当前用户指令优先于历史规划。
 3. 检查当前目录、Git 分支、未提交改动和已有代码，区分“文档设计”“已实现”“本地验证”“远程 GPU 验证”。
 4. 实现任务使用自己的 checkout 与短分支。列出本次要改的文件、依赖的上游产物和验收方式后，在已授权范围内继续实现，不必每个常规步骤重复确认。
@@ -37,7 +37,7 @@ B 负责数据流程和评估代码，并不负责独自写完所有描述；三
 | --- | --- | --- |
 | `src/fashion_grounding/segmentation/`、`envs/segmentation/` | segmentation | 分割训练、恢复、推理、候选导出 |
 | `src/fashion_grounding/encoders/`、`grounding/`、`external/`、`envs/grounding/` | grounding | B1/B2、M1/M2、E1；不修改统一评价定义 |
-| `src/fashion_grounding/data/`、`baselines/`、`evaluation/` | data_eval | B0 放在 `baselines/category_position.py`，与 A 的 B2 代码分离 |
+| `src/fashion_grounding/data/`、`baselines/`、`evaluation/` | data_eval | 共享解析放 `data/query_rules.py`，A/B 共用 `configs/rule_parser.json`；B0 放在 `baselines/category_position.py`，与 A 的 B2 代码分离 |
 | `src/fashion_grounding/demo/` | data_eval | 接入其他成员的稳定接口；不在界面重复实现模型 |
 | `src/fashion_grounding/pipeline.py` | segmentation | 最小端到端接通，A 提供排序调用，B 提供可视化 |
 | `tests/` | 按被测模块分工 | 共用小型格式/匹配夹具由 B 维护，模型专属检查由对应负责人写 |
@@ -45,14 +45,15 @@ B 负责数据流程和评估代码，并不负责独自写完所有描述；三
 | `docs/technical_design.md` | 按章节分工 | 分割章节由 Liu Chunyu、图文章节由 A；一次 PR 控制改动范围 |
 | `docs/data_protocol.md`、`docs/experiment_plan.md` | data_eval | 方法负责人复核相关定义，测试集不用于改规则 |
 | `docs/implementation_spec.md`、`configs/project.json`、`configs/training_plan.json` | 共享契约 | 提出明确 diff；修改公共字段时更新示例和受影响调用方 |
-| `experiments/registry.csv` | 运行人追加，B 汇总核查 | 不覆盖其他运行，不填未测得的分数 |
+| `experiments/registry.csv` | 运行人追加，B 汇总核查 | 保留 plan 行，追加 run；仅更新自己的状态并保留证据，见 [记录规范](run_records.md) |
+| `docs/status.md`、`docs/handoffs/` | 各角色更新，B 汇总 | 每项任务同步状态与证据，不替他人宣告完成 |
 | 各角色运行配置 `configs/runs/<role>/` | 对应角色 | 创建真正可执行配置时注明入口，不把规划 JSON 冒称运行配置 |
 
 文件归属是减少冲突的主责约定，不是禁止修复其他模块。跨模块小修在同一 PR 说明影响；破坏性接口变更需协调依赖方，不自行改完后要求其他成员猜新格式。收到明确跨模块任务时按用户授权执行。
 
 ## 4. 最小数据交接契约
 
-详细定义以 [实现规范](implementation_spec.md) 和 [数据协议](data_protocol.md) 为准。B 负责把这些要求落成可运行的读写/验证器，各方共同审查。
+文件结构以 [schema 3 契约](artifact_contract.md) 和 [完整夹具](../examples/README.md) 为准；模型接口与标签语义分别见 [实现规范](implementation_spec.md) 和 [数据协议](data_protocol.md)。B 负责把这些要求落成可运行的读写/验证器，各方共同审查。
 
 | 产物 | 生产方 → 使用方 | 必须明确的内容 |
 | --- | --- | --- |
@@ -160,12 +161,12 @@ B 分配互不重复的图片批次并维护记录，三人各承担一部分描
 给下一位成员的产物与下一步：
 ```
 
-实际执行任务时可在 `docs/handoffs/<role>/` 保存小型交接文档；目录目前待创建。公开文档不放密码、token、私有数据链接或服务器认证信息。PR 和运行记录只写能由证据支持的结果。
+交接入口与模板已在 [docs/handoffs](handoffs/README.md) 创建。实际执行时在 `docs/handoffs/<role>/` 保存小型交接文档，角色子目录按需创建；同步 [状态表](status.md)。公开文档不放密码、token、私有数据链接或服务器认证信息。PR 和运行记录只写能由证据支持的结果。
 
 ## 9. 实验登记与共同报告
 
-[registry.csv](../experiments/registry.csv) 的系列行是计划；本次仅填暂定主责，指标仍为空。实际运行追加唯一 ID（例如带方法、候选条件、seed 与重试号），不覆盖计划或失败记录。记录实际成员、commit、resolved config、manifest/hash、seed、checkpoint 来源、输出路径和真实结果。
+[registry.csv](../experiments/registry.csv) 的系列行是计划；表中 record_type=plan，指标仍为空；具体列和元信息见 [运行记录规范](run_records.md)。实际运行追加唯一 ID（例如带方法、候选条件、seed 与重试号），不覆盖计划或失败记录。记录实际成员、commit、resolved config、manifest/hash、seed、checkpoint 来源、输出路径和真实结果。
 
 报告分工：Liu Chunyu 写分割与候选质量；A 写图文模型、排序和消融；B 写数据、评价协议与综合统计。全员核对 Introduction、Problem Statement、结论、引用和局限。未测得的改进只写假设，不把环境搭好或标注元数据检查写成模型有效性的证明；已完成实验不叙述时间线。
 
-下一步需要填写的只有人员 A/B 身份、GitHub/SSH 授权状态、实际服务器与预算、共享存储位置，以及每个角色第一项交付的 PR/证据。未确认项保持待定，不能由 Codex 补造。
+执行前仍需确认人员 A/B 身份、GitHub/SSH 授权状态、实际服务器与预算、共享存储位置，以及每个角色第一项交付的 PR/证据。未确认项保持待定，不能由 Codex 补造。

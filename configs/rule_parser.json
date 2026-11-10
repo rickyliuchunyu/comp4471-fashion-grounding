@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "lexicon_version": "rules-v1-draft",
+  "status": "proposed_not_implemented_not_dev_frozen",
+  "owner": "data_eval",
+  "reviewer": "grounding",
+  "normalization": "unicode_NFKC_then_casefold_then_collapse_whitespace",
+  "matching": "english_word_boundaries_chinese_longest_nonoverlapping_spans",
+  "category_aliases": [
+    {
+      "category_id": 1,
+      "en": [
+        "top",
+        "tops",
+        "shirt",
+        "shirts",
+        "blouse",
+        "t-shirt",
+        "sweater",
+        "vest"
+      ],
+      "zh": [
+        "上衣",
+        "衬衫",
+        "毛衣",
+        "背心"
+      ]
+    },
+    {
+      "category_id": 2,
+      "en": [
+        "pants",
+        "trousers",
+        "shorts"
+      ],
+      "zh": [
+        "裤子",
+        "长裤",
+        "短裤"
+      ]
+    },
+    {
+      "category_id": 3,
+      "en": [
+        "skirt",
+        "skirts"
+      ],
+      "zh": [
+        "裙子",
+        "半身裙"
+      ]
+    },
+    {
+      "category_id": 4,
+      "en": [
+        "outerwear",
+        "coat",
+        "coats",
+        "jacket",
+        "jackets",
+        "cardigan",
+        "cape"
+      ],
+      "zh": [
+        "外套",
+        "大衣",
+        "夹克",
+        "开衫",
+        "披肩"
+      ]
+    },
+    {
+      "category_id": 5,
+      "en": [
+        "dress",
+        "dresses"
+      ],
+      "zh": [
+        "连衣裙"
+      ]
+    },
+    {
+      "category_id": 6,
+      "en": [
+        "shoe",
+        "shoes"
+      ],
+      "zh": [
+        "鞋子",
+        "鞋"
+      ]
+    },
+    {
+      "category_id": 7,
+      "en": [
+        "bag",
+        "bags",
+        "wallet",
+        "wallets"
+      ],
+      "zh": [
+        "包包",
+        "包",
+        "钱包"
+      ]
+    },
+    {
+      "category_id": 8,
+      "en": [
+        "accessory",
+        "accessories",
+        "hat",
+        "watch",
+        "belt",
+        "scarf",
+        "umbrella",
+        "sock",
+        "socks",
+        "glasses",
+        "tie",
+        "glove"
+      ],
+      "zh": [
+        "配饰",
+        "帽子",
+        "手表",
+        "腰带",
+        "围巾",
+        "雨伞",
+        "袜子",
+        "眼镜",
+        "领带",
+        "手套"
+      ]
+    }
+  ],
+  "directions": {
+    "left": {
+      "en": [
+        "left",
+        "leftmost"
+      ],
+      "zh": [
+        "左边",
+        "左侧",
+        "最左边",
+        "左"
+      ]
+    },
+    "right": {
+      "en": [
+        "right",
+        "rightmost"
+      ],
+      "zh": [
+        "右边",
+        "右侧",
+        "最右边",
+        "右"
+      ]
+    },
+    "top": {
+      "en": [
+        "topmost",
+        "upper"
+      ],
+      "zh": [
+        "上方",
+        "最上方"
+      ]
+    },
+    "bottom": {
+      "en": [
+        "bottommost",
+        "lower"
+      ],
+      "zh": [
+        "下方",
+        "最下方"
+      ]
+    }
+  },
+  "filler_tokens": {
+    "en": [
+      "the",
+      "a",
+      "an",
+      "this",
+      "that",
+      "on",
+      "at",
+      "in",
+      "of"
+    ],
+    "zh": [
+      "的",
+      "这",
+      "那",
+      "个",
+      "件",
+      "只",
+      "条",
+      "在",
+      "位于"
+    ]
+  },
+  "unsupported_operator_terms": {
+    "en": [
+      "not",
+      "except",
+      "without",
+      "all",
+      "both",
+      "between",
+      "person",
+      "wearing"
+    ],
+    "zh": [
+      "不",
+      "没有",
+      "除了",
+      "所有",
+      "全部",
+      "两个",
+      "之间",
+      "人",
+      "穿着"
+    ]
+  }
+}

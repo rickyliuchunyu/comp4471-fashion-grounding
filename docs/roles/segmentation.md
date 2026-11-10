@@ -2,7 +2,7 @@
 
 角色 ID：`segmentation`。暂定负责人：Liu Chunyu。分工状态：暂定，非已完成。先读 [团队协作说明](../team_workflow.md)，再读 [技术设计](../technical_design.md)、[数据协议](../data_protocol.md)、[实现规范](../implementation_spec.md) 和 [实验计划](../experiment_plan.md)。
 
-执行先后顺序统一按 [完整工作流程](../workflow.md)。先检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
+执行先后顺序统一按 [完整工作流程](../workflow.md)。先查 [状态表](../status.md) 和 [交接入口](../handoffs/README.md)，检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
 
 ## 目标与边界
 
@@ -45,4 +45,4 @@
 
 ## 可直接交给 Codex 的开工说明
 
-> 我是 Liu Chunyu，负责 segmentation。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md 和本任务卡，检查当前代码与环境状态。优先实现/验证数据输入、分割适配与候选导出；没有服务器或完整数据时先做可独立完成的接口与小型检查。保留已有镜像环境，不修改其他人的工作区或训练进程。正式收费训练按我已确认的预算执行；结束时给出真实验证结果和交接文件，不把计划写成完成。
+> 我是 Liu Chunyu，负责 segmentation。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md、docs/status.md、docs/artifact_contract.md 和本任务卡，检查当前代码与环境状态。优先实现/验证数据输入、分割适配与候选导出；没有服务器或完整数据时先做可独立完成的接口与小型检查。保留已有镜像环境，不修改其他人的工作区或训练进程。正式收费训练按我已确认的预算执行；结束时给出真实验证结果和交接文件，不把计划写成完成。

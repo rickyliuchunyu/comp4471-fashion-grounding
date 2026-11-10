@@ -10,7 +10,7 @@
 
 暂定分工已于 2026-11-10 确定：**Liu Chunyu 负责分割与候选，组员 A 负责图文匹配，组员 B 负责数据与评估**；A/B 姓名和 GitHub 账号待绑定。平台选 AutoDL，实例与环境尚未验证。
 
-每次开工先读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
+每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
 ## 项目目的
 
@@ -52,6 +52,10 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 | [数据协议](docs/data_protocol.md) | 原始类别映射、划分、双语查询和人工复核 |
 | [实验计划](docs/experiment_plan.md) | 强基线、公平比较、指标、统计和进度 |
 | [可选扩展计划](docs/extension_plan.md) | 背景干扰、语言挑战、交互演示与可靠性扩展的范围及验收方式 |
+| [当前状态](docs/status.md) | 各阶段真实状态、每人下一步、阻塞与证据入口 |
+| [文件交接契约](docs/artifact_contract.md) | schema 3、manifest/候选/预测、完整合成示例 |
+| [共享规则解析](docs/rule_parser_contract.md) | B0/B2 共用词表与解析，分别评分 |
+| [运行记录规范](docs/run_records.md) | 计划与 run 区分、候选条件、指标和元信息 |
 | [实现规范](docs/implementation_spec.md) | 待开发模块、接口、缓存和检查要求 |
 | [协作说明](docs/team_workflow.md) | 暂定职责、文件归属、交接契约、单卡排队与 PR 规则 |
 | [完整工作流程](docs/workflow.md) | P0–P10 的先后依赖、并行任务、交付条件、最终测试与归档 |
@@ -62,6 +66,8 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 ## 数据与实验状态
 
 [training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 中的实验均未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+
+已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
 数据、模型和输出目录仍为占位。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
 

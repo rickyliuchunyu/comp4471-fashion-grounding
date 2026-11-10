@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "illustrative_only": true,
+  "candidate_set_id": "fixture-empty-v1",
+  "candidate_source": "predicted",
+  "image_manifest": {
+    "path": "image_manifest.json",
+    "sha256": "0c8d4ede78b7505524845d9428fbd20d98c375f63f6f8c59012ac6f62ade7ea4"
+  },
+  "provenance": {
+    "producer_run_id": null,
+    "checkpoint_sha256": null,
+    "decoder_config_sha256": null,
+    "annotation_manifest_sha256": null,
+    "note": "Synthetic contract fixture; no model or dataset was used."
+  },
+  "images": [
+    {
+      "image_id": 100001,
+      "image_size_wh": [
+        8,
+        6
+      ],
+      "status": "no_candidates",
+      "candidates": []
+    }
+  ]
+}

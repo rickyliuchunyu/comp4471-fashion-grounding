@@ -85,7 +85,7 @@
 | 字段 | 类型与规则 |
 | --- | --- |
 | image.id | 全局唯一正整数；按冻结源清单生成，不由文件遍历随机决定 |
-| image.file_name | 数据根目录下相对路径；加入源前缀，防止同名冲突 |
+| image.file_name | 发布包根目录下相对路径；图片 manifest 与 COCO 标注置于包根目录，加入源前缀防止同名冲突 |
 | image.width / height | 实际解码后的原始尺寸，整数 |
 | image.source_dataset / source_image_id | 来源名与原始 ID 字符串，保留前导零 |
 | image.supervised_category_ids | 记录源覆盖：FP 为 1–8；DF2 为 1–5；X5 另声明有效评估/训练类别 1–5 |
@@ -142,7 +142,7 @@
 
 ## 6. 标注记录与复核
 
-[query_record.json](../examples/query_record.json) 是人工格式示例；真实记录至少包含下列字段：
+[query_record.json](../examples/query_record.json) 是 schema 3 合成格式示例，不是人工成果；完整包及预测关联见 [文件契约](artifact_contract.md)。真实记录至少包含下列字段：
 
 ```text
 query_id: 唯一字符串

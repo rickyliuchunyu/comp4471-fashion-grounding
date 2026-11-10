@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "illustrative_only": true,
+  "manifest_id": "fixture-images-v1",
+  "mapping_version": "whole8-v1-draft",
+  "images": [
+    {
+      "image_id": 100001,
+      "file_name": "fixtures/two_regions.ppm",
+      "sha256": "1883c2dc167e65ca24bdae3c27c954aa734c1b749aaf8ff746ce41b08b0804dd",
+      "width": 8,
+      "height": 6,
+      "source_dataset": "synthetic",
+      "source_image_id": "two-regions",
+      "group_id": "fixture-group-001",
+      "split": "fixture"
+    }
+  ]
+}

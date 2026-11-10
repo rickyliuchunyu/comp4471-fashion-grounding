@@ -24,9 +24,11 @@ E1 使用自己的输出，仅放入端到端比较表；不同预训练数据�
 
 ## 2. 固定条件与选择规则
 
-每个运行记录 commit、resolved config、数据/查询 manifest SHA256、映射版本、预训练 URL/revision/hash、环境、seed 和唯一 run ID。运行输出不得覆盖，失败也登记。
+每个运行记录 commit、resolved config、数据/查询 manifest SHA256、映射版本、预训练 URL/revision/hash、环境、seed 和唯一 run ID。运行输出不得覆盖，失败也登记。registry 的 plan/run、GT/predicted 字段、指标标度和 metadata 要求见 [运行记录规范](run_records.md)，计划行不是实验结果。
 
-只在 dev 选 checkpoint、候选阈值、规则词表/权重和 E1 提示方式。默认 S0 用 dev mask AP；M1/M2 用 oracle dev selection accuracy、patience 5。采用预测候选适配时，对两方法使用同一额外预算和同一 checkpoint 选择规则并提前登记。B2 权重候选为 [0,1,2,5,10]，不在测试集搜索。
+只在 dev 选 checkpoint、候选阈值、规则词表/权重和 E1 提示方式。默认 S0 用 dev mask AP；M1/M2 用 oracle dev selection accuracy、patience 5。采用预测候选适配时，对两方法使用同一额外预算和同一 checkpoint 选择规则并提前登记。B2 权重候选为 [0,1,2,5,10]，在同一 GT dev 查询集最大化 oracle selection accuracy，同分取最小 lambda，选定后用于 GT/预测条件，不在测试集搜索。S0 dev AP 或 M1/M2 oracle dev accuracy 的 checkpoint 同分时均保留最早达到该分数的 checkpoint。
+
+候选阈值选择在 S0 checkpoint 固定后进行：用同一冻结 dev 查询清单，对 0.3/0.5/0.7 分别按第 5 节同类一对一规则建立关联，以最大 matched candidate coverage 为主目标；分母相同，按覆盖查询数精确比较。并列时最小化 dev 独立图片上的候选总数（等价于平均数），再并列取较高阈值。所有有查询的 dev 图均纳入，包括零候选；同图查询不重复计候选数。报告 geometric recall、平均候选数与三档结果，但不使用任何语言方法的正确率选择候选阈值。将 dev manifest/hash、结果、选择理由写入独立选择记录；当前配置中的 0.5 仅为试跑默认，selected_threshold=null 表示尚未完成选择。
 
 B0–M2 固定 S0 权重、解码器、候选序列与图像输入。M1/M2 固定训练集、采样、外观结构、optimizer、最大 epochs 和早停。M2 只新增空间分支。模型不读取 query type、人工目标类别或 target ID。规则只解析实际查询字符串。
 

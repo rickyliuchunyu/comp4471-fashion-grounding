@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "illustrative_only": true,
+  "query_id": "example-query-001",
+  "image_id": 100001,
+  "query": "左边的包",
+  "language": "zh",
+  "run_id": "fixture-prediction_inference_error",
+  "method_id": "B1",
+  "split": "fixture",
+  "candidate_source": "predicted",
+  "candidate_set_id": "fixture-predicted-v1",
+  "candidate_manifest": {
+    "path": "candidates_predicted.json",
+    "sha256": "049c9e1e73afc05402089b222070d1659d23ea5a079ae89c93759bc0c63cf2ef"
+  },
+  "status": "inference_error",
+  "selected_candidate": null,
+  "error": {
+    "code": "SIMULATED_ENCODER_ERROR",
+    "message": "Synthetic failure case; no inference was attempted."
+  }
+}

@@ -4,14 +4,14 @@
 
 ## 开始前必须读取
 
-1. README.md：当前任务和仓库状态。
+1. README.md 和 docs/status.md：当前任务、每人下一步与证据；状态不可仅凭计划推断。
 2. docs/team_workflow.md：2026-11-10 暂定分工、文件主责、接口与 AutoDL 协作。
 3. docs/workflow.md：P0–P10 顺序、依赖与阶段验收；检查实际交接证据后，选择本角色最早未完成且前提满足的任务。
 4. 当前角色任务卡：
    - `segmentation` / Liu Chunyu：docs/roles/segmentation.md。
    - `grounding` / 组员 A：docs/roles/grounding.md。
    - `data_eval` / 组员 B：docs/roles/data_eval.md。
-5. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md。
+5. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md；涉及交接读 docs/artifact_contract.md，运行登记读 docs/run_records.md，B0/B2 读 docs/rule_parser_contract.md。
 
 A/B 实名与账号尚未绑定。根据当前用户自报的角色或明确任务确定职责；不能根据作者顺序猜人。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
 
@@ -27,6 +27,7 @@ A/B 实名与账号尚未绑定。根据当前用户自报的角色或明确任�
 
 - 按 team_workflow.md 的主责表选择文件，B0 在 `baselines/category_position.py`，B2 在 `grounding/rules.py`，避免多人编辑同一规则入口。
 - 源码路径多为拟议布局；先确认现有实现，避免重复造模块。
+- 交接 schema 3、合成夹具和检查器已有；正式数据验证器/训练/评价仍待实现。B0/B2 共用 configs/rule_parser.json 和拟议 data/query_rules.py，不复制词表。
 - 公共数据/schema 由 data_eval 维护，生产方和消费方一起复核破坏性变更。若用户已授权跨模块任务，可执行并明确影响，不增加无关审批。
 - 项目类别 ID 1–8，分割内部 ID 0–7；原图 RGB、排他右下角 xyxy、原图尺寸 mask、稳定候选 ID/顺序必须一致。
 - 推理不读人工目标 ID、目标类别或 query type；预测 mask 不能用 GT 修正。GT 诊断与预测候选结果分开。
@@ -54,4 +55,4 @@ A/B 实名与账号尚未绑定。根据当前用户自报的角色或明确任�
 - 图片组隔离、train/dev/test 边界、人工复核来源必须保留。测试集不选模型、阈值或词表；失败/漏检保留分母。
 - 计划值、格式夹具、元数据审计、小样本优化与正式结果分别标明。不得编造指标、执行过的命令或验证通过的环境。
 - 已完成实验不叙述时间线。未测得的收益写成假设，负结果也记录。
-- 每次交接遵循 team_workflow.md 的模板，给出真实文件、commit、环境、输入/hash、命令、验证和剩余工作。运行登记只追加自己的真实记录，不替他人宣告完成。
+- 每次交接遵循 team_workflow.md 的模板，给出真实文件、commit、环境、输入/hash、命令、验证和剩余工作。计划保留，真实运行另追加 run 行；只更新自己的运行状态并保留日志，不替他人宣告完成。同步 docs/status.md 与 docs/handoffs/ 中的证据。

@@ -82,5 +82,9 @@
     "github_collaborator_access_verified": false,
     "ssh_access_verified": false,
     "shared_annotation_and_cross_review": true
-  }
+  },
+  "progress_document": "docs/status.md",
+  "artifact_contract_document": "docs/artifact_contract.md",
+  "run_record_document": "docs/run_records.md",
+  "contract_examples_schema_version": 3
 }

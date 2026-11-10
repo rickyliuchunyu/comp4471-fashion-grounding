@@ -125,7 +125,18 @@
     "max_candidates": 100,
     "mask_nms": false,
     "empty_mask_policy": "discard",
-    "coco_ap_decoder": "upstream_instance_inference"
+    "coco_ap_decoder": "upstream_instance_inference",
+    "threshold_selection": {
+      "split": "dev",
+      "primary": "maximize_matched_candidate_coverage_over_frozen_queries",
+      "tie_break": [
+        "minimize_total_candidate_count_over_unique_dev_images",
+        "prefer_higher_threshold"
+      ],
+      "query_manifest_sha256": null,
+      "selected_threshold": null,
+      "selection_record": null
+    }
   },
   "grounding": {
     "core_methods": [
@@ -184,7 +195,15 @@
       44
     ],
     "stage_b_predicted_candidate_adaptation": false,
-    "cache_trainable_outputs": false
+    "cache_trainable_outputs": false,
+    "shared_parser_config": "configs/rule_parser.json",
+    "b2_weight_selection": {
+      "split": "dev",
+      "candidate_source": "gt",
+      "metric": "oracle_selection_accuracy",
+      "tie_break": "smallest_lambda",
+      "selection_record": null
+    }
   },
   "evaluation": {
     "prediction_gt_matching": "confidence_greedy_same_class_mask_iou",

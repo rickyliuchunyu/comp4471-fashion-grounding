@@ -2,13 +2,14 @@
 
 版本 `2026-11-05`。本文是待实现规范，当前没有以下运行入口。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
 
-2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下仍为待实现接口。
+2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下仍为待实现接口。文件层 schema 3 与合成包见 [交接契约](artifact_contract.md)，已有示例检查器不等于正式模型运行入口。
 
 ## 1. 建议结构
 
 ```text
 src/fashion_grounding/             # 待创建
   data/schema.py                  # 公共读写和验证，data_eval 维护
+  data/query_rules.py             # B0/B2 共用解析，B 维护、A 复核
   data/convert.py                 # FP 八类转换，保留源细类
   data/splits.py                  # 去重、分组和冻结 manifest
   data/queries.py                 # 双语、改写、唯一目标和复核检查
@@ -36,7 +37,7 @@ src/fashion_grounding/             # 待创建
 class Candidate:
     candidate_id: str
     category_id: int | None       # 内部 S0 为 1..8；外部系统可为 None
-    score: float
+    score: float | None          # GT 为 None；预测分割分数必须有限
     bbox_xyxy: tuple[float, float, float, float]
     mask: np.ndarray              # 原图 bool[H,W]
     decoder_query_id: int | None
@@ -60,7 +61,7 @@ def select_target(image_rgb, query, candidates, encoders, heads, config) -> dict
 
 CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用右下排他像素坐标，mask 必须与原图尺寸一致。D 从 checkpoint 读取并用前向核对，图文 D 必须相同；不得继续硬编码 384/1024。M1 第一层为 3D→256，M2 文本空间层为 (D+64)→128→1。
 
-同图多个查询可复用 visual/geometry，valid_mask 必须与候选顺序一致。训练目标是该图片候选的局部索引，不是全局 annotation ID。N=1 不进入排名训练但保留评价；N=0 返回 no_candidates。失败输出 selected_candidate=null，不伪造 mask 或概率。
+同图多个查询可复用 visual/geometry，valid_mask 必须与候选顺序一致。训练目标是该图片候选的局部索引，不是全局 annotation ID。N=1 不进入排名训练但保留评价；候选生成正常且 N=0 返回 no_candidates；上游失败则传播 inference_error，不把运行失败当成合法空集。失败输出 selected_candidate=null，不伪造 mask 或概率。
 
 ## 3. 特征缓存与运行记录
 
@@ -68,7 +69,7 @@ CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用�
 
 缓存冻结且归一化的标准图文向量、候选元信息及几何向量；不缓存正在训练的残差/空间输出。E1 缓存单独命名。记录实际 D、数值范围、非零范数，核对 B1 的重建 logits 与模型标准前向一致。
 
-每个 run_id 对应独立目录，保存 resolved_config、environment、源码 commit、权重来源与 hash、数据 manifest hash、训练日志、dev/test 指标、全查询预测及失败状态、latency 和错误案例。final test 仅在锁定方案后生成。checkpoint 保存 optimizer/scheduler/scaler 和随机状态；恢复日志记录起始 update，不拼接不同训练。
+运行元信息字段、CSV 和指标条件按 [运行记录规范](run_records.md)。每个 run_id 对应独立目录，保存 resolved_config、environment、源码 commit、权重来源与 hash、数据 manifest hash、训练日志、dev/test 指标、全查询预测及失败状态、latency 和错误案例。final test 仅在锁定方案后生成。checkpoint 保存 optimizer/scheduler/scaler 和随机状态；恢复日志记录起始 update，不拼接不同训练。
 
 只将小型配置、指标与证据索引提交 GitHub。图片、权重、缓存和大输出按 [AutoDL 目录规划](team_workflow.md#7-autodl-与多-codex-同时工作) 组织，实际实例和目录仍待创建与验证。
 
@@ -84,7 +85,7 @@ CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用�
 | F 外部系统 | 完整查询、多输出选择、无 GT 提示 | 固定 E1 配置与全量预测 |
 | G 端到端 | 新图+新文字到叠图，首次/缓存计时 | 完整调用记录 |
 
-这些检查尚未运行。小数据过拟合只验证数据流和优化，不能证明泛化。环境实测后再提供安装与训练命令；复用公开模型时锁定基础代码、checkpoint 和 processor，而不是拼接任意最新版本。
+上述模型/正式数据检查尚未运行。合成文件接口可独立执行 `python scripts/check_contract_examples.py`，范围见 [示例说明](../examples/README.md)。小数据过拟合只验证数据流和优化，不能证明泛化。环境实测后再提供安装与训练命令；复用公开模型时锁定基础代码、checkpoint 和 processor，而不是拼接任意最新版本。
 
 ## 5. 可选扩展的接口边界
 
