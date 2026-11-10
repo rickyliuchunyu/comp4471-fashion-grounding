@@ -2,6 +2,8 @@
 
 角色 ID：`grounding`。暂定负责人：组员 A，姓名及 GitHub 账号待填写。先读 [团队协作说明](../team_workflow.md)、[技术设计](../technical_design.md)、[实现规范](../implementation_spec.md)、[实验计划](../experiment_plan.md) 和 [数据协议](../data_protocol.md)。
 
+执行先后顺序统一按 [完整工作流程](../workflow.md)。先检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
+
 ## 目标与边界
 
 交付 B1/B2、M1/M2 和选定 E1 的统一预测接口，研究预训练对齐、外观适配与空间学习的作用。分割器由 Liu Chunyu 负责，B0 与评价器由 B 负责；不要重复建立另一份数据划分或改写指标。可先用 GT 候选开发，不等待 S0 训练结束。
@@ -44,4 +46,4 @@
 
 ## 可直接交给 Codex 的开工说明
 
-> 我是暂定组员 A，负责 grounding。请先读取 AGENTS.md、docs/team_workflow.md 和本任务卡，检查已有实现。先接 B 提供的 GT 候选完成 SigLIP 2 特征、B1/B2 和统一预测接口，再实现 M1/M2。不要等待分割训练结束，也不要重复实现 B0 或修改测试划分。环境与代码使用自己的目录；GPU 任务遵守单卡排队和已授权预算。结束时给出可复现命令、实际验证和给 B/Liu Chunyu 的交接内容。
+> 我是暂定组员 A，负责 grounding。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md 和本任务卡，检查已有实现。先接 B 提供的 GT 候选完成 SigLIP 2 特征、B1/B2 和统一预测接口，再实现 M1/M2。不要等待分割训练结束，也不要重复实现 B0 或修改测试划分。环境与代码使用自己的目录；GPU 任务遵守单卡排队和已授权预算。结束时给出可复现命令、实际验证和给 B/Liu Chunyu 的交接内容。

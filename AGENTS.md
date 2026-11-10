@@ -6,11 +6,12 @@
 
 1. README.md：当前任务和仓库状态。
 2. docs/team_workflow.md：2026-11-10 暂定分工、文件主责、接口与 AutoDL 协作。
-3. 当前角色任务卡：
+3. docs/workflow.md：P0–P10 顺序、依赖与阶段验收；检查实际交接证据后，选择本角色最早未完成且前提满足的任务。
+4. 当前角色任务卡：
    - `segmentation` / Liu Chunyu：docs/roles/segmentation.md。
    - `grounding` / 组员 A：docs/roles/grounding.md。
    - `data_eval` / 组员 B：docs/roles/data_eval.md。
-4. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md。
+5. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md。
 
 A/B 实名与账号尚未绑定。根据当前用户自报的角色或明确任务确定职责；不能根据作者顺序猜人。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
 

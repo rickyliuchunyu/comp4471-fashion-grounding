@@ -10,7 +10,7 @@
 
 暂定分工已于 2026-11-10 确定：**Liu Chunyu 负责分割与候选，组员 A 负责图文匹配，组员 B 负责数据与评估**；A/B 姓名和 GitHub 账号待绑定。平台选 AutoDL，实例与环境尚未验证。
 
-每次开工先读 [AGENTS.md](AGENTS.md) 和 [详细分工与协作说明](docs/team_workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
+每次开工先读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
 ## 项目目的
 
@@ -54,6 +54,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 | [可选扩展计划](docs/extension_plan.md) | 背景干扰、语言挑战、交互演示与可靠性扩展的范围及验收方式 |
 | [实现规范](docs/implementation_spec.md) | 待开发模块、接口、缓存和检查要求 |
 | [协作说明](docs/team_workflow.md) | 暂定职责、文件归属、交接契约、单卡排队与 PR 规则 |
+| [完整工作流程](docs/workflow.md) | P0–P10 的先后依赖、并行任务、交付条件、最终测试与归档 |
 | [课程要求](docs/course_requirements.md) | 历史整理的提交要求及日期复核边界 |
 | [已提交 proposal 正文](docs/proposal_submitted.md) | 用户提供的提交版正文转录，保留历史方案 |
 | [早期 proposal 草稿](docs/proposal.md) | 历史草稿，不代表已提交内容或当前设计 |
