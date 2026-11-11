@@ -68,26 +68,35 @@
       "segmentation": {
         "member_name": "Liu Chunyu",
         "github_username": "rickyliuchunyu",
-        "task_document": "docs/roles/segmentation.md"
+        "task_document": "docs/roles/segmentation.md",
+        "member_alias": "lcy",
+        "member_label": "lcy"
       },
       "grounding": {
-        "member_label": "member_A",
+        "member_label": "wyz",
         "member_name": null,
         "github_username": null,
-        "task_document": "docs/roles/grounding.md"
+        "task_document": "docs/roles/grounding.md",
+        "member_alias": "wyz",
+        "legacy_role_label": "A"
       },
       "data_eval": {
-        "member_label": "member_B",
+        "member_label": "wkq",
         "member_name": null,
         "github_username": null,
-        "task_document": "docs/roles/data_eval.md"
+        "task_document": "docs/roles/data_eval.md",
+        "member_alias": "wkq",
+        "legacy_role_label": "B"
       }
     },
     "github_collaborator_access_verified": false,
     "ssh_access_verified": false,
     "shared_annotation_and_cross_review": true,
     "initiator_ssh_access_verified": true,
-    "ssh_access_verification_scope": "ssh_access_verified remains false until all intended team members are verified; initiator only verified"
+    "ssh_access_verification_scope": "ssh_access_verified remains false until all intended team members are verified; initiator only verified",
+    "member_aliases_confirmed_date": "2026-11-11",
+    "alias_binding_document": "docs/handoffs/team_aliases.md",
+    "member_aliases_are_github_usernames": false
   },
   "progress_document": "docs/status.md",
   "artifact_contract_document": "docs/artifact_contract.md",

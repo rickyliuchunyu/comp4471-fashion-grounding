@@ -1,12 +1,12 @@
 # 角色任务卡：图文匹配与排序
 
-角色 ID：`grounding`。暂定负责人：组员 A，姓名及 GitHub 账号待填写。先读 [团队协作说明](../team_workflow.md)、[技术设计](../technical_design.md)、[实现规范](../implementation_spec.md)、[实验计划](../experiment_plan.md) 和 [数据协议](../data_protocol.md)。
+角色 ID：`grounding`。负责人简称：wyz（原角色 A），成员简称已确认，GitHub 用户名与权限仍待核验。先读 [团队协作说明](../team_workflow.md)、[技术设计](../technical_design.md)、[实现规范](../implementation_spec.md)、[实验计划](../experiment_plan.md) 和 [数据协议](../data_protocol.md)。
 
 执行先后顺序统一按 [完整工作流程](../workflow.md)。先查 [状态表](../status.md) 和 [交接入口](../handoffs/README.md)，检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
 
 ## 目标与边界
 
-交付 B1/B2、M1/M2 和选定 E1 的统一预测接口，研究预训练对齐、外观适配与空间学习的作用。分割器由 Liu Chunyu 负责，B0 与评价器由 B 负责；不要重复建立另一份数据划分或改写指标。可先用 GT 候选开发，不等待 S0 训练结束。
+交付 B1/B2、M1/M2 和选定 E1 的统一预测接口，研究预训练对齐、外观适配与空间学习的作用。分割器由 lcy 负责，B0 与评价器由 B 负责；不要重复建立另一份数据划分或改写指标。可先用 GT 候选开发，不等待 S0 训练结束。
 
 ## 第一批工作：SigLIP 2 与 GT 基线
 
@@ -30,20 +30,20 @@
 
 ## 第三批工作：固定预测候选与 E1
 
-- 读取 Liu Chunyu 发布的候选包，在完全相同候选上生成各方法输出；不使用 GT mask 修正预测裁剪。
-- E1 在开发阶段选定 SAM 3 或已规划的替代系统，记录访问/环境与版本；Liu Chunyu 协助部署，B 负责评价。
+- 读取 lcy 发布的候选包，在完全相同候选上生成各方法输出；不使用 GT mask 修正预测裁剪。
+- E1 在开发阶段选定 SAM 3 或已规划的替代系统，记录访问/环境与版本；lcy 协助部署，B 负责评价。
 - E1 使用完整描述和预定输出选择规则，不用 GT 框/点，也不从多输出中按 GT IoU 挑答案；单独报告其系统级结果。
 - 接入 pipeline 时提供简单的排序调用边界，支持同图特征缓存；分数不是校准正确概率。
-- X3 复用 Liu Chunyu 的输入变体，由 B 做配对分析；X1/X2/X4 与交互等扩展按预算另选。
+- X3 复用 lcy 的输入变体，由 B 做配对分析；X1/X2/X4 与交互等扩展按预算另选。
 
 ## 输入、交付与复核
 
-输入：B 的 GT/查询数据包与评价器；Liu Chunyu 的预测候选；图文运行环境。
+输入：B 的 GT/查询数据包与评价器；lcy 的预测候选；图文运行环境。
 
 交付：`encoders/`、`grounding/`、`external/` 实现，图文依赖记录、缓存/权重索引、全查询预测与失败状态、模型对照与消融分析。报告明确原 DINOv2/BGE-M3 不具备预训练共同空间是换模型依据，性能提升仍由实验判定。
 
-默认复核：B 检查评估与答案泄漏，Liu Chunyu 检查候选连接和图像处理。不要让评估器依赖你的 CUDA 环境或模型对象。
+默认复核：B 检查评估与答案泄漏，lcy 检查候选连接和图像处理。不要让评估器依赖你的 CUDA 环境或模型对象。
 
 ## 可直接交给 Codex 的开工说明
 
-> 我是暂定组员 A，负责 grounding。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md、docs/status.md、docs/artifact_contract.md 和本任务卡，检查已有实现。先接 B 提供的 GT 候选完成 SigLIP 2 特征、B1/B2 和统一预测接口，再实现 M1/M2。不要等待分割训练结束，也不要重复实现 B0 或修改测试划分。环境与代码使用自己的目录；GPU 任务遵守单卡排队和已授权预算。结束时给出可复现命令、实际验证和给 B/Liu Chunyu 的交接内容。
+> 我是 wyz（A），负责 grounding。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md、docs/status.md、docs/artifact_contract.md 和本任务卡，检查已有实现。先接 B 提供的 GT 候选完成 SigLIP 2 特征、B1/B2 和统一预测接口，再实现 M1/M2。不要等待分割训练结束，也不要重复实现 B0 或修改测试划分。环境与代码使用自己的目录；GPU 任务遵守单卡排队和已授权预算。结束时给出可复现命令、实际验证和给 B/lcy 的交接内容。

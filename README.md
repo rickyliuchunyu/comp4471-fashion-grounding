@@ -8,7 +8,7 @@
 
 ## 团队与 Codex 开工入口
 
-暂定分工已于 2026-11-10 确定：**Liu Chunyu 负责分割与候选，组员 A 负责图文匹配，组员 B 负责数据与评估**；A/B 姓名和 GitHub 账号待绑定。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wyz/wkq 的 GitHub 用户名与访问权限仍待核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -73,6 +73,6 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 下一步
 
-先在官方训练数据中用 100–200 张图片做标注试点，冻结划分，再用 GT 候选跑 B0/B1/B2；分割环境检查与微调可同时推进。之后训练 M1/M2，接入预测候选，完成 E1 和消融。按暂定角色推进；A/B 身份、正式训练预算、权重 revision 与数据 manifest 仍待执行时填写；已确认单张 3090 24GB，基础环境检查不代表训练验收。
+先在官方训练数据中用 100–200 张图片做标注试点，冻结划分，再用 GT 候选跑 B0/B1/B2；分割环境检查与微调可同时推进。之后训练 M1/M2，接入预测候选，完成 E1 和消融。按暂定角色推进；wyz/wkq 的账号权限、正式训练预算、权重 revision 与数据 manifest 仍待执行时填写；已确认单张 3090 24GB，基础环境检查不代表训练验收。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

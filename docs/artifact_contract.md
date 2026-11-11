@@ -54,6 +54,6 @@ GT 按 source annotation ID 升序发布。预测按 score 降序、同分按 ca
 
 ## 5. 发布与接收
 
-B 发布图片/GT/查询 manifest；Liu Chunyu 发布预测候选；A/B 的方法输出预测；B 评价。发布顺序是 mask/图片 → 图片 manifest → 候选包 → 预测，避免循环 hash。正式标注 manifest hash 仅放 provenance，不在候选包中倒写引用自己的 hash。
+B 发布图片/GT/查询 manifest；lcy 发布预测候选；A/B 的方法输出预测；B 评价。发布顺序是 mask/图片 → 图片 manifest → 候选包 → 预测，避免循环 hash。正式标注 manifest hash 仅放 provenance，不在候选包中倒写引用自己的 hash。
 
 接收方检查版本、hash、ID、尺寸、mask/框一致性、候选序列和失败记录，之后才建立缓存。示例检查命令见 [examples README](../examples/README.md)；正式转换器、schema 验证器、压缩 RLE 与真实图片验证仍由 B 实现，各模型负责人复核输出。

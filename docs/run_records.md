@@ -15,7 +15,7 @@
 
 | 字段 | 规则 |
 | --- | --- |
-| experiment_id / owner / executed_by | 系列编号、角色 ID、真实执行成员；A/B 实名未绑定时不得猜填 |
+| experiment_id / owner / executed_by | 系列编号、角色 ID、实际执行成员简称 lcy/wyz/wkq；只有真实运行才填写 executed_by，不能因角色绑定预填计划行 |
 | record_type / run_id / status | 计划或运行、唯一运行 ID、实际状态 |
 | split / candidate_source | train/dev/test；gt/predicted/external/none，none 用于不依赖候选的训练/分割 AP |
 | git_commit / config_path / metadata_path | 源码 commit、真正 resolved config、运行元信息索引；规划 JSON 不作为已解析运行配置 |

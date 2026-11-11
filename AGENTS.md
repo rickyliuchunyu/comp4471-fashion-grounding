@@ -5,20 +5,20 @@
 ## 开始前必须读取
 
 1. README.md 和 docs/status.md：当前任务、每人下一步与证据；状态不可仅凭计划推断。
-2. docs/team_workflow.md：2026-11-10 暂定分工、文件主责、接口与 AutoDL 协作。
+2. docs/team_workflow.md：暂定分工、2026-11-11 成员简称绑定、文件主责、接口与 AutoDL 协作。
 3. docs/workflow.md：P0–P10 顺序、依赖与阶段验收；检查实际交接证据后，选择本角色最早未完成且前提满足的任务。
 4. 当前角色任务卡：
-   - `segmentation` / Liu Chunyu：docs/roles/segmentation.md。
-   - `grounding` / 组员 A：docs/roles/grounding.md。
-   - `data_eval` / 组员 B：docs/roles/data_eval.md。
+   - `segmentation` / lcy：docs/roles/segmentation.md。
+   - `grounding` / wyz（A）：docs/roles/grounding.md。
+   - `data_eval` / wkq（B）：docs/roles/data_eval.md。
 5. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md；涉及交接读 docs/artifact_contract.md，运行登记读 docs/run_records.md，B0/B2 读 docs/rule_parser_contract.md。
 
-A/B 实名与账号尚未绑定。根据当前用户自报的角色或明确任务确定职责；不能根据作者顺序猜人。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
+成员简称已确认：lcy = segmentation，wyz（A）= grounding，wkq（B）= data_eval；lcy 对应 Liu Chunyu。简称不是已验证的 GitHub 用户名，也不证明 SSH 权限；不根据邮箱或作者顺序推断全名/账号。根据当前用户自报的简称、角色或明确任务确定职责。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
 
 ## 项目事实与范围
 
 - 核心是八类整件服饰、唯一目标、中英文查询；分割候选 + SigLIP 2 匹配 + 可训练外观/空间头。
-- 研究设计版本为 2026-11-05，分工更新为 2026-11-10；后续开工时检查真实文件与运行证据，不永久假定“只有文档”或“已经训练好”。
+- 研究设计版本为 2026-11-05，职责分工为 2026-11-10，成员简称绑定为 2026-11-11；后续开工时检查真实文件与运行证据，不永久假定“只有文档”或“已经训练好”。
 - configs/training_plan.json 是规划，不是现成可执行训练配置；examples/ 中 illustrative_only 的内容不是标注成果或预测结果。
 - 多目标、拒绝选择、交互纠正等见 docs/extension_plan.md，属于可选设计，不自动扩充本轮任务。
 - docs/proposal_submitted.md 保留提交历史；更新当前设计，不改写历史正文。

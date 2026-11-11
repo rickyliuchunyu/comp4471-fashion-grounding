@@ -1,6 +1,6 @@
 # 角色任务卡：数据、基线与统一评估
 
-角色 ID：`data_eval`。暂定负责人：组员 B，姓名及 GitHub 账号待填写。先读 [团队协作说明](../team_workflow.md)、[数据协议](../data_protocol.md)、[实验计划](../experiment_plan.md)、[实现规范](../implementation_spec.md) 和 [技术设计](../technical_design.md)。
+角色 ID：`data_eval`。负责人简称：wkq（原角色 B），成员简称已确认，GitHub 用户名与权限仍待核验。先读 [团队协作说明](../team_workflow.md)、[数据协议](../data_protocol.md)、[实验计划](../experiment_plan.md)、[实现规范](../implementation_spec.md) 和 [技术设计](../technical_design.md)。
 
 执行先后顺序统一按 [完整工作流程](../workflow.md)。先查 [状态表](../status.md) 和 [交接入口](../handoffs/README.md)，检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
 
@@ -13,7 +13,7 @@
 1. 依据类别配置实现 Fashionpedia 八类转换、部件/jumpsuit 排除、源细类保留、mask 解码及错误隔离；不凭模型输出修改标签。
 2. 按 [文件契约](../artifact_contract.md) 建立公共读写与验证器：ID、图像尺寸、mask/框一致性、类别范围、路径、schema 版本和目标引用。
 3. 建立图片/重复组 manifest，保持官方划分边界，同图翻译/改写不跨 train/dev/test；发布实际数量、映射版本和哈希。
-4. 先交付少量合法的真实图/GT 候选/查询记录让 A 和 Liu Chunyu 接口联调；标注试点规模按协议逐步扩充，不把格式示例计为真实标注。
+4. 先交付少量合法的真实图/GT 候选/查询记录让 A 和 lcy 接口联调；标注试点规模按协议逐步扩充，不把格式示例计为真实标注。
 5. 没有完整数据时先用明确标记为 synthetic/illustrative 的最小夹具验证转换和评价逻辑，再用真实样本复核。
 
 验收：上下游能读取；错误不静默跳过；有类别/面积/排除统计与叠图检查；划分无已知组重叠。元数据审计不等于解码后 mask 质量检查，两者分开记录。
@@ -38,12 +38,12 @@
 
 ## 输入、交付与复核
 
-输入：原始图片/标注及许可来源；全员描述与复核记录；Liu Chunyu/A 的候选和预测；各方法运行元信息。
+输入：原始图片/标注及许可来源；全员描述与复核记录；lcy/A 的候选和预测；各方法运行元信息。
 
 交付：转换/划分/查询验证代码、公共 schema、GT 小批数据与冻结 manifest、B0、统一评估器、分组表与可视化、数据和评价报告段落。大数据和含私有链接的清单留在受控存储。
 
-默认复核：Liu Chunyu 核对类别/mask/候选几何；A 核对查询、匹配和分母。报告表与 registry 的运行状态由方法负责人确认；未运行格子为空/N/A。
+默认复核：lcy 核对类别/mask/候选几何；A 核对查询、匹配和分母。报告表与 registry 的运行状态由方法负责人确认；未运行格子为空/N/A。
 
 ## 可直接交给 Codex 的开工说明
 
-> 我是暂定组员 B，负责 data_eval。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md、docs/status.md、docs/artifact_contract.md 和本任务卡，优先完成公共数据读写/验证器、可用 GT 小批数据、B0 和可手算验证的评价器，让另外两人能并行开发。不得自行完成并宣称所有人工复核，也不能让答案字段进入推理。按图片组划分并保留失败样本；用自己的目录工作。结束时提供数据版本、检查证据、运行方法和给 A/Liu Chunyu 的交接内容。
+> 我是 wkq（B），负责 data_eval。请先读取 AGENTS.md、docs/team_workflow.md、docs/workflow.md、docs/status.md、docs/artifact_contract.md 和本任务卡，优先完成公共数据读写/验证器、可用 GT 小批数据、B0 和可手算验证的评价器，让另外两人能并行开发。不得自行完成并宣称所有人工复核，也不能让答案字段进入推理。按图片组划分并保留失败样本；用自己的目录工作。结束时提供数据版本、检查证据、运行方法和给 A/lcy 的交接内容。
