@@ -1,6 +1,6 @@
 # B0/B2 共享查询解析约定
 
-版本 `rules-v1-draft`，待实现、待 dev 冻结。唯一词表为 [rule_parser.json](../configs/rule_parser.json)。B 负责词表与拟议 `data/query_rules.py`，A 复核并调用同一解析函数；B0/B2 评分仍分别放在各自模块。不得复制两份词表后独立修改。
+版本 `rules-v1-pilot`，已实现并通过CPU检查、待 dev 冻结。唯一词表为 [rule_parser.json](../configs/rule_parser.json)。B 负责词表与拟议 `data/query_rules.py`，A 复核并调用同一解析函数；B0/B2 评分仍分别放在各自模块。不得复制两份词表后独立修改。
 
 ## 1. 输入与输出
 
@@ -38,4 +38,6 @@ unconsumed_spans: 未被类别、方位、语气词或标点消耗的文字片�
 | 不是左边的包 / not the bag on the left | unsupported operator | B0 不支持；B2 方位项为零，仍保留完整文本 |
 | the bag and the shoe | 类别 conflict | B0 不支持；B2 方位项为零 |
 
-实现时将这些案例落成公共检查，A/B 使用相同版本和 hash。词表只能用 train/dev 修订，变更记录覆盖范围与原因；P7 冻结后 test 不再加词。报告 B2 可解析比例、实际存在该类候选的比例以及实际非零规则项的比例，避免将单候选零分误称为有效规则作用。当前没有解析器运行结果。
+实现时将这些案例落成公共检查，A/B 使用相同版本和 hash。词表只能用 train/dev 修订，变更记录覆盖范围与原因；P7 冻结后 test 不再加词。报告 B2 可解析比例、实际存在该类候选的比例以及实际非零规则项的比例，避免将单候选零分误称为有效规则作用。已有CPU检查和B0训练试点诊断，尚无B2实际规则覆盖统计。
+
+2026-11-12 实现见 data/query_rules.py。训练试点仅增加中性画面词：中文“画面”，英文“image/side”；外观词仍未消耗。A/B共同复核与dev冻结未完成。实际检查及B0结果见 [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)。

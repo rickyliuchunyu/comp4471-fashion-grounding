@@ -1,8 +1,8 @@
 # 当前进度与下一步
 
-更新：2026-11-11。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-12（wkq 大包发布与机器初标）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
-**当前 P0 接口复核与 P1 环境准备进行中，P2 真实小包待开发。** 研究计划、角色任务卡和交接规范已建立；真实数据转换、查询复核、模型训练、评价和演示仍未实现/未验证。AutoDL 实例已创建，发起人 SSH 已验证，基础 PyTorch/CUDA 与分割扩展可导入；完整模型验证、组员访问与正式训练预算仍待确认。成员简称已确认：lcy = segmentation、wyz（A）= grounding、wkq（B）= data_eval；简称不代表账号权限。
+**wkq 已推进至 P4 数据扩充：5,000 train / 250 dev / 400 test 留出图已版本化发布；1,000 图训练语言初标与 116 图 dev 草稿仍待人工审核。** 共享解析器、B0、统一评价核心和数据工具共 93 项 CPU 测试通过，见 [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)。本轮没有 GPU 训练、正式 dev/test 语言评价或三方最终冻结；其他成员模型进度以其交接为准。
 
 ## 1. 阶段状态
 
@@ -12,9 +12,9 @@
 | --- | --- | --- | --- | --- |
 | P0 接口确认 | in_progress | [文件契约](artifact_contract.md)、[合成示例](../examples/README.md)、[解析约定](rule_parser_contract.md) | 三人消费方复核与实际读写器检查 | 全员，B 汇总 |
 | P1 环境与工作区 | in_progress | [远程只读盘点](handoffs/segmentation/server_inventory.md)：GPU/磁盘/包版本/扩展导入 | 独立工作区、图文环境、GPU 锁与模型小批检查 | lcy 协调，全员 |
-| P2 真实 GT 小包 | not_started | [数据协议](data_protocol.md)；合成例不计入 | 真实图片、mask、复核查询及接收方验证 | B，全员标注 |
-| P3 基线与评价器 | not_started | B0/B1/B2 设计 | 实现、可手算评价验证、真实试点输出 | A/B |
-| P4 数据扩充冻结 | not_started | 数量与划分规则 | 实际分区、哈希、复核与重复组报告 | B，全员 |
+| P2 真实 GT 小包 | in_progress | 17组/34条accepted保留；lcy小包消费验收有工作区记录，用户报告wyz接口OK | 旧1组争议仍待处理；不同版本验收不能混用 | B，全员 |
+| P3 基线与评价器 | in_progress | [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)；共享解析/B0/统一评价核心，当前全套93测试通过 | B1/B2实际输出及评价交叉复核 | A/B |
+| P4 数据扩充冻结 | in_progress | [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)：5000/250/400图，1000图3160条训练初标，分组/hash/源mask检查通过 | 人工验收、dev补写、独立测试描述、三方消费验收与冻结 | B，全员 |
 | P5-S 分割训练 | not_started | S0 规划配置 | 可恢复权重、dev 结果和固定候选 | lcy |
 | P5-L 排序训练 | not_started | M1/M2 规划配置 | 各 seed 日志、权重和 dev 结果 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
@@ -29,9 +29,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 基础盘点完成；规划独立课程工作区，准备分割模型检查 | 核对公开源码/权重与候选接口，规划数据盘缓存/输出 | 模型小批验证需 B 的真实小包与具体运行配置 | [环境记录](handoffs/segmentation/server_inventory.md)；实现 PR 与模型检查待完成 |
-| wyz（A）/ grounding | 审核候选读取与共享解析，准备 B1/B2 | 合成包读取、缓存键/预测输出接口、独立编码器入口 | GT 结果需真实图片/查询，GPU 使用需排队 | 个人 PR；特征与预测检查；角色交接文件，均待创建 |
-| wkq（B）/ data_eval | 实现公共读写器、共享解析与真实小包转换 | 将契约落成代码、验证 RLE 与指标边界、安排标注试点 | 正式小包需取得原始数据；人工复核需另一成员 | 个人 PR；转换报告/版本 manifest；交接文件，均待创建 |
+| lcy | 验收新train/dev包，准备自己的分割训练 | 小包模型smoke已有工作区交接；新包含5000/250图及源保真检查 | 新命名空间/加载器验收；训练配置与GPU协调由本人登记 | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)中的小包证据和新包路径 |
+| wyz（A）/ grounding | 验收大包读取、缓存键和弱标注实验入口 | 用户报告小包接口OK；可使用明确标记的训练机器初标做实验 | 正式dev查询尚待人工验收；不得把needs_revision伪装accepted | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)，新包模型消费未由wkq代验 |
+| wkq（B）/ data_eval | 审核dev草稿并组织补写，接收大包消费验收 | [已发布分区、初标和35页审核入口](handoffs/data_eval/large_dataset_20261112.md)；训练不属本轮职责 | dev仅116图有待审草稿，其余134图待补写；测试描述未生成 | 共享 processed/fp_data_eval_large_v1 与交接文档 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -41,12 +41,12 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 正式模型运行代码/数据转换器 | not_implemented | 无 src 运行入口；示例检查器不替代它们 |
-| 实验结果 | none_recorded | registry 14 条计划，指标为空 |
+| 模型代码/数据转换器 | wkq大包转换、GT源保真、初标及评价核心remote_cpu_checked | [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)；模型训练由负责人另记 |
+| 实验结果 | training_pilot_diagnostic | 保留14条计划，新增B0训练GT诊断；12/34选对，不是正式dev/test成绩 |
 | GPU/环境/付费预算 | GPU 与基础依赖已盘点；完整模型/长期训练预算未验证 | [服务器检查](handoffs/segmentation/server_inventory.md)，系统盘仅余约 4.6G |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
-| wyz/wkq 的 GitHub/SSH 权限 | 待核验；lcy SSH 已验证 | 简称不是 GitHub 用户名，成员分别授权 |
-| 公共权重 revision 与数据 manifest | not_pinned | 对应方法/数据负责人执行时补齐 |
+| wyz/wkq 的 GitHub/SSH 权限 | wkq SSH 已验证，GitHub LE-brawl 经本人确认授权；wyz 待核验 | wkq 远端交接；其他成员分别授权 |
+| 公共权重 revision 与数据 manifest | 大包manifest/hash已固定版本；三方正式freeze未完成 | 权重由方法负责人登记；数据见发布索引 |
 | 课程实际截止与提交回执 | 未重新核验 | 提交负责人查课程系统；历史日期不是当前确认 |
 
 ## 4. 更新规则
