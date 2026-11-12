@@ -1,0 +1,23 @@
+test_downscaled_binary_mask_has_zero_padding (__main__.BinaryInstancePaddingTests) ... FAIL
+test_object_lost_during_resize_is_not_resurrected_by_padding (__main__.BinaryInstancePaddingTests) ... FAIL
+
+======================================================================
+FAIL: test_downscaled_binary_mask_has_zero_padding (__main__.BinaryInstancePaddingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/fashion-grounding/runs/segmentation/env-20261112/test_segmentation_lsj_padding.py", line 39, in test_downscaled_binary_mask_has_zero_padding
+    self.assertTrue(torch.equal(result['instances'].gt_masks, expected))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_object_lost_during_resize_is_not_resurrected_by_padding (__main__.BinaryInstancePaddingTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/autodl-tmp/fashion-grounding/runs/segmentation/env-20261112/test_segmentation_lsj_padding.py", line 48, in test_object_lost_during_resize_is_not_resurrected_by_padding
+    self.assertEqual(len(result['instances']), 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.608s
+
+FAILED (failures=2)

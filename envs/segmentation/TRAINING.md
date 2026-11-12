@@ -1,5 +1,7 @@
 # 分割训练入口与配置
 
+重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。修复后尚未训练。
+
 入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整 S0 的训练预算与训练仍待完成。
 
 ## 配置与执行范围
