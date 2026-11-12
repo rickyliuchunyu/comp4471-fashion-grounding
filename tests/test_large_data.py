@@ -52,6 +52,10 @@ class LargeDataTests(unittest.TestCase):
    m=np.zeros((100,200),bool);m[10:90,x:x+60]=True
    anns.append({"id":aid,"source_category_id":fine,"category_id":1,"iscrowd":0,"area":4800,"bbox":[x,10,60,80],"segmentation":encode_mask(m)})
   self.assertEqual(proposed_queries({"image_id":1,"height":100,"width":200},anns,rgb),[])
+ def test_selection_prioritizes_same_fine_class_distractors(self):
+  easy=[{"kind":"appearance","target":{"id":1,"category_id":7},"same_fine_count":1}]
+  hard=[{"kind":"appearance","target":{"id":2,"category_id":7},"same_fine_count":2}]
+  self.assertEqual(select_images({1:easy,2:hard},1)[0][0],2)
  def test_selection_does_not_claim_unavailable_images(self):
   props=[{"kind":"appearance","target":{"id":1,"category_id":7}}]
   self.assertEqual(len(select_images({1:props},10)),1)

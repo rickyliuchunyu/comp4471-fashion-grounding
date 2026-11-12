@@ -52,7 +52,7 @@ def proposed_queries(im,anns,rgb):
         patterns=[p for p in a.get("attribute_ids",[]) if p in PATTERNS]
         features[a["id"]]={"color":color,"color_fraction":confidence,"pattern":patterns[0] if len(patterns)==1 else None}
     def add(a,zh,en,kind,evidence,contrast=None):
-        proposals.append({"target":a,"zh":zh,"en":en,"kind":kind,"evidence":evidence,"contrast":contrast})
+        proposals.append({"target":a,"zh":zh,"en":en,"kind":kind,"evidence":evidence,"contrast":contrast,"same_fine_count":len(fine[a["source_category_id"]])})
     for a in valid:
         if a["id"] not in features:continue
         f=features[a["id"]];group=[x for x in valid if x["category_id"]==a["category_id"]];zh,en=FINE[a["source_category_id"]]
@@ -95,6 +95,7 @@ def select_images(pool,count):
             score=sum(1/(1+counts[c]) for c in cats)
             nonshoe=any(p["kind"]=="spatial" and p["target"]["category_id"]!=6 for p in props)
             score+=.025 if nonshoe else 0
+            score+=.02 if any(p["kind"]=="appearance" and p.get("same_fine_count",1)>=2 for p in props) else 0
             if score>bestscore:best=iid;bestscore=score
         if best is None:break
         used.add(best);props=pool[best]
@@ -105,7 +106,7 @@ def select_images(pool,count):
         if usable:
             chosen=min(usable,key=lambda ps:counts[ps[0]["target"]["category_id"]])
         else:
-            ranked=sorted((p for p in props if p["kind"]!="spatial"),key=lambda p:(counts[p["target"]["category_id"]],p["kind"]!="combined",p["target"]["id"]))
+            ranked=sorted((p for p in props if p["kind"]!="spatial"),key=lambda p:(counts[p["target"]["category_id"]],p.get("same_fine_count",1)<2,p["kind"]!="combined",p["target"]["id"]))
             chosen=[];targets=set()
             for p in ranked:
                 if p["target"]["id"] not in targets:chosen.append(p);targets.add(p["target"]["id"])
