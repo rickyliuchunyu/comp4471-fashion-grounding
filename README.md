@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前仓库包含研究计划、数据协议、接口规范和格式示例；已补充 wkq 的试点数据转换、GT 验证与复核审计代码，并在远端独立 CPU 环境验证，见 [交接记录](docs/handoffs/data_eval/remote_pilot_review_20261112.md)。尚无课程模型训练与统一模型评价运行代码，也没有新模型实验结果。JSON 是规划配置，不是可以直接运行的训练配置。本文中的数量、超参数与进度均为待验证计划。
+> 当前仓库包含研究计划、数据协议、接口规范和格式示例；已补充 wkq 的试点数据转换、GT 验证与复核审计代码，并在远端独立 CPU 环境验证，见 [交接记录](docs/handoffs/data_eval/remote_pilot_review_20261112.md)。已实现共享解析器、B0与统一评价核心，并运行训练试点GT诊断，见 [P3交接](docs/handoffs/data_eval/p3_reviewed_baseline_20261112.md)；尚无课程模型训练或正式dev/test结果。JSON 是规划配置，不是可以直接运行的训练配置。本文中的数量、超参数与进度均为待验证计划。
 
 ## 团队与 Codex 开工入口
 
@@ -65,11 +65,11 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 数据与实验状态
 
-[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 中的实验均未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划行，并新增B0训练试点GT诊断run；其他模型实验仍未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
-Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放于共享数据盘，查询草稿尚未转成正式 accepted 集合。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
+Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放于共享数据盘，17组/34条训练试点查询已发布accepted，1组仍待修订。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
 
 ## 下一步
 

@@ -5,7 +5,7 @@
 ## 1. 一行代表什么
 
 - `record_type=plan`：实验系列定义，experiment_id=S0/B1/M2 等；run_id、实际成员、数据 hash、测量值保持空。
-- `record_type=run`：一个方法、seed、split、候选条件及固定配置的实际执行记录。不同 GT/predicted、dev/test、seed 或重试分别登记。训练 run 可 split=train；评价 run 必须 dev/test，并引用训练权重。
+- `record_type=run`：一个方法、seed、split、候选条件及固定配置的实际执行记录。不同 GT/predicted、dev/test、seed 或重试分别登记。训练 run 可 split=train；正式评价 run 必须 dev/test；训练试点接口诊断允许 train，但必须明确 scope=training_pilot_diagnostic，不作泛化结论，并引用训练权重。
 - 唯一 `run_id` 示例为 `M2-dev-predicted-s42-r01`，实际执行前确认不重名；重跑增加 r02，不覆盖旧产物。D1/D2 派生分析使用自己的 run ID，在 metadata 中列出来源运行。
 - status 可为 queued/running/completed/failed/interrupted；completed 只说明该项执行结束，不自动说明评价完成或达到预期。无实验结果时不填 0。
 
@@ -67,3 +67,5 @@
 ## 数据准备运行（不属于模型实验指标）
 
 2026-11-12，wkq：20261112-grounded-queries，CPU，看图初标与审核工具验证已完成，人工审核 pending。9 图/18 语义/36 双语，accepted=0；35 测试与 59 源 mask 一致性检查通过。见 [交接](handoffs/data_eval/grounded_query_review_20261112.md)。未往模型实验计划填入虚构指标。
+
+2026-11-12，wkq：B0-train-gt-pilot-r01 已完成，34条accepted训练查询，12选对、22规则不支持，完整分母保留。registry新增run，14条plan不变。见 [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)。

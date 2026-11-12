@@ -27,7 +27,7 @@
 
 - 按 team_workflow.md 的主责表选择文件，B0 在 `baselines/category_position.py`，B2 在 `grounding/rules.py`，避免多人编辑同一规则入口。
 - 源码路径多为拟议布局；先确认现有实现，避免重复造模块。
-- 交接 schema 3、合成夹具和检查器已有；正式数据验证器/训练/评价仍待实现。B0/B2 共用 configs/rule_parser.json 和拟议 data/query_rules.py，不复制词表。
+- 交接 schema 3、合成夹具和检查器已有；试点数据验证器及统一评价核心已有CPU验证，模型训练与正式评价待完成。B0/B2 共用 configs/rule_parser.json 和data/query_rules.py，不复制词表。
 - 公共数据/schema 由 data_eval 维护，生产方和消费方一起复核破坏性变更。若用户已授权跨模块任务，可执行并明确影响，不增加无关审批。
 - 项目类别 ID 1–8，分割内部 ID 0–7；原图 RGB、排他右下角 xyxy、原图尺寸 mask、稳定候选 ID/顺序必须一致。
 - 推理不读人工目标 ID、目标类别或 query type；预测 mask 不能用 GT 修正。GT 诊断与预测候选结果分开。
