@@ -1,5 +1,5 @@
 """Transparent CPU weak language annotation from mask pixels, source attributes and geometry."""
-import argparse,json,random,shutil,sys
+import argparse,json,random,shutil,sys,concurrent.futures
 from collections import Counter,defaultdict
 from pathlib import Path
 import numpy as np
@@ -122,12 +122,15 @@ def build_language(source,output,count,allow_fewer=False):
     images={x["image_id"]:x for x in manifest["images"]};by=defaultdict(list)
     for a in coco["annotations"]:by[a["image_id"]].append(a)
     pool={}
-    for n,im in enumerate(manifest["images"],1):
-        if im["image_id"] in QUARANTINE:continue
+    def propose(im):
+        if im["image_id"] in QUARANTINE:return im["image_id"],[]
         with Image.open(source/im["file_name"]) as img:rgb=np.asarray(img.convert("RGB"))
-        props=proposed_queries(im,by[im["image_id"]],rgb)
-        if props:pool[im["image_id"]]=props
-        if n%500==0:print("annotate",source.name,n,"eligible",len(pool),flush=True)
+        return im["image_id"],proposed_queries(im,by[im["image_id"]],rgb)
+    # map preserves manifest order, so parallel CPU execution does not change sampling.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        for n,(iid,props) in enumerate(executor.map(propose,manifest["images"]),1):
+            if props:pool[iid]=props
+            if n%500==0:print("annotate",source.name,n,"eligible",len(pool),flush=True)
     selected=select_images(pool,count);require(bool(selected) and (allow_fewer or len(selected)==count),"insufficient images with conservative appearance/spatial labels")
     ids={iid for iid,_ in selected};output.mkdir(parents=True)
     for folder in ("images","masks"):(output/folder).mkdir()
