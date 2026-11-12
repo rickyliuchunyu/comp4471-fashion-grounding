@@ -1,0 +1,9 @@
+Thu Nov 12 07:42:18 UTC 2026
+Filesystem       1B-blocks        Used   Available Use% Mounted on
+overlay        32212254720  3280666624 28931588096  11% /
+/dev/nvme0n1   53687091200 30862647296 22824443904  58% /root/autodl-tmp
+name, memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+NVIDIA GeForce RTX 3090, 0 MiB, 24125 MiB, 0 %
+pid, process_name, used_gpu_memory [MiB]
+169M	/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9
+170M	/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-coco-inference-20261112-r01

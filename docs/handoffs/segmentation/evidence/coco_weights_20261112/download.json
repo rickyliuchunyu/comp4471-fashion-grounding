@@ -1,0 +1,15 @@
+{
+  "bytes": 176382166,
+  "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+  "md5": "3c8ec9998b5769ed00abd9c5e51fcefb",
+  "status": "verified",
+  "reused": false,
+  "official_url": "https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl",
+  "download_url": "https://huggingface.co/egeozsoy/MM-OR/resolve/9052e46f2c770601e17ebd797f2505cd54efaea3/panoptic_segmentation/mask2former/model_final_3c8ec9.pkl",
+  "mirror_revision": "9052e46f2c770601e17ebd797f2505cd54efaea3",
+  "official_endpoint_status": "HTTPS certificate expired in both local and server checks",
+  "tls_verification": true,
+  "checked_at": "2026-11-12T07:37:45.860063+00:00",
+  "elapsed_seconds": 17.034617792000002,
+  "integrity_scope": "Full SHA256 matches pinned mirror LFS object; MD5 prefix matches official Model Zoo filename. No publisher-signed SHA256 was available."
+}

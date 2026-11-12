@@ -1,0 +1,115 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-coco-inference-20261112-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "P1_COCO_loading_and_inference_NOT_training_or_evaluation",
+  "status": "completed",
+  "status_history": [
+    {
+      "status": "running",
+      "time": "2026-11-12T07:41:52.103250+00:00"
+    },
+    {
+      "status": "completed",
+      "time": "2026-11-12T07:42:01.775326+00:00"
+    }
+  ],
+  "git_commit": "c54b292ca119f33e8eb57113157151c3d27fd5f4",
+  "split": "train",
+  "candidate_source": "predicted",
+  "seed": 42,
+  "artifacts": {
+    "logs": {
+      "path": "docs/handoffs/segmentation/evidence/coco_weights_20261112/run.log",
+      "sha256": "bfd9aa2ac34e6917a4b8fe5764d695d8681860aeeeea828b5b1f0fda858a86e2"
+    },
+    "coordination": {
+      "path": "docs/handoffs/segmentation/evidence/coco_weights_20261112/coordination.json",
+      "sha256": "2f69eeccbd3ae40796dc2748126454404d5446e4076b8697618acf833185a777"
+    },
+    "resolved_config": {
+      "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/resolved_config.json",
+      "sha256": "3c6794faf339b8fad855ee8feb71286c627035740b8ce2ae9e41285a3bbc7525",
+      "bytes": 421
+    },
+    "model_construction_config": {
+      "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/model_config.yaml",
+      "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff",
+      "bytes": 7771
+    },
+    "image_manifest": {
+      "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/input/image_manifest.json",
+      "sha256": "00919fb84945e35562b9416bb879ee0abe33fa0e40b1e3282a1d5fc2b7de4691",
+      "bytes": 2506
+    },
+    "parent_image_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/image_manifest.json",
+      "sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111"
+    },
+    "annotation_manifest": null,
+    "query_manifest": null,
+    "candidate_manifest": {
+      "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/candidate_package/candidates_predicted.json",
+      "sha256": "03674be3642e0199cdd3661311f8664f323585cb647b340c344a9ce8d2bb964b",
+      "bytes": 72306
+    },
+    "predictions": null,
+    "metrics": null,
+    "inference_report": {
+      "path": "docs/handoffs/segmentation/evidence/coco_weights_20261112/inference_report.json",
+      "sha256": "444b98a5ec59f69c37494d0f915f94491be4bbcdae13b1df9beafa217add40fc"
+    },
+    "download_record": {
+      "path": "docs/handoffs/segmentation/evidence/coco_weights_20261112/download.json",
+      "sha256": "367ee06f9dd8021e1dc26b5a07814248b09aea6aca79bd29c17e1b4e091989b1"
+    }
+  },
+  "parent_run_ids": [],
+  "checkpoint": {
+    "source": {
+      "path": "shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+      "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+      "md5": "3c8ec9998b5769ed00abd9c5e51fcefb",
+      "bytes": 176382166,
+      "author": "MaskFormer Model Zoo",
+      "tensor_count": 558,
+      "verified_before_deserialization": true
+    },
+    "adapted": {
+      "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/adapted_initialization.pth",
+      "sha256": "4fc1c106e61dd8f72e09afa81af86ebcad2825ea0207d49996247c75a9e1d836",
+      "bytes": 176452100
+    },
+    "initialization": "COCO non-head tensors with random eight-class head, zero training updates"
+  },
+  "environment": {
+    "path": "docs/handoffs/segmentation/evidence/coco_weights_20261112/environment.json",
+    "sha256": "523c2d2f01ee2c9cc62002bad9488e08c16bad704e2c61b4c69889127183cefa"
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.pretrained_check",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-coco-inference-20261112-r01"
+  ],
+  "evaluation": {
+    "performed": false,
+    "reason": "Five train images for engineering loading/inference only; class head untrained. No query supervision, AP, model selection or latency benchmark."
+  },
+  "failure": null,
+  "notes": [
+    "Official HTTPS endpoint had expired certificate; pinned mirror fetched locally with TLS validation and transferred by SSH. Full SHA256 and official filename MD5 prefix checked at both ends; no publisher-signed full digest available.",
+    "Candidate package illustrative_only=true; 154 masks are geometry/interface checks, not validated garment predictions.",
+    "No optimizer, backward, update, annotation/query input, or legacy project checkpoint.",
+    "model_config.yaml records CPU construction; execution_device in inference_report is cuda:0."
+  ]
+}

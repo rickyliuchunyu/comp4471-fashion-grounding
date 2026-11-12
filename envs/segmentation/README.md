@@ -1,6 +1,6 @@
 # Segmentation 环境与最小入口
 
-lcy，2026-11-12。实际结果见 [交接](../../docs/handoffs/segmentation/pilot_adapter_20261112.md)。这是 P1 工程检查，**不是正式 S0 trainer 或模型性能验收**。
+lcy，2026-11-12。实际结果见 [随机 smoke 交接](../../docs/handoffs/segmentation/pilot_adapter_20261112.md) 与 [COCO 加载/五图推理](../../docs/handoffs/segmentation/coco_weights_20261112.md)。这是 P1 工程检查，**不是正式 S0 trainer 或模型性能验收**。
 
 ## 独立运行环境
 
@@ -49,7 +49,7 @@ GPU 必须使用共用 `coordination/gpu.lock`；锁内检查计算进程、显�
 
 运行配置：[pilot_smoke.json](../../configs/runs/segmentation/pilot_smoke.json)。固定两个 optimizer updates，单图 batch，短边 256、长边上限 384，随机初始化，AMP 初始 scale=128，种子 42；第一个 update 后重建模型/优化器并恢复，再执行第二个 update。保留完整官方 R50 架构、100 queries、10 次预测和点采样损失。这个小检查的 resize/StepLR 不代表规划中的 LSJ768/正式 warmup 训练。
 
-真实输入必须为 Fashionpedia train；图片 hash、尺寸、COCO mask/面积/框与八类映射先检查，crowd 不进入训练。模型推理 API 只接收 RGB 像素和推理配置。公开 COCO 权重 URL 已确认，文件未下载，SHA256 未锁定；`adapt_coco_state` 仅在合成 state 上验证，不宣称公开 checkpoint 加载成功。
+真实输入必须为 Fashionpedia train；图片 hash、尺寸、COCO mask/面积/框与八类映射先检查，crowd 不进入训练。模型推理 API 只接收 RGB 像素和推理配置。公开 COCO 权重已通过固定镜像下载（官方端点证书过期），本机/服务器 SHA256 与官方文件名 MD5 前缀均核验；实际八类适配与五图短推理通过。原 `smoke` 入口仍只做随机初始化检查。独立 `pretrained_check` 入口不构造 optimizer，完成 555 tensors 加载一致性、旧 query 名转换、分类头/loss buffer 保留、适配权重严格恢复与原图 RLE 往返校验；完整命令见 COCO 交接。
 
 ## 候选接口
 
@@ -57,4 +57,4 @@ GPU 必须使用共用 `coordination/gpu.lock`；锁内检查计算进程、显�
 
 `export_package` 输出 schema 3、压缩 COCO RLE、原图排他 xyxy、稳定 query ID、严格同序候选和文件 SHA256。每图必须存在：正常空集 `no_candidates`，错误为带脱敏 code/message 的 `inference_error`。生产包不含 GT 目标 ID，拒绝覆盖旧输出。
 
-随机初始化 smoke 的候选包强制 `illustrative_only=true`，即使输入图片是真实图。它只能检查格式，不能用于语言方法的正式比较。真实模型候选还需公开权重适配、正式训练及 dev 选择；标准 COCO AP 仍保留官方 instance inference，未由本入口计算。
+随机初始化 smoke 的候选包强制 `illustrative_only=true`，即使输入图片是真实图。它只能检查格式，不能用于语言方法的正式比较。COCO 短推理的八类头尚未训练，其候选同样强制 illustrative_only=true；正式模型候选仍需训练及 dev 选择；标准 COCO AP 仍保留官方 instance inference，未由本入口计算。
