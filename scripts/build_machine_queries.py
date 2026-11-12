@@ -21,21 +21,21 @@ def dominant_color(rgb,mask):
     hsv=np.asarray(Image.fromarray(rgb).convert("HSV"),dtype=float)[core]
     h=hsv[:,0]*360/255;s=hsv[:,1]/255;v=hsv[:,2]/255
     label=np.full(len(h),-1,int)
-    label[v<.20]=0
-    neutral=(s<.18)&(v>=.20);label[neutral&(v>=.78)]=1;label[neutral&(v<.78)]=2
-    chrom=(label<0)
-    label[chrom&((h<15)|(h>=345))]=3
-    label[chrom&(h>=15)&(h<45)]=4
-    label[chrom&(h>=45)&(h<70)]=5
-    label[chrom&(h>=70)&(h<175)]=6
-    label[chrom&(h>=175)&(h<260)]=7
-    label[chrom&(h>=260)&(h<300)]=8
-    label[chrom&(h>=300)&(h<345)]=9
-    label[chrom&(h>=10)&(h<55)&(v<.65)]=10
-    label[chrom&(h>=20)&(h<65)&(s<.45)&(v>=.65)]=11
+    # Avoid treating saturated dark navy/purple as black, or pink as red.
+    label[(v<.10)|((v<.25)&(s<.20))]=0
+    neutral=(s<.12)&(v>=.25)
+    label[neutral&(v>=.85)]=1;label[neutral&(v<.85)]=2
+    chrom=(label<0)&(v>=.25)&(s>=.45)
+    label[chrom&((h<10)|(h>=350))&(s>=.65)]=3
+    label[chrom&(h>=48)&(h<65)&(v>=.70)&(s>=.60)]=5
+    label[chrom&(h>=85)&(h<165)]=6
+    label[chrom&(h>=185)&(h<250)]=7
+    # Orange/brown/beige and purple/pink boundaries are not reliable enough
+    # for this CPU estimator: leave them unlabeled instead of guessing.
     counts=np.bincount(label[label>=0],minlength=12);best=int(counts.argmax());fraction=float(counts[best]/len(label))
-    threshold=.78 if best in (0,1,2) else .65
+    threshold=.80 if best in (0,1,2) else .75
     return (best if fraction>=threshold else None),fraction
+
 
 def box_overlap(a,b):
     ax,ay,aw,ah=a["bbox"];bx,by,bw,bh=b["bbox"]
@@ -151,7 +151,7 @@ def build_language(source,output,count,allow_fewer=False):
             sid=f"{output.name}-q{len(evidence)+1:05d}";a=p["target"]
             evidence.append({"semantic_query_id":sid,"image_id":iid,"target_instance_id":a["id"],"evidence":p["evidence"],"physical_instance_review":"not_performed"})
             for lang in ("zh","en"):
-                rows.append({**COMMON,"query_id":sid+"-"+lang,"semantic_query_id":sid,"contrast_set_id":p["contrast"],"image_id":iid,"source_dataset":"fashionpedia","split":im["split"],"query":p[lang],"language":lang,"target_instance_id":a["id"],"target_category_id":a["category_id"],"same_category_instance_count":sum(x["category_id"]==a["category_id"] and not x["iscrowd"] for x in by[iid]),"query_types":[p["kind"]],"spatial_reference":"image_view","annotation_version":output.name,"annotator":"codex_cpu_weak_labeler_v1","reviewer":None,"review_status":"needs_revision","target_source_category_id":a["source_category_id"],"target_source_category_name":a["source_category_name"],"same_source_category_instance_count":sum(x["source_category_id"]==a["source_category_id"] and not x["iscrowd"] for x in by[iid]),"authorship":"machine_generated_from_pixels_source_attributes_and_geometry_not_individually_visually_reviewed","template_family":"weak_"+p["kind"]+"_v1","paraphrase_group_id":None,"training_policy":"experimental_machine_labels_only_not_human_accepted"})
+                rows.append({**COMMON,"query_id":sid+"-"+lang,"semantic_query_id":sid,"contrast_set_id":p["contrast"],"image_id":iid,"source_dataset":"fashionpedia","split":im["split"],"query":p[lang],"language":lang,"target_instance_id":a["id"],"target_category_id":a["category_id"],"same_category_instance_count":sum(x["category_id"]==a["category_id"] and not x["iscrowd"] for x in by[iid]),"query_types":[p["kind"]],"spatial_reference":"image_view","annotation_version":output.name,"annotator":"codex_cpu_weak_labeler_v2","reviewer":None,"review_status":"needs_revision","target_source_category_id":a["source_category_id"],"target_source_category_name":a["source_category_name"],"same_source_category_instance_count":sum(x["source_category_id"]==a["source_category_id"] and not x["iscrowd"] for x in by[iid]),"authorship":"machine_generated_from_pixels_source_attributes_and_geometry_not_individually_visually_reviewed","template_family":"weak_"+p["kind"]+"_v2","paraphrase_group_id":None,"training_policy":"experimental_machine_labels_only_not_human_accepted"})
     text="".join(json.dumps(q,ensure_ascii=False)+"\n" for q in rows)
     (output/"queries_draft.jsonl").write_text(text,encoding="utf-8")
     (output/"queries_machine_train.jsonl").write_text(text if all(im["split"]=="train" for im in ims) else "",encoding="utf-8")
@@ -169,7 +169,7 @@ def build_language(source,output,count,allow_fewer=False):
     write_json(output/"annotation_notes.json",{"disputes":[{"image_id":iid,"prior_answer_exposure":True,"reason":"previous pilot annotation/review exposure"} for iid in sorted(ids & exposed)],"human_review":"pending","evidence_file":"annotation_evidence.json"})
     write_json(output/"annotation_evidence.json",evidence)
     semantic=[q for q in rows if q["language"]=="zh"]
-    report={"requested_images":count,"eligible_pool_images":len(pool),"images":len(ims),"semantics":len(semantic),"language_records":len(rows),"accepted":0,"types":dict(Counter(q["query_types"][0] for q in semantic)),"target_categories":dict(Counter(q["target_category_id"] for q in semantic)),"same_category_competition_candidates":sum(q["same_category_instance_count"]>=2 for q in semantic),"same_fine_category_competition_candidates":sum(q["same_source_category_instance_count"]>=2 for q in semantic),"individually_visual_reviewed":0,"limitations":["Color is a thresholded pixel estimate, not a semantic ground-truth guarantee","Official pattern attributes are reused, not individually verified","No claim that annotation count guarantees distinct physical garments","Cannot enter accepted-only evaluator or final test","Not sufficient evidence of language model quality"]}
+    report={"color_policy":"v2 conservative black/white/gray/red/yellow/green/blue; other hues abstain","requested_images":count,"eligible_pool_images":len(pool),"images":len(ims),"semantics":len(semantic),"language_records":len(rows),"accepted":0,"types":dict(Counter(q["query_types"][0] for q in semantic)),"target_categories":dict(Counter(q["target_category_id"] for q in semantic)),"same_category_competition_candidates":sum(q["same_category_instance_count"]>=2 for q in semantic),"same_fine_category_competition_candidates":sum(q["same_source_category_instance_count"]>=2 for q in semantic),"individually_visual_reviewed":0,"limitations":["Color is a thresholded pixel estimate, not a semantic ground-truth guarantee","Official pattern attributes are reused, not individually verified","No claim that annotation count guarantees distinct physical garments","Cannot enter accepted-only evaluator or final test","Not sufficient evidence of language model quality"]}
     write_json(output/"annotation_report.json",report);write_json(output/"validation_report.json",validate_package(output))
     return report
 if __name__=="__main__":

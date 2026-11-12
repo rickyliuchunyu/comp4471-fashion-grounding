@@ -28,6 +28,11 @@ class LargeDataTests(unittest.TestCase):
   rgb=np.zeros((60,60,3),np.uint8);rgb[:]=[0,0,255];rgb[10:50,10:50]=[255,0,0]
   m=np.zeros((60,60),bool);m[10:50,10:50]=True
   color,confidence=dominant_color(rgb,m);self.assertEqual(color,3);self.assertEqual(confidence,1)
+ def test_uncertain_dark_or_boundary_colors_abstain(self):
+  for color in ([10,20,45],[230,135,150],[110,125,20],[100,10,110],[120,75,15]):
+   rgb=np.zeros((60,60,3),np.uint8);rgb[:]=color
+   with self.subTest(color=color):
+    label,_=dominant_color(rgb,np.ones((60,60),bool));self.assertIsNone(label)
  def test_ambiguous_color_not_named(self):
   rgb=np.zeros((60,60,3),np.uint8);rgb[:30]=[255,0,0];rgb[30:]=[0,0,255]
   color,_=dominant_color(rgb,np.ones((60,60),bool));self.assertIsNone(color)
