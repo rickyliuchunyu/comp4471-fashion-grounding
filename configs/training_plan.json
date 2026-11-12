@@ -293,5 +293,6 @@
         "deepfashion2": 0.5
       }
     }
-  }
+  },
+  "status_fields_scope": "Planning baseline only, not live implementation status; current role evidence is in docs/status.md and configs/project.json. This file is not an executable runtime config."
 }
