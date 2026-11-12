@@ -1,0 +1,7 @@
+2026-11-12T16:54:03+08:00
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  3.1G   27G  11% /
+/dev/nvme0n1    200G   30G  171G  15% /root/autodl-tmp
+name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %
+pid, process_name, used_gpu_memory [MiB]

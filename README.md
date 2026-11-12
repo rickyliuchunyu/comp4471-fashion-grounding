@@ -8,7 +8,7 @@
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wyz/wkq 的 GitHub 用户名与访问权限仍待核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/dev_ap_20261112.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -67,7 +67,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 [training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留正式实验计划，并追加明确标为工程 smoke 的运行记录，性能指标仍为空。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
-分割小阶段与真实验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，可复用训练入口、配置与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。完整训练及 dev 选择仍未执行。
+分割小阶段与真实验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，可复用训练入口、配置与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[AP/离线选择入口与候选读取实测](docs/handoffs/segmentation/dev_ap_20261112.md)已完成；完整训练及真实 dev 选择仍未执行。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
