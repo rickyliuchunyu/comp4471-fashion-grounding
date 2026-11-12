@@ -1,5 +1,7 @@
 # 分割 train/dev 冻结补齐与限定 dev 实验准备
 
+后续更新：用户已明确确认“现在发的就是经过人工复核的，你先用”。因此以下“人工复核未取得”是准备阶段历史状态，不再阻塞当前已授权的限定实验；执行依据见 [固定版本与用户确认记录](segmentation_train_dev_freeze_20261112.json)。原始观察与 pending 模板保留，不伪造逐对审核结论。
+
 日期：2026-11-12 21:28 HKT。执行者：Codex（lcy 工作区）。状态：`technical_evidence_complete_human_review_pending`；**尚未正式冻结，未执行真实 dev AP 或 checkpoint 选择**。
 
 ## 本轮结论

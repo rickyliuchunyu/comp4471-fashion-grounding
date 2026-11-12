@@ -1,8 +1,8 @@
 # 当前进度与下一步
 
-更新：2026-11-12 21:28 HKT；整组 GitHub 已核对：wkq=`f5787f4`、wyz=`103dcc5` / 新 PR #5、lcy=`0c10d1f`（本轮更新前 head）。三方技术接收已齐；lcy 复用输入/模型检查，补齐 53 对已知近重复分区处置核对及每类 20 例可视化抽样，准备了人工复核材料和限定 dev 配置。**实际人工近重复复核及团队冻结仍未取得，尚未运行真实 dev AP/选择。** 见[本轮冻结准备][freeze-prep]。
+更新：2026-11-12；用户最新明确确认“现在发的就是经过人工复核的，你先用”，覆盖此前“尚未完成人工复核”的答复。已按该确认接收并固定 train5000/dev250；[本次消费者冻结记录](handoffs/segmentation/segmentation_train_dev_freeze_20261112.json)保留原话、固定 hash 与范围，不代签个人审核人、不改生产方原 RELEASE。最新三方分支仍为 lcy=`457cc6d`、wyz=`103dcc5`、wkq=`f5787f4`，PR #2/#4/#5 均未合并。限定 100-update + 第 50/100 步完整 dev AP/选择已获准，准备执行；完整长训练未启动。
 
-**P0–P4 继续推进；正式数据冻结与完整长训练尚未完成。** lcy 的 trainer、200-update/恢复、AP/选择入口已验证。wyz 已接收 wkq 共享解析器并完成同一 34 条 accepted train 上的 B0/B1/B2 诊断，另完成 M1 seed42 机器弱标注试训；均非正式 dev/test 成绩，M2 与三种子比较尚未完成。语言 dev 审核与分割冻结分开推进。
+**分割 train/dev 已按用户人工复核确认固定用于限定实验；语言数据/最终方法冻结与完整长训练尚未完成。** lcy 的 trainer、200-update/恢复、AP/选择入口已验证。wyz 已接收 wkq 共享解析器并完成同一 34 条 accepted train 上的 B0/B1/B2 诊断，另完成 M1 seed42 机器弱标注试训；均非正式 dev/test 成绩，M2 与三种子比较尚未完成。语言 dev 审核与分割冻结分开推进。
 
 ## GitHub 同步快照
 
@@ -30,7 +30,7 @@
 | P1 环境与工作区 | in_progress | [lcy 工程检查](handoffs/segmentation/pilot_adapter_20261112.md)、[COCO 八类加载/五图推理](handoffs/segmentation/coco_weights_20261112.md)、[200-update 与跨进程恢复](handoffs/segmentation/stability_200_20261112.md)；[wyz 图文环境与 GPU 编码][wyz-handoff]；wkq 独立 CPU 环境；[lcy AP/候选读取实测][lcy-ap] | 全组交付的接收方复核与环境复现验收；wyz 环境只读复用 base torch，base 变化需重验；非长训练验收 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | [wyz 已接收共享解析器；34 条同包 train 上 B0/B1/B2=12/18/22 选对，输出完整，缓存重放一致][wyz-latest]；wkq 统一评价核心已交付 | 下游 PR 审阅、正式 accepted dev 评价与 B2 lambda 选择仍待完成；训练诊断不是泛化成绩 | A/B |
-| P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；实际近重复人工复核与团队冻结仍缺，formal_freeze=false；语言审核独立跟踪 | B，全员 |
+| P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；用户已确认交付数据经过人工复核，已形成消费者固定版本记录；原发布 formal_freeze=false 保留作历史，语言审核/最终冻结独立跟踪 | B，全员 |
 | P5-S 分割训练 | not_started | 可复用 trainer / S0 配置模板；200-update 通过；[AP/离线选择与候选消费检查通过][lcy-ap] | 冻结 train/dev、真实 dev AP / checkpoint 选择、完整训练与固定候选 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42 机器弱标签试训：5 epochs / 490 updates，已保存权重][wyz-latest]，不属于正式训练结果 | 人工审核 dev、M2 实现与 M1/M2 三种子公平对照、真实 dev 选择 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
@@ -45,7 +45,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 闭合分割分区冻结后，验证真实 dev AP 与选择 | 新 train/dev 输入已通过，后续直接复用接收报告及既有模型证据，不再重跑同版本输入检查/训练 smoke | formal_freeze=false；近重复复核及团队冻结待闭合；现有 pilot checkpoint 不匹配新冻结 train，不能正式选择 | [大包 CPU 接收][large-inputs]、[AP 交接][lcy-ap] |
+| lcy | 闭合分割分区冻结后，验证真实 dev AP 与选择 | 新 train/dev 输入已通过，后续直接复用接收报告及既有模型证据，不再重跑同版本输入检查/训练 smoke | 用户已确认当前包经过人工复核；使用已固定 train 生成 50/100 步 checkpoint，旧 pilot 权重不用于本次选择 | [大包 CPU 接收][large-inputs]、[AP 交接][lcy-ap] |
 | wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；预测候选待 lcy 固定版本；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 组织新包接收与冻结，审核/补写 dev 查询 | 分割大包与语言初标已发布；接收消费方检查及 B1/B2 输出 | 新包三方技术验收已齐；组织人工近重复复核及冻结，处置视觉不确定项；机器草稿不自动 accepted | [大包交接][wkq-large]、PR #4 |
 
