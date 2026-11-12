@@ -167,7 +167,7 @@ def main():
         "working_tree_dirty":bool(subprocess.check_output(["git","status","--porcelain"],text=True).strip()),
         "source_sha256":{str(p):sha256(p) for folder in ("src/fashion_grounding/grounding","src/fashion_grounding/encoders","src/fashion_grounding/data") for p in sorted(Path(folder).glob("*.py"))},
         "evaluation":None,"note":"No accuracy or formal performance claimed. See handoff for input review status."})
-    print(json.dumps({"output":str(output),"queries":len(rows),"errors":len(errors),"diagnostic_only":args.draft_diagnostic}))
+    print(json.dumps({"output":str(output),"queries":len(rows),"errors":len(errors),"diagnostic_only":args.draft_diagnostic or pack.package["illustrative_only"] or queries[0].split=="train"}))
     if errors: raise SystemExit(1)
 
 if __name__=="__main__": main()
