@@ -94,6 +94,24 @@ class DecoderTests(unittest.TestCase):
         encoded = mask_api.encode(np.asfortranarray(result[0].mask, dtype=np.uint8))
         np.testing.assert_array_equal(mask_api.decode(encoded), result[0].mask)
 
+    def test_real_images_diagnostic_manifest_matches_consumer_flag(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root/'image.ppm').write_bytes(b'P6\n4 3\n255\n'+bytes(36))
+            source = root/'image_manifest.json'
+            write_json(source, dict(schema_version=3, illustrative_only=False,
+                images=[dict(image_id=21, file_name='image.ppm', width=4, height=3,
+                             sha256=sha256(root/'image.ppm'))]))
+            original_hash = sha256(source)
+            pack = export_package(root/'output', source, {21: []}, candidate_set_id='diagnostic',
+                producer_run_id='unit-test', checkpoint_sha256='a'*64, decoder_config_sha256='b'*64,
+                illustrative_only=True)
+            exported = root/'output/image_manifest.json'
+            self.assertTrue(json.loads(exported.read_text())['illustrative_only'])
+            self.assertEqual(pack['image_manifest']['sha256'], sha256(exported))
+            self.assertEqual(pack['provenance']['source_image_manifest_sha256'], original_hash)
+            self.assertEqual(sha256(source), original_hash)
+
 
 class AdaptationTests(unittest.TestCase):
     def setUp(self):

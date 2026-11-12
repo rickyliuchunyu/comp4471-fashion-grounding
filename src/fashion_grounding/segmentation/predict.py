@@ -113,7 +113,8 @@ def export_package(output, image_manifest, predictions, *, candidate_set_id,
         raise ValueError('Predictions must cover each manifest image exactly once')
     output.mkdir(parents=True, exist_ok=False)
     (output / 'masks').mkdir()
-    # Preserve the manifest bytes/hash; copy its images without modifying upstream.
+    # Copy pixels without modifying upstream. A diagnostic export must label its
+    # own manifest consistently with the pack (required by grounding's reader).
     for im in manifest['images']:
         src = safe_path(image_manifest.parent, im['file_name'])
         if sha256(src) != im['sha256']:
@@ -121,7 +122,12 @@ def export_package(output, image_manifest, predictions, *, candidate_set_id,
         dest = safe_path(output, im['file_name'])
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src, dest)
-    shutil.copyfile(image_manifest, output / 'image_manifest.json')
+    exported_manifest = output / 'image_manifest.json'
+    if manifest['illustrative_only'] == illustrative_only:
+        shutil.copyfile(image_manifest, exported_manifest)
+    else:
+        manifest['illustrative_only'] = illustrative_only
+        write_json(exported_manifest, manifest)
     rows, seen = [], set()
     for im in manifest['images']:
         result = predictions[im['image_id']]
@@ -160,9 +166,10 @@ def export_package(output, image_manifest, predictions, *, candidate_set_id,
         rows.append(row)
     package = dict(schema_version=3, illustrative_only=illustrative_only,
         candidate_set_id=candidate_set_id, candidate_source='predicted',
-        image_manifest=dict(path='image_manifest.json', sha256=sha256(image_manifest)),
+        image_manifest=dict(path='image_manifest.json', sha256=sha256(exported_manifest)),
         provenance=dict(producer_run_id=producer_run_id, checkpoint_sha256=checkpoint_sha256,
                         decoder_config_sha256=decoder_config_sha256,
+                        source_image_manifest_sha256=sha256(image_manifest),
                         annotation_manifest_sha256=None, note=note), images=rows)
     write_json(output / 'candidates_predicted.json', package)
     return package

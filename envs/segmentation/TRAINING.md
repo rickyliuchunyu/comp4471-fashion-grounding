@@ -1,6 +1,6 @@
 # 分割训练入口与配置
 
-入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。它不执行 dev AP 或 checkpoint 选择；完整 S0 的训练预算、冻结 train/dev 与评价接入仍需单独完成。
+入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 可接入独立 [AP 评估与选择入口](EVALUATION.md)。完整 S0 的训练预算、冻结 train/dev 与真实 dev 验收仍待完成。
 
 ## 配置与执行范围
 
