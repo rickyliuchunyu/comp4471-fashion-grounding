@@ -110,7 +110,9 @@ def map_training_record(record, config):
     elif config['random_flip'] != 'none':
         raise ValueError('Unsupported flip policy')
     augmentations.extend([T.ResizeScale(config['min_scale'], config['max_scale'], size, size),
-                          T.FixedSizeCrop(crop_size=(size, size))])
+                          # Binary instance masks require background padding. The
+                          # semantic default 255 becomes foreground on bool cast.
+                          T.FixedSizeCrop(crop_size=(size, size), seg_pad_value=0)])
     image, transforms = T.apply_transform_gens(augmentations, image)
     masks, labels = [], []
     for annotation in record['annotations']:
