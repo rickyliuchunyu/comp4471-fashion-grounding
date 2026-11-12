@@ -1,0 +1,9 @@
+{
+  "base_config": "s0_train.json",
+  "purpose": "pilot_200_update_stability",
+  "image_manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+  "annotation_sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883",
+  "max_updates": 200,
+  "checkpoint_interval": 100,
+  "budget_seconds": 900
+}

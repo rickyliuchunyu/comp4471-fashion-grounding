@@ -34,7 +34,7 @@ def load_training_package(root):
     crowd_skipped = 0
     for im in manifest['images']:
         if im['split'] != 'train' or im['source_dataset'] != 'fashionpedia':
-            raise ValueError('Smoke training only accepts Fashionpedia train images')
+            raise ValueError('Training only accepts Fashionpedia train images')
         ci = images[im['image_id']]
         if any(ci[k] != im[k] for k in ('file_name', 'width', 'height')):
             raise ValueError('COCO/manifest mismatch')
@@ -94,3 +94,37 @@ def map_record(record, short_edge=256, max_size=384):
     record['instances'] = instances
     record['image'] = torch.as_tensor(np.ascontiguousarray(image.transpose(2, 0, 1)))
     return record
+
+
+def map_training_record(record, config):
+    """Upstream LSJ transforms with RLE bitmask support, including empty crops."""
+    from detectron2.data import detection_utils as utils, transforms as T
+    from detectron2.structures import BitMasks, Instances
+    import torch
+    image = utils.read_image(record['file_name'], format='RGB')
+    utils.check_image_size(record, image)
+    size = config['image_size']
+    augmentations = []
+    if config['random_flip'] == 'horizontal':
+        augmentations.append(T.RandomFlip(horizontal=True, vertical=False))
+    elif config['random_flip'] != 'none':
+        raise ValueError('Unsupported flip policy')
+    augmentations.extend([T.ResizeScale(config['min_scale'], config['max_scale'], size, size),
+                          T.FixedSizeCrop(crop_size=(size, size))])
+    image, transforms = T.apply_transform_gens(augmentations, image)
+    masks, labels = [], []
+    for annotation in record['annotations']:
+        mask = mask_api.decode(annotation['segmentation'])
+        mask = transforms.apply_segmentation(mask).astype(bool)
+        if mask.any():
+            masks.append(mask)
+            labels.append(annotation['category_id'])
+    tensor_masks = torch.from_numpy(np.stack(masks)) if masks else torch.zeros((0, size, size), dtype=torch.bool)
+    instances = Instances((size, size))
+    instances.gt_classes = torch.tensor(labels, dtype=torch.int64)
+    instances.gt_boxes = BitMasks(tensor_masks).get_bounding_boxes()
+    instances.gt_masks = tensor_masks
+    if image.shape != (size, size, 3):
+        raise ValueError('LSJ produced an unexpected image shape')
+    return dict(image_id=record['image_id'], image=torch.from_numpy(np.ascontiguousarray(image.transpose(2, 0, 1))),
+                instances=instances, height=size, width=size)
