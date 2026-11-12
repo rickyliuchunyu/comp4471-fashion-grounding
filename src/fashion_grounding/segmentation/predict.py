@@ -1,12 +1,13 @@
 """Language candidates, deliberately separate from upstream COCO AP decoding."""
 from dataclasses import dataclass
-import hashlib
 import json
 from pathlib import Path
 import shutil
 
 import numpy as np
 import torch
+
+from ..data.schema import safe_path, sha256, write_json
 
 
 @dataclass
@@ -17,26 +18,6 @@ class Candidate:
     bbox_xyxy: tuple
     mask: np.ndarray
     decoder_query_id: int
-
-
-def sha256(path):
-    with Path(path).open('rb') as stream:
-        digest = hashlib.sha256()
-        for block in iter(lambda: stream.read(1024 * 1024), b''):
-            digest.update(block)
-    return digest.hexdigest()
-
-
-def write_json(path, value):
-    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2,
-                                    allow_nan=False) + '\n', encoding='utf-8')
-
-
-def safe_path(root, name):
-    relative = Path(name)
-    if relative.is_absolute() or '..' in relative.parts or ':' in name or '\\' in name:
-        raise ValueError('Expected package-relative file path')
-    return Path(root) / relative
 
 
 def decode_candidates(class_logits, mask_logits, image_id, score_threshold=0.5,

@@ -77,8 +77,8 @@ def check_cuda_extension():
     reference = ms_deform_attn_core_pytorch(value, shapes, locations, weights)
     actual = MSDeformAttnFunction.apply(value, shapes, starts, locations, weights, 1)
     torch.testing.assert_close(actual, reference, atol=1e-8, rtol=1e-6)
-    expected_grad = torch.autograd.grad(reference.sum(), (value, locations, weights))
-    actual_grad = torch.autograd.grad(actual.sum(), (value, locations, weights))
+    expected_grad = torch.autograd.grad(reference, (value, locations, weights), grad_outputs=torch.ones_like(reference).contiguous())
+    actual_grad = torch.autograd.grad(actual, (value, locations, weights), grad_outputs=torch.ones_like(actual).contiguous())
     for observed, expected in zip(actual_grad, expected_grad):
         torch.testing.assert_close(observed, expected, atol=1e-8, rtol=1e-6)
     return dict(forward_max_abs_error=float((actual-reference).abs().max()),

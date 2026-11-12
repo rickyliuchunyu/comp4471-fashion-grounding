@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image
 from pycocotools import mask as mask_api
 
-from .predict import safe_path, sha256
+from ..data.schema import safe_path, sha256, decode_mask, encode_mask
 
 
 def load_training_package(root):
@@ -50,16 +50,8 @@ def load_training_package(root):
             category = ann['category_id']
             if type(category) is not int or not 1 <= category <= 8:
                 raise ValueError('Expected project category 1..8')
-            segmentation = ann['segmentation']
-            if isinstance(segmentation, list):
-                rle = mask_api.merge(mask_api.frPyObjects(segmentation, im['height'], im['width']))
-            elif isinstance(segmentation['counts'], list):
-                rle = mask_api.frPyObjects(segmentation, im['height'], im['width'])
-            else:
-                rle = segmentation
-            mask = mask_api.decode(rle)
-            if mask.shape != (im['height'], im['width']) or not mask.any():
-                raise ValueError('Invalid mask')
+            mask = decode_mask(ann['segmentation'], im['height'], im['width'])
+            rle = encode_mask(mask)
             if not np.allclose(mask_api.toBbox(rle), ann['bbox']) or int(mask.sum()) != ann['area']:
                 raise ValueError('Mask/COCO geometry mismatch')
             if ann.get('iscrowd', 0):
