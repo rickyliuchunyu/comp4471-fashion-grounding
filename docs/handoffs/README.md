@@ -27,3 +27,5 @@
 运行人的实现状态与阶段状态分别记录；P0 接口文档 locally_checked 不等于三名成员已验收。评估结果必须关联 [运行元信息](../run_records.md)。不记录已做实验的叙事时间线，保留复现所需版本和证据即可。
 
 Grounding：[wyz SigLIP 2 编码、缓存与 B1 草稿接口](grounding/siglip_baselines_20261112.md)。
+
+Grounding 最新：[wyz 小包/大包验收、B1/B2 与 M1 弱标注试训](grounding/accepted_baselines_and_weak_trial_20261112.md)。
