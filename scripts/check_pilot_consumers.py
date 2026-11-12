@@ -51,6 +51,6 @@ for i, (iid, bits) in enumerate(hash_images):
         distance = int(np.count_nonzero(bits != other_bits))
         if distance <= 6:
             near_pairs.append({"image_ids": [iid, other], "phash_distance": distance})
-report = {"status": "passed", "coco_images_loaded": len(coco.imgs), "source_masks_pixel_identical": len(coco.anns), "candidate_crops_checked": crop_count, "phash_method": "32x32 grayscale DCT, top-left 8x8 excluding DC, median, Hamming <=6", "near_duplicate_pairs_within_pilot": near_pairs, "limitations": ["CPU file/crop checks only; no Detectron2/SigLIP model run or teammate acceptance", "pHash is a candidate finder, not proof of no duplicates; no cross-split/full-dataset duplicate audit", "Human mask and query review remains pending"]}
+report = {"status": "passed", "coco_images_loaded": len(coco.imgs), "source_masks_pixel_identical": len(coco.anns), "candidate_crops_checked": crop_count, "phash_method": "32x32 grayscale DCT, top-left 8x8 excluding DC, median, Hamming <=6", "near_duplicate_pairs_within_pilot": near_pairs, "limitations": ["CPU file/crop checks only; no Detectron2/SigLIP model run or teammate acceptance", "pHash is a candidate finder, not proof of no duplicates; no cross-split/full-dataset duplicate audit", "This check does not perform human review; consult queries_accepted.jsonl and review_release.json when present"]}
 write_json(root / "consumer_check_report.json", report)
 print(json.dumps(report, indent=2))
