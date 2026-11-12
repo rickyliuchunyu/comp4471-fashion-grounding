@@ -24,8 +24,9 @@ source.createIndex()
 package = read_json(root / "candidates_gt.json")
 source_config = read_json(root / "mapping_config.json")
 mapping = {r["source_id"]: r for r in source_config["fashionpedia"]}
-expected = {a["id"]+1 for a in source.anns.values() if mapping[a["category_id"]]["action"] == "map"}
-require(set(coco.anns) == expected, "whole annotation coverage mismatch")
+expected = {a["id"] for a in source.anns.values() if mapping[a["category_id"]]["action"] == "map"}
+actual = [a["source_annotation_id"] for a in coco.anns.values()]
+require(set(actual) == expected and len(actual) == len(set(actual)), "whole source annotation coverage mismatch")
 for aid, ann in coco.anns.items():
     raw = source.anns[ann["source_annotation_id"]]
     require(np.array_equal(coco.annToMask(ann), source.annToMask(raw)), "source mask changed")

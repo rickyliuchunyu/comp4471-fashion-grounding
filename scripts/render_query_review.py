@@ -11,15 +11,17 @@ def data_uri(im):
  b=io.BytesIO();im.save(b,format="JPEG",quality=85)
  return "data:image/jpeg;base64,"+base64.b64encode(b.getvalue()).decode()
 
-def review_payload(root):
- validate_package(root)
+def review_payload(root, semantic_ids=None, validate=True):
+ if validate:validate_package(root)
  manifest=read_json(root/"image_manifest.json")
  coco=read_json(root/"annotations_coco.json")
  groups=defaultdict(dict)
  for q in (json.loads(s) for s in (root/"queries_draft.jsonl").read_text().splitlines() if s.strip()):
-  groups[q["semantic_query_id"]][q["language"]]=q
+  if semantic_ids is None or q["semantic_query_id"] in semantic_ids:groups[q["semantic_query_id"]][q["language"]]=q
+ image_ids={q["image_id"] for qs in groups.values() for q in qs.values()}
  images={}
  for im in manifest["images"]:
+  if im["image_id"] not in image_ids:continue
   pic=Image.open(root/im["file_name"]).convert("RGB")
   preview=pic.copy();preview.thumbnail((1000,1000))
   candidates=[]
