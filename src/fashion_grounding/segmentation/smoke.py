@@ -70,7 +70,7 @@ def main():
                           (config['backbone_lr_multiplier'] if name.startswith('backbone.') else 1)))
     optimizer = torch.optim.AdamW(groups, weight_decay=config['weight_decay'])
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9)
-    scaler = torch.cuda.amp.GradScaler(enabled=config['amp'])
+    scaler = torch.cuda.amp.GradScaler(enabled=config['amp'], init_scale=config['amp_initial_scale'])
     torch.cuda.reset_peak_memory_stats()
     losses_logged = []
     for update in range(2):
@@ -110,7 +110,7 @@ def main():
                       for n, p in model.named_parameters() if p.requires_grad]
             optimizer = torch.optim.AdamW(groups, weight_decay=config['weight_decay'])
             scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9)
-            scaler = torch.cuda.amp.GradScaler(enabled=config['amp'])
+            scaler = torch.cuda.amp.GradScaler(enabled=config['amp'], init_scale=config['amp_initial_scale'])
             saved = torch.load(output / 'resume.pth', map_location='cpu')
             model.load_state_dict(saved['model'], strict=True)
             optimizer.load_state_dict(saved['optimizer'])

@@ -13,5 +13,6 @@
   "gradient_clip_norm": 0.01,
   "score_threshold": 0.5,
   "max_candidates": 100,
-  "budget_seconds": 180
+  "budget_seconds": 180,
+  "amp_initial_scale": 128.0
 }
