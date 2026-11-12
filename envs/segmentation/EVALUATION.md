@@ -62,4 +62,4 @@ TRAIN_RUN="$FG_ROOT/runs/segmentation/segmentation-stability-200-20261112-r02"
   --output <new-selection-directory>
 ```
 
-选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。这是离线接入，尚无冻结 dev 上的实际选择记录；语言候选阈值选择及 wkq 的统一语言评价器仍是后续交付。
+选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[固定 train/dev 上的实际选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成：第 50/100 步完整 dev AP 为 0.1007/0.4585，选择第 100 步；使用 `s0_dev_selection_100.json` 和 `dev_ap_250_bounded.json`。完整 S0、语言候选阈值选择和生产候选下游联调仍待完成。

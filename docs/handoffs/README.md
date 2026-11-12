@@ -4,7 +4,9 @@
 
 成员对应见 [简称绑定](team_aliases.md)。全组范围与最新依赖审查见 [2026-11-12 主线审查](team_scope_audit_20261112.md)。
 
-新增：[分割冻结补齐与限定 dev 实验准备](segmentation/freeze_preparation_20261112.md)：三方技术接收已齐，补充每类 20 例抽样及人工近重复复核材料，实际人工复核与冻结待完成，未启动模型。
+新增：[固定 train/dev 上的真实 AP 与 checkpoint 选择](segmentation/real_dev_ap_20261112.md)：按用户人工复核确认接收；100 updates、两次完整250图dev已完成，选第100步AP=0.4585，未启动完整长训练。
+
+历史准备记录：[分割冻结补齐与限定 dev 实验准备](segmentation/freeze_preparation_20261112.md)：三方技术接收已齐，补充每类 20 例抽样及人工近重复复核材料，实际人工复核与冻结待完成，未启动模型。
 
 新增：[lcy 新 train/dev 大包 CPU 输入接收](segmentation/large_input_acceptance_20261112.md)，复用既有模型验证，未重跑训练 smoke。
 

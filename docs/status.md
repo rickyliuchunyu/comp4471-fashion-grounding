@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-更新：2026-11-12；用户最新明确确认“现在发的就是经过人工复核的，你先用”，覆盖此前“尚未完成人工复核”的答复。已按该确认接收并固定 train5000/dev250；[本次消费者冻结记录](handoffs/segmentation/segmentation_train_dev_freeze_20261112.json)保留原话、固定 hash 与范围，不代签个人审核人、不改生产方原 RELEASE。最新三方分支仍为 lcy=`457cc6d`、wyz=`103dcc5`、wkq=`f5787f4`，PR #2/#4/#5 均未合并。限定 100-update + 第 50/100 步完整 dev AP/选择已获准，准备执行；完整长训练未启动。
+更新：2026-11-12；用户最新明确确认“现在发的就是经过人工复核的，你先用”，覆盖此前“尚未完成人工复核”的答复。已按该确认接收并固定 train5000/dev250；[本次消费者冻结记录](handoffs/segmentation/segmentation_train_dev_freeze_20261112.json)保留原话、固定 hash 与范围，不代签个人审核人、不改生产方原 RELEASE。最新三方分支仍为 lcy=`457cc6d`、wyz=`103dcc5`、wkq=`f5787f4`，PR #2/#4/#5 均未合并。限定 100-update + 第 50/100 步完整 dev AP/选择已完成：AP=0.1007/0.4585，选择第100步，GPU已释放；完整长训练未启动。见[真实 dev 结果][real-dev]。
 
 **分割 train/dev 已按用户人工复核确认固定用于限定实验；语言数据/最终方法冻结与完整长训练尚未完成。** lcy 的 trainer、200-update/恢复、AP/选择入口已验证。wyz 已接收 wkq 共享解析器并完成同一 34 条 accepted train 上的 B0/B1/B2 诊断，另完成 M1 seed42 机器弱标注试训；均非正式 dev/test 成绩，M2 与三种子比较尚未完成。语言 dev 审核与分割冻结分开推进。
 
@@ -20,7 +20,7 @@
 
 ## 1. 阶段状态
 
-原范围审查核对服务器时只有三个 train 包，四个跨分支解析器/B2 CPU 案例通过；这些是历史证据。责任修正时读取 wkq `f5787f4` 大包交接，此前已完成 train/dev CPU 输入接收；本轮 wyz 消费证据也已齐，正式人工复核与冻结仍待完成。具体范围、责任修正和原代码审查的适用提交见[全组主线审查](handoffs/team_scope_audit_20261112.md)。上文 17:05 是历史快照，不再作为最新发布状态。
+原范围审查核对服务器时只有三个 train 包，四个跨分支解析器/B2 CPU 案例通过；这些是历史证据。责任修正时读取 wkq `f5787f4` 大包交接，此前已完成 train/dev CPU 输入接收；本轮 wyz 消费证据也已齐，用户已确认当前交付数据经过人工复核，消费者固定版本与限定 dev 实验已完成。具体范围、责任修正和原代码审查的适用提交见[全组主线审查](handoffs/team_scope_audit_20261112.md)。上文 17:05 是历史快照，不再作为最新发布状态。
 
 状态：`not_started` 无执行证据；`in_progress` 有明确活动与产物；`blocked` 已开始但受阻；`ready_for_review` 待接收方验收；`done` 满足该阶段放行条件。文档已写不等于该阶段 done。
 
@@ -31,7 +31,7 @@
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | [wyz 已接收共享解析器；34 条同包 train 上 B0/B1/B2=12/18/22 选对，输出完整，缓存重放一致][wyz-latest]；wkq 统一评价核心已交付 | 下游 PR 审阅、正式 accepted dev 评价与 B2 lambda 选择仍待完成；训练诊断不是泛化成绩 | A/B |
 | P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；用户已确认交付数据经过人工复核，已形成消费者固定版本记录；原发布 formal_freeze=false 保留作历史，语言审核/最终冻结独立跟踪 | B，全员 |
-| P5-S 分割训练 | not_started | 可复用 trainer / S0 配置模板；200-update 通过；[AP/离线选择与候选消费检查通过][lcy-ap] | 冻结 train/dev、真实 dev AP / checkpoint 选择、完整训练与固定候选 | lcy |
+| P5-S 分割训练 | in_progress | [已固定 train/dev，100 updates、两次完整250图dev AP、离线选择通过][real-dev]；选第100步 AP=0.4585；旧工程证据复用 | 完整 S0 训练预算/训练、dev 候选阈值选择及生产候选；短跑低 AP 不作为可交付模型 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42 机器弱标签试训：5 epochs / 490 updates，已保存权重][wyz-latest]，不属于正式训练结果 | 人工审核 dev、M2 实现与 M1/M2 三种子公平对照、真实 dev 选择 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -45,9 +45,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 闭合分割分区冻结后，验证真实 dev AP 与选择 | 新 train/dev 输入已通过，后续直接复用接收报告及既有模型证据，不再重跑同版本输入检查/训练 smoke | 用户已确认当前包经过人工复核；使用已固定 train 生成 50/100 步 checkpoint，旧 pilot 权重不用于本次选择 | [大包 CPU 接收][large-inputs]、[AP 交接][lcy-ap] |
+| lcy | 准备正式 S0 预算及后续固定候选交付 | 复用已固定输入、真实 dev AP 与 checkpoint 选择证据；不再做相同 smoke | 完整长训练尚未授权启动；当前100步 AP低，不发布为正式候选模型 | [真实 dev 结果][real-dev] |
 | wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；预测候选待 lcy 固定版本；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
-| wkq（B）/ data_eval | 组织新包接收与冻结，审核/补写 dev 查询 | 分割大包与语言初标已发布；接收消费方检查及 B1/B2 输出 | 新包三方技术验收已齐；组织人工近重复复核及冻结，处置视觉不确定项；机器草稿不自动 accepted | [大包交接][wkq-large]、PR #4 |
+| wkq（B）/ data_eval | 组织新包接收与冻结，审核/补写 dev 查询 | 分割大包与语言初标已发布；接收消费方检查及 B1/B2 输出 | 新包三方技术验收已齐，用户已确认分割数据人工复核；生产方可归档同步冻结记录；语言机器草稿不自动 accepted | [大包交接][wkq-large]、PR #4 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -57,17 +57,17 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | 试点转换/复核、分割 trainer/AP/离线选择、wyz 编码/B1/B2 评分与 wkq 共享解析/B0/语言评价核心已实现 | 见三方交接；完整 S0、真实 dev 选择、正式冻结与正式 dev/test 评价未完成；B2 实际联调已由 wyz 验证 |
-| 实验结果 | 无正式 dev/test 成绩；有训练试点诊断 | 本分支 registry：14 条 plan + 9 条工程运行（4 failed / 5 completed）；新增 AP 接口检查不填正式指标栏。最新 B0/B1/B2 同训练 GT 为12/18/22正确；M1 弱训练标签拟合78.07%→83.96%，均非泛化成绩 |
-| GPU/环境/付费预算 | 本轮仅 CPU 元数据核对及视觉/人工材料准备，0 模型运行；限定 100 updates + 两次完整 dev 配置已准备但未运行 | [冻结准备][freeze-prep]：执行前系统/数据盘约 27/166 GiB 可用，GPU 0 MiB/0%，无计算进程；后续使用前重查 |
+| 模型代码/数据转换器 | 试点转换/复核、分割 trainer/AP/离线选择、wyz 编码/B1/B2 评分与 wkq 共享解析/B0/语言评价核心已实现 | 见三方交接；限定真实 dev AP/选择已完成，完整 S0、生产候选及最终 test 仍未完成；B2 实际联调已由 wyz 验证 |
+| 实验结果 | 有限定训练的真实 dev AP；无完整 S0 / 最终 test 成绩 | 本分支 registry：14 条 plan + 9 条旧工程运行（4 failed / 5 completed）+ 本轮3条 completed（train、dev50、dev100）；真实 dev mask AP=0.1007/0.4585。最新 B0/B1/B2 同训练 GT 为12/18/22正确；M1 弱训练标签拟合78.07%→83.96%，均非泛化成绩 |
+| GPU/环境/付费预算 | 本轮100 updates + 两次完整 dev 已完成；锁时长96.21+235.41秒；完整长训练未启动 | [真实 dev 结果][real-dev]：结束系统/数据盘约27/165 GiB空闲，GPU 0 MiB/0%，无计算进程及running记录 |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
-| 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；正式 train/dev manifest 指纹已有，实际人工复核及团队 freeze 记录待补齐 |
+| 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
 | 课程实际截止与提交回执 | 未重新核验 | 提交负责人查课程系统；历史日期不是当前确认 |
 
 ## 4. 范围检查后的优先顺序
 
-保持 Fashionpedia 八类 + 完整双语单目标 + S0/B0/B1/B2/M1/M2/E1；不默认混训、部件定位或其他扩展。已发布分割 train/dev 的人工复核与冻结，和 wyz 的 M2/正式训练准备并行；满足条件后推进真实 dev AP/选择。M1/M2 是核心研究，不能用更多 smoke 替代。
+保持 Fashionpedia 八类 + 完整双语单目标 + S0/B0/B1/B2/M1/M2/E1；不默认混训、部件定位或其他扩展。本轮分割真实 dev AP/选择已完成，后续准备完整 S0 预算与生产候选；wyz 的 M2/正式训练准备并行。M1/M2 是核心研究，不能用更多 smoke 替代。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 
@@ -93,3 +93,5 @@
 
 [freeze-prep]: handoffs/segmentation/freeze_preparation_20261112.md
 [wyz-latest]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/103dcc546714dd7c7866b4259d96a9825d8090ef/docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md
+
+[real-dev]: handoffs/segmentation/real_dev_ap_20261112.md

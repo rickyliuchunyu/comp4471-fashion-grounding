@@ -1,0 +1,21 @@
+{
+  "rule": "max_dev_mask_AP_then_earliest_update",
+  "checkpoint_sha256": "30f5bf4f5178c83ce420b8396b9f616ceaa2e03be1c28aef69950f15c6482c1d",
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-train-20261112-r01/checkpoint_000100.pth",
+  "completed_updates": 100,
+  "dev_mask_AP": 0.45851211941110814,
+  "compared_updates": [
+    50,
+    100
+  ],
+  "evaluation_reports": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01/update_000050/evaluation_report.json",
+      "sha256": "b3414c51b52d748e0f141f615b0ac00f8adb339b09d59f8450e58fa34605f2cc"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01/update_000100/evaluation_report.json",
+      "sha256": "a1179d6b3a5db81e5afa1ccda4eac2bc5748ee40289c0a0d4a71a942bb8ab463"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # 分割训练入口与配置
 
-入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 可接入独立 [AP 评估与选择入口](EVALUATION.md)。完整 S0 的训练预算、冻结 train/dev 与真实 dev 验收仍待完成。
+入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整 S0 的训练预算与训练仍待完成。
 
 ## 配置与执行范围
 
@@ -44,4 +44,4 @@ RUN="$FG_ROOT/runs/segmentation/$RUN_ID"
 
 协调器把实际的两条 trainer 命令写入 `commands.json`，日志分为 `phase_1.log`、`phase_2.log`；训练产物分为 `updates_001_100/`、`updates_101_200/`。手动恢复时须用同样的共享锁、原配置和 `--resume <checkpoint.pth>`，`--output` 指向新目录；`--stop-after` 是绝对 update 编号，并受配置的 max_updates 限制。失败目录保留，新尝试另用 run ID。
 
-当前训练 checkpoint 仅用于工程稳定性验证，没有正式 dev 选择；不能当作已验收的 S0 发布权重。正式训练应先落实冻结数据、dev evaluator/选择记录、计算预算，再独立登记运行。
+旧 pilot checkpoint 仅用于工程稳定性验证。本轮固定 train5000 上的第 100 步 checkpoint 已由[真实 dev AP](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)选择，但 AP 仍低，不能作为已验收的 S0 发布权重。完整长训练需要另外落实计算预算，独立登记运行，不重复现有 smoke。
