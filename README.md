@@ -4,11 +4,11 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前仓库包含研究计划、数据协议、接口规范和格式示例；已补充 wkq 的试点数据转换、GT 验证与复核审计代码，并在远端独立 CPU 环境验证，见 [交接记录](docs/handoffs/data_eval/remote_pilot_review_20261112.md)。已实现共享解析器、B0与统一评价核心，并运行训练试点GT诊断，见 [P3交接](docs/handoffs/data_eval/p3_reviewed_baseline_20261112.md)；尚无课程模型训练或正式dev/test结果。JSON 是规划配置，不是可以直接运行的训练配置。本文中的数量、超参数与进度均为待验证计划。
+> wkq 已交付真实小包、共享解析器/B0/统一评价核心，以及 5,000 train / 250 dev / 400 test 留出图的大包和 1,000 图机器语言初标；93 项 CPU 测试通过，见 [大型数据交接](docs/handoffs/data_eval/large_dataset_20261112.md)。新增语言尚待人工审核，不是正式冻结 benchmark；本轮没有训练模型或测得正式 dev/test 成绩。规划超参数仍以实际运行配置为准。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wyz/wkq 的 GitHub 用户名与访问权限仍待核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wkq 的 GitHub 账号 LE-brawl 和 SSH 已由本人确认；其他成员权限分别核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
