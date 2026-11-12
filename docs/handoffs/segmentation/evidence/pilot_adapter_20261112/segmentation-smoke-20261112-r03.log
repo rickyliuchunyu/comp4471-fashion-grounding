@@ -1,0 +1,16 @@
+/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/smoke.py", line 165, in <module>
+    main()
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/smoke.py", line 88, in main
+    norm = torch.nn.utils.clip_grad_norm_(model.parameters(), config['gradient_clip_norm'], error_if_nonfinite=True)
+  File "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 64, in clip_grad_norm_
+    raise RuntimeError(
+RuntimeError: The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`

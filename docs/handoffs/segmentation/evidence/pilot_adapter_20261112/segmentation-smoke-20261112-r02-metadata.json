@@ -1,0 +1,73 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-smoke-20261112-r02",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "P1 engineering smoke, NOT formal S0 training or evaluation",
+  "status": "failed",
+  "status_history": [
+    {
+      "status": "running",
+      "time": "2026-11-12T06:48:31.494643+00:00"
+    },
+    {
+      "status": "failed",
+      "time": "2026-11-12T06:48:37.720142+00:00"
+    }
+  ],
+  "git_commit": "f561b4dae6c1ce31aa51f9ea80b29840671c7a09",
+  "split": "train",
+  "candidate_source": "none",
+  "seed": 42,
+  "artifacts": {
+    "logs": {
+      "path": "docs/handoffs/segmentation/evidence/pilot_adapter_20261112/segmentation-smoke-20261112-r02.log",
+      "sha256": "a94eed9b55d6b0eb38cfd3b0fe78092f07a29e76acd080ab1e79428ba53ee8a9"
+    },
+    "coordination": {
+      "path": "docs/handoffs/segmentation/evidence/pilot_adapter_20261112/segmentation-smoke-20261112-r02.json",
+      "sha256": "c05c98889f76c0fd2542b3997febd47de55eb7d6bbd5905ea59b487cb0273329"
+    },
+    "resolved_config": null,
+    "image_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/image_manifest.json",
+      "sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111"
+    },
+    "annotation_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/annotations_coco.json",
+      "sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883"
+    },
+    "query_manifest": null,
+    "candidate_manifest": null,
+    "predictions": null,
+    "metrics": null
+  },
+  "parent_run_ids": [],
+  "checkpoint": {
+    "initialization": "random_no_pretrained_weights",
+    "sha256": null
+  },
+  "environment": null,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.smoke",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-smoke-20261112-r02"
+  ],
+  "evaluation": {
+    "performed": false,
+    "reason": "Two-update engineering check; no model selection, AP or language metrics."
+  },
+  "failure": "Numerical-check harness supplied non-contiguous output gradients; upstream CUDA backward rejected them.",
+  "notes": [
+    "Configuration is configs/runs/segmentation/pilot_smoke.json at git_commit; r01-r03 used default GradScaler initial scale 65536; r04 uses explicit 128.",
+    "No query supervision, test split, legacy checkpoint, or official public checkpoint used.",
+    "Failed-run environment hashes were not captured before repair; original errors are preserved."
+  ]
+}

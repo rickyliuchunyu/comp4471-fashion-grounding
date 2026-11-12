@@ -1,13 +1,13 @@
 # 工程模块与实现接口
 
-版本 `2026-11-05`。本文是待实现规范，当前没有以下运行入口。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
+版本 `2026-11-05`，实现状态更新于 `2026-11-12`。本文保留接口设计；实际已有 wkq 数据转换/验证和 lcy 分割适配/候选/短 smoke 入口，正式 trainer、排序和统一评价仍待完成。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
 
-2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下仍为待实现接口。文件层 schema 3 与合成包见 [交接契约](artifact_contract.md)，已有示例检查器不等于正式模型运行入口。
+2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下包含实现与后续设计，当前证据见 [lcy 交接](handoffs/segmentation/pilot_adapter_20261112.md)。文件层 schema 3 与合成包见 [交接契约](artifact_contract.md)。
 
 ## 1. 建议结构
 
 ```text
-src/fashion_grounding/             # 待创建
+src/fashion_grounding/             # 部分实现，以状态表为准
   data/schema.py                  # 公共读写和验证，data_eval 维护
   data/query_rules.py             # B0/B2 共用解析，B 维护、A 复核
   data/convert.py                 # FP 八类转换，保留源细类
@@ -15,6 +15,7 @@ src/fashion_grounding/             # 待创建
   data/queries.py                 # 双语、改写、唯一目标和复核检查
   segmentation/train.py          # Mask2Former 官方 trainer 适配
   segmentation/predict.py        # 固定候选解码与原图 mask
+  segmentation/smoke.py          # 两次随机初始化工程检查，非正式 trainer
   encoders/siglip.py              # 对应 revision 的双编码器和 processor
   baselines/category_position.py # B0，data_eval 负责
   grounding/rules.py              # B2 方位分数，grounding 负责
@@ -85,7 +86,7 @@ CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用�
 | F 外部系统 | 完整查询、多输出选择、无 GT 提示 | 固定 E1 配置与全量预测 |
 | G 端到端 | 新图+新文字到叠图，首次/缓存计时 | 完整调用记录 |
 
-上述模型/正式数据检查尚未运行。合成文件接口可独立执行 `python scripts/check_contract_examples.py`，范围见 [示例说明](../examples/README.md)。小数据过拟合只验证数据流和优化，不能证明泛化。环境实测后再提供安装与训练命令；复用公开模型时锁定基础代码、checkpoint 和 processor，而不是拼接任意最新版本。
+表中完整放行条件仍未满足；lcy 已完成真实 20 图/145 实例加载与两次 GPU 更新/恢复，未做 200 updates 或性能评价。合成文件接口可独立执行 `python scripts/check_contract_examples.py`，范围见 [示例说明](../examples/README.md)。小数据过拟合只验证数据流和优化，不能证明泛化。实际短检查命令见 [分割环境入口](../envs/segmentation/README.md)；复用公开模型仍须锁定并验证 checkpoint。
 
 ## 5. 可选扩展的接口边界
 

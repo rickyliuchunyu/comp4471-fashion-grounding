@@ -1,0 +1,12 @@
+{
+  "source_repository": "https://github.com/facebookresearch/Mask2Former",
+  "source_commit": "9b0651c6c1d5b3af2e6da0589b719c514ec0d69a",
+  "source_config": "configs/coco/instance-segmentation/maskformer2_R50_bs16_50ep.yaml",
+  "checkpoint_url": "https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl",
+  "checkpoint_model_id": "47430277_2",
+  "checkpoint_sha256": null,
+  "checkpoint_status": "official_model_zoo_reference_only_not_downloaded_or_loaded",
+  "checkpoint_license": "CC-BY-NC-4.0",
+  "checked_date": "2026-11-12",
+  "smoke_initialization": "random; never load legacy project outputs as course weights"
+}
