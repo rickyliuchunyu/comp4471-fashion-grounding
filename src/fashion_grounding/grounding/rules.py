@@ -37,3 +37,23 @@ def shared_parse(query, language, lexicon):
     except ImportError as exc:
         raise RuntimeError("B2 needs wkq's shared data.query_rules.parse_query; no private parser fallback") from exc
     return parse_query(query, language, lexicon)
+
+
+def rule_coverage(pack, queries, lexicon, weight):
+    """Text/candidate-only coverage; denominator includes every requested query."""
+    from types import SimpleNamespace
+    counts = dict(queries=len(queries), syntax_applicable=0,
+                  matching_category=0, nonzero_rule=0, nonzero_weighted_rule=0)
+    for q in queries:
+        parsed = shared_parse(q.query, q.language, lexicon)
+        applicable = (parsed.category_status == "unique" and
+                      parsed.direction_status == "unique" and not parsed.unsupported_operator)
+        counts["syntax_applicable"] += int(applicable)
+        cs = [SimpleNamespace(category_id=c["category_id"], bbox_xyxy=c["bbox_xyxy"])
+              for c in pack.rows[q.image_id]["candidates"]]
+        counts["matching_category"] += int(applicable and any(c.category_id == parsed.category_id for c in cs))
+        nonzero = bool(np.any(position_scores(cs, parsed) != 0))
+        counts["nonzero_rule"] += int(nonzero)
+        counts["nonzero_weighted_rule"] += int(nonzero and weight != 0)
+    return {**counts, "rates": {k: v / len(queries) if queries else 0
+                              for k, v in counts.items() if k != "queries"}}

@@ -12,7 +12,7 @@ import numpy as np
 from fashion_grounding.data.schema import read_json, write_json, sha256, safe_path, require, unique_index
 from .inputs import CandidatePack, inference_query, crop_regions
 from .cache import FeatureCache, visual_spec, text_spec, check_features
-from .rules import position_scores, shared_parse
+from .rules import position_scores, shared_parse, rule_coverage
 
 def rank_scores(visual,text,scale,bias):
     require(visual.ndim == 2 and text.shape == (1,visual.shape[1]), "feature dimensions differ")
@@ -154,7 +154,8 @@ def main():
         "record_schema_version":1,"run_id":args.run_id,"experiment_id":args.method,
         "owner":"grounding","executed_by":"wyz",
         "status":"completed" if not errors else "failed",
-        "diagnostic_only":args.draft_diagnostic or pack.package["illustrative_only"],
+        "diagnostic_only":args.draft_diagnostic or pack.package["illustrative_only"] or queries[0].split=="train",
+        "rule_coverage":rule_coverage(pack,queries,lexicon,args.rule_weight) if lexicon else None,
         "git_commit":subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         "split":queries[0].split,"candidate_source":pack.package["candidate_source"],
         "encoder":encoder.signature,"query_manifest_sha256":sha256(args.queries),

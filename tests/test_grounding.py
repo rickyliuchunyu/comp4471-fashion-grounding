@@ -9,7 +9,7 @@ import numpy as np
 from fashion_grounding.data.schema import write_json, sha256
 from fashion_grounding.grounding.inputs import CandidatePack, inference_query, crop_regions, Candidate
 from fashion_grounding.grounding.cache import FeatureCache, visual_spec, text_spec, cache_key
-from fashion_grounding.grounding.rules import category_ranks,position_scores
+from fashion_grounding.grounding.rules import category_ranks,position_scores,rule_coverage
 from fashion_grounding.grounding.predict import rank_scores,prediction_record,read_queries,stage_inputs,execute
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -80,6 +80,18 @@ class GroundingTests(unittest.TestCase):
         c=Candidate("other",1,None,self.cs[1].bbox_xyxy,self.cs[1].mask,None)
         np.testing.assert_array_equal(category_ranks([a,b,c],0),[.5,.5,.5])
         np.testing.assert_array_equal(position_scores([a,b,c],self.parsed()),[0,0,0])
+    def test_shared_parser_coverage_and_singleton_no_effect(self):
+        from dataclasses import replace
+        lexicon=json.loads((ROOT/"configs/rule_parser.json").read_text())
+        q=replace(self.q, query="the bag on the left", language="en")
+        counts=rule_coverage(self.pack,[q],lexicon,1)
+        self.assertEqual([counts[k] for k in ("queries","syntax_applicable","matching_category","nonzero_rule")],[1,1,1,1])
+        self.assertEqual(rule_coverage(self.pack,[q],lexicon,0)["nonzero_weighted_rule"],0)
+        self.pack.rows[q.image_id]["candidates"]=self.pack.rows[q.image_id]["candidates"][:1]
+        counts=rule_coverage(self.pack,[q],lexicon,1)
+        self.assertEqual(counts["matching_category"],1)
+        self.assertEqual(counts["nonzero_rule"],0)
+
     def test_unsupported_parser_preserves_b1(self):
         for key,value in [("category_status","conflict"),("direction_status","missing"),("unsupported_operator",True)]:
             p=self.parsed();p[key]=value
