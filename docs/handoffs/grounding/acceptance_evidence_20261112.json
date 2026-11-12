@@ -1,0 +1,749 @@
+{
+  "data": {
+    "git_commit": "260fc671ffa1f4e905fffde03af76f09423e31bf",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/check_grounding_data_release.py",
+      "--packages",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/data_acceptance.json"
+    ],
+    "python": "3.10.8",
+    "numpy": "1.26.4",
+    "scope": "technical consumer acceptance, not independent human semantic review",
+    "packages": {
+      "fp_grounded9_reviewed_v1": {
+        "status": "passed",
+        "images": 9,
+        "instances": 59,
+        "crops": 59,
+        "sha256_files": 84,
+        "image_manifest_sha256": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+        "candidate_manifest_sha256": "44969ca41c595d0a0c4ad32321ddceef677d0754b16d09eda6693e10b89be30f",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 2,
+            "semantic_groups": 1,
+            "review_status": {
+              "needs_revision": 2
+            },
+            "sha256": "6a75598f592039c60ceb5bf49e0b7b4ad274270045e12f14f1a45aef09286dc1"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 34,
+            "semantic_groups": 17,
+            "review_status": {
+              "accepted": 34
+            },
+            "sha256": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a"
+          }
+        },
+        "elapsed_seconds": 0.35890696570277214
+      },
+      "fp_train5000_v1": {
+        "status": "passed",
+        "images": 5000,
+        "instances": 17775,
+        "crops": 17775,
+        "sha256_files": 22787,
+        "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+        "candidate_manifest_sha256": "5c0d3aa1961718c788c499b3993682293ef7e197ec2d35416ff3f0549b3cf816",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "elapsed_seconds": 115.09568769857287
+      },
+      "fp_dev250_v1": {
+        "status": "passed",
+        "images": 250,
+        "instances": 1008,
+        "crops": 1008,
+        "sha256_files": 1270,
+        "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+        "candidate_manifest_sha256": "0f8885a0d1dc9381a699408cdace1c2fc4b83291a09bbc4d77300e31f6ad15bf",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "elapsed_seconds": 5.921663254499435
+      },
+      "fp_test400_holdout_v1": {
+        "status": "passed",
+        "images": 400,
+        "instances": 1599,
+        "crops": 1599,
+        "sha256_files": 2011,
+        "image_manifest_sha256": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+        "candidate_manifest_sha256": "0521dc83205c017f221f561c4c3dcc8a83c60e602e9126f61bb85239b2e3e574",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "elapsed_seconds": 9.584056109189987
+      },
+      "fp_language1000_machine_v2": {
+        "status": "passed",
+        "images": 1000,
+        "instances": 4784,
+        "crops": 4784,
+        "sha256_files": 5800,
+        "image_manifest_sha256": "5f625542cef0e5933494edb88a1cc3d70bee76bfddd19def64777e7b60bc71d0",
+        "candidate_manifest_sha256": "9d38c08128b120358d5bb59f23d847723d2464024fc0f4d980243881c806b22f",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 3160,
+            "semantic_groups": 1580,
+            "review_status": {
+              "needs_revision": 3160
+            },
+            "sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "queries_machine_train.jsonl": {
+            "rows": 3160,
+            "semantic_groups": 1580,
+            "review_status": {
+              "needs_revision": 3160
+            },
+            "sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d"
+          }
+        },
+        "elapsed_seconds": 28.25685328617692
+      },
+      "fp_language_dev_draft_v2": {
+        "status": "passed",
+        "images": 116,
+        "instances": 490,
+        "crops": 490,
+        "sha256_files": 622,
+        "image_manifest_sha256": "9fd34ca49761b8d3cfb0ee0a9a325ee733593e31480c7ad2664840ec49148dd7",
+        "candidate_manifest_sha256": "678c5cfb2b50f95f4a7dd516be6384db0b533540a8c36f61b6521f015571058d",
+        "queries": {
+          "queries_draft.jsonl": {
+            "rows": 290,
+            "semantic_groups": 145,
+            "review_status": {
+              "needs_revision": 290
+            },
+            "sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395"
+          },
+          "queries_accepted.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "queries_machine_train.jsonl": {
+            "rows": 0,
+            "semantic_groups": 0,
+            "review_status": {},
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "elapsed_seconds": 2.8788019828498363
+      }
+    },
+    "cross_split": [
+      {
+        "left": "fp_train5000_v1",
+        "right": "fp_dev250_v1",
+        "overlaps": {
+          "image_id": 0,
+          "sha256": 0,
+          "group_id": 0
+        }
+      },
+      {
+        "left": "fp_train5000_v1",
+        "right": "fp_test400_holdout_v1",
+        "overlaps": {
+          "image_id": 0,
+          "sha256": 0,
+          "group_id": 0
+        }
+      },
+      {
+        "left": "fp_dev250_v1",
+        "right": "fp_test400_holdout_v1",
+        "overlaps": {
+          "image_id": 0,
+          "sha256": 0,
+          "group_id": 0
+        }
+      }
+    ],
+    "subsets": {
+      "fp_language1000_machine_v2": {
+        "parent": "fp_train5000_v1",
+        "exact_image_metadata": true
+      },
+      "fp_language_dev_draft_v2": {
+        "parent": "fp_dev250_v1",
+        "exact_image_metadata": true
+      }
+    },
+    "status": "passed"
+  },
+  "pilot": {
+    "status": "passed",
+    "scope": "real training pilot controls, no generalization claim",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/check_grounding_pilot.py",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1",
+      "--runs",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01",
+      "--cache",
+      "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+      "--lexicon",
+      "configs/rule_parser.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/pilot_crosscheck.json"
+    ],
+    "perfect_control": {
+      "queries": 34,
+      "images": 8,
+      "oracle_selection_accuracy": 1.0,
+      "predicted_selection_accuracy": null,
+      "conditional_selection_accuracy": null,
+      "matched_candidate_coverage": null,
+      "geometric_recall_at_0_5": 1.0,
+      "mean_target_mask_iou": 1.0,
+      "success_at_0_5": 1.0,
+      "status_counts": {
+        "success": 34
+      },
+      "macro_category_accuracy": 1.0
+    },
+    "no_output_control": {
+      "queries": 34,
+      "images": 8,
+      "oracle_selection_accuracy": 0.0,
+      "predicted_selection_accuracy": null,
+      "conditional_selection_accuracy": null,
+      "matched_candidate_coverage": null,
+      "geometric_recall_at_0_5": 1.0,
+      "mean_target_mask_iou": 0.0,
+      "success_at_0_5": 0.0,
+      "status_counts": {
+        "no_output": 34
+      },
+      "macro_category_accuracy": 0.0
+    },
+    "rejected_controls": [
+      "missing_prediction",
+      "unknown_candidate",
+      "mismatched_query"
+    ],
+    "cache_replay": {
+      "B1": {
+        "exact_predictions": 34,
+        "model_calls": 0,
+        "evaluation": {
+          "queries": 34,
+          "images": 8,
+          "oracle_selection_accuracy": 0.5294117647058824,
+          "predicted_selection_accuracy": null,
+          "conditional_selection_accuracy": null,
+          "matched_candidate_coverage": null,
+          "geometric_recall_at_0_5": 1.0,
+          "mean_target_mask_iou": 0.529611973616202,
+          "success_at_0_5": 0.5294117647058824,
+          "status_counts": {
+            "success": 34
+          },
+          "macro_category_accuracy": 0.6666666666666666
+        }
+      },
+      "B2": {
+        "exact_predictions": 34,
+        "model_calls": 0,
+        "evaluation": {
+          "queries": 34,
+          "images": 8,
+          "oracle_selection_accuracy": 0.6470588235294118,
+          "predicted_selection_accuracy": null,
+          "conditional_selection_accuracy": null,
+          "matched_candidate_coverage": null,
+          "geometric_recall_at_0_5": 1.0,
+          "mean_target_mask_iou": 0.6472590324397315,
+          "success_at_0_5": 0.6470588235294118,
+          "status_counts": {
+            "success": 34
+          },
+          "macro_category_accuracy": 0.75
+        }
+      }
+    },
+    "B0_reproduced": {
+      "queries": 34,
+      "images": 8,
+      "oracle_selection_accuracy": 0.35294117647058826,
+      "predicted_selection_accuracy": null,
+      "conditional_selection_accuracy": null,
+      "matched_candidate_coverage": null,
+      "geometric_recall_at_0_5": 1.0,
+      "mean_target_mask_iou": 0.35294117647058826,
+      "success_at_0_5": 0.35294117647058826,
+      "status_counts": {
+        "rule_unsupported": 22,
+        "success": 12
+      },
+      "macro_category_accuracy": 0.25
+    }
+  },
+  "weak_features": {
+    "scope": "weak_label_train_fit_not_generalization",
+    "diagnostic_only": true,
+    "git_commit": "f39083aa934424ed4d33bcdf9531c1e3122217bc",
+    "working_tree_dirty": false,
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "-m",
+      "fashion_grounding.grounding.weak_trial",
+      "--phase",
+      "cache",
+      "--weak-label-trial",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2/candidates_gt.json",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2/queries_machine_train.jsonl",
+      "--snapshot",
+      "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--revision",
+      "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--cache",
+      "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/M1-weak-features-20261112-r01",
+      "--run-id",
+      "M1-weak-features-20261112-r01",
+      "--batch-size",
+      "32"
+    ],
+    "candidate_manifest_sha256": "9d38c08128b120358d5bb59f23d847723d2464024fc0f4d980243881c806b22f",
+    "query_manifest_sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d",
+    "image_manifest_sha256": "5f625542cef0e5933494edb88a1cc3d70bee76bfddd19def64777e7b60bc71d0",
+    "torch": "2.1.2+cu121",
+    "numpy": "1.26.4",
+    "encoder": {
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "files": {
+        "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+        "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+        "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+        "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+        "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+        "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+        "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+      },
+      "processor_class": "SiglipProcessor",
+      "versions": {
+        "transformers": "4.51.3",
+        "tokenizers": "0.21.4",
+        "torch": "2.1.2+cu121",
+        "torchvision": "0.16.2+cu121",
+        "Pillow": "10.2.0",
+        "sentencepiece": "0.2.0",
+        "numpy": "1.26.4"
+      },
+      "dtype": "float32",
+      "attention": "eager",
+      "device": "cuda",
+      "max_length": 64,
+      "dimension": 768,
+      "logit_scale": 4.724453449249268,
+      "logit_bias": -16.771724700927734,
+      "padding": "max_length",
+      "truncation": false
+    },
+    "queries": 3160,
+    "images": 1000,
+    "new_visual_entries": 1000,
+    "new_text_entries": 285,
+    "elapsed_seconds": 43.11551887542009,
+    "status": "completed"
+  },
+  "weak_train": {
+    "scope": "weak_label_train_fit_not_generalization",
+    "diagnostic_only": true,
+    "git_commit": "f39083aa934424ed4d33bcdf9531c1e3122217bc",
+    "working_tree_dirty": false,
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "-m",
+      "fashion_grounding.grounding.weak_trial",
+      "--phase",
+      "train",
+      "--weak-label-trial",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2/candidates_gt.json",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2/queries_machine_train.jsonl",
+      "--features",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/M1-weak-features-20261112-r01/features.json",
+      "--cache",
+      "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/M1-weak-train-20261112-r01",
+      "--run-id",
+      "M1-weak-train-20261112-r01",
+      "--epochs",
+      "5",
+      "--seed",
+      "42",
+      "--batch-size",
+      "32"
+    ],
+    "candidate_manifest_sha256": "9d38c08128b120358d5bb59f23d847723d2464024fc0f4d980243881c806b22f",
+    "query_manifest_sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d",
+    "image_manifest_sha256": "5f625542cef0e5933494edb88a1cc3d70bee76bfddd19def64777e7b60bc71d0",
+    "torch": "2.1.2+cu121",
+    "numpy": "1.26.4",
+    "features_manifest_sha256": "40123084c170e4ccfb5170464d15dbaf9acae25a6399d3e800550e8e5e428875",
+    "run_id": "M1-weak-train-20261112-r01",
+    "status": "completed",
+    "method": "M1",
+    "seed": 42,
+    "epochs": 5,
+    "batch_queries": 32,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "selection": "fixed final epoch, no dev selection; no early stopping",
+    "sampling": "uniform shuffled queries; no oversampling fabricated hard examples",
+    "same_project_category_competition_queries": 410,
+    "same_project_category_competition_fraction": 0.12974683544303797,
+    "single_candidate_queries_excluded_from_loss": 36,
+    "trainable_parameters": 590337,
+    "encoder_parameters_in_optimizer": 0,
+    "initial": {
+      "queries": 3160,
+      "correct_against_weak_labels": 2467,
+      "weak_train_fit": 0.7806962025316456,
+      "multi_candidate_cross_entropy": 0.5237717553114616
+    },
+    "final": {
+      "queries": 3160,
+      "correct_against_weak_labels": 2653,
+      "weak_train_fit": 0.8395569620253165,
+      "multi_candidate_cross_entropy": 0.4022102942463683
+    },
+    "updates": 490,
+    "elapsed_seconds": 4.970781750977039,
+    "checkpoint": {
+      "path": "epoch_05.pt",
+      "sha256": "ed320169fafc0218ed99ce42cc003c2af7416853972c38db05960e856b888050"
+    },
+    "checkpoint_replay_exact": true,
+    "formal_dev_test_results": null,
+    "other_seeds_not_run": [
+      43,
+      44
+    ]
+  },
+  "B1": {
+    "record_schema_version": 1,
+    "run_id": "B1-reviewed-20261112-r01",
+    "experiment_id": "B1",
+    "owner": "grounding",
+    "executed_by": "wyz",
+    "status": "completed",
+    "diagnostic_only": true,
+    "rule_coverage": null,
+    "git_commit": "260fc671ffa1f4e905fffde03af76f09423e31bf",
+    "split": "train",
+    "candidate_source": "gt",
+    "encoder": {
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "files": {
+        "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+        "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+        "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+        "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+        "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+        "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+        "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+      },
+      "processor_class": "SiglipProcessor",
+      "versions": {
+        "transformers": "4.51.3",
+        "tokenizers": "0.21.4",
+        "torch": "2.1.2+cu121",
+        "torchvision": "0.16.2+cu121",
+        "Pillow": "10.2.0",
+        "sentencepiece": "0.2.0",
+        "numpy": "1.26.4"
+      },
+      "dtype": "float32",
+      "attention": "eager",
+      "device": "cuda",
+      "max_length": 64,
+      "dimension": 768,
+      "logit_scale": 4.724453449249268,
+      "logit_bias": -16.771724700927734,
+      "padding": "max_length",
+      "truncation": false
+    },
+    "query_manifest_sha256": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a",
+    "candidate_manifest_sha256": "44969ca41c595d0a0c4ad32321ddceef677d0754b16d09eda6693e10b89be30f",
+    "query_count": 34,
+    "status_counts": {
+      "success": 34
+    },
+    "predictions": {
+      "path": "predictions.jsonl",
+      "sha256": "17d4cdd0901a2016eea342e5599c62ee353c289d1a04766743dcbc0599634a5a"
+    },
+    "lexicon_sha256": null,
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "-m",
+      "fashion_grounding.grounding.predict",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/candidates_gt.json",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "--snapshot",
+      "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--revision",
+      "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--cache",
+      "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B1",
+      "--run-id",
+      "B1-reviewed-20261112-r01",
+      "--method",
+      "B1",
+      "--device",
+      "cuda",
+      "--batch-size",
+      "8",
+      "--rule-weight",
+      "1"
+    ],
+    "working_tree_dirty": false,
+    "source_sha256": {
+      "src/fashion_grounding/grounding/__init__.py": "ffff82dba68b7d604f032834c4a734d137f61dda63f3aaaaf9e58208f79f8128",
+      "src/fashion_grounding/grounding/cache.py": "2dec8d40b46c6111152c3c79d0fcdeb2bca8c8e1a82f5c3cac42da69c087ca60",
+      "src/fashion_grounding/grounding/inputs.py": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+      "src/fashion_grounding/grounding/predict.py": "1239d04fbadca367e3e875a6ceb3b25965902e267556e61adfd0e03d8a8cc64e",
+      "src/fashion_grounding/grounding/rules.py": "26924bf20e2cf582d05847b7bd1ed65edcfdfabfaccdc296c524e2b57cbfdc26",
+      "src/fashion_grounding/encoders/__init__.py": "978949a51263ca0fab4c5dd865d212819d96d7ffe8d44621102ec27b957b7c42",
+      "src/fashion_grounding/encoders/siglip.py": "8ac538b2ca2a4fdd5629694e7b45481fb651272a458650227a2848fadf33e02e",
+      "src/fashion_grounding/data/__init__.py": "93b2c0b5b871d74e4060f1bf7254e81cc3c2d14dd10e56b603ee6919bef48422",
+      "src/fashion_grounding/data/candidates.py": "3cd120429fef0b3cd757953f6d0fbae62b9e17d5d04ebdd0c9df943080a0d39c",
+      "src/fashion_grounding/data/convert.py": "85538b00d0566f4c6b03ef1bca1d6c5db162cf3f4ff22095f7988e0cc1aeeb79",
+      "src/fashion_grounding/data/query_rules.py": "ff92246958f637acdd96cc87f987ecb2a821bee6056c0ac488a81672a0728499",
+      "src/fashion_grounding/data/review.py": "550948ce44f6f7d67f9134b8e1f520b1fe966ac00653bd3330cbd4390206ab48",
+      "src/fashion_grounding/data/schema.py": "e8aaae73a759992c526ffd380cd5d3143deec9d0dc66f86c640348b3c47521cc"
+    },
+    "evaluation": null,
+    "note": "No accuracy or formal performance claimed. See handoff for input review status."
+  },
+  "B2": {
+    "record_schema_version": 1,
+    "run_id": "B2-reviewed-20261112-r01",
+    "experiment_id": "B2",
+    "owner": "grounding",
+    "executed_by": "wyz",
+    "status": "completed",
+    "diagnostic_only": true,
+    "rule_coverage": {
+      "queries": 34,
+      "syntax_applicable": 18,
+      "matching_category": 18,
+      "nonzero_rule": 18,
+      "nonzero_weighted_rule": 18,
+      "rates": {
+        "syntax_applicable": 0.5294117647058824,
+        "matching_category": 0.5294117647058824,
+        "nonzero_rule": 0.5294117647058824,
+        "nonzero_weighted_rule": 0.5294117647058824
+      }
+    },
+    "git_commit": "260fc671ffa1f4e905fffde03af76f09423e31bf",
+    "split": "train",
+    "candidate_source": "gt",
+    "encoder": {
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "files": {
+        "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+        "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+        "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+        "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+        "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+        "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+        "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+      },
+      "processor_class": "SiglipProcessor",
+      "versions": {
+        "transformers": "4.51.3",
+        "tokenizers": "0.21.4",
+        "torch": "2.1.2+cu121",
+        "torchvision": "0.16.2+cu121",
+        "Pillow": "10.2.0",
+        "sentencepiece": "0.2.0",
+        "numpy": "1.26.4"
+      },
+      "dtype": "float32",
+      "attention": "eager",
+      "device": "cuda",
+      "max_length": 64,
+      "dimension": 768,
+      "logit_scale": 4.724453449249268,
+      "logit_bias": -16.771724700927734,
+      "padding": "max_length",
+      "truncation": false
+    },
+    "query_manifest_sha256": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a",
+    "candidate_manifest_sha256": "44969ca41c595d0a0c4ad32321ddceef677d0754b16d09eda6693e10b89be30f",
+    "query_count": 34,
+    "status_counts": {
+      "success": 34
+    },
+    "predictions": {
+      "path": "predictions.jsonl",
+      "sha256": "3fceb61e88d28cd0bad99089db4e5ae997237f1ce9bc7f9a636e545ad5cf456a"
+    },
+    "lexicon_sha256": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "-m",
+      "fashion_grounding.grounding.predict",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/candidates_gt.json",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "--snapshot",
+      "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--revision",
+      "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "--cache",
+      "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B2",
+      "--run-id",
+      "B2-reviewed-20261112-r01",
+      "--method",
+      "B2",
+      "--device",
+      "cuda",
+      "--batch-size",
+      "8",
+      "--rule-weight",
+      "1"
+    ],
+    "working_tree_dirty": false,
+    "source_sha256": {
+      "src/fashion_grounding/grounding/__init__.py": "ffff82dba68b7d604f032834c4a734d137f61dda63f3aaaaf9e58208f79f8128",
+      "src/fashion_grounding/grounding/cache.py": "2dec8d40b46c6111152c3c79d0fcdeb2bca8c8e1a82f5c3cac42da69c087ca60",
+      "src/fashion_grounding/grounding/inputs.py": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+      "src/fashion_grounding/grounding/predict.py": "1239d04fbadca367e3e875a6ceb3b25965902e267556e61adfd0e03d8a8cc64e",
+      "src/fashion_grounding/grounding/rules.py": "26924bf20e2cf582d05847b7bd1ed65edcfdfabfaccdc296c524e2b57cbfdc26",
+      "src/fashion_grounding/encoders/__init__.py": "978949a51263ca0fab4c5dd865d212819d96d7ffe8d44621102ec27b957b7c42",
+      "src/fashion_grounding/encoders/siglip.py": "8ac538b2ca2a4fdd5629694e7b45481fb651272a458650227a2848fadf33e02e",
+      "src/fashion_grounding/data/__init__.py": "93b2c0b5b871d74e4060f1bf7254e81cc3c2d14dd10e56b603ee6919bef48422",
+      "src/fashion_grounding/data/candidates.py": "3cd120429fef0b3cd757953f6d0fbae62b9e17d5d04ebdd0c9df943080a0d39c",
+      "src/fashion_grounding/data/convert.py": "85538b00d0566f4c6b03ef1bca1d6c5db162cf3f4ff22095f7988e0cc1aeeb79",
+      "src/fashion_grounding/data/query_rules.py": "ff92246958f637acdd96cc87f987ecb2a821bee6056c0ac488a81672a0728499",
+      "src/fashion_grounding/data/review.py": "550948ce44f6f7d67f9134b8e1f520b1fe966ac00653bd3330cbd4390206ab48",
+      "src/fashion_grounding/data/schema.py": "e8aaae73a759992c526ffd380cd5d3143deec9d0dc66f86c640348b3c47521cc"
+    },
+    "evaluation": null,
+    "note": "No accuracy or formal performance claimed. See handoff for input review status."
+  },
+  "evaluation_commands": [
+    [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/evaluate_predictions.py",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "--predictions",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B0/predictions.jsonl",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/candidates_gt.json",
+      "--annotations",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/annotations_coco.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B0/evaluation.json",
+      "--allow-train-diagnostic"
+    ],
+    [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/evaluate_predictions.py",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "--predictions",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B1/predictions.jsonl",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/candidates_gt.json",
+      "--annotations",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/annotations_coco.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B1/evaluation.json",
+      "--allow-train-diagnostic"
+    ],
+    [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/evaluate_predictions.py",
+      "--queries",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "--predictions",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B2/predictions.jsonl",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/candidates_gt.json",
+      "--annotations",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/annotations_coco.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/acceptance-20261112-r01/B2/evaluation.json",
+      "--allow-train-diagnostic"
+    ]
+  ]
+}

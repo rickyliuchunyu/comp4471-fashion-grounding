@@ -65,7 +65,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 数据与实验状态
 
-[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划行，并新增B0训练试点GT诊断run；其他模型实验仍未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划行，并记录 B0/B1/B2 训练试点 GT 诊断及 M1 弱标注短试训；尚无正式 dev/test 语言结果。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
@@ -76,3 +76,7 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 先在官方训练数据中用 100–200 张图片做标注试点，冻结划分，再用 GT 候选跑 B0/B1/B2；分割环境检查与微调可同时推进。之后训练 M1/M2，接入预测候选，完成 E1 和消融。按暂定角色推进；wyz/wkq 的账号权限、正式训练预算、权重 revision 与数据 manifest 仍待执行时填写；已确认单张 3090 24GB，基础环境检查不代表训练验收。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。
+
+Grounding 第一阶段已在远端验证，详见 [wyz 交接](docs/handoffs/grounding/siglip_baselines_20261112.md)：20 图/145 GT 的编码输入与 80 条未复核草稿输出，仅用于接口诊断。
+
+最新 grounding：[B 数据消费验收、B1/B2 与 M1 弱标注试训](docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md)。六包技术验收通过；M1 的训练拟合改善不等于泛化提升。
