@@ -1,10 +1,12 @@
 # 分割训练入口与配置
 
-重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。修复后尚未训练。
+重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
 入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整 S0 的训练预算与训练仍待完成。
 
 ## 配置与执行范围
+
+- [s0_postfix_1000.json](../../configs/runs/segmentation/s0_postfix_1000.json)：已执行的修复后1000-update小阶段，500/1000步保存，600秒上限；原COCO初始化及优化配方不变，禁止使用旧污染checkpoint续训。
 
 - [s0_train.json](../../configs/runs/segmentation/s0_train.json)：20k-update 的训练配置模板，LSJ 768、随机水平翻转、scale 0.1–2.0、有效 batch 2、AdamW LR 1e-4、backbone 0.1 倍、weight decay 0.05；norm/embedding 的 decay 按上游设为 0。前 500 updates 线性 warmup，从 0.001 倍 LR 起步，12k/16k 乘 0.1，full-model norm clip 0.01。
 - [pilot_stability_200.json](../../configs/runs/segmentation/pilot_stability_200.json)：继承同一训练配方，只固定现有 pilot 数据 hash、将总更新数限为 200、checkpoint 间隔改为 100、每进程时限 900 秒。外层共享锁的 900 秒限制覆盖两个进程总时长。
@@ -46,4 +48,4 @@ RUN="$FG_ROOT/runs/segmentation/$RUN_ID"
 
 协调器把实际的两条 trainer 命令写入 `commands.json`，日志分为 `phase_1.log`、`phase_2.log`；训练产物分为 `updates_001_100/`、`updates_101_200/`。手动恢复时须用同样的共享锁、原配置和 `--resume <checkpoint.pth>`，`--output` 指向新目录；`--stop-after` 是绝对 update 编号，并受配置的 max_updates 限制。失败目录保留，新尝试另用 run ID。
 
-旧 pilot checkpoint 仅用于工程稳定性验证。本轮固定 train5000 上的第 100 步 checkpoint 已由[真实 dev AP](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)选择，但 AP 仍低，不能作为已验收的 S0 发布权重。完整长训练需要另外落实计算预算，独立登记运行，不重复现有 smoke。
+旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史选择记录保留。当前有效小阶段权重是修复后第1000步（dev AP42.8038），见上方新交接。完整长训练需要另外落实计算预算，独立登记运行，不重复现有 smoke。

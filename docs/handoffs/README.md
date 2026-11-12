@@ -1,12 +1,12 @@
 # 交接记录入口
 
-最新：[低AP诊断与LSJ补边修复](segmentation/low_ap_diagnosis_20261112.md)。旧50/100步权重受训练标签污染，仅保留诊断用途；修复后两个CPU回归通过，尚未追加训练。
+最新：[修复后1000-update训练与完整dev选择](segmentation/postfix1000_dev_ap_20261112.md)：AP35.3047→42.8038，选第1000步；GPU已释放，未重复smoke或启动完整长训练。此前[补边缺陷与旧权重隔离](segmentation/low_ap_diagnosis_20261112.md)继续有效。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 
 成员对应见 [简称绑定](team_aliases.md)。全组范围与最新依赖审查见 [2026-11-12 主线审查](team_scope_audit_20261112.md)。
 
-新增：[固定 train/dev 上的真实 AP 与 checkpoint 选择](segmentation/real_dev_ap_20261112.md)：按用户人工复核确认接收；100 updates、两次完整250图dev已完成，选第100步AP=0.4585，未启动完整长训练。
+历史受污染权重记录（不得续训）：[固定 train/dev 上的真实 AP 与 checkpoint 选择](segmentation/real_dev_ap_20261112.md)：按用户人工复核确认接收；100 updates、两次完整250图dev已完成，选第100步AP=0.4585，未启动完整长训练。
 
 历史准备记录：[分割冻结补齐与限定 dev 实验准备](segmentation/freeze_preparation_20261112.md)：三方技术接收已齐，补充每类 20 例抽样及人工近重复复核材料，实际人工复核与冻结待完成，未启动模型。
 

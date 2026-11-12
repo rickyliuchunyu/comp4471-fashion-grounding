@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前已有数据转换、训练和评价实现，但[低AP诊断](docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ增广将mask补边255误当作前景。已修复为0，两个针对性CPU回归通过；旧AP=0.1007/0.4585保留为故障证据，旧权重不得续训。修复后训练、完整S0与最终test尚未执行。
+> [修复后1000-update小阶段](docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：从官方COCO重新初始化，完整250图dev在500/1000步的mask AP为35.3047/42.8038，选择第1000步。全部loss/梯度有限、0跳步，GPU已释放；未重复smoke，未启动完整长训练或test。旧LSJ补边污染权重继续隔离。
 
 ## 团队与 Codex 开工入口
 
