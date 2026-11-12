@@ -4,6 +4,8 @@
 
 ## 开始前必须读取
 
+先完成下节的整组 GitHub 检查，再结合以下文件确定自己的下一步；本地状态表可能落后于队友已推送的分支。
+
 1. README.md 和 docs/status.md：当前任务、每人下一步与证据；状态不可仅凭计划推断。
 2. docs/team_workflow.md：暂定分工、2026-11-11 成员简称绑定、文件主责、接口与 AutoDL 协作。
 3. docs/workflow.md：P0–P10 顺序、依赖与阶段验收；检查实际交接证据后，选择本角色最早未完成且前提满足的任务。
@@ -13,7 +15,17 @@
    - `data_eval` / wkq（B）：docs/roles/data_eval.md。
 5. 与本次工作有关的 docs/technical_design.md、docs/data_protocol.md、docs/experiment_plan.md、docs/implementation_spec.md；涉及交接读 docs/artifact_contract.md，运行登记读 docs/run_records.md，B0/B2 读 docs/rule_parser_contract.md。
 
-成员简称已确认：lcy = segmentation，wyz（A）= grounding，wkq（B）= data_eval；lcy 对应 Liu Chunyu。简称不是已验证的 GitHub 用户名，也不证明 SSH 权限；不根据邮箱或作者顺序推断全名/账号。根据当前用户自报的简称、角色或明确任务确定职责。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
+成员简称已确认：lcy = segmentation，wyz（A）= grounding，wkq（B）= data_eval；lcy 对应 Liu Chunyu。GitHub 账号绑定及其证据见 docs/status.md；简称本身不证明账号或 SSH 权限，不根据邮箱或作者顺序推断全名/账号。根据当前用户自报的简称、角色或明确任务确定职责。角色不明且会影响写入范围时简短询问，可先继续只读检查和不依赖身份的工作。
+
+## 每次开工必须先核对整组 GitHub 进度
+
+1. 检查自己的 `git status`、当前分支与 diff，保留已有非本任务改动；随后 `git fetch origin`，读取远端分支及最新 commit。至少覆盖三人的 `segmentation/*`、`grounding/*`、`data-eval/*`，包括已经推送但尚未开 PR 的分支。
+2. 检查整组 PR 的最新状态、head commit、描述、review/comments 与依赖，包含 draft PR，以及上次检查后新建、更新、关闭或合并的 PR。不能仅凭 main 或自己分支判断队友进度。
+3. 从队友最新远端分支读取 `docs/handoffs/` 的相关交接记录、运行证据索引和接口变更；可用 `git show origin/<branch>:<path>`，不必切换自己的工作区。首次建立全组基线，后续按 commit 增量检查；不要求每次重读全部历史。
+4. 与 `docs/status.md` 核对：区分已实现、实际验证、待接收方验收、已推送和已合并；记录分支/commit/PR/交接链接。发现过时状态时据证据同步，不替队友宣告未验证的阶段完成，也不自动合并队友分支。
+5. 完成以上核对后，依据当前依赖与角色主责选择最早未完成且前提满足的下一步，避免重复实现或使用已变更接口。执行服务器任务前另查磁盘、GPU 占用与共享锁，并遵守本轮授权范围。
+
+若 GitHub 或远端访问失败，明确记录检查时间、失败项和最近可用快照；不能把旧状态表当作最新整组进度。可继续不依赖未知变更的工作，涉及未核实接口或交付状态的结论保留为待确认。
 
 ## 项目事实与范围
 
@@ -27,7 +39,7 @@
 
 - 按 team_workflow.md 的主责表选择文件，B0 在 `baselines/category_position.py`，B2 在 `grounding/rules.py`，避免多人编辑同一规则入口。
 - 源码路径多为拟议布局；先确认现有实现，避免重复造模块。
-- 交接 schema 3、合成夹具和检查器已有；正式数据验证器/训练/评价仍待实现。B0/B2 共用 configs/rule_parser.json 和拟议 data/query_rules.py，不复制词表。
+- 交接 schema 3、试点数据验证器和可恢复分割 trainer 已有；各分支实际实现与正式评价缺口按开工检查确认。B0/B2 共用 configs/rule_parser.json 和共享 data/query_rules.py 接口，不复制词表；解析器是否已交付须查最新证据。
 - 公共数据/schema 由 data_eval 维护，生产方和消费方一起复核破坏性变更。若用户已授权跨模块任务，可执行并明确影响，不增加无关审批。
 - 项目类别 ID 1–8，分割内部 ID 0–7；原图 RGB、排他右下角 xyxy、原图尺寸 mask、稳定候选 ID/顺序必须一致。
 - 推理不读人工目标 ID、目标类别或 query type；预测 mask 不能用 GT 修正。GT 诊断与预测候选结果分开。
