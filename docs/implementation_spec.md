@@ -1,6 +1,6 @@
 # 工程模块与实现接口
 
-版本 `2026-11-05`。本文是待实现规范，当前没有以下运行入口。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
+版本 `2026-11-05`。本文保留设计规范；2026-11-12已实现data/query_rules、baselines/category_position及evaluation核心，CPU入口为scripts/run_b0.py和scripts/evaluate_predictions.py，见data_eval的P3交接。其余模型入口仍待实现。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
 
 2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下仍为待实现接口。文件层 schema 3 与合成包见 [交接契约](artifact_contract.md)，已有示例检查器不等于正式模型运行入口。
 

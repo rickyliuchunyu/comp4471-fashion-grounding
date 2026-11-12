@@ -1,10 +1,10 @@
 # 当前进度与下一步
 
-更新：2026-11-12（wkq CPU 交接；wyz grounding 编码与草稿预测验证）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-12（wkq 大包发布与机器初标）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
-**当前 P0/P1 继续推进；wkq 独立工作区与 CPU 环境已验证，P2 真实 GT 小包已在共享数据盘交接，查询修订与消费方验收待完成。** 研究计划、角色任务卡和交接规范已建立；试点数据转换、GT 验证器及复核审计已在远端运行；模型训练、统一模型评价器、正式查询与演示尚未完成。AutoDL 实例已创建，发起人 SSH 已验证，基础 PyTorch/CUDA 与分割扩展可导入；完整模型验证、组员访问与正式训练预算仍待确认。成员简称已确认：lcy = segmentation、wyz（A）= grounding、wkq（B）= data_eval；简称不代表账号权限。
+**wkq 已推进至 P4 数据扩充：5,000 train / 250 dev / 400 test 留出图已版本化发布；1,000 图训练语言初标与 116 图 dev 草稿仍待人工审核。** 共享解析器、B0、统一评价核心和数据工具共 93 项 CPU 测试通过，见 [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)。本轮没有 GPU 训练、正式 dev/test 语言评价或三方最终冻结；其他成员模型进度以其交接为准。
 
-wyz 已完成独立图文环境、真实 GT 裁剪、SigLIP 2 logits 检查及 80 条 B1 草稿接口预测；36 项测试通过。共享解析、accepted 查询与正式评价仍待交接，未训练 M1/M2。见 [grounding 交接](handoffs/grounding/siglip_baselines_20261112.md)。
+wyz 已完成独立图文环境、真实 GT 裁剪、SigLIP 2 logits 检查及 80 条 B1 草稿接口预测；36 项测试通过。共享解析与 accepted 小包已发布，正在接入及独立验收，未训练 M1/M2。见 [grounding 交接](handoffs/grounding/siglip_baselines_20261112.md)。
 
 ## 1. 阶段状态
 
@@ -14,9 +14,9 @@ wyz 已完成独立图文环境、真实 GT 裁剪、SigLIP 2 logits 检查及 8
 | --- | --- | --- | --- | --- |
 | P0 接口确认 | in_progress | [文件契约](artifact_contract.md)、[合成示例](../examples/README.md)、[解析约定](rule_parser_contract.md) | 三人消费方复核与实际读写器检查 | 全员，B 汇总 |
 | P1 环境与工作区 | in_progress | [远程只读盘点](handoffs/segmentation/server_inventory.md)：GPU/磁盘/包版本/扩展导入 | 独立工作区、图文环境、GPU 锁与模型小批检查 | lcy 协调，全员 |
-| P2 真实 GT 小包 | in_progress | [wkq 远端交接](handoffs/data_eval/remote_pilot_review_20261112.md)：20 图、145 GT、19 测试通过 | 6 组复核分歧、2 组已示答案、语言设计修订与消费方验收；accepted=0 | B，全员标注 |
-| P3 基线与评价器 | in_progress | wyz B1 草稿输出与 B2 评分检查；[证据](handoffs/grounding/siglip_baselines_20261112.md) | 共享解析、accepted 查询、统一评价与正式基线结果 | A/B |
-| P4 数据扩充冻结 | not_started | 数量与划分规则 | 实际分区、哈希、复核与重复组报告 | B，全员 |
+| P2 真实 GT 小包 | in_progress | 17组/34条accepted保留；lcy小包消费验收有工作区记录，用户报告wyz接口OK | 旧1组争议仍待处理；不同版本验收不能混用 | B，全员 |
+| P3 基线与评价器 | in_progress | [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)；共享解析/B0/统一评价核心，当前全套93测试通过 | B1/B2实际输出及评价交叉复核 | A/B |
+| P4 数据扩充冻结 | in_progress | [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)：5000/250/400图，1000图3160条训练初标，分组/hash/源mask检查通过 | 人工验收、dev补写、独立测试描述、三方消费验收与冻结 | B，全员 |
 | P5-S 分割训练 | not_started | S0 规划配置 | 可恢复权重、dev 结果和固定候选 | lcy |
 | P5-L 排序训练 | not_started | M1/M2 规划配置 | 各 seed 日志、权重和 dev 结果 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
@@ -31,9 +31,9 @@ wyz 已完成独立图文环境、真实 GT 裁剪、SigLIP 2 logits 检查及 8
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 基础盘点完成；规划独立课程工作区，准备分割模型检查 | 核对公开源码/权重与候选接口，规划数据盘缓存/输出 | 模型小批验证需 B 的真实小包与具体运行配置 | [环境记录](handoffs/segmentation/server_inventory.md)；实现 PR 与模型检查待完成 |
-| wyz（A）/ grounding | 接入 wkq 共享解析与正式查询，推进 B2 | 独立环境、768 维编码、缓存/B1 与 36 测试已验证 | accepted=0；共享 parse_query 和统一评价器未发布 | [远端 grounding 交接](handoffs/grounding/siglip_baselines_20261112.md) |
-| wkq（B）/ data_eval | 修订语言试点，处理复核分歧；继续共享解析/B0/评价器 | 独立远端 CPU 环境、GT 小包与审计已运行 | 正式查询/消费方验收及全量划分未完成 | [远端交接](handoffs/data_eval/remote_pilot_review_20261112.md) |
+| lcy | 验收新train/dev包，准备自己的分割训练 | 小包模型smoke已有工作区交接；新包含5000/250图及源保真检查 | 新命名空间/加载器验收；训练配置与GPU协调由本人登记 | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)中的小包证据和新包路径 |
+| wyz（A）/ grounding | 验收大包读取、缓存键和弱标注实验入口 | 用户报告小包接口OK；可使用明确标记的训练机器初标做实验 | 正式dev查询尚待人工验收；不得把needs_revision伪装accepted | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)，新包模型消费未由wkq代验 |
+| wkq（B）/ data_eval | 审核dev草稿并组织补写，接收大包消费验收 | [已发布分区、初标和35页审核入口](handoffs/data_eval/large_dataset_20261112.md)；训练不属本轮职责 | dev仅116图有待审草稿，其余134图待补写；测试描述未生成 | 共享 processed/fp_data_eval_large_v1 与交接文档 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -43,12 +43,12 @@ wyz 已完成独立图文环境、真实 GT 裁剪、SigLIP 2 logits 检查及 8
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | 试点转换及 GT/复核审计 remote_cpu_checked；wyz 编码器/B1 接口 gpu_verified | 见 wkq 交接；正式全量转换和统一模型评价器未完成 |
-| 实验结果 | 无正式成绩；B1 草稿诊断已运行 | registry 保留计划并追加 draft 运行，正式指标为空 |
+| 模型代码/数据转换器 | wkq大包转换、GT源保真、初标及评价核心remote_cpu_checked | [大型数据交接](handoffs/data_eval/large_dataset_20261112.md)；模型训练由负责人另记 |
+| 实验结果 | training_pilot_diagnostic | 保留14条计划，新增B0训练GT诊断；12/34选对，不是正式dev/test成绩 |
 | GPU/环境/付费预算 | GPU 与基础依赖已盘点；完整模型/长期训练预算未验证 | [服务器检查](handoffs/segmentation/server_inventory.md)，系统盘仅余约 4.6G |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
-| wyz/wkq 的 GitHub/SSH 权限 | wyz SSH 与 MayI2004 GitHub push 已核验；wkq 见其交接 | 不以简称推断权限；使用各自授权 |
-| 公共权重 revision 与数据 manifest | wyz SigLIP 2 revision/权重 SHA 与 fp_pilot20_v2 已记录；正式数据未冻结 | [grounding 交接](handoffs/grounding/siglip_baselines_20261112.md) |
+| wyz/wkq 的 GitHub/SSH 权限 | wkq SSH 已验证，GitHub LE-brawl 经本人确认授权；wyz SSH 与 MayI2004 GitHub push 已核验 | wkq 远端交接；其他成员分别授权 |
+| 公共权重 revision 与数据 manifest | 大包manifest/hash已固定版本；三方正式freeze未完成 | 权重由方法负责人登记；数据见发布索引 |
 | 课程实际截止与提交回执 | 未重新核验 | 提交负责人查课程系统；历史日期不是当前确认 |
 
 ## 4. 更新规则

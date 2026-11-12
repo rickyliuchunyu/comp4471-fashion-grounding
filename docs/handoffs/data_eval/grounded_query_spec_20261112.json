@@ -1,0 +1,348 @@
+{
+  "source_packages": [
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261112-grounded-queries/referring9_source_v1"
+  ],
+  "drafts": [
+    {
+      "semantic_query_id": "grounded-v1-q001",
+      "image_id": 4360,
+      "target_instance_id": 153445,
+      "zh": "带流苏的浅色手拿包",
+      "en": "the light-colored clutch with fringe",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [
+        153446
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q002",
+      "image_id": 4360,
+      "target_instance_id": 153445,
+      "zh": "画面左边的包",
+      "en": "the bag on the left side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        153446
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-1"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q003",
+      "image_id": 4360,
+      "target_instance_id": 153446,
+      "zh": "画面右边的包",
+      "en": "the bag on the right side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        153445
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-1"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q004",
+      "image_id": 4360,
+      "target_instance_id": 153446,
+      "zh": "画面右侧挂着的酒红色大包",
+      "en": "the large burgundy bag hanging on the right side of the image",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [
+        153445
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q005",
+      "image_id": 9080,
+      "target_instance_id": 31755,
+      "zh": "黑色的手提包",
+      "en": "the black handbag",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [
+        31754
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q006",
+      "image_id": 9080,
+      "target_instance_id": 31754,
+      "zh": "画面左边的包",
+      "en": "the bag on the left side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        31755
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-2"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q007",
+      "image_id": 9080,
+      "target_instance_id": 31755,
+      "zh": "画面右边的包",
+      "en": "the bag on the right side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        31754
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-2"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q008",
+      "image_id": 9080,
+      "target_instance_id": 31754,
+      "zh": "画面左边、背在身后的棕色包",
+      "en": "the brown bag behind her on the left side of the image",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [
+        31755
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q009",
+      "image_id": 21398,
+      "target_instance_id": 275545,
+      "zh": "白色的外套",
+      "en": "the white coat",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [
+        275550
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q010",
+      "image_id": 21398,
+      "target_instance_id": 275550,
+      "zh": "画面左边的外套",
+      "en": "the coat on the left side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        275545
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-3"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q011",
+      "image_id": 21398,
+      "target_instance_id": 275545,
+      "zh": "画面右边的外套",
+      "en": "the coat on the right side of the image",
+      "query_types": [
+        "spatial"
+      ],
+      "competing_instance_ids": [
+        275550
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending.",
+      "contrast_set_id": "grounded-v1-left-right-3"
+    },
+    {
+      "semantic_query_id": "grounded-v1-q012",
+      "image_id": 21398,
+      "target_instance_id": 275550,
+      "zh": "画面左侧抱在手上的黑色外套",
+      "en": "the black coat being carried on the left side of the image",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [
+        275545
+      ],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q013",
+      "image_id": 11778,
+      "target_instance_id": 41102,
+      "zh": "坐在桌前写字的人穿着的黑色长外套",
+      "en": "the long black coat worn by the person writing at the table",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q014",
+      "image_id": 13898,
+      "target_instance_id": 355,
+      "zh": "画面中间那个人在深色外套里面穿的浅灰色上衣",
+      "en": "the light gray top worn under the dark coat by the person in the middle of the image",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q015",
+      "image_id": 15909,
+      "target_instance_id": 4398,
+      "zh": "黑白纹外套里面穿着的黑色连衣裙",
+      "en": "the black dress worn under the black-and-white patterned coat",
+      "query_types": [
+        "combined"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q016",
+      "image_id": 29705,
+      "target_instance_id": 256831,
+      "zh": "带翻领和纽扣的黑色外套",
+      "en": "the black jacket with lapels and buttons",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q017",
+      "image_id": 42973,
+      "target_instance_id": 193702,
+      "zh": "腰部扣着一颗纽扣的浅绿色外套",
+      "en": "the light green jacket fastened with one button at the waist",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    },
+    {
+      "semantic_query_id": "grounded-v1-q018",
+      "image_id": 50126,
+      "target_instance_id": 80331,
+      "zh": "黑底白色格纹的长外套",
+      "en": "the long black coat with a white grid pattern",
+      "query_types": [
+        "appearance"
+      ],
+      "competing_instance_ids": [],
+      "visual_evidence": "Full image and annotation boxes visually inspected; human mask and uniqueness review pending."
+    }
+  ],
+  "disputes": [
+    {
+      "image_id": 11778,
+      "original_target": 41094,
+      "previous_human_selection": 41102,
+      "proposed_action": "retire_and_replace",
+      "reason": "内搭可见区域小且与外套颜色接近；建议撤下旧内搭描述，新建明确指向长外套的查询。",
+      "replacement_semantic_query_id": "grounded-v1-q013",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    },
+    {
+      "image_id": 13898,
+      "original_target": 355,
+      "previous_human_selection": 356,
+      "proposed_action": "rewrite_same_target",
+      "reason": "补充画面中间的人、浅灰色、深色外套里面，保留上衣目标。",
+      "replacement_semantic_query_id": "grounded-v1-q014",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    },
+    {
+      "image_id": 15909,
+      "original_target": 4398,
+      "previous_human_selection": 4397,
+      "proposed_action": "rewrite_same_target",
+      "reason": "明确黑白纹外套里面的黑色连衣裙。",
+      "replacement_semantic_query_id": "grounded-v1-q015",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    },
+    {
+      "image_id": 29705,
+      "original_target": 256827,
+      "previous_human_selection": 256831,
+      "proposed_action": "retire_and_replace",
+      "reason": "内搭难辨认；建议撤下旧内搭查询，新建黑色翻领外套查询。",
+      "replacement_semantic_query_id": "grounded-v1-q016",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    },
+    {
+      "image_id": 42973,
+      "original_target": 193702,
+      "previous_human_selection": 193704,
+      "proposed_action": "rewrite_same_target",
+      "reason": "补充浅绿色和腰部单颗纽扣，区分外套与裙子。",
+      "replacement_semantic_query_id": "grounded-v1-q017",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    },
+    {
+      "image_id": 50126,
+      "original_target": 80334,
+      "previous_human_selection": 80331,
+      "proposed_action": "retire_and_replace",
+      "reason": "内搭裙子在全图中可见区域过小；建议新建格纹长外套查询。",
+      "replacement_semantic_query_id": "grounded-v1-q018",
+      "status": "proposal_pending_wkq",
+      "prior_answer_exposure": true
+    }
+  ],
+  "quarantined_images": [
+    {
+      "image_id": 7074,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    },
+    {
+      "image_id": 9713,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    },
+    {
+      "image_id": 42143,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    },
+    {
+      "image_id": 45411,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    },
+    {
+      "image_id": 48755,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    },
+    {
+      "image_id": 49055,
+      "reason": "Visual inspection suggests separate annotations cover portions of the same physical garment, not distinct competing whole garments. Exclude image from this language batch; do not merge or delete source masks.",
+      "status": "quarantined_pending_policy_review"
+    }
+  ]
+}

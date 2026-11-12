@@ -54,4 +54,35 @@ class ReviewTests(unittest.TestCase):
         row.update(decision="human_selected",selected_annotation_id=True)
         with self.assertRaises(ValueError): self.run_audit()
 
+
+    def as_v2(self):
+        self.r["review_format_version"]=2
+        self.r["rows"][0].update(edited_queries={"zh":"left bag","en":"left bag"},checks={"unique":True,"translation":True,"mask":True})
+    def test_edited_text_preserved_and_never_accepted(self):
+        self.as_v2()
+        self.r["rows"][0]["edited_queries"]["zh"]="corrected wording"
+        r=self.run_audit()
+        self.assertEqual(r["rows"][0]["status"],"edited_query_pending_recheck")
+        self.assertEqual(r["rows"][0]["edited_queries"]["zh"],"corrected wording")
+        self.assertEqual(r["accepted_promoted"],0)
+    def test_incomplete_checks_block_quality_claim(self):
+        self.as_v2()
+        self.r["rows"][0]["checks"]["mask"]=False
+        self.assertEqual(self.run_audit()["rows"][0]["status"],"incomplete_quality_checks")
+    def test_export_disclosure_is_preserved(self):
+        self.as_v2()
+        self.r["disclosed_image_ids"]=[1]
+        self.assertEqual(self.run_audit()["rows"][0]["status"],"answer_disclosed")
+    def test_v2_requires_boolean_checks_and_bilingual_edits(self):
+        self.as_v2()
+        self.r["rows"][0]["checks"]["mask"]="yes"
+        with self.assertRaises(ValueError): self.run_audit()
+    def test_edit_keeps_disagreement_and_exposure_evidence(self):
+        self.as_v2()
+        self.r["disclosed_image_ids"]=[1]
+        self.r["rows"][0].update(selected_annotation_id=2,edited_queries={"zh":"changed","en":"changed"})
+        r=self.run_audit()["rows"][0]
+        self.assertFalse(r["target_agrees"])
+        self.assertTrue(r["answer_disclosed"])
+
 if __name__=="__main__": unittest.main()

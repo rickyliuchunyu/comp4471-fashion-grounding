@@ -113,7 +113,7 @@ def validate_package(root):
     annotations = unique_index(coco["annotations"], "id")
     require(set(images) == set(ci), "COCO image IDs mismatch")
     require(all(type(i) is int and i > 0 for i in [*images, *annotations]), "IDs must be positive integers")
-    groups, hashes, masks = {}, {}, {}
+    groups, hashes = {}, {}
     for iid, im in images.items():
         require(im["split"] in ("train", "dev", "test", "unused"), "invalid split")
         require(groups.setdefault(im["group_id"], im["split"]) == im["split"], "group leakage")
@@ -132,7 +132,7 @@ def validate_package(root):
         box = mask_box(mask)
         require(ann["bbox"] == [box[0], box[1], box[2]-box[0], box[3]-box[1]], "COCO box mismatch")
         require(ann["area"] == int(mask.sum()), "COCO area mismatch")
-        masks[aid] = mask
+        del mask  # Bound memory for large datasets; re-decode per candidate below.
     candidate_images = unique_index(package["images"], "image_id")
     require(set(candidate_images) == set(images), "candidate images incomplete")
     ids, refs = set(), set()
@@ -153,7 +153,7 @@ def validate_package(root):
             path = safe_path(root, c["mask_reference"])
             require(sha256(path) == c["mask_sha256"], "mask hash mismatch")
             mask = decode_mask(read_json(path), im["height"], im["width"])
-            require(np.array_equal(mask, masks[aid]), "candidate/COCO mask mismatch")
+            require(np.array_equal(mask, decode_mask(ann["segmentation"], im["height"], im["width"])), "candidate/COCO mask mismatch")
             require(c["bbox_xyxy"] == mask_box(mask), "candidate box mismatch")
     require(refs == {a for a, row in annotations.items() if not row["iscrowd"]}, "missing GT candidates")
     counts = {}
