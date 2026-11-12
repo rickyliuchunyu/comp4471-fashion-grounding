@@ -1,6 +1,6 @@
 # Segmentation 环境与最小入口
 
-lcy，2026-11-12。实际结果见 [随机 smoke 交接](../../docs/handoffs/segmentation/pilot_adapter_20261112.md) 与 [COCO 加载/五图推理](../../docs/handoffs/segmentation/coco_weights_20261112.md)。这是 P1 工程检查，**不是正式 S0 trainer 或模型性能验收**。
+lcy，2026-11-12。实际结果见 [随机 smoke 交接](../../docs/handoffs/segmentation/pilot_adapter_20261112.md) 与 [COCO 加载/五图推理](../../docs/handoffs/segmentation/coco_weights_20261112.md)。可复用训练入口与配置现已实现，见 [TRAINING.md](TRAINING.md)；[200-update 稳定性与恢复](../../docs/handoffs/segmentation/stability_200_20261112.md)已通过。完整 S0 训练及 dev 性能验收尚未执行。
 
 ## 独立运行环境
 

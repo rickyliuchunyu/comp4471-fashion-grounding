@@ -56,9 +56,9 @@
     "hidden_dim": 256,
     "num_attention_heads": 8,
     "decoder_predictions_including_initial": 10,
-    "weights_origin": "public_COCO_instance_checkpoint_to_be_selected",
-    "checkpoint_url": null,
-    "checkpoint_sha256": null,
+    "weights_origin": "public_COCO_Mask2Former_R50_model_final_3c8ec9",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl",
+    "checkpoint_sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
     "classifier_init": "xavier_uniform_weight_zero_bias",
     "optimizer": "AdamW",
     "learning_rate": 0.0001,
@@ -111,7 +111,10 @@
     "seed": 42,
     "dev_evaluation_interval_updates": 2000,
     "classification_loss": "upstream_cross_entropy",
-    "experiment_id": "S0"
+    "experiment_id": "S0",
+    "runtime_config_template": "configs/runs/segmentation/s0_train.json",
+    "verified_short_run_config": "configs/runs/segmentation/pilot_stability_200.json",
+    "weights_provenance": "envs/segmentation/upstream.json"
   },
   "candidates": {
     "decoder": "one_foreground_class_per_query",

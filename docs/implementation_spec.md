@@ -1,6 +1,6 @@
 # 工程模块与实现接口
 
-版本 `2026-11-05`，实现状态更新于 `2026-11-12`。本文保留接口设计；实际已有 wkq 数据转换/验证和 lcy 分割适配/候选/短 smoke 入口，正式 trainer、排序和统一评价仍待完成。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
+版本 `2026-11-05`，实现状态更新于 `2026-11-12`。本文保留接口设计；实际已有 wkq 数据转换/验证和 lcy 分割适配/候选/可恢复 trainer，完整 S0 训练、排序和统一评价仍待完成。模型定义见 [技术设计](technical_design.md)，数据与评估语义分别见 [数据协议](data_protocol.md)、[实验计划](experiment_plan.md)。
 
 2026-11-10 补充：[暂定分工](team_workflow.md) 定义各模块主责，B0 与 B2 分文件避免多人同时修改同一规则模块。以下包含实现与后续设计，当前证据见 [lcy 交接](handoffs/segmentation/pilot_adapter_20261112.md)。文件层 schema 3 与合成包见 [交接契约](artifact_contract.md)。
 
@@ -86,7 +86,7 @@ CPU 图片为 uint8 RGB，由各模型的 processor 独立处理。bbox 使用�
 | F 外部系统 | 完整查询、多输出选择、无 GT 提示 | 固定 E1 配置与全量预测 |
 | G 端到端 | 新图+新文字到叠图，首次/缓存计时 | 完整调用记录 |
 
-表中完整放行条件仍未满足；lcy 已完成真实 20 图/145 实例加载与两次 GPU 更新/恢复，未做 200 updates 或性能评价。合成文件接口可独立执行 `python scripts/check_contract_examples.py`，范围见 [示例说明](../examples/README.md)。小数据过拟合只验证数据流和优化，不能证明泛化。实际短检查命令见 [分割环境入口](../envs/segmentation/README.md)；复用公开模型仍须锁定并验证 checkpoint。
+表中完整放行条件仍未满足；lcy 已完成真实 20 图/145 实例加载、COCO 八类初始化与 200 updates / 第100步跨进程恢复，未做正式性能评价。合成文件接口可独立执行 `python scripts/check_contract_examples.py`，范围见 [示例说明](../examples/README.md)。小数据过拟合只验证数据流和优化，不能证明泛化。实际训练/短检查命令见 [训练入口](../envs/segmentation/TRAINING.md)，实测证据见 [交接](handoffs/segmentation/stability_200_20261112.md)；COCO checkpoint 已锁定并验证。
 
 ## 5. 可选扩展的接口边界
 

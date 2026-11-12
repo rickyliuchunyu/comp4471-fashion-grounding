@@ -4,7 +4,7 @@
 
 成员对应见 [简称绑定](team_aliases.md)。
 
-当前记录：[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。新增：[lcy 分割真实输入与 GPU 工程检查](segmentation/pilot_adapter_20261112.md)、[COCO 权重校验与五图推理](segmentation/coco_weights_20261112.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
+当前记录：[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。新增：[lcy 分割真实输入与 GPU 工程检查](segmentation/pilot_adapter_20261112.md)、[COCO 权重校验与五图推理](segmentation/coco_weights_20261112.md)、[训练入口与200-update稳定性](segmentation/stability_200_20261112.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
 
 ## 复制使用的模板
 

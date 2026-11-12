@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前仓库已有 wkq 的试点数据转换、GT 验证与复核审计，见 [数据交接](docs/handoffs/data_eval/remote_pilot_review_20261112.md)；另有分割适配、候选导出与两次随机初始化 GPU 工程检查，见 [lcy 交接](docs/handoffs/segmentation/pilot_adapter_20261112.md)。正式 S0 训练和统一模型评价尚未完成，没有模型性能结果。`training_plan.json` 是规划，可执行短检查配置单独放在 `configs/runs/segmentation/`。
+> 当前仓库已有 wkq 的试点数据转换、GT 验证与复核审计，见 [数据交接](docs/handoffs/data_eval/remote_pilot_review_20261112.md)；另有分割适配、候选导出、COCO 权重加载、可恢复训练入口及 200-update GPU 稳定性检查，见 [lcy 最新交接](docs/handoffs/segmentation/stability_200_20261112.md)。正式 S0 训练和统一模型评价尚未完成，没有模型性能结果。`training_plan.json` 是规划，可执行短检查配置单独放在 `configs/runs/segmentation/`。
 
 ## 团队与 Codex 开工入口
 
@@ -67,7 +67,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 [training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留正式实验计划，并追加明确标为工程 smoke 的运行记录，性能指标仍为空。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
-分割小阶段与真实验证见 [lcy 交接](docs/handoffs/segmentation/pilot_adapter_20261112.md)，可执行短检查见 [分割环境入口](envs/segmentation/README.md)；它不替代正式 S0 trainer。
+分割小阶段与真实验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，可复用训练入口、配置与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。完整训练及 dev 选择仍未执行。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
