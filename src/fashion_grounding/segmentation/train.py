@@ -172,6 +172,15 @@ def main():
                     components[key] = components.get(key, 0.) + float(value.detach()) / config['accumulation_steps']
                 del batch, losses, loss
             scaler.unscale_(optimizer)
+            bad_gradients = [name for name, param in model.named_parameters()
+                             if param.grad is not None and not torch.isfinite(param.grad).all()]
+            if bad_gradients:
+                write_json(output / 'gradient_failure.json', dict(attempted_update=completed+1,
+                    completed_updates=completed, image_ids=image_ids, instance_counts=instance_counts,
+                    loss_components=components, loss_scale=scaler.get_scale(),
+                    nonfinite_gradient_parameters=bad_gradients,
+                    peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated()))
+                raise ValueError('Non-finite gradients; no optimizer/scheduler step performed')
             grad_norm = torch.nn.utils.clip_grad_norm_(params, config['gradient_clip_norm'], error_if_nonfinite=True)
             if grad_norm <= 0:
                 raise ValueError('Zero full-model gradient')
