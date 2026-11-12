@@ -63,3 +63,7 @@
 ## 4. 状态与交接
 
 项目级当前任务在 [状态表](status.md)，运行证据在 registry/metadata，交接使用 [模板](handoffs/README.md)。B 汇总但不替其他人宣告运行完成；方法负责人核对自己的日志与预测。无完整运行入口时写“尚不可运行”，不能填写未经执行的复现命令作为验证证据。
+
+## 数据准备运行（不属于模型实验指标）
+
+2026-11-12，wkq：20261112-grounded-queries，CPU，看图初标与审核工具验证已完成，人工审核 pending。9 图/18 语义/36 双语，accepted=0；35 测试与 59 源 mask 一致性检查通过。见 [交接](handoffs/data_eval/grounded_query_review_20261112.md)。未往模型实验计划填入虚构指标。

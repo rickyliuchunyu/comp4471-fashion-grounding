@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-更新：2026-11-12（wkq 远端 CPU 交接）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-12（wkq 看图初标与审核包）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
 **当前 P0/P1 继续推进；wkq 独立工作区与 CPU 环境已验证，P2 真实 GT 小包已在共享数据盘交接，查询修订与消费方验收待完成。** 研究计划、角色任务卡和交接规范已建立；试点数据转换、GT 验证器及复核审计已在远端运行；模型训练、统一模型评价器、正式查询与演示尚未完成。AutoDL 实例已创建，发起人 SSH 已验证，基础 PyTorch/CUDA 与分割扩展可导入；完整模型验证、组员访问与正式训练预算仍待确认。成员简称已确认：lcy = segmentation、wyz（A）= grounding、wkq（B）= data_eval；简称不代表账号权限。
 
@@ -12,7 +12,7 @@
 | --- | --- | --- | --- | --- |
 | P0 接口确认 | in_progress | [文件契约](artifact_contract.md)、[合成示例](../examples/README.md)、[解析约定](rule_parser_contract.md) | 三人消费方复核与实际读写器检查 | 全员，B 汇总 |
 | P1 环境与工作区 | in_progress | [远程只读盘点](handoffs/segmentation/server_inventory.md)：GPU/磁盘/包版本/扩展导入 | 独立工作区、图文环境、GPU 锁与模型小批检查 | lcy 协调，全员 |
-| P2 真实 GT 小包 | in_progress | [wkq 远端交接](handoffs/data_eval/remote_pilot_review_20261112.md)：20 图、145 GT、19 测试通过 | 6 组复核分歧、2 组已示答案、语言设计修订与消费方验收；accepted=0 | B，全员标注 |
+| P2 真实 GT 小包 | in_progress | [wkq 远端交接](handoffs/data_eval/remote_pilot_review_20261112.md)：20 图、145 GT、19 测试通过 | [新增 9 图/18 组初标](handoffs/data_eval/grounded_query_review_20261112.md) 待人工审核；旧 6 分歧提出修订建议；消费方验收待完成；accepted=0 | B，全员标注 |
 | P3 基线与评价器 | not_started | B0/B1/B2 设计 | 实现、可手算评价验证、真实试点输出 | A/B |
 | P4 数据扩充冻结 | not_started | 数量与划分规则 | 实际分区、哈希、复核与重复组报告 | B，全员 |
 | P5-S 分割训练 | not_started | S0 规划配置 | 可恢复权重、dev 结果和固定候选 | lcy |
@@ -31,7 +31,7 @@
 | --- | --- | --- | --- | --- |
 | lcy | 基础盘点完成；规划独立课程工作区，准备分割模型检查 | 核对公开源码/权重与候选接口，规划数据盘缓存/输出 | 模型小批验证需 B 的真实小包与具体运行配置 | [环境记录](handoffs/segmentation/server_inventory.md)；实现 PR 与模型检查待完成 |
 | wyz（A）/ grounding | 审核候选读取与共享解析，准备 B1/B2 | 合成包读取、缓存键/预测输出接口、独立编码器入口 | GT 结果需真实图片/查询，GPU 使用需排队 | 个人 PR；特征与预测检查；角色交接文件，均待创建 |
-| wkq（B）/ data_eval | 修订语言试点，处理复核分歧；继续共享解析/B0/评价器 | 独立远端 CPU 环境、GT 小包与审计已运行 | 正式查询/消费方验收及全量划分未完成 | [远端交接](handoffs/data_eval/remote_pilot_review_20261112.md) |
+| wkq（B）/ data_eval | 审核机器看图初标，裁决旧分歧；继续共享解析/B0/评价器 | 新审核包 18 组双语描述、35 项测试通过；见 [初标交接](handoffs/data_eval/grounded_query_review_20261112.md) | 正式查询/消费方验收及全量划分未完成 | [远端交接](handoffs/data_eval/remote_pilot_review_20261112.md) |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -45,7 +45,7 @@
 | 实验结果 | none_recorded | registry 14 条计划，指标为空 |
 | GPU/环境/付费预算 | GPU 与基础依赖已盘点；完整模型/长期训练预算未验证 | [服务器检查](handoffs/segmentation/server_inventory.md)，系统盘仅余约 4.6G |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
-| wyz/wkq 的 GitHub/SSH 权限 | 待核验；lcy SSH 已验证 | 简称不是 GitHub 用户名，成员分别授权 |
+| wyz/wkq 的 GitHub/SSH 权限 | wkq SSH 已验证，GitHub LE-brawl 经本人确认授权；wyz 待核验 | wkq 远端交接；其他成员分别授权 |
 | 公共权重 revision 与数据 manifest | not_pinned | 对应方法/数据负责人执行时补齐 |
 | 课程实际截止与提交回执 | 未重新核验 | 提交负责人查课程系统；历史日期不是当前确认 |
 
