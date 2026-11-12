@@ -58,7 +58,7 @@ def decode_candidates(class_logits, mask_logits, image_id, score_threshold=0.5,
 
 
 @torch.no_grad()
-def predict_instances(image_rgb, model, config):
+def predict_instances(image_rgb, model, config, *, diagnostics=None):
     """Only pixels + image ID/settings enter inference; annotations are not accepted.
 
     Uses upstream preprocessing/backbone/head and sem_seg_postprocess for padding
@@ -79,8 +79,15 @@ def predict_instances(image_rgb, model, config):
     masks = torch.nn.functional.interpolate(outputs['pred_masks'], size=images.tensor.shape[-2:],
                                            mode='bilinear', align_corners=False)[0]
     masks = sem_seg_postprocess(masks, images.image_sizes[0], h, w)
-    return decode_candidates(outputs['pred_logits'][0], masks, config['image_id'],
-                             config['score_threshold'], config['max_candidates'])
+    candidates = decode_candidates(outputs['pred_logits'][0], masks, config['image_id'],
+                                   config['score_threshold'], config['max_candidates'])
+    if diagnostics is not None:
+        diagnostics.update(class_logits_shape=list(outputs['pred_logits'][0].shape),
+                           mask_logits_original_shape=list(masks.shape),
+                           resized_image_hw=list(images.image_sizes[0]),
+                           padded_image_hw=list(images.tensor.shape[-2:]),
+                           all_logits_finite=True, candidate_count=len(candidates))
+    return candidates
 
 
 def export_package(output, image_manifest, predictions, *, candidate_set_id,

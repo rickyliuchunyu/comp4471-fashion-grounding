@@ -1,5 +1,7 @@
 """Pinned official Mask2Former construction and strict COCO head adaptation."""
 from pathlib import Path
+from collections import OrderedDict
+import copy
 import subprocess
 import sys
 
@@ -8,6 +10,7 @@ import torch
 UPSTREAM_COMMIT = '9b0651c6c1d5b3af2e6da0589b719c514ec0d69a'
 CLASSIFIER_KEYS = {'sem_seg_head.predictor.class_embed.weight',
                    'sem_seg_head.predictor.class_embed.bias'}
+LOSS_CLASS_WEIGHT_KEY = 'criterion.empty_weight'
 
 
 def build_model(source, device='cuda'):
@@ -38,26 +41,61 @@ def build_model(source, device='cuda'):
 
 
 def adapt_coco_state(model, state):
-    """Accept an already-deserialized official COCO state, skipping ONLY its head.
+    """Load COCO tensors, retaining the new classifier and class-count loss buffer.
 
     File deserialization/provenance remains the caller's responsibility. Course
     checkpoints use strict model.load_state_dict instead of this initialization.
     """
     current = model.state_dict()
+    state = OrderedDict(state)
+    # Exact upstream v1 -> v2 migration; never use a fuzzy key matcher.
+    old_query = 'sem_seg_head.predictor.static_query.weight'
+    new_query = 'sem_seg_head.predictor.query_feat.weight'
+    renamed = {}
+    if old_query in state:
+        if new_query in state:
+            raise ValueError('Ambiguous legacy/current query feature keys')
+        state[new_query] = state.pop(old_query)
+        renamed[old_query] = new_query
     if set(state) != set(current):
         raise ValueError(f'State keys differ: missing={sorted(set(current)-set(state))}, '
                          f'unexpected={sorted(set(state)-set(current))}')
     mismatch = {k for k in current if tuple(state[k].shape) != tuple(current[k].shape)}
-    if mismatch != CLASSIFIER_KEYS:
-        raise ValueError(f'Expected only COCO classifier mismatch, got {sorted(mismatch)}')
+    skipped = set(CLASSIFIER_KEYS)
+    if LOSS_CLASS_WEIGHT_KEY in current:
+        old, new = torch.as_tensor(state[LOSS_CLASS_WEIGHT_KEY]), current[LOSS_CLASS_WEIGHT_KEY].cpu()
+        if tuple(old.shape) != (81,) or tuple(new.shape) != (9,):
+            raise ValueError('Expected 81 -> 9 loss class weights')
+        if not torch.equal(old[:-1], torch.ones_like(old[:-1])) or not torch.equal(new[:-1], torch.ones_like(new[:-1])) or old[-1] != new[-1]:
+            raise ValueError('Unexpected COCO no-object loss weight')
+        skipped.add(LOSS_CLASS_WEIGHT_KEY)
+    if mismatch != skipped:
+        raise ValueError(f'Expected only class-count dependent mismatch, got {sorted(mismatch)}')
     for key in CLASSIFIER_KEYS:
         if state[key].shape[0] != 81 or current[key].shape[0] != 9 or state[key].shape[1:] != current[key].shape[1:]:
             raise ValueError('Expected COCO 80+1 -> project 8+1 head')
-    weights = {k: torch.as_tensor(v) for k, v in state.items() if k not in CLASSIFIER_KEYS}
+    for key in current:
+        tensor = torch.as_tensor(state[key])
+        if tensor.dtype != current[key].dtype or not torch.isfinite(tensor).all():
+            raise ValueError(f'Unexpected dtype/non-finite checkpoint tensor: {key}')
+    retained = {k: current[k].detach().cpu().clone() for k in skipped}
+    weights = OrderedDict((k, torch.as_tensor(v)) for k, v in state.items() if k not in skipped)
+    # Use the constructed model's versions after the explicit legacy conversion.
+    weights._metadata = copy.deepcopy(current._metadata)
     incompatible = model.load_state_dict(weights, strict=False)
-    if set(incompatible.missing_keys) != CLASSIFIER_KEYS or incompatible.unexpected_keys:
+    if set(incompatible.missing_keys) != skipped or incompatible.unexpected_keys:
         raise ValueError('Unexpected checkpoint load mismatch')
-    return dict(skipped_classifier_keys=sorted(incompatible.missing_keys), unexpected_keys=[])
+    loaded = model.state_dict()
+    for key, expected in {**weights, **retained}.items():
+        if not torch.equal(loaded[key].detach().cpu(), expected):
+            raise ValueError(f'Post-load tensor equality failed: {key}')
+    return dict(skipped_classifier_keys=sorted(CLASSIFIER_KEYS),
+                retained_loss_buffers=sorted(skipped - CLASSIFIER_KEYS),
+                renamed_keys=renamed, unexpected_keys=[],
+                loaded_tensor_count=len(weights), exact_tensor_equality_verified=True,
+                retained_tensors_unchanged=True,
+                shapes={k: dict(source=list(state[k].shape), target=list(current[k].shape))
+                        for k in sorted(skipped)})
 
 
 def check_cuda_extension():
