@@ -58,3 +58,29 @@ def adapt_coco_state(model, state):
     if set(incompatible.missing_keys) != CLASSIFIER_KEYS or incompatible.unexpected_keys:
         raise ValueError('Unexpected checkpoint load mismatch')
     return dict(skipped_classifier_keys=sorted(incompatible.missing_keys), unexpected_keys=[])
+
+
+def check_cuda_extension():
+    """Check actual CUDA forward AND gradients against upstream PyTorch reference.
+
+    An import alone cannot detect a binary compiled for the wrong GPU architecture.
+    Requires build_model() to have registered the pinned upstream source first.
+    """
+    from mask2former.modeling.pixel_decoder.ops.functions.ms_deform_attn_func import (
+        MSDeformAttnFunction, ms_deform_attn_core_pytorch)
+    shapes = torch.tensor([[2, 2], [1, 1]], dtype=torch.long, device='cuda')
+    starts = torch.tensor([0, 4], dtype=torch.long, device='cuda')
+    generator = torch.Generator(device='cuda').manual_seed(7)
+    value = torch.rand(1, 5, 2, 2, generator=generator, device='cuda', dtype=torch.double, requires_grad=True)
+    locations = torch.rand(1, 2, 2, 2, 2, 2, generator=generator, device='cuda', dtype=torch.double, requires_grad=True)
+    weights = torch.rand(1, 2, 2, 2, 2, generator=generator, device='cuda', dtype=torch.double, requires_grad=True)
+    reference = ms_deform_attn_core_pytorch(value, shapes, locations, weights)
+    actual = MSDeformAttnFunction.apply(value, shapes, starts, locations, weights, 1)
+    torch.testing.assert_close(actual, reference, atol=1e-8, rtol=1e-6)
+    expected_grad = torch.autograd.grad(reference.sum(), (value, locations, weights))
+    actual_grad = torch.autograd.grad(actual.sum(), (value, locations, weights))
+    for observed, expected in zip(actual_grad, expected_grad):
+        torch.testing.assert_close(observed, expected, atol=1e-8, rtol=1e-6)
+    return dict(forward_max_abs_error=float((actual-reference).abs().max()),
+                gradient_max_abs_errors=[float((a-b).abs().max()) for a,b in zip(actual_grad, expected_grad)],
+                gpu_capability=list(torch.cuda.get_device_capability()), status='passed')

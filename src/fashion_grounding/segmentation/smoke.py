@@ -3,7 +3,6 @@
 Not a formal trainer or performance experiment. Run through scripts/with_gpu_lock.py.
 """
 import argparse
-import copy
 import json
 from pathlib import Path
 import random
@@ -15,7 +14,7 @@ from PIL import Image
 import torch
 
 from .data import load_training_package, map_record
-from .model import build_model
+from .model import build_model, check_cuda_extension
 from .predict import export_package, predict_instances, sha256, write_json
 
 
@@ -60,6 +59,8 @@ def main():
     torch.set_num_threads(2)
     started = time.monotonic()
     model, cfg = build_model(args.source)
+    kernel_check = check_cuda_extension()
+    write_json(output / 'cuda_extension_check.json', kernel_check)
     (output / 'model_config.yaml').write_text(cfg.dump())
     write_json(output / 'resolved_config.json', config)
     groups = []
@@ -155,7 +156,7 @@ def main():
         peak_cuda_reserved_bytes=torch.cuda.max_memory_reserved(),
         checkpoint_sha256=sha256(output / 'smoke_final.pth'),
         git_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-        pretrained_weights_loaded=False, performance_evaluated=False)
+        pretrained_weights_loaded=False, performance_evaluated=False, cuda_extension_check=kernel_check)
     write_json(output / 'smoke_report.json', result)
     print(json.dumps(result))
 

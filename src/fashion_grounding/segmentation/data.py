@@ -90,6 +90,10 @@ def map_record(record, short_edge=256, max_size=384):
     shape = image.shape[:2]
     annotations = [utils.transform_instance_annotations(a, transform, shape)
                    for a in record.pop('annotations')]
+    # Resized PIL masks can be read-only; give torch writable arrays.
+    for annotation in annotations:
+        if isinstance(annotation['segmentation'], np.ndarray):
+            annotation['segmentation'] = annotation['segmentation'].copy()
     instances = utils.annotations_to_instances(annotations, shape, mask_format='bitmask')
     instances.gt_boxes = instances.gt_masks.get_bounding_boxes()
     instances = utils.filter_empty_instances(instances)
