@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[u3000完整dev250真实候选交付](segmentation/real_candidates_dev250_20261114.md)：250图一次推理、23,011个阈值前候选，0.3/0.5/0.7包离线导出及wyz接口全量验证完成；共享路径、hash和日志见交接。正式语言阈值/A-B本人接收待完成，未追加训练或重复smoke。此前[入口与单测](segmentation/candidate_export_20261114.md)、[离线误差分析](segmentation/dev_error_analysis_20261114.md)保留作历史证据。
+最新：[accepted语言dev就绪核查](segmentation/language_dev_readiness_20261114.md)：已发布accepted dev=0，290条needs_revision，未计算coverage或选阈值；不重复模型/候选检查。[此前真实dev250三包交付](segmentation/real_candidates_dev250_20261114.md)继续有效，现待语言审核及冻结清单。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 

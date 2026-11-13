@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [u3000完整dev250真实候选](docs/handoffs/segmentation/real_candidates_dev250_20261114.md)已交付：一次250图推理保存23,011个阈值前候选；离线0.3/0.5/0.7包分别1,565/1,258/980个候选，wyz固定接口全量读取通过。真实query ID、顺序及空图保留；正式语言阈值未选择。本轮未追加训练、重算AP或重复smoke。
+> [最新语言dev核查](docs/handoffs/segmentation/language_dev_readiness_20261114.md)：wkq已发布accepted dev仍为0，290条语言草稿全部待修订，尚不能计算正式matched query coverage或选择阈值。[u3000 dev250三包](docs/handoffs/segmentation/real_candidates_dev250_20261114.md)已交付并保持有效，本轮只读核查，没有重复推理、候选检查或训练。
 
 ## 团队与 Codex 开工入口
 
