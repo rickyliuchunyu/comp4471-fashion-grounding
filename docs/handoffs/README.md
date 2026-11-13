@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[3000→5000步离线误差分析](segmentation/dev_error_analysis_20261114.md)与[3000步候选交付准备](segmentation/candidate_u3000_preparation_20261114.md)：复用已有dev预测，保持3000步选择，未推理/训练；共享目录只含准备清单，正式候选payload和阈值选择未完成。
+最新：[u3000完整dev250真实候选交付](segmentation/real_candidates_dev250_20261114.md)：250图一次推理、23,011个阈值前候选，0.3/0.5/0.7包离线导出及wyz接口全量验证完成；共享路径、hash和日志见交接。正式语言阈值/A-B本人接收待完成，未追加训练或重复smoke。此前[入口与单测](segmentation/candidate_export_20261114.md)、[离线误差分析](segmentation/dev_error_analysis_20261114.md)保留作历史证据。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 

@@ -1,8 +1,8 @@
 # 当前进度与下一步
 
-更新：2026-11-14；[u3000 正式候选导出入口][candidate-export]已实现，新增11项CPU检查全部通过，含真实query ID保留、阈值前缓存、离线0.3/0.5/0.7过滤与wyz固定版本读取兼容。本轮真实权重加载、模型推理、训练更新均为0。既有[离线误差分析][dev-analysis]及第3000步选择（mask AP=50.5603）保持不变。
+更新：2026-11-14；[u3000 完整dev250真实候选交付][real-candidates]完成：一次250图推理保存23,011个阈值前候选，再离线导出0.3/0.5/0.7三包（1,565/1,258/980候选），wyz固定接口全量读取和3,803次裁剪通过。本轮未训练、未重算AP、未重复smoke；既有3000步选择（mask AP=50.5603）保持不变。
 
-**导出编排已完成；真实候选缓存/payload 尚未生成，正式语言阈值尚未选择。** [旧共享准备包][candidate-prep]保持原样；现有AP结果缺decoder query ID/logits，不能伪造候选。新入口支持逐图缓存后离线筛选，不为每个阈值重复推理。必要前向需后续授权；accepted语言dev选择及A/B真实新包验收待完成。
+**真实dev250候选缓存及三个trial包已发布，正式语言阈值尚未选择。** 共享路径见[交接][real-candidates]；0.7下1张零候选图片保留，其他两包无零候选图。技术验证由lcy调用wyz接口完成，wyz/wkq本人接收和accepted语言dev正式评价仍待完成；train5000候选未生成。
 
 ## GitHub 同步快照
 
@@ -10,7 +10,7 @@
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工已发布 `ce3c865`；新增导出实现 `c2c0645`，本轮文档/测试证据随PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[候选入口][candidate-export] / [离线分析][dev-analysis] |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工及真实推理源码 `7e558e3`；本轮真实结果/状态随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[dev250候选交付][real-candidates] |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `f5787f4`；扩充实现及发布交接已推送 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；旧 #1/#3 已被替代；[大型数据交接][wkq-large] |
 
@@ -31,7 +31,7 @@
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | [wyz 已接收共享解析器；34 条同包 train 上 B0/B1/B2=12/18/22 选对，输出完整，缓存重放一致][wyz-latest]；wkq 统一评价核心已交付 | 下游 PR 审阅、正式 accepted dev 评价与 B2 lambda 选择仍待完成；训练诊断不是泛化成绩 | A/B |
 | P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；用户已确认交付数据经过人工复核，已形成消费者固定版本记录；原发布 formal_freeze=false 保留作历史，语言审核/最终冻结独立跟踪 | B，全员 |
-| P5-S 分割训练 | in_progress | [续训及dev选择][resume5000]完成，选择3000步；[离线误差分析][dev-analysis]与[正式候选入口][candidate-export]完成 | 真实候选缓存/导出、语言dev阈值选择及A/B接收未完成；完整S0未宣告收敛 | lcy |
+| P5-S 分割训练 | in_progress | [续训及dev选择][resume5000]选3000步；[离线分析][dev-analysis]、[候选入口][candidate-export]与[真实dev250候选交付][real-candidates]完成 | accepted语言dev阈值选择、A/B本人接收/正式评价待完成；train候选未生成；完整S0未宣告收敛 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42 机器弱标签试训：5 epochs / 490 updates，已保存权重][wyz-latest]，不属于正式训练结果 | 人工审核 dev、M2 实现与 M1/M2 三种子公平对照、真实 dev 选择 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -45,8 +45,8 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 后续授权后生成一次真实u3000候选缓存并交接 | 正式cache/export入口与11项新增CPU验证已完成；阈值离线过滤，无需重复forward | 本轮不执行真实推理，缓存/payload尚无；正式阈值需accepted语言dev，真实包需A/B接收 | [候选入口及复现][candidate-export] |
-| wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；预测候选待 lcy 固定版本；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
+| lcy | 交接固定dev250候选，待accepted语言dev做正式阈值选择 | 三包已通过wyz接口全量技术读取，可供下游新建predicted缓存；复用已有检查 | 正式语言dev未accepted；A/B本人签收待完成；无追加训练或train候选授权 | [真实候选、路径及hash][real-candidates] |
+| wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；dev250三包已由lcy固定并验证接口，待本人接收/建立predicted缓存；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 组织新包接收与冻结，审核/补写 dev 查询 | 分割大包与语言初标已发布；接收消费方检查及 B1/B2 输出 | 新包三方技术验收已齐，用户已确认分割数据人工复核；生产方可归档同步冻结记录；语言机器草稿不自动 accepted | [大包交接][wkq-large]、PR #4 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
@@ -57,9 +57,9 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | trainer/AP/选择、预算扩展续训及正式候选cache/export入口已实现 | 1000→5000真实恢复、训练及dev选择完成；完整S0、生产候选及最终test仍待完成，队友状态按各自交接 |
-| 实验结果 | 已有dev AP46.0636/50.5603/48.8844，选3000步；新增离线诊断解释回落 | 此前离线分析保留2条派生运行；本轮仅新增导出单测证据，不增加模型性能测量/科学实验行；无最终test成绩 |
-| GPU/环境/付费预算 | 本轮11项新增CPU单测1.870秒，隐藏GPU；未推理、训练或升级环境 | 开工GPU0MiB/0%，无计算进程/running记录，系统/数据盘约27/163GiB空闲；[证据](handoffs/segmentation/evidence/candidate_export_20261114/run_metadata.json) |
+| 模型代码/数据转换器 | trainer/AP/选择、预算扩展及正式cache/export已实现并真实运行 | u3000完整dev250候选交付完成；完整S0、正式语言阈值与最终test仍待完成 |
+| 实验结果 | 既有dev AP46.0636/50.5603/48.8844，选3000步；本轮新增真实候选产物 | registry新增1条候选推理+3条离线阈值trial；不填AP/语言性能/coverage，未选择阈值，无最终test成绩 |
+| GPU/环境/付费预算 | 本轮GPU锁190.576秒、CPU导出/接收240.194秒，各1800秒硬上限；未训练/升级环境 | 结束GPU0MiB/0%，无计算进程/running记录，系统/数据盘约27/163GiB空闲；[回执](handoffs/segmentation/evidence/real_candidates_20261114/delivery_receipt.json) |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -106,3 +106,5 @@
 [candidate-prep]: handoffs/segmentation/candidate_u3000_preparation_20261114.md
 
 [candidate-export]: handoffs/segmentation/candidate_export_20261114.md
+
+[real-candidates]: handoffs/segmentation/real_candidates_dev250_20261114.md

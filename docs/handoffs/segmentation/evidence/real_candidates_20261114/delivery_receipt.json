@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "shared_directory": "/root/autodl-tmp/fashion-grounding/shared/candidates/u3000-dev250-20261114-r01",
+  "delivery_manifest_sha256": "164c14703ad7b5c436709612a89a01d09fce24084b9b06fc893667f9d1dc3781",
+  "source_cache_sha256": "d306f51fae639446645cb4fe8ce655dbb79306dc609882511a780251abfa708e",
+  "gpu_elapsed_seconds": 190.5756658948958,
+  "gpu_hard_limit_seconds": 1800,
+  "offline_elapsed_seconds": 240.1943810544908,
+  "offline_hard_limit_seconds": 1800,
+  "postflight": {
+    "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay          30G  3.1G   27G  11% /\n/dev/nvme0n1    200G   38G  163G  19% /root/autodl-tmp\n",
+    "gpu": "0, 0 MiB, 0 %\n",
+    "compute_processes": "",
+    "running_records": []
+  }
+}

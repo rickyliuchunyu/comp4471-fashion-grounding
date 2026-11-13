@@ -1,0 +1,93 @@
+{
+  "checked_date_local": "2026-11-14",
+  "prs": [
+    {
+      "number": 2,
+      "head_sha": "7e558e365193693c6d6da48b9ca45cb57702e9b3",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-13T18:29:02Z"
+    },
+    {
+      "number": 4,
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-12T10:45:46Z"
+    },
+    {
+      "number": 5,
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "pr_inventory": [
+    {
+      "number": 2,
+      "title": "Segmentation: dev-selected u3000, candidate cache and offline export"
+    },
+    {
+      "number": 5,
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial"
+    },
+    {
+      "number": 4,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts"
+    },
+    {
+      "number": 3,
+      "title": "Add visually grounded bilingual drafts and blind human review"
+    },
+    {
+      "number": 1,
+      "title": "Add data_eval pilot validation and human review auditing"
+    }
+  ],
+  "discussions": [
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments"
+    }
+  ],
+  "resources": "Filesystem      Size  Used Avail Use% Mounted on\noverlay          30G  3.1G   27G  11% /\n/dev/nvme0n1    200G   38G  163G  19% /root/autodl-tmp\n0, 0 MiB, 0 %\nb61d78f Allow pinned budget-only resume transitions and explicit checkpoint boundaries\nrunning_records: []\n",
+  "teammate_handoffs": "Same commits as candidate_export_20261114; reused unchanged published handoffs and pinned consumer 103dcc5.",
+  "closed_prs": [
+    {
+      "number": 1,
+      "state": "closed",
+      "merged": false,
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df"
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "merged": false,
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1"
+    }
+  ]
+}

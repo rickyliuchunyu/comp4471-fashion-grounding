@@ -1,0 +1,12 @@
+{
+  "short_edge": 800,
+  "max_size": 1333,
+  "amp": false,
+  "decoder": "one_foreground_class_per_query",
+  "mask_logit_threshold": 0,
+  "score": "foreground_probability_times_positive_mask_sigmoid_mean",
+  "empty_mask_policy": "discard",
+  "score_threshold": 0,
+  "max_candidates": 100,
+  "mask_nms": false
+}
