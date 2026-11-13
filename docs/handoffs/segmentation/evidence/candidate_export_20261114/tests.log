@@ -1,0 +1,16 @@
+test_cache_and_mask_tampering_and_wrong_checkpoint_rejected (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_duplicate_query_bad_geometry_and_changed_query_count_rejected (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_failure_incomplete_and_deadline_cannot_export (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_input_boundary_and_paths (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_metadata_guard_without_loading_checkpoint (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_offline_cli_does_not_import_torch_or_model (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_output_is_immutable (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_sparse_query_ids_ties_threshold_and_empty_image (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_streaming_orchestration_uses_only_pixels_and_unfiltered_settings (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_synthetic_decoder_and_cache_filter_agree (test_segmentation_candidate_export.CandidateExportTests) ... ok
+test_wyz_pinned_consumer_reads_export (test_segmentation_candidate_export.CandidateExportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.870s
+
+OK

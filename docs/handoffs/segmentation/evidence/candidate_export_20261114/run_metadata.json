@@ -1,0 +1,45 @@
+{
+  "record_schema_version": 1,
+  "purpose": "targeted_candidate_export_unit_tests",
+  "status": "completed",
+  "run_id": "segmentation-candidate-export-tests-20261114-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_and_execution": "Codex",
+  "source_commit": "c2c0645af62c455f9dae481f02a197d89768aa40",
+  "test_count": 11,
+  "test_seconds": 1.87,
+  "test_failures": 0,
+  "test_skips": 0,
+  "model_inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0,
+  "actual_candidate_payload_generated": false,
+  "selected_threshold": null,
+  "environment": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1",
+  "server_run_dir": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-candidate-export-tests-20261114-r01",
+  "command": "CUDA_VISIBLE_DEVICES=\"\" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=\"$PWD/src\" GROUNDING_INPUTS_PATH=\"$PWD/grounding_inputs.py\" /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python -m unittest discover -s tests -p test_segmentation_candidate_export.py -v",
+  "inputs": {
+    "kind": "synthetic 4x6 RGB images and candidate/logit fixtures only; no real package/weights read",
+    "source_tar_sha256": "db89986bcd66a95503e4c58e748754f821fc24f0af47fca7e85d678eb1edc335",
+    "grounding_consumer_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "grounding_inputs_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8"
+  },
+  "artifacts": {
+    "tests.log": "670f82170771b3d988c0667b8d49f522ee842507377d960f4144903ca225155f"
+  },
+  "reused_evidence": [
+    "COCO loading/head adaptation and upstream model forward",
+    "binary LSJ fix and valid 1000-to-5000 continuation",
+    "250-image dev AP and u3000 selection",
+    "prior data acceptance and human-review confirmation"
+  ],
+  "not_executed": [
+    "GPU cache subcommand",
+    "actual u3000 checkpoint loading",
+    "real candidate generation",
+    "old smoke/unit suite",
+    "accepted language dev threshold selection",
+    "training or new AP evaluation"
+  ]
+}
