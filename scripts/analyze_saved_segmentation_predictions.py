@@ -118,7 +118,7 @@ def analyze(coco, rows, report, high_score):
                     kind = 'background_or_unannotated'
                 kinds[str(int(threshold * 100))] = kind
             per_detection.append(dict(detection_id=d['id'], image_id=iid, category_id=d['category_id'],
-                                      score=d['score'], area=d['area'], best_same_iou=same_max,
+                                      score=d['score'], area=int(d['area']), best_same_iou=same_max,
                                       best_other_iou=other_max, error=kinds))
 
     precision, recall = ev.eval['precision'], ev.eval['recall']
