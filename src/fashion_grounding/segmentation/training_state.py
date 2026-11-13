@@ -44,11 +44,25 @@ def read_config(path):
         raise ValueError('The pilot stability profile must stop at 200 updates')
     if config['purpose'] not in ('pilot_200_update_stability', 's0_training'):
         raise ValueError('Unknown training purpose')
+    if 'checkpoint_updates' in config:
+        updates = config['checkpoint_updates']
+        if (not isinstance(updates, list) or not updates
+                or any(type(u) is not int or not 0 < u <= config['max_updates'] for u in updates)
+                or updates != sorted(set(updates))):
+            raise ValueError('Invalid explicit checkpoint updates')
     return config
 
 
 def config_sha256(config):
     return hashlib.sha256(json.dumps(config, sort_keys=True, allow_nan=False).encode()).hexdigest()
+
+
+def checkpoint_due(config, completed, stop):
+    if completed == stop:
+        return True
+    if 'checkpoint_updates' in config:
+        return completed in config['checkpoint_updates']
+    return completed % config['checkpoint_interval'] == 0
 
 
 def build_optimizer(model, config):

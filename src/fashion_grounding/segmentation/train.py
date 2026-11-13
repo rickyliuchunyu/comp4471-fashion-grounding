@@ -19,8 +19,9 @@ from ..data.schema import sha256, write_json
 from .checkpoint import read_coco_checkpoint
 from .data import load_training_package, map_training_record
 from .model import adapt_coco_state, build_model
+from .resume_extension import load_extended_checkpoint
 from .training_state import (UpdateSchedule, StatefulSampler, build_optimizer, capture_rng,
-    restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256)
+    restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256, checkpoint_due)
 
 
 def component_states(model, optimizer, scheduler, scaler, sampler):
@@ -69,9 +70,12 @@ def main():
     initial = parser.add_mutually_exclusive_group(required=True)
     initial.add_argument('--checkpoint')
     initial.add_argument('--resume')
+    parser.add_argument('--resume-extension', help='Reviewed budget-only transition JSON; requires --resume')
     parser.add_argument('--provenance', default='envs/segmentation/upstream.json')
     parser.add_argument('--stop-after', type=int, help='Absolute update boundary; never exceeds config max_updates')
     args = parser.parse_args()
+    if args.resume_extension and not args.resume:
+        parser.error('--resume-extension requires --resume')
     config = read_config(args.config)
     stop = config['max_updates'] if args.stop_after is None else args.stop_after
     if not 0 < stop <= config['max_updates']:
@@ -99,10 +103,19 @@ def main():
     if subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], text=True).strip():
         raise ValueError('Commit tracked source changes before training')
     resume_state = None
+    resume_lineage = []
     if args.resume:
-        resume_state = load_checkpoint(args.resume, digest, data)
-        if resume_state['git_commit'] != source_commit:
-            raise ValueError('Resume requires the same recorded source commit')
+        if args.resume_extension:
+            repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=True).strip()
+            resume_state, extension = load_extended_checkpoint(
+                args.resume, config, data, args.resume_extension, source_commit, repo_root)
+            resume_lineage = list(resume_state.get('resume_lineage', [])) + [extension]
+            write_json(output / 'budget_extension.json', extension)
+        else:
+            resume_state = load_checkpoint(args.resume, digest, data)
+            if resume_state['git_commit'] != source_commit:
+                raise ValueError('Resume requires the same recorded source commit')
+            resume_lineage = list(resume_state.get('resume_lineage', []))
         model.load_state_dict(resume_state['model'], strict=True)
         initialization = resume_state['initialization']
         initial_digests = resume_state['initial_parameter_digests']
@@ -209,13 +222,14 @@ def main():
             if completed == start_update+1 or completed % 10 == 0:
                 print(json.dumps({k: row[k] for k in ('update', 'total_loss', 'grad_norm_before_clip',
                     'loss_scale', 'peak_cuda_allocated_bytes')}), flush=True)
-            if completed % config['checkpoint_interval'] == 0 or completed == stop:
+            if checkpoint_due(config, completed, stop):
                 if any(not torch.isfinite(p).all() for p in params):
                     raise ValueError('Non-finite model parameters at checkpoint')
                 states = component_states(model, optimizer, scheduler, scaler, sampler)
                 state = dict(**states, component_digests=fingerprints(states), completed_updates=completed,
                     config=config, config_sha256=digest, data=data, git_commit=source_commit,
-                    initialization=initialization, initial_parameter_digests=initial_digests)
+                    initialization=initialization, initial_parameter_digests=initial_digests,
+                    resume_lineage=resume_lineage)
                 path = output / f'checkpoint_{completed:06d}.pth'
                 checkpoint_hash = save_checkpoint(path, state)
                 checkpoints.append(dict(update=completed, path=path.name, sha256=checkpoint_hash))
@@ -226,7 +240,7 @@ def main():
         raise ValueError('Expected both backbone and classifier to update')
     report = dict(status='completed', purpose=config['purpose'], git_commit=source_commit,
         config_sha256=digest, start_update=start_update, completed_updates=completed,
-        updates_this_process=completed-start_update, resumed=bool(args.resume),
+        updates_this_process=completed-start_update, resumed=bool(args.resume), resume_lineage=resume_lineage,
         elapsed_seconds=time.monotonic()-started, finished_at=datetime.now(timezone.utc).isoformat(),
         first_loss=loss_rows[0]['total_loss'], last_loss=loss_rows[-1]['total_loss'],
         min_loss=min(r['total_loss'] for r in loss_rows), max_loss=max(r['total_loss'] for r in loss_rows),
