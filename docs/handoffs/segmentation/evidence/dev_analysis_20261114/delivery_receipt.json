@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-13T16:53:25.303490+00:00",
+  "gpu": "name, memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3090, 0 MiB, 0 %\n",
+  "compute_processes": "pid, process_name, used_gpu_memory [MiB]\n",
+  "disk_free_bytes": {
+    "/": 28931563520,
+    "/root/autodl-tmp/fashion-grounding": 174299611136
+  },
+  "running_coordination": [],
+  "candidate_preparation_directory": "/root/autodl-tmp/fashion-grounding/shared/candidates/preparation-u3000-20261114",
+  "candidate_payload_exists": false,
+  "preparation_files": {
+    "candidate_u3000_preparation.json": "debb5e5a2df2e3adc14a9d877dee8ebe08ce1d21dc137a1235ab95362aa11a61",
+    "candidate_u3000_preparation_20261114.json": "2d5cc20f97a0b849b89bfc25c153be7fa262fb339e78960d137ae7c2ab1e0384",
+    "candidate_u3000_preparation_20261114.md": "c5a6ae9fb5fb898492eb2ff42f50f9ca77c88a77cb24883b277628103bd3eeda"
+  },
+  "focused_case_files": {
+    "paired_cases.png": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/focused_cases/paired_cases.png",
+      "sha256": "3a11f6ef99807f8d20094cd0b2ba8d6d94f322cb98de314f7e6538a988f4a597"
+    },
+    "case_details.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/focused_cases/case_details.json",
+      "sha256": "82c9b6ee7379ba6aaffa7d0f45d93e07fd23ed501189984333dc09bd69a05f0c"
+    }
+  },
+  "render_source_sha256": "76aabf64062e7d2f32f276ee15be6fc0558974822be1b2106f9f2a9f855c99a9"
+}

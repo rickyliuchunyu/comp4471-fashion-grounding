@@ -1,0 +1,7 @@
+test_downscaled_binary_mask_has_zero_padding (test_segmentation_lsj_padding.BinaryInstancePaddingTests) ... ok
+test_object_lost_during_resize_is_not_resurrected_by_padding (test_segmentation_lsj_padding.BinaryInstancePaddingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.632s
+
+OK

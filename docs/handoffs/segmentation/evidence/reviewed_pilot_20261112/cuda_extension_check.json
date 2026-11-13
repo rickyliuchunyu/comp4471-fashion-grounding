@@ -1,0 +1,13 @@
+{
+  "forward_max_abs_error": 2.220446049250313e-16,
+  "gradient_max_abs_errors": [
+    2.220446049250313e-16,
+    4.440892098500626e-16,
+    0.0
+  ],
+  "gpu_capability": [
+    8,
+    6
+  ],
+  "status": "passed"
+}

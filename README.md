@@ -4,11 +4,11 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前仓库包含研究计划、数据协议、接口规范和格式示例，尚无课程训练与评估运行代码，也没有新模型实验结果。JSON 是规划配置，不是可以直接运行的训练配置。本文中的数量、超参数与进度均为待验证计划。
+> [最新语言dev核查](docs/handoffs/segmentation/language_dev_readiness_20261114.md)：wkq已发布accepted dev仍为0，290条语言草稿全部待修订，尚不能计算正式matched query coverage或选择阈值。[u3000 dev250三包](docs/handoffs/segmentation/real_candidates_dev250_20261114.md)已交付并保持有效，本轮只读核查，没有重复推理、候选检查或训练。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wyz/wkq 的 GitHub 用户名与访问权限仍待核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/dev_ap_20261112.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -65,14 +65,16 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 数据与实验状态
 
-[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 中的实验均未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，按独立run记录实际训练、dev评价及离线派生分析。真实AP行填写mask AP，工程和派生诊断行不伪装成新增模型性能测量。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+
+分割既有工程验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练入口与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[真实 dev AP/选择](docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整长训练仍未执行。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
-数据、模型和输出目录仍为占位。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
+Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放于共享数据盘；reviewed_v1 已有 34 条 accepted 训练查询，正式 dev/test 语言集尚未冻结。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
 
 ## 下一步
 
-先在官方训练数据中用 100–200 张图片做标注试点，冻结划分，再用 GT 候选跑 B0/B1/B2；分割环境检查与微调可同时推进。之后训练 M1/M2，接入预测候选，完成 E1 和消融。按暂定角色推进；wyz/wkq 的账号权限、正式训练预算、权重 revision 与数据 manifest 仍待执行时填写；已确认单张 3090 24GB，基础环境检查不代表训练验收。
+按[最新状态](docs/status.md)推进：分割train/dev按用户人工复核确认固定；lcy保留3000步权重，已完成dev250的一次真实候选推理、阈值前缓存及三包离线导出/wyz接口验证。wyz/wkq可接收固定包并建立独立predicted缓存；正式阈值选择依赖accepted语言dev。wyz继续M2和正式可比训练准备，wkq继续语言dev审核及生产方记录归档。本轮未生成train5000候选，不追加训练，不重复已有smoke。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

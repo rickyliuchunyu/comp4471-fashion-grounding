@@ -1,0 +1,32 @@
+test_bad_rle_empty_mask_and_outside_polygon_rejected (test_data_pilot.DataBoundaryTests) ... ok
+test_column_major_uncompressed_rle (test_data_pilot.DataBoundaryTests) ... ok
+test_crowd_preserved_but_not_a_query_target (test_data_pilot.DataBoundaryTests) ... ok
+test_disconnected_instance_stays_one_instance (test_data_pilot.DataBoundaryTests) ... ok
+test_drafts_rejected_by_formal_evaluation_gate (test_data_pilot.DataBoundaryTests) ... ok
+test_hand_computed_geometry_and_zero_id (test_data_pilot.DataBoundaryTests) ... ok
+test_image_dimensions_not_silently_corrected (test_data_pilot.DataBoundaryTests) ... ok
+test_jumpsuit_excludes_whole_image (test_data_pilot.DataBoundaryTests) ... ok
+test_part_annotation_only_is_removed (test_data_pilot.DataBoundaryTests) ... ok
+test_paths_cannot_escape (test_data_pilot.DataBoundaryTests) ... ok
+test_query_wrong_image_split_duplicate_and_self_review (test_data_pilot.DataBoundaryTests) ... ok
+test_agreement_never_automatically_accepted (test_review_audit.ReviewTests) ... ok
+test_cross_image_and_crowd_targets (test_review_audit.ReviewTests) ... ok
+test_disagreement_is_preserved (test_review_audit.ReviewTests) ... ok
+test_disclosed_answer_is_not_blind_agreement (test_review_audit.ReviewTests) ... ok
+test_missing_review_is_pending (test_review_audit.ReviewTests) ... ok
+test_rejection_notes_and_malformed_decisions (test_review_audit.ReviewTests) ... ok
+test_translation_and_manifest_mismatch (test_review_audit.ReviewTests) ... ok
+test_unknown_and_duplicate_ids (test_review_audit.ReviewTests) ... ok
+test_missing_extra_wrong_shape_rejected (test_segmentation.AdaptationTests) ... ok
+test_only_classifier_skipped (test_segmentation.AdaptationTests) ... ok
+test_foreground_score_empty_background_and_ties (test_segmentation.DecoderTests) ... ok
+test_invalid_outputs_fail_not_empty (test_segmentation.DecoderTests) ... ok
+test_no_candidates_and_zero_logit (test_segmentation.DecoderTests) ... ok
+test_one_foreground_class_even_when_no_object_wins (test_segmentation.DecoderTests) ... ok
+test_package_roundtrip_and_error_semantics (test_segmentation.DecoderTests) ... ok
+test_rle_column_major_and_edge_bbox (test_segmentation.DecoderTests) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.095s
+
+OK

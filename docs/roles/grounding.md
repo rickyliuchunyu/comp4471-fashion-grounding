@@ -1,6 +1,6 @@
 # 角色任务卡：图文匹配与排序
 
-角色 ID：`grounding`。负责人简称：wyz（原角色 A），成员简称已确认，GitHub 用户名与权限仍待核验。先读 [团队协作说明](../team_workflow.md)、[技术设计](../technical_design.md)、[实现规范](../implementation_spec.md)、[实验计划](../experiment_plan.md) 和 [数据协议](../data_protocol.md)。
+角色 ID：`grounding`。负责人简称：wyz（原角色 A），成员简称已确认，GitHub 账号已按交接绑定，当前发布与访问状态见 [状态表](../status.md)。先读 [团队协作说明](../team_workflow.md)、[技术设计](../technical_design.md)、[实现规范](../implementation_spec.md)、[实验计划](../experiment_plan.md) 和 [数据协议](../data_protocol.md)。
 
 执行先后顺序统一按 [完整工作流程](../workflow.md)。先查 [状态表](../status.md) 和 [交接入口](../handoffs/README.md)，检查对应 P 阶段的上游产物和验收证据，再开展下面的角色任务；可先交付已验证的小包，不必等全部模块完成。
 

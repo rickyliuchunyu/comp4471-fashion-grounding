@@ -1,0 +1,20 @@
+{
+  "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/review_release.json",
+  "sha256": "95b9b5b48c6c067a00c2f928b318865d68e9b5e776aa319aae24f2906bd4a8dc",
+  "release": {
+    "scope": "training pilot; not independent test",
+    "accepted_semantics": 17,
+    "accepted_records": 34,
+    "pending_records": 2,
+    "review_sha256": "71d306081ef9ac229962394c2f9adae0a314b158cd9494e21bb1f9f76d99cc60",
+    "parent_query_sha256": "30389877dbac9c9fcead7136f9ae2c2cfc8b7a1649a8406ddb9eca07c8faa226",
+    "previously_exposed_accepted_records": 10,
+    "old_disputes": "New query review does not retroactively change old decisions."
+  },
+  "accepted_file_sha256": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a",
+  "accepted_records_observed": 34,
+  "splits": [
+    "train"
+  ],
+  "note": "Read-only published server snapshot; no independent re-adjudication or teammate acceptance claimed"
+}

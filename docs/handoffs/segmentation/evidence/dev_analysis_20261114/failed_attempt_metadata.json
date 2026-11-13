@@ -1,0 +1,30 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-dev-analysis-20261114-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "failed",
+  "git_commit": "51a008f325abf083361edd252897ac21c0de81da",
+  "split": "dev",
+  "candidate_source": "none",
+  "parent_run_ids": [
+    "segmentation-resume5000-ap-20261113-r01"
+  ],
+  "failure": {
+    "type": "TypeError",
+    "message": "Object of type uint32 is not JSON serializable",
+    "stage": "writing per_detection_3000.jsonl after offline matching",
+    "responsibility": "Codex new diagnostic serializer; not model/data failure",
+    "fix_commit": "a91c5811e7d82627d49adca5fbd1b98776d5bee8",
+    "followup_run_id": "segmentation-dev-analysis-20261114-r02"
+  },
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "checkpoint_loaded": false,
+  "elapsed_seconds": null,
+  "elapsed_note": "Failed script did not persist a duration; not reconstructed",
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r01",
+  "preserved_source": "source_script.py",
+  "cpu_wall_time_limit_seconds": 600
+}

@@ -1,0 +1,11 @@
+{
+  "purpose": "dev_checkpoint_selection",
+  "image_manifest_sha256": null,
+  "annotation_sha256": null,
+  "short_edge": 800,
+  "max_size": 1333,
+  "decoder": "upstream_instance",
+  "max_detections": 100,
+  "amp": false,
+  "budget_seconds": 1800
+}

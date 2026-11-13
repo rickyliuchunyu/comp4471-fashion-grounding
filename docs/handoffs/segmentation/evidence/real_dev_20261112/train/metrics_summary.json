@@ -1,0 +1,18 @@
+{
+  "updates": 100,
+  "image_exposures": 200,
+  "distinct_images_seen": 200,
+  "grad_norm_before_clip_min": 341.3677062988281,
+  "grad_norm_before_clip_max": 33456.05078125,
+  "grad_norm_after_clip_max": 0.010000001639127731,
+  "loss_scale_values": [
+    1.0
+  ],
+  "last_learning_rates": [
+    1.9880200000000004e-06,
+    1.9880200000000003e-05
+  ],
+  "first10_mean_loss": 400.1401566982269,
+  "last10_mean_loss": 53.89299117326736,
+  "empty_augmented_images": 0
+}

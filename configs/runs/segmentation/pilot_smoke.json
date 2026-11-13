@@ -1,0 +1,18 @@
+{
+  "purpose": "engineering_smoke_not_S0_training",
+  "seed": 42,
+  "initialization": "random_no_pretrained_weights",
+  "short_edge": 256,
+  "max_size": 384,
+  "optimizer_updates": 2,
+  "microbatch_images": 1,
+  "learning_rate": 0.0001,
+  "backbone_lr_multiplier": 0.1,
+  "weight_decay": 0.05,
+  "amp": true,
+  "gradient_clip_norm": 0.01,
+  "score_threshold": 0.5,
+  "max_candidates": 100,
+  "budget_seconds": 180,
+  "amp_initial_scale": 128.0
+}

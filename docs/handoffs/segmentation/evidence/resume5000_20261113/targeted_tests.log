@@ -1,0 +1,13 @@
+test_checkpoint_config_and_source_mismatch_rejected (test_segmentation_budget_extension.BudgetExtensionTests) ... ok
+test_extended_budget_keeps_lr_optimizer_rng_and_trajectory (test_segmentation_budget_extension.BudgetExtensionTests) ... /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+ok
+test_loader_binds_real_checkpoint_and_reviewed_source_transition (test_segmentation_budget_extension.BudgetExtensionTests) ... ok
+test_nonextension_and_invalid_save_boundaries_rejected (test_segmentation_budget_extension.BudgetExtensionTests) ... ok
+test_recipe_changes_rejected_even_with_matching_policy (test_segmentation_budget_extension.BudgetExtensionTests) ... ok
+test_valid_extension_is_non_mutating_and_pins_parent (test_segmentation_budget_extension.BudgetExtensionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.393s
+
+OK

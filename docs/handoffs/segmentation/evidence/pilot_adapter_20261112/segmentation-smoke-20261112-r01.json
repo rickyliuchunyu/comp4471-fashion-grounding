@@ -1,0 +1,26 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-smoke-20261112-r01",
+  "status": "failed",
+  "wrapper_pid": 3184,
+  "started_at": "2026-11-12T06:45:35.728352+00:00",
+  "budget_seconds": 180,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-smoke-20261112-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.smoke",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-smoke-20261112-r01"
+  ],
+  "git_commit": "4e4f4f24b88a2deeb9925f3abd96ebdca1821c0a",
+  "child_pid": 3190,
+  "exit_code": 1,
+  "elapsed_seconds": 8.842565592378378,
+  "finished_at": "2026-11-12T06:45:44.574400+00:00"
+}

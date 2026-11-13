@@ -1,0 +1,27 @@
+{
+  "resolved_config.json": {
+    "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/resolved_config.json",
+    "sha256": "3c6794faf339b8fad855ee8feb71286c627035740b8ce2ae9e41285a3bbc7525",
+    "bytes": 421
+  },
+  "model_config.yaml": {
+    "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/model_config.yaml",
+    "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff",
+    "bytes": 7771
+  },
+  "input/image_manifest.json": {
+    "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/input/image_manifest.json",
+    "sha256": "00919fb84945e35562b9416bb879ee0abe33fa0e40b1e3282a1d5fc2b7de4691",
+    "bytes": 2506
+  },
+  "candidate_package/candidates_predicted.json": {
+    "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/candidate_package/candidates_predicted.json",
+    "sha256": "03674be3642e0199cdd3661311f8664f323585cb647b340c344a9ce8d2bb964b",
+    "bytes": 72306
+  },
+  "adapted_initialization.pth": {
+    "path": "runs/segmentation/segmentation-coco-inference-20261112-r01/adapted_initialization.pth",
+    "sha256": "4fc1c106e61dd8f72e09afa81af86ebcad2825ea0207d49996247c75a9e1d836",
+    "bytes": 176452100
+  }
+}

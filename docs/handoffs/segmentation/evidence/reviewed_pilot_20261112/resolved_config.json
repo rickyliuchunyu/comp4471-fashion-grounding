@@ -1,0 +1,24 @@
+{
+  "purpose": "reviewed_train_pilot_consumer_acceptance_NOT_S0_training",
+  "seed": 42,
+  "initialization": "random_no_pretrained_weights",
+  "short_edge": 256,
+  "max_size": 384,
+  "optimizer_updates": 2,
+  "microbatch_images": 1,
+  "learning_rate": 0.0001,
+  "backbone_lr_multiplier": 0.1,
+  "weight_decay": 0.05,
+  "amp": true,
+  "gradient_clip_norm": 0.01,
+  "score_threshold": 0.5,
+  "max_candidates": 100,
+  "budget_seconds": 180,
+  "amp_initial_scale": 1.0,
+  "package_sha256": {
+    "image_manifest.json": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+    "annotations_coco.json": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+    "candidates_gt.json": "44969ca41c595d0a0c4ad32321ddceef677d0754b16d09eda6693e10b89be30f",
+    "queries_accepted.jsonl": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a"
+  }
+}

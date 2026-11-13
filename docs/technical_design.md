@@ -10,7 +10,7 @@ B0/B1/B2/M1/M2 固定使用相同候选。GT 候选只在训练与诊断使用�
 
 ## 2. 分割器的结构
 
-拟以公开 COCO instance segmentation 预训练的 Mask2Former R50 初始化，保留骨干、像素解码器和 Transformer，重建八类分类头。下载时记录确切 checkpoint URL、文件 SHA256 和基础代码 commit；当前没有下载或训练权重。
+拟以公开 COCO instance segmentation 预训练的 Mask2Former R50 初始化，保留骨干、像素解码器和 Transformer，重建八类分类头。下载时记录确切 checkpoint URL、文件 SHA256 和基础代码 commit；当前 COCO 下载/八类加载与 200-update 工程检查已完成，见 [实测交接](handoffs/segmentation/stability_200_20261112.md)；没有正式 S0 / dev 性能结果。
 
 | 部分 | 拟采用的设置 | 在系统中的作用 |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ decoder 将上一轮 mask 缩放到当前特征尺度，用其阈值区域限制
 
 ### 2.1 八类分类头与预训练加载
 
-项目导出类别 ID 为 1–8，框架内部为 0–7，no object 为 8。COCO checkpoint 的分类头形状与九输出头不同，加载时仅允许跳过这个不匹配的分类头，并打印 missing/unexpected keys；其余权重必须逐项确认加载成功。新分类头拟使用 Xavier uniform 权重与零 bias，不手工把 COCO 的 shirt 等词映射成项目类。
+项目导出类别 ID 为 1–8，框架内部为 0–7，no object 为 8。COCO checkpoint 的分类头形状与九输出头不同，实际加载仅保留新分类头及随类别数改变的 criterion.empty_weight（81→9），按固定上游规则转换旧 query 名称；其余 555 tensors 逐项确认数值一致，missing/unexpected 与形状记录见 COCO 交接。新分类头拟使用 Xavier uniform 权重与零 bias，不手工把 COCO 的 shirt 等词映射成项目类。
 
 正式微调所有分割参数，骨干学习率是其余层的 0.1 倍。冻结 SigLIP 2 双编码器的决定只适用于后面的语言阶段，不代表 Mask2Former 也冻结。
 

@@ -1,0 +1,27 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-stability-200-20261112-r01",
+  "status": "failed",
+  "wrapper_pid": 1995,
+  "started_at": "2026-11-12T08:03:14.194095+00:00",
+  "budget_seconds": 900,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/check_segmentation_stability.py",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r01"
+  ],
+  "git_commit": "aa104da11f8eafabc2830ff4295bff2515777062",
+  "child_pid": 2001,
+  "exit_code": 1,
+  "elapsed_seconds": 13.896901153028011,
+  "finished_at": "2026-11-12T08:03:28.092497+00:00"
+}

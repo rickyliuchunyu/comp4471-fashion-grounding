@@ -1,0 +1,28 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-coco-inference-20261112-r01",
+  "status": "completed",
+  "wrapper_pid": 8839,
+  "started_at": "2026-11-12T07:41:52.103250+00:00",
+  "budget_seconds": 180,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-coco-inference-20261112-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.pretrained_check",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-coco-inference-20261112-r01"
+  ],
+  "git_commit": "c54b292ca119f33e8eb57113157151c3d27fd5f4",
+  "child_pid": 8845,
+  "exit_code": 0,
+  "elapsed_seconds": 9.668035689741373,
+  "finished_at": "2026-11-12T07:42:01.775326+00:00"
+}

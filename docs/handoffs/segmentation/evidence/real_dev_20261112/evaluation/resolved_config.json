@@ -1,0 +1,12 @@
+{
+  "purpose": "dev_checkpoint_selection",
+  "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+  "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+  "short_edge": 800,
+  "max_size": 1333,
+  "decoder": "upstream_instance",
+  "max_detections": 100,
+  "amp": false,
+  "budget_seconds": 600,
+  "run_scope": "complete_250_image_dev_at_updates_50_and_100"
+}

@@ -1,0 +1,104 @@
+{
+  "checked_date_local": "2026-11-14",
+  "timezone": "Asia/Shanghai",
+  "scope": "All remote heads; PRs 1-5 plus comments/reviews for active PRs; unchanged teammate handoffs reused incrementally",
+  "prs": [
+    {
+      "number": 1,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "title": "Add data_eval pilot validation and human review auditing",
+      "updated_at": "2026-11-12T09:52:48Z"
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "ce3c8657c8b6c042d9fe2ba5954213be198ac894",
+      "title": "Segmentation: resumable training, dev error analysis and candidate preparation",
+      "updated_at": "2026-11-13T16:58:47Z"
+    },
+    {
+      "number": 3,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "base": "data-eval/remote-pilot-review",
+      "base_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "updated_at": "2026-11-12T09:52:53Z"
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "updated_at": "2026-11-12T10:45:46Z"
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "active_pr_discussions": [
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments"
+    }
+  ],
+  "resource_preflight": {
+    "system_available": "27 GiB",
+    "data_available": "163 GiB",
+    "gpu_memory_used_mib": 0,
+    "gpu_utilization_percent": 0,
+    "compute_processes": [],
+    "running_coordination_records": []
+  },
+  "teammate_handoff_policy": "No changed teammate commit since ce3c865 snapshot; same published handoffs and interfaces. Consumer inputs.py read at 103dcc546714dd7c7866b4259d96a9825d8090ef; no teammate checkout changed."
+}

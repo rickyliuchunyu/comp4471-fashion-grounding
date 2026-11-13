@@ -1,0 +1,95 @@
+{
+  "checked_date_local": "2026-11-14",
+  "timezone": "Asia/Shanghai",
+  "pr_inventory": [
+    {
+      "number": 2,
+      "title": "Segmentation: dev-selected u3000, candidate cache and offline export"
+    },
+    {
+      "number": 5,
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial"
+    },
+    {
+      "number": 4,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts"
+    },
+    {
+      "number": 3,
+      "title": "Add visually grounded bilingual drafts and blind human review"
+    },
+    {
+      "number": 1,
+      "title": "Add data_eval pilot validation and human review auditing"
+    }
+  ],
+  "active_prs": [
+    {
+      "number": 2,
+      "head_sha": "39260b70036e7cf2574a440ac26c2d7acf785bc3",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-13T18:46:20Z"
+    },
+    {
+      "number": 4,
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-12T10:45:46Z"
+    },
+    {
+      "number": 5,
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "closed_prs": [
+    {
+      "number": 1,
+      "state": "closed",
+      "merged": false,
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df"
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "merged": false,
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1"
+    }
+  ],
+  "discussions": [
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments"
+    }
+  ],
+  "remote_heads": "f5787f4ac7b6941abdadc43f9fbdc666eba93925\trefs/heads/data-eval/p3-baseline-evaluation\n103dcc546714dd7c7866b4259d96a9825d8090ef\trefs/heads/grounding/siglip-baseline-interfaces\n7064ebb933584f2922607e51ce392e1572fd7dbb\trefs/heads/main\n39260b70036e7cf2574a440ac26c2d7acf785bc3\trefs/heads/segmentation/pilot-adapter-v1\n",
+  "resource_preflight": "Filesystem      Size  Used Avail Use% Mounted on\noverlay          30G  3.1G   27G  11% /\n/dev/nvme0n1    200G   38G  163G  19% /root/autodl-tmp\n0 MiB, 0 %\nrunning_records: []\nprocessed_packages: ['fp_pilot20_v2', 'fp_grounded9_draft_v2', 'fp_grounded9_reviewed_v1', 'fp_train5000_v1', 'fp_dev250_v1', 'fp_test400_holdout_v1', 'fp_language1000_machine_v2', 'fp_language_dev_draft_v2', 'fp_data_eval_large_v1']\n",
+  "teammate_handoff_policy": "Same wkq/wyz commits as prior run; reread published large_dataset and accepted_baselines handoff passages on accepted language dev. No new interface or acceptance evidence."
+}

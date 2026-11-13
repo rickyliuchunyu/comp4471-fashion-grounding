@@ -1,0 +1,35 @@
+{
+  "status": "available",
+  "published_at": "2026-11-13T18:42:18.956731+00:00",
+  "server_aliases": true,
+  "storage_policy": "Absolute symlinks to immutable run directories; preserve source directories. Each resolved package is self-contained.",
+  "source_cache_sha256": "d306f51fae639446645cb4fe8ce655dbb79306dc609882511a780251abfa708e",
+  "selected_threshold": null,
+  "consumer_verification": "lcy executed pinned wyz 103dcc5 reader on all actual outputs; teammate sign-off pending",
+  "packages": [
+    {
+      "threshold": 0.3,
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u3000-dev250-20261114-r01/trial-0.3",
+      "manifest_sha256": "4415d7b468ea3fa16f31bc4705880419378e0c5120062d58752ef62600b18a24",
+      "images": 250,
+      "candidates": 1565,
+      "no_candidates_images": 0
+    },
+    {
+      "threshold": 0.5,
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u3000-dev250-20261114-r01/trial-0.5",
+      "manifest_sha256": "57f4df8c8bef7ea3cecf5d8d912376fb48368013d332ae1f4feef1a468d8e864",
+      "images": 250,
+      "candidates": 1258,
+      "no_candidates_images": 0
+    },
+    {
+      "threshold": 0.7,
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u3000-dev250-20261114-r01/trial-0.7",
+      "manifest_sha256": "90a12625db17082ae6b3311fea2e1dcf66de5579b7cfa02224f632c694adfc5a",
+      "images": 250,
+      "candidates": 980,
+      "no_candidates_images": 1
+    }
+  ]
+}

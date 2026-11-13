@@ -1,0 +1,564 @@
+{
+  "status": "technical_evidence_complete_human_review_pending",
+  "formal_freeze": false,
+  "packages": {
+    "fp_train5000_v1": {
+      "metadata_sha256": {
+        "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+        "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "checksum_manifest_sha256": "92f57e8fe39191bcc80495bfbbda20f3359aa9a0ce42d85c51791f876dd6f953",
+      "images": 5000,
+      "instances": 17775
+    },
+    "fp_dev250_v1": {
+      "metadata_sha256": {
+        "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+        "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "checksum_manifest_sha256": "a051bb8808b3ac484da54b525218bc52e86c86ea6c16f11a05863ec16d0893b0",
+      "images": 250,
+      "instances": 1008
+    }
+  },
+  "reused_input_acceptance_sha256": "d059731b39dc75d89d73bea7d858cc4b93882ec01a4e8fac7f95bd026558bfd7",
+  "release_metadata_sha256": {
+    "release_index.json": "e7c3a59ac476b4f0843e562277ab4079b4dab55a9723cf79b250758d3223621e",
+    "split_plan.json": "710d6fd47a660b4229d26ce46de4ce7a4be02224822811328c48d0e647d5651e",
+    "duplicate_audit.json": "f63875989270c90a60f9aa7c2c28ca709923ac6fb8cec35e259249c683ada090",
+    "fingerprints.json": "fca5d97f4ebe9c0144ac9b05732a75a41ff2b0c503d6464a35bdc9ced5035aba",
+    "package_report.json": "986a831e5d0fda1fcadf1ef712b6a7f7d28a73ad4dfa9c3c962c786f161a35e0",
+    "segmentation_visual_audit.json": "91538503d610c816bba71c8bbe57beb3b670e46c263a9eb300254074b7739cff"
+  },
+  "duplicate_pairs_checked": 53,
+  "duplicate_pair_dispositions": [
+    {
+      "a": "train-47485",
+      "b": "train-38842",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-29245",
+      "b": "train-31539",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-47485",
+      "b": "train-35568",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-32791",
+      "b": "train-34000",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-33245",
+      "b": "train-22692",
+      "distance": 0,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-29712",
+      "b": "train-48093",
+      "distance": 0,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-21659",
+      "b": "train-24369",
+      "distance": 0,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-18576",
+      "b": "train-8233",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-25417",
+      "b": "train-48813",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-35935",
+      "b": "train-35610",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-42785",
+      "b": "train-31155",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-48746",
+      "b": "train-45505",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-25417",
+      "b": "train-45505",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-41338",
+      "b": "train-27012",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-18926",
+      "b": "train-43326",
+      "distance": 0,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-32158",
+      "b": "train-25614",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-42852",
+      "b": "train-47783",
+      "distance": 2,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-48672",
+      "b": "train-29483",
+      "distance": 2,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-35966",
+      "b": "train-28651",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-29061",
+      "b": "train-43664",
+      "distance": 2,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-43304",
+      "b": "train-42408",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-50284",
+      "b": "train-27145",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-1842",
+      "b": "train-9653",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "train",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-48746",
+      "b": "train-47362",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-25417",
+      "b": "train-47362",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-48813",
+      "b": "train-47362",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-34017",
+      "b": "train-49410",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-25527",
+      "b": "train-48481",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-33283",
+      "b": "train-48481",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-27382",
+      "b": "train-32722",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-32537",
+      "b": "train-31767",
+      "distance": 2,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-25536",
+      "b": "train-33117",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-47485",
+      "b": "train-30547",
+      "distance": 2,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-38842",
+      "b": "train-30547",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-35568",
+      "b": "train-30547",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-47773",
+      "b": "train-34437",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-5852",
+      "b": "train-33860",
+      "distance": 0,
+      "split_a": "unused_or_quarantined",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-22443",
+      "b": "train-7013",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-964",
+      "b": "train-23777",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-7144",
+      "b": "train-10793",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-3969",
+      "b": "val-16605",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "val-12825",
+      "b": "val-13498",
+      "distance": 6,
+      "split_a": "test",
+      "split_b": "test",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-2359",
+      "b": "val-15890",
+      "distance": 4,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-12020",
+      "b": "val-15665",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-14541",
+      "b": "val-9636",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-22408",
+      "b": "val-17204",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-37733",
+      "b": "val-16728",
+      "distance": 0,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-8749",
+      "b": "val-10061",
+      "distance": 6,
+      "split_a": "unused_or_quarantined",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-40115",
+      "b": "val-16456",
+      "distance": 0,
+      "split_a": "unused_or_quarantined",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-1019",
+      "b": "val-20066",
+      "distance": 6,
+      "split_a": "train",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "val-15338",
+      "b": "val-18638",
+      "distance": 6,
+      "split_a": "dev",
+      "split_b": "dev",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "train-17846",
+      "b": "val-19826",
+      "distance": 6,
+      "split_a": "unused_or_quarantined",
+      "split_b": "unused_or_quarantined",
+      "same_group": true,
+      "known_cross_split_leak": false
+    },
+    {
+      "a": "val-16666",
+      "b": "val-11376",
+      "distance": 2,
+      "split_a": "dev",
+      "split_b": "dev",
+      "same_group": true,
+      "known_cross_split_leak": false
+    }
+  ],
+  "cross_official_validation_quarantined": [
+    "val-10061",
+    "val-15665",
+    "val-15890",
+    "val-16456",
+    "val-16605",
+    "val-16728",
+    "val-17204",
+    "val-19826",
+    "val-20066",
+    "val-9636"
+  ],
+  "all_known_pairs_grouped_without_cross_split_leak": true,
+  "prior_visual_review": {
+    "scope": "source-mask visual spot-check only; not query acceptance or pixel-precise boundary audit",
+    "reviewer": "Codex visual inspection",
+    "sample_count": 64,
+    "sampling": "seed 2026 + category ID; 8 instances per each of 8 categories",
+    "source": "segmentation_preview/sample_manifest.json",
+    "findings": [
+      "Sampled masks broadly align with the displayed garment/accessory and mapped class; occlusion can produce disconnected visible regions.",
+      "Very small instances and ambiguous boundary components cannot be certified from contact sheets."
+    ],
+    "follow_up": [
+      {
+        "image_id": 18413,
+        "annotation_id": 16468,
+        "note": "Dress mask includes a detached lower component; physical garment boundary requires full-resolution check if selected as a language target."
+      },
+      {
+        "image_id": 11546,
+        "annotation_id": 42660,
+        "note": "Watch is too small for confident semantic validation in the overview."
+      }
+    ],
+    "source_masks_modified": false,
+    "human_accepted_labels_added": 0,
+    "limitations": "64 examples do not establish a dataset-wide quality rate."
+  },
+  "pending_requirements": [
+    "human near-duplicate review record",
+    "at least 20 visual instances per class (current published sample: 8 per class)"
+  ],
+  "no_images_decoded": true,
+  "no_model_loaded": true,
+  "no_gpu_used": true,
+  "source_packages_modified": false
+}

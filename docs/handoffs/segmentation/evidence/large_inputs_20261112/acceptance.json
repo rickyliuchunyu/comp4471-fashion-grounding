@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "scope": "New segmentation input compatibility only; not formal freeze or model validation",
+  "reader_git_commit": "dd64016b30948d3909b96d65364c2a116f3828b4",
+  "reader_source_sha256": {
+    "src/fashion_grounding/data/schema.py": "36d089b3cb2698588c4cecc49e602790c67d06c44e5683976e37ee6b38265f1c",
+    "src/fashion_grounding/segmentation/data.py": "da6ec70ffe8b4a2980e028be9289cddcbce38df0c85d4ff11d5787f729e796de",
+    "src/fashion_grounding/segmentation/evaluation.py": "49cbd9822c4f391092f2e1ce1ea2588a5332da96446d0af556a5a63a1c50d4f0"
+  },
+  "script_sha256": "4085dea4fe6f3d451522b794b7e17034d71a85ec4b0567036fe84078c48aff9c",
+  "release_index_sha256": "e7c3a59ac476b4f0843e562277ab4079b4dab55a9723cf79b250758d3223621e",
+  "upstream_code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+  "upstream_formal_freeze": false,
+  "package_metadata": {
+    "fp_train5000_v1": {
+      "verified_metadata_sha256": {
+        "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+        "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "release": {
+        "release_id": "fp_data_eval_large_v1",
+        "code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+        "accepted_language_queries": 0,
+        "formal_freeze": false,
+        "usage": "Source-mask supervised segmentation; team acceptance pending",
+        "source_hashes": {
+          "train": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+          "val": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+        }
+      },
+      "images": 5000,
+      "instances": 17775,
+      "source_split": "official_train2020",
+      "project_category_counts": {
+        "3": 562,
+        "1": 2740,
+        "8": 3527,
+        "7": 811,
+        "4": 1340,
+        "2": 1641,
+        "6": 5040,
+        "5": 2114
+      },
+      "checksum_manifest_sha256": "92f57e8fe39191bcc80495bfbbda20f3359aa9a0ce42d85c51791f876dd6f953",
+      "namespace_offset": 0,
+      "image_id_range": [
+        26,
+        50524
+      ]
+    },
+    "fp_dev250_v1": {
+      "verified_metadata_sha256": {
+        "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+        "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "release": {
+        "release_id": "fp_data_eval_large_v1",
+        "code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+        "accepted_language_queries": 0,
+        "formal_freeze": false,
+        "usage": "Source-mask supervised segmentation; team acceptance pending",
+        "source_hashes": {
+          "train": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+          "val": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+        }
+      },
+      "images": 250,
+      "instances": 1008,
+      "source_split": "official_val2020",
+      "project_category_counts": {
+        "5": 111,
+        "8": 200,
+        "6": 327,
+        "4": 65,
+        "2": 91,
+        "1": 140,
+        "7": 45,
+        "3": 29
+      },
+      "checksum_manifest_sha256": "a051bb8808b3ac484da54b525218bc52e86c86ea6c16f11a05863ec16d0893b0",
+      "namespace_offset": 1000000000,
+      "image_id_range": [
+        1000008811,
+        1000023343
+      ]
+    }
+  },
+  "train_reader": {
+    "images": 5000,
+    "instances": 17775,
+    "project_category_counts": {
+      "1": 2740,
+      "2": 1641,
+      "3": 562,
+      "4": 1340,
+      "5": 2114,
+      "6": 5040,
+      "7": 811,
+      "8": 3527
+    },
+    "crowd_skipped": 0,
+    "training_id_mapping": {
+      "1": 0,
+      "2": 1,
+      "3": 2,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "7": 6,
+      "8": 7
+    },
+    "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+    "scope": "real train-only segmentation input; no query acceptance or performance evaluation"
+  },
+  "dev_reader": {
+    "overlap": {
+      "image_id": 0,
+      "sha256": 0,
+      "group_id": 0,
+      "source_image_id": 0
+    },
+    "image_count": 250,
+    "annotation_count": 1008,
+    "training_data": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+    }
+  },
+  "consumer_images_hashed_and_decoded": 5250,
+  "consumer_coco_instances_geometry_checked": 18783,
+  "gpu_used": false,
+  "model_loaded": false,
+  "optimizer_updates": 0,
+  "checkpoint_operations": 0,
+  "final_test_opened": false,
+  "language_queries_read": false,
+  "reused_evidence": [
+    "COCO weights/head verification",
+    "200-update stability and process resume",
+    "AP/selection implementation validation",
+    "upstream source-mask equality and candidate file validation"
+  ],
+  "not_repeated": [
+    "source-mask equality",
+    "all producer checksums",
+    "model forward/backward",
+    "checkpoint save/restore",
+    "full test suites"
+  ],
+  "formal_selection_ready": false,
+  "remaining": [
+    "team segmentation split acceptance/freeze and near-duplicate review",
+    "checkpoints trained on the matching frozen train inputs"
+  ],
+  "elapsed_seconds": 52.414789609611034
+}

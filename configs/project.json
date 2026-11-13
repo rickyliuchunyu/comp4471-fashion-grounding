@@ -8,10 +8,10 @@
   "team_size": 3,
   "team_assignments": "provisional_2026-11-10",
   "repository_visibility": "public",
-  "status": "technical_specification_created_runtime_not_implemented",
+  "status": "partial_runtime_implemented_engineering_checks_passed_formal_experiments_pending",
   "technical_plan_config": "configs/training_plan.json",
   "source_mapping_config": "configs/source_category_mapping.json",
-  "runtime_implemented": false,
+  "runtime_implemented": true,
   "scope": {
     "segmentation_classes": 8,
     "grounding_target": "single_whole_fashion_instance",
@@ -26,22 +26,24 @@
     "gpu_memory_gb": 24,
     "platform": "AutoDL",
     "instance_created": true,
-    "environment_verified": false,
+    "environment_verified": true,
     "budget_confirmed": false,
     "platform_selected_by_user": true,
     "inventory_document": "docs/handoffs/segmentation/server_inventory.md",
     "observed_gpu": "NVIDIA GeForce RTX 3090",
     "basic_torch_cuda_detection_verified": true,
-    "model_forward_backward_verified": false
+    "model_forward_backward_verified": true,
+    "environment_verification_scope": "segmentation short GPU checks and grounding encoder/B1 diagnostic only; not complete team acceptance or training budget approval"
   },
   "models": {
     "segmentation": "public_pretrained_Mask2Former_R50_finetune_on_Fashionpedia",
     "vision_language_encoder": "google/siglip2-base-patch16-224",
     "frozen_dual_encoder": true,
-    "grounding": "appearance_residual_ranker_plus_optional_text_conditioned_geometry",
+    "grounding": "appearance_residual_M1_plus_text_conditioned_geometry_M2_core_ablation",
     "original_dinov2_bge_m3": "optional_X1_comparison",
     "external_baseline": "E1_SAM3_or_GroundingDINO_plus_SAM2_selected_before_test",
-    "trained": false
+    "trained": false,
+    "trained_scope": "trained=false means no completed formal S0/M1/M2; engineering optimizer updates are recorded separately"
   },
   "deadlines": {
     "proposal": "2026-10-05T23:59:00+08:00",
@@ -75,7 +77,7 @@
       "grounding": {
         "member_label": "wyz",
         "member_name": null,
-        "github_username": null,
+        "github_username": "MayI2004",
         "task_document": "docs/roles/grounding.md",
         "member_alias": "wyz",
         "legacy_role_label": "A"
@@ -83,7 +85,7 @@
       "data_eval": {
         "member_label": "wkq",
         "member_name": null,
-        "github_username": null,
+        "github_username": "LE-brawl",
         "task_document": "docs/roles/data_eval.md",
         "member_alias": "wkq",
         "legacy_role_label": "B"
@@ -101,5 +103,7 @@
   "progress_document": "docs/status.md",
   "artifact_contract_document": "docs/artifact_contract.md",
   "run_record_document": "docs/run_records.md",
-  "contract_examples_schema_version": 3
+  "contract_examples_schema_version": 3,
+  "runtime_implementation_scope": "Partial per-role implementations; complete pipeline, M1/M2/E1 and formal dev/test pending. See docs/status.md for branch-specific evidence.",
+  "scope_audit_document": "docs/handoffs/team_scope_audit_20261112.md"
 }

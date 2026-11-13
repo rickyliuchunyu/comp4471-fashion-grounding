@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "parent_checkpoint_sha256": "ffd502fd566edbd4a716c7668f8763a752acefb5fb088642e9e7d05cfece64e6",
+  "parent_git_commit": "89797754eb7442b76bf88e2dbfaa23136d90ee13",
+  "parent_config_sha256": "9f184d123173b1d724f8e7c4317a2b33f8782755b979610d029b2418af0d0985",
+  "parent_completed_updates": 1000,
+  "target_config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+  "parent_source_tree": "13b819b6e2567c1d9fd4fd0e34f1439734fabe2d",
+  "target_source_tree": "71d77730c46823a932d6b55fa07ccab9edf00cca",
+  "allowed_changes": {
+    "budget_seconds": {
+      "before": 600,
+      "after": 2100
+    },
+    "checkpoint_updates": {
+      "before": null,
+      "after": [
+        2000,
+        3000,
+        5000
+      ]
+    },
+    "max_updates": {
+      "before": 1000,
+      "after": 5000
+    },
+    "run_scope": {
+      "before": "bounded_post_padding_fix_1000_updates_not_complete_S0",
+      "after": "bounded_resume_update1000_to5000_not_complete_S0"
+    }
+  },
+  "reason": "User-authorized bounded continuation from valid update1000 to5000; retain recipe and all restored state",
+  "reviewed_source_changes": [
+    "segmentation/resume_extension.py: explicit pinned budget transition validation",
+    "segmentation/training_state.py: validate explicit checkpoint boundaries and select save points",
+    "segmentation/train.py: wire reviewed transition and preserve lineage; unchanged loss/optimizer/RNG update loop"
+  ]
+}

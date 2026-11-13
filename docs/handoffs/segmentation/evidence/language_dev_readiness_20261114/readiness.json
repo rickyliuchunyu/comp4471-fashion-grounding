@@ -1,0 +1,140 @@
+{
+  "checked_at_utc": "2026-11-13T18:48:22.347418+00:00",
+  "scope": "Published shared/processed package inventory, accepted JSONL counts and current language-dev metadata only",
+  "published_packages": [
+    "fp_data_eval_large_v1",
+    "fp_dev250_v1",
+    "fp_grounded9_draft_v2",
+    "fp_grounded9_reviewed_v1",
+    "fp_language1000_machine_v2",
+    "fp_language_dev_draft_v2",
+    "fp_pilot20_v2",
+    "fp_test400_holdout_v1",
+    "fp_train5000_v1"
+  ],
+  "accepted_files": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_draft_v2/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_grounded9_reviewed_v1/queries_accepted.jsonl",
+      "sha256": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a",
+      "bytes": 33442,
+      "rows": 34,
+      "images": 8,
+      "split_counts": {
+        "train": 34
+      },
+      "review_status_counts": {
+        "accepted": 34
+      },
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_machine_v2/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "accepted_dev_rows": 0
+    }
+  ],
+  "dev_draft": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_draft.jsonl",
+    "sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395",
+    "bytes": 286381,
+    "rows": 290,
+    "images": 116,
+    "split_counts": {
+      "dev": 290
+    },
+    "review_status_counts": {
+      "needs_revision": 290
+    },
+    "accepted_dev_rows": 0
+  },
+  "dev_manifest_images": 116,
+  "dev_manifest_sha256": "9fd34ca49761b8d3cfb0ee0a9a325ee733593e31480c7ad2664840ec49148dd7",
+  "release": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/RELEASE.json",
+    "sha256": "27188eba64d1e869c58b6773d8d5b7a01f0cde039cff10e9f5c4bf7ed970bdca",
+    "contents": {
+      "release_id": "fp_data_eval_large_v1",
+      "code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+      "accepted_language_queries": 0,
+      "formal_freeze": false,
+      "usage": "Development draft only; human acceptance required",
+      "source_hashes": {
+        "train": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+        "val": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+      }
+    }
+  },
+  "accepted_dev_rows_across_published_accepted_files": 0,
+  "selected_threshold": null,
+  "matched_query_coverage": null,
+  "model_inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0,
+  "candidate_revalidation_runs": 0,
+  "readiness": "not_ready_no_accepted_dev"
+}

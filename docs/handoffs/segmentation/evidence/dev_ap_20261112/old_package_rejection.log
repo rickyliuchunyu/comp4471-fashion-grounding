@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/check_grounding_consumer.py", line 66, in <module>
+    main()
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/check_grounding_consumer.py", line 35, in main
+    pack = module.CandidatePack(path, allow_illustrative=True)
+  File "/tmp/tmpfxkvxuge/published_inputs.py", line 53, in __init__
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/data/schema.py", line 31, in require
+    raise ValueError(message)
+ValueError: mixed synthetic/real pack

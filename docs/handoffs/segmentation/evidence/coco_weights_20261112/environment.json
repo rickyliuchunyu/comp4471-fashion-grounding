@@ -1,0 +1,11 @@
+{
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "executable": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+  "torch": "2.1.2+cu121",
+  "cuda": "12.1",
+  "numpy": "1.26.4",
+  "detectron2": "0.6",
+  "pillow": "10.2.0",
+  "cuda_extension_sha256": "ea13940d2563ebc48a3f6258743b606ad60aa7f119d3dc4286efb6adc928d6cc",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

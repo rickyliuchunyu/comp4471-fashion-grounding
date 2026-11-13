@@ -1,0 +1,122 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-stability-200-20261112-r02",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "P1 200-update stability check, not full S0 training or evaluation",
+  "status": "completed",
+  "status_history": [
+    {
+      "status": "running",
+      "time": "2026-11-12T08:05:49.686031+00:00"
+    },
+    {
+      "status": "completed",
+      "time": "2026-11-12T08:07:42.259746+00:00"
+    }
+  ],
+  "git_commit": "6ca15408c2f3b5b47b00935340c4e4635109ded5",
+  "split": "train",
+  "candidate_source": "none",
+  "seed": 42,
+  "artifacts": {
+    "logs": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/run.log",
+      "sha256": "79565692b51d84baa71ede77a91c4cf7f3741630f5ba502382e86ee209bfdbc1"
+    },
+    "coordination": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/coordination.json",
+      "sha256": "d09ce9e704f72dee84cac646bea134672fa61f0982f7c2aa0b4d16cb785d2319"
+    },
+    "phase_1_log": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/phase_1.log",
+      "sha256": "81c1a2c18f8197c1d59bc2a2c6cf06d1e547e5c641fa578a0bc27712e8fb5e72"
+    },
+    "phase_2_log": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/phase_2.log",
+      "sha256": "d0fccf27701f207d42728bd17ac53c8ddcb7a5d7c32aab455a1ecc90668d29ff"
+    },
+    "resolved_config": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/updates_001_100/resolved_config.json",
+      "sha256": "3b646a2da8f4c608a9f1d9b9700abea73f646446f5d6cc9207c28d452719138f"
+    },
+    "image_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/image_manifest.json",
+      "sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111"
+    },
+    "annotation_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/annotations_coco.json",
+      "sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883"
+    },
+    "query_manifest": null,
+    "candidate_manifest": null,
+    "predictions": null,
+    "metrics_phase_1": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/updates_001_100/metrics.jsonl",
+      "sha256": "9d0457a3bdcadc21e3f5c1587a80153d395c59a5dfdcde36897422b5efd85fe8"
+    },
+    "metrics_phase_2": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/updates_101_200/metrics.jsonl",
+      "sha256": "febc219136772510691de6ae3dc4a576e3ac5669c10dee1b4fac87cbc98e02a4"
+    },
+    "stability_report": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/stability_report.json",
+      "sha256": "21702fc786432fadaa5bc86ce2b83314ffc86b4b694f04ed85b91b2ac7896824"
+    },
+    "resume_check": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/updates_101_200/resume_check.json",
+      "sha256": "f37b69bdbfa02791ee845e3e15012f01f727b57b3688c516f20932a02aef77da"
+    },
+    "final_checkpoint_check": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/final_checkpoint_check.json",
+      "sha256": "1e0e9126fbabd2515b7de5c75f4ca783879280d9d3934ab8428014702363f7bc"
+    },
+    "metrics": null
+  },
+  "parent_run_ids": [],
+  "checkpoint": {
+    "initialization": "COCO non-head weights and new eight-class head",
+    "source_sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "saved": [
+      {
+        "path": "runs/segmentation/segmentation-stability-200-20261112-r02/updates_001_100/checkpoint_000100.pth",
+        "sha256": "e52807441672b352b7f029664fd74f9f6455e746403c0a52e3c663149df6480f",
+        "bytes": 528449357
+      },
+      {
+        "path": "runs/segmentation/segmentation-stability-200-20261112-r02/updates_101_200/checkpoint_000200.pth",
+        "sha256": "9b6a215c9294e3080539a6e03937182df37b4fa3665136283e981706d979002a",
+        "bytes": 528449357
+      }
+    ]
+  },
+  "environment": {
+    "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/environment.json",
+    "sha256": "7b58943d55e6c06717928cbbac71c2dbd342d12971f5c209714510929d1956d5"
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/check_segmentation_stability.py",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r02"
+  ],
+  "evaluation": {
+    "performed": false,
+    "reason": "20 Fashionpedia train images reused for engineering stability; no dev/test AP, query metrics, candidate export or checkpoint selection."
+  },
+  "completed_updates": 200,
+  "planned_updates": 200,
+  "failure": null,
+  "notes": [
+    "Run outputs and prior failed attempts are retained.",
+    "All performance fields stay blank. Training loss and speed are engineering telemetry.",
+    "r02 restarts from public COCO initialization at AMP scale 1; it does not continue the six failed-attempt updates."
+  ]
+}

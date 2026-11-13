@@ -1,0 +1,50 @@
+{
+  "commands.json": {
+    "sha256": "39877695346bc42246d56dfecd98d9846b990e536e3796b9466d6e468c9abf8d",
+    "bytes": 1360
+  },
+  "phase_1.log": {
+    "sha256": "9c4781bc7d5c1106293e1f7dacfd98870d4a474d9da374adcb9111c4d035f600",
+    "bytes": 1881
+  },
+  "coordination.json": {
+    "sha256": "c07d23c2a9584081113d26b29db95095f27d1c1a578e45870877a5d1e0e4d6e7",
+    "bytes": 1095
+  },
+  "run.log": {
+    "sha256": "8cb755968cbb093066f7370a285913fa844600332d3b0c3f56f2b79fbfb70aac",
+    "bytes": 1193
+  },
+  "preflight.log": {
+    "sha256": "2f2764937921a9ca102a42d6d95ff43548b87e3aa3a9f304d9a7b9767adb1e19",
+    "bytes": 385
+  },
+  "tests.log": {
+    "sha256": "351965a1504a8d6f5a1a5bfe73e57563428520925bbe4de83a611a8590bce428",
+    "bytes": 3702
+  },
+  "updates_001_100/resolved_config.json": {
+    "sha256": "f45b5111b987763d76671b8ed3f8c916f83d3ff8cbf9e293f5cde7c9557491b6",
+    "bytes": 838
+  },
+  "updates_001_100/data_check.json": {
+    "sha256": "f7add249d2cb0f26e9c631012d3e132c712c4cceed910a22428014a79c254215",
+    "bytes": 606
+  },
+  "updates_001_100/initialization.json": {
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "bytes": 1257
+  },
+  "updates_001_100/model_config.yaml": {
+    "sha256": "6614659f4dbdf788775701dbaa1628edfb369d2ddfc723fbee97d36c01bee5c8",
+    "bytes": 7733
+  },
+  "updates_001_100/optimizer_groups.json": {
+    "sha256": "8cee83f678e422a9342a2ca170f205b9ee364c25b5f6df42bcea01908b0d1e37",
+    "bytes": 64154
+  },
+  "updates_001_100/metrics.jsonl": {
+    "sha256": "edf574692464003eb11d6cea0912425a3b95d75fcd37537d25399b2203c277db",
+    "bytes": 9127
+  }
+}

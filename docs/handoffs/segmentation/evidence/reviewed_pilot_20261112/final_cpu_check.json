@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "all_30_losses_finite_per_update": true,
+  "nonzero_finite_gradient_norms": true,
+  "model_tensors_finite": true,
+  "optimizer_state_tensors_finite": true,
+  "optimizer_steps": [
+    2.0
+  ],
+  "checkpoint_sha256_verified": true,
+  "source_package_files_unchanged": 84,
+  "candidate_manifest_sha256": "744468991793d0a273cb2adbc834d6bfd8a651b33330477c2e26a7ccec9fd59a",
+  "scope": "lcy segmentation consumer only; no language quality or dev acceptance"
+}
