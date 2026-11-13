@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[修复后1000-update训练与完整dev选择](segmentation/postfix1000_dev_ap_20261112.md)：AP35.3047→42.8038，选第1000步；GPU已释放，未重复smoke或启动完整长训练。此前[补边缺陷与旧权重隔离](segmentation/low_ap_diagnosis_20261112.md)继续有效。
+最新：[预算扩展续训至5000与完整dev选择](segmentation/resume5000_dev_ap_20261113.md)：2000/3000/5000步AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）；实际训练和评价完成，GPU释放，未启动完整长训练。此前[修复后1000步](segmentation/postfix1000_dev_ap_20261112.md)是本轮父checkpoint，旧污染权重仍隔离。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 

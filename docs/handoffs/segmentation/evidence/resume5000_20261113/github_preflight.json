@@ -1,0 +1,35 @@
+{
+  "prs": [
+    {
+      "number": 2,
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "1fded6b466049548bc0f778e47e5e826d645da95",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "comments": []
+    }
+  ],
+  "checked_date": "2026-11-13",
+  "new_prs": false,
+  "teammate_handoffs_unchanged": true,
+  "source_before_work": "1fded6b466049548bc0f778e47e5e826d645da95"
+}

@@ -1,8 +1,10 @@
 # Dev AP 与 checkpoint 选择接入
 
+最新：[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成，2000/3000/5000完整dev AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。新预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)；普通恢复仍严格匹配源码与配置。
+
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
-训练入口负责保存完整 checkpoint；`fashion_grounding.segmentation.evaluate` 独立读取这些 checkpoint 做只读评估，`fashion_grounding.segmentation.select_checkpoint` 读取完整 dev 报告选权重。两者不创建 optimizer、不继续训练，也不改写 checkpoint。当前未接入训练循环内定期评估 hook；可在保存边界退出训练、释放 GPU 后，按同一共享锁执行评估。恢复训练仍使用原训练源码及配置。
+训练入口负责保存完整 checkpoint；`fashion_grounding.segmentation.evaluate` 独立读取这些 checkpoint 做只读评估，`fashion_grounding.segmentation.select_checkpoint` 读取完整 dev 报告选权重。两者不创建 optimizer、不继续训练，也不改写 checkpoint。当前未接入训练循环内定期评估 hook；可在保存边界退出训练、释放 GPU 后，按同一共享锁执行评估。普通恢复训练仍使用原训练源码及配置；预算扩展须使用上文显式固定的过渡记录。
 
 ## 评价条件
 

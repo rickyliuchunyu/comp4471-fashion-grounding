@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [修复后1000-update小阶段](docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：从官方COCO重新初始化，完整250图dev在500/1000步的mask AP为35.3047/42.8038，选择第1000步。全部loss/梯度有限、0跳步，GPU已释放；未重复smoke，未启动完整长训练或test。旧LSJ补边污染权重继续隔离。
+> [1000→5000步有界续训](docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成：完整250图dev在2000/3000/5000步的mask AP为46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。六项恢复状态与父checkpoint一致，新增4000步、0跳步，GPU已释放；仅补新增预算扩展CPU测试，没有重复smoke或启动20k完整S0/test。旧LSJ污染权重继续隔离。
 
 ## 团队与 Codex 开工入口
 

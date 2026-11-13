@@ -1,5 +1,7 @@
 # 分割训练入口与配置
 
+最新：[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成，2000/3000/5000完整dev AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。新预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)；普通恢复仍严格匹配源码与配置。
+
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
 入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整 S0 的训练预算与训练仍待完成。
@@ -19,9 +21,11 @@
 
 ## 断点与日志
 
+新增：[预算扩展续训](BUDGET_EXTENSION.md)要求显式固定父权重、父/目标配置与源码tree，仅允许预算和保存点变化。本轮1000→5000的用户授权不改变普通恢复的严格规则。
+
 checkpoint 保存 model、optimizer、scheduler、GradScaler、sampler 的 permutation/epoch/position/generator、Python/numpy/CPU/CUDA RNG、已完成 update、配置 hash、数据 hash、源码 commit 与原始 COCO 加载记录。先写临时文件并 fsync，再原子发布新文件和 SHA256 sidecar；旧 checkpoint 不覆盖。
 
-恢复先验证文件 hash 和配置/数据/源码一致性，再严格加载模型，最后逐组件比较与 checkpoint 中一致的数值指纹。`--resume` 不重新载入 COCO 初始化，不重置 warmup。恢复要求 checkout 为运行时记录的源码 commit；仅有文档更新的最新 commit 也不能直接混入这次恢复，应先使用原执行 commit 的干净独立 checkout。
+恢复先验证文件 hash 和配置/数据/源码一致性，再严格加载模型，最后逐组件比较与 checkpoint 中一致的数值指纹。`--resume` 不重新载入 COCO 初始化，不重置 warmup。普通恢复要求 checkout 为运行时记录的源码 commit；仅有文档更新的最新 commit 也不能直接混入这次恢复，应先使用原执行 commit 的干净独立 checkout。
 
 `metrics.jsonl` 每条为一个真正完成的 optimizer update，记录 30 项 weighted loss、total loss、裁剪前后 norm、AMP scale、实际 LR、图片 ID、增广后实例数、采样 epoch、用时及 allocated/reserved 显存。`gradient_failure.json`（若发生）记录未执行 optimizer step 的失败位置及非有限梯度参数。checkpoint 保存在 update 边界，不保存未完成的累计梯度。
 

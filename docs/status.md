@@ -1,16 +1,16 @@
 # 当前进度与下一步
 
-更新：2026-11-12；[修复后1000-update训练][postfix1000]已完成。从官方COCO重新初始化，500/1000步完整250图dev mask AP=35.3047/42.8038，按最大AP选择第1000步。全部loss/梯度有限、0跳步，GPU已释放；复用已有检查，没有重复smoke、恢复测试或完整长训练。旧LSJ污染权重继续隔离，原AP仅保留诊断价值。
+更新：2026-11-14；[1000→5000有界续训][resume5000]已完成。预算扩展明确固定父权重/配置/源码，只允许预算与保存点变化；新增6个CPU用例通过，真实恢复六组件指纹一致。新增4000 updates，完整dev在2000/3000/5000步AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。全部loss/梯度有限、0跳步，GPU已释放；没有重复smoke或额外恢复试跑。
 
-**分割输入固定，已有修复后有效小阶段权重；完整S0、生产候选与最终方法冻结尚未完成。** wyz 的B0/B1/B2与M1弱标签运行仍是原交接范围；语言dev审核、M2与三种子对照独立推进，不能用分割AP代替语言成绩。
+**已有有效5000步预算内的选定权重；完整20k S0、生产候选及最终方法冻结尚未完成。** 旧LSJ污染权重仍隔离；wyz/wkq的语言dev审核、M2与三种子对照继续按各自交接推进，分割结果不代替语言成绩。
 
 ## GitHub 同步快照
 
-以下为本次检查的远端 head；PR #2/#4 为 open / draft / unmerged，PR #5 为 open / non-draft / unmerged（base `data-eval/p3-baseline-evaluation`），main 为 `7064ebb`。PR #1/#3 已关闭且未合并，旧远端分支已删除，其提交包含在统一 PR #4（base main）。lcy/wyz 已包含旧公共提交 `dc24f2d`，后续按 #4 新增接口审查集成，不再等待合并 #1。
+以下为本轮开工检查的远端 head（2026-11-13，记录见最新交接）；PR #2/#4 为 open / draft / unmerged，PR #5 为 open / non-draft / unmerged（base `data-eval/p3-baseline-evaluation`），main 为 `7064ebb`。PR #1/#3 已关闭且未合并，旧远端分支已删除，其提交包含在统一 PR #4（base main）。lcy/wyz 已包含旧公共提交 `dc24f2d`，后续按 #4 新增接口审查集成，不再等待合并 #1。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工已发布 `ab41262`；本轮运行源码 `8979775`，结果随PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[修复后1000步结果][postfix1000] |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工已发布 `1fded6b`；本轮实现/运行源码 `b61d78f`，结果随PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[预算扩展至5000结果][resume5000] |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `f5787f4`；扩充实现及发布交接已推送 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；旧 #1/#3 已被替代；[大型数据交接][wkq-large] |
 
@@ -31,7 +31,7 @@
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | [wyz 已接收共享解析器；34 条同包 train 上 B0/B1/B2=12/18/22 选对，输出完整，缓存重放一致][wyz-latest]；wkq 统一评价核心已交付 | 下游 PR 审阅、正式 accepted dev 评价与 B2 lambda 选择仍待完成；训练诊断不是泛化成绩 | A/B |
 | P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；用户已确认交付数据经过人工复核，已形成消费者固定版本记录；原发布 formal_freeze=false 保留作历史，语言审核/最终冻结独立跟踪 | B，全员 |
-| P5-S 分割训练 | in_progress | [修复后1000步：dev500/1000 AP=35.3047/42.8038，选1000][postfix1000]；既有恢复/评价证据复用 | 完整S0预算与收敛、生产候选/下游验收仍待完成；旧污染权重不得续训 | lcy |
+| P5-S 分割训练 | in_progress | [1000→5000续训，dev2000/3000/5000 AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）][resume5000]；扩展预算下实际完整恢复通过 | 完整S0预算/收敛与固定候选/下游验收仍待完成，旧污染权重不得续训 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42 机器弱标签试训：5 epochs / 490 updates，已保存权重][wyz-latest]，不属于正式训练结果 | 人工审核 dev、M2 实现与 M1/M2 三种子公平对照、真实 dev 选择 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -45,7 +45,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 据真实dev学习趋势确定后续S0预算与候选交付 | 复用已选1000步、完整dev报告与已有检查；AP-small=8.5135仍是短板 | 本轮1000步已完成，完整长训练尚未启动；不重跑smoke，不接续旧污染权重 | [结果与停止点][postfix1000] |
+| lcy | 依据选定权重准备候选交付与后续S0预算 | 复用第3000步（mask AP=50.5603）、完整dev报告与所有已通过检查 | 本轮5000步预算已结束，不自动延长；正式候选阈值选择需合格语言dev，未做test | [最新结果与停止点][resume5000] |
 | wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；预测候选待 lcy 固定版本；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 组织新包接收与冻结，审核/补写 dev 查询 | 分割大包与语言初标已发布；接收消费方检查及 B1/B2 输出 | 新包三方技术验收已齐，用户已确认分割数据人工复核；生产方可归档同步冻结记录；语言机器草稿不自动 accepted | [大包交接][wkq-large]、PR #4 |
 
@@ -57,9 +57,9 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | 分割trainer/AP/选择与数据/grounding接口已实现 | 修复后1000步训练和真实dev选择完成；完整S0、生产候选及最终test仍未完成，队友状态按各自交接 |
-| 实验结果 | 修复后有效小阶段dev AP35.3047/42.8038，选1000步；无最终test成绩 | 本轮新增3条completed运行（train1000、dev500、dev1000）；历史行与受污染AP保留，不视为正常基线；语言成绩仍是原train诊断 |
-| GPU/环境/付费预算 | 本轮训练/评价共享锁441.13/242.56秒，均低于各600秒上限 | [结束盘点][postfix1000]：系统/数据盘约27/164GiB空闲，GPU0MiB/0%，无计算进程/running记录；环境未改动 |
+| 模型代码/数据转换器 | trainer/AP/选择及有记录的预算扩展续训已实现 | 1000→5000真实恢复、训练及dev选择完成；完整S0、生产候选及最终test仍待完成，队友状态按各自交接 |
+| 实验结果 | 本轮完整dev AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）；无最终test成绩 | 新增4条实际运行（train1000→5000、dev2000/3000/5000）；历史受污染AP保留诊断用途，语言结果仍为原train诊断 |
+| GPU/环境/付费预算 | 本轮训练/评价锁1563.12/368.69秒，低于2100/600秒硬上限 | [结束盘点][resume5000]：系统/数据盘约27/162GiB空闲，GPU0MiB/0%，无计算进程/running记录；环境未升级 |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -67,7 +67,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-保持 Fashionpedia 八类 + 完整双语单目标 + S0/B0/B1/B2/M1/M2/E1；不默认混训、部件定位或其他扩展。旧分割dev结果来自受增广缺陷影响的权重；修复后1000步与真实dev选择现已完成，依据其学习趋势准备完整S0预算与生产候选；wyz 的 M2/正式训练准备并行。M1/M2 是核心研究，不能用更多 smoke 替代。
+保持 Fashionpedia 八类 + 完整双语单目标 + S0/B0/B1/B2/M1/M2/E1；不默认混训、部件定位或其他扩展。旧分割dev结果来自受增广缺陷影响的权重；修复后1000→5000续训与真实dev选择现已完成，依据选定权重准备候选交付及后续S0预算；wyz 的 M2/正式训练准备并行。M1/M2 是核心研究，不能用更多 smoke 替代。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 
@@ -99,3 +99,5 @@
 [low-ap]: handoffs/segmentation/low_ap_diagnosis_20261112.md
 
 [postfix1000]: handoffs/segmentation/postfix1000_dev_ap_20261112.md
+
+[resume5000]: handoffs/segmentation/resume5000_dev_ap_20261113.md
