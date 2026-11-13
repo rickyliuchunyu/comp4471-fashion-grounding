@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[预算扩展续训至5000与完整dev选择](segmentation/resume5000_dev_ap_20261113.md)：2000/3000/5000步AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）；实际训练和评价完成，GPU释放，未启动完整长训练。此前[修复后1000步](segmentation/postfix1000_dev_ap_20261112.md)是本轮父checkpoint，旧污染权重仍隔离。
+最新：[3000→5000步离线误差分析](segmentation/dev_error_analysis_20261114.md)与[3000步候选交付准备](segmentation/candidate_u3000_preparation_20261114.md)：复用已有dev预测，保持3000步选择，未推理/训练；共享目录只含准备清单，正式候选payload和阈值选择未完成。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 

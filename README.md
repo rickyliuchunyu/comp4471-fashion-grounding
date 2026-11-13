@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [1000→5000步有界续训](docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成：完整250图dev在2000/3000/5000步的mask AP为46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。六项恢复状态与父checkpoint一致，新增4000步、0跳步，GPU已释放；仅补新增预算扩展CPU测试，没有重复smoke或启动20k完整S0/test。旧LSJ污染权重继续隔离。
+> [3000→5000步离线误差分析](docs/handoffs/segmentation/dev_error_analysis_20261114.md)已完成：skirt主要表现为相对排序与部分高IoU几何退步，outerwear兼有少量漏检/错类；AP-small实际7.58→8.48。继续选3000步（mask AP=50.5603），[候选交付准备](docs/handoffs/segmentation/candidate_u3000_preparation_20261114.md)已发布，但正式候选包/阈值尚未生成。全程复用已有dev预测，未推理、smoke或追加训练。
 
 ## 团队与 Codex 开工入口
 
@@ -65,7 +65,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 数据与实验状态
 
-[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，新增本轮限定 train 和两条真实 dev 评价。仅两条真实 dev 行填写 mask AP，旧工程行保持空白。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，按独立run记录实际训练、dev评价及离线派生分析。真实AP行填写mask AP，工程和派生诊断行不伪装成新增模型性能测量。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
 分割既有工程验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练入口与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[真实 dev AP/选择](docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整长训练仍未执行。
 
@@ -75,6 +75,6 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：分割 train/dev 已按用户人工复核确认固定，lcy 已修复训练增广补边，下一步从已校验COCO重新开始有界学习实验，不能续训旧污染权重；wyz 已完成同包 B0/B1/B2 与 M1 弱试训，继续 M2 和正式可比训练准备；wkq 推进语言 dev 审核及生产方记录归档。当前不启动完整长训练，不重复已通过的 smoke，扩展暂不开展。
+按[最新状态](docs/status.md)推进：分割 train/dev 已按用户人工复核确认固定，lcy 已完成1000→5000续训和既有dev预测误差分析，保留3000步权重，下一步准备正式候选导出编排；现有AP预测无法还原真实query ID，不当作生产候选；wyz 已完成同包 B0/B1/B2 与 M1 弱试训，继续 M2 和正式可比训练准备；wkq 推进语言 dev 审核及生产方记录归档。当前不启动完整长训练，不重复已通过的 smoke，扩展暂不开展。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

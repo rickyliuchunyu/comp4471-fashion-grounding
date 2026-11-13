@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-11-13T16:45:50.434Z",
+  "search_pr_numbers": [
+    2,
+    5,
+    4,
+    3,
+    1
+  ],
+  "prs": [
+    {
+      "number": 2,
+      "head": "a69af7483e60c4f8d7e06fa937ca3e5d3ffc78e6",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-13T16:25:32Z",
+      "comments_reviews": []
+    },
+    {
+      "number": 4,
+      "head": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T10:45:46Z",
+      "comments_reviews": []
+    },
+    {
+      "number": 5,
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updated_at": "2026-11-12T12:11:25Z",
+      "comments_reviews": []
+    }
+  ],
+  "interfaces_changed": false,
+  "teammate_handoffs_reused_at_same_commit": true,
+  "actual_remote_heads": {
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/pilot-adapter-v1": "a69af7483e60c4f8d7e06fa937ca3e5d3ffc78e6",
+    "grounding/siglip-baseline-interfaces": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "data-eval/p3-baseline-evaluation": "f5787f4ac7b6941abdadc43f9fbdc666eba93925"
+  },
+  "closed_superseded_prs": [
+    {
+      "number": 1,
+      "state": "closed",
+      "merged": false
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "merged": false
+    }
+  ],
+  "legacy_remote_branches_absent": true
+}
