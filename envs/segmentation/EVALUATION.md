@@ -2,6 +2,8 @@
 
 最新：[正式S0八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成，6000–20000每2000步完整dev250；选择18000步mask AP=63.5792，旧3000步报告AP=50.5603只读复用，提升13.0188点。20000步AP=63.5595，差距约0.02点不作为显著退化证据。
 
+新增：[18k/20k小目标离线诊断](../../docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)只读取已有预测：138例分解、严格IoU匹配及类别宏平均解释已完成；不改变COCO指标或18k选择。
+
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
 训练入口负责保存完整 checkpoint；`fashion_grounding.segmentation.evaluate` 独立读取这些 checkpoint 做只读评估，`fashion_grounding.segmentation.select_checkpoint` 读取完整 dev 报告选权重。两者不创建 optimizer、不继续训练，也不改写 checkpoint。当前未接入训练循环内定期评估 hook；可在保存边界退出训练、释放 GPU 后，按同一共享锁执行评估。普通恢复训练仍使用原训练源码及配置；预算扩展须使用上文显式固定的过渡记录。

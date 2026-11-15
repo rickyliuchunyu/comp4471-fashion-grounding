@@ -1,0 +1,4798 @@
+{
+  "schema_version": 1,
+  "purpose": "paired_saved_AP_prediction_diagnostics",
+  "parent_metrics": {
+    "18000": {
+      "AP": 63.57916031199592,
+      "AP50": 79.29453664866396,
+      "AP75": 68.45630202471166,
+      "AP_small": 10.738919371879978,
+      "AP_medium": 39.88753963917865,
+      "AP_large": 71.71159177543774,
+      "per_category_AP": {
+        "1": 70.84585757862524,
+        "2": 81.63687923283935,
+        "3": 67.10741478829085,
+        "4": 69.68050272088944,
+        "5": 83.29690337662808,
+        "6": 50.706067531285306,
+        "7": 47.88140279435385,
+        "8": 37.47825447305514
+      }
+    },
+    "20000": {
+      "AP": 63.55953052351325,
+      "AP50": 79.13527525999771,
+      "AP75": 68.31303596488857,
+      "AP_small": 10.664106341649108,
+      "AP_medium": 40.26857525084602,
+      "AP_large": 71.6933815458055,
+      "per_category_AP": {
+        "1": 70.51767827746644,
+        "2": 81.61059774869982,
+        "3": 66.10735223932294,
+        "4": 70.1096433237101,
+        "5": 83.49872260488135,
+        "6": 50.825628790900446,
+        "7": 48.147074169305256,
+        "8": 37.65954703381959
+      }
+    }
+  },
+  "per_category": {
+    "18000": {
+      "1": {
+        "gt_count": 140,
+        "positive_images": 128,
+        "AP": 70.84585757862524,
+        "AP50": 84.43023359476413,
+        "AP75": 76.90773491524367,
+        "AR": 82.28571428571429,
+        "recall50": 95.0,
+        "recall75": 87.14285714285714,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 25,
+            "AP": 45.71249394787193,
+            "AR": 58.80000000000001,
+            "AP50": 60.60869428486678,
+            "AP75": 57.379608928634795,
+            "recall50": 80.0,
+            "recall75": 68.0
+          },
+          "large": {
+            "gt_count": 115,
+            "AP": 76.77286897700206,
+            "AR": 87.3913043478261,
+            "AP50": 89.85317617066812,
+            "AP75": 81.3985036203666,
+            "recall50": 98.26086956521739,
+            "recall75": 91.30434782608695
+          }
+        },
+        "matched_gt50": 133,
+        "matched_gt75": 122,
+        "same_class_best_iou_mean": 0.8752937256964906,
+        "fp_at_score_ge_0_5": {
+          "tp": 118,
+          "wrong_class_overlap": 23,
+          "localization_or_mixed_below_iou": 27,
+          "background_or_unannotated": 8,
+          "duplicate_same_class": 5
+        },
+        "all_detection_outcomes50": {
+          "tp": 133,
+          "wrong_class_overlap": 471,
+          "localization_or_mixed_below_iou": 1094,
+          "background_or_unannotated": 2058,
+          "duplicate_same_class": 254
+        },
+        "score_quantiles_tp50": [
+          0.012183000333607197,
+          0.8836433291435242,
+          0.9619906544685364,
+          0.9829278588294983,
+          0.9930941462516785
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0021670216228812933,
+          0.0051261503249406815,
+          0.01269593182951212,
+          0.9682357311248779
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 232,
+            "image_id": 1000008936,
+            "category_id": 1,
+            "score": 0.9682357311248779,
+            "area": 63749,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9380943809438095,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 20133,
+            "image_id": 1000018407,
+            "category_id": 1,
+            "score": 0.9652346968650818,
+            "area": 46799,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7739862840402157,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 17134,
+            "image_id": 1000017313,
+            "category_id": 1,
+            "score": 0.9382829070091248,
+            "area": 58810,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.298815523204646,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 20031,
+            "image_id": 1000018353,
+            "category_id": 1,
+            "score": 0.9253488779067993,
+            "area": 11112,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.11460067631151695,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1238,
+            "image_id": 1000009482,
+            "category_id": 1,
+            "score": 0.9196408987045288,
+            "area": 6770,
+            "best_same_iou": 0.29317018354351354,
+            "best_other_iou": 0.17434565434565436,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 2939,
+            "image_id": 1000009928,
+            "category_id": 1,
+            "score": 0.9134280681610107,
+            "area": 14100,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.26731969349869655,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 13338,
+            "image_id": 1000015852,
+            "category_id": 1,
+            "score": 0.9093562960624695,
+            "area": 21693,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6050484664146224,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 21791,
+            "image_id": 1000019327,
+            "category_id": 1,
+            "score": 0.9087410569190979,
+            "area": 3761,
+            "best_same_iou": 0.11422471310381639,
+            "best_other_iou": 0.2843410068302555,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "2": {
+        "gt_count": 91,
+        "positive_images": 90,
+        "AP": 81.63687923283935,
+        "AP50": 92.58417118514191,
+        "AP75": 85.79309174718823,
+        "AR": 88.7912087912088,
+        "recall50": 97.8021978021978,
+        "recall75": 93.4065934065934,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 6,
+            "AP": 24.894290748262545,
+            "AR": 45.0,
+            "AP50": 48.18735719725819,
+            "AP75": 18.434700612918434,
+            "recall50": 83.33333333333334,
+            "recall75": 33.33333333333333
+          },
+          "large": {
+            "gt_count": 85,
+            "AP": 85.45607155123601,
+            "AR": 91.88235294117646,
+            "AP50": 94.84016131736814,
+            "AP75": 90.70954655599547,
+            "recall50": 98.82352941176471,
+            "recall75": 97.6470588235294
+          }
+        },
+        "matched_gt50": 89,
+        "matched_gt75": 85,
+        "same_class_best_iou_mean": 0.9096244312122675,
+        "fp_at_score_ge_0_5": {
+          "tp": 86,
+          "background_or_unannotated": 13,
+          "localization_or_mixed_below_iou": 4,
+          "wrong_class_overlap": 4,
+          "duplicate_same_class": 1
+        },
+        "all_detection_outcomes50": {
+          "tp": 89,
+          "background_or_unannotated": 282,
+          "localization_or_mixed_below_iou": 164,
+          "wrong_class_overlap": 124,
+          "duplicate_same_class": 50
+        },
+        "score_quantiles_tp50": [
+          0.004918492864817381,
+          0.9641669988632202,
+          0.9789299368858337,
+          0.9849264621734619,
+          0.990777850151062
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0023810401326045394,
+          0.006663754815235734,
+          0.023535616230219603,
+          0.9852783679962158
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 22554,
+            "image_id": 1000019670,
+            "category_id": 2,
+            "score": 0.9852783679962158,
+            "area": 31933,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0018463631504785968,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 23360,
+            "image_id": 1000019876,
+            "category_id": 2,
+            "score": 0.9721014499664307,
+            "area": 77184,
+            "best_same_iou": 0.495644621554653,
+            "best_other_iou": 0.2677659080352996,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 5960,
+            "image_id": 1000010985,
+            "category_id": 2,
+            "score": 0.9666857719421387,
+            "area": 8264,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0013309763959654778,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 11262,
+            "image_id": 1000015090,
+            "category_id": 2,
+            "score": 0.9610354900360107,
+            "area": 4968,
+            "best_same_iou": 0.0008602823290188871,
+            "best_other_iou": 0.04916107716497821,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 3164,
+            "image_id": 1000009989,
+            "category_id": 2,
+            "score": 0.9565246105194092,
+            "area": 38398,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9584174914158756,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 3259,
+            "image_id": 1000009990,
+            "category_id": 2,
+            "score": 0.9444982409477234,
+            "area": 17887,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 1559,
+            "image_id": 1000009549,
+            "category_id": 2,
+            "score": 0.9175623655319214,
+            "area": 59586,
+            "best_same_iou": 0.21909801885686533,
+            "best_other_iou": 0.26436550901500205,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1134,
+            "image_id": 1000009466,
+            "category_id": 2,
+            "score": 0.8123401403427124,
+            "area": 33887,
+            "best_same_iou": 0.012813320061532893,
+            "best_other_iou": 0.5416911332941867,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "3": {
+        "gt_count": 29,
+        "positive_images": 29,
+        "AP": 67.10741478829085,
+        "AP50": 70.47683177048127,
+        "AP75": 70.47683177048127,
+        "AR": 92.4137931034483,
+        "recall50": 96.55172413793103,
+        "recall75": 96.55172413793103,
+        "sizes": {
+          "small": {
+            "gt_count": 1,
+            "AP": 0.0,
+            "AR": 0.0,
+            "AP50": 0.0,
+            "AP75": 0.0,
+            "recall50": 0.0,
+            "recall75": 0.0
+          },
+          "medium": {
+            "gt_count": 1,
+            "AP": 89.99999999999999,
+            "AR": 90.0,
+            "AP50": 99.99999999999999,
+            "AP75": 99.99999999999999,
+            "recall50": 100.0,
+            "recall75": 100.0
+          },
+          "large": {
+            "gt_count": 27,
+            "AP": 70.85770745245648,
+            "AR": 95.92592592592591,
+            "AP50": 74.27095418189742,
+            "AP75": 74.27095418189742,
+            "recall50": 100.0,
+            "recall75": 100.0
+          }
+        },
+        "matched_gt50": 28,
+        "matched_gt75": 28,
+        "same_class_best_iou_mean": 0.9201644661176346,
+        "fp_at_score_ge_0_5": {
+          "tp": 22,
+          "background_or_unannotated": 6,
+          "wrong_class_overlap": 23,
+          "localization_or_mixed_below_iou": 3
+        },
+        "all_detection_outcomes50": {
+          "tp": 28,
+          "background_or_unannotated": 108,
+          "wrong_class_overlap": 228,
+          "localization_or_mixed_below_iou": 149,
+          "duplicate_same_class": 34
+        },
+        "score_quantiles_tp50": [
+          0.015333146788179874,
+          0.7031480967998505,
+          0.9545270502567291,
+          0.9763067066669464,
+          0.9874404668807983
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0020338273607194424,
+          0.005354052409529686,
+          0.017507033422589302,
+          0.9784442782402039
+        ],
+        "top20_outcomes50": {
+          "tp": 16,
+          "background_or_unannotated": 1,
+          "wrong_class_overlap": 3
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 5001,
+            "image_id": 1000010765,
+            "category_id": 3,
+            "score": 0.9784442782402039,
+            "area": 60421,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0007898978091847758,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 2924,
+            "image_id": 1000009928,
+            "category_id": 3,
+            "score": 0.9626802802085876,
+            "area": 36649,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7129059018724816,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 10928,
+            "image_id": 1000013582,
+            "category_id": 3,
+            "score": 0.9593526721000671,
+            "area": 60859,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9722521112524047,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 13513,
+            "image_id": 1000015871,
+            "category_id": 3,
+            "score": 0.9441291093826294,
+            "area": 107662,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6144696526319413,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 14111,
+            "image_id": 1000016220,
+            "category_id": 3,
+            "score": 0.9270592927932739,
+            "area": 15656,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9756051437216339,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 303,
+            "image_id": 1000008981,
+            "category_id": 3,
+            "score": 0.9238901734352112,
+            "area": 28392,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.00038246543100912034,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 23716,
+            "image_id": 1000020168,
+            "category_id": 3,
+            "score": 0.9098625183105469,
+            "area": 47270,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.3615052340740164,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 4001,
+            "image_id": 1000010283,
+            "category_id": 3,
+            "score": 0.9061267971992493,
+            "area": 124696,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9530146238691287,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          }
+        ]
+      },
+      "4": {
+        "gt_count": 65,
+        "positive_images": 63,
+        "AP": 69.68050272088944,
+        "AP50": 84.88706496061894,
+        "AP75": 78.78647300176927,
+        "AR": 81.69230769230768,
+        "recall50": 96.92307692307692,
+        "recall75": 89.23076923076924,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 2,
+            "AP": 10.099009900990097,
+            "AR": 10.0,
+            "AP50": 50.49504950495049,
+            "AP75": 0.0,
+            "recall50": 50.0,
+            "recall75": 0.0
+          },
+          "large": {
+            "gt_count": 63,
+            "AP": 71.72390038433242,
+            "AR": 83.96825396825396,
+            "AP50": 86.30064517986281,
+            "AP75": 81.36960988962419,
+            "recall50": 98.4126984126984,
+            "recall75": 92.06349206349206
+          }
+        },
+        "matched_gt50": 63,
+        "matched_gt75": 58,
+        "same_class_best_iou_mean": 0.8700990063364883,
+        "fp_at_score_ge_0_5": {
+          "tp": 56,
+          "wrong_class_overlap": 19,
+          "localization_or_mixed_below_iou": 3,
+          "duplicate_same_class": 2,
+          "background_or_unannotated": 1
+        },
+        "all_detection_outcomes50": {
+          "tp": 63,
+          "wrong_class_overlap": 303,
+          "localization_or_mixed_below_iou": 390,
+          "duplicate_same_class": 213,
+          "background_or_unannotated": 125
+        },
+        "score_quantiles_tp50": [
+          0.011423805728554726,
+          0.8729162514209747,
+          0.9508607983589172,
+          0.969440758228302,
+          0.9862030148506165
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0038133052876219153,
+          0.009425544179975986,
+          0.021867656148970127,
+          0.9646418690681458
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 5110,
+            "image_id": 1000010796,
+            "category_id": 4,
+            "score": 0.9646418690681458,
+            "area": 26048,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9324243556219649,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 6308,
+            "image_id": 1000011121,
+            "category_id": 4,
+            "score": 0.9550655484199524,
+            "area": 57941,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9437790062790062,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 16507,
+            "image_id": 1000017091,
+            "category_id": 4,
+            "score": 0.9466351866722107,
+            "area": 52959,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.8111282032041421,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 22911,
+            "image_id": 1000019778,
+            "category_id": 4,
+            "score": 0.9453790187835693,
+            "area": 43228,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9700529148800292,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 11213,
+            "image_id": 1000015090,
+            "category_id": 4,
+            "score": 0.9368613362312317,
+            "area": 88867,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.8747276904186636,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 17611,
+            "image_id": 1000017420,
+            "category_id": 4,
+            "score": 0.9306732416152954,
+            "area": 65630,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9800777014817492,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 23307,
+            "image_id": 1000019876,
+            "category_id": 4,
+            "score": 0.9257805943489075,
+            "area": 122483,
+            "best_same_iou": 0.48541598897098687,
+            "best_other_iou": 0.4116044225860301,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 8507,
+            "image_id": 1000012252,
+            "category_id": 4,
+            "score": 0.9113786220550537,
+            "area": 53119,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9742417172188521,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          }
+        ]
+      },
+      "5": {
+        "gt_count": 111,
+        "positive_images": 111,
+        "AP": 83.29690337662808,
+        "AP50": 91.08987528694527,
+        "AP75": 86.60903920222174,
+        "AR": 91.62162162162163,
+        "recall50": 97.2972972972973,
+        "recall75": 94.5945945945946,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 1,
+            "AP": 0.0,
+            "AR": 0.0,
+            "AP50": 0.0,
+            "AP75": 0.0,
+            "recall50": 0.0,
+            "recall75": 0.0
+          },
+          "large": {
+            "gt_count": 110,
+            "AP": 84.16180756748795,
+            "AR": 92.45454545454545,
+            "AP50": 92.06087640289695,
+            "AP75": 87.54965897939769,
+            "recall50": 98.18181818181819,
+            "recall75": 95.45454545454545
+          }
+        },
+        "matched_gt50": 108,
+        "matched_gt75": 105,
+        "same_class_best_iou_mean": 0.9284832300264694,
+        "fp_at_score_ge_0_5": {
+          "tp": 105,
+          "wrong_class_overlap": 29,
+          "localization_or_mixed_below_iou": 3,
+          "duplicate_same_class": 3
+        },
+        "all_detection_outcomes50": {
+          "tp": 108,
+          "wrong_class_overlap": 280,
+          "localization_or_mixed_below_iou": 115,
+          "duplicate_same_class": 80,
+          "background_or_unannotated": 89
+        },
+        "score_quantiles_tp50": [
+          0.02517678774893284,
+          0.9398400783538818,
+          0.9778290688991547,
+          0.9867782890796661,
+          0.9936677813529968
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.003962894668802619,
+          0.01063199294731021,
+          0.03392649255692959,
+          0.9879229664802551
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 15409,
+            "image_id": 1000016614,
+            "category_id": 5,
+            "score": 0.9879229664802551,
+            "area": 147012,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9519081075958792,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 2006,
+            "image_id": 1000009657,
+            "category_id": 5,
+            "score": 0.9795745611190796,
+            "area": 68945,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7706357919952092,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 24612,
+            "image_id": 1000020640,
+            "category_id": 5,
+            "score": 0.9748125672340393,
+            "area": 43221,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6276417924117876,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 19609,
+            "image_id": 1000018166,
+            "category_id": 5,
+            "score": 0.9733741283416748,
+            "area": 70081,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6868219912364044,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 12206,
+            "image_id": 1000015460,
+            "category_id": 5,
+            "score": 0.9679504036903381,
+            "area": 66113,
+            "best_same_iou": 0.2655688170418492,
+            "best_other_iou": 0.7011805287103393,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 4507,
+            "image_id": 1000010472,
+            "category_id": 5,
+            "score": 0.9651525616645813,
+            "area": 82385,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.8380715456100274,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 12313,
+            "image_id": 1000015529,
+            "category_id": 5,
+            "score": 0.9588422775268555,
+            "area": 20316,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.573779117042139,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 18111,
+            "image_id": 1000017656,
+            "category_id": 5,
+            "score": 0.9432557821273804,
+            "area": 14149,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6856118085253138,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "6": {
+        "gt_count": 327,
+        "positive_images": 165,
+        "AP": 50.706067531285306,
+        "AP50": 84.2120218499576,
+        "AP75": 53.67621075820114,
+        "AR": 56.94189602446483,
+        "recall50": 91.43730886850153,
+        "recall75": 61.773700305810394,
+        "sizes": {
+          "small": {
+            "gt_count": 68,
+            "AP": 23.0402758288567,
+            "AR": 31.911764705882355,
+            "AP50": 62.14571514921138,
+            "AP75": 12.822909659125584,
+            "recall50": 79.41176470588235,
+            "recall75": 23.52941176470588
+          },
+          "medium": {
+            "gt_count": 249,
+            "AP": 57.23062188850084,
+            "AR": 62.85140562248996,
+            "AP50": 89.62020919443154,
+            "AP75": 64.1526190583642,
+            "recall50": 94.37751004016064,
+            "recall75": 71.4859437751004
+          },
+          "large": {
+            "gt_count": 11,
+            "AP": 70.14981088901729,
+            "AR": 77.27272727272727,
+            "AP50": 86.92495336490174,
+            "AP75": 67.86678667866786,
+            "recall50": 100.0,
+            "recall75": 72.72727272727273
+          }
+        },
+        "matched_gt50": 299,
+        "matched_gt75": 202,
+        "same_class_best_iou_mean": 0.7513588302374539,
+        "fp_at_score_ge_0_5": {
+          "tp": 283,
+          "wrong_class_overlap": 3,
+          "localization_or_mixed_below_iou": 47,
+          "background_or_unannotated": 22
+        },
+        "all_detection_outcomes50": {
+          "tp": 299,
+          "wrong_class_overlap": 39,
+          "localization_or_mixed_below_iou": 955,
+          "background_or_unannotated": 2253,
+          "duplicate_same_class": 250
+        },
+        "score_quantiles_tp50": [
+          0.0020280343014746904,
+          0.953676164150238,
+          0.9677886366844177,
+          0.97621089220047,
+          0.989165186882019
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.001144037814810872,
+          0.0029919473454356194,
+          0.00774575537070632,
+          0.9851038455963135
+        ],
+        "top20_outcomes50": {
+          "tp": 19,
+          "wrong_class_overlap": 1
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 9260,
+            "image_id": 1000012479,
+            "category_id": 6,
+            "score": 0.9851038455963135,
+            "area": 8778,
+            "best_same_iou": 0.3384077582318448,
+            "best_other_iou": 0.6059442860276376,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 10961,
+            "image_id": 1000013582,
+            "category_id": 6,
+            "score": 0.980697751045227,
+            "area": 4808,
+            "best_same_iou": 0.026187803965581742,
+            "best_other_iou": 0.9273060476481368,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 12243,
+            "image_id": 1000015460,
+            "category_id": 6,
+            "score": 0.9755406379699707,
+            "area": 3014,
+            "best_same_iou": 0.4908633696563286,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 14567,
+            "image_id": 1000016438,
+            "category_id": 6,
+            "score": 0.9716281890869141,
+            "area": 4139,
+            "best_same_iou": 0.35523759053170817,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 12069,
+            "image_id": 1000015419,
+            "category_id": 6,
+            "score": 0.970547080039978,
+            "area": 1187,
+            "best_same_iou": 0.39872881355932205,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 9319,
+            "image_id": 1000012526,
+            "category_id": 6,
+            "score": 0.9678780436515808,
+            "area": 1006,
+            "best_same_iou": 0.30238240684178375,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 19421,
+            "image_id": 1000018023,
+            "category_id": 6,
+            "score": 0.9673612117767334,
+            "area": 1881,
+            "best_same_iou": 0.49189754312598016,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 6011,
+            "image_id": 1000011014,
+            "category_id": 6,
+            "score": 0.9623608589172363,
+            "area": 265,
+            "best_same_iou": 0.14309906858594412,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "7": {
+        "gt_count": 45,
+        "positive_images": 42,
+        "AP": 47.88140279435385,
+        "AP50": 68.11480287871353,
+        "AP75": 54.52246583236836,
+        "AR": 68.88888888888889,
+        "recall50": 93.33333333333333,
+        "recall75": 75.55555555555556,
+        "sizes": {
+          "small": {
+            "gt_count": 2,
+            "AP": 2.2247899923737267,
+            "AR": 50.0,
+            "AP50": 6.29911021120874,
+            "AP75": 0.3257745129351645,
+            "recall50": 100.0,
+            "recall75": 50.0
+          },
+          "medium": {
+            "gt_count": 22,
+            "AP": 48.95934364329675,
+            "AR": 67.27272727272727,
+            "AP50": 67.37497929603947,
+            "AP75": 58.706380383165744,
+            "recall50": 95.45454545454545,
+            "recall75": 77.27272727272727
+          },
+          "large": {
+            "gt_count": 21,
+            "AP": 54.25644040505131,
+            "AR": 72.38095238095237,
+            "AP50": 76.03827793493635,
+            "AP75": 58.837050968066386,
+            "recall50": 90.47619047619048,
+            "recall75": 76.19047619047619
+          }
+        },
+        "matched_gt50": 42,
+        "matched_gt75": 34,
+        "same_class_best_iou_mean": 0.8097435651489187,
+        "fp_at_score_ge_0_5": {
+          "wrong_class_overlap": 4,
+          "tp": 32,
+          "background_or_unannotated": 13,
+          "localization_or_mixed_below_iou": 2
+        },
+        "all_detection_outcomes50": {
+          "wrong_class_overlap": 39,
+          "tp": 42,
+          "background_or_unannotated": 716,
+          "localization_or_mixed_below_iou": 164,
+          "duplicate_same_class": 148
+        },
+        "score_quantiles_tp50": [
+          0.013560355640947819,
+          0.7878911048173904,
+          0.9453564286231995,
+          0.9731750190258026,
+          0.9853000044822693
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0025655439822003245,
+          0.006325900088995695,
+          0.014443375635892153,
+          0.98782879114151
+        ],
+        "top20_outcomes50": {
+          "wrong_class_overlap": 2,
+          "tp": 18
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 17375,
+            "image_id": 1000017379,
+            "category_id": 7,
+            "score": 0.98782879114151,
+            "area": 9318,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9727618243243243,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 21868,
+            "image_id": 1000019392,
+            "category_id": 7,
+            "score": 0.9814493656158447,
+            "area": 6720,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9537226277372263,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 7073,
+            "image_id": 1000011377,
+            "category_id": 7,
+            "score": 0.9469015002250671,
+            "area": 5140,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0006266729930797396,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 15571,
+            "image_id": 1000016667,
+            "category_id": 7,
+            "score": 0.9460731744766235,
+            "area": 5070,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0005676790275992186,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 7192,
+            "image_id": 1000011382,
+            "category_id": 7,
+            "score": 0.9175578951835632,
+            "area": 14146,
+            "best_same_iou": 0.11013742282413862,
+            "best_other_iou": 0.008652582016082185,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1794,
+            "image_id": 1000009554,
+            "category_id": 7,
+            "score": 0.9118062853813171,
+            "area": 1503,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0024797265598820455,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 9295,
+            "image_id": 1000012479,
+            "category_id": 7,
+            "score": 0.9099858403205872,
+            "area": 3179,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 1260,
+            "image_id": 1000009482,
+            "category_id": 7,
+            "score": 0.9001182317733765,
+            "area": 7042,
+            "best_same_iou": 0.4777348135212673,
+            "best_other_iou": 0.004016901301703394,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "8": {
+        "gt_count": 200,
+        "positive_images": 121,
+        "AP": 37.47825447305514,
+        "AP50": 58.56129166268907,
+        "AP75": 40.87856897021961,
+        "AR": 53.45000000000001,
+        "recall50": 79.5,
+        "recall75": 56.99999999999999,
+        "sizes": {
+          "small": {
+            "gt_count": 67,
+            "AP": 17.690611666289488,
+            "AR": 33.28358208955224,
+            "AP50": 39.39136730116207,
+            "AP75": 13.60055614456566,
+            "recall50": 67.16417910447761,
+            "recall75": 31.343283582089555
+          },
+          "medium": {
+            "gt_count": 86,
+            "AP": 42.20455698450703,
+            "AR": 54.65116279069768,
+            "AP50": 62.004879610519424,
+            "AP75": 47.757489109777005,
+            "recall50": 80.23255813953489,
+            "recall75": 59.30232558139535
+          },
+          "large": {
+            "gt_count": 47,
+            "AP": 60.3141269769183,
+            "AR": 80.0,
+            "AP50": 78.76156153084534,
+            "AP75": 69.51918793100694,
+            "recall50": 95.74468085106383,
+            "recall75": 89.36170212765957
+          }
+        },
+        "matched_gt50": 159,
+        "matched_gt75": 114,
+        "same_class_best_iou_mean": 0.6998978086920399,
+        "fp_at_score_ge_0_5": {
+          "tp": 116,
+          "localization_or_mixed_below_iou": 25,
+          "background_or_unannotated": 65,
+          "wrong_class_overlap": 5,
+          "duplicate_same_class": 1
+        },
+        "all_detection_outcomes50": {
+          "tp": 159,
+          "localization_or_mixed_below_iou": 3090,
+          "background_or_unannotated": 8413,
+          "wrong_class_overlap": 709,
+          "duplicate_same_class": 692
+        },
+        "score_quantiles_tp50": [
+          0.001164429821074009,
+          0.4509006589651108,
+          0.9221361875534058,
+          0.9623440802097321,
+          0.9916151762008667
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.002001149405259639,
+          0.004540409194305539,
+          0.010675321100279689,
+          0.9730364680290222
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 15033,
+            "image_id": 1000016542,
+            "category_id": 8,
+            "score": 0.9730364680290222,
+            "area": 14154,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.45903430918002386,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 16092,
+            "image_id": 1000016821,
+            "category_id": 8,
+            "score": 0.9648239016532898,
+            "area": 6274,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.04349733931407238,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 19730,
+            "image_id": 1000018191,
+            "category_id": 8,
+            "score": 0.9516506195068359,
+            "area": 772,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.005104267220290123,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 11219,
+            "image_id": 1000015090,
+            "category_id": 8,
+            "score": 0.9513725638389587,
+            "area": 12962,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6246976879171907,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 15069,
+            "image_id": 1000016542,
+            "category_id": 8,
+            "score": 0.9492700695991516,
+            "area": 15254,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.5029788650357797,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 8611,
+            "image_id": 1000012258,
+            "category_id": 8,
+            "score": 0.9455292820930481,
+            "area": 1382,
+            "best_same_iou": 0.0180547466511357,
+            "best_other_iou": 0.0015432098765432098,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 18109,
+            "image_id": 1000017656,
+            "category_id": 8,
+            "score": 0.9416901469230652,
+            "area": 8171,
+            "best_same_iou": 0.37240589666523544,
+            "best_other_iou": 0.0003455425017277125,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 9692,
+            "image_id": 1000012631,
+            "category_id": 8,
+            "score": 0.9407645463943481,
+            "area": 1780,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.049559968407988264,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          }
+        ]
+      }
+    },
+    "20000": {
+      "1": {
+        "gt_count": 140,
+        "positive_images": 128,
+        "AP": 70.51767827746644,
+        "AP50": 84.86712185530348,
+        "AP75": 76.31455217617062,
+        "AR": 82.0,
+        "recall50": 95.71428571428572,
+        "recall75": 86.42857142857143,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 25,
+            "AP": 46.2185459378619,
+            "AR": 59.199999999999996,
+            "AP50": 61.079097572238275,
+            "AP75": 57.88810780135463,
+            "recall50": 80.0,
+            "recall75": 68.0
+          },
+          "large": {
+            "gt_count": 115,
+            "AP": 76.32849868953797,
+            "AR": 86.95652173913044,
+            "AP50": 90.34513001142959,
+            "AP75": 80.58476285949756,
+            "recall50": 99.1304347826087,
+            "recall75": 90.43478260869566
+          }
+        },
+        "matched_gt50": 134,
+        "matched_gt75": 121,
+        "same_class_best_iou_mean": 0.874343035469634,
+        "fp_at_score_ge_0_5": {
+          "tp": 117,
+          "wrong_class_overlap": 21,
+          "localization_or_mixed_below_iou": 29,
+          "background_or_unannotated": 9,
+          "duplicate_same_class": 5
+        },
+        "all_detection_outcomes50": {
+          "tp": 134,
+          "wrong_class_overlap": 464,
+          "localization_or_mixed_below_iou": 1057,
+          "background_or_unannotated": 2045,
+          "duplicate_same_class": 278
+        },
+        "score_quantiles_tp50": [
+          0.011376320384442806,
+          0.8859803974628448,
+          0.9643656611442566,
+          0.983138769865036,
+          0.993262529373169
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0020914910128340125,
+          0.0049727612640708685,
+          0.012341869994997978,
+          0.9706302881240845
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 237,
+            "image_id": 1000008936,
+            "category_id": 1,
+            "score": 0.9706302881240845,
+            "area": 63681,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9376265998469548,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 20131,
+            "image_id": 1000018407,
+            "category_id": 1,
+            "score": 0.9607751965522766,
+            "area": 46796,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7742316784869976,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 17136,
+            "image_id": 1000017313,
+            "category_id": 1,
+            "score": 0.9373683333396912,
+            "area": 58973,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.29817921211171083,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 20035,
+            "image_id": 1000018353,
+            "category_id": 1,
+            "score": 0.9280877113342285,
+            "area": 11103,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.11451913133402275,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1242,
+            "image_id": 1000009482,
+            "category_id": 1,
+            "score": 0.926541268825531,
+            "area": 6766,
+            "best_same_iou": 0.2923480214704781,
+            "best_other_iou": 0.17437352623796012,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 21791,
+            "image_id": 1000019327,
+            "category_id": 1,
+            "score": 0.9126316905021667,
+            "area": 3739,
+            "best_same_iou": 0.11379110853989587,
+            "best_other_iou": 0.2842987804878049,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 13536,
+            "image_id": 1000015871,
+            "category_id": 1,
+            "score": 0.9109869599342346,
+            "area": 66299,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.3719012043647505,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 13335,
+            "image_id": 1000015852,
+            "category_id": 1,
+            "score": 0.9053666591644287,
+            "area": 21700,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6056582314472562,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "2": {
+        "gt_count": 91,
+        "positive_images": 90,
+        "AP": 81.61059774869982,
+        "AP50": 92.4054289364837,
+        "AP75": 86.02234000331799,
+        "AR": 89.01098901098902,
+        "recall50": 97.8021978021978,
+        "recall75": 94.5054945054945,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 6,
+            "AP": 26.647308540443483,
+            "AR": 46.666666666666664,
+            "AP50": 49.31889892285931,
+            "AP75": 19.332041899842157,
+            "recall50": 83.33333333333334,
+            "recall75": 50.0
+          },
+          "large": {
+            "gt_count": 85,
+            "AP": 85.45004369318885,
+            "AR": 92.0,
+            "AP50": 94.77260766442494,
+            "AP75": 90.66399236649518,
+            "recall50": 98.82352941176471,
+            "recall75": 97.6470588235294
+          }
+        },
+        "matched_gt50": 89,
+        "matched_gt75": 86,
+        "same_class_best_iou_mean": 0.9102625405369141,
+        "fp_at_score_ge_0_5": {
+          "tp": 86,
+          "background_or_unannotated": 12,
+          "localization_or_mixed_below_iou": 4,
+          "wrong_class_overlap": 5,
+          "duplicate_same_class": 1
+        },
+        "all_detection_outcomes50": {
+          "tp": 89,
+          "background_or_unannotated": 287,
+          "localization_or_mixed_below_iou": 169,
+          "wrong_class_overlap": 127,
+          "duplicate_same_class": 55
+        },
+        "score_quantiles_tp50": [
+          0.0063435835763812065,
+          0.9638546109199524,
+          0.9800233840942383,
+          0.9857132434844971,
+          0.9910613298416138
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.002256745006889105,
+          0.0065831581596285105,
+          0.025859772227704525,
+          0.9862855672836304
+        ],
+        "top20_outcomes50": {
+          "tp": 19,
+          "background_or_unannotated": 1
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 22555,
+            "image_id": 1000019670,
+            "category_id": 2,
+            "score": 0.9862855672836304,
+            "area": 31954,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0021575602075922795,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 23361,
+            "image_id": 1000019876,
+            "category_id": 2,
+            "score": 0.9750000834465027,
+            "area": 77208,
+            "best_same_iou": 0.49727069351230424,
+            "best_other_iou": 0.26753588424188496,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 5956,
+            "image_id": 1000010985,
+            "category_id": 2,
+            "score": 0.970323920249939,
+            "area": 8276,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0014347500623804374,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 11261,
+            "image_id": 1000015090,
+            "category_id": 2,
+            "score": 0.9636406302452087,
+            "area": 4966,
+            "best_same_iou": 0.0008212106992022525,
+            "best_other_iou": 0.04915161466885605,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 3165,
+            "image_id": 1000009989,
+            "category_id": 2,
+            "score": 0.9600816369056702,
+            "area": 38404,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9591625416708759,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 3261,
+            "image_id": 1000009990,
+            "category_id": 2,
+            "score": 0.9476065635681152,
+            "area": 17968,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 1502,
+            "image_id": 1000009549,
+            "category_id": 2,
+            "score": 0.9436532855033875,
+            "area": 49221,
+            "best_same_iou": 0.26447653575841046,
+            "best_other_iou": 0.20570631746268572,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1132,
+            "image_id": 1000009466,
+            "category_id": 2,
+            "score": 0.8206109404563904,
+            "area": 34134,
+            "best_same_iou": 0.01789142008619753,
+            "best_other_iou": 0.5375670319421777,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "3": {
+        "gt_count": 29,
+        "positive_images": 29,
+        "AP": 66.10735223932294,
+        "AP50": 69.42565791434552,
+        "AP75": 69.42565791434552,
+        "AR": 92.06896551724138,
+        "recall50": 96.55172413793103,
+        "recall75": 96.55172413793103,
+        "sizes": {
+          "small": {
+            "gt_count": 1,
+            "AP": 0.0,
+            "AR": 0.0,
+            "AP50": 0.0,
+            "AP75": 0.0,
+            "recall50": 0.0,
+            "recall75": 0.0
+          },
+          "medium": {
+            "gt_count": 1,
+            "AP": 89.99999999999999,
+            "AR": 90.0,
+            "AP50": 99.99999999999999,
+            "AP75": 99.99999999999999,
+            "recall50": 100.0,
+            "recall75": 100.0
+          },
+          "large": {
+            "gt_count": 27,
+            "AP": 69.85317212228114,
+            "AR": 95.55555555555554,
+            "AP50": 73.22279240809603,
+            "AP75": 73.22279240809603,
+            "recall50": 100.0,
+            "recall75": 100.0
+          }
+        },
+        "matched_gt50": 28,
+        "matched_gt75": 28,
+        "same_class_best_iou_mean": 0.920174147161558,
+        "fp_at_score_ge_0_5": {
+          "tp": 22,
+          "background_or_unannotated": 6,
+          "wrong_class_overlap": 21,
+          "localization_or_mixed_below_iou": 3
+        },
+        "all_detection_outcomes50": {
+          "tp": 28,
+          "background_or_unannotated": 109,
+          "wrong_class_overlap": 230,
+          "localization_or_mixed_below_iou": 147,
+          "duplicate_same_class": 37
+        },
+        "score_quantiles_tp50": [
+          0.013347018510103226,
+          0.7026574611663818,
+          0.955207109451294,
+          0.9779056161642075,
+          0.9872093200683594
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.002060261555016041,
+          0.005278619471937418,
+          0.017365521751344204,
+          0.9800742268562317
+        ],
+        "top20_outcomes50": {
+          "tp": 16,
+          "background_or_unannotated": 1,
+          "wrong_class_overlap": 3
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 5001,
+            "image_id": 1000010765,
+            "category_id": 3,
+            "score": 0.9800742268562317,
+            "area": 60460,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0008748627492650444,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 10928,
+            "image_id": 1000013582,
+            "category_id": 3,
+            "score": 0.9639239311218262,
+            "area": 60812,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9729332876511184,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 2925,
+            "image_id": 1000009928,
+            "category_id": 3,
+            "score": 0.9561960697174072,
+            "area": 36641,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7128832174462706,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 13512,
+            "image_id": 1000015871,
+            "category_id": 3,
+            "score": 0.9513970613479614,
+            "area": 107704,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6148681605600665,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 4002,
+            "image_id": 1000010283,
+            "category_id": 3,
+            "score": 0.9354280829429626,
+            "area": 124818,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9531729071820124,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 14111,
+            "image_id": 1000016220,
+            "category_id": 3,
+            "score": 0.9307654500007629,
+            "area": 15654,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9761018979759127,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 2623,
+            "image_id": 1000009835,
+            "category_id": 3,
+            "score": 0.9268301725387573,
+            "area": 106645,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.860974657601093,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 303,
+            "image_id": 1000008981,
+            "category_id": 3,
+            "score": 0.9262688755989075,
+            "area": 28413,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.00047805365968463167,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          }
+        ]
+      },
+      "4": {
+        "gt_count": 65,
+        "positive_images": 63,
+        "AP": 70.1096433237101,
+        "AP50": 85.3550373564931,
+        "AP75": 78.5604275660392,
+        "AR": 82.0,
+        "recall50": 96.92307692307692,
+        "recall75": 89.23076923076924,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 2,
+            "AP": 10.611611161116109,
+            "AR": 20.0,
+            "AP50": 50.49504950495049,
+            "AP75": 0.0,
+            "recall50": 50.0,
+            "recall75": 0.0
+          },
+          "large": {
+            "gt_count": 63,
+            "AP": 72.08946768850853,
+            "AR": 83.96825396825396,
+            "AP50": 86.75119503607446,
+            "AP75": 81.13433645168364,
+            "recall50": 98.4126984126984,
+            "recall75": 92.06349206349206
+          }
+        },
+        "matched_gt50": 63,
+        "matched_gt75": 58,
+        "same_class_best_iou_mean": 0.8723766308093789,
+        "fp_at_score_ge_0_5": {
+          "tp": 56,
+          "wrong_class_overlap": 18,
+          "localization_or_mixed_below_iou": 3,
+          "background_or_unannotated": 1,
+          "duplicate_same_class": 1
+        },
+        "all_detection_outcomes50": {
+          "tp": 63,
+          "wrong_class_overlap": 290,
+          "localization_or_mixed_below_iou": 375,
+          "background_or_unannotated": 119,
+          "duplicate_same_class": 211
+        },
+        "score_quantiles_tp50": [
+          0.011495661921799183,
+          0.8678147196769714,
+          0.9501863121986389,
+          0.9699395596981049,
+          0.9864619374275208
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.003740387735888362,
+          0.009470737539231777,
+          0.021796343848109245,
+          0.9641802906990051
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 5110,
+            "image_id": 1000010796,
+            "category_id": 4,
+            "score": 0.9641802906990051,
+            "area": 26045,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9338293020299824,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 6307,
+            "image_id": 1000011121,
+            "category_id": 4,
+            "score": 0.9523709416389465,
+            "area": 58000,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.942962344237424,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 16508,
+            "image_id": 1000017091,
+            "category_id": 4,
+            "score": 0.9466306567192078,
+            "area": 53042,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.8104436783332084,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 22911,
+            "image_id": 1000019778,
+            "category_id": 4,
+            "score": 0.9437018632888794,
+            "area": 43193,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9705130545919299,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 11214,
+            "image_id": 1000015090,
+            "category_id": 4,
+            "score": 0.938277006149292,
+            "area": 88907,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.87510520947826,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 17612,
+            "image_id": 1000017420,
+            "category_id": 4,
+            "score": 0.9282814860343933,
+            "area": 65640,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9801686492998043,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 23308,
+            "image_id": 1000019876,
+            "category_id": 4,
+            "score": 0.9222376942634583,
+            "area": 122713,
+            "best_same_iou": 0.48463316761638203,
+            "best_other_iou": 0.413516609392898,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 8506,
+            "image_id": 1000012252,
+            "category_id": 4,
+            "score": 0.8976011872291565,
+            "area": 53110,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9743316905615292,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          }
+        ]
+      },
+      "5": {
+        "gt_count": 111,
+        "positive_images": 111,
+        "AP": 83.49872260488135,
+        "AP50": 91.28384145628164,
+        "AP75": 86.60505423143367,
+        "AR": 91.71171171171173,
+        "recall50": 98.1981981981982,
+        "recall75": 94.5945945945946,
+        "sizes": {
+          "small": {
+            "gt_count": 0,
+            "AP": null,
+            "AR": null,
+            "AP50": null,
+            "AP75": null,
+            "recall50": null,
+            "recall75": null
+          },
+          "medium": {
+            "gt_count": 1,
+            "AP": 0.0,
+            "AR": 0.0,
+            "AP50": 0.0,
+            "AP75": 0.0,
+            "recall50": 0.0,
+            "recall75": 0.0
+          },
+          "large": {
+            "gt_count": 110,
+            "AP": 84.37414083408169,
+            "AR": 92.54545454545455,
+            "AP50": 92.30155216958926,
+            "AP75": 87.51946808729572,
+            "recall50": 99.0909090909091,
+            "recall75": 95.45454545454545
+          }
+        },
+        "matched_gt50": 109,
+        "matched_gt75": 105,
+        "same_class_best_iou_mean": 0.92850327399842,
+        "fp_at_score_ge_0_5": {
+          "tp": 105,
+          "wrong_class_overlap": 30,
+          "localization_or_mixed_below_iou": 3,
+          "duplicate_same_class": 3
+        },
+        "all_detection_outcomes50": {
+          "tp": 109,
+          "wrong_class_overlap": 270,
+          "localization_or_mixed_below_iou": 118,
+          "duplicate_same_class": 75,
+          "background_or_unannotated": 80
+        },
+        "score_quantiles_tp50": [
+          0.004891261458396912,
+          0.9362938404083252,
+          0.9798677563667297,
+          0.9873635172843933,
+          0.9937159419059753
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.004201671574264765,
+          0.010569557547569275,
+          0.03238829784095287,
+          0.9880650043487549
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 15408,
+            "image_id": 1000016614,
+            "category_id": 5,
+            "score": 0.9880650043487549,
+            "area": 147103,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9523390546320862,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 2006,
+            "image_id": 1000009657,
+            "category_id": 5,
+            "score": 0.9805642366409302,
+            "area": 68962,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.7710549582180646,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 24611,
+            "image_id": 1000020640,
+            "category_id": 5,
+            "score": 0.9761770367622375,
+            "area": 43232,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6275582619843414,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 19608,
+            "image_id": 1000018166,
+            "category_id": 5,
+            "score": 0.9754049777984619,
+            "area": 70136,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6862628409493446,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 12207,
+            "image_id": 1000015460,
+            "category_id": 5,
+            "score": 0.9691041707992554,
+            "area": 66081,
+            "best_same_iou": 0.2656590084643289,
+            "best_other_iou": 0.7013624464540695,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 4506,
+            "image_id": 1000010472,
+            "category_id": 5,
+            "score": 0.9667664766311646,
+            "area": 82414,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.8390122511485452,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 12313,
+            "image_id": 1000015529,
+            "category_id": 5,
+            "score": 0.9593865275382996,
+            "area": 20306,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.5728494238033759,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 18113,
+            "image_id": 1000017656,
+            "category_id": 5,
+            "score": 0.9428095817565918,
+            "area": 14163,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.6868101545253863,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "6": {
+        "gt_count": 327,
+        "positive_images": 165,
+        "AP": 50.825628790900446,
+        "AP50": 83.7314206267945,
+        "AP75": 53.17646781433197,
+        "AR": 57.37003058103976,
+        "recall50": 91.13149847094802,
+        "recall75": 61.16207951070336,
+        "sizes": {
+          "small": {
+            "gt_count": 68,
+            "AP": 23.220193818156908,
+            "AR": 32.64705882352941,
+            "AP50": 61.27730120515312,
+            "AP75": 13.185072988690152,
+            "recall50": 79.41176470588235,
+            "recall75": 22.058823529411764
+          },
+          "medium": {
+            "gt_count": 249,
+            "AP": 57.40765092124808,
+            "AR": 63.21285140562248,
+            "AP50": 88.84880713529395,
+            "AP75": 63.82781969185763,
+            "recall50": 93.97590361445783,
+            "recall75": 71.08433734939759
+          },
+          "large": {
+            "gt_count": 11,
+            "AP": 70.51021535155998,
+            "AR": 77.27272727272727,
+            "AP50": 88.01709947669704,
+            "AP75": 67.86678667866786,
+            "recall50": 100.0,
+            "recall75": 72.72727272727273
+          }
+        },
+        "matched_gt50": 298,
+        "matched_gt75": 200,
+        "same_class_best_iou_mean": 0.7520812562450876,
+        "fp_at_score_ge_0_5": {
+          "tp": 280,
+          "wrong_class_overlap": 3,
+          "localization_or_mixed_below_iou": 48,
+          "background_or_unannotated": 21
+        },
+        "all_detection_outcomes50": {
+          "tp": 298,
+          "wrong_class_overlap": 35,
+          "localization_or_mixed_below_iou": 878,
+          "background_or_unannotated": 2150,
+          "duplicate_same_class": 233
+        },
+        "score_quantiles_tp50": [
+          0.00187034928239882,
+          0.9532240480184555,
+          0.9673455655574799,
+          0.9763717204332352,
+          0.9893003106117249
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0010242553253192455,
+          0.002748495084233582,
+          0.007235745084472001,
+          0.9857057332992554
+        ],
+        "top20_outcomes50": {
+          "tp": 19,
+          "wrong_class_overlap": 1
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 9261,
+            "image_id": 1000012479,
+            "category_id": 6,
+            "score": 0.9857057332992554,
+            "area": 8759,
+            "best_same_iou": 0.3389830508474576,
+            "best_other_iou": 0.6072095834707111,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 10963,
+            "image_id": 1000013582,
+            "category_id": 6,
+            "score": 0.9810693860054016,
+            "area": 4796,
+            "best_same_iou": 0.025093632958801498,
+            "best_other_iou": 0.9291836734693878,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 12245,
+            "image_id": 1000015460,
+            "category_id": 6,
+            "score": 0.9756113290786743,
+            "area": 2988,
+            "best_same_iou": 0.4875020969635967,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 14566,
+            "image_id": 1000016438,
+            "category_id": 6,
+            "score": 0.9731712341308594,
+            "area": 4133,
+            "best_same_iou": 0.3549469964664311,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 9318,
+            "image_id": 1000012526,
+            "category_id": 6,
+            "score": 0.9698755145072937,
+            "area": 989,
+            "best_same_iou": 0.3031423290203327,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 12070,
+            "image_id": 1000015419,
+            "category_id": 6,
+            "score": 0.9684782028198242,
+            "area": 1183,
+            "best_same_iou": 0.3982188295165394,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 19420,
+            "image_id": 1000018023,
+            "category_id": 6,
+            "score": 0.9677519202232361,
+            "area": 1861,
+            "best_same_iou": 0.4963041182682154,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 6011,
+            "image_id": 1000011014,
+            "category_id": 6,
+            "score": 0.9656394124031067,
+            "area": 261,
+            "best_same_iou": 0.14358538657604078,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "7": {
+        "gt_count": 45,
+        "positive_images": 42,
+        "AP": 48.147074169305256,
+        "AP50": 67.74876841562273,
+        "AP75": 54.687171546458266,
+        "AR": 68.22222222222221,
+        "recall50": 91.11111111111111,
+        "recall75": 73.33333333333333,
+        "sizes": {
+          "small": {
+            "gt_count": 2,
+            "AP": 1.7502156508703597,
+            "AR": 50.0,
+            "AP50": 5.6462402997056484,
+            "AP75": 0.29878727517722187,
+            "recall50": 100.0,
+            "recall75": 50.0
+          },
+          "medium": {
+            "gt_count": 22,
+            "AP": 48.69580637051366,
+            "AR": 66.36363636363636,
+            "AP50": 66.1555968693062,
+            "AP75": 58.241204555238134,
+            "recall50": 90.9090909090909,
+            "recall75": 72.72727272727273
+          },
+          "large": {
+            "gt_count": 21,
+            "AP": 55.11375894557099,
+            "AR": 71.9047619047619,
+            "AP50": 76.61927808025811,
+            "AP75": 59.16437797625915,
+            "recall50": 90.47619047619048,
+            "recall75": 76.19047619047619
+          }
+        },
+        "matched_gt50": 41,
+        "matched_gt75": 33,
+        "same_class_best_iou_mean": 0.8065661154077984,
+        "fp_at_score_ge_0_5": {
+          "wrong_class_overlap": 4,
+          "tp": 32,
+          "background_or_unannotated": 13,
+          "localization_or_mixed_below_iou": 3
+        },
+        "all_detection_outcomes50": {
+          "wrong_class_overlap": 38,
+          "tp": 41,
+          "background_or_unannotated": 753,
+          "localization_or_mixed_below_iou": 174,
+          "duplicate_same_class": 136
+        },
+        "score_quantiles_tp50": [
+          0.012145605869591236,
+          0.8267541527748108,
+          0.9449175596237183,
+          0.9719640016555786,
+          0.985072135925293
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0023392634466290474,
+          0.0060864463448524475,
+          0.01417956780642271,
+          0.9873389601707458
+        ],
+        "top20_outcomes50": {
+          "wrong_class_overlap": 2,
+          "tp": 18
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 17375,
+            "image_id": 1000017379,
+            "category_id": 7,
+            "score": 0.9873389601707458,
+            "area": 9310,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.972541979089661,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 21869,
+            "image_id": 1000019392,
+            "category_id": 7,
+            "score": 0.9809986352920532,
+            "area": 6707,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.9529652351738241,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "wrong_class_overlap"
+            }
+          },
+          {
+            "detection_id": 15573,
+            "image_id": 1000016667,
+            "category_id": 7,
+            "score": 0.944763720035553,
+            "area": 5048,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.00047589229805886037,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 7070,
+            "image_id": 1000011377,
+            "category_id": 7,
+            "score": 0.9434451460838318,
+            "area": 5133,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0005640056937717657,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 7194,
+            "image_id": 1000011382,
+            "category_id": 7,
+            "score": 0.9136910438537598,
+            "area": 14123,
+            "best_same_iou": 0.11037967949996676,
+            "best_other_iou": 0.008782129742962056,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 1794,
+            "image_id": 1000009554,
+            "category_id": 7,
+            "score": 0.9121925234794617,
+            "area": 1496,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0024131112377249724,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 9294,
+            "image_id": 1000012479,
+            "category_id": 7,
+            "score": 0.9102057814598083,
+            "area": 3165,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.0,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 1261,
+            "image_id": 1000009482,
+            "category_id": 7,
+            "score": 0.8970984816551208,
+            "area": 7022,
+            "best_same_iou": 0.4792995622263915,
+            "best_other_iou": 0.00388522477446744,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          }
+        ]
+      },
+      "8": {
+        "gt_count": 200,
+        "positive_images": 121,
+        "AP": 37.65954703381959,
+        "AP50": 58.26492551865709,
+        "AP75": 41.71261646701128,
+        "AR": 54.0,
+        "recall50": 81.0,
+        "recall75": 56.00000000000001,
+        "sizes": {
+          "small": {
+            "gt_count": 67,
+            "AP": 17.686015897569163,
+            "AR": 33.582089552238806,
+            "AP50": 39.66455347294274,
+            "AP75": 15.563291175280986,
+            "recall50": 70.1492537313433,
+            "recall75": 29.850746268656714
+          },
+          "medium": {
+            "gt_count": 86,
+            "AP": 42.56767907558495,
+            "AR": 55.697674418604656,
+            "AP50": 62.32432825576527,
+            "AP75": 48.38442626023364,
+            "recall50": 81.3953488372093,
+            "recall75": 59.30232558139535
+          },
+          "large": {
+            "gt_count": 47,
+            "AP": 59.82775504171488,
+            "AR": 80.00000000000001,
+            "AP50": 76.64533480264194,
+            "AP75": 68.01006924420969,
+            "recall50": 95.74468085106383,
+            "recall75": 87.2340425531915
+          }
+        },
+        "matched_gt50": 162,
+        "matched_gt75": 112,
+        "same_class_best_iou_mean": 0.7059186763865296,
+        "fp_at_score_ge_0_5": {
+          "tp": 118,
+          "localization_or_mixed_below_iou": 25,
+          "background_or_unannotated": 64,
+          "wrong_class_overlap": 5,
+          "duplicate_same_class": 3
+        },
+        "all_detection_outcomes50": {
+          "tp": 162,
+          "localization_or_mixed_below_iou": 3198,
+          "background_or_unannotated": 8466,
+          "wrong_class_overlap": 773,
+          "duplicate_same_class": 699
+        },
+        "score_quantiles_tp50": [
+          0.0012485341867431998,
+          0.41724448651075363,
+          0.9194203615188599,
+          0.961319163441658,
+          0.9920846819877625
+        ],
+        "score_quantiles_fp50": [
+          0.0,
+          0.0018997043662238866,
+          0.004425445105880499,
+          0.010278616799041629,
+          0.9723363518714905
+        ],
+        "top20_outcomes50": {
+          "tp": 20
+        },
+        "highest_score_fp50": [
+          {
+            "detection_id": 15032,
+            "image_id": 1000016542,
+            "category_id": 8,
+            "score": 0.9723363518714905,
+            "area": 14137,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.4595346987472659,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 16091,
+            "image_id": 1000016821,
+            "category_id": 8,
+            "score": 0.9644723534584045,
+            "area": 6285,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.043573955924553535,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 11221,
+            "image_id": 1000015090,
+            "category_id": 8,
+            "score": 0.9568418264389038,
+            "area": 12953,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.624105242793577,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 8612,
+            "image_id": 1000012258,
+            "category_id": 8,
+            "score": 0.9491338133811951,
+            "area": 1382,
+            "best_same_iou": 0.017462165308498253,
+            "best_other_iou": 0.001517014097768943,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 19730,
+            "image_id": 1000018191,
+            "category_id": 8,
+            "score": 0.9476383924484253,
+            "area": 766,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.005064596749666107,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          },
+          {
+            "detection_id": 15069,
+            "image_id": 1000016542,
+            "category_id": 8,
+            "score": 0.9459118843078613,
+            "area": 15229,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.5024468191351243,
+            "error": {
+              "50": "wrong_class_overlap",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 18111,
+            "image_id": 1000017656,
+            "category_id": 8,
+            "score": 0.9416664838790894,
+            "area": 8062,
+            "best_same_iou": 0.3669534050179211,
+            "best_other_iou": 0.0005233318796336677,
+            "error": {
+              "50": "localization_or_mixed_below_iou",
+              "75": "localization_or_mixed_below_iou"
+            }
+          },
+          {
+            "detection_id": 9692,
+            "image_id": 1000012631,
+            "category_id": 8,
+            "score": 0.9412631988525391,
+            "area": 1770,
+            "best_same_iou": 0.0,
+            "best_other_iou": 0.04921870592880916,
+            "error": {
+              "50": "background_or_unannotated",
+              "75": "background_or_unannotated"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "groups": {
+    "all": {
+      "gt_count": 1008,
+      "images": 250,
+      "category_counts": {
+        "1": 140,
+        "2": 91,
+        "6": 327,
+        "4": 65,
+        "8": 200,
+        "5": 111,
+        "7": 45,
+        "3": 29
+      },
+      "transitions": {
+        "50": {
+          "retained": 917,
+          "miss_both": 80,
+          "gained": 7,
+          "lost": 4
+        },
+        "75": {
+          "retained": 740,
+          "miss_both": 257,
+          "lost": 8,
+          "gained": 3
+        }
+      },
+      "18000": {
+        "same_iou_mean": 0.8072739563073442,
+        "same_ge50": 921,
+        "any_ge50": 935,
+        "wrong_class_only_ge50": 14
+      },
+      "20000": {
+        "same_iou_mean": 0.808636004068976,
+        "same_ge50": 924,
+        "any_ge50": 934,
+        "wrong_class_only_ge50": 10
+      },
+      "largest_same_iou_drops": [
+        {
+          "annotation_id": 1000002260,
+          "image_id": 1000017738,
+          "category_id": 8,
+          "area": 5492,
+          "small": false,
+          "old": {
+            "annotation_id": 1000002260,
+            "image_id": 1000017738,
+            "category_id": 8,
+            "source_category_id": 17,
+            "area": 5492,
+            "small": false,
+            "best_same": {
+              "iou": 0.5385876418663303,
+              "detection_id": 18453,
+              "score": 0.004451132379472256,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.5385876418663303,
+              "detection_id": 18452,
+              "score": 0.0037523426581174135,
+              "category_id": 4
+            },
+            "matched_detection_ids": {
+              "50": 18453,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000002260,
+            "image_id": 1000017738,
+            "category_id": 8,
+            "source_category_id": 17,
+            "area": 5492,
+            "small": false,
+            "best_same": {
+              "iou": 0.049312661309512916,
+              "detection_id": 18441,
+              "score": 0.00918841827660799,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.060623337134169515,
+              "detection_id": 18493,
+              "score": 0.018634788691997528,
+              "category_id": 4
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.48927498055681745
+        },
+        {
+          "annotation_id": 1000006474,
+          "image_id": 1000010472,
+          "category_id": 1,
+          "area": 71298,
+          "small": false,
+          "old": {
+            "annotation_id": 1000006474,
+            "image_id": 1000010472,
+            "category_id": 1,
+            "source_category_id": 1,
+            "area": 71298,
+            "small": false,
+            "best_same": {
+              "iou": 0.9544835554821937,
+              "detection_id": 4525,
+              "score": 0.0019857273437082767,
+              "category_id": 1
+            },
+            "best_other": {
+              "iou": 0.9556410748034732,
+              "detection_id": 4584,
+              "score": 0.0016817508731037378,
+              "category_id": 5
+            },
+            "matched_detection_ids": {
+              "50": 4532,
+              "55": 4532,
+              "60": 4532,
+              "65": 4532,
+              "70": 4525,
+              "75": 4525,
+              "80": 4525,
+              "85": 4525,
+              "90": 4525,
+              "95": 4525
+            }
+          },
+          "new": {
+            "annotation_id": 1000006474,
+            "image_id": 1000010472,
+            "category_id": 1,
+            "source_category_id": 1,
+            "area": 71298,
+            "small": false,
+            "best_same": {
+              "iou": 0.7152712492396173,
+              "detection_id": 4524,
+              "score": 0.0014420916559174657,
+              "category_id": 1
+            },
+            "best_other": {
+              "iou": 0.8390122511485452,
+              "detection_id": 4506,
+              "score": 0.9667664766311646,
+              "category_id": 5
+            },
+            "matched_detection_ids": {
+              "50": 4531,
+              "55": 4531,
+              "60": 4531,
+              "65": 4531,
+              "70": 4524,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.2392123062425764
+        },
+        {
+          "annotation_id": 1000006019,
+          "image_id": 1000009765,
+          "category_id": 8,
+          "area": 140,
+          "small": true,
+          "old": {
+            "annotation_id": 1000006019,
+            "image_id": 1000009765,
+            "category_id": 8,
+            "source_category_id": 15,
+            "area": 140,
+            "small": true,
+            "best_same": {
+              "iou": 0.46078431372549017,
+              "detection_id": 2374,
+              "score": 0.04464643821120262,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.0,
+              "detection_id": 2302,
+              "score": 0.014521456323564053,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000006019,
+            "image_id": 1000009765,
+            "category_id": 8,
+            "source_category_id": 15,
+            "area": 140,
+            "small": true,
+            "best_same": {
+              "iou": 0.22251308900523561,
+              "detection_id": 2347,
+              "score": 0.02707696706056595,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.0,
+              "detection_id": 2302,
+              "score": 0.013386102393269539,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.23827122472025455
+        },
+        {
+          "annotation_id": 1000003001,
+          "image_id": 1000018407,
+          "category_id": 8,
+          "area": 863,
+          "small": true,
+          "old": {
+            "annotation_id": 1000003001,
+            "image_id": 1000018407,
+            "category_id": 8,
+            "source_category_id": 18,
+            "area": 863,
+            "small": true,
+            "best_same": {
+              "iou": 0.7254138266796495,
+              "detection_id": 20132,
+              "score": 0.005223335698246956,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.45445829338446786,
+              "detection_id": 20163,
+              "score": 0.027816353365778923,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 20180,
+              "55": 20196,
+              "60": 20131,
+              "65": 20132,
+              "70": 20132,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000003001,
+            "image_id": 1000018407,
+            "category_id": 8,
+            "source_category_id": 18,
+            "area": 863,
+            "small": true,
+            "best_same": {
+              "iou": 0.5925176946410515,
+              "detection_id": 20130,
+              "score": 0.00473111541941762,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.4730250481695568,
+              "detection_id": 20165,
+              "score": 0.022743869572877884,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 20171,
+              "55": 20171,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.13289613203859796
+        },
+        {
+          "annotation_id": 1000000449,
+          "image_id": 1000015560,
+          "category_id": 8,
+          "area": 95,
+          "small": true,
+          "old": {
+            "annotation_id": 1000000449,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 95,
+            "small": true,
+            "best_same": {
+              "iou": 0.24752475247524752,
+              "detection_id": 12449,
+              "score": 0.008066567592322826,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.09392265193370165,
+              "detection_id": 12446,
+              "score": 0.027788173407316208,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000449,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 95,
+            "small": true,
+            "best_same": {
+              "iou": 0.13402061855670103,
+              "detection_id": 12446,
+              "score": 0.009219055995345116,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.09249183895538629,
+              "detection_id": 12443,
+              "score": 0.021856406703591347,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.1135041339185465
+        },
+        {
+          "annotation_id": 1000003119,
+          "image_id": 1000018539,
+          "category_id": 6,
+          "area": 1007,
+          "small": true,
+          "old": {
+            "annotation_id": 1000003119,
+            "image_id": 1000018539,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 1007,
+            "small": true,
+            "best_same": {
+              "iou": 0.396854764107308,
+              "detection_id": 20621,
+              "score": 0.0019395360723137856,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.004066985645933014,
+              "detection_id": 20614,
+              "score": 0.0029400119092315435,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000003119,
+            "image_id": 1000018539,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 1007,
+            "small": true,
+            "best_same": {
+              "iou": 0.28517469310670446,
+              "detection_id": 20697,
+              "score": 0.003565841354429722,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.014895729890764648,
+              "detection_id": 20661,
+              "score": 0.0010999756632372737,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.11168007100060356
+        }
+      ]
+    },
+    "skirt": {
+      "gt_count": 29,
+      "images": 29,
+      "category_counts": {
+        "3": 29
+      },
+      "transitions": {
+        "50": {
+          "retained": 28,
+          "miss_both": 1
+        },
+        "75": {
+          "retained": 28,
+          "miss_both": 1
+        }
+      },
+      "18000": {
+        "same_iou_mean": 0.9201644661176346,
+        "same_ge50": 28,
+        "any_ge50": 28,
+        "wrong_class_only_ge50": 0
+      },
+      "20000": {
+        "same_iou_mean": 0.920174147161558,
+        "same_ge50": 28,
+        "any_ge50": 28,
+        "wrong_class_only_ge50": 0
+      },
+      "largest_same_iou_drops": [
+        {
+          "annotation_id": 1000004315,
+          "image_id": 1000019772,
+          "category_id": 3,
+          "area": 103830,
+          "small": false,
+          "old": {
+            "annotation_id": 1000004315,
+            "image_id": 1000019772,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 103830,
+            "small": false,
+            "best_same": {
+              "iou": 0.9679081752166784,
+              "detection_id": 22841,
+              "score": 0.001099318964406848,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9679081752166784,
+              "detection_id": 22840,
+              "score": 0.023417361080646515,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 22812,
+              "55": 22812,
+              "60": 22812,
+              "65": 22812,
+              "70": 22812,
+              "75": 22812,
+              "80": 22812,
+              "85": 22812,
+              "90": 22812,
+              "95": 22841
+            }
+          },
+          "new": {
+            "annotation_id": 1000004315,
+            "image_id": 1000019772,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 103830,
+            "small": false,
+            "best_same": {
+              "iou": 0.9562776847887402,
+              "detection_id": 22841,
+              "score": 0.003102618735283613,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9562776847887402,
+              "detection_id": 22840,
+              "score": 0.07659643888473511,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 22813,
+              "55": 22813,
+              "60": 22813,
+              "65": 22813,
+              "70": 22813,
+              "75": 22813,
+              "80": 22813,
+              "85": 22813,
+              "90": 22813,
+              "95": 22841
+            }
+          },
+          "same_iou_delta": -0.011630490427938178
+        },
+        {
+          "annotation_id": 1000006372,
+          "image_id": 1000010231,
+          "category_id": 3,
+          "area": 44913,
+          "small": false,
+          "old": {
+            "annotation_id": 1000006372,
+            "image_id": 1000010231,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 44913,
+            "small": false,
+            "best_same": {
+              "iou": 0.9081663963529566,
+              "detection_id": 3961,
+              "score": 0.0028068055398762226,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9081663963529566,
+              "detection_id": 3960,
+              "score": 0.003093765815719962,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 3917,
+              "55": 3917,
+              "60": 3917,
+              "65": 3917,
+              "70": 3917,
+              "75": 3917,
+              "80": 3917,
+              "85": 3917,
+              "90": 3961,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000006372,
+            "image_id": 1000010231,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 44913,
+            "small": false,
+            "best_same": {
+              "iou": 0.8983407491835258,
+              "detection_id": 3962,
+              "score": 0.002561818575486541,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.8983407491835258,
+              "detection_id": 3961,
+              "score": 0.0029691013041883707,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 3917,
+              "55": 3917,
+              "60": 3917,
+              "65": 3917,
+              "70": 3917,
+              "75": 3917,
+              "80": 3917,
+              "85": 3917,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.009825647169430796
+        },
+        {
+          "annotation_id": 1000000405,
+          "image_id": 1000015529,
+          "category_id": 3,
+          "area": 7903,
+          "small": false,
+          "old": {
+            "annotation_id": 1000000405,
+            "image_id": 1000015529,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 7903,
+            "small": false,
+            "best_same": {
+              "iou": 0.9429851861073073,
+              "detection_id": 12358,
+              "score": 0.37486252188682556,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9429851861073073,
+              "detection_id": 12357,
+              "score": 0.022604849189519882,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 12358,
+              "55": 12358,
+              "60": 12358,
+              "65": 12358,
+              "70": 12358,
+              "75": 12358,
+              "80": 12358,
+              "85": 12358,
+              "90": 12358,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000405,
+            "image_id": 1000015529,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 7903,
+            "small": false,
+            "best_same": {
+              "iou": 0.9403521825396826,
+              "detection_id": 12356,
+              "score": 0.42254388332366943,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9403521825396826,
+              "detection_id": 12355,
+              "score": 0.01731758378446102,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 12356,
+              "55": 12356,
+              "60": 12356,
+              "65": 12356,
+              "70": 12356,
+              "75": 12356,
+              "80": 12356,
+              "85": 12356,
+              "90": 12356,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.0026330035676247476
+        },
+        {
+          "annotation_id": 1000009101,
+          "image_id": 1000013415,
+          "category_id": 3,
+          "area": 82086,
+          "small": false,
+          "old": {
+            "annotation_id": 1000009101,
+            "image_id": 1000013415,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 82086,
+            "small": false,
+            "best_same": {
+              "iou": 0.9750158619946608,
+              "detection_id": 10800,
+              "score": 0.0020969356410205364,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9750158619946608,
+              "detection_id": 10760,
+              "score": 0.004739598836749792,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 10717,
+              "55": 10717,
+              "60": 10717,
+              "65": 10717,
+              "70": 10717,
+              "75": 10717,
+              "80": 10717,
+              "85": 10717,
+              "90": 10717,
+              "95": 10717
+            }
+          },
+          "new": {
+            "annotation_id": 1000009101,
+            "image_id": 1000013415,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 82086,
+            "small": false,
+            "best_same": {
+              "iou": 0.9737648981734451,
+              "detection_id": 10716,
+              "score": 0.827226996421814,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9733032322797964,
+              "detection_id": 10759,
+              "score": 0.005385120399296284,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 10716,
+              "55": 10716,
+              "60": 10716,
+              "65": 10716,
+              "70": 10716,
+              "75": 10716,
+              "80": 10716,
+              "85": 10716,
+              "90": 10716,
+              "95": 10716
+            }
+          },
+          "same_iou_delta": -0.0012509638212157004
+        },
+        {
+          "annotation_id": 1000002267,
+          "image_id": 1000015419,
+          "category_id": 3,
+          "area": 20721,
+          "small": false,
+          "old": {
+            "annotation_id": 1000002267,
+            "image_id": 1000015419,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 20721,
+            "small": false,
+            "best_same": {
+              "iou": 0.9355271351247785,
+              "detection_id": 12002,
+              "score": 0.9711470007896423,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9309634455995784,
+              "detection_id": 12061,
+              "score": 0.3781917095184326,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 12002,
+              "55": 12002,
+              "60": 12002,
+              "65": 12002,
+              "70": 12002,
+              "75": 12002,
+              "80": 12002,
+              "85": 12002,
+              "90": 12002,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000002267,
+            "image_id": 1000015419,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 20721,
+            "small": false,
+            "best_same": {
+              "iou": 0.9346721625766872,
+              "detection_id": 12002,
+              "score": 0.9719457626342773,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9308923607782996,
+              "detection_id": 12062,
+              "score": 0.4072817265987396,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 12002,
+              "55": 12002,
+              "60": 12002,
+              "65": 12002,
+              "70": 12002,
+              "75": 12002,
+              "80": 12002,
+              "85": 12002,
+              "90": 12002,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.000854972548091304
+        },
+        {
+          "annotation_id": 1000008054,
+          "image_id": 1000012154,
+          "category_id": 3,
+          "area": 25992,
+          "small": false,
+          "old": {
+            "annotation_id": 1000008054,
+            "image_id": 1000012154,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 25992,
+            "small": false,
+            "best_same": {
+              "iou": 0.9736221968833143,
+              "detection_id": 8423,
+              "score": 0.918087899684906,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9721979566257739,
+              "detection_id": 8462,
+              "score": 0.03581337258219719,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 8423,
+              "55": 8423,
+              "60": 8423,
+              "65": 8423,
+              "70": 8423,
+              "75": 8423,
+              "80": 8423,
+              "85": 8423,
+              "90": 8423,
+              "95": 8423
+            }
+          },
+          "new": {
+            "annotation_id": 1000008054,
+            "image_id": 1000012154,
+            "category_id": 3,
+            "source_category_id": 8,
+            "area": 25992,
+            "small": false,
+            "best_same": {
+              "iou": 0.9729226796293483,
+              "detection_id": 8423,
+              "score": 0.9234861135482788,
+              "category_id": 3
+            },
+            "best_other": {
+              "iou": 0.9705648067367143,
+              "detection_id": 8461,
+              "score": 0.03763999044895172,
+              "category_id": 2
+            },
+            "matched_detection_ids": {
+              "50": 8423,
+              "55": 8423,
+              "60": 8423,
+              "65": 8423,
+              "70": 8423,
+              "75": 8423,
+              "80": 8423,
+              "85": 8423,
+              "90": 8423,
+              "95": 8423
+            }
+          },
+          "same_iou_delta": -0.0006995172539659977
+        }
+      ]
+    },
+    "outerwear": {
+      "gt_count": 65,
+      "images": 63,
+      "category_counts": {
+        "4": 65
+      },
+      "transitions": {
+        "50": {
+          "retained": 63,
+          "miss_both": 2
+        },
+        "75": {
+          "retained": 58,
+          "miss_both": 7
+        }
+      },
+      "18000": {
+        "same_iou_mean": 0.8700990063364883,
+        "same_ge50": 63,
+        "any_ge50": 65,
+        "wrong_class_only_ge50": 2
+      },
+      "20000": {
+        "same_iou_mean": 0.8723766308093789,
+        "same_ge50": 63,
+        "any_ge50": 65,
+        "wrong_class_only_ge50": 2
+      },
+      "largest_same_iou_drops": [
+        {
+          "annotation_id": 1000004205,
+          "image_id": 1000019662,
+          "category_id": 4,
+          "area": 24232,
+          "small": false,
+          "old": {
+            "annotation_id": 1000004205,
+            "image_id": 1000019662,
+            "category_id": 4,
+            "source_category_id": 3,
+            "area": 24232,
+            "small": false,
+            "best_same": {
+              "iou": 0.906208981345213,
+              "detection_id": 22500,
+              "score": 0.006326035130769014,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.8540148592656094,
+              "detection_id": 22485,
+              "score": 0.2186347246170044,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 22406,
+              "55": 22406,
+              "60": 22406,
+              "65": 22406,
+              "70": 22406,
+              "75": 22406,
+              "80": 22406,
+              "85": 22406,
+              "90": 22500,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000004205,
+            "image_id": 1000019662,
+            "category_id": 4,
+            "source_category_id": 3,
+            "area": 24232,
+            "small": false,
+            "best_same": {
+              "iou": 0.8793443844291302,
+              "detection_id": 22406,
+              "score": 0.9337349534034729,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.8531313636526027,
+              "detection_id": 22482,
+              "score": 0.22495245933532715,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 22406,
+              "55": 22406,
+              "60": 22406,
+              "65": 22406,
+              "70": 22406,
+              "75": 22406,
+              "80": 22406,
+              "85": 22406,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.026864596916082784
+        },
+        {
+          "annotation_id": 1000003977,
+          "image_id": 1000017959,
+          "category_id": 4,
+          "area": 164033,
+          "small": false,
+          "old": {
+            "annotation_id": 1000003977,
+            "image_id": 1000017959,
+            "category_id": 4,
+            "source_category_id": 9,
+            "area": 164033,
+            "small": false,
+            "best_same": {
+              "iou": 0.7050312881599141,
+              "detection_id": 19145,
+              "score": 0.01917039416730404,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.6757972106188226,
+              "detection_id": 19124,
+              "score": 0.021819043904542923,
+              "category_id": 5
+            },
+            "matched_detection_ids": {
+              "50": 19113,
+              "55": 19113,
+              "60": 19113,
+              "65": 19136,
+              "70": 19145,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000003977,
+            "image_id": 1000017959,
+            "category_id": 4,
+            "source_category_id": 9,
+            "area": 164033,
+            "small": false,
+            "best_same": {
+              "iou": 0.6967818670586188,
+              "detection_id": 19146,
+              "score": 0.014965821988880634,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.679465905671903,
+              "detection_id": 19125,
+              "score": 0.01839633285999298,
+              "category_id": 5
+            },
+            "matched_detection_ids": {
+              "50": 19115,
+              "55": 19115,
+              "60": 19115,
+              "65": 19138,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.00824942110129534
+        },
+        {
+          "annotation_id": 1000000508,
+          "image_id": 1000015677,
+          "category_id": 4,
+          "area": 21711,
+          "small": false,
+          "old": {
+            "annotation_id": 1000000508,
+            "image_id": 1000015677,
+            "category_id": 4,
+            "source_category_id": 4,
+            "area": 21711,
+            "small": false,
+            "best_same": {
+              "iou": 0.883712890540599,
+              "detection_id": 12673,
+              "score": 0.0019007209921255708,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.883712890540599,
+              "detection_id": 12672,
+              "score": 0.0045128026977181435,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 12688,
+              "55": 12688,
+              "60": 12688,
+              "65": 12688,
+              "70": 12688,
+              "75": 12688,
+              "80": 12688,
+              "85": 12688,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000508,
+            "image_id": 1000015677,
+            "category_id": 4,
+            "source_category_id": 4,
+            "area": 21711,
+            "small": false,
+            "best_same": {
+              "iou": 0.8760920335611107,
+              "detection_id": 12640,
+              "score": 0.002526024356484413,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.8821824160609207,
+              "detection_id": 12672,
+              "score": 0.005976473912596703,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 12687,
+              "55": 12687,
+              "60": 12687,
+              "65": 12687,
+              "70": 12687,
+              "75": 12687,
+              "80": 12687,
+              "85": 12687,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.007620856979488333
+        },
+        {
+          "annotation_id": 1000001575,
+          "image_id": 1000013969,
+          "category_id": 4,
+          "area": 99984,
+          "small": false,
+          "old": {
+            "annotation_id": 1000001575,
+            "image_id": 1000013969,
+            "category_id": 4,
+            "source_category_id": 4,
+            "area": 99984,
+            "small": false,
+            "best_same": {
+              "iou": 0.9428921994860201,
+              "detection_id": 11100,
+              "score": 0.004989857319742441,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.9329216844366035,
+              "detection_id": 11013,
+              "score": 0.058861155062913895,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 11010,
+              "55": 11010,
+              "60": 11010,
+              "65": 11010,
+              "70": 11010,
+              "75": 11010,
+              "80": 11010,
+              "85": 11010,
+              "90": 11010,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000001575,
+            "image_id": 1000013969,
+            "category_id": 4,
+            "source_category_id": 4,
+            "area": 99984,
+            "small": false,
+            "best_same": {
+              "iou": 0.9357252494244053,
+              "detection_id": 11011,
+              "score": 0.9736192226409912,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.9332362270370761,
+              "detection_id": 11015,
+              "score": 0.06171290576457977,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 11011,
+              "55": 11011,
+              "60": 11011,
+              "65": 11011,
+              "70": 11011,
+              "75": 11011,
+              "80": 11011,
+              "85": 11011,
+              "90": 11011,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.00716695006161483
+        },
+        {
+          "annotation_id": 1000004981,
+          "image_id": 1000018975,
+          "category_id": 4,
+          "area": 37532,
+          "small": false,
+          "old": {
+            "annotation_id": 1000004981,
+            "image_id": 1000018975,
+            "category_id": 4,
+            "source_category_id": 12,
+            "area": 37532,
+            "small": false,
+            "best_same": {
+              "iou": 0.8868947708198838,
+              "detection_id": 21499,
+              "score": 0.0066826618276536465,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.8868947708198838,
+              "detection_id": 21498,
+              "score": 0.0029232429806143045,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 21410,
+              "55": 21410,
+              "60": 21410,
+              "65": 21410,
+              "70": 21410,
+              "75": 21410,
+              "80": 21410,
+              "85": 21410,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000004981,
+            "image_id": 1000018975,
+            "category_id": 4,
+            "source_category_id": 12,
+            "area": 37532,
+            "small": false,
+            "best_same": {
+              "iou": 0.8813814875020614,
+              "detection_id": 21436,
+              "score": 0.004318739287555218,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.8813814875020614,
+              "detection_id": 21435,
+              "score": 0.887103796005249,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 21409,
+              "55": 21409,
+              "60": 21409,
+              "65": 21409,
+              "70": 21409,
+              "75": 21409,
+              "80": 21409,
+              "85": 21409,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.005513283317822415
+        },
+        {
+          "annotation_id": 1000000259,
+          "image_id": 1000015339,
+          "category_id": 4,
+          "area": 52029,
+          "small": false,
+          "old": {
+            "annotation_id": 1000000259,
+            "image_id": 1000015339,
+            "category_id": 4,
+            "source_category_id": 9,
+            "area": 52029,
+            "small": false,
+            "best_same": {
+              "iou": 0.9413697198215519,
+              "detection_id": 11931,
+              "score": 0.003784154774621129,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.9413697198215519,
+              "detection_id": 11930,
+              "score": 0.014417042024433613,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 11909,
+              "55": 11909,
+              "60": 11909,
+              "65": 11909,
+              "70": 11909,
+              "75": 11909,
+              "80": 11909,
+              "85": 11909,
+              "90": 11909,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000259,
+            "image_id": 1000015339,
+            "category_id": 4,
+            "source_category_id": 9,
+            "area": 52029,
+            "small": false,
+            "best_same": {
+              "iou": 0.9358844684198696,
+              "detection_id": 11930,
+              "score": 0.003764985129237175,
+              "category_id": 4
+            },
+            "best_other": {
+              "iou": 0.9358844684198696,
+              "detection_id": 11929,
+              "score": 0.013682017102837563,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 11909,
+              "55": 11909,
+              "60": 11909,
+              "65": 11909,
+              "70": 11909,
+              "75": 11909,
+              "80": 11909,
+              "85": 11909,
+              "90": 11909,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.005485251401682323
+        }
+      ]
+    },
+    "small": {
+      "gt_count": 138,
+      "images": 96,
+      "category_counts": {
+        "6": 68,
+        "8": 67,
+        "3": 1,
+        "7": 2
+      },
+      "transitions": {
+        "50": {
+          "retained": 101,
+          "miss_both": 35,
+          "gained": 2
+        },
+        "75": {
+          "miss_both": 99,
+          "retained": 35,
+          "lost": 3,
+          "gained": 1
+        }
+      },
+      "18000": {
+        "same_iou_mean": 0.5826213977662773,
+        "same_ge50": 101,
+        "any_ge50": 101,
+        "wrong_class_only_ge50": 0
+      },
+      "20000": {
+        "same_iou_mean": 0.586558151088593,
+        "same_ge50": 103,
+        "any_ge50": 103,
+        "wrong_class_only_ge50": 0
+      },
+      "largest_same_iou_drops": [
+        {
+          "annotation_id": 1000006019,
+          "image_id": 1000009765,
+          "category_id": 8,
+          "area": 140,
+          "small": true,
+          "old": {
+            "annotation_id": 1000006019,
+            "image_id": 1000009765,
+            "category_id": 8,
+            "source_category_id": 15,
+            "area": 140,
+            "small": true,
+            "best_same": {
+              "iou": 0.46078431372549017,
+              "detection_id": 2374,
+              "score": 0.04464643821120262,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.0,
+              "detection_id": 2302,
+              "score": 0.014521456323564053,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000006019,
+            "image_id": 1000009765,
+            "category_id": 8,
+            "source_category_id": 15,
+            "area": 140,
+            "small": true,
+            "best_same": {
+              "iou": 0.22251308900523561,
+              "detection_id": 2347,
+              "score": 0.02707696706056595,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.0,
+              "detection_id": 2302,
+              "score": 0.013386102393269539,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.23827122472025455
+        },
+        {
+          "annotation_id": 1000003001,
+          "image_id": 1000018407,
+          "category_id": 8,
+          "area": 863,
+          "small": true,
+          "old": {
+            "annotation_id": 1000003001,
+            "image_id": 1000018407,
+            "category_id": 8,
+            "source_category_id": 18,
+            "area": 863,
+            "small": true,
+            "best_same": {
+              "iou": 0.7254138266796495,
+              "detection_id": 20132,
+              "score": 0.005223335698246956,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.45445829338446786,
+              "detection_id": 20163,
+              "score": 0.027816353365778923,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 20180,
+              "55": 20196,
+              "60": 20131,
+              "65": 20132,
+              "70": 20132,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000003001,
+            "image_id": 1000018407,
+            "category_id": 8,
+            "source_category_id": 18,
+            "area": 863,
+            "small": true,
+            "best_same": {
+              "iou": 0.5925176946410515,
+              "detection_id": 20130,
+              "score": 0.00473111541941762,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.4730250481695568,
+              "detection_id": 20165,
+              "score": 0.022743869572877884,
+              "category_id": 1
+            },
+            "matched_detection_ids": {
+              "50": 20171,
+              "55": 20171,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.13289613203859796
+        },
+        {
+          "annotation_id": 1000000449,
+          "image_id": 1000015560,
+          "category_id": 8,
+          "area": 95,
+          "small": true,
+          "old": {
+            "annotation_id": 1000000449,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 95,
+            "small": true,
+            "best_same": {
+              "iou": 0.24752475247524752,
+              "detection_id": 12449,
+              "score": 0.008066567592322826,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.09392265193370165,
+              "detection_id": 12446,
+              "score": 0.027788173407316208,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000449,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 95,
+            "small": true,
+            "best_same": {
+              "iou": 0.13402061855670103,
+              "detection_id": 12446,
+              "score": 0.009219055995345116,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.09249183895538629,
+              "detection_id": 12443,
+              "score": 0.021856406703591347,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.1135041339185465
+        },
+        {
+          "annotation_id": 1000003119,
+          "image_id": 1000018539,
+          "category_id": 6,
+          "area": 1007,
+          "small": true,
+          "old": {
+            "annotation_id": 1000003119,
+            "image_id": 1000018539,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 1007,
+            "small": true,
+            "best_same": {
+              "iou": 0.396854764107308,
+              "detection_id": 20621,
+              "score": 0.0019395360723137856,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.004066985645933014,
+              "detection_id": 20614,
+              "score": 0.0029400119092315435,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000003119,
+            "image_id": 1000018539,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 1007,
+            "small": true,
+            "best_same": {
+              "iou": 0.28517469310670446,
+              "detection_id": 20697,
+              "score": 0.003565841354429722,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.014895729890764648,
+              "detection_id": 20661,
+              "score": 0.0010999756632372737,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.11168007100060356
+        },
+        {
+          "annotation_id": 1000006312,
+          "image_id": 1000010185,
+          "category_id": 6,
+          "area": 131,
+          "small": true,
+          "old": {
+            "annotation_id": 1000006312,
+            "image_id": 1000010185,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 131,
+            "small": true,
+            "best_same": {
+              "iou": 0.3869565217391304,
+              "detection_id": 3824,
+              "score": 0.0015613598516210914,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.28525641025641024,
+              "detection_id": 3828,
+              "score": 0.0040116384625434875,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000006312,
+            "image_id": 1000010185,
+            "category_id": 6,
+            "source_category_id": 23,
+            "area": 131,
+            "small": true,
+            "best_same": {
+              "iou": 0.2893081761006289,
+              "detection_id": 3825,
+              "score": 0.0021560026798397303,
+              "category_id": 6
+            },
+            "best_other": {
+              "iou": 0.2893081761006289,
+              "detection_id": 3826,
+              "score": 0.0038086113054305315,
+              "category_id": 8
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.0976483456385015
+        },
+        {
+          "annotation_id": 1000000448,
+          "image_id": 1000015560,
+          "category_id": 8,
+          "area": 209,
+          "small": true,
+          "old": {
+            "annotation_id": 1000000448,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 209,
+            "small": true,
+            "best_same": {
+              "iou": 0.24751243781094528,
+              "detection_id": 12497,
+              "score": 0.06299785524606705,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.24751243781094528,
+              "detection_id": 12496,
+              "score": 0.01353435404598713,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "new": {
+            "annotation_id": 1000000448,
+            "image_id": 1000015560,
+            "category_id": 8,
+            "source_category_id": 22,
+            "area": 209,
+            "small": true,
+            "best_same": {
+              "iou": 0.15987210231814547,
+              "detection_id": 12477,
+              "score": 0.03638390079140663,
+              "category_id": 8
+            },
+            "best_other": {
+              "iou": 0.15987210231814547,
+              "detection_id": 12476,
+              "score": 0.007425164338201284,
+              "category_id": 6
+            },
+            "matched_detection_ids": {
+              "50": 0,
+              "55": 0,
+              "60": 0,
+              "65": 0,
+              "70": 0,
+              "75": 0,
+              "80": 0,
+              "85": 0,
+              "90": 0,
+              "95": 0
+            }
+          },
+          "same_iou_delta": -0.08764033549279981
+        }
+      ]
+    }
+  },
+  "methods": {
+    "ap": "Original full COCO AP, unchanged raw predictions; matching recomputed on CPU to expose diagnostics; exact agreement with saved reports required.",
+    "matched_gt": "COCO all-area per-class greedy matches at IoU .50/.75, not language query coverage. Small subgroup here filters GT area<=1024 from all-area matching; AP-small itself follows COCO area-specific ignore matching.",
+    "best_iou": "Independent maximum over saved top100 detections, not one-to-one; same/other class separated.",
+    "fp_outcomes": "At IoU .50/.75: ignored, TP, duplicate same-class overlap, wrong-class overlap, max overlap>=.1 localization/mixed, otherwise background/unannotated. These are descriptive, not causal counterfactual AP gains.",
+    "high_score": "Fixed score>=.5 diagnostic slice; no threshold search or language candidate selection.",
+    "sizes": "COCO area ranges including boundary overlap; areas in original-image pixels.",
+    "queries": "No language queries read; GT labels used only for diagnostics, never candidate production."
+  },
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "gpu_used": false,
+  "official_report_agreement": true,
+  "production_candidate_package_created": false
+}

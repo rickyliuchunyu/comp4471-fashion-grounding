@@ -1,0 +1,2127 @@
+{
+  "schema_version": 1,
+  "updates": [
+    "18000",
+    "20000"
+  ],
+  "metrics_are": "descriptive GT-level saved-mask diagnostics, not causal AP gains",
+  "methods": {
+    "small": "noncrowd/nonignored original GT mask area <=1024 pixels; keep all small GT",
+    "partition": "Independent best same/other-class IoU among saved official top100. First same>=.75, then same>=.5, then other>=.5, then any>=.1, otherwise no overlap. Exclusive and exhaustive, not one-to-one.",
+    "matched": "Existing COCO all-area per-class greedy score-ordered matches, filtered to small GT afterwards; distinct from area-specific COCO AP-small.",
+    "extent": "For independent max-IoU SAME-class saved mask: intersection/pred-area and intersection/GT-area. Shape/extent errors, not contour metric or proven feature-resolution cause.",
+    "scores": "Fixed score .5 diagnostic slice only; not a selected production threshold. Score combines class and mask quality; no separate logits or stable query IDs exist here.",
+    "scale": "Approximate bbox scaling from frozen eval short_edge800/max_size1333; no inference or train augmentation simulation.",
+    "cases": "One deterministic deliberately chosen example per failure/change mode; not representative performance sampling."
+  },
+  "summaries": {
+    "18000": {
+      "all_small": {
+        "gt_count": 138,
+        "images": 96,
+        "geometry_partition": {
+          "same_iou_050_075": 63,
+          "same_iou_ge_075": 38,
+          "no_saved_mask_iou_ge_010": 9,
+          "partial_or_mixed_iou_010_050": 28
+        },
+        "matched50": 101,
+        "matched75": 38,
+        "matched50_score_ge_05": 74,
+        "matched50_score_quantiles": [
+          0.001164429821074009,
+          0.44821345806121826,
+          0.9272708892822266,
+          0.9586366415023804,
+          0.9809097051620483
+        ],
+        "any_geometry_ge50": 101,
+        "top_scored_ge50_wrong_class": 2,
+        "same_best_iou_quantiles": [
+          0.0,
+          0.4861418615096504,
+          0.6391410191761464,
+          0.7632528161310351,
+          0.8905180840664711
+        ],
+        "same_ge50_precision_quantiles": [
+          0.526595744680851,
+          0.7441624365482233,
+          0.8218390804597702,
+          0.8807692307692307,
+          0.9787985865724381
+        ],
+        "same_ge50_recall_quantiles": [
+          0.5956284153005464,
+          0.8018867924528302,
+          0.860738255033557,
+          0.9154929577464789,
+          0.9872611464968153
+        ]
+      },
+      "by_category": {
+        "3": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 0,
+          "matched75": 0,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": null,
+          "any_geometry_ge50": 0,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "same_ge50_precision_quantiles": null,
+          "same_ge50_recall_quantiles": null
+        },
+        "6": {
+          "gt_count": 68,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 38,
+            "same_iou_ge_075": 16,
+            "no_saved_mask_iou_ge_010": 2,
+            "partial_or_mixed_iou_010_050": 12
+          },
+          "matched50": 54,
+          "matched75": 16,
+          "matched50_score_ge_05": 47,
+          "matched50_score_quantiles": [
+            0.00231200666166842,
+            0.9101039171218872,
+            0.9549755752086639,
+            0.9650866836309433,
+            0.9809097051620483
+          ],
+          "any_geometry_ge50": 54,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.5203815702443333,
+            0.6227621816854211,
+            0.7380746411217998,
+            0.8905180840664711
+          ],
+          "same_ge50_precision_quantiles": [
+            0.526595744680851,
+            0.7292423705967488,
+            0.8019254619720063,
+            0.8611737727195515,
+            0.9576107899807321
+          ],
+          "same_ge50_recall_quantiles": [
+            0.6006655574043261,
+            0.7657501053518753,
+            0.8516337368713507,
+            0.9144939272055654,
+            0.975925925925926
+          ]
+        },
+        "7": {
+          "gt_count": 2,
+          "images": 2,
+          "geometry_partition": {
+            "same_iou_050_075": 1,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.022293906658887863,
+            0.03414142969995737,
+            0.04598895274102688,
+            0.057836475782096386,
+            0.0696839988231659
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.6973224679860303,
+            0.7144769195932353,
+            0.7316313712004405,
+            0.7487858228076456,
+            0.7659402744148507
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7974789915966387,
+            0.8075498031380385,
+            0.8176206146794383,
+            0.827691426220838,
+            0.8377622377622378
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8061911170928667,
+            0.8423687887214537,
+            0.8785464603500406,
+            0.9147241319786275,
+            0.9509018036072144
+          ]
+        },
+        "8": {
+          "gt_count": 67,
+          "images": 48,
+          "geometry_partition": {
+            "same_iou_050_075": 24,
+            "same_iou_ge_075": 21,
+            "no_saved_mask_iou_ge_010": 6,
+            "partial_or_mixed_iou_010_050": 16
+          },
+          "matched50": 45,
+          "matched75": 21,
+          "matched50_score_ge_05": 27,
+          "matched50_score_quantiles": [
+            0.001164429821074009,
+            0.11433573812246323,
+            0.83881014585495,
+            0.9471653699874878,
+            0.9765363931655884
+          ],
+          "any_geometry_ge50": 45,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.43769666456891126,
+            0.646954986760812,
+            0.773766328011611,
+            0.8808664259927798
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5635593220338984,
+            0.764018691588785,
+            0.8464646464646465,
+            0.8997613365155132,
+            0.9787985865724381
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5956284153005464,
+            0.8192307692307692,
+            0.8627450980392157,
+            0.9088937093275488,
+            0.9872611464968153
+          ]
+        }
+      },
+      "by_source_category": {
+        "bag, wallet": {
+          "gt_count": 2,
+          "images": 2,
+          "geometry_partition": {
+            "same_iou_050_075": 1,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.022293906658887863,
+            0.03414142969995737,
+            0.04598895274102688,
+            0.057836475782096386,
+            0.0696839988231659
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.6973224679860303,
+            0.7144769195932353,
+            0.7316313712004405,
+            0.7487858228076456,
+            0.7659402744148507
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7974789915966387,
+            0.8075498031380385,
+            0.8176206146794383,
+            0.827691426220838,
+            0.8377622377622378
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8061911170928667,
+            0.8423687887214537,
+            0.8785464603500406,
+            0.9147241319786275,
+            0.9509018036072144
+          ]
+        },
+        "belt": {
+          "gt_count": 11,
+          "images": 10,
+          "geometry_partition": {
+            "partial_or_mixed_iou_010_050": 3,
+            "same_iou_050_075": 4,
+            "no_saved_mask_iou_ge_010": 3,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 5,
+          "matched75": 1,
+          "matched50_score_ge_05": 4,
+          "matched50_score_quantiles": [
+            0.35307952761650085,
+            0.6953023672103882,
+            0.83881014585495,
+            0.8630481958389282,
+            0.9544830322265625
+          ],
+          "any_geometry_ge50": 5,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.14353396392980505,
+            0.446821900566394,
+            0.6234708092084849,
+            0.7691131498470948
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7079754601226994,
+            0.7172995780590717,
+            0.7182795698924731,
+            0.8728010825439784,
+            0.9145454545454546
+          ],
+          "same_ge50_recall_quantiles": [
+            0.6373517786561265,
+            0.804416403785489,
+            0.828665568369028,
+            0.8624813153961136,
+            0.8652849740932642
+          ]
+        },
+        "glasses": {
+          "gt_count": 8,
+          "images": 8,
+          "geometry_partition": {
+            "partial_or_mixed_iou_010_050": 1,
+            "same_iou_050_075": 4,
+            "no_saved_mask_iou_ge_010": 1,
+            "same_iou_ge_075": 2
+          },
+          "matched50": 6,
+          "matched75": 2,
+          "matched50_score_ge_05": 6,
+          "matched50_score_quantiles": [
+            0.8834114670753479,
+            0.932707667350769,
+            0.9538273215293884,
+            0.971668466925621,
+            0.9765363931655884
+          ],
+          "any_geometry_ge50": 6,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.5299231514259493,
+            0.6468265672762374,
+            0.7604932692138934,
+            0.8798133022170361
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5938189845474614,
+            0.7329861388245936,
+            0.8147474472738812,
+            0.8906524374663616,
+            0.9787985865724381
+          ],
+          "same_ge50_recall_quantiles": [
+            0.747638326585695,
+            0.8318247405516399,
+            0.86084431538977,
+            0.9437607500943911,
+            0.9754204398447607
+          ]
+        },
+        "glove": {
+          "gt_count": 2,
+          "images": 1,
+          "geometry_partition": {
+            "same_iou_ge_075": 1,
+            "same_iou_050_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.0023477335926145315,
+            0.0031874814885668457,
+            0.00402722938451916,
+            0.004866977280471474,
+            0.005706725176423788
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.5076335877862596,
+            0.5753006625378079,
+            0.6429677372893562,
+            0.7106348120409045,
+            0.7783018867924528
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5635593220338984,
+            0.6653165503489532,
+            0.767073778664008,
+            0.8688310069790628,
+            0.9705882352941176
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7971014492753623,
+            0.8069455838118677,
+            0.816789718348373,
+            0.8266338528848783,
+            0.8364779874213837
+          ]
+        },
+        "hat": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "same_iou_ge_075": 1
+          },
+          "matched50": 1,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.10853216052055359,
+            0.10853216052055359,
+            0.10853216052055359,
+            0.10853216052055359,
+            0.10853216052055359
+          ],
+          "any_geometry_ge50": 1,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.7891891891891892,
+            0.7891891891891892,
+            0.7891891891891892,
+            0.7891891891891892,
+            0.7891891891891892
+          ],
+          "same_ge50_precision_quantiles": [
+            0.906832298136646,
+            0.906832298136646,
+            0.906832298136646,
+            0.906832298136646,
+            0.906832298136646
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8588235294117647,
+            0.8588235294117647,
+            0.8588235294117647,
+            0.8588235294117647,
+            0.8588235294117647
+          ]
+        },
+        "headband, head covering, hair accessory": {
+          "gt_count": 14,
+          "images": 14,
+          "geometry_partition": {
+            "same_iou_050_075": 6,
+            "partial_or_mixed_iou_010_050": 3,
+            "same_iou_ge_075": 4,
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 10,
+          "matched75": 4,
+          "matched50_score_ge_05": 6,
+          "matched50_score_quantiles": [
+            0.001164429821074009,
+            0.06534490548074245,
+            0.7905538976192474,
+            0.9528955221176147,
+            0.9691289067268372
+          ],
+          "any_geometry_ge50": 10,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.009316770186335404,
+            0.4713574660633484,
+            0.6526700399642569,
+            0.7582292385914255,
+            0.8123689727463312
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7153024911032029,
+            0.7674584631360332,
+            0.8252698968312454,
+            0.8458240946045824,
+            0.8963486454652533
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5956284153005464,
+            0.762814112869109,
+            0.847377089314727,
+            0.9049684040613892,
+            0.9872611464968153
+          ]
+        },
+        "shoe": {
+          "gt_count": 68,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 38,
+            "same_iou_ge_075": 16,
+            "no_saved_mask_iou_ge_010": 2,
+            "partial_or_mixed_iou_010_050": 12
+          },
+          "matched50": 54,
+          "matched75": 16,
+          "matched50_score_ge_05": 47,
+          "matched50_score_quantiles": [
+            0.00231200666166842,
+            0.9101039171218872,
+            0.9549755752086639,
+            0.9650866836309433,
+            0.9809097051620483
+          ],
+          "any_geometry_ge50": 54,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.5203815702443333,
+            0.6227621816854211,
+            0.7380746411217998,
+            0.8905180840664711
+          ],
+          "same_ge50_precision_quantiles": [
+            0.526595744680851,
+            0.7292423705967488,
+            0.8019254619720063,
+            0.8611737727195515,
+            0.9576107899807321
+          ],
+          "same_ge50_recall_quantiles": [
+            0.6006655574043261,
+            0.7657501053518753,
+            0.8516337368713507,
+            0.9144939272055654,
+            0.975925925925926
+          ]
+        },
+        "skirt": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 0,
+          "matched75": 0,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": null,
+          "any_geometry_ge50": 0,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "same_ge50_precision_quantiles": null,
+          "same_ge50_recall_quantiles": null
+        },
+        "sock": {
+          "gt_count": 13,
+          "images": 7,
+          "geometry_partition": {
+            "no_saved_mask_iou_ge_010": 1,
+            "same_iou_050_075": 2,
+            "partial_or_mixed_iou_010_050": 8,
+            "same_iou_ge_075": 2
+          },
+          "matched50": 4,
+          "matched75": 2,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.05311311408877373,
+            0.06671480555087328,
+            0.07126142457127571,
+            0.17470333352684975,
+            0.4849908947944641
+          ],
+          "any_geometry_ge50": 4,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.07590759075907591,
+            0.21875,
+            0.2669902912621359,
+            0.555984555984556,
+            0.8808664259927798
+          ],
+          "same_ge50_precision_quantiles": [
+            0.6075949367088608,
+            0.6318987341772152,
+            0.7874329501915709,
+            0.9423058878723903,
+            0.964625850340136
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8275862068965517,
+            0.8574989613626922,
+            0.8785279134102282,
+            0.9018048450921725,
+            0.9384615384615385
+          ]
+        },
+        "watch": {
+          "gt_count": 18,
+          "images": 18,
+          "geometry_partition": {
+            "same_iou_050_075": 7,
+            "same_iou_ge_075": 10,
+            "partial_or_mixed_iou_010_050": 1
+          },
+          "matched50": 17,
+          "matched75": 10,
+          "matched50_score_ge_05": 11,
+          "matched50_score_quantiles": [
+            0.015329242683947086,
+            0.3103353977203369,
+            0.8598659634590149,
+            0.9060738682746887,
+            0.9592716097831726
+          ],
+          "any_geometry_ge50": 17,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.42857142857142855,
+            0.7253949074471144,
+            0.7560924772130648,
+            0.8119718006209038,
+            0.8788927335640139
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7580071174377224,
+            0.8195819581958196,
+            0.864321608040201,
+            0.9053117782909931,
+            0.9477611940298507
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8016304347826086,
+            0.8198924731182796,
+            0.8821428571428571,
+            0.9236363636363636,
+            0.9637305699481865
+          ]
+        }
+      },
+      "by_area": {
+        "1_256": {
+          "gt_count": 36,
+          "images": 28,
+          "geometry_partition": {
+            "same_iou_050_075": 16,
+            "same_iou_ge_075": 3,
+            "no_saved_mask_iou_ge_010": 3,
+            "partial_or_mixed_iou_010_050": 14
+          },
+          "matched50": 19,
+          "matched75": 3,
+          "matched50_score_ge_05": 8,
+          "matched50_score_quantiles": [
+            0.00231200666166842,
+            0.028944977559149265,
+            0.11433573812246323,
+            0.8821895122528076,
+            0.9592716097831726
+          ],
+          "any_geometry_ge50": 19,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.24752167380917195,
+            0.5089714330683874,
+            0.6323084504136967,
+            0.7692307692307693
+          ],
+          "same_ge50_precision_quantiles": [
+            0.526595744680851,
+            0.6180952380952381,
+            0.7347826086956522,
+            0.8525732290815731,
+            0.9473684210526315
+          ],
+          "same_ge50_recall_quantiles": [
+            0.726027397260274,
+            0.8027291105121295,
+            0.8275862068965517,
+            0.8637349397590361,
+            0.9428571428571428
+          ]
+        },
+        "257_512": {
+          "gt_count": 31,
+          "images": 28,
+          "geometry_partition": {
+            "same_iou_050_075": 10,
+            "no_saved_mask_iou_ge_010": 6,
+            "partial_or_mixed_iou_010_050": 4,
+            "same_iou_ge_075": 11
+          },
+          "matched50": 21,
+          "matched75": 11,
+          "matched50_score_ge_05": 17,
+          "matched50_score_quantiles": [
+            0.001164429821074009,
+            0.7854779362678528,
+            0.9471653699874878,
+            0.9541707634925842,
+            0.9806493520736694
+          ],
+          "any_geometry_ge50": 21,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.31886614477339237,
+            0.6989966555183946,
+            0.7847249484120993,
+            0.8788927335640139
+          ],
+          "same_ge50_precision_quantiles": [
+            0.6564885496183206,
+            0.806941431670282,
+            0.8393574297188755,
+            0.9003831417624522,
+            0.9477611940298507
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7833333333333333,
+            0.8316221765913757,
+            0.8842105263157894,
+            0.9347826086956522,
+            0.9637305699481865
+          ]
+        },
+        "513_1024": {
+          "gt_count": 71,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 37,
+            "same_iou_ge_075": 24,
+            "partial_or_mixed_iou_010_050": 10
+          },
+          "matched50": 61,
+          "matched75": 24,
+          "matched50_score_ge_05": 49,
+          "matched50_score_quantiles": [
+            0.005306408740580082,
+            0.83881014585495,
+            0.9497436881065369,
+            0.9651806354522705,
+            0.9809097051620483
+          ],
+          "any_geometry_ge50": 61,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.32158951249487916,
+            0.5749025626035272,
+            0.6872322193658955,
+            0.7711914197922825,
+            0.8905180840664711
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5563282336578581,
+            0.7522935779816514,
+            0.8335809806835067,
+            0.8949771689497716,
+            0.9787985865724381
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5956284153005464,
+            0.760806916426513,
+            0.8632676709154113,
+            0.9165786694825766,
+            0.9872611464968153
+          ]
+        }
+      },
+      "wrong_class_only_destinations": {}
+    },
+    "20000": {
+      "all_small": {
+        "gt_count": 138,
+        "images": 96,
+        "geometry_partition": {
+          "same_iou_050_075": 67,
+          "same_iou_ge_075": 36,
+          "no_saved_mask_iou_ge_010": 7,
+          "partial_or_mixed_iou_010_050": 28
+        },
+        "matched50": 103,
+        "matched75": 36,
+        "matched50_score_ge_05": 73,
+        "matched50_score_quantiles": [
+          0.0012485341867431998,
+          0.31091228127479553,
+          0.9202971458435059,
+          0.9591324925422668,
+          0.9812792539596558
+        ],
+        "any_geometry_ge50": 103,
+        "top_scored_ge50_wrong_class": 2,
+        "same_best_iou_quantiles": [
+          0.0,
+          0.49788253896294166,
+          0.6391641130405176,
+          0.7528392452445825,
+          0.9002932551319648
+        ],
+        "same_ge50_precision_quantiles": [
+          0.5274725274725275,
+          0.7427944862155389,
+          0.8169014084507042,
+          0.8847531673219746,
+          0.9893048128342246
+        ],
+        "same_ge50_recall_quantiles": [
+          0.5833333333333334,
+          0.7837442922374429,
+          0.855,
+          0.9148893360160966,
+          0.9847133757961783
+        ]
+      },
+      "by_category": {
+        "3": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 0,
+          "matched75": 0,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": null,
+          "any_geometry_ge50": 0,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "same_ge50_precision_quantiles": null,
+          "same_ge50_recall_quantiles": null
+        },
+        "6": {
+          "gt_count": 68,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 39,
+            "same_iou_ge_075": 15,
+            "no_saved_mask_iou_ge_010": 2,
+            "partial_or_mixed_iou_010_050": 12
+          },
+          "matched50": 54,
+          "matched75": 15,
+          "matched50_score_ge_05": 46,
+          "matched50_score_quantiles": [
+            0.002150805201381445,
+            0.912148654460907,
+            0.9555700123310089,
+            0.9658904671669006,
+            0.9812792539596558
+          ],
+          "any_geometry_ge50": 54,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.5216144690367212,
+            0.6287407377597578,
+            0.7350979176817908,
+            0.9002932551319648
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5274725274725275,
+            0.7397090108993414,
+            0.805094999240006,
+            0.8794878243900074,
+            0.9666666666666667
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5833333333333334,
+            0.7567360298090778,
+            0.8437699177874414,
+            0.9109015516318887,
+            0.975925925925926
+          ]
+        },
+        "7": {
+          "gt_count": 2,
+          "images": 2,
+          "geometry_partition": {
+            "same_iou_050_075": 1,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.021089864894747734,
+            0.025418417993932962,
+            0.02974697109311819,
+            0.03407552419230342,
+            0.03840407729148865
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.6756756756756757,
+            0.6980037591548383,
+            0.7203318426340009,
+            0.7426599261131636,
+            0.7649880095923262
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7909090909090909,
+            0.8036503394116864,
+            0.8163915879142819,
+            0.8291328364168774,
+            0.8418740849194729
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7738896366083445,
+            0.820146686374094,
+            0.8664037361398436,
+            0.9126607859055932,
+            0.9589178356713427
+          ]
+        },
+        "8": {
+          "gt_count": 67,
+          "images": 48,
+          "geometry_partition": {
+            "same_iou_050_075": 27,
+            "same_iou_ge_075": 20,
+            "partial_or_mixed_iou_010_050": 16,
+            "no_saved_mask_iou_ge_010": 4
+          },
+          "matched50": 47,
+          "matched75": 20,
+          "matched50_score_ge_05": 27,
+          "matched50_score_quantiles": [
+            0.0012485341867431998,
+            0.0804964080452919,
+            0.7709199786186218,
+            0.932901918888092,
+            0.9777683615684509
+          ],
+          "any_geometry_ge50": 47,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.42902930402930406,
+            0.6489028213166145,
+            0.7573924908376618,
+            0.8900709219858156
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5641025641025641,
+            0.7579672531582764,
+            0.8272980501392758,
+            0.897297868167348,
+            0.9893048128342246
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5865209471766849,
+            0.798952002493377,
+            0.8613989637305699,
+            0.9119297458055103,
+            0.9847133757961783
+          ]
+        }
+      },
+      "by_source_category": {
+        "bag, wallet": {
+          "gt_count": 2,
+          "images": 2,
+          "geometry_partition": {
+            "same_iou_050_075": 1,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.021089864894747734,
+            0.025418417993932962,
+            0.02974697109311819,
+            0.03407552419230342,
+            0.03840407729148865
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.6756756756756757,
+            0.6980037591548383,
+            0.7203318426340009,
+            0.7426599261131636,
+            0.7649880095923262
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7909090909090909,
+            0.8036503394116864,
+            0.8163915879142819,
+            0.8291328364168774,
+            0.8418740849194729
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7738896366083445,
+            0.820146686374094,
+            0.8664037361398436,
+            0.9126607859055932,
+            0.9589178356713427
+          ]
+        },
+        "belt": {
+          "gt_count": 11,
+          "images": 10,
+          "geometry_partition": {
+            "partial_or_mixed_iou_010_050": 3,
+            "same_iou_050_075": 4,
+            "no_saved_mask_iou_ge_010": 3,
+            "same_iou_ge_075": 1
+          },
+          "matched50": 5,
+          "matched75": 1,
+          "matched50_score_ge_05": 4,
+          "matched50_score_quantiles": [
+            0.3482958972454071,
+            0.7556086182594299,
+            0.8218307495117188,
+            0.8575447797775269,
+            0.9509726166725159
+          ],
+          "any_geometry_ge50": 5,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.13618101918089415,
+            0.4175824175824176,
+            0.6191421754153115,
+            0.7712519319938176
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7074468085106383,
+            0.7194244604316546,
+            0.7295918367346939,
+            0.8652575957727873,
+            0.9257884972170687
+          ],
+          "same_ge50_recall_quantiles": [
+            0.6472332015810277,
+            0.7886435331230284,
+            0.8220757825370676,
+            0.8550074738415545,
+            0.8613989637305699
+          ]
+        },
+        "glasses": {
+          "gt_count": 8,
+          "images": 8,
+          "geometry_partition": {
+            "partial_or_mixed_iou_010_050": 1,
+            "same_iou_050_075": 5,
+            "same_iou_ge_075": 2
+          },
+          "matched50": 7,
+          "matched75": 2,
+          "matched50_score_ge_05": 6,
+          "matched50_score_quantiles": [
+            0.014374672435224056,
+            0.9133441150188446,
+            0.9533708095550537,
+            0.9654747843742371,
+            0.9777683615684509
+          ],
+          "any_geometry_ge50": 7,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.46446961894953653,
+            0.6283520783663316,
+            0.6674426566244437,
+            0.7666211808560208,
+            0.8900709219858156
+          ],
+          "same_ge50_precision_quantiles": [
+            0.6591478696741855,
+            0.705196776508252,
+            0.7715736040609137,
+            0.888953995157385,
+            0.9893048128342246
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7489878542510121,
+            0.8430490038292913,
+            0.8694214876033057,
+            0.9533706480205287,
+            0.9741267787839586
+          ]
+        },
+        "glove": {
+          "gt_count": 2,
+          "images": 1,
+          "geometry_partition": {
+            "same_iou_ge_075": 1,
+            "same_iou_050_075": 1
+          },
+          "matched50": 2,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.002479149727150798,
+            0.003278563206549734,
+            0.00407797668594867,
+            0.004877390165347606,
+            0.005676803644746542
+          ],
+          "any_geometry_ge50": 2,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.5057471264367817,
+            0.5733314468205523,
+            0.6409157672043229,
+            0.7085000875880934,
+            0.776084407971864
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5641025641025641,
+            0.6639793976038517,
+            0.7638562311051393,
+            0.8637330646064271,
+            0.9636098981077147
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7995169082125604,
+            0.8071848509707411,
+            0.8148527937289217,
+            0.8225207364871023,
+            0.8301886792452831
+          ]
+        },
+        "hat": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "same_iou_ge_075": 1
+          },
+          "matched50": 1,
+          "matched75": 1,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.08094864338636398,
+            0.08094864338636398,
+            0.08094864338636398,
+            0.08094864338636398,
+            0.08094864338636398
+          ],
+          "any_geometry_ge50": 1,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.7603092783505154,
+            0.7603092783505154,
+            0.7603092783505154,
+            0.7603092783505154,
+            0.7603092783505154
+          ],
+          "same_ge50_precision_quantiles": [
+            0.8600583090379009,
+            0.8600583090379009,
+            0.8600583090379009,
+            0.8600583090379009,
+            0.8600583090379009
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8676470588235294,
+            0.8676470588235294,
+            0.8676470588235294,
+            0.8676470588235294,
+            0.8676470588235294
+          ]
+        },
+        "headband, head covering, hair accessory": {
+          "gt_count": 14,
+          "images": 14,
+          "geometry_partition": {
+            "same_iou_050_075": 7,
+            "partial_or_mixed_iou_010_050": 3,
+            "same_iou_ge_075": 3,
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 10,
+          "matched75": 3,
+          "matched50_score_ge_05": 6,
+          "matched50_score_quantiles": [
+            0.0012485341867431998,
+            0.06723421346396208,
+            0.7419459223747253,
+            0.9503220468759537,
+            0.9699999094009399
+          ],
+          "any_geometry_ge50": 10,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.2936564702972338,
+            0.6499519063071443,
+            0.7271063501124954,
+            0.8267379679144385
+          ],
+          "same_ge50_precision_quantiles": [
+            0.7168784029038112,
+            0.7829203599247918,
+            0.7983506930598312,
+            0.8295037317924643,
+            0.9034564958283671
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5865209471766849,
+            0.7845381182653585,
+            0.8501086533268016,
+            0.8975805301803591,
+            0.9847133757961783
+          ]
+        },
+        "shoe": {
+          "gt_count": 68,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 39,
+            "same_iou_ge_075": 15,
+            "no_saved_mask_iou_ge_010": 2,
+            "partial_or_mixed_iou_010_050": 12
+          },
+          "matched50": 54,
+          "matched75": 15,
+          "matched50_score_ge_05": 46,
+          "matched50_score_quantiles": [
+            0.002150805201381445,
+            0.912148654460907,
+            0.9555700123310089,
+            0.9658904671669006,
+            0.9812792539596558
+          ],
+          "any_geometry_ge50": 54,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.5216144690367212,
+            0.6287407377597578,
+            0.7350979176817908,
+            0.9002932551319648
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5274725274725275,
+            0.7397090108993414,
+            0.805094999240006,
+            0.8794878243900074,
+            0.9666666666666667
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5833333333333334,
+            0.7567360298090778,
+            0.8437699177874414,
+            0.9109015516318887,
+            0.975925925925926
+          ]
+        },
+        "skirt": {
+          "gt_count": 1,
+          "images": 1,
+          "geometry_partition": {
+            "no_saved_mask_iou_ge_010": 1
+          },
+          "matched50": 0,
+          "matched75": 0,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": null,
+          "any_geometry_ge50": 0,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "same_ge50_precision_quantiles": null,
+          "same_ge50_recall_quantiles": null
+        },
+        "sock": {
+          "gt_count": 13,
+          "images": 7,
+          "geometry_partition": {
+            "same_iou_050_075": 3,
+            "partial_or_mixed_iou_010_050": 8,
+            "same_iou_ge_075": 2
+          },
+          "matched50": 5,
+          "matched75": 2,
+          "matched50_score_ge_05": 0,
+          "matched50_score_quantiles": [
+            0.0296160988509655,
+            0.035499513149261475,
+            0.059761736541986465,
+            0.07385266572237015,
+            0.470432847738266
+          ],
+          "any_geometry_ge50": 5,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.13402061855670103,
+            0.20915032679738563,
+            0.44047619047619047,
+            0.58,
+            0.8818181818181818
+          ],
+          "same_ge50_precision_quantiles": [
+            0.64,
+            0.6682926829268293,
+            0.6744186046511628,
+            0.941747572815534,
+            0.9608108108108108
+          ],
+          "same_ge50_recall_quantiles": [
+            0.8055555555555556,
+            0.8253012048192772,
+            0.8275862068965517,
+            0.8920953575909661,
+            0.9326923076923077
+          ]
+        },
+        "watch": {
+          "gt_count": 18,
+          "images": 18,
+          "geometry_partition": {
+            "same_iou_050_075": 7,
+            "same_iou_ge_075": 10,
+            "partial_or_mixed_iou_010_050": 1
+          },
+          "matched50": 17,
+          "matched75": 10,
+          "matched50_score_ge_05": 11,
+          "matched50_score_quantiles": [
+            0.012263597920536995,
+            0.27352866530418396,
+            0.8515105247497559,
+            0.9028596878051758,
+            0.9583332538604736
+          ],
+          "any_geometry_ge50": 17,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.4157782515991471,
+            0.7291377515614157,
+            0.7523745257314558,
+            0.8135973666828769,
+            0.875
+          ],
+          "same_ge50_precision_quantiles": [
+            0.77431906614786,
+            0.8230337078651685,
+            0.875,
+            0.9048723897911833,
+            0.9712643678160919
+          ],
+          "same_ge50_recall_quantiles": [
+            0.6790266512166859,
+            0.7983870967741935,
+            0.8785714285714286,
+            0.9444444444444444,
+            0.961139896373057
+          ]
+        }
+      },
+      "by_area": {
+        "1_256": {
+          "gt_count": 36,
+          "images": 28,
+          "geometry_partition": {
+            "same_iou_050_075": 17,
+            "same_iou_ge_075": 3,
+            "partial_or_mixed_iou_010_050": 14,
+            "no_saved_mask_iou_ge_010": 2
+          },
+          "matched50": 20,
+          "matched75": 3,
+          "matched50_score_ge_05": 7,
+          "matched50_score_quantiles": [
+            0.002150805201381445,
+            0.02406860701739788,
+            0.08475067093968391,
+            0.8653780668973923,
+            0.959510862827301
+          ],
+          "any_geometry_ge50": 20,
+          "top_scored_ge50_wrong_class": 2,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.21917239845327313,
+            0.5143911783945425,
+            0.6313019506286287,
+            0.7764705882352941
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5274725274725275,
+            0.658046875,
+            0.7368112181863109,
+            0.7874797923934315,
+            0.9712643678160919
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7452830188679245,
+            0.7770846923244183,
+            0.8234614132204494,
+            0.8750315656565656,
+            0.9521531100478469
+          ]
+        },
+        "257_512": {
+          "gt_count": 31,
+          "images": 28,
+          "geometry_partition": {
+            "same_iou_050_075": 12,
+            "no_saved_mask_iou_ge_010": 5,
+            "partial_or_mixed_iou_010_050": 4,
+            "same_iou_ge_075": 10
+          },
+          "matched50": 22,
+          "matched75": 10,
+          "matched50_score_ge_05": 17,
+          "matched50_score_quantiles": [
+            0.0012485341867431998,
+            0.7290898561477661,
+            0.932901918888092,
+            0.9523968994617462,
+            0.9812792539596558
+          ],
+          "any_geometry_ge50": 22,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.0,
+            0.41726026416580164,
+            0.7,
+            0.7647700237906423,
+            0.875
+          ],
+          "same_ge50_precision_quantiles": [
+            0.6621880998080614,
+            0.803501564945227,
+            0.8479333184858908,
+            0.8893024426121627,
+            0.9509433962264151
+          ],
+          "same_ge50_recall_quantiles": [
+            0.7866666666666666,
+            0.8111893406011054,
+            0.8738235294117647,
+            0.9354967948717949,
+            0.961139896373057
+          ]
+        },
+        "513_1024": {
+          "gt_count": 71,
+          "images": 56,
+          "geometry_partition": {
+            "same_iou_050_075": 38,
+            "same_iou_ge_075": 23,
+            "partial_or_mixed_iou_010_050": 10
+          },
+          "matched50": 61,
+          "matched75": 23,
+          "matched50_score_ge_05": 49,
+          "matched50_score_quantiles": [
+            0.004841138608753681,
+            0.8218307495117188,
+            0.9525522589683533,
+            0.9659656882286072,
+            0.9805294275283813
+          ],
+          "any_geometry_ge50": 61,
+          "top_scored_ge50_wrong_class": 0,
+          "same_best_iou_quantiles": [
+            0.28517469310670446,
+            0.5765372382719322,
+            0.6645502645502646,
+            0.7711175727115371,
+            0.9002932551319648
+          ],
+          "same_ge50_precision_quantiles": [
+            0.5345285524568393,
+            0.7604938271604939,
+            0.8374864572047671,
+            0.9034564958283671,
+            0.9893048128342246
+          ],
+          "same_ge50_recall_quantiles": [
+            0.5833333333333334,
+            0.7489878542510121,
+            0.8550074738415545,
+            0.916083916083916,
+            0.9847133757961783
+          ]
+        }
+      },
+      "wrong_class_only_destinations": {}
+    }
+  },
+  "geometry_transitions": {
+    "same_iou_050_075 -> same_iou_050_075": 62,
+    "same_iou_ge_075 -> same_iou_ge_075": 35,
+    "no_saved_mask_iou_ge_010 -> no_saved_mask_iou_ge_010": 7,
+    "partial_or_mixed_iou_010_050 -> partial_or_mixed_iou_010_050": 28,
+    "no_saved_mask_iou_ge_010 -> same_iou_050_075": 2,
+    "same_iou_ge_075 -> same_iou_050_075": 3,
+    "same_iou_050_075 -> same_iou_ge_075": 1
+  },
+  "selected_cases": [
+    {
+      "kind": "no_overlap",
+      "annotation_id": 1000006092,
+      "image_id": 1000009794,
+      "old": {
+        "annotation_id": 1000006092,
+        "image_id": 1000009794,
+        "category_id": 8,
+        "source_category_id": 19,
+        "area": 424,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 2501,
+          "score": 0.0037587154656648636,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 1.79353967010827e-05,
+          "detection_id": 2555,
+          "score": 0.0013925883686169982,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "belt",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 424,
+          "false_positive_pixels": 1311,
+          "predicted_area": 1311,
+          "gt_area": 424
+        },
+        "gt_bbox_xywh": [
+          261,
+          946,
+          33,
+          69
+        ],
+        "gt_bbox_fill": 0.18620992534036013,
+        "approximate_eval_scaled_bbox_wh": [
+          38.82352941176471,
+          81.17647058823529
+        ]
+      },
+      "new": {
+        "annotation_id": 1000006092,
+        "image_id": 1000009794,
+        "category_id": 8,
+        "source_category_id": 19,
+        "area": 424,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 2501,
+          "score": 0.0016272485954687,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 1.2254226176252535e-05,
+          "detection_id": 2546,
+          "score": 0.0015116139547899365,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "belt",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 424,
+          "false_positive_pixels": 1337,
+          "predicted_area": 1337,
+          "gt_area": 424
+        },
+        "gt_bbox_xywh": [
+          261,
+          946,
+          33,
+          69
+        ],
+        "gt_bbox_fill": 0.18620992534036013,
+        "approximate_eval_scaled_bbox_wh": [
+          38.82352941176471,
+          81.17647058823529
+        ]
+      }
+    },
+    {
+      "kind": "partial_mask",
+      "annotation_id": 1000008221,
+      "image_id": 1000012292,
+      "old": {
+        "annotation_id": 1000008221,
+        "image_id": 1000012292,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 930,
+        "small": true,
+        "best_same": {
+          "iou": 0.4940898345153664,
+          "detection_id": 8867,
+          "score": 0.9108057022094727,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.3957703927492447,
+          "detection_id": 8814,
+          "score": 0.0014724222710356116,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.4940898345153664,
+          "precision": 0.523153942428035,
+          "recall": 0.8989247311827957,
+          "false_negative_pixels": 94,
+          "false_positive_pixels": 762,
+          "predicted_area": 1598,
+          "gt_area": 930
+        },
+        "gt_bbox_xywh": [
+          349,
+          938,
+          49,
+          46
+        ],
+        "gt_bbox_fill": 0.4125998225377107,
+        "approximate_eval_scaled_bbox_wh": [
+          63.7861328125,
+          59.880859375
+        ]
+      },
+      "new": {
+        "annotation_id": 1000008221,
+        "image_id": 1000012292,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 930,
+        "small": true,
+        "best_same": {
+          "iou": 0.49556999409332547,
+          "detection_id": 8865,
+          "score": 0.9150711894035339,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.39223218096457535,
+          "detection_id": 8813,
+          "score": 0.0017663926118984818,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.49556999409332547,
+          "precision": 0.5237203495630461,
+          "recall": 0.9021505376344086,
+          "false_negative_pixels": 91,
+          "false_positive_pixels": 763,
+          "predicted_area": 1602,
+          "gt_area": 930
+        },
+        "gt_bbox_xywh": [
+          349,
+          938,
+          49,
+          46
+        ],
+        "gt_bbox_fill": 0.4125998225377107,
+        "approximate_eval_scaled_bbox_wh": [
+          63.7861328125,
+          59.880859375
+        ]
+      }
+    },
+    {
+      "kind": "boundary_limit",
+      "annotation_id": 1000001244,
+      "image_id": 1000016529,
+      "old": {
+        "annotation_id": 1000001244,
+        "image_id": 1000016529,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 596,
+        "small": true,
+        "best_same": {
+          "iou": 0.7424023154848046,
+          "detection_id": 14969,
+          "score": 0.9651806354522705,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.6909361069836553,
+          "detection_id": 14929,
+          "score": 0.004763205070048571,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 14969,
+          "55": 14969,
+          "60": 14969,
+          "65": 14969,
+          "70": 14969,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.9651806354522705,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 6,
+          "score": 0.9651806354522705,
+          "iou": 0.7424023154848046
+        },
+        "extent": {
+          "iou": 0.7424023154848046,
+          "precision": 0.84375,
+          "recall": 0.860738255033557,
+          "false_negative_pixels": 83,
+          "false_positive_pixels": 95,
+          "predicted_area": 608,
+          "gt_area": 596
+        },
+        "gt_bbox_xywh": [
+          326,
+          851,
+          49,
+          70
+        ],
+        "gt_bbox_fill": 0.17376093294460643,
+        "approximate_eval_scaled_bbox_wh": [
+          57.39385065885798,
+          81.99121522693997
+        ]
+      },
+      "new": {
+        "annotation_id": 1000001244,
+        "image_id": 1000016529,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 596,
+        "small": true,
+        "best_same": {
+          "iou": 0.74235807860262,
+          "detection_id": 14968,
+          "score": 0.965664803981781,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.697151424287856,
+          "detection_id": 14928,
+          "score": 0.0049185557290911674,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 14968,
+          "55": 14968,
+          "60": 14968,
+          "65": 14968,
+          "70": 14968,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.965664803981781,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 6,
+          "score": 0.965664803981781,
+          "iou": 0.74235807860262
+        },
+        "extent": {
+          "iou": 0.74235807860262,
+          "precision": 0.848585690515807,
+          "recall": 0.8557046979865772,
+          "false_negative_pixels": 86,
+          "false_positive_pixels": 91,
+          "predicted_area": 601,
+          "gt_area": 596
+        },
+        "gt_bbox_xywh": [
+          326,
+          851,
+          49,
+          70
+        ],
+        "gt_bbox_fill": 0.17376093294460643,
+        "approximate_eval_scaled_bbox_wh": [
+          57.39385065885798,
+          81.99121522693997
+        ]
+      }
+    },
+    {
+      "kind": "largest_drop",
+      "annotation_id": 1000006019,
+      "image_id": 1000009765,
+      "old": {
+        "annotation_id": 1000006019,
+        "image_id": 1000009765,
+        "category_id": 8,
+        "source_category_id": 15,
+        "area": 140,
+        "small": true,
+        "best_same": {
+          "iou": 0.46078431372549017,
+          "detection_id": 2374,
+          "score": 0.04464643821120262,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 2302,
+          "score": 0.014521456323564053,
+          "category_id": 6
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "headband, head covering, hair accessory",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.46078431372549017,
+          "precision": 0.5949367088607594,
+          "recall": 0.6714285714285714,
+          "false_negative_pixels": 46,
+          "false_positive_pixels": 64,
+          "predicted_area": 158,
+          "gt_area": 140
+        },
+        "gt_bbox_xywh": [
+          330,
+          248,
+          17,
+          14
+        ],
+        "gt_bbox_fill": 0.5882352941176471,
+        "approximate_eval_scaled_bbox_wh": [
+          19.91215226939971,
+          16.398243045387993
+        ]
+      },
+      "new": {
+        "annotation_id": 1000006019,
+        "image_id": 1000009765,
+        "category_id": 8,
+        "source_category_id": 15,
+        "area": 140,
+        "small": true,
+        "best_same": {
+          "iou": 0.22251308900523561,
+          "detection_id": 2347,
+          "score": 0.02707696706056595,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 2302,
+          "score": 0.013386102393269539,
+          "category_id": 6
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "headband, head covering, hair accessory",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.22251308900523561,
+          "precision": 0.2599388379204893,
+          "recall": 0.6071428571428571,
+          "false_negative_pixels": 55,
+          "false_positive_pixels": 242,
+          "predicted_area": 327,
+          "gt_area": 140
+        },
+        "gt_bbox_xywh": [
+          330,
+          248,
+          17,
+          14
+        ],
+        "gt_bbox_fill": 0.5882352941176471,
+        "approximate_eval_scaled_bbox_wh": [
+          19.91215226939971,
+          16.398243045387993
+        ]
+      }
+    },
+    {
+      "kind": "largest_gain",
+      "annotation_id": 1000007644,
+      "image_id": 1000011092,
+      "old": {
+        "annotation_id": 1000007644,
+        "image_id": 1000011092,
+        "category_id": 8,
+        "source_category_id": 13,
+        "area": 453,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 6201,
+          "score": 0.008323190733790398,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 6202,
+          "score": 0.005569356959313154,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "glasses",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 453,
+          "false_positive_pixels": 346,
+          "predicted_area": 346,
+          "gt_area": 453
+        },
+        "gt_bbox_xywh": [
+          476,
+          172,
+          44,
+          16
+        ],
+        "gt_bbox_fill": 0.6434659090909091,
+        "approximate_eval_scaled_bbox_wh": [
+          51.76470588235294,
+          18.823529411764707
+        ]
+      },
+      "new": {
+        "annotation_id": 1000007644,
+        "image_id": 1000011092,
+        "category_id": 8,
+        "source_category_id": 13,
+        "area": 453,
+        "small": true,
+        "best_same": {
+          "iou": 0.6740157480314961,
+          "detection_id": 6287,
+          "score": 0.014374672435224056,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 6205,
+          "score": 0.38034650683403015,
+          "category_id": 4
+        },
+        "matched_detection_ids": {
+          "50": 6287,
+          "55": 6287,
+          "60": 6287,
+          "65": 6287,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "glasses",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.014374672435224056,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 8,
+          "score": 0.014374672435224056,
+          "iou": 0.6740157480314961
+        },
+        "extent": {
+          "iou": 0.6740157480314961,
+          "precision": 0.7016393442622951,
+          "recall": 0.9448123620309051,
+          "false_negative_pixels": 25,
+          "false_positive_pixels": 182,
+          "predicted_area": 610,
+          "gt_area": 453
+        },
+        "gt_bbox_xywh": [
+          476,
+          172,
+          44,
+          16
+        ],
+        "gt_bbox_fill": 0.6434659090909091,
+        "approximate_eval_scaled_bbox_wh": [
+          51.76470588235294,
+          18.823529411764707
+        ]
+      }
+    }
+  ],
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "checkpoint_loaded": false,
+  "torch_imported": false,
+  "elapsed_seconds": 0.346501167,
+  "finished_at": "2026-11-15T10:25:33.222560+00:00",
+  "source_script_sha256": "183235ce754ac913a50d2551e0f73b165c9a53227a6f83832c3c205d594014d5",
+  "parent_analysis_sha256": "d6b881b63db38aec1ea9880ce143f4b91462201a412f64cd28c5c940f14bd251",
+  "output_ledgers": {
+    "18000": "98ec9a7a774e0bf99415c93a0a88d3bbb11c9449d0711f14cf8dc9862798fc83",
+    "20000": "d49355606c1da217861c93cee9febd8dc57e0d0089b892b5b72b7e6c6cf71923"
+  }
+}

@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式S0恢复及八点dev评价](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已于2026-11-15完成：从18000续至20000，复用七份已有权重，选中18000步，mask AP=63.5792（旧3000步50.5603，提升13.0188点）。总耗时30.89分钟，低于三小时硬上限，GPU已释放；无重复smoke或自动延长。新18000候选尚未导出。
+> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成20000步及八点dev，选择18k AP=63.5792。[18k/20k小目标离线诊断](docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)表明主要短板为高IoU形状/边界及部分漏检，错类独占几何为0；不直接延长原配方。新18k候选仍待交付，本轮0新推理/训练/旧smoke。
 
 ## 团队与 Codex 开工入口
 
