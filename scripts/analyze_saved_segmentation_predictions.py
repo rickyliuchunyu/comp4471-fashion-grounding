@@ -148,7 +148,11 @@ def analyze(coco, rows, report, high_score):
             low, high = ev.params.areaRng[a]
             subset = [g for g in gs if low <= g['area'] <= high]
             by_cat[str(cid)]['sizes'][label] = dict(gt_count=len(subset),
-                AP=valid_mean(precision[:, :, k, a, -1]), AR=valid_mean(recall[:, k, a, -1]))
+                AP=valid_mean(precision[:, :, k, a, -1]), AR=valid_mean(recall[:, k, a, -1]),
+                AP50=valid_mean(precision[0, :, k, a, -1]),
+                AP75=valid_mean(precision[5, :, k, a, -1]),
+                recall50=valid_mean(recall[0, k, a, -1]),
+                recall75=valid_mean(recall[5, k, a, -1]))
         assert abs(by_cat[str(cid)]['AP'] - report['metrics']['per_category_AP'][str(cid)]) < 1e-8
     return by_cat, per_gt, per_detection
 
@@ -231,7 +235,7 @@ def main():
     meta = dict(record_schema_version=1, run_id=output.name, experiment_id='S0', owner='segmentation', executed_by='lcy',
         decision_executor='Codex', status='completed', git_commit=args.source_commit, split='dev', candidate_source='none',
         seed=42, source_script_sha256=digest(__file__), config_sha256=digest(args.config),
-        parent_run_ids=['segmentation-resume5000-ap-20261113-r01'], inputs=inputs,
+        parent_run_ids=config.get('parent_run_ids', ['segmentation-resume5000-ap-20261113-r01']), inputs=inputs,
         command=[sys.executable, *sys.argv], elapsed_seconds=time.monotonic()-start,
         finished_at=datetime.now(timezone.utc).isoformat(), inference_calls=0, optimizer_updates=0,
         torch_imported=False, checkpoint_loaded=False, queries_read=False,

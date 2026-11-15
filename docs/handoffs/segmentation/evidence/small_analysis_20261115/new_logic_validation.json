@@ -1,0 +1,12 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 .venv-segmentation/bin/python tests/test_small_segmentation_errors.py -v",
+  "tests": 2,
+  "status": "passed",
+  "seconds": 0.001,
+  "scope": [
+    "exclusive GT geometry partition at exact .1/.5/.75 boundaries",
+    "pixel missing/spill/empty/exact-mask extent distinction"
+  ],
+  "old_smoke_runs": 0,
+  "model_loads": 0
+}

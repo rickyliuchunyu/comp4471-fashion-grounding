@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-15T10:21:42.196148+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281502208,
+      "free": 28930752512
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 45050695680,
+      "free": 169697669120
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 0 %",
+  "gpu_processes": "",
+  "active_coordination": [],
+  "execution_plan": "Local CPU on copied saved predictions; no server compute or GPU lock needed."
+}
