@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "parent_checkpoint_sha256": "3a8a016203a453ae249a13db717f535be823d687fbc6241d976b90682907cb11",
+  "parent_git_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+  "parent_config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+  "parent_completed_updates": 5000,
+  "target_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+  "parent_source_tree": "71d77730c46823a932d6b55fa07ccab9edf00cca",
+  "target_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "allowed_changes": {
+    "budget_seconds": {
+      "before": 2100,
+      "after": 8400
+    },
+    "checkpoint_updates": {
+      "before": [
+        2000,
+        3000,
+        5000
+      ],
+      "after": [
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000
+      ]
+    },
+    "max_updates": {
+      "before": 5000,
+      "after": 20000
+    },
+    "run_scope": {
+      "before": "bounded_resume_update1000_to5000_not_complete_S0",
+      "after": "formal_S0_resume_update5000_to20000"
+    }
+  },
+  "reason": "Prepared at user request for formal S0 continuation 5000 to 20000; execution is not authorized in this preparation stage. Preserve the training recipe and all restored state.",
+  "reviewed_source_changes": [
+    "No existing src/fashion_grounding files changed since parent training commit; only evaluation/__init__.py, evaluation/matching.py, segmentation/candidate_cache.py, segmentation/export_candidates.py, segmentation/select_threshold.py added. No training or COCO AP code change."
+  ]
+}

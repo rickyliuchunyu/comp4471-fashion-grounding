@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-11-15 07:18:51 UTC",
+  "evidence": "GitHub connector PR inventory/details/comments and live git ls-remote --heads; initial fetch failed, subsequent live ref check succeeded",
+  "branches": [
+    {
+      "branch": "main",
+      "head": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+    },
+    {
+      "branch": "segmentation/pilot-adapter-v1",
+      "head": "fea8ba28877164568d4d27fe5c2a4a374178fa65"
+    },
+    {
+      "branch": "data-eval/p3-baseline-evaluation",
+      "head": "f5787f4ac7b6941abdadc43f9fbdc666eba93925"
+    },
+    {
+      "branch": "grounding/siglip-baseline-interfaces",
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef"
+    }
+  ],
+  "prs": [
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "head_sha": "fea8ba28877164568d4d27fe5c2a4a374178fa65",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "comments": []
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "comments": []
+    }
+  ],
+  "teammate_handoffs": [
+    {
+      "commit": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "path": "docs/handoffs/data_eval/large_dataset_20261112.md"
+    },
+    {
+      "commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "path": "docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md"
+    }
+  ],
+  "changes_since_previous_check": "No new remote branches, PRs or teammate head/comment changes"
+}

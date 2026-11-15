@@ -4,11 +4,11 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [离线 coverage / 阈值选择入口](docs/handoffs/segmentation/offline_coverage_20261115.md)已完成，10 项新增专项测试通过；2026-11-15 实查 accepted dev 仍为 0，真实 coverage 与正式阈值未测。复用已交付的 u3000 dev250 三个候选包；本轮未重新推理、候选验收或训练。
+> [正式 S0 5000→20000 步准备](docs/handoffs/segmentation/s0_20000_preparation_20261115.md)已完成：固定恢复记录、八点完整 dev 评价方案、总硬上限 3 小时。本轮没有启动训练、推理或 AP；分割主线不等待语言 dev。当前最佳仍为 u3000，既有 dev250 三个候选包与离线 coverage 入口继续复用。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/dev_ap_20261112.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/s0_20000_preparation_20261115.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -75,6 +75,6 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：分割train/dev按用户人工复核确认固定；lcy保留3000步权重，已完成dev250的一次真实候选推理、阈值前缓存及三包离线导出/wyz接口验证。wyz/wkq可接收固定包并建立独立predicted缓存；正式阈值选择依赖accepted语言dev。wyz继续M2和正式可比训练准备，wkq继续语言dev审核及生产方记录归档。本轮未生成train5000候选，不追加训练，不重复已有smoke。
+按[最新状态](docs/status.md)推进：分割 train/dev 已固定；lcy 已准备从有效5000步连续训练到20000步的正式S0配置，后续明确启动后按三小时总上限执行，评价6000至20000的八份权重，并与旧3000步最佳比较。本轮只准备，未启动或排队；不重复已有smoke。现有3000步候选包继续交付队友，正式候选阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；这些工作与分割训练并行。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

@@ -1,0 +1,122 @@
+{
+  "status": "passed",
+  "scope": "new S0 configuration and pinned transition metadata only",
+  "source_snapshot": "fea8ba28877164568d4d27fe5c2a4a374178fa65",
+  "target_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "target_training_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+  "target_evaluation_config_sha256": "a9f5a0223742402e68b1ac71880e88b83839343c43b9a7846d4b1a8599f1b54c",
+  "stage_plan_sha256": "585919b093fb3c405d8922b2df31e5d91fe6d2ff43d4b3d4a45806f9b7672d34",
+  "transition": {
+    "schema_version": 1,
+    "parent_checkpoint_sha256": "3a8a016203a453ae249a13db717f535be823d687fbc6241d976b90682907cb11",
+    "parent_git_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+    "parent_config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+    "parent_completed_updates": 5000,
+    "target_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+    "parent_source_tree": "71d77730c46823a932d6b55fa07ccab9edf00cca",
+    "target_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+    "target_git_commit": "fea8ba28877164568d4d27fe5c2a4a374178fa65",
+    "changes": {
+      "checkpoint_updates": {
+        "before": [
+          2000,
+          3000,
+          5000
+        ],
+        "after": [
+          6000,
+          8000,
+          10000,
+          12000,
+          14000,
+          16000,
+          18000,
+          20000
+        ]
+      },
+      "budget_seconds": {
+        "before": 2100,
+        "after": 8400
+      },
+      "max_updates": {
+        "before": 5000,
+        "after": 20000
+      },
+      "run_scope": {
+        "before": "bounded_resume_update1000_to5000_not_complete_S0",
+        "after": "formal_S0_resume_update5000_to20000"
+      }
+    },
+    "reason": "Prepared at user request for formal S0 continuation 5000 to 20000; execution is not authorized in this preparation stage. Preserve the training recipe and all restored state."
+  },
+  "checkpoint_updates": [
+    6000,
+    8000,
+    10000,
+    12000,
+    14000,
+    16000,
+    18000,
+    20000
+  ],
+  "learning_rates_by_next_update": {
+    "5001": [
+      0.0001,
+      1e-05
+    ],
+    "12000": [
+      0.0001,
+      1e-05
+    ],
+    "12001": [
+      1e-05,
+      1.0000000000000002e-06
+    ],
+    "16000": [
+      1e-05,
+      1.0000000000000002e-06
+    ],
+    "16001": [
+      1.0000000000000002e-06,
+      1.0000000000000002e-07
+    ],
+    "20000": [
+      1.0000000000000002e-06,
+      1.0000000000000002e-07
+    ]
+  },
+  "unchanged_parent_source_blobs": {
+    "src/fashion_grounding/__init__.py": "8e2dd8c0dec3f7ff521e161b4e6a5f2399e9229e",
+    "src/fashion_grounding/data/__init__.py": "7ef0848af0ece503c3831bfe0bc7bf57420f4b7b",
+    "src/fashion_grounding/data/convert.py": "b20479dc45810aeeece20fb3e9b1cd4490588be8",
+    "src/fashion_grounding/data/review.py": "bfe60843de20d29d553ce62204da6e296b890ace",
+    "src/fashion_grounding/data/schema.py": "533f3e4db2d9f092c209719fcabf7f777bb9e215",
+    "src/fashion_grounding/segmentation/__init__.py": "9a02dee5c47d5cfa2dc3c338bef3da86dd5c44e1",
+    "src/fashion_grounding/segmentation/checkpoint.py": "305f0ee5baf13884a13ef08360cd2e4c5c2bf62a",
+    "src/fashion_grounding/segmentation/data.py": "4f9b05c63980634c459b201b0a8be95c04daa63a",
+    "src/fashion_grounding/segmentation/evaluate.py": "b4b0482b91191dbb9d7005a0fa197e489e30652c",
+    "src/fashion_grounding/segmentation/evaluation.py": "8af3b2ec680ca170de1cb93a20ceb68ad0a6ad6f",
+    "src/fashion_grounding/segmentation/model.py": "28b73400e6ee8a33f0d0d3c82e4ecda7b591f347",
+    "src/fashion_grounding/segmentation/predict.py": "b618c8359940a268db1d303237a9f8d10fd90333",
+    "src/fashion_grounding/segmentation/pretrained_check.py": "3ff2b0224e82bac0d70da1319e082545f4b14732",
+    "src/fashion_grounding/segmentation/resume_extension.py": "92ccc2f1f6850ca8f51c9785b433ed485cd939a2",
+    "src/fashion_grounding/segmentation/select_checkpoint.py": "fccde12407a597388202e7dfc296f38865d16c1e",
+    "src/fashion_grounding/segmentation/smoke.py": "e0f6b5463a846e74957571af546173d567121efe",
+    "src/fashion_grounding/segmentation/train.py": "41b3b63c701dae555fe2e57c6a0e61320c20968d",
+    "src/fashion_grounding/segmentation/training_state.py": "edb1d3cbb3f4a7b033a2d52fb417b7a5ac64016d"
+  },
+  "added_source_files": [
+    "A\tsrc/fashion_grounding/evaluation/__init__.py",
+    "A\tsrc/fashion_grounding/evaluation/matching.py",
+    "A\tsrc/fashion_grounding/segmentation/candidate_cache.py",
+    "A\tsrc/fashion_grounding/segmentation/export_candidates.py",
+    "A\tsrc/fashion_grounding/segmentation/select_threshold.py"
+  ],
+  "prior_best_report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163",
+  "model_imports": 0,
+  "checkpoint_deserializations": 0,
+  "gpu_calls": 0,
+  "optimizer_updates": 0,
+  "old_smoke_runs": 0,
+  "note": "Parent report metadata reused; actual 5000-to-20000 state restoration is not executed."
+}
