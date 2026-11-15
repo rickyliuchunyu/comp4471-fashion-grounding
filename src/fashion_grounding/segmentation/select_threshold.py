@@ -1,4 +1,4 @@
-"""CPU-only coverage and threshold selection from accepted dev and saved packages.
+"""CPU-only coverage/selection with explicit accepted or user-authorized dev basis.
 
 No model, pixels, checkpoint, feature encoding, or prediction generation is used.
 The shared wkq matcher is imported unchanged; association is evaluation-only.
@@ -34,20 +34,38 @@ def referenced(ref, base):
     return path.resolve()
 
 
-def load_frozen_dev(path, config):
+def load_frozen_dev(path, config, *, allow_user_authorized_dev=False):
     """Validate new query/freeze metadata BEFORE opening any candidate masks."""
     path = Path(path).resolve()
     freeze = read_json(path)
-    require(freeze.get('schema_version') == 1 and
-            freeze.get('purpose') == 'accepted_language_dev_freeze' and
-            freeze.get('formal_freeze') is True and freeze.get('split') == 'dev',
-            'Accepted language dev is not frozen')
+    require(freeze.get('schema_version') == 1 and freeze.get('split') == 'dev',
+            'Dev-only freeze receipt required')
+    user_authorized = freeze.get('purpose') == 'user_authorized_language_dev'
+    if user_authorized:
+        require(allow_user_authorized_dev and freeze.get('development_freeze') is True and
+                freeze.get('formal_freeze') is False,
+                'Explicit user-authorized dev opt-in required; not an accepted release')
+        authorization = read_json(referenced(freeze['authorization_record'], path.parent))
+        require(authorization.get('schema_version') == 1 and
+                authorization.get('authority') == 'current_user' and
+                authorization.get('authorized_use') == 'offline_candidate_threshold_selection' and
+                isinstance(authorization.get('user_statement'), str) and
+                authorization['user_statement'].strip() and
+                authorization.get('confirmed_by') == freeze.get('confirmed_by') and
+                authorization.get('confirmed_at') == freeze.get('confirmed_at') and
+                authorization.get('queries_sha256') == freeze['queries']['sha256'],
+                'User authorization does not bind this dev input/use')
+    else:
+        require(freeze.get('purpose') == 'accepted_language_dev_freeze' and
+                freeze.get('formal_freeze') is True,
+                'Accepted language dev is not frozen')
     require(freeze.get('confirmed_by') and freeze.get('confirmed_at'),
             'Missing human freeze confirmation')
-    evidence = freeze.get('review_records')
-    require(isinstance(evidence, list) and evidence, 'Missing review records')
-    for ref in evidence:
-        require(referenced(ref, path.parent).stat().st_size > 0, 'Empty review record')
+    if not user_authorized:
+        evidence = freeze.get('review_records')
+        require(isinstance(evidence, list) and evidence, 'Missing review records')
+        for ref in evidence:
+            require(referenced(ref, path.parent).stat().st_size > 0, 'Empty review record')
     refs = {key: referenced(freeze[key], path.parent)
             for key in ('queries', 'image_manifest', 'annotations')}
     require(sha256(refs['image_manifest']) == config['image_manifest_sha256'] and
@@ -71,15 +89,16 @@ def load_frozen_dev(path, config):
                 'Invalid GT identity/category')
     import json
     queries = [json.loads(line) for line in refs['queries'].read_text().splitlines() if line.strip()]
-    require(queries, 'Empty accepted dev: coverage and selected threshold remain null')
+    require(queries, 'Empty dev: coverage and selected threshold remain null')
     require(all(isinstance(q.get(key), str) and q[key].strip()
                 for q in queries for key in ('query_id', 'semantic_query_id')),
             'Nonempty string query identities required')
-    validate_queries(queries, images, annotations, accepted_only=True)
+    validate_queries(queries, images, annotations, accepted_only=not user_authorized)
     require(all(q['split'] == 'dev' for q in queries), 'Queries must all be dev')
     ids = sorted({q['image_id'] for q in queries})
     scope = freeze['scope']
-    require(scope['kind'] in ('full_dev', 'accepted_dev_subset') and scope['description'],
+    subset_kind = 'user_authorized_dev_subset' if user_authorized else 'accepted_dev_subset'
+    require(scope['kind'] in ('full_dev', subset_kind) and scope['description'],
             'Explicit evaluation scope required')
     require(type(scope['query_count']) is int and scope['query_count'] == len(queries) and
             scope['query_image_ids'] == ids, 'Frozen query denominator mismatch')
@@ -177,7 +196,7 @@ def choose_threshold(results):
     return best['threshold'], reason
 
 
-def run(config_path, freeze_path, output, *, budget_seconds=300):
+def run(config_path, freeze_path, output, *, budget_seconds=300, allow_user_authorized_dev=False):
     require(math.isfinite(budget_seconds) and budget_seconds > 0, 'Positive finite time budget required')
     deadline = time.monotonic()+budget_seconds
     def check_time():
@@ -188,7 +207,10 @@ def run(config_path, freeze_path, output, *, budget_seconds=300):
     require(config['schema_version'] == 1 and config['purpose'] == 'offline_candidate_threshold_selection',
             'Wrong selection config')
     require(sha256(matching.__file__) == config['matcher_sha256'], 'Shared matcher version changed')
-    freeze, images, annotations, queries = load_frozen_dev(freeze_path, config)
+    freeze, images, annotations, queries = load_frozen_dev(freeze_path, config,
+        allow_user_authorized_dev=allow_user_authorized_dev)
+    evaluation_basis = ('user_authorized_development' if
+        freeze['purpose'] == 'user_authorized_language_dev' else 'accepted_language_dev')
     check_time()
     trials = load_trials(config, config_path.parent, images)
     by_image, anns_by_image = defaultdict(list), defaultdict(list)
@@ -209,7 +231,10 @@ def run(config_path, freeze_path, output, *, budget_seconds=300):
         config_sha256=sha256(config_path), freeze_sha256=sha256(freeze_path),
         source_sha256=sha256(__file__), matcher_sha256=sha256(matching.__file__),
         python=platform.python_version(), budget_seconds=budget_seconds,
-        model_inference_calls=0, checkpoint_loads=0, optimizer_updates=0)
+        model_inference_calls=0, checkpoint_loads=0, optimizer_updates=0,
+        evaluation_basis=evaluation_basis,
+        source_review_status_counts={status: sum(q.get('review_status') == status for q in queries)
+            for status in sorted({q.get('review_status', 'missing') for q in queries})})
     from ..data import schema
     metadata['schema_source_sha256'] = sha256(schema.__file__)
     write_json(output/'run_metadata.json', metadata)
@@ -251,12 +276,17 @@ def run(config_path, freeze_path, output, *, budget_seconds=300):
                 for row in trial['rows']:
                     buckets[str(row[field])].append(row)
                 groups[field] = {key: summarize(rows) for key, rows in sorted(buckets.items())}
-            result = dict(threshold=trial['threshold'], summary=trial['summary'], groups=groups,
+            result = dict(threshold=trial['threshold'], evaluation_basis=evaluation_basis,
+                          summary=trial['summary'], groups=groups,
                           rows=trial['rows'], association=trial['association'])
             write_json(output/f'coverage-{trial["threshold"]}.json', result)
             results.append(dict(threshold=trial['threshold'], **trial['summary']))
         chosen = next(t for t in trials if t['threshold'] == selected)
-        selection = dict(status='selected', selected_threshold=selected, selection_reason=reason,
+        selection = dict(status=('selected_for_user_authorized_development' if
+            evaluation_basis == 'user_authorized_development' else 'selected'),
+            evaluation_basis=evaluation_basis,
+            source_review_status_counts=metadata['source_review_status_counts'],
+            selected_threshold=selected, selection_reason=reason,
             scope=freeze['scope'], freeze_sha256=metadata['freeze_sha256'],
             queries_sha256=freeze['queries']['sha256'], image_manifest_sha256=config['image_manifest_sha256'],
             annotation_sha256=config['annotation_sha256'], checkpoint_sha256=config['checkpoint_sha256'],
@@ -291,8 +321,11 @@ def main():
     for name in ('config', 'freeze', 'output'):
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--budget-seconds', type=float, default=300)
+    parser.add_argument('--user-authorized-dev', action='store_true',
+        help='Use an explicitly authorized fixed dev receipt; preserve upstream review status')
     args = parser.parse_args()
-    result = run(args.config, args.freeze, args.output, budget_seconds=args.budget_seconds)
+    result = run(args.config, args.freeze, args.output, budget_seconds=args.budget_seconds,
+                 allow_user_authorized_dev=args.user_authorized_dev)
     print('Selected threshold:', result['selected_threshold'], result['selection_reason'])
 
 

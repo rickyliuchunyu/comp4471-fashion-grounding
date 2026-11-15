@@ -1,0 +1,16 @@
+{
+  "run_id": "segmentation-u18000-language-dev-20261115-r01",
+  "status": "queued",
+  "evaluation_basis": "user_authorized_development",
+  "source_review_status_counts": {
+    "needs_revision": 290
+  },
+  "queries": 290,
+  "images": 116,
+  "semantic_query_pairs": 145,
+  "hard_limit_seconds": 360,
+  "internal_budget_seconds": 300,
+  "model_inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0
+}

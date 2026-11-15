@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-15T12:33:19.951124+00:00",
+  "branches": {
+    "segmentation": "8e9a2b74244d3b7b4604fe571b787f6e96476394",
+    "data_eval": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+    "grounding": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-12T09:52:48Z",
+      "comments_and_reviews": null
+    },
+    {
+      "number": 2,
+      "head": "8e9a2b74244d3b7b4604fe571b787f6e96476394",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-15T11:05:31Z",
+      "comments_and_reviews": []
+    },
+    {
+      "number": 3,
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "base": "data-eval/remote-pilot-review",
+      "updated_at": "2026-11-12T09:52:53Z",
+      "comments_and_reviews": null
+    },
+    {
+      "number": 4,
+      "head": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "base": "main",
+      "updated_at": "2026-11-12T10:45:46Z",
+      "comments_and_reviews": []
+    },
+    {
+      "number": 5,
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "updated_at": "2026-11-12T12:11:25Z",
+      "comments_and_reviews": []
+    }
+  ],
+  "teammate_handoffs_unchanged": true
+}

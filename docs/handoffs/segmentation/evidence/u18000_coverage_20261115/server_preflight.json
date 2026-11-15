@@ -1,0 +1,166 @@
+{
+  "checked_at": "2026-11-15T12:33:19.951124+00:00",
+  "published_packages": [
+    "fp_data_eval_large_v1",
+    "fp_dev250_v1",
+    "fp_grounded9_draft_v2",
+    "fp_grounded9_reviewed_v1",
+    "fp_language1000_machine_v2",
+    "fp_language_dev_draft_v2",
+    "fp_pilot20_v2",
+    "fp_test400_holdout_v1",
+    "fp_train5000_v1"
+  ],
+  "dev_query_files": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_accepted.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "annotators": {},
+      "reviewers": {},
+      "fields": []
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_before_visual_revision.jsonl",
+      "sha256": "0fc509bba364d5d1b8288ace9f438f853d7cb7ae675fdffcb88571f9408bdc0c",
+      "bytes": 286062,
+      "rows": 290,
+      "images": 116,
+      "split_counts": {
+        "dev": 290
+      },
+      "review_status_counts": {
+        "needs_revision": 290
+      },
+      "annotators": {
+        "codex_cpu_weak_labeler_v2": 290
+      },
+      "reviewers": {
+        "None": 290
+      },
+      "fields": [
+        "annotation_version",
+        "annotator",
+        "authorship",
+        "contrast_set_id",
+        "illustrative_only",
+        "image_id",
+        "language",
+        "paraphrase_group_id",
+        "query",
+        "query_id",
+        "query_types",
+        "review_status",
+        "reviewer",
+        "same_category_instance_count",
+        "same_source_category_instance_count",
+        "schema_version",
+        "semantic_query_id",
+        "source_dataset",
+        "spatial_reference",
+        "split",
+        "target_category_id",
+        "target_instance_id",
+        "target_source_category_id",
+        "target_source_category_name",
+        "template_family",
+        "training_policy"
+      ]
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_draft.jsonl",
+      "sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395",
+      "bytes": 286381,
+      "rows": 290,
+      "images": 116,
+      "split_counts": {
+        "dev": 290
+      },
+      "review_status_counts": {
+        "needs_revision": 290
+      },
+      "annotators": {
+        "codex_cpu_weak_labeler_v2": 286,
+        "codex_visual_revision": 4
+      },
+      "reviewers": {
+        "None": 290
+      },
+      "fields": [
+        "annotation_version",
+        "annotator",
+        "authorship",
+        "contrast_set_id",
+        "illustrative_only",
+        "image_id",
+        "language",
+        "paraphrase_group_id",
+        "query",
+        "query_id",
+        "query_types",
+        "review_status",
+        "reviewer",
+        "same_category_instance_count",
+        "same_source_category_instance_count",
+        "schema_version",
+        "semantic_query_id",
+        "source_dataset",
+        "spatial_reference",
+        "split",
+        "target_category_id",
+        "target_instance_id",
+        "target_source_category_id",
+        "target_source_category_name",
+        "template_family",
+        "training_policy"
+      ]
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_machine_train.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rows": 0,
+      "images": 0,
+      "split_counts": {},
+      "review_status_counts": {},
+      "annotators": {},
+      "reviewers": {},
+      "fields": []
+    }
+  ],
+  "dev_release": {
+    "release_id": "fp_data_eval_large_v1",
+    "code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+    "accepted_language_queries": 0,
+    "formal_freeze": false,
+    "usage": "Development draft only; human acceptance required",
+    "source_hashes": {
+      "train": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+      "val": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+    }
+  },
+  "dev_release_sha256": "27188eba64d1e869c58b6773d8d5b7a01f0cde039cff10e9f5c4bf7ed970bdca",
+  "resources": {
+    "disk": {
+      "/": {
+        "total": 32212254720,
+        "used": 3281866752,
+        "free": 28930387968
+      },
+      "/root/autodl-tmp/fashion-grounding": {
+        "total": 214748364800,
+        "used": 45266448384,
+        "free": 169481916416
+      }
+    },
+    "gpu": "0 MiB, 0 %",
+    "gpu_processes": "",
+    "active_coordination": []
+  },
+  "checkout_head": "00b408dbaaa109fd8f96142c05919182c2908ec8",
+  "checkout_status": ""
+}

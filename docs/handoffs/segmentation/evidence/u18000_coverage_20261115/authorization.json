@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "authority": "current_user",
+  "authorized_use": "offline_candidate_threshold_selection",
+  "user_statement": "现在的语言dev可以直接用",
+  "confirmed_by": "lcy (current user)",
+  "confirmed_at": "2026-11-15",
+  "confirmation_time_precision": "date_only",
+  "recorded_at": "2026-11-15T12:36:10.863751+00:00",
+  "queries_sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395",
+  "source_query_path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/queries_draft.jsonl",
+  "source_language_manifest": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev_draft_v2/image_manifest.json",
+    "sha256": "9fd34ca49761b8d3cfb0ee0a9a325ee733593e31480c7ad2664840ec49148dd7"
+  },
+  "source_release": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01-inputs/source_release.json",
+    "sha256": "27188eba64d1e869c58b6773d8d5b7a01f0cde039cff10e9f5c4bf7ed970bdca"
+  },
+  "scope_note": "Current user explicitly permits using the existing language dev. Bind its original bytes for this development threshold selection; do not claim independent review or rewrite source review_status/reviewer."
+}
