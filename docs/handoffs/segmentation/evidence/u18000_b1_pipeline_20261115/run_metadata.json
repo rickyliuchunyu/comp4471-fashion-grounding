@@ -1,7 +1,117 @@
 {
-  "status": "queued",
+  "record_schema_version": 1,
   "run_id": "segmentation-u18000-b1-pipeline-20261115-r01",
+  "experiment_id": "B1",
   "owner": "segmentation",
   "executed_by": "lcy",
-  "scope": "integration only; unchanged B1, no training, no segmentation inference"
+  "role": "integration_only",
+  "status": "completed",
+  "split": "dev",
+  "candidate_source": "predicted",
+  "evaluation_basis": "user_authorized_development",
+  "started_at": "2026-11-15T13:16:44.958462+00:00",
+  "grounding_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+  "git_commit": "994c1e586989d970a3f41006c301244eda6dbeff",
+  "source_worktree_dirty": false,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+    "scripts/run_segmentation_grounding_pipeline.py",
+    "--config",
+    "configs/runs/segmentation/pipeline_u18000_b1_dev.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-b1-pipeline-20261115-r01",
+    "--user-authorized-dev"
+  ],
+  "config_sha256": "00be6f8eee6752bb8322766ee9da2581bc16f9fb1d65d2b5ff2f666ee5ef2f58",
+  "candidate_manifest_sha256": "dfb06d6ca67b77901dcb25107d5dcedde7fdc2a761d4a66257522400dd64b32d",
+  "query_manifest_sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395",
+  "segmentation_inference_calls": 0,
+  "optimizer_updates": 0,
+  "old_smoke_runs": 0,
+  "encoder": {
+    "model_id": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "files": {
+      "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+      "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+      "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+      "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+    },
+    "processor_class": "SiglipProcessor",
+    "versions": {
+      "transformers": "4.51.3",
+      "tokenizers": "0.21.4",
+      "torch": "2.1.2+cu121",
+      "torchvision": "0.16.2+cu121",
+      "Pillow": "10.2.0",
+      "sentencepiece": "0.2.0",
+      "numpy": "1.26.4"
+    },
+    "dtype": "float32",
+    "attention": "eager",
+    "device": "cuda",
+    "max_length": 64,
+    "dimension": 768,
+    "logit_scale": 4.724453449249268,
+    "logit_bias": -16.771724700927734,
+    "padding": "max_length",
+    "truncation": false
+  },
+  "cache_counts": {
+    "image_misses": 116,
+    "encoded_regions": 651,
+    "existing_text_hits": 284,
+    "local_image_hits": 174,
+    "text_misses": 6,
+    "encoded_texts": 6
+  },
+  "prediction_seconds": 20.590628165751696,
+  "evaluation": {
+    "queries": 290,
+    "images": 116,
+    "correct_queries": 178,
+    "covered_queries": 258,
+    "predicted_selection_accuracy": 0.6137931034482759,
+    "conditional_selection_accuracy": 0.689922480620155,
+    "matched_candidate_coverage": 0.8896551724137931,
+    "geometric_recall_at_0_5": 0.9103448275862069,
+    "mean_target_mask_iou": 0.7003452315568103,
+    "success_at_0_5": 0.7310344827586207,
+    "status_counts": {
+      "success": 290
+    }
+  },
+  "query_count": 290,
+  "source_review_status_counts": {
+    "needs_revision": 290
+  },
+  "geometry_outputs": 290,
+  "inference_errors": 0,
+  "artifacts": {
+    "predictions.jsonl": {
+      "path": "predictions.jsonl",
+      "sha256": "c5e0666a0253e5240cfa2caa85b578b337f7226bbf19406556d3738693fc530f"
+    },
+    "resolved_outputs.jsonl": {
+      "path": "resolved_outputs.jsonl",
+      "sha256": "3c0e6ff01d039f7d5a20493ee206c7ab51149906aed4fb4caf09ab20ffe56f58"
+    },
+    "evaluation.json": {
+      "path": "evaluation.json",
+      "sha256": "80e4f8dc45f05650dbd56e7f0455ac37d294898837881d745807b2b07e382c22"
+    },
+    "errors.json": {
+      "path": "errors.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "resolved_config.json": {
+      "path": "resolved_config.json",
+      "sha256": "00be6f8eee6752bb8322766ee9da2581bc16f9fb1d65d2b5ff2f666ee5ef2f58"
+    }
+  },
+  "finished_at": "2026-11-15T13:17:06.364769+00:00",
+  "elapsed_seconds": 21.40633774921298
 }

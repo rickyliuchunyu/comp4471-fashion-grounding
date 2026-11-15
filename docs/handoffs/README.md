@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新：[lcy最小B1联调](segmentation/u18000_b1_pipeline_20261115.md)已完成，290查询均输出原mask/框，选对178/290；不改队友方法，不代表全组对照完成。
+
 最新：[用户授权当前语言dev的18k阈值选择](segmentation/u18000_language_dev_selection_20261115.md)已完成，116图/290查询选0.3，coverage=258/290；原查询来源保留，当前开发联调可继续。
 
 最新：[18000步完整dev250候选交付](segmentation/u18000_candidates_dev250_20261115.md)：一次推理保存阈值前缓存，三个trial包及wyz读取/裁剪技术验证完成，待接收方本人反馈；未训练、未重复smoke。[旧3000步三包](segmentation/real_candidates_dev250_20261114.md)保留原版本。[此前语言dev核查](segmentation/language_dev_readiness_20261114.md)为历史快照；本次未做语言评价或阈值选择，仍须accepted冻结查询。

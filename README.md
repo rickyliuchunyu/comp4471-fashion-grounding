@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选18k AP=63.5792，[完整dev250候选](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)已交付。用户确认当前语言dev可直接用后，[离线选择](docs/handoffs/segmentation/u18000_language_dev_selection_20261115.md)在116图/290查询上选0.3：覆盖258/290=88.9655%，优于0.5的256条及0.7的250条。本轮7.044秒CPU，0新推理/训练/smoke；保留原查询来源，结果为用户授权开发集选择。
+> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
 
 ## 团队与 Codex 开工入口
 
@@ -75,6 +75,6 @@ Git跟踪的数据、模型和输出目录保留占位，真实接口包在服�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：lcy的S0、18k dev候选及当前用户授权语言dev的0.3选择已完成，下一项接通已有候选→wyz排序→原mask/框输出。wyz接收新候选与授权查询、建立独立predicted缓存并继续M2；wkq完善其余dev语言及统一评价。当前开发联调不再等待旧审核标记变更；不伪造审核人、不重复分割推理或追加训练。
+按[最新状态](docs/status.md)推进：lcy的S0、18k dev候选及当前用户授权语言dev的0.3选择已完成，已有候选→原B1→原mask/框的最小pipeline及当前dev联调也已完成。wyz接收新候选与授权查询、按精确版本复用本轮独立predicted缓存并继续M2；wkq完善其余dev语言及统一评价。当前开发联调不再等待旧审核标记变更；不伪造审核人、不重复分割推理或追加训练。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

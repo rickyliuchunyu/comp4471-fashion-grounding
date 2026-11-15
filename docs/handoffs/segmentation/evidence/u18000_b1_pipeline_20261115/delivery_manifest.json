@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "minimal cached-candidate B1 integration",
+  "entry": "/root/autodl-tmp/fashion-grounding/shared/pipelines/u18000-b1-dev-20261115-r01/run",
+  "scope": {
+    "images": 116,
+    "queries": 290,
+    "split": "dev"
+  },
+  "candidate_set_id": "u18000-dev250-20261115-r01-trial-0.3",
+  "artifacts": {
+    "predictions.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/pipelines/u18000-b1-dev-20261115-r01/run/predictions.jsonl",
+      "sha256": "c5e0666a0253e5240cfa2caa85b578b337f7226bbf19406556d3738693fc530f"
+    },
+    "resolved_outputs.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/pipelines/u18000-b1-dev-20261115-r01/run/resolved_outputs.jsonl",
+      "sha256": "3c0e6ff01d039f7d5a20493ee206c7ab51149906aed4fb4caf09ab20ffe56f58"
+    },
+    "evaluation.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/pipelines/u18000-b1-dev-20261115-r01/run/evaluation.json",
+      "sha256": "80e4f8dc45f05650dbd56e7f0455ac37d294898837881d745807b2b07e382c22"
+    },
+    "run_metadata.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/pipelines/u18000-b1-dev-20261115-r01/run/run_metadata.json",
+      "sha256": "1e31269308d1cf6666fcf3e664fb7fdf921018644f38883a04c2a80f0a02222c"
+    }
+  },
+  "note": "B1 code unchanged; predictions are authoritative IDs; resolved_outputs is a derived original-mask/box view, no refinement. No segmentation inference/training. Not first-image end-to-end latency. Preserve symlink targets."
+}

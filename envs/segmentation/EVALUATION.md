@@ -1,5 +1,7 @@
 # Dev AP 与 checkpoint 选择接入
 
+最新：[lcy最小B1联调](../../docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成，290查询均输出原mask/框，选对178/290；不改队友方法，不代表全组对照完成。
+
 最新：[用户授权当前语言dev的离线选择](../../docs/handoffs/segmentation/u18000_language_dev_selection_20261115.md)已选18k+0.3。使用显式`--user-authorized-dev`和固定授权回执；原accepted默认路径及共享匹配器不变，原始审核状态不改写。
 
 最新：[正式S0八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成，6000–20000每2000步完整dev250；选择18000步mask AP=63.5792，旧3000步报告AP=50.5603只读复用，提升13.0188点。20000步AP=63.5595，差距约0.02点不作为显著退化证据。
