@@ -111,7 +111,7 @@ def select(run):
   except (ValueError,KeyError,TypeError,IndexError) as exc:issues.append({"source_image_id":iid,"error":str(exc),"decision":"quarantine_entire_image"})
  write_json(run/"pool_mask_check.json",{"checked_images":len(new),"valid_images":len(verified_hits),"source_area_differs_from_raster_count":area_changes,"issues":issues,"area_basis":"pycocotools RLE area at original resolution"})
  new=[x for x in new if x["source_image"]["id"] in verified_hits]
- items+=new;assignment,pairs=group_images(items)
+ items+=new;assignment,pairs=group_images(items,all_orientations=True)
  available,quarantine=isolate_new_groups([i for i in sel["candidate_ids"] if i in verified_hits],assignment,protected)
  avail=set(available);broad=[i for i in sel["broad_order"] if i in avail][:3500]
  require(len(broad)==3500,"insufficient broad independent groups")
@@ -123,7 +123,7 @@ def select(run):
  selected=broad+target;inventory={x["key"]:x for x in new}
  for x in new:x["group_id"]="fp-expansion-"+assignment[x["key"]]
  write_json(run/"new_fingerprints.json",new)
- write_json(run/"duplicate_audit.json",{"method":"SHA256, resource-specific URL, mirrored 63-bit pHash distance <=6; conservative connected components; no visual identity claims","protected_images":len(protected),"pool_images":len(new),"independent_eligible_images":len(available),"independent_eligible_groups":len(available),"near_pairs":pairs,"quarantine":quarantine,"frozen_records_reassigned":False})
+ write_json(run/"duplicate_audit.json",{"method":"SHA256, resource-specific URL, all four original/mirror 63-bit pHash comparisons distance <=6; conservative connected components; no visual identity claims","protected_images":len(protected),"pool_images":len(new),"independent_eligible_images":len(available),"independent_eligible_groups":len(available),"near_pairs":pairs,"quarantine":quarantine,"frozen_records_reassigned":False})
  sidecar=[]
  for i in selected:
   im=inventory["train-"+str(i)]

@@ -20,7 +20,7 @@ def specific_source_url(value):
  u=urlsplit(value)
  return value if u.scheme in ("http","https") and u.netloc and u.path.strip("/") else None
 
-def group_images(items):
+def group_images(items, all_orientations=False):
  """Conservatively group flags without claiming human-confirmed identity."""
  parent=list(range(len(items)))
  def find(i):
@@ -39,6 +39,7 @@ def group_images(items):
  f=np.array([x["phash_flip"] for x in items],dtype=np.uint64)
  for i in range(len(items)):
   dist=np.minimum(np.bitwise_count(h[:i]^h[i]),np.bitwise_count(f[:i]^h[i]))
+  if all_orientations:dist=np.minimum.reduce([dist,np.bitwise_count(h[:i]^f[i]),np.bitwise_count(f[:i]^f[i])])
   for j in np.flatnonzero(dist<=6):
    j=int(j);union(i,j);pairs.append({"a":items[j]["key"],"b":items[i]["key"],"distance":int(dist[j]),"decision":"conservative_same_group_without_claiming_visual_identity"})
  groups=defaultdict(list)

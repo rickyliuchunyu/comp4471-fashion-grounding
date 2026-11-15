@@ -8,6 +8,17 @@ from expand_segmentation import hits,choose_targeted,isolate_new_groups,merge
 from build_large_packages import build_package
 from fashion_grounding.data.schema import read_json,encode_mask,sha256
 class ExpansionTests(unittest.TestCase):
+ def test_four_orientations_catch_mirror_mirror_pair(self):
+  from build_large_packages import group_images
+  rows=[{"key":"a","sha256":"a","phash":0,"phash_flip":2**63-1},{"key":"b","sha256":"b","phash":2**32-1,"phash_flip":2**63-2}]
+  old,_=group_images(rows);self.assertNotEqual(old["a"],old["b"])
+  robust,_=group_images(rows,all_orientations=True);self.assertEqual(robust["a"],robust["b"])
+ def test_four_orientations_catch_reverse_mirror_pair(self):
+  from build_large_packages import group_images
+  rows=[{"key":"val-1","sha256":"a","phash":0,"phash_flip":2**32-1},{"key":"train-2","sha256":"b","phash":2**63-1,"phash_flip":1}]
+  assignment,_=group_images(rows,all_orientations=True)
+  available,_=isolate_new_groups([2],assignment,{"val-1":{}})
+  self.assertEqual(available,[])
  def test_small_boundary_inclusive_and_source_fine_preserved(self):
   self.assertIn("small_sock",hits([{"category_id":8,"source_category_id":22,"area":1024}]))
   self.assertNotIn("small_sock",hits([{"category_id":8,"source_category_id":22,"area":1025}]))
