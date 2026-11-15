@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> wkq 已交付真实小包、共享解析器/B0/统一评价核心，以及 5,000 train / 250 dev / 400 test 留出图的大包和 1,000 图机器语言初标；93 项 CPU 测试通过，见 [大型数据交接](docs/handoffs/data_eval/large_dataset_20261112.md)。新增语言尚待人工审核，不是正式冻结 benchmark；本轮没有训练模型或测得正式 dev/test 成绩。规划超参数仍以实际运行配置为准。
+> wkq 已发布新增的 10,000 图分割训练包（旧 5,000 + 去重后新增 5,000，含定向小目标补充），原 train/dev/test 和语言包保持不变；102 项 CPU 测试、源 mask 和发布 hash 检查通过，见 [10k 交接](docs/handoffs/data_eval/train10000_targeted_20261116.md)。本轮没有训练，lcy 实际加载器验收待确认；语言人工审核与正式 benchmark 冻结仍待完成。其他成员模型进度以其交接为准。
 
 ## 团队与 Codex 开工入口
 
