@@ -6,7 +6,7 @@
 
 > [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
 
-最新：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)经用户授权于22:46:25 HKT启动，状态 **running，尚无B组AP**；同一18k→20k、复用A组、结束仅评B完整dev250，45分钟总硬限，不自动延长/重启，不重复smoke。六项恢复指纹已通过。此前[train5000分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的定向10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，数据扩充尚未构建/接收。
+最新：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)已完成，同一18k→20k、一次完整dev250，选中 **B20k AP=63.7930**（比复用A +0.2334、比旧最佳 +0.2138）。总15分58秒/45分钟硬限，未延长/重启/重复smoke。AP_small较旧最佳仅+0.0136、AP75略低，小目标/边界未明显改善。现有候选和B1交付仍对应18k＋0.3，本轮仅选新权重。此前[分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，扩充包尚未构建/接收。
 
 ## 团队与 Codex 开工入口
 

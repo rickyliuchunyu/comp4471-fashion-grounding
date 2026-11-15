@@ -1,0 +1,62 @@
+[
+  {
+    "phase": "train_B",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "-m",
+      "fashion_grounding.segmentation.train",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "--source",
+      "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+      "--resume",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+      "--resume-recipe",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resume_recipe_18000_to_20000.json",
+      "--config",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/min_scale_05_20000.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-15T14:46:27.391097+00:00",
+    "exit_code": 0
+  },
+  {
+    "phase": "dev250_B",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "-m",
+      "fashion_grounding.segmentation.evaluate",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+      "--training-package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "--source",
+      "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+      "--config",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/dev_ap_250_resume_20000.json",
+      "--checkpoints",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/dev"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-15T15:00:18.256427+00:00",
+    "exit_code": 0
+  },
+  {
+    "phase": "compare_cached_A",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/select_min_scale_trial.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/min_scale_05_stage_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-15T15:02:20.951883+00:00",
+    "exit_code": 0
+  }
+]

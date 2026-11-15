@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[lcy min_scale 单因素对照运行](segmentation/min_scale_trial_20261115.md)：22:46:25 HKT经用户授权启动，45分钟总硬限；六项状态恢复通过，训练中，尚无B组AP。复用A组，不重复smoke。
+最新：[lcy min_scale 单因素对照结果](segmentation/min_scale_trial_20261115.md)：15分58秒完成，B20k完整dev250 AP=63.7930，高于A 0.2334点、高于旧最佳0.2138点，按整体AP选B。小目标/边界改善仍有限；旧18k候选保留。未延长、重启或重复smoke，GPU已释放。
 
 最新：[lcy min_scale 单因素续训准备](segmentation/min_scale_preparation_20261115.md)：同一18k→20k、A组复用、B仅结束评完整dev250、45分钟总硬限；11项新增CPU检查通过，未启动训练/推理或重复smoke。
 

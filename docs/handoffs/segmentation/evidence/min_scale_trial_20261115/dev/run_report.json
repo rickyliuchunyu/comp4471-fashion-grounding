@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "reports": [
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/dev/update_020000/evaluation_report.json"
+  ],
+  "optimizer_updates": 0,
+  "purpose": "dev_checkpoint_selection",
+  "elapsed_seconds": 117.88974832370877
+}

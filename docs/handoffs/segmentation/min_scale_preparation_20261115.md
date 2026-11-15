@@ -1,5 +1,7 @@
 # min_scale 单因素续训准备
 
+后续：用户另行授权的[实际对照已完成](min_scale_trial_20261115.md)，选B20k AP=63.7930。下文保留当时的准备状态和11项检查证据，不改写为本轮新检查。
+
 2026-11-15；segmentation / lcy，Codex 执行。状态：**implemented / locally_checked，未启动训练、推理或服务器任务**。实现提交 `7c6ffce`。整组 GitHub、PR、评论/review 与交接核查见[快照](evidence/min_scale_preparation_20261115/github_preflight.json)：wkq `f5787f4`、wyz `103dcc5`、main `7064ebb` 无增量；自己的开工 head 为 `149ddf7`。未代做数据构建、排序训练或共享评价器修改。
 
 ## 固定对照与范围
