@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-更新：2026-11-15；[正式 S0 5000→20000 步配置、恢复记录及完整 dev 评价方案][s0-preparation]已准备，总硬上限 3 小时；本轮未启动训练、推理或 AP。lcy 下一主线是后续明确启动后执行 S0，不等待 accepted 语言 dev。离线 coverage 入口与三个候选包继续复用；语言查询最新服务器核查仍沿用本日 14:52 HKT 的历史证据，不冒称本轮重查。
+更新：2026-11-15；[正式 S0 5000→20000 续训][s0-run]已于15:33 HKT取得共享GPU锁启动，最晚18:33 HKT停止；八个保存点将评价完整dev250，再与旧3000步最佳比较。当前status=running，新AP尚未产生；不自动延长、不重复smoke。
 
 **[真实dev250候选缓存及三个trial包][real-candidates]已交付，继续复用。** 0.3/0.5/0.7分别1,565/1,258/980候选；0.7下1张零候选图保留。候选阈值支线的缺口是accepted且冻结的语言dev查询清单，不影响分割S0训练/AP。正式coverage未计算（不是0），selected_threshold=null；A/B本人接收和train5000候选仍未完成。
 
@@ -45,7 +45,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 后续获明确启动指令后执行正式S0：5000→20000，八点完整dev及选择 | 三份配置、固定父权重/源码过渡、3小时总预算及命令已准备；复用全部既有工程证据 | 本轮仅准备，未启动或排队；执行前更新自己的服务器checkout并复核即时资源；accepted语言dev不阻塞分割训练/AP | [恢复记录、评价/选择方案与验证][s0-preparation] |
+| lcy | 完成已启动的正式S0：5000→20000、八点完整dev及选择 | 三份配置、固定父权重/源码过渡、3小时总预算及命令已准备；复用全部既有工程证据 | 本轮已明确授权，15:33启动，最晚18:33停止；accepted语言dev不阻塞分割训练/AP | [恢复记录、评价/选择方案与验证][s0-preparation] |
 | wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；dev250三包已由lcy固定并验证接口，待本人接收/建立predicted缓存；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 审核/补写语言dev并发布accepted查询及冻结记录 | 发布路径、query hash、复核来源、图片/GT版本和明确的冻结分母 | 最近服务器核查（本日14:52 HKT）为116图/290草稿、accepted dev=0；本轮GitHub head未变；分割人工复核确认继续有效 | [语言dev核查][language-ready]、[大包交接][wkq-large]、PR #4 |
 
@@ -114,3 +114,5 @@
 [offline-coverage]: handoffs/segmentation/offline_coverage_20261115.md
 
 [s0-preparation]: handoffs/segmentation/s0_20000_preparation_20261115.md
+
+[s0-run]: handoffs/segmentation/s0_20000_20261115.md

@@ -1,0 +1,65 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-s0-20000-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "running",
+  "created_at": "2026-11-15T07:33:22.277714+00:00",
+  "git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+  "source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "authorization": {
+    "source": "Current explicit user request to launch formal S0",
+    "start_update": 5000,
+    "target_update": 20000,
+    "evaluation_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000,
+      20000
+    ],
+    "complete_dev_images": 250,
+    "total_hard_limit_seconds": 10800,
+    "no_smoke": true,
+    "automatic_extension": false,
+    "automatic_retry": false
+  },
+  "environment": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1",
+  "environment_modified": false,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/with_gpu_lock.py",
+    "--coordination",
+    "/root/autodl-tmp/fashion-grounding/coordination",
+    "--run-id",
+    "segmentation-s0-20000-20261115-r01",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01",
+    "--seconds",
+    "10795",
+    "--",
+    "/usr/bin/timeout",
+    "--signal=KILL",
+    "10790s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/s0_20000_20261115/run_stage.py",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01"
+  ],
+  "preparation_commit": "16aa0eb0255f847fc90809628ba769e88db0931a",
+  "freeze_record": "docs/handoffs/segmentation/segmentation_train_dev_freeze_20261112.json",
+  "parent_run_id": "segmentation-resume5000-train-20261113-r01",
+  "prior_best_update": 3000,
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T07:33:22.380523+00:00"
+    }
+  ],
+  "wrapper_pid": 119888,
+  "started_at": "2026-11-15T07:33:22.380523+00:00"
+}
