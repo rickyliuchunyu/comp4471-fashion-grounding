@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "transition_type": "amp_recovery_same_budget_v1",
+  "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "parent_git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+  "parent_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+  "parent_completed_updates": 18000,
+  "target_config_sha256": "082027ad52aea05413326ea289989ac769bd8b2d15aa17a1d4b3ee9bdd5c64bd",
+  "parent_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "target_source_tree": "c0747d2a2e95b5250081f942ec78d8365a2ac8d2",
+  "target_git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "changes": {
+    "run_scope": {
+      "before": "formal_S0_resume_update5000_to20000",
+      "after": "formal_S0_same_budget_AMP_recovery_update18000_to20000"
+    },
+    "amp_recovery": {
+      "before": null,
+      "after": {
+        "max_retries_per_update": 4,
+        "max_overflow_events": 16,
+        "min_loss_scale": 0.0001
+      }
+    }
+  },
+  "changed_source_files": [
+    "src/fashion_grounding/segmentation/amp_recovery.py",
+    "src/fashion_grounding/segmentation/resume_repair.py",
+    "src/fashion_grounding/segmentation/train.py",
+    "src/fashion_grounding/segmentation/training_state.py"
+  ],
+  "reason": "Current user authorizes bounded AMP source-fix recovery from saved update 18000 to the unchanged 20000 target, followed by eight full-dev AP evaluations under one three-hour hard limit. Restore all six states without overrides; no old smoke or automatic stage restart.",
+  "restored_state_overrides": {},
+  "update_budget_extended": false,
+  "policy_sha256": "b9cbfeebdc36e2a4a0383601bbc167e4a96dfc4d41fcbd025e9f16633ea3012e"
+}

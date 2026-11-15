@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "resumed_from_update": 18000,
+  "checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "exact_components": [
+    "model",
+    "optimizer",
+    "rng",
+    "sampler",
+    "scaler",
+    "scheduler"
+  ],
+  "expected_digests": {
+    "model": "071c41267d73f112bca00370ed00f1a8bae35ebf0a7bccaf1c30c81cb535e360",
+    "optimizer": "723d1af2c01b739ab39ebdf4e991fc31b417f6bc86efdf6e1a73c386df35376d",
+    "scheduler": "d4dec84623e24ed823bff2e218a83a6329aa329f757a4f9ff61ffdde0bc05d12",
+    "scaler": "fee0b4cae1c25aa3d18b5da32544f17928cd549fe5d8f18661fa9915ef2d8106",
+    "sampler": "1780330f5886ed17543e194f0df5c2c5fb69340e7b68b91be7f4d54e2fa043c3",
+    "rng": "a3de1f7907a51dd9946347726c44a7688a4e28548416589fbc99a5d2ed94377a"
+  },
+  "restored_digests": {
+    "model": "071c41267d73f112bca00370ed00f1a8bae35ebf0a7bccaf1c30c81cb535e360",
+    "optimizer": "723d1af2c01b739ab39ebdf4e991fc31b417f6bc86efdf6e1a73c386df35376d",
+    "scheduler": "d4dec84623e24ed823bff2e218a83a6329aa329f757a4f9ff61ffdde0bc05d12",
+    "scaler": "fee0b4cae1c25aa3d18b5da32544f17928cd549fe5d8f18661fa9915ef2d8106",
+    "sampler": "1780330f5886ed17543e194f0df5c2c5fb69340e7b68b91be7f4d54e2fa043c3",
+    "rng": "a3de1f7907a51dd9946347726c44a7688a4e28548416589fbc99a5d2ed94377a"
+  }
+}

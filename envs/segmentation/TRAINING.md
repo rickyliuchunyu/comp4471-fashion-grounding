@@ -1,10 +1,10 @@
 # 分割训练入口与配置
 
-最新：[正式S0首轮](../../docs/handoffs/segmentation/s0_20000_20261115.md)在尝试19315步时出现非有限梯度，最后完整保存18000。[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)的3000步仍是已测最佳（mask AP=50.5603）。本次新增受限AMP恢复和同预算源码修复过渡；实际新结果另见运行交接。预算扩展规则仍见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)，普通恢复仍严格匹配源码与配置。
+最新：[正式S0恢复及八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)完成20000步目标，选中18000步（mask AP=63.5792）；同预算恢复处理了19315步AMP溢出，实际30.89分钟。原失败记录保留。预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)，普通恢复仍严格匹配源码与配置；源码修复须用下述显式过渡。
 
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
-入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整 S0 的训练预算与训练仍待完成。
+入口：`python -m fashion_grounding.segmentation.train`。使用固定 Mask2Former R50 架构及其 Hungarian matcher、30 项主/辅助损失和点采样实现；训练循环负责可恢复采样、梯度累计、AdamW、AMP、梯度检查、调度、日志及 checkpoint。训练循环不内嵌评估；保存后的 checkpoint 接入独立 [AP 评估与选择入口](EVALUATION.md)。train/dev 已按用户人工复核确认固定，[限定100步真实dev评价与选择](../../docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；正式S0的20000步训练与八点完整dev已完成，结果见顶部最新交接。
 
 ## 配置与执行范围
 
@@ -21,7 +21,7 @@
 
 ## 断点与日志
 
-新增：[预算扩展续训](BUDGET_EXTENSION.md)要求显式固定父权重、父/目标配置与源码tree，仅允许预算和保存点变化。本轮1000→5000的用户授权不改变普通恢复的严格规则。
+新增：[预算扩展续训](BUDGET_EXTENSION.md)要求显式固定父权重、父/目标配置与源码tree，仅允许预算和保存点变化。历史1000→5000的预算扩展不改变普通恢复的严格规则。
 
 源码修复使用互斥的 `--resume-repair <policy.json>`，不能用增加max_updates绕过限制。过渡记录固定父权重hash、父/目标配置hash、父/目标源码tree、准确的源码文件清单；只允许AMP恢复、运行说明、时间预算和保存点差异，max_updates必须保持不变。六项恢复指纹仍逐一核对，scaler不重置，checkpoint保留完整resume_lineage及AMP溢出计数。此入口不会自动扩大用户授权或重启退出的任务。
 
@@ -54,4 +54,4 @@ RUN="$FG_ROOT/runs/segmentation/$RUN_ID"
 
 协调器把实际的两条 trainer 命令写入 `commands.json`，日志分为 `phase_1.log`、`phase_2.log`；训练产物分为 `updates_001_100/`、`updates_101_200/`。手动恢复时须用同样的共享锁、原配置和 `--resume <checkpoint.pth>`，`--output` 指向新目录；`--stop-after` 是绝对 update 编号，并受配置的 max_updates 限制。失败目录保留，新尝试另用 run ID。
 
-旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史选择记录保留。当前已测最佳是3000步，最新完整恢复点是正式S0的18000步；本轮用户已授权限定18000→20000及八点dev，单独登记运行并共用三小时硬上限，不重复既有smoke。
+旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史记录保留。当前dev选中18000步，最新完整恢复点为20000步；本轮授权训练及八点评价已完成，GPU已释放，后续不得自动追加训练或重复既有smoke。

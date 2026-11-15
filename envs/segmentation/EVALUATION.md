@@ -1,10 +1,12 @@
 # Dev AP 与 checkpoint 选择接入
 
-最新：[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成，2000/3000/5000完整dev AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。新预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)；普通恢复仍严格匹配源码与配置。
+最新：[正式S0八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成，6000–20000每2000步完整dev250；选择18000步mask AP=63.5792，旧3000步报告AP=50.5603只读复用，提升13.0188点。20000步AP=63.5595，差距约0.02点不作为显著退化证据。
 
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
 训练入口负责保存完整 checkpoint；`fashion_grounding.segmentation.evaluate` 独立读取这些 checkpoint 做只读评估，`fashion_grounding.segmentation.select_checkpoint` 读取完整 dev 报告选权重。两者不创建 optimizer、不继续训练，也不改写 checkpoint。当前未接入训练循环内定期评估 hook；可在保存边界退出训练、释放 GPU 后，按同一共享锁执行评估。普通恢复训练仍使用原训练源码及配置；预算扩展须使用上文显式固定的过渡记录。
+
+本次[正式S0恢复](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)复用6000–18000七份权重，仅新增20000权重。独立评价器仍保持原实现；阶段结束后调用 `scripts/select_s0_recovery.py --output <本轮运行目录> --plan configs/runs/segmentation/s0_recovery_20000_stage_plan.json`。该审计入口固定七份旧权重hash、同预算AMP修复的父/目标身份及源码文件差异，核对完整dev250和原AP实现，再跨两个已核准身份组选权重并与旧3000比较。原普通selector的严格同配置/源码要求不变；旧3000只读既有报告，不重推理。
 
 ## 评价条件
 
@@ -66,4 +68,4 @@ TRAIN_RUN="$FG_ROOT/runs/segmentation/segmentation-stability-200-20261112-r02"
   --output <new-selection-directory>
 ```
 
-选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。完整 S0、语言候选阈值选择和生产候选下游联调仍待完成。
+选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP已完成，见顶部交接。新18000候选交付、语言候选阈值选择和接收方联调仍待完成。

@@ -1,0 +1,227 @@
+{
+  "phases.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/phases.json",
+    "sha256": "0442fdff73c910ace5309b43b8e30412c1b8334408b992702eb126a08c98e659",
+    "bytes": 4092
+  },
+  "stage.log": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/stage.log",
+    "sha256": "82cab92ebc7f79f9ad66e26a7c536b431dab1f976de3827a90aaf1025586b2a0",
+    "bytes": 48641
+  },
+  "metric_summary.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/metric_summary.json",
+    "sha256": "84adb506da8e35190ea574ece1e1b0c2462521c76e53fce89c29b78c17194957",
+    "bytes": 3549
+  },
+  "overall_selection.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/overall_selection.json",
+    "sha256": "07a4e294ace1c67a7bd508433e9bd88f3a5f311002b2ffcf1a638b15485597f6",
+    "bytes": 6895
+  },
+  "postflight.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/postflight.json",
+    "sha256": "2d463fe0a992184e8ad2079b254c5764bad4f393ccbc75e716eadfccb0253ff1",
+    "bytes": 481
+  },
+  "trajectory_prefix_comparison.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/trajectory_prefix_comparison.json",
+    "sha256": "04600fad0ce0362e0287d93688d686e73ca386b0d4874fe8e5d5f4de10798462",
+    "bytes": 2600
+  },
+  "server_preflight.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/server_preflight.json",
+    "sha256": "1dc1a4000a6ab3903238093aa7cb66453cb92a10e837985052d45bf81a09a959",
+    "bytes": 625
+  },
+  "train/resume_check.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/resume_check.json",
+    "sha256": "2951e07325865602e422305f3ffc7becdca2669f1a7b87014bba6462769efaf2",
+    "bytes": 1309
+  },
+  "train/source_repair.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/source_repair.json",
+    "sha256": "26007861fd79657eece283def8d66dd95ab9aa110b894dc460213113bcc21122",
+    "bytes": 1724
+  },
+  "train/amp_overflow.jsonl": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/amp_overflow.jsonl",
+    "sha256": "8a92d1ade435dab53c9810a54a6ed054faa6fa9eec259cebc9a430c063ee1a49",
+    "bytes": 1487
+  },
+  "train/resolved_config.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/resolved_config.json",
+    "sha256": "22eece5e02f699a6dd3759409a7429f3fc648d82d87f5d080a86c7bf9ba1b685",
+    "bytes": 1131
+  },
+  "train/train_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/train_report.json",
+    "sha256": "be763cdc9215788cc93dd71617a35649f90712c6a89f54792675758b37930e0e",
+    "bytes": 6503
+  },
+  "train/initialization.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/initialization.json",
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "bytes": 1257
+  },
+  "train/data_check.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/data_check.json",
+    "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3",
+    "bytes": 627
+  },
+  "train/model_config.yaml": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/model_config.yaml",
+    "sha256": "646e9b5c73cdf69812100ecb9d8417a7a9a7ef2f3b8a232b30b15e26265e780b",
+    "bytes": 7735
+  },
+  "dev/resolved_config.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/resolved_config.json",
+    "sha256": "125ae86c9a0ebecb5aca83294aa76c0032399860877229473758e516e9d47c40",
+    "bytes": 470
+  },
+  "dev/data_check.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/data_check.json",
+    "sha256": "b26aa065f520692c920b1e37f3a44ae7c9c54e16af14599e68f694bda1980c68",
+    "bytes": 368
+  },
+  "dev/run_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/run_report.json",
+    "sha256": "b57a46c0d1951ee2f0d68c13e57bc4bff72087b671ff2051b77972afa1aa77ec",
+    "bytes": 1306
+  },
+  "dev/model_config.yaml": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/model_config.yaml",
+    "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff",
+    "bytes": 7771
+  },
+  "dev/update_006000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/coco_summary.txt",
+    "sha256": "b4452b6aa39e5ca89f1f6898edcace5131a4bd311736a71fb6e39a2119c95341",
+    "bytes": 1205
+  },
+  "dev/update_006000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.json",
+    "sha256": "4507912b7bf49beb32f225839bc7e8f65b9599253510cb42df399dacc079cc94",
+    "bytes": 2266
+  },
+  "dev/update_006000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.sha256",
+    "sha256": "d675299195e5940517a40a1a49d847190a02f35b483bcc937305aa210d6d9f1b",
+    "bytes": 65
+  },
+  "dev/update_008000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/coco_summary.txt",
+    "sha256": "4eec97b964f96ee7ef2743ab301ab2e362ca369193cf788a2f8be7fb329c8fb6",
+    "bytes": 1205
+  },
+  "dev/update_008000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.json",
+    "sha256": "7c955e7a82984e85e0becaaf13b123873a5fba8117efc20f64ceb8cd99b1cc3b",
+    "bytes": 2262
+  },
+  "dev/update_008000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.sha256",
+    "sha256": "d3d4b381978c64a786ebe58b23d2c6b029c41223e171e4bf75d39f2dc98d60e3",
+    "bytes": 65
+  },
+  "dev/update_010000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/coco_summary.txt",
+    "sha256": "7fdac46e6c21ed10b188c70d25633e8f877848146fbb0338d6694627e60d6a6c",
+    "bytes": 1205
+  },
+  "dev/update_010000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.json",
+    "sha256": "d4b9c8dfbfcfab70c4869d16f0c5d1f9d8c2a3df6576b7537c2964e01086dd46",
+    "bytes": 2259
+  },
+  "dev/update_010000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.sha256",
+    "sha256": "e930f6f643ecfd01149d2db1f85d2a4b1d5ce9f77d8d976b7bc500bfd9b70a79",
+    "bytes": 65
+  },
+  "dev/update_012000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/coco_summary.txt",
+    "sha256": "78cf2c37ca73deb4524aa33c71a41576e724d33b7e13da0260c2901820fb6046",
+    "bytes": 1205
+  },
+  "dev/update_012000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.json",
+    "sha256": "a6ba61846ac8aaf9ffd6a60d7883482a6f794d1d891b9a84117aa34d9416f1f1",
+    "bytes": 2266
+  },
+  "dev/update_012000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.sha256",
+    "sha256": "a46affd51927134b80d15dee7080c1d1838d08338e2fd48e58ad6dea64caee88",
+    "bytes": 65
+  },
+  "dev/update_014000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/coco_summary.txt",
+    "sha256": "0c4f32d9168194123d23b1e067f05f3796c852b7c4e3c89b5a5669ab00dc3b2b",
+    "bytes": 1205
+  },
+  "dev/update_014000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.json",
+    "sha256": "f7c0510b3912d2702cb44c94bb6107877986419ef767868a28fb90d4dbda67e3",
+    "bytes": 2260
+  },
+  "dev/update_014000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.sha256",
+    "sha256": "c0e648ddb278a86dd4c0096f86bd016cd4550d76f4bce67e6f5a210ecca1a733",
+    "bytes": 65
+  },
+  "dev/update_016000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/coco_summary.txt",
+    "sha256": "cb83032251f4d902b648a0946a670c576a65f43d6c27da8d2d892fbb7c330750",
+    "bytes": 1205
+  },
+  "dev/update_016000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.json",
+    "sha256": "4855afd1808c2c915aa1707783e82c5c2e4de778884e15d8c2f0e14a3d7ae309",
+    "bytes": 2264
+  },
+  "dev/update_016000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.sha256",
+    "sha256": "9f51a0b2fcc3a5f884d2cc845f3d2ea8bb618257837a1eb46979edf701a7c794",
+    "bytes": 65
+  },
+  "dev/update_018000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/coco_summary.txt",
+    "sha256": "f4d63feb0fdd1703160bc4712de71da340007794d069588fe8aafff535b5cdc6",
+    "bytes": 1205
+  },
+  "dev/update_018000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.json",
+    "sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+    "bytes": 2264
+  },
+  "dev/update_018000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.sha256",
+    "sha256": "1223797e5e588a175c279d3bdf5b9370ec4d671e9e379564b237f66960d02879",
+    "bytes": 65
+  },
+  "dev/update_020000/coco_summary.txt": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/coco_summary.txt",
+    "sha256": "86eaf2689c1f18c43d9e146cbd28bee8680f06e0302b4bf0a12e45dca68ec467",
+    "bytes": 1205
+  },
+  "dev/update_020000/evaluation_report.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.json",
+    "sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1",
+    "bytes": 2271
+  },
+  "dev/update_020000/evaluation_report.sha256": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.sha256",
+    "sha256": "1932b160ad7a7bc52028c9eb2fc812187be8ddca06297f7879d7eb9591c8c85e",
+    "bytes": 65
+  },
+  "coordination.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-s0-recovery20000-20261115-r01.json",
+    "sha256": "fb576062c4709609ed7141bdd032f4af1b964158c52218f857a912f3f76a83d8",
+    "bytes": 991
+  },
+  "run_metadata.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/run_metadata.json",
+    "sha256": "175d5531197d24c083c86496d549282d87ad6124f1b6c6769af20fa1e3a1e272",
+    "bytes": 42459
+  }
+}

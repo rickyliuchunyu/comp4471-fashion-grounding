@@ -10,7 +10,7 @@ B0/B1/B2/M1/M2 固定使用相同候选。GT 候选只在训练与诊断使用�
 
 ## 2. 分割器的结构
 
-拟以公开 COCO instance segmentation 预训练的 Mask2Former R50 初始化，保留骨干、像素解码器和 Transformer，重建八类分类头。下载时记录确切 checkpoint URL、文件 SHA256 和基础代码 commit；当前 COCO 下载/八类加载与 200-update 工程检查已完成，见 [实测交接](handoffs/segmentation/stability_200_20261112.md)；没有正式 S0 / dev 性能结果。
+以公开COCO instance segmentation预训练的Mask2Former R50初始化，保留骨干、像素解码器和Transformer，重建八类分类头。下载记录确切checkpoint URL、文件SHA256和基础代码commit；COCO/八类与200-update工程检查见[实测交接](handoffs/segmentation/stability_200_20261112.md)。修复后限定续训及dev选择已完成；正式S0的当前训练、AMP恢复与AP结果以[最新运行交接](handoffs/segmentation/s0_recovery20000_20261115.md)为准，不能从本设计表推断已执行范围。
 
 | 部分 | 拟采用的设置 | 在系统中的作用 |
 | --- | --- | --- |

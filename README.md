@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式S0同预算恢复](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已于2026-11-15 17:32 HKT按本轮新授权启动：修复AMP异常处理，从18000续至20000，复用七份已有权重完成八点完整dev，再与旧3000步比较。总硬上限三小时，最晚20:32停止；不重复smoke、不自动延长。当前新AP未产生，旧最佳AP=50.5603继续有效。
+> [正式S0恢复及八点dev评价](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已于2026-11-15完成：从18000续至20000，复用七份已有权重，选中18000步，mask AP=63.5792（旧3000步50.5603，提升13.0188点）。总耗时30.89分钟，低于三小时硬上限，GPU已释放；无重复smoke或自动延长。新18000候选尚未导出。
 
 ## 团队与 Codex 开工入口
 
@@ -67,7 +67,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 [training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，按独立run记录实际训练、dev评价及离线派生分析。真实AP行填写mask AP，工程和派生诊断行不伪装成新增模型性能测量。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
-分割既有工程验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练入口与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[修复后续训及真实dev选择](docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成；正式S0已执行但因梯度异常未完成，未产生新的dev AP。
+分割既有工程验证见 [200-update交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练及恢复见 [TRAINING.md](envs/segmentation/TRAINING.md)。[正式S0训练与八点dev选择](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成；上轮AMP失败证据保留，本轮受限重放成功处理19315步溢出。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
@@ -75,6 +75,6 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：lcy已实现AMP受限重放、同预算恢复和跨修复版本选择审计，13项CPU专项及1项实际CUDA回归通过；本轮明确授权的18000→20000及八点评价正在执行，运行结果尚未完成。现有3000步候选继续交付队友，正式阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；语言审核不阻塞分割训练/AP。
+按[最新状态](docs/status.md)推进：lcy已完成正式S0到20000步及八点dev评价，当前选中18000步；下一项为选中权重的候选交付和接收方验收，本轮未执行新候选推理。现有3000步包保留为旧版本，正式语言阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；不因语言审核或阶段切换重复分割smoke。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。
