@@ -20,6 +20,8 @@ from .checkpoint import read_coco_checkpoint
 from .data import load_training_package, map_training_record
 from .model import adapt_coco_state, build_model
 from .resume_extension import load_extended_checkpoint
+from .resume_repair import load_repaired_checkpoint
+from .amp_recovery import AmpRecovery
 from .training_state import (UpdateSchedule, StatefulSampler, build_optimizer, capture_rng,
     restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256, checkpoint_due)
 
@@ -70,12 +72,14 @@ def main():
     initial = parser.add_mutually_exclusive_group(required=True)
     initial.add_argument('--checkpoint')
     initial.add_argument('--resume')
-    parser.add_argument('--resume-extension', help='Reviewed budget-only transition JSON; requires --resume')
+    transition = parser.add_mutually_exclusive_group()
+    transition.add_argument('--resume-extension', help='Reviewed budget-only transition JSON; requires --resume')
+    transition.add_argument('--resume-repair', help='Pinned same-budget AMP source-fix recovery JSON; requires --resume')
     parser.add_argument('--provenance', default='envs/segmentation/upstream.json')
     parser.add_argument('--stop-after', type=int, help='Absolute update boundary; never exceeds config max_updates')
     args = parser.parse_args()
-    if args.resume_extension and not args.resume:
-        parser.error('--resume-extension requires --resume')
+    if (args.resume_extension or args.resume_repair) and not args.resume:
+        parser.error('Resume transition requires --resume')
     config = read_config(args.config)
     stop = config['max_updates'] if args.stop_after is None else args.stop_after
     if not 0 < stop <= config['max_updates']:
@@ -104,6 +108,7 @@ def main():
         raise ValueError('Commit tracked source changes before training')
     resume_state = None
     resume_lineage = []
+    recovery_state = None
     if args.resume:
         if args.resume_extension:
             repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=True).strip()
@@ -111,6 +116,12 @@ def main():
                 args.resume, config, data, args.resume_extension, source_commit, repo_root)
             resume_lineage = list(resume_state.get('resume_lineage', [])) + [extension]
             write_json(output / 'budget_extension.json', extension)
+        elif args.resume_repair:
+            repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=True).strip()
+            resume_state, repair = load_repaired_checkpoint(
+                args.resume, config, data, args.resume_repair, source_commit, repo_root)
+            resume_lineage = list(resume_state.get('resume_lineage', [])) + [repair]
+            write_json(output / 'source_repair.json', repair)
         else:
             resume_state = load_checkpoint(args.resume, digest, data)
             if resume_state['git_commit'] != source_commit:
@@ -119,6 +130,7 @@ def main():
         model.load_state_dict(resume_state['model'], strict=True)
         initialization = resume_state['initialization']
         initial_digests = resume_state['initial_parameter_digests']
+        recovery_state = resume_state.get('amp_recovery_state')
     else:
         provenance = json.loads(Path(args.provenance).read_text())
         mirror = provenance['checkpoint_mirror']
@@ -164,36 +176,41 @@ def main():
     torch.cuda.reset_peak_memory_stats()
     params = [p for p in model.parameters() if p.requires_grad]
     loss_rows, checkpoints = [], []
+    def check_budget():
+        if time.monotonic()-started > config['budget_seconds']:
+            raise TimeoutError('Configured wall-time budget exceeded')
+    def emit_overflow(event):
+        event['peak_cuda_allocated_bytes'] = torch.cuda.max_memory_allocated()
+        with (output/'amp_overflow.jsonl').open('a') as stream:
+            stream.write(json.dumps(event, allow_nan=False)+'\n')
+        print(json.dumps(event, allow_nan=False), flush=True)
+        if event['action'] == 'stop':
+            write_json(output/'gradient_failure.json', event)
+    recovery = AmpRecovery(config.get('amp_recovery'), emit_overflow, recovery_state)
+    initial_overflows = recovery.overflow_events
+    def forward_backward():
+        components, image_ids, instance_counts = {}, [], []
+        for _ in range(config['accumulation_steps']):
+            batch = [map_training_record(records[sampler.next()], config) for _ in range(config['microbatch_images'])]
+            image_ids.extend(item['image_id'] for item in batch)
+            instance_counts.extend(len(item['instances']) for item in batch)
+            with torch.cuda.amp.autocast(enabled=config['amp']):
+                losses = model(batch)
+                loss = sum(losses.values()) / config['accumulation_steps']
+            if not losses or any(not torch.isfinite(v).all() for v in losses.values()) or not torch.isfinite(loss).all():
+                raise ValueError('Non-finite or missing loss')
+            scaler.scale(loss).backward()
+            for key, value in losses.items():
+                components[key] = components.get(key, 0.) + float(value.detach()) / config['accumulation_steps']
+            del batch, losses, loss
+        return dict(loss_components=components, image_ids=image_ids, instance_counts=instance_counts)
     with (output / 'metrics.jsonl').open('x') as log:
         while completed < stop:
-            if time.monotonic()-started > config['budget_seconds']:
-                raise TimeoutError('Configured wall-time budget exceeded')
+            check_budget()
             update_started = time.monotonic()
-            optimizer.zero_grad(set_to_none=True)
-            components, image_ids, instance_counts = {}, [], []
-            for _ in range(config['accumulation_steps']):
-                batch = [map_training_record(records[sampler.next()], config) for _ in range(config['microbatch_images'])]
-                image_ids.extend(item['image_id'] for item in batch)
-                instance_counts.extend(len(item['instances']) for item in batch)
-                with torch.cuda.amp.autocast(enabled=config['amp']):
-                    losses = model(batch)
-                    loss = sum(losses.values()) / config['accumulation_steps']
-                if not losses or any(not torch.isfinite(v).all() for v in losses.values()):
-                    raise ValueError('Non-finite or missing loss')
-                scaler.scale(loss).backward()
-                for key, value in losses.items():
-                    components[key] = components.get(key, 0.) + float(value.detach()) / config['accumulation_steps']
-                del batch, losses, loss
-            scaler.unscale_(optimizer)
-            bad_gradients = [name for name, param in model.named_parameters()
-                             if param.grad is not None and not torch.isfinite(param.grad).all()]
-            if bad_gradients:
-                write_json(output / 'gradient_failure.json', dict(attempted_update=completed+1,
-                    completed_updates=completed, image_ids=image_ids, instance_counts=instance_counts,
-                    loss_components=components, loss_scale=scaler.get_scale(),
-                    nonfinite_gradient_parameters=bad_gradients,
-                    peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated()))
-                raise ValueError('Non-finite gradients; no optimizer/scheduler step performed')
+            details, retries = recovery.backward(model, optimizer, scaler, sampler,
+                forward_backward, completed+1, check_budget)
+            components, image_ids, instance_counts = (details[k] for k in ('loss_components', 'image_ids', 'instance_counts'))
             grad_norm = torch.nn.utils.clip_grad_norm_(params, config['gradient_clip_norm'], error_if_nonfinite=True)
             if grad_norm <= 0:
                 raise ValueError('Zero full-model gradient')
@@ -212,6 +229,7 @@ def main():
             row = dict(update=completed, total_loss=sum(components.values()), components=components,
                 grad_norm_before_clip=float(grad_norm), grad_norm_after_clip=float(clipped_norm),
                 loss_scale=scale_before, optimizer_step_skipped=False, learning_rates=used_lrs,
+                amp_retries=retries, amp_overflow_events_total=recovery.overflow_events,
                 image_ids=image_ids, instance_counts=instance_counts, sampler_epoch=sampler.epoch,
                 elapsed_seconds=time.monotonic()-update_started,
                 cuda_allocated_bytes=torch.cuda.memory_allocated(), cuda_reserved_bytes=torch.cuda.memory_reserved(),
@@ -229,7 +247,7 @@ def main():
                 state = dict(**states, component_digests=fingerprints(states), completed_updates=completed,
                     config=config, config_sha256=digest, data=data, git_commit=source_commit,
                     initialization=initialization, initial_parameter_digests=initial_digests,
-                    resume_lineage=resume_lineage)
+                    resume_lineage=resume_lineage, amp_recovery_state=recovery.state_dict())
                 path = output / f'checkpoint_{completed:06d}.pth'
                 checkpoint_hash = save_checkpoint(path, state)
                 checkpoints.append(dict(update=completed, path=path.name, sha256=checkpoint_hash))
@@ -245,6 +263,9 @@ def main():
         first_loss=loss_rows[0]['total_loss'], last_loss=loss_rows[-1]['total_loss'],
         min_loss=min(r['total_loss'] for r in loss_rows), max_loss=max(r['total_loss'] for r in loss_rows),
         all_losses_and_gradients_finite=True, skipped_optimizer_updates=0,
+        finite_scope='successful_updates_only',
+        amp_overflow_attempts_this_process=recovery.overflow_events-initial_overflows,
+        amp_recovery_state=recovery.state_dict(),
         initial_parameter_digests=initial_digests, final_parameter_digests=final_digests,
         backbone_and_classifier_updated=True, checkpoints=checkpoints,
         peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated(),

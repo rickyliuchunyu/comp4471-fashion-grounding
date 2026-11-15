@@ -50,6 +50,11 @@ def read_config(path):
                 or any(type(u) is not int or not 0 < u <= config['max_updates'] for u in updates)
                 or updates != sorted(set(updates))):
             raise ValueError('Invalid explicit checkpoint updates')
+    if 'amp_recovery' in config:
+        from .amp_recovery import validate_policy
+        validate_policy(config['amp_recovery'])
+        if config.get('amp') is not True:
+            raise ValueError('AMP recovery requires AMP')
     return config
 
 

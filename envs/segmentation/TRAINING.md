@@ -1,6 +1,6 @@
 # 分割训练入口与配置
 
-最新：[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成，2000/3000/5000完整dev AP=46.0636/50.5603/48.8844，选择第3000步（mask AP=50.5603）。新预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)；普通恢复仍严格匹配源码与配置。
+最新：[正式S0首轮](../../docs/handoffs/segmentation/s0_20000_20261115.md)在尝试19315步时出现非有限梯度，最后完整保存18000。[预算扩展1000→5000结果](../../docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)的3000步仍是已测最佳（mask AP=50.5603）。本次新增受限AMP恢复和同预算源码修复过渡；实际新结果另见运行交接。预算扩展规则仍见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)，普通恢复仍严格匹配源码与配置。
 
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
@@ -12,7 +12,7 @@
 
 - [s0_train.json](../../configs/runs/segmentation/s0_train.json)：20k-update 的训练配置模板，LSJ 768、随机水平翻转、scale 0.1–2.0、有效 batch 2、AdamW LR 1e-4、backbone 0.1 倍、weight decay 0.05；norm/embedding 的 decay 按上游设为 0。前 500 updates 线性 warmup，从 0.001 倍 LR 起步，12k/16k 乘 0.1，full-model norm clip 0.01。
 - [pilot_stability_200.json](../../configs/runs/segmentation/pilot_stability_200.json)：继承同一训练配方，只固定现有 pilot 数据 hash、将总更新数限为 200、checkpoint 间隔改为 100、每进程时限 900 秒。外层共享锁的 900 秒限制覆盖两个进程总时长。
-- AMP 初始 scale 为 1。LSJ 首次试跑使用 128，在完成 6 updates 后出现非有限梯度；失败记录保留。训练器对非有限 loss/梯度、AMP 跳步均 fail-fast，不静默增加成功 update 计数或自动重试。
+- AMP初始scale为1；恢复时保留checkpoint的scaler。未配置 `amp_recovery` 时仍对非有限梯度直接停止。显式配置后，仅有限loss/非有限梯度可调用GradScaler跳过失败更新并降scale，恢复同一有效批次的sampler/RNG/model buffers后重放；失败尝试不推进optimizer/scheduler/成功update。每步重放次数、全程溢出次数、最小scale及原时间上限共同限制；非有限loss或持续异常仍停止。原始失败记录保留。
 - 入口必须显式指定 `--config`；正式配置的两个 data hash 初始为空，未填写实际冻结训练包哈希时拒绝运行。配置模板不是已执行的完整训练。
 
 样本按 image ID 排序后，用独立有状态 generator 打乱每个 epoch。数据读取与增广在主进程执行，无 worker 预取；恢复时不会丢失尚未使用的批次。RLE mask 使用与图片相同的上游 LSJ 几何变换；裁剪后空 mask 被移除，空目标图片继续进入分类损失，不重新抽样。输入始终为 Fashionpedia train，不读取查询或 dev/test。
@@ -23,11 +23,13 @@
 
 新增：[预算扩展续训](BUDGET_EXTENSION.md)要求显式固定父权重、父/目标配置与源码tree，仅允许预算和保存点变化。本轮1000→5000的用户授权不改变普通恢复的严格规则。
 
+源码修复使用互斥的 `--resume-repair <policy.json>`，不能用增加max_updates绕过限制。过渡记录固定父权重hash、父/目标配置hash、父/目标源码tree、准确的源码文件清单；只允许AMP恢复、运行说明、时间预算和保存点差异，max_updates必须保持不变。六项恢复指纹仍逐一核对，scaler不重置，checkpoint保留完整resume_lineage及AMP溢出计数。此入口不会自动扩大用户授权或重启退出的任务。
+
 checkpoint 保存 model、optimizer、scheduler、GradScaler、sampler 的 permutation/epoch/position/generator、Python/numpy/CPU/CUDA RNG、已完成 update、配置 hash、数据 hash、源码 commit 与原始 COCO 加载记录。先写临时文件并 fsync，再原子发布新文件和 SHA256 sidecar；旧 checkpoint 不覆盖。
 
 恢复先验证文件 hash 和配置/数据/源码一致性，再严格加载模型，最后逐组件比较与 checkpoint 中一致的数值指纹。`--resume` 不重新载入 COCO 初始化，不重置 warmup。普通恢复要求 checkout 为运行时记录的源码 commit；仅有文档更新的最新 commit 也不能直接混入这次恢复，应先使用原执行 commit 的干净独立 checkout。
 
-`metrics.jsonl` 每条为一个真正完成的 optimizer update，记录 30 项 weighted loss、total loss、裁剪前后 norm、AMP scale、实际 LR、图片 ID、增广后实例数、采样 epoch、用时及 allocated/reserved 显存。`gradient_failure.json`（若发生）记录未执行 optimizer step 的失败位置及非有限梯度参数。checkpoint 保存在 update 边界，不保存未完成的累计梯度。
+`metrics.jsonl`每条为一个真正完成的optimizer update，记录loss、梯度、scale、LR、图片ID、实例数、显存及该步AMP重试次数。`amp_overflow.jsonl`独立保留失败尝试、降scale与重放/停止决定；不可用成功metrics掩盖溢出。`gradient_failure.json`记录导致退出的非有限梯度；checkpoint只在成功update边界保存。报告中的有限loss/梯度声明明确只覆盖成功更新。
 
 GPU 自定义算子未证明跨进程 bitwise deterministic；真实 GPU 验收比较完整恢复状态，然后继续更新。CPU 小模型另行验证中断恢复与连续训练的后续 loss/参数完全一致，不能把 CPU 结果扩大为 GPU 轨迹完全一致。
 
@@ -52,4 +54,4 @@ RUN="$FG_ROOT/runs/segmentation/$RUN_ID"
 
 协调器把实际的两条 trainer 命令写入 `commands.json`，日志分为 `phase_1.log`、`phase_2.log`；训练产物分为 `updates_001_100/`、`updates_101_200/`。手动恢复时须用同样的共享锁、原配置和 `--resume <checkpoint.pth>`，`--output` 指向新目录；`--stop-after` 是绝对 update 编号，并受配置的 max_updates 限制。失败目录保留，新尝试另用 run ID。
 
-旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史选择记录保留。当前有效小阶段权重是修复后第1000步（dev AP42.8038），见上方新交接。完整长训练需要另外落实计算预算，独立登记运行，不重复现有 smoke。
+旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史选择记录保留。当前已测最佳是3000步，最新完整恢复点是正式S0的18000步；本轮用户已授权限定18000→20000及八点dev，单独登记运行并共用三小时硬上限，不重复既有smoke。
