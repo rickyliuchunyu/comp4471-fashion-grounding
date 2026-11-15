@@ -1,0 +1,30 @@
+{
+  "scope": "Only new statistical logic and transferred result identity",
+  "new_cpu_tests": {
+    "command": "python3 -m unittest discover -s tests -p test_segmentation_training_distribution.py -v",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "python": "3.9.6",
+    "reported_seconds": 0.0,
+    "cases": [
+      "hand-computed area boundaries, nested tiny counts, relative-area count and median",
+      "distinct image/group counting, crowd exclusion, zero-class nulls and mismatched mapping rejection"
+    ]
+  },
+  "transferred_result_hashes_matched": {
+    "distribution.json": "450cd9b5250c0af2c8c13012dcfa864388c64124ed92ac2df56140f342fd8c29",
+    "project_categories.csv": "f96d28c34c4dd3926b5dc08b3385eac05fcececc23800fce6a5f0f65ef20e720",
+    "source_categories.csv": "0d161384f5a19d647d90a82c1faab8c0437b774ead148949062171bdeefd5b7e",
+    "resolved_config.json": "c98d429636c24dd9d0e80fbee05de6dd2ffc923e9584cb46d82ff73abea91d9c"
+  },
+  "executed_script_matches_committed_source": true,
+  "old_test_suites": 0,
+  "model_smoke": 0,
+  "performance_metrics_recomputed": false,
+  "output_total_reconciliation": {
+    "project_instances": 17775,
+    "source_instances": 17775,
+    "small_instances": 2165
+  }
+}

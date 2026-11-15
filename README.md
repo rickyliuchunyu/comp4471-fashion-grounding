@@ -6,6 +6,8 @@
 
 > [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
 
+最新：[train5000分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)和[给wkq的定向10k扩充需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)已完成。小目标2,165个，95.43%是鞋/配饰；不优先盲目翻倍长训，保留单因素优化对照优先级。数据扩充尚未构建/接收，本轮仅CPU标注统计，0推理/训练/旧smoke。
+
 ## 团队与 Codex 开工入口
 
 暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)。

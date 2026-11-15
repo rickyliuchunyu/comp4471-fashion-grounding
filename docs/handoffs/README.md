@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新：[lcy train5000分布与扩充判断](segmentation/train5000_distribution_20261115.md)完成；2,165小目标中95.43%为鞋/配饰，不优先盲目翻倍长训。[给wkq的定向10k需求](segmentation/train10000_expansion_request_20261115.md)已整理、待本人接收；未代构建数据，0推理/训练/旧smoke。
+
 最新：[lcy最小B1联调](segmentation/u18000_b1_pipeline_20261115.md)已完成，290查询均输出原mask/框，选对178/290；不改队友方法，不代表全组对照完成。
 
 最新：[用户授权当前语言dev的18k阈值选择](segmentation/u18000_language_dev_selection_20261115.md)已完成，116图/290查询选0.3，coverage=258/290；原查询来源保留，当前开发联调可继续。
