@@ -21,6 +21,7 @@ from .data import load_training_package, map_training_record
 from .model import adapt_coco_state, build_model
 from .resume_extension import load_extended_checkpoint
 from .resume_repair import load_repaired_checkpoint
+from .resume_recipe import load_recipe_checkpoint
 from .amp_recovery import AmpRecovery
 from .training_state import (UpdateSchedule, StatefulSampler, build_optimizer, capture_rng,
     restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256, checkpoint_due)
@@ -75,15 +76,18 @@ def main():
     transition = parser.add_mutually_exclusive_group()
     transition.add_argument('--resume-extension', help='Reviewed budget-only transition JSON; requires --resume')
     transition.add_argument('--resume-repair', help='Pinned same-budget AMP source-fix recovery JSON; requires --resume')
+    transition.add_argument('--resume-recipe', help='Pinned min_scale-only ablation JSON; requires --resume')
     parser.add_argument('--provenance', default='envs/segmentation/upstream.json')
     parser.add_argument('--stop-after', type=int, help='Absolute update boundary; never exceeds config max_updates')
     args = parser.parse_args()
-    if (args.resume_extension or args.resume_repair) and not args.resume:
+    if (args.resume_extension or args.resume_repair or args.resume_recipe) and not args.resume:
         parser.error('Resume transition requires --resume')
     config = read_config(args.config)
     stop = config['max_updates'] if args.stop_after is None else args.stop_after
     if not 0 < stop <= config['max_updates']:
         raise ValueError('Stop boundary outside configured budget')
+    if args.resume_recipe and stop != 20000:
+        raise ValueError('The min_scale trial must end at update 20000')
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
@@ -122,6 +126,12 @@ def main():
                 args.resume, config, data, args.resume_repair, source_commit, repo_root)
             resume_lineage = list(resume_state.get('resume_lineage', [])) + [repair]
             write_json(output / 'source_repair.json', repair)
+        elif args.resume_recipe:
+            repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], text=True).strip()
+            resume_state, recipe = load_recipe_checkpoint(
+                args.resume, config, data, args.resume_recipe, source_commit, repo_root)
+            resume_lineage = list(resume_state.get('resume_lineage', [])) + [recipe]
+            write_json(output / 'recipe_transition.json', recipe)
         else:
             resume_state = load_checkpoint(args.resume, digest, data)
             if resume_state['git_commit'] != source_commit:
