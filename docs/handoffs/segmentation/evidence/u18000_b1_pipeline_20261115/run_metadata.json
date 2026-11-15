@@ -1,0 +1,7 @@
+{
+  "status": "queued",
+  "run_id": "segmentation-u18000-b1-pipeline-20261115-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "scope": "integration only; unchanged B1, no training, no segmentation inference"
+}

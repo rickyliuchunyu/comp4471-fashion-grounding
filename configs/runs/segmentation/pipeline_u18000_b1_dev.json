@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "purpose": "lcy_minimal_pipeline_dev_evaluation",
+  "grounding_repo": "/root/autodl-tmp/fashion-grounding/workspaces/grounding",
+  "grounding_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+  "selection": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01/selection.json",
+    "sha256": "bd9f89515fc90faa9ebf7d0c3fd0211c80cf27a994c168c1548aeb8a56be6c82"
+  },
+  "candidates": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-dev-candidates-20261115-r01/trial-0.3/candidates_predicted.json",
+    "sha256": "dfb06d6ca67b77901dcb25107d5dcedde7fdc2a761d4a66257522400dd64b32d"
+  },
+  "queries": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01-inputs/queries.jsonl",
+    "sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395"
+  },
+  "annotations": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json",
+    "sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+  },
+  "coverage": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01/coverage-0.3.json",
+    "sha256": "8314e0b2f34ef700a0bdeac7717141e4e858ce41e8c8ed19ff1810717e6a1993"
+  },
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "existing_cache": "/root/autodl-tmp/fashion-grounding/shared/features/grounding/siglip-v1",
+  "hard_limit_seconds": 1200,
+  "authorization": {
+    "scope": "lcy_minimal_pipeline_dev_evaluation",
+    "confirmed_by": "lcy (current user)",
+    "confirmed_at": "2026-11-15",
+    "queries_sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395",
+    "user_statement": "用现有 18000 步＋0.3 候选接通 wyz 排序到原 mask/框输出的最小 pipeline，完成当前语言 dev 的联调评价。复用已有候选和检查，不重复分割推理或 smoke，暂不追加训练，设置硬时间上限，完成后同步 GitHub。注意我只需要完成我的部分，暂时不要越界了"
+  }
+}

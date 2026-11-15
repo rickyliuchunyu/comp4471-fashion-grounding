@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-15T13:12:02.582383+00:00",
+  "heads": {
+    "segmentation": "1af889d3c53c54b8b12f212a927e8da1560d23b1",
+    "grounding": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "data_eval": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+  },
+  "prs": [
+    {
+      "number": 2,
+      "head": "1af889d3c53c54b8b12f212a927e8da1560d23b1",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "head": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "comments": []
+    }
+  ],
+  "note": "All five PRs enumerated; old #1/#3 closed unmerged, teammate fixed handoffs unchanged. SSH port22 unavailable; verified fetch and heads using port443 with existing github.com host key."
+}

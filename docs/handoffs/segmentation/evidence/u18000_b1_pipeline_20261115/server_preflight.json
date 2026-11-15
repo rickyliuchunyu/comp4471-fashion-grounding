@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-15T13:12:02.582383+00:00",
+  "disks": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281670144,
+      "free": 28930584576
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 45267664896,
+      "free": 169480699904
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 0 %",
+  "compute": "",
+  "active": [],
+  "repos": {
+    "segmentation": {
+      "head": "bb398225ef34de478c39ea70e18eaa137f9679ab",
+      "dirty": ""
+    },
+    "grounding": {
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "dirty": ""
+    }
+  }
+}
