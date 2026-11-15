@@ -1,6 +1,6 @@
 # 交接记录入口
 
-最新：[accepted语言dev就绪核查](segmentation/language_dev_readiness_20261114.md)：已发布accepted dev=0，290条needs_revision，未计算coverage或选阈值；不重复模型/候选检查。[此前真实dev250三包交付](segmentation/real_candidates_dev250_20261114.md)继续有效，现待语言审核及冻结清单。
+最新：[18000步完整dev250候选交付](segmentation/u18000_candidates_dev250_20261115.md)：一次推理保存阈值前缓存，三个trial包及wyz读取/裁剪技术验证完成，待接收方本人反馈；未训练、未重复smoke。[旧3000步三包](segmentation/real_candidates_dev250_20261114.md)保留原版本。[此前语言dev核查](segmentation/language_dev_readiness_20261114.md)为历史快照；本次未做语言评价或阈值选择，仍须accepted冻结查询。
 
 每项实现或验证交接新建 `<role>/<task-id>.md`；角色子目录由首次实际交接时创建。共享文档交接可以直接放本目录。不要把下面的模板当作已完成记录。
 

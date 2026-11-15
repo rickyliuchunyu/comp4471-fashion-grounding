@@ -4,6 +4,8 @@
 
 新增：[18k/20k小目标离线诊断](../../docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)只读取已有预测：138例分解、严格IoU匹配及类别宏平均解释已完成；不改变COCO指标或18k选择。
 
+最新候选：[18000步dev250交付](../../docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)已完成。配置`configs/runs/segmentation/candidate_u18000_export.json`固定权重/训练来源，复用`export_candidates cache/export`，完整阈值前缓存和三个离线trial均已实际生成；wyz固定接口全量读取和裁剪通过。本轮未重算AP、未选语言阈值，不重跑已完成候选推理。
+
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。
 
 训练入口负责保存完整 checkpoint；`fashion_grounding.segmentation.evaluate` 独立读取这些 checkpoint 做只读评估，`fashion_grounding.segmentation.select_checkpoint` 读取完整 dev 报告选权重。两者不创建 optimizer、不继续训练，也不改写 checkpoint。当前未接入训练循环内定期评估 hook；可在保存边界退出训练、释放 GPU 后，按同一共享锁执行评估。普通恢复训练仍使用原训练源码及配置；预算扩展须使用上文显式固定的过渡记录。
@@ -70,4 +72,4 @@ TRAIN_RUN="$FG_ROOT/runs/segmentation/segmentation-stability-200-20261112-r02"
   --output <new-selection-directory>
 ```
 
-选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP已完成，见顶部交接。新18000候选交付、语言候选阈值选择和接收方联调仍待完成。
+选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP和18000步候选交付已完成，见顶部交接。语言候选阈值选择和接收方联调仍待完成。

@@ -4,11 +4,11 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成20000步及八点dev，选择18k AP=63.5792。[18k/20k小目标离线诊断](docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)表明主要短板为高IoU形状/边界及部分漏检，错类独占几何为0；不直接延长原配方。新18k候选仍待交付，本轮0新推理/训练/旧smoke。
+> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成20000步及八点dev，选择18k AP=63.5792。[18k完整dev250候选](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)已交付：一次推理保存22,851个非空候选，离线0.3/0.5/0.7包为1,360/1,182/1,032个，wyz固定读取器全量验证通过。总阶段370.699秒，未训练、未重复smoke；阈值未选择、接收方本人签收待完成。[小目标诊断](docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)及不直接延长原配方的结论保留。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/s0_recovery20000_20261115.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -75,6 +75,6 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：lcy已完成正式S0到20000步及八点dev评价，当前选中18000步；下一项为选中权重的候选交付和接收方验收，本轮未执行新候选推理。现有3000步包保留为旧版本，正式语言阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；不因语言审核或阶段切换重复分割smoke。
+按[最新状态](docs/status.md)推进：lcy已完成正式S0、18k/20k诊断和选中18000步的完整dev250候选交付，下一项是wyz/wkq接收新版本并建立独立predicted缓存。现有3000步包保留旧版本，正式语言阈值独立等待accepted冻结语言dev；候选数不代替coverage。wyz继续M2及正式可比训练准备，wkq继续语言dev审核。未生成train5000/test候选，不自动追加训练或重复分割smoke。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

@@ -57,4 +57,4 @@ GPU 必须使用共用 `coordination/gpu.lock`；锁内检查计算进程、显�
 
 `export_package` 输出 schema 3、压缩 COCO RLE、原图排他 xyxy、稳定 query ID、严格同序候选和文件 SHA256。每图必须存在：正常空集 `no_candidates`，错误为带脱敏 code/message 的 `inference_error`。生产包不含 GT 目标 ID，拒绝覆盖旧输出。
 
-随机初始化 smoke 的候选包强制 `illustrative_only=true`，即使输入图片是真实图。它只能检查格式，不能用于语言方法的正式比较。COCO 短推理的八类头尚未训练，其候选同样强制 illustrative_only=true；正式模型候选仍需训练及 dev 选择；标准 COCO AP 仍保留官方 instance inference，未由本入口计算。
+随机初始化 smoke 的候选包强制 `illustrative_only=true`，即使输入图片是真实图。它只能检查格式，不能用于语言方法的正式比较。COCO 短推理的八类头尚未训练，其候选同样强制 illustrative_only=true；上述为历史初始化检查。正式S0已完成训练和dev选模，选中18000步；完整候选交付见[最新状态](../../docs/status.md)。标准COCO AP保留官方instance inference，与单query候选解码分开。
