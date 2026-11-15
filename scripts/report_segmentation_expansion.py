@@ -8,9 +8,10 @@ from expand_segmentation import GOALS,hits
 from fashion_grounding.data.schema import read_json,write_json
 def summarize(root):
  m=read_json(root/"image_manifest.json");c=read_json(root/"annotations_coco.json")
- images={x["image_id"]:x for x in m["images"]};anns=c["annotations"]
+ return summarize_records({x["image_id"]:x for x in m["images"]},c["annotations"],{x["id"]:x["name"] for x in c.get("categories",[])})
+def summarize_records(images,anns,project_names=None):
+ project_names=project_names or {}
  source_names={x["source_id"]:x["source_name"] for x in read_json(Path(__file__).resolve().parents[1]/"configs/source_category_mapping.json")["fashionpedia"]}
- project_names={x["id"]:x["name"] for x in c.get("categories",[])}
  def table(field,ids):
   out={}
   for cid in ids:
