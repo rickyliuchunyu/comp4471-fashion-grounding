@@ -1,0 +1,185 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-s0-recovery20000-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "running",
+  "created_at": "2026-11-15T09:32:12.818554+00:00",
+  "git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "source_tree": "c0747d2a2e95b5250081f942ec78d8365a2ac8d2",
+  "authorization": {
+    "schema_version": 1,
+    "run_id": "segmentation-s0-recovery20000-20261115-r01",
+    "authorized_by": "Current explicit user request",
+    "parent_run_id": "segmentation-s0-20000-20261115-r01",
+    "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "parent_checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "parent_config": "configs/runs/segmentation/s0_resume_20000.json",
+    "training_config": "configs/runs/segmentation/s0_recovery_20000.json",
+    "repair_policy": "configs/runs/segmentation/resume_repair_18000_to_20000.json",
+    "evaluation_config": "configs/runs/segmentation/dev_ap_250_resume_20000.json",
+    "evaluation_config_sha256": "a9f5a0223742402e68b1ac71880e88b83839343c43b9a7846d4b1a8599f1b54c",
+    "evaluation_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000,
+      20000
+    ],
+    "existing_checkpoints": [
+      {
+        "update": 6000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_006000.pth",
+        "sha256": "962da05307b3ab9c19fbb2a83a2d55ae868684adb1bb63f7da5742d1f2392980"
+      },
+      {
+        "update": 8000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_008000.pth",
+        "sha256": "2f6be1d62de01d0e6de6c97147b778788bd26d321fa1b5417f09b3e4a5643684"
+      },
+      {
+        "update": 10000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_010000.pth",
+        "sha256": "3e589721f014cc1153d1dbcef884e40e3f72ff6a357b072a6a621c5a855e0af7"
+      },
+      {
+        "update": 12000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_012000.pth",
+        "sha256": "cc15a7e313cdf4b8cef3389ad9f394cbdd6775849c7c788f7ac525138c375b92"
+      },
+      {
+        "update": 14000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_014000.pth",
+        "sha256": "8095076bcc220b8466dd61da32b96f7fb45c7bc2ea12ff6b1bbde006e7662d17"
+      },
+      {
+        "update": 16000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_016000.pth",
+        "sha256": "48e792d72eb725faed6ab1cf679dd674cc159debf3dd84aa4b6bf96bb9588c44"
+      },
+      {
+        "update": 18000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+        "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01"
+      }
+    ],
+    "prior_training_config": "docs/handoffs/segmentation/evidence/resume5000_20261113/train/resolved_config.json",
+    "prior_evaluation_config": "docs/handoffs/segmentation/evidence/resume5000_20261113/evaluation/resolved_config.json",
+    "prior_best_report": "docs/handoffs/segmentation/evidence/resume5000_20261113/update_003000/evaluation_report.json",
+    "prior_best_report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163",
+    "prior_best_checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+    "prior_best_dev_mask_AP": 50.56031359695618,
+    "total_hard_limit_seconds": 10800,
+    "process_group_timeout_seconds": 10790,
+    "wrapper_timeout_seconds": 10795,
+    "wrapper_cleanup_max_seconds": 5,
+    "training_internal_seconds": 8400,
+    "eight_evaluations_shared_seconds": 1800,
+    "automatic_stage_restart": false,
+    "old_smoke_runs": 0,
+    "prior_best_inference_repeated": false
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/with_gpu_lock.py",
+    "--coordination",
+    "/root/autodl-tmp/fashion-grounding/coordination",
+    "--run-id",
+    "segmentation-s0-recovery20000-20261115-r01",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "--seconds",
+    "10795",
+    "--",
+    "/usr/bin/timeout",
+    "--signal=KILL",
+    "10790s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_s0_recovery.py",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+  ],
+  "parent_run_ids": [
+    "segmentation-s0-20000-20261115-r01"
+  ],
+  "old_smoke_runs": 0,
+  "automatic_stage_restart": false,
+  "total_hard_limit_seconds": 10800,
+  "artifacts": {},
+  "evaluation": null,
+  "failure": null,
+  "wrapper_pid": 124906,
+  "coordination": {
+    "role": "segmentation",
+    "executed_by": "lcy",
+    "run_id": "segmentation-s0-recovery20000-20261115-r01",
+    "status": "running",
+    "wrapper_pid": 124906,
+    "started_at": "2026-11-15T09:32:13.039325+00:00",
+    "budget_seconds": 10795,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "command": [
+      "/usr/bin/timeout",
+      "--signal=KILL",
+      "10790s",
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "scripts/run_s0_recovery.py",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+    ],
+    "git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+    "child_pid": 124912
+  },
+  "phases": [
+    {
+      "phase": "amp_cuda_regression",
+      "status": "completed",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "tests/test_segmentation_amp_recovery.py",
+        "AmpRecoveryTests.test_actual_scaler_skips_optimizer_and_replays_same_rng_sampler_buffers",
+        "-v"
+      ],
+      "started_at": "2026-11-15T09:32:13.079815+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-15T09:32:16.005925+00:00"
+    },
+    {
+      "phase": "train",
+      "status": "running",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--resume",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+        "--resume-repair",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resume_repair_18000_to_20000.json",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train"
+      ],
+      "started_at": "2026-11-15T09:32:16.006307+00:00"
+    }
+  ],
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T09:32:13.039325+00:00"
+    }
+  ]
+}
