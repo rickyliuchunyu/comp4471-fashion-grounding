@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新：[lcy min_scale 单因素对照运行](segmentation/min_scale_trial_20261115.md)：22:46:25 HKT经用户授权启动，45分钟总硬限；六项状态恢复通过，训练中，尚无B组AP。复用A组，不重复smoke。
+
 最新：[lcy min_scale 单因素续训准备](segmentation/min_scale_preparation_20261115.md)：同一18k→20k、A组复用、B仅结束评完整dev250、45分钟总硬限；11项新增CPU检查通过，未启动训练/推理或重复smoke。
 
 最新：[lcy train5000分布与扩充判断](segmentation/train5000_distribution_20261115.md)完成；2,165小目标中95.43%为鞋/配饰，不优先盲目翻倍长训。[给wkq的定向10k需求](segmentation/train10000_expansion_request_20261115.md)已整理、待本人接收；未代构建数据，0推理/训练/旧smoke。
