@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-11-15T10:49:49.521442+00:00",
+  "branches": {
+    "segmentation": "a539d8c471a65ab406c7a4756946057719597b4a",
+    "data_eval": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+    "grounding": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "title": "Add data_eval pilot validation and human review auditing",
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:48Z",
+      "comments_and_reviews": null
+    },
+    {
+      "number": 2,
+      "title": "Segmentation: completed S0 and offline small-object error analysis",
+      "head": "a539d8c471a65ab406c7a4756946057719597b4a",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-15T10:41:07Z",
+      "comments_and_reviews": []
+    },
+    {
+      "number": 3,
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:53Z",
+      "comments_and_reviews": null
+    },
+    {
+      "number": 4,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "head": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T10:45:46Z",
+      "comments_and_reviews": []
+    },
+    {
+      "number": 5,
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updated_at": "2026-11-12T12:11:25Z",
+      "comments_and_reviews": []
+    }
+  ],
+  "teammate_handoffs_unchanged": true,
+  "read_handoffs": [
+    "docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md@103dcc5",
+    "docs/handoffs/data_eval/large_dataset_20261112.md@f5787f4"
+  ],
+  "notes": "Live ls-remote confirms four current branches; other local tracking refs are historical closed branches."
+}

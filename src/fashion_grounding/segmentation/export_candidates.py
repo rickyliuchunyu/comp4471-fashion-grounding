@@ -1,4 +1,4 @@
-"""u3000 candidates: cache (future GPU inference), export (offline CPU filtering).
+"""Pinned selected-checkpoint candidates: GPU cache and offline CPU filtering.
 
 Run cache under scripts/with_gpu_lock.py with a hard timeout. Merely importing
 this module, --help and export never import PyTorch or construct/load a model.
@@ -17,8 +17,11 @@ from .candidate_cache import CacheWriter, export_cached, image_index, fingerprin
 
 
 def validate_config(config):
-    require(config['purpose'] == 'u3000_candidate_export' and config['completed_updates'] == 3000,
-            'Expected selected u3000 export config')
+    updates = config['completed_updates']
+    require(type(updates) is int and updates > 0 and
+            (config['purpose'] == 'selected_checkpoint_candidate_export' or
+             (config['purpose'] == 'u3000_candidate_export' and updates == 3000)),
+            'Expected a pinned selected-checkpoint export config')
     decoder = config['decoder']
     require(decoder == dict(short_edge=800, max_size=1333, amp=False,
         decoder='one_foreground_class_per_query', mask_logit_threshold=0,

@@ -1,0 +1,11 @@
+{
+  "scope": "Only new selected-checkpoint config gate; decoder/model/cache semantics unchanged",
+  "tests": 2,
+  "status": "passed",
+  "seconds_reported_by_unittest": 0,
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_selected_candidate_config.py -v",
+  "model_loads": 0,
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "legacy_suite_rerun": false
+}

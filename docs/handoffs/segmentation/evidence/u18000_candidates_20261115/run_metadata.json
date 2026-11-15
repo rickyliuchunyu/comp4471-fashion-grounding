@@ -1,0 +1,18 @@
+{
+  "run_id": "segmentation-u18000-dev-candidates-20261115-r01",
+  "status": "queued",
+  "scope": "one complete dev250 candidate pass and three CPU threshold trials",
+  "hard_limit_seconds": 1800,
+  "gpu_phase_limit_seconds": 900,
+  "offline_phase_limit_seconds": 900,
+  "automatic_retries": 0,
+  "optimizer_updates": 0,
+  "evaluation": null,
+  "selected_threshold": null,
+  "implementation_validation": "new_logic_validation.json",
+  "reused_evidence": [
+    "real_candidates_20261114",
+    "s0_recovery20000_20261115"
+  ],
+  "remaining": "Actual inference, export and consumer receipt pending"
+}

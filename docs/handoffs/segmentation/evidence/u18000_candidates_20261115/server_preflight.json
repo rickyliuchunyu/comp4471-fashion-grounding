@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-15T10:49:49.521442+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281539072,
+      "free": 28930715648
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 45068349440,
+      "free": 169680015360
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "gpu_processes": "",
+  "active_coordination": [],
+  "checkout_status": "",
+  "checkout_head": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "existing_target": false
+}
