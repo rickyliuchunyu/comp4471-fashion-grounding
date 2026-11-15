@@ -1,0 +1,72 @@
+{
+  "phases.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/phases.json",
+    "sha256": "3e54fe5ee4e073a690ec44f48e68ec66a7a8b6f92ececa6eca83b18f525e243e",
+    "bytes": 1080
+  },
+  "stage.log": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/stage.log",
+    "sha256": "990e8db14d3ddd7bb49af95e01ec7ecff37b063d39e0cd3d9f9e7f1a23cebc54",
+    "bytes": 226843
+  },
+  "metric_summary.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/metric_summary.json",
+    "sha256": "df6768a509060a4e394b2bda06b3267bd63327b1fdab56a64bed603bfabe3228",
+    "bytes": 5638
+  },
+  "postflight.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/postflight.json",
+    "sha256": "f5e11f859d9d4e41b136aa84ed6bd7a78082bd1ce1d3fd7a0bf5d1a9264cce8a",
+    "bytes": 481
+  },
+  "checkpoint_recovery.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/checkpoint_recovery.json",
+    "sha256": "0be4a0fd27deb0e5311061ef18bf9d50b9722f45a92b6571ffa067725d34ae49",
+    "bytes": 764
+  },
+  "train/resume_check.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/resume_check.json",
+    "sha256": "5a035612236e81f38ffb7e5a75bc8d9fba762873c0b0adafc95b71e71778dadc",
+    "bytes": 1308
+  },
+  "train/budget_extension.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/budget_extension.json",
+    "sha256": "6e5b98176ee1a02050ee46a0d8c4ec4d01918e9baed554fb6ea3710f74027863",
+    "bytes": 1450
+  },
+  "train/resolved_config.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/resolved_config.json",
+    "sha256": "e1f0502871ced62d2d6301937ed84762cbef46182c76f72d63a84144bcdbc92f",
+    "bytes": 994
+  },
+  "train/initialization.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/initialization.json",
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "bytes": 1257
+  },
+  "train/data_check.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/data_check.json",
+    "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3",
+    "bytes": 627
+  },
+  "train/model_config.yaml": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/model_config.yaml",
+    "sha256": "646e9b5c73cdf69812100ecb9d8417a7a9a7ef2f3b8a232b30b15e26265e780b",
+    "bytes": 7735
+  },
+  "train/gradient_failure.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/gradient_failure.json",
+    "sha256": "2cca794980ded085c4613ac4f4f8d04a758e425418f7c6c120febc85a8ecf866",
+    "bytes": 1456
+  },
+  "coordination.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-s0-20000-20261115-r01.json",
+    "sha256": "4a93d9b5e87a358f34ff4b68e058eeced1b2338bc57469f83cd779386b29c220",
+    "bytes": 906
+  },
+  "run_metadata.json": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/run_metadata.json",
+    "sha256": "0a162a8c48e0d00d538a8eaaf1970b27acad045c5a8bd504fee834cf6756ce49",
+    "bytes": 20333
+  }
+}

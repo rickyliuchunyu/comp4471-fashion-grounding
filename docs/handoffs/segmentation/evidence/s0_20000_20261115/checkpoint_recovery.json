@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-15T09:08:35.924729+00:00",
+  "last_saved_update": 18000,
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+  "checkpoint_bytes": 528466573,
+  "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "sidecar_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "byte_integrity_passed": true,
+  "checkpoint_deserialized": false,
+  "last_successful_update": 19314,
+  "unsaved_successful_updates": 1314,
+  "failed_attempt": 19315,
+  "resume_executed": false,
+  "note": "Last fully saved state; no recovery trial or model load. AMP behavior must be addressed before retrying this failed trajectory."
+}

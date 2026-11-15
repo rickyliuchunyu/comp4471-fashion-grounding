@@ -4,11 +4,11 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式 S0 5000→20000 续训](docs/handoffs/segmentation/s0_20000_20261115.md)已于 2026-11-15 15:33 HKT 启动，总硬上限三小时。当前训练进行中，八点完整 dev 与整体选择尚未完成；现有 u3000 候选继续供队友使用，不重复 smoke。
+> [正式 S0 续训](docs/handoffs/segmentation/s0_20000_20261115.md)于 2026-11-15 17:05 HKT 因第19315步非有限梯度停止，成功完成到19314步，运行92.03分钟。已保留6000–18000的七份权重；20000未完成，完整dev评价尚未启动，旧3000步最佳AP=50.5603继续有效。本轮未自动重试、延长或重复smoke。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/s0_20000_preparation_20261115.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/s0_20000_20261115.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
 
@@ -67,7 +67,7 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 [training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，按独立run记录实际训练、dev评价及离线派生分析。真实AP行填写mask AP，工程和派生诊断行不伪装成新增模型性能测量。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
 
-分割既有工程验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练入口与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[真实 dev AP/选择](docs/handoffs/segmentation/real_dev_ap_20261112.md)已完成；完整长训练仍未执行。
+分割既有工程验证见 [200-update 交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练入口与恢复命令见 [TRAINING.md](envs/segmentation/TRAINING.md)。[修复后续训及真实dev选择](docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)已完成；正式S0已执行但因梯度异常未完成，未产生新的dev AP。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
@@ -75,6 +75,6 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：分割 train/dev 已固定；lcy 已启动5000→20000步正式S0，训练后评价八份权重并与旧3000步最佳比较。三小时总硬上限，不自动延长、不重复smoke；当前训练进行中，新AP尚未产生。现有3000步候选继续交付队友，正式阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；这些工作与分割训练并行。
+按[最新状态](docs/status.md)推进：分割train/dev已固定；lcy下一步应修复AMP非有限梯度处理，并建立保持20000步目标的源码修复恢复记录。最后完整checkpoint是18000步，已核对实际文件hash；19314状态未保存。后续获启动指令后从18000完成剩余2000步，复用七份已有权重并补完整dev评价，与旧3000步比较；本轮停止后未追加训练或评价。现有3000步候选继续交付队友，正式阈值独立等待accepted语言dev。wyz继续M2及正式可比训练准备，wkq继续语言dev审核；语言审核不阻塞分割修复/AP。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。
