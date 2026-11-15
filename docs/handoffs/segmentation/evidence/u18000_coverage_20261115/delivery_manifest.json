@@ -1,0 +1,32 @@
+{
+  "status": "available_for_user_authorized_development",
+  "published_at": "2026-11-15T12:38:56.889593+00:00",
+  "evaluation_basis": "user_authorized_development",
+  "selected_threshold": 0.3,
+  "queries": 290,
+  "semantic_query_pairs": 145,
+  "query_images": 116,
+  "full_segmentation_dev_images": 250,
+  "source_review_status_counts": {
+    "needs_revision": 290
+  },
+  "selection": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-language-selection-20261115-r01/selection.json",
+    "sha256": "bd9f89515fc90faa9ebf7d0c3fd0211c80cf27a994c168c1548aeb8a56be6c82"
+  },
+  "selected_package": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-dev-candidates-20261115-r01/trial-0.3/candidates_predicted.json",
+    "sha256": "dfb06d6ca67b77901dcb25107d5dcedde7fdc2a761d4a66257522400dd64b32d",
+    "candidate_set_id": "u18000-dev250-20261115-r01-trial-0.3"
+  },
+  "queries_file": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-language-selection-20261115-r01/language_dev_inputs/queries.jsonl",
+    "sha256": "fa1419b5799fb6c5c5d0b49dc76f8014300b0c59ce7361007627c2da8fd1c395"
+  },
+  "authorization_record": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-language-selection-20261115-r01/language_dev_inputs/user_authorization.json",
+    "sha256": "3d70bef06495f4e880c67fbe869af66bcef737dd2520e229e3d15a2289143d27"
+  },
+  "storage_policy": "Server symlinks point to immutable run/input artifacts; preserve targets or copy resolved directories.",
+  "note": "Current user explicitly authorized this dev version. Upstream needs_revision/reviewer metadata and old trial manifests are unchanged. Selected for this development scope, not a new independent review claim."
+}

@@ -1,5 +1,7 @@
 # 离线候选 coverage 与阈值选择入口
 
+后续更新：用户确认“现在的语言dev可以直接用”，现已按原始文件固定版本完成[18k离线coverage及0.3选择](u18000_language_dev_selection_20261115.md)。以下未运行/等待accepted的记录属于此前阶段，不再作为当前开发阻塞。
+
 2026-11-15；lcy / segmentation，Codex 执行。**入口与新增专项验证完成；真实语言 dev 评价未运行，正式阈值未选择。** wkq 已发布 accepted dev 仍为 0，不能将缺失分母写成 coverage=0。此前分割 train/dev 的人工复核确认继续有效，本轮不重开分割冻结。
 
 ## 本轮实际进度

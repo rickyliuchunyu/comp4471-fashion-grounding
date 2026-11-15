@@ -1,16 +1,16 @@
 # 当前进度与下一步
 
-更新：2026-11-15；[18000步完整dev250候选交付][u18000-candidates]完成。一次推理保存22,851个非空阈值前候选；0.3/0.5/0.7包为1,360/1,182/1,032个，均250图且无零候选图。wyz固定读取器750次load、3,574个裁剪通过，总计算370.699秒/1800秒硬上限；0训练、0旧smoke。此前[小目标诊断][small-analysis]和18k最佳AP=63.5792结论保持。
+更新：2026-11-15；用户明确确认当前语言dev可直接用，已按固定116图/145双语组/290查询完成[18k候选离线coverage与阈值选择][u18000-selection]。0.3/0.5/0.7覆盖258/256/250条，本轮选0.3（88.9655%）。实际CPU阶段7.044秒/360秒硬上限，0推理/权重加载/训练/旧smoke；原始needs_revision及机器来源保留，结果标记user_authorized_development。
 
-**[新18000步cache及三个trial包][u18000-candidates]已发布**，接收方本人反馈待完成；[旧3000步包][real-candidates]保留原版本。正式coverage未计算（不是0）、selected_threshold=null，须独立等待accepted冻结语言dev。train5000/test候选、语言排序与端到端评价本轮未执行。
+**当前开发组合：18000步权重＋0.3候选包＋本次用户授权固定语言dev。** [独立selection记录][u18000-selection]已发布，下游可直接用于开发联调；原trial包的历史selected_threshold=null不改写。此前[完整dev250缓存及三包交付][u18000-candidates]、[旧3000包][real-candidates]均保留。wyz本人接收/实际排序、train候选、完整250图语言覆盖和最终test未冒称完成。
 
 ## GitHub 同步快照
 
-以下为本轮开工检查的远端head（2026-11-15，记录见[18k候选交接][u18000-candidates]）：lcy=`a539d8c`、wkq=`f5787f4`、wyz=`103dcc5`、main=`7064ebb`；队友分支/交接无增量，活跃PR无评论/review。PR #2/#4 open/draft/unmerged，#5 open/non-draft/unmerged（base `data-eval/p3-baseline-evaluation`）；#1/#3 closed-unmerged，旧tracking ref不代表新增分支。未合并队友工作。
+以下为本轮开工检查的远端head（2026-11-15，见[本轮选择交接][u18000-selection]）：lcy=`8e9a2b7`、wkq=`f5787f4`、wyz=`103dcc5`、main=`7064ebb`；队友分支/交接无增量，活跃PR无评论/review。PR #2/#4 open/draft/unmerged，#5 open/non-draft/unmerged（base `data-eval/p3-baseline-evaluation`）；#1/#3 closed-unmerged。没有合并队友工作。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工`a539d8c`；候选实际执行源`00b408d`，结果随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[18k候选][u18000-candidates] / [小目标诊断][small-analysis] / [正式S0][s0-recovery] |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工`8e9a2b7`；本轮CPU选择执行源`bb39822`，候选源`00b408d`，结果随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[18k阈值选择][u18000-selection] / [候选交付][u18000-candidates] / [正式S0][s0-recovery] |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `f5787f4`；扩充实现及发布交接已推送 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；旧 #1/#3 已被替代；[大型数据交接][wkq-large] |
 
@@ -29,10 +29,10 @@
 | P0 接口确认 | in_progress | [文件契约](artifact_contract.md)、[合成示例](../examples/README.md)、[解析约定](rule_parser_contract.md) | 三人消费方复核与实际读写器检查 | 全员，B 汇总 |
 | P1 环境与工作区 | in_progress | [lcy 工程检查](handoffs/segmentation/pilot_adapter_20261112.md)、[COCO 八类加载/五图推理](handoffs/segmentation/coco_weights_20261112.md)、[200-update 与跨进程恢复](handoffs/segmentation/stability_200_20261112.md)；[wyz 图文环境与 GPU 编码][wyz-handoff]；wkq 独立 CPU 环境；[lcy AP/候选读取实测][lcy-ap] | 全组交付的接收方复核与环境复现验收；wyz 环境只读复用 base torch，base 变化需重验；非长训练验收 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
-| P3 基线与评价器 | in_progress | [wyz 已接收共享解析器；34 条同包 train 上 B0/B1/B2=12/18/22 选对，输出完整，缓存重放一致][wyz-latest]；wkq 统一评价核心已交付 | 下游 PR 审阅、正式 accepted dev 评价与 B2 lambda 选择仍待完成；训练诊断不是泛化成绩 | A/B |
-| P4 数据扩充冻结 | in_progress | [wkq 大包交接][wkq-large]：5000/250/400 分割图已发布；[lcy train/dev CPU 读取验收通过][large-inputs]；1000 图训练初标和 116 图 dev 草稿待审 | 三方技术消费已通过；[每类 20 例抽样及 53 对保守归组核对完成][freeze-prep]；用户已确认交付数据经过人工复核，已形成消费者固定版本记录；原发布 formal_freeze=false 保留作历史，语言审核/最终冻结独立跟踪 | B，全员 |
-| P5-S 分割训练 | in_progress | [正式S0八点dev][s0-recovery]完成，选18000步AP=63.5792；[新权重dev250候选][u18000-candidates]及wyz接口技术验证完成 | 语言阈值、A/B本人接收、后续train候选仍待完成；不自动扩大本轮范围 | lcy |
-| P5-L 排序训练 | in_progress | [M1 seed42 机器弱标签试训：5 epochs / 490 updates，已保存权重][wyz-latest]，不属于正式训练结果 | 人工审核 dev、M2 实现与 M1/M2 三种子公平对照、真实 dev 选择 | A |
+| P3 基线与评价器 | in_progress | [wyz已实现B0/B1/B2与M1弱试训][wyz-latest]；本轮用户授权dev可用、候选coverage及0.3选择完成 | 各排序方法的真实dev预测、统一评价及B2 lambda选择尚未运行；旧train诊断不当作泛化成绩 | A/B |
+| P4 数据扩充冻结 | in_progress | 分割5000/250已固定并使用；当前116图/290条语言dev按用户授权固定版本用于开发选择，原标注来源保留 | 其余134张dev语言及独立审核/最终测试描述另行完善；不再阻塞当前已授权开发联调 | B，全员 |
+| P5-S 分割训练 | in_progress | S0选18k AP=63.5792；dev250候选和wyz读取技术验证完成；[用户授权dev选0.3][u18000-selection] | A/B本人接收及最小排序联调、后续train候选仍待推进 | lcy |
+| P5-L 排序训练 | in_progress | [M1 seed42机器弱标签试训][wyz-latest]已完成；本轮固定语言dev可用于明确标记的开发对照 | M2实现及M1/M2三种子公平对照、实际dev选模尚未完成；使用查询须保留本次授权依据及原始来源 | A |
 | P6 联调与对照 | not_started | E1 与集成规范 | dev 全流程、E1、demo 和扩展取舍 | 全员 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
 | P8 最终测试 | not_started | 评价协议 | 完整预测、指标与失败记录 | 全员 |
@@ -45,9 +45,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 取得wyz/wkq对18k候选的接收反馈，支持固定候选集成 | 新cache和三个trial已发布，严格新manifest namespace；代码、配置和消费证据齐全 | 不重复推理/smoke；正式阈值依赖accepted冻结查询；train候选需后续明确范围 | [18k交付][u18000-candidates] / [小目标诊断][small-analysis] |
-| wyz（A）/ grounding | 接收18k predicted候选，推进M2及正式可比训练、PR #5审阅 | lcy已全量运行固定wyz读取器；新包可建立独立predicted缓存 | 本人接收/特征编码未完成；正式语言dev未验收；M2尚未实现 | [最新交接][wyz-latest]、[18k候选][u18000-candidates]、PR #5 |
-| wkq（B）/ data_eval | 审核/补写语言dev并发布accepted查询及冻结记录 | 发布路径、query hash、复核来源、图片/GT版本和明确的冻结分母 | 最近服务器核查（本日14:52 HKT）为116图/290草稿、accepted dev=0；本轮GitHub head未变；分割人工复核确认继续有效 | [语言dev核查][language-ready]、[大包交接][wkq-large]、PR #4 |
+| lcy | 接通18k＋0.3候选到wyz排序接口和原mask/框输出，取得接收反馈 | 已有完整候选缓存、选择记录及固定授权查询，可直接准备最小联调 | 复用现有候选；不重复分割推理/smoke，不追加训练 | [本轮选择][u18000-selection] / [候选交付][u18000-candidates] |
+| wyz（A）/ grounding | 接收18k＋0.3包并建立独立predicted特征缓存，继续M2/可比训练 | 当前语言dev已由用户授权可用，连同原审核状态和授权记录传递给消费入口 | 实际排序编码/预测及本人接收仍待执行；不能改写reviewer或冒称新增独立审核 | [选择记录][u18000-selection]、[wyz交接][wyz-latest]、PR #5 |
+| wkq（B）/ data_eval | 接收当前候选/查询固定版本，完善剩余dev语言及独立审核记录，准备统一评价 | 当前116图/290查询已按用户授权完成coverage，原文件仍needs_revision；查询/图片/GT指纹和分母齐全 | 完整250图语言覆盖、正式独立审核来源和最终test描述仍不冒称齐备；不阻塞本轮开发选择 | [本轮授权与结果][u18000-selection]、PR #4 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -57,9 +57,9 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | trainer/AP、AMP受限恢复、预算扩展及cache/export已实际运行；新增选中checkpoint配置门禁2项CPU验证通过 | S0训练/AP、18k候选及固定wyz接口技术验证完成；正式语言阈值、接收方集成与最终test仍待完成 |
-| 实验结果 | S0选18k AP=63.5792；18k/20k诊断完成；本轮1条真实候选缓存run+3条离线trial完成 | 本轮未重测AP、未计算coverage或语言性能，相应registry字段留空；候选计数不代替效果 |
-| GPU/环境/付费预算 | 本轮GPU锁167.664秒，CPU导出/消费202.739秒，总370.699秒；1800秒总硬上限，无重试/延长 | 18:59结束GPU0MiB/0%、无计算进程/active记录，数据盘约157.84GiB空闲；[交付资源回执](handoffs/segmentation/evidence/u18000_candidates_20261115/delivery_receipt.json) |
+| 模型代码/数据转换器 | 训练/AP/cache/export已运行；新增显式用户授权dev路径，原accepted默认门禁与匹配器不变，3项必要CPU验证通过 | 已完成本轮0.3选择；实际排序联调、M2及最终test仍待完成 |
+| 实验结果 | S0选18k AP=63.5792；本轮0.3覆盖258/290=88.9655%，0.5为256/290，0.7为250/290 | 仅当前用户授权116图语言dev子集的候选coverage，不是排序准确率、完整250图语言评价或新的独立审核证明；AP未重测 |
+| GPU/环境/付费预算 | 本轮纯CPU离线选择7.044秒，内部300秒/外层360秒硬限，0模型加载/推理/训练 | 20:38结束GPU0MiB/0%、无进程或active记录，数据盘约157.84GiB空闲；[执行回执](handoffs/segmentation/evidence/u18000_coverage_20261115/execution_receipt.json) |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -67,7 +67,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0训练/AP、小目标诊断和18k完整dev候选已完成；下一项为接收方反馈及共同候选集成。原配方直接续长没有足够依据，min_scale 0.1→0.5仍为未执行提案。旧3000包保留原版本，18k新包不复用旧特征缓存；不重复推理/smoke。wyz继续M2/正式可比训练准备，wkq继续语言审核。
+保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0训练/AP、18k候选和本轮用户授权dev的0.3阈值选择已完成。下一项为实际排序联调和共同候选比较；当前语言dev可用，不因原审核字段再次无意义等待。原字段/来源继续保留，完整dev语言及独立审核记录另行完善。min_scale优化仍为未执行提案，不自动追加训练；wyz继续M2，wkq继续数据与统一评价。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 
@@ -122,3 +122,5 @@
 [small-analysis]: handoffs/segmentation/small_object_analysis_18000_20000_20261115.md
 
 [u18000-candidates]: handoffs/segmentation/u18000_candidates_dev250_20261115.md
+
+[u18000-selection]: handoffs/segmentation/u18000_language_dev_selection_20261115.md

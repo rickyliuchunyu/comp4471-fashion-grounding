@@ -1,5 +1,7 @@
 # Dev AP 与 checkpoint 选择接入
 
+最新：[用户授权当前语言dev的离线选择](../../docs/handoffs/segmentation/u18000_language_dev_selection_20261115.md)已选18k+0.3。使用显式`--user-authorized-dev`和固定授权回执；原accepted默认路径及共享匹配器不变，原始审核状态不改写。
+
 最新：[正式S0八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成，6000–20000每2000步完整dev250；选择18000步mask AP=63.5792，旧3000步报告AP=50.5603只读复用，提升13.0188点。20000步AP=63.5595，差距约0.02点不作为显著退化证据。
 
 新增：[18k/20k小目标离线诊断](../../docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)只读取已有预测：138例分解、严格IoU匹配及类别宏平均解释已完成；不改变COCO指标或18k选择。
@@ -72,4 +74,4 @@ TRAIN_RUN="$FG_ROOT/runs/segmentation/segmentation-stability-200-20261112-r02"
   --output <new-selection-directory>
 ```
 
-选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP和18000步候选交付已完成，见顶部交接。语言候选阈值选择和接收方联调仍待完成。
+选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP和18000步候选交付已完成，见顶部交接。当前用户授权语言dev的阈值已选0.3；接收方实际排序联调仍待完成。

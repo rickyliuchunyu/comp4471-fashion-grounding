@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成20000步及八点dev，选择18k AP=63.5792。[18k完整dev250候选](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)已交付：一次推理保存22,851个非空候选，离线0.3/0.5/0.7包为1,360/1,182/1,032个，wyz固定读取器全量验证通过。总阶段370.699秒，未训练、未重复smoke；阈值未选择、接收方本人签收待完成。[小目标诊断](docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md)及不直接延长原配方的结论保留。
+> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选18k AP=63.5792，[完整dev250候选](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)已交付。用户确认当前语言dev可直接用后，[离线选择](docs/handoffs/segmentation/u18000_language_dev_selection_20261115.md)在116图/290查询上选0.3：覆盖258/290=88.9655%，优于0.5的256条及0.7的250条。本轮7.044秒CPU，0新推理/训练/smoke；保留原查询来源，结果为用户授权开发集选择。
 
 ## 团队与 Codex 开工入口
 
@@ -71,10 +71,10 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
-Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放于共享数据盘；reviewed_v1 已有 34 条 accepted 训练查询，正式 dev/test 语言集尚未冻结。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
+Git跟踪的数据、模型和输出目录保留占位，真实接口包在服务器。reviewed_v1有34条accepted训练查询；当前116图/290条语言dev已按用户明确授权用于开发选择，原needs_revision/机器来源保留，未冒称完整250图语言集或最终test冻结。大数据、权重、缓存和凭据不上传GitHub。
 
 ## 下一步
 
-按[最新状态](docs/status.md)推进：lcy已完成正式S0、18k/20k诊断和选中18000步的完整dev250候选交付，下一项是wyz/wkq接收新版本并建立独立predicted缓存。现有3000步包保留旧版本，正式语言阈值独立等待accepted冻结语言dev；候选数不代替coverage。wyz继续M2及正式可比训练准备，wkq继续语言dev审核。未生成train5000/test候选，不自动追加训练或重复分割smoke。
+按[最新状态](docs/status.md)推进：lcy的S0、18k dev候选及当前用户授权语言dev的0.3选择已完成，下一项接通已有候选→wyz排序→原mask/框输出。wyz接收新候选与授权查询、建立独立predicted缓存并继续M2；wkq完善其余dev语言及统一评价。当前开发联调不再等待旧审核标记变更；不伪造审核人、不重复分割推理或追加训练。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。
