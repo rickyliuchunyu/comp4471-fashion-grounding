@@ -1,0 +1,6 @@
+{
+  "upstream_commit": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+  "upstream_path": "src/fashion_grounding/evaluation/matching.py",
+  "sha256": "0e32cfcae696968f0097b0e1e260b9287b3c2ea2c7d1530ee01adbf48f95f018",
+  "integration": "Byte-identical import of wkq shared matcher; no changed evaluation rule."
+}

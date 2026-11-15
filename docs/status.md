@@ -1,16 +1,16 @@
 # 当前进度与下一步
 
-更新：2026-11-14 02:48 HKT；[accepted语言dev最新核对][language-ready]确认尚未就绪：已发布accepted dev为0条，语言dev的290条草稿全部needs_revision，RELEASE仍formal_freeze=false。因此本轮未计算matched query coverage、未选阈值，未重复候选检查/推理或追加训练。
+更新：2026-11-15；[离线 coverage 与阈值选择入口][offline-coverage]已实现，10 项新增专项测试通过。14:52 HKT 服务器实查 accepted dev 仍为 0，290 条语言草稿仍待修订，因此真实 coverage/正式阈值未测。复用已验收候选，不重推理、AP、旧 smoke 或训练。
 
 **[真实dev250候选缓存及三个trial包][real-candidates]已交付，继续复用。** 0.3/0.5/0.7分别1,565/1,258/980候选；0.7下1张零候选图保留。当前缺口是accepted且冻结的语言dev查询清单，不是候选导出。正式coverage未计算（不是0），selected_threshold=null；A/B本人接收和train5000候选仍未完成。
 
 ## GitHub 同步快照
 
-以下为本轮开工检查的远端 head（2026-11-14，记录见最新交接）；PR #2/#4 为 open / draft / unmerged，PR #5 为 open / non-draft / unmerged（base `data-eval/p3-baseline-evaluation`），main 为 `7064ebb`。PR #1/#3 已关闭且未合并，旧远端分支已删除，其提交包含在统一 PR #4（base main）。lcy/wyz 已包含旧公共提交 `dc24f2d`，后续按 #4 新增接口审查集成，不再等待合并 #1。
+以下为本轮开工检查的远端 head（2026-11-15，记录见[本轮交接][offline-coverage]）；PR #2/#4 为 open / draft / unmerged，PR #5 为 open / non-draft / unmerged（base `data-eval/p3-baseline-evaluation`），main 为 `7064ebb`。PR #1/#3 已关闭且未合并，旧远端跟踪引用仍在，其提交包含在统一 PR #4（base main）。lcy/wyz 已包含旧公共提交 `dc24f2d`，后续按 #4 新增接口审查集成，不再等待合并 #1。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工已发布 `39260b7`，真实推理源码 `7e558e3`；本次就绪核查随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[语言dev核查][language-ready] / [候选交付][real-candidates] |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工已发布 `6a6d5d9`，真实推理源码 `7e558e3`；本次离线入口与就绪核查随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[离线选择入口][offline-coverage] / [候选交付][real-candidates] |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `f5787f4`；扩充实现及发布交接已推送 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；旧 #1/#3 已被替代；[大型数据交接][wkq-large] |
 
@@ -45,7 +45,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 待wkq发布accepted冻结语言dev后计算coverage/选阈值 | 直接复用现有三个dev250候选包及接口证据；只补新查询清单的必要检查 | [本轮实查][language-ready]：accepted dev=0、290条needs_revision；不以旧34条accepted train替代，不重推理/训练 | [就绪缺口与放行条件][language-ready] |
+| lcy | 待wkq发布accepted冻结语言dev后计算coverage/选阈值 | 离线入口与10项新增测试已完成；复用三个包，接收新冻结查询后直接运行 | [本轮实查][offline-coverage]：accepted dev=0、290条needs_revision；不以旧34条accepted train替代，不重推理/训练 | [入口、回执与执行命令][offline-coverage] |
 | wyz（A）/ grounding | 推进 M2 与正式可比训练入口、交付 PR #5 审阅 | 复用已完成 B0/B1/B2 与 M1 弱试训；改善困难样本/模板重复，准备三种子比较 | 正式语言 dev 未人工验收；dev250三包已由lcy固定并验证接口，待本人接收/建立predicted缓存；M2 尚未实现 | [最新交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 审核/补写语言dev并发布accepted查询及冻结记录 | 发布路径、query hash、复核来源、图片/GT版本和明确的冻结分母 | 本轮共享目录及GitHub仍为116图/290草稿、accepted dev=0；此前分割人工复核确认继续有效 | [语言dev核查][language-ready]、[大包交接][wkq-large]、PR #4 |
 
@@ -57,9 +57,9 @@
 | --- | --- | --- |
 | 研究与暂定分工 | documented | README、三份角色卡和 workflow |
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
-| 模型代码/数据转换器 | trainer/AP/选择、预算扩展及正式cache/export已实现并真实运行 | u3000完整dev250候选交付完成；完整S0、正式语言阈值与最终test仍待完成 |
-| 实验结果 | 既有dev AP选3000步；真实dev250候选三包已交付 | 本轮仅就绪核查，没有新增实验/registry行；coverage未计算、阈值未选，无最终test成绩 |
-| GPU/环境/付费预算 | 本轮只读查询/发布元信息；0模型加载/推理/训练/候选重验 | 开工GPU0MiB/0%，无计算进程/running记录，系统/数据盘约27/163GiB空闲；[快照](handoffs/segmentation/evidence/language_dev_readiness_20261114/github_preflight.json) |
+| 模型代码/数据转换器 | trainer/AP、预算扩展及cache/export已真实运行；离线coverage/阈值选择入口已实现并通过专项测试 | u3000完整dev250候选交付完成；完整S0、正式语言阈值与最终test仍待完成 |
+| 实验结果 | 既有dev AP选3000步；真实dev250候选三包已交付 | 本轮离线入口通过合成专项验证，没有真实评价/registry行；coverage未计算、阈值未选，无最终test成绩 |
+| GPU/环境/付费预算 | 本轮只读查询/发布元信息；0模型加载/推理/训练/候选重验 | 开工GPU0MiB/0%，无计算进程/running记录，系统/数据盘约27/163GiB空闲；[快照](handoffs/segmentation/evidence/offline_coverage_20261115/readiness.json) |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -110,3 +110,5 @@
 [real-candidates]: handoffs/segmentation/real_candidates_dev250_20261114.md
 
 [language-ready]: handoffs/segmentation/language_dev_readiness_20261114.md
+
+[offline-coverage]: handoffs/segmentation/offline_coverage_20261115.md

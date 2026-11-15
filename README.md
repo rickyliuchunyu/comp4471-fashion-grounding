@@ -4,7 +4,7 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> [最新语言dev核查](docs/handoffs/segmentation/language_dev_readiness_20261114.md)：wkq已发布accepted dev仍为0，290条语言草稿全部待修订，尚不能计算正式matched query coverage或选择阈值。[u3000 dev250三包](docs/handoffs/segmentation/real_candidates_dev250_20261114.md)已交付并保持有效，本轮只读核查，没有重复推理、候选检查或训练。
+> [离线 coverage / 阈值选择入口](docs/handoffs/segmentation/offline_coverage_20261115.md)已完成，10 项新增专项测试通过；2026-11-15 实查 accepted dev 仍为 0，真实 coverage 与正式阈值未测。复用已交付的 u3000 dev250 三个候选包；本轮未重新推理、候选验收或训练。
 
 ## 团队与 Codex 开工入口
 
