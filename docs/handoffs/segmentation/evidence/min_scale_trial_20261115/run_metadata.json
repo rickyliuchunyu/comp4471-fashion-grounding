@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-min-scale05-20261115-r01",
+  "status": "running",
+  "git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+  "started_at": "2026-11-15T14:46:25.786437+00:00",
+  "total_hard_limit_seconds": 2700,
+  "latest_hard_end_utc": "2026-11-15T15:31:25.786437+00:00",
+  "automatic_restart": false,
+  "scope": "segmentation_only_min_scale_ablation",
+  "training_updates": [
+    18000,
+    20000
+  ],
+  "evaluation_updates": [
+    20000
+  ],
+  "control_A_reused": true,
+  "prior_best_reused": true,
+  "old_smoke_runs": 0,
+  "run_dir": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01",
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T14:46:25.786437+00:00",
+      "note": "Explicit user authorization; prepared stage launched under its 2700-second deadline and shared GPU lock"
+    }
+  ]
+}

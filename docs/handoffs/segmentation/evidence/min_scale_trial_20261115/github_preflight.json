@@ -1,0 +1,101 @@
+{
+  "recorded_at_utc": "2026-11-15 14:46:46 UTC",
+  "heads": {
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/pilot-adapter-v1": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+    "data-eval/p3-baseline-evaluation": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+    "grounding/siglip-baseline-interfaces": "103dcc546714dd7c7866b4259d96a9825d8090ef"
+  },
+  "pull_requests": [
+    {
+      "number": 1,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "title": "Add data_eval pilot validation and human review auditing",
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:48Z"
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "Segmentation: S0 delivery and bounded min-scale ablation preparation",
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-15T14:41:37Z"
+    },
+    {
+      "number": 3,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "base_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:53Z"
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-12T10:45:46Z"
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "active_discussions": [
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments"
+    }
+  ],
+  "handoff_delta": "No teammate changes since previous preparation. Read current data_eval large_dataset and grounding accepted_baselines_and_weak_trial handoffs.",
+  "scope": "lcy segmentation only"
+}

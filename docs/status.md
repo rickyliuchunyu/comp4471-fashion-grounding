@@ -1,12 +1,12 @@
 # 当前进度与下一步
 
-更新：2026-11-15；lcy已完成[min_scale 0.1→0.5 单因素续训准备](handoffs/segmentation/min_scale_preparation_20261115.md)：受限新配方恢复、同一18k→20k配置、复用A组、仅结束评B完整dev250及离线选择，整阶段45分钟硬限。11项新增CPU检查和默认准备审计通过；**训练/推理均未启动，未重复smoke**。实现源`7c6ffce`，新增GPU路径未实测。
+更新：2026-11-15；用户已明确授权并启动[min_scale 0.1→0.5 单因素对照](handoffs/segmentation/min_scale_trial_20261115.md)，状态 **running**。执行源`e73ef4f`，同一18k→20k，复用A组，结束仅评B完整dev250。22:46:25 HKT启动、45分钟总硬限；六项完整恢复指纹已通过，尚无B组AP。不自动延长/重启，不重复smoke。
 
-**本轮只准备自己的分割对照，不启动训练或代做数据/排序任务。** 前轮[train5000分布分析][train-distribution]和[定向10k需求][train-expansion]保留，扩充包尚未构建/接收。既有[最小B1联调][u18000-pipeline]保持：当前116图/290查询合法输出，选对178/290=61.3793%，Success@0.5=73.1034%，mean IoU=0.700345，coverage258/290。开发组合仍为18k＋0.3；接收方签收、wyz后续B2/M1/M2及wkq综合评价由对应负责人推进。
+**本轮只执行自己的分割单因素对照，不代做数据/排序任务。** 前轮[train5000分布分析][train-distribution]和[定向10k需求][train-expansion]保留，扩充包尚未构建/接收。既有[最小B1联调][u18000-pipeline]保持：当前116图/290查询合法输出，选对178/290=61.3793%，Success@0.5=73.1034%，mean IoU=0.700345，coverage258/290。开发组合仍为18k＋0.3；接收方签收、wyz后续B2/M1/M2及wkq综合评价由对应负责人推进。
 
 ## GitHub 同步快照
 
-以下为本轮开工远端head（2026-11-15，见[单因素准备GitHub快照](handoffs/segmentation/evidence/min_scale_preparation_20261115/github_preflight.json)）：lcy=`149ddf7`、wkq=`f5787f4`、wyz=`103dcc5`、main=`7064ebb`；队友分支/交接无增量，活跃PR无评论/review。已检查全部远端heads及五个PR；#2/#4 open/draft/unmerged，#5 open/non-draft/unmerged（base `data-eval/p3-baseline-evaluation`）；#1/#3 closed-unmerged。没有合并队友工作。
+以下为本轮开工远端head（2026-11-15，见[单因素运行GitHub快照](handoffs/segmentation/evidence/min_scale_trial_20261115/github_preflight.json)）：lcy=`e73ef4f`、wkq=`f5787f4`、wyz=`103dcc5`、main=`7064ebb`；队友分支/交接无增量，活跃PR无评论/review。已检查全部远端heads及五个PR；#2/#4 open/draft/unmerged，#5 open/non-draft/unmerged（base `data-eval/p3-baseline-evaluation`）；#1/#3 closed-unmerged。没有合并队友工作。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
