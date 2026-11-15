@@ -1,5 +1,7 @@
 # 分割训练入口与配置
 
+新增：[min_scale 单因素续训准备](../../docs/handoffs/segmentation/min_scale_preparation_20261115.md)：`--resume-recipe` 只允许已固定的 0.1→0.5 对照，完整恢复同一18k状态到20k。阶段入口默认不执行；显式执行时才在共享锁下按45分钟总硬限训练B并评一次完整dev250，复用历史A。11项新增CPU检查通过，尚未进行B训练或GPU验证。
+
 最新：[正式S0恢复及八点dev选择](../../docs/handoffs/segmentation/s0_recovery20000_20261115.md)完成20000步目标，选中18000步（mask AP=63.5792）；同预算恢复处理了19315步AMP溢出，实际30.89分钟。原失败记录保留。预算扩展规则见 [BUDGET_EXTENSION.md](BUDGET_EXTENSION.md)，普通恢复仍严格匹配源码与配置；源码修复须用下述显式过渡。
 
 重要更新：[低AP诊断与修复](../../docs/handoffs/segmentation/low_ap_diagnosis_20261112.md)发现旧LSJ训练mask补边污染，已显式改为背景0并通过2个针对性CPU回归。旧50/100步及早期LSJ工程权重不得续训或导出生产候选；原AP/选择执行记录保留作故障证据。[修复后1000步训练与完整dev选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)现已完成：500/1000步mask AP=35.3047/42.8038，选择1000步；不表示完整S0完成。

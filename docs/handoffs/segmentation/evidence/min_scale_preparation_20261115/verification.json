@@ -1,0 +1,20 @@
+{
+  "status": "locally_checked_not_started",
+  "source_commit": "7c6ffceb88da8233cb697d1da5bb7c2982336ed3",
+  "new_cpu_tests": 11,
+  "new_cpu_tests_seconds": 0.246,
+  "test_command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_min_scale_trial.py -v",
+  "production_models_loaded": 0,
+  "production_checkpoints_loaded": 0,
+  "optimizer_updates": 0,
+  "inference_images": 0,
+  "old_smoke_runs": 0,
+  "server_access": false,
+  "gpu_verified": false,
+  "fixture_note": "The train_B command printed in the test log was mocked with exit code 7; no training command was executed. First local test run exposed only macOS /tmp -> /private/tmp path expectation; corrected to Path.resolve().",
+  "sha256": {
+    "github_preflight.json": "38db352f860883825fc4f2d30620cdb4eb2dd2d230ec01378c2b6f7b4e6fa353",
+    "new_logic_tests.log": "9b8d4c9b2c99b1f6fb5434167725fb886ed290b119bc8800133a24bca8b813e9",
+    "prepared_plan.json": "9fd632624a9e88eb71636bfff4164a1354b4fa6b69695176f6f4b34ed9cd603b"
+  }
+}

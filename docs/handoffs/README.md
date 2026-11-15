@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新：[lcy min_scale 单因素续训准备](segmentation/min_scale_preparation_20261115.md)：同一18k→20k、A组复用、B仅结束评完整dev250、45分钟总硬限；11项新增CPU检查通过，未启动训练/推理或重复smoke。
+
 最新：[lcy train5000分布与扩充判断](segmentation/train5000_distribution_20261115.md)完成；2,165小目标中95.43%为鞋/配饰，不优先盲目翻倍长训。[给wkq的定向10k需求](segmentation/train10000_expansion_request_20261115.md)已整理、待本人接收；未代构建数据，0推理/训练/旧smoke。
 
 最新：[lcy最小B1联调](segmentation/u18000_b1_pipeline_20261115.md)已完成，290查询均输出原mask/框，选对178/290；不改队友方法，不代表全组对照完成。
