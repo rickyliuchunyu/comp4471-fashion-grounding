@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scope": "New logic only; no old suite, data or model smoke",
+  "runs": [
+    {
+      "module": "tests.test_segmentation_amp_recovery + tests.test_segmentation_resume_repair",
+      "tests": 10,
+      "seconds": 0.8
+    },
+    {
+      "module": "tests.test_s0_recovery_selection",
+      "tests": 3,
+      "seconds": 0.006
+    }
+  ],
+  "torch_version": "2.8.0",
+  "device": "cpu",
+  "cuda_new_logic_test": "Pending one real GradScaler CUDA injected-overflow replay case inside the authorized stage",
+  "old_smoke_runs": 0
+}

@@ -1,0 +1,86 @@
+{
+  "checked_at_utc": "2026-11-15T09:21:41Z",
+  "source": "Live Git fetch, GitHub PR collection, PR metadata and combined review/comment timelines; teammate handoffs read from pinned remote heads",
+  "pull_requests": [
+    {
+      "number": 5,
+      "state": "open",
+      "draft": false,
+      "head_ref": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base_ref": "data-eval/p3-baseline-evaluation",
+      "updated_at": "2026-11-12T12:11:25Z",
+      "merged_at": null
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "draft": true,
+      "head_ref": "data-eval/p3-baseline-evaluation",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base_ref": "main",
+      "updated_at": "2026-11-12T10:45:46Z",
+      "merged_at": null
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "draft": true,
+      "head_ref": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base_ref": "data-eval/remote-pilot-review",
+      "updated_at": "2026-11-12T09:52:53Z",
+      "merged_at": null
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "draft": true,
+      "head_ref": "segmentation/pilot-adapter-v1",
+      "head_sha": "73bc57d0cc68498927457c03d51cab2571a0122a",
+      "base_ref": "main",
+      "updated_at": "2026-11-15T09:20:09Z",
+      "merged_at": null
+    },
+    {
+      "number": 1,
+      "state": "closed",
+      "draft": true,
+      "head_ref": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base_ref": "main",
+      "updated_at": "2026-11-12T09:52:48Z",
+      "merged_at": null
+    }
+  ],
+  "active_pr_details": [
+    {
+      "number": 2,
+      "head_sha": "73bc57d0cc68498927457c03d51cab2571a0122a",
+      "body": "Implements the Fashionpedia eight-class Mask2Former pipeline through resumable training, full-dev checkpoint selection, candidate delivery and offline threshold selection. The latest formal S0 run restored update 5000 and completed through update 19314, then stopped on a non-finite gradient at attempted update 19315. Update 20000 and the planned new full-dev evaluations were not completed.\r\n\r\n### Actual formal S0 result\r\n\r\n- Execution source: `d8eb4ef9add29e6ba4750130a39001d7634ec205`. Model, optimizer, scheduler, AMP scaler, sampler and RNG all restored from the valid u5000 checkpoint. Seed42/batch2/LSJ768/AdamW, frozen train5000/dev250 and the scheduled LR decays after 12000/16000 were preserved.\r\n- 14,314 additional successful optimizer updates; no skipped successful-update numbers. Their recorded losses and gradient norms were finite. The subsequent failed attempt is explicitly excluded from that statement.\r\n- Ran 15:33:22–17:05:23 HKT on 2026-11-15 (92.03 minutes), within the single three-hour hard limit. Peak allocated/reserved CUDA memory: 4.40/5.17 GiB.\r\n- Attempt 19315 had finite forward losses (total 21.915661) but a non-finite gradient in `backbone.res2.0.conv1.weight` at AMP scale 512. No optimizer/scheduler step was performed for that attempt. The failure is compatible with AMP numerical overflow; its exact cause has not been confirmed by replay. No OOM or timeout evidence was found.\r\n- The current trainer raises before GradScaler can back off. This is an implementation limitation exposed by the longer run. Changing only the initial scale would not override a restored scaler.\r\n- Seven checkpoints (6000 through 18000, every 2000) are retained. The actual bytes of u18000 match SHA256 `207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01`. It is the last complete saved state; updates 18001–19314 were not checkpointed.\r\n- The accepted execution plan trains continuously before evaluating the eight saved points. Its exception-stop rule ended this run before AP evaluation. New AP, AP-small, class metrics and overall checkpoint selection are unmeasured, not zero. No automatic retry, extra evaluation, extension, old smoke or candidate inference was launched.\r\n- After exit, the GPU was at 0 MiB / 0%, with no compute process or running coordination record; the data disk had 158.67 GiB free. No other member's processes, environment or workspace were changed.\r\n\r\n### Existing measured baseline remains valid\r\n\r\nFull dev250 mask AP (0–100): u2000 = 46.063622, u3000 = 50.560314, u5000 = 48.884377. The old u3000 remains the selected measured baseline; this run provides no new AP evidence for or against longer training.\r\n\r\nThe existing u3000 pre-threshold dev250 cache and 0.3/0.5/0.7 trial packages remain available (1,565 / 1,258 / 980 candidates). wyz's pinned reader was previously checked by lcy; teammate personal acceptance remains separate. The offline coverage/threshold entry and its prior targeted tests are reused. Accepted language dev is needed for that threshold branch, not segmentation training or AP.\r\n\r\n### Recovery scope and validation boundary\r\n\r\nNext work should add bounded, logged AMP backoff/replay and an explicit same-budget source-fix transition, preserving successful-update counting, optimizer/scheduler semantics and the 20000 target. Ordinary resume pins the source; the existing budget-extension path requires a larger target, so neither metadata rewriting nor increasing the target is an acceptable workaround. These fixes are not implemented or launched in this update.\r\n\r\nAfter a separately authorized bounded restart, resume from u18000 for the remaining 2000 updates, reuse all seven saved checkpoints, add u20000 and run the original eight full-dev evaluations before comparing with the saved u3000 result. Do not rerun from COCO or u5000.\r\n\r\nThis stage checked current team branches/PRs/handoffs and server resources, executed the single authorized training run, collected existing logs, checked the recovery file hash and validated transferred evidence/document links. It did not repeat prior model/data/smoke tests. The stage driver and audited old/new comparison are recorded, but downstream AP/selection branches were not reached. The registry contains one failed training run and no invented AP rows.\r\n\r\nKeep this PR draft and unmerged. Full S0, final threshold, M2, end-to-end evaluation and final test are not claimed complete.\r\n\r\n### Evidence\r\n\r\n- [Failure, actual training and recovery handoff](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/s0_20000_20261115.md)\r\n- [Actual run metadata](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/evidence/s0_20000_20261115/run_metadata.json)\r\n- [Gradient failure](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/evidence/s0_20000_20261115/train/gradient_failure.json)\r\n- [Original preparation and limits](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/s0_20000_preparation_20261115.md)\r\n- [Team status](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/status.md)\r\n- [Existing u3000 selection](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/resume5000_dev_ap_20261113.md)\r\n- [Existing dev250 candidate delivery](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/segmentation/pilot-adapter-v1/docs/handoffs/segmentation/real_candidates_dev250_20261114.md)\r\n",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "body": "项目需要统一、可追溯的数据和评价接口，避免试点标签、机器初标与正式测试结果混用。本 PR 汇总 data_eval 的真实数据转换、盲审与修订流程、共享规则解析器、B0 和统一评价核心，并交付版本化的大型数据包。\n\n- 分割数据：5,000 train / 250 dev / 400 held-out test 图。保持官方边界，源 mask 不改写，validation 使用独立 ID 命名空间；哈希、资源地址及含镜像 pHash 保守分组。\n- 语言数据：1,000 张训练图、1,580 组中英配对（3,160 条）；dev 116 图、145 组（290 条）。CPU 弱标注加有记录的 Codex 视觉修订，全部保持 needs_revision，新增 accepted 为 0；原小包 17 组 / 34 条 accepted 保留。\n- 初标使用保守颜色条件、源纹样和几何；未知属性放弃判断。修订保留原文和证据，35 个按页审核页面不嵌入目标答案。accepted-only 正式评价门禁保持不变。\n\n验证：远端独立 CPU 环境 93 项测试通过；五个包通过 schema/几何/hash 检查、独立 pycocotools 源 mask 逐像素一致性和候选裁剪检查；发布后逐文件 SHA256 核对。分割/训练查询/dev 查询分别视觉抽查 64/64/31 个目标；这不是全量质量认证。无 GPU 使用或模型训练。\n\n限制：机器训练文件只供明确选择弱标注实验的输入；dev 仍有 134 张待补写，所有新增语言待人工审核。最终测试没有生成机器语言答案；新大包消费方验收、人工独立测试描述及三方正式冻结未完成。GT 试点诊断不是正式 dev/test 成绩。\n\n详细路径、数据 hash、验证和下一步：[大型数据交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/data-eval/p3-baseline-evaluation/docs/handoffs/data_eval/large_dataset_20261112.md)；[P3 交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/data-eval/p3-baseline-evaluation/docs/handoffs/data_eval/p3_reviewed_baseline_20261112.md)。大型图片、标注输出和审核包保留在服务器共享数据盘，不提交 Git。\n",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "body": "接入 B 发布的 schema-3 候选、共享查询解析和统一评价器，提供锁定版本的 SigLIP 2 编码、冻结特征缓存、B1/B2 预测与规则覆盖率。新增只读流式数据验收，以及显式 train-only 的 M1 弱标注短试训入口；模型推理仅接收完整查询和候选，不读取人工答案字段。\n\n依赖 #4：本 PR 暂以 data-eval/p3-baseline-evaluation 为 base，只展示 grounding 的改动；请先审核该接口依赖，再按团队流程调整 base。未合并 main。\n\n实际验证：\n- B 数据环境的 111 项联合测试通过；grounding 环境的 24 项专项测试通过（18 项接口测试有重叠）。数据构建依赖 NumPy 2，不能把 B 的构建测试直接当作 NumPy 1.26 模型环境测试；环境差异已记录。\n- 6 个真实发布包：32,574 个哈希条目、25,715 份候选/COCO/源 mask 比对、逐图解码裁剪、查询引用、跨分区 ID/hash/group 隔离通过；计数含语言子集重复。\n- 同一34条 accepted train 查询：B0 12/34（复现），B1 18/34，B2 22/34。B2 lambda=1为事先固定诊断值，未用train选参。完美/空输出/不完整预测等独立评价控制通过；B1/B2纯缓存重放完全一致。\n- M1：1000图/3160条机器描述，冻结编码器，seed42固定5轮；同训练弱标签拟合78.07%→83.96%，检查点重放一致。未声称泛化提升；正式dev尚无accepted查询，M2和其他种子未运行。\n\n交接与完整命令：docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md；小型证据索引已提交。数据、权重、缓存、凭据均不在PR内。",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "comments": []
+    }
+  ],
+  "teammate_changes_since_prior_stage": false
+}
