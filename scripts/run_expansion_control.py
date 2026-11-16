@@ -252,8 +252,6 @@ def run_pair(plan, output, start, source_commit):
             write(directory/'run_metadata.json', metadata)
             state['arms'].append(row); write(output/'stage_status.json', state)
             remaining = int(deadline-time.monotonic())-15
-            if remaining <= 0:
-                raise TimeoutError('Pair deadline exhausted')
             env = dict(os.environ, PYTHONPATH=str(ROOT/'src'), OMP_NUM_THREADS='1', OPENBLAS_NUM_THREADS='1',
                        MKL_NUM_THREADS='1', SEG_EXPANSION_ARM=arm['run_id'], SEG_EXPANSION_DEADLINE=str(deadline-10),
                        SEG_EXPANSION_SOURCE=source_commit, SEG_EXPANSION_PLAN_SHA=state['plan_sha256'])
@@ -262,6 +260,8 @@ def run_pair(plan, output, start, source_commit):
                     plan['python'], str(Path(__file__).resolve()), '--plan', str(ROOT/PLAN), '--output', str(output),
                     '--worker-arm', arm['name']]
             try:
+                if remaining <= 0:
+                    raise TimeoutError('Pair deadline exhausted')
                 with (directory/'supervisor.log').open('x') as log:
                     code = run_bounded(lock, deadline-5, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT)
                 row.update(exit_code=code, status='completed' if code == 0 else 'failed')

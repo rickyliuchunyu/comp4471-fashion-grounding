@@ -200,6 +200,17 @@ class RunnerTests(unittest.TestCase):
                 if workerpid.exists() and process_alive(int(workerpid.read_text())):
                     os.killpg(int(workerpid.read_text()), signal.SIGKILL)
 
+    def test_exhausted_pair_never_launches_and_records_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out=Path(directory)/'pair';plan=runner.read(ROOT/runner.PLAN)
+            with patch.object(runner,'git',side_effect=lambda *a:'test-head' if a[0]=='rev-parse' else ''), \
+                 patch.object(runner.shutil,'disk_usage',return_value=type('Disk',(),{'free':30*1024**3})()), \
+                 patch.object(runner,'run_bounded',side_effect=AssertionError('expired launch')) as bounded:
+                with self.assertRaises(TimeoutError): runner.run_pair(plan,out,time.monotonic()-21601,'test-head')
+                bounded.assert_not_called()
+                self.assertEqual(runner.read(out/'stage_status.json')['arms'][0]['status'],'failed')
+                self.assertEqual(runner.read(out/'C5k/run_metadata.json')['status'],'failed')
+
 
 class ComparisonTests(unittest.TestCase):
     def fixture(self, out):
