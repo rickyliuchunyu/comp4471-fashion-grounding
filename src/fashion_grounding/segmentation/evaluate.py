@@ -15,7 +15,7 @@ from PIL import Image
 import torch
 
 from ..data.schema import read_json, write_json, sha256, safe_path, encode_mask, require
-from .evaluation import read_eval_config, load_eval_package, evaluate_masks
+from .evaluation import read_eval_config, load_eval_package, reuse_eval_package, evaluate_masks
 from .model import build_model
 from .predict import predict_instances, export_package
 from .training_state import config_sha256, state_digest
@@ -44,11 +44,16 @@ def main():
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--checkpoints', nargs='+', required=True)
     parser.add_argument('--export-diagnostic-candidates', action='store_true')
+    parser.add_argument('--reuse-validated-inputs', help='Pinned completed dev report for the same immutable inputs')
     args = parser.parse_args()
     config = read_eval_config(args.config)
     diagnostic = config['purpose'] == 'pilot_ap_integration'
     require(not args.export_diagnostic_candidates or diagnostic, 'This export is only for diagnostic consumer checks')
-    manifest, coco, data_check = load_eval_package(args.package, config, args.training_package)
+    if args.reuse_validated_inputs:
+        manifest, coco, data_check = reuse_eval_package(args.package, config, args.training_package,
+                                                       args.reuse_validated_inputs)
+    else:
+        manifest, coco, data_check = load_eval_package(args.package, config, args.training_package)
     source_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     require(not subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], text=True).strip(),
             'Commit tracked evaluation source before running')

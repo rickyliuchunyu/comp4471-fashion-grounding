@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "elapsed_seconds": 0.014,
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_resolution_trial.py -v",
+  "scope": [
+    "one-pixel boundary edge/hole/thin-mask cases",
+    "paired gains/losses and population mismatch",
+    "single-factor resize and protocol rejection",
+    "reuse receipt without image/mask access; incomplete/train-drift rejection"
+  ],
+  "old_tests_rerun": 0,
+  "model_loads": 0,
+  "training_updates": 0
+}

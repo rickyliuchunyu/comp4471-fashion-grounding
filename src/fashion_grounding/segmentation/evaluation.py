@@ -86,6 +86,35 @@ def load_eval_package(root, config, training_root):
                            annotation_sha256=sha256(training_root/'annotations_coco.json')))
 
 
+def reuse_eval_package(root, config, training_root, report_path):
+    """Reuse completed immutable-package validation; verify identities, not pixels again.
+
+    Caller pins the prior report hash. Images remain in the versioned, read-only
+    package and are read normally by inference. This is not a new image audit.
+    """
+    root, training_root = Path(root), Path(training_root)
+    report = read_json(report_path)
+    require(config['purpose'] == report['purpose'] == 'dev_checkpoint_selection'
+            and report['protocol'] == PROTOCOL and report['complete']
+            and report['inference_errors'] == 0 and report['selection_eligible'],
+            'Need a completed formal dev receipt')
+    identity = dict(image_manifest_sha256=sha256(root/'image_manifest.json'),
+                    annotation_sha256=sha256(root/'annotations_coco.json'))
+    require(identity == report['evaluation_data'] == {k: config[k] for k in identity},
+            'Validated dev identity changed')
+    train_identity = dict(image_manifest_sha256=sha256(training_root/'image_manifest.json'),
+                          annotation_sha256=sha256(training_root/'annotations_coco.json'))
+    require(train_identity == report['training_data'] and not any(report['overlap'].values()),
+            'Validated training identity/partition changed')
+    manifest, coco = read_json(root/'image_manifest.json'), read_json(root/'annotations_coco.json')
+    require(all(im['split'] == 'dev' for im in manifest['images'])
+            and len(manifest['images']) == report['evaluated_images'], 'Wrong dev population')
+    return manifest, coco, dict(overlap=report['overlap'], image_count=len(coco['images']),
+        annotation_count=len(coco['annotations']), training_data=train_identity,
+        validation_reused_from=str(report_path), validation_report_sha256=sha256(report_path),
+        image_and_mask_reaudit=False)
+
+
 def evaluate_masks(coco, rows):
     """All images retained, including no detections and explicit inference failures.
 
