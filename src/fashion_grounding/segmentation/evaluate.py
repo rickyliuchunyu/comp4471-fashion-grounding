@@ -44,12 +44,18 @@ def main():
         parser.add_argument('--'+name, required=True)
     parser.add_argument('--checkpoints', nargs='+', required=True)
     parser.add_argument('--export-diagnostic-candidates', action='store_true')
-    parser.add_argument('--reuse-validated-inputs', help='Pinned completed dev report for the same immutable inputs')
+    reuse = parser.add_mutually_exclusive_group()
+    reuse.add_argument('--reuse-validated-inputs', help='Pinned completed dev report for the same immutable inputs')
+    reuse.add_argument('--input-validation-bundle', help='Pinned dev receipt plus optional accepted train expansion')
     args = parser.parse_args()
     config = read_eval_config(args.config)
     diagnostic = config['purpose'] == 'pilot_ap_integration'
     require(not args.export_diagnostic_candidates or diagnostic, 'This export is only for diagnostic consumer checks')
-    if args.reuse_validated_inputs:
+    if args.input_validation_bundle:
+        from .input_receipts import reuse_input_receipts
+        manifest, coco, data_check = reuse_input_receipts(args.package, config, args.training_package,
+                                                         args.input_validation_bundle)
+    elif args.reuse_validated_inputs:
         manifest, coco, data_check = reuse_eval_package(args.package, config, args.training_package,
                                                        args.reuse_validated_inputs)
     else:

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "mode": "accepted_expansion",
+  "evaluation_data": {
+    "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+  },
+  "training_data": {
+    "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+  },
+  "dev_images": 250,
+  "dev_instances": 1008,
+  "train_images": 10000,
+  "train_instances": 39699,
+  "references": {
+    "dev_report": {
+      "path": "../../../docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+      "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+    },
+    "acceptance": {
+      "path": "../../../docs/handoffs/segmentation/evidence/train10000_acceptance_20261116/acceptance.json",
+      "sha256": "f2217f933e11f1b3f02ae9ea544a6f758de459ee390f4984f6098b51a2990017"
+    },
+    "acceptance_run": {
+      "path": "../../../docs/handoffs/segmentation/evidence/train10000_acceptance_20261116/run_metadata.json",
+      "sha256": "cf89cd33d9f655ebc3e27225791672434f2e43428104ca38f8b86271d3314c02"
+    },
+    "acceptance_plan": {
+      "path": "train10000_acceptance.json",
+      "sha256": "a5b6c07fa74a80dc73bcfa17d30791419929cb7f0c023ae044b2480695fb613c"
+    }
+  }
+}

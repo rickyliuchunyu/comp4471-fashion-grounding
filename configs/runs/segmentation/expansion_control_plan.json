@@ -1,5 +1,5 @@
 {
-  "status": "prepared_not_started",
+  "status": "implemented_preparation_only",
   "training_authorized": false,
   "comparison": "targeted_expansion_under_equal_updates_not_pure_dataset_size",
   "owner": "segmentation",
@@ -14,12 +14,16 @@
     {
       "name": "C5k",
       "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
-      "training_config": "configs/runs/segmentation/expansion_control_train5000.json"
+      "training_config": "configs/runs/segmentation/expansion_control_train5000.json",
+      "input_validation_bundle": "configs/runs/segmentation/expansion_input_train5000.json",
+      "run_id": "segmentation-expansion-5000-20261116-r01"
     },
     {
       "name": "D10k_targeted",
       "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
-      "training_config": "configs/runs/segmentation/expansion_control_train10000.json"
+      "training_config": "configs/runs/segmentation/expansion_control_train10000.json",
+      "input_validation_bundle": "configs/runs/segmentation/expansion_input_train10000.json",
+      "run_id": "segmentation-expansion-10000-20261116-r01"
     }
   ],
   "same_successful_updates": 20000,
@@ -48,15 +52,6 @@
     ],
     "checkpoint_selection": "maximum complete-dev mask AP within each arm, tie earlier update",
     "cross_arm_comparison": "separate contrast report; do not pass different training_data/configs to strict within-run selector"
-  },
-  "proposed_budget": {
-    "per_arm_hard_seconds": 10800,
-    "total_pair_hard_seconds": 21600,
-    "training_internal_seconds": 10000,
-    "evaluation_internal_seconds": 600,
-    "automatic_extension": false,
-    "automatic_restart": false,
-    "authorization": "proposal only, not permission to run"
   },
   "historical_reference": {
     "name": "B20k_800",
@@ -95,10 +90,8 @@
     "producer source-pixel/near-duplicate audits"
   ],
   "remaining_before_any_authorized_execution": [
-    "Bind completed incremental acceptance and existing dev receipt in evaluation reuse path; current reuse_eval_package intentionally rejects changed train identity. Do not forge old receipt or rerun unchanged dev audit.",
-    "Use a common pinned source commit and per-arm process-group hard-deadline runner covering training, both dev points and selection. Current JSON plan is not an implemented launcher.",
-    "Resolve and record new package manual-review/three-party freeze status with data owner if required for formal designation; consumer technical pass is not certification.",
-    "Obtain explicit future training instruction, refresh team/resource/lock state, reserve disk for isolated checkpoints; do not run smoke."
+    "Explicit future instruction to start training; refresh team GitHub, resources and shared lock. Do not repeat passed checks.",
+    "Record applicable new-data human-review/formal-freeze provenance without changing producer history; input reuse remains technical acceptance."
   ],
   "not_in_scope": [
     "ranking",
@@ -115,5 +108,31 @@
     "expansion_control_train5000.json": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
     "expansion_control_train10000.json": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
     "expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3"
-  }
+  },
+  "plan_path": "configs/runs/segmentation/expansion_control_plan.json",
+  "python": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+  "upstream_source": "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+  "coordination": "/root/autodl-tmp/fashion-grounding/coordination",
+  "budget": {
+    "per_arm_hard_seconds": 10800,
+    "total_pair_hard_seconds": 21600,
+    "training_internal_seconds": 10000,
+    "evaluation_internal_seconds": 600,
+    "automatic_extension": false,
+    "automatic_restart": false,
+    "authorization": "User fixed these limits for preparation; no training launched or authorized in this turn"
+  },
+  "historical_report": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+  "input_sha256": {
+    "configs/runs/segmentation/expansion_control_train5000.json": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+    "configs/runs/segmentation/expansion_input_train5000.json": "1c21b003e53993a1fec538d91007f852efcd1a95208f78a672986db42ba3c811",
+    "configs/runs/segmentation/expansion_control_train10000.json": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
+    "configs/runs/segmentation/expansion_input_train10000.json": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+    "configs/runs/segmentation/expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+    "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b",
+    "envs/segmentation/upstream.json": "2962e7a562a9ac1c037cae1b5144ba321965e06a10a3a504251d26b375f134b8"
+  },
+  "execution_entry": "scripts/run_expansion_control.py",
+  "evaluation_order": "train20000_then_evaluate_saved10000_and20000_in_one_process",
+  "execution_enabled_by_default": false
 }
