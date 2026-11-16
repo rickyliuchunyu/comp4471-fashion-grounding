@@ -1,5 +1,7 @@
 # 当前进度与下一步
 
+最新（2026-11-16）：[B20k 800→1024 对照](handoffs/segmentation/resolution1024_20261116.md) **running**，同一权重、仅一次新增完整dev250推理，900秒总硬限；B800/A/旧最佳复用，0训练/0smoke。wkq最新 `4b0584a` 已发布定向10k，ready_for_lcy_review；本轮不消费或验收新包。wyz `103dcc5`、main `7064ebb` 无增量。
+
 更新：2026-11-15；[min_scale 0.1→0.5 单因素对照](handoffs/segmentation/min_scale_trial_20261115.md) **completed**：同一18k→20k完成2000次成功更新，一次完整dev250零错误。按整体AP选B20k **63.79295**，较复用A20k +0.23342、较旧最佳18k +0.21379。总958.213秒/2700秒硬限，3次AMP溢出均按原策略重放；未延长、未重启、未重复smoke或A推理。执行源`e73ef4f`。
 
 **本轮只完成自己的分割对照和权重选择。** B的AP_small=10.75248，较旧最佳仅+0.01356，AP75较旧最佳−0.05038，小目标/边界问题未明显改善。现有候选及[最小B1联调][u18000-pipeline]仍对应18k＋0.3（178/290选对、Success@0.5=73.1034%），未因新最佳自动替换缓存或重做联调。前轮[分布分析][train-distribution]和[定向10k需求][train-expansion]保留，扩充包尚未构建/接收；数据、排序及全组评价由相应负责人推进。
@@ -12,7 +14,7 @@
 | --- | --- | --- |
 | lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：开工/执行源`e73ef4f`；min_scale B组已完成，结果与证据随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[单因素结果](handoffs/segmentation/min_scale_trial_20261115.md) / [分布分析][train-distribution] / [扩充需求][train-expansion] |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
-| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `f5787f4`；扩充实现及发布交接已推送 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；旧 #1/#3 已被替代；[大型数据交接][wkq-large] |
+| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `4b0584a`；定向10k已发布，待lcy接收，本轮未消费 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md)；旧 #1/#3 已被替代 |
 
 队友交接链接固定到本次读取的 commit，避免将未合并内容误认为当前 checkout 已包含。下次开工须重新检查远端增量，流程见 [AGENTS.md](../AGENTS.md)。
 

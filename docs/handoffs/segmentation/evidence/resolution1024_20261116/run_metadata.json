@@ -1,0 +1,53 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-resolution1024-20261116-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "running",
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-16T11:19:47.768336+00:00"
+    }
+  ],
+  "git_commit": "7d1fa7502ea4f7971e8e5c101876522a75da138b",
+  "split": "dev",
+  "candidate_source": "none",
+  "seed": 42,
+  "parent_run_ids": [
+    "segmentation-min-scale05-20261115-r01",
+    "segmentation-small-analysis-20261115-r01"
+  ],
+  "checkpoint": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+    "sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112"
+  },
+  "environment": {
+    "interpreter": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "gpu": "NVIDIA GeForce RTX 3090 24 GiB",
+    "dependencies_reused_from": "envs/segmentation; S0 recovery environment, unchanged this turn",
+    "upstream_provenance": "envs/segmentation/upstream.json"
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_resolution_trial.py",
+    "--plan",
+    "configs/runs/segmentation/resolution1024_stage_plan.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+    "--execute"
+  ],
+  "evaluation": {
+    "new_full_dev_inference_passes_authorized": 1,
+    "reference_800_reused": true,
+    "training_updates": 0,
+    "smoke_runs": 0,
+    "queries_read": false,
+    "total_hard_limit_seconds": 900
+  },
+  "artifacts": {},
+  "failure": null,
+  "team_progress_note": "wkq 4b0584a published targeted10k ready_for_lcy_review; not consumed in this run"
+}
