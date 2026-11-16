@@ -1,0 +1,63 @@
+[
+  {
+    "name": "diagnostic800",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/analyze_resolution_trial.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resolution1024_stage_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+      "--phase",
+      "baseline"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-16T11:19:47.905912+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 3.624507814645767
+  },
+  {
+    "name": "dev1024",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/with_gpu_lock.py",
+      "--coordination",
+      "/root/autodl-tmp/fashion-grounding/coordination",
+      "--run-id",
+      "segmentation-resolution1024-20261116-r01",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+      "--seconds",
+      "881",
+      "--",
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_resolution_trial.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resolution1024_stage_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+      "--gpu-worker"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-16T11:19:51.531692+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 130.4557160437107
+  },
+  {
+    "name": "compare",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/analyze_resolution_trial.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resolution1024_stage_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+      "--phase",
+      "compare"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-16T11:22:01.988704+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 3.673039399087429
+  }
+]

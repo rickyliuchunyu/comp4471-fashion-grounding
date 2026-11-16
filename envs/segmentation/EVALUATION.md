@@ -1,5 +1,9 @@
 # Dev AP 与 checkpoint 选择接入
 
+新增：[B20k分辨率对照](../../docs/handoffs/segmentation/resolution1024_20261116.md)完成：固定B20k，只新增1024/1706完整dev250推理，复用800/1333结果；总137.859秒/900秒，按整体AP保留800。入口 `scripts/run_resolution_trial.py` 默认只审核元信息，`--execute` 才运行，旧输出不覆盖。
+
+`--reuse-validated-inputs <completed-dev-report>` 允许在固定不可变包上复用既有验收；调用方必须固定报告SHA256。当前入口核对dev/train manifest和annotation身份、完整评价及分区回执，不重新逐图片/mask认证。推理正常读图；版本或身份变化立即拒绝，默认无此参数的完整验收路径保持不变。此复用不是对已发布图片可能被外部修改的新审计。
+
 最新：[lcy最小B1联调](../../docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成，290查询均输出原mask/框，选对178/290；不改队友方法，不代表全组对照完成。
 
 最新：[用户授权当前语言dev的离线选择](../../docs/handoffs/segmentation/u18000_language_dev_selection_20261115.md)已选18k+0.3。使用显式`--user-authorized-dev`和固定授权回执；原accepted默认路径及共享匹配器不变，原始审核状态不改写。

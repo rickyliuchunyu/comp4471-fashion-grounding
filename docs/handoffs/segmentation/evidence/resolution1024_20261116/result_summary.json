@@ -1,0 +1,181 @@
+{
+  "status": "completed",
+  "source": "Derived only from existing reports/diagnostic summaries; no inference, AP matching or new data read",
+  "selected_resolution": 800,
+  "total_seconds": 137.85926482081413,
+  "AP_800": 63.792950237309874,
+  "AP_1024": 62.24980179380438,
+  "small_match50": {
+    "before": 102,
+    "after": 105,
+    "net": 3,
+    "gained": [
+      1000002490,
+      1000005785,
+      1000008221,
+      1000008364
+    ],
+    "lost": [
+      1000000688
+    ],
+    "gained_categories": {
+      "6": 2,
+      "8": 2
+    },
+    "lost_categories": {
+      "8": 1
+    }
+  },
+  "small_match75": {
+    "before": 35,
+    "after": 49,
+    "net": 14,
+    "gained": [
+      1000000207,
+      1000000687,
+      1000001009,
+      1000001183,
+      1000001930,
+      1000001931,
+      1000002880,
+      1000002896,
+      1000005786,
+      1000006010,
+      1000007454,
+      1000007644,
+      1000007833,
+      1000007903,
+      1000007984,
+      1000008188
+    ],
+    "lost": [
+      1000001182,
+      1000001929
+    ],
+    "gained_categories": {
+      "8": 8,
+      "6": 8
+    },
+    "lost_categories": {
+      "6": 1,
+      "7": 1
+    }
+  },
+  "medium_by_category": {
+    "1": {
+      "gt": 25,
+      "before": 46.63879014667282,
+      "after": 44.87854456014643
+    },
+    "2": {
+      "gt": 6,
+      "before": 25.184211894001855,
+      "after": 22.755716743569607
+    },
+    "3": {
+      "gt": 1,
+      "before": 89.99999999999999,
+      "after": 13.043478260869565
+    },
+    "4": {
+      "gt": 2,
+      "before": 10.099009900990097,
+      "after": 15.464108910891087
+    },
+    "5": {
+      "gt": 1,
+      "before": 0.0,
+      "after": 0.0
+    },
+    "6": {
+      "gt": 249,
+      "before": 57.35331285116683,
+      "after": 55.01241002069097
+    },
+    "7": {
+      "gt": 22,
+      "before": 48.57476916225828,
+      "after": 46.31223907981469
+    },
+    "8": {
+      "gt": 86,
+      "before": 42.60451043839768,
+      "after": 43.437761806981584
+    }
+  },
+  "medium_skirt_macro_AP_contribution": -9.619565217391303,
+  "medium_skirt_share_of_net_drop": 0.967393940641615,
+  "caveat": "Medium skirt has one GT. This is an algebraic macro-average decomposition, not a causal loss attribution or evidence that all medium instances deteriorated.",
+  "small_source_comparison": {
+    "bag, wallet": {
+      "gt": 2,
+      "before50": 2,
+      "after50": 2,
+      "before75": 1,
+      "after75": 0
+    },
+    "belt": {
+      "gt": 11,
+      "before50": 5,
+      "after50": 4,
+      "before75": 1,
+      "after75": 1
+    },
+    "glasses": {
+      "gt": 8,
+      "before50": 7,
+      "after50": 8,
+      "before75": 3,
+      "after75": 4
+    },
+    "glove": {
+      "gt": 2,
+      "before50": 2,
+      "after50": 2,
+      "before75": 1,
+      "after75": 1
+    },
+    "hat": {
+      "gt": 1,
+      "before50": 1,
+      "after50": 1,
+      "before75": 1,
+      "after75": 1
+    },
+    "headband, head covering, hair accessory": {
+      "gt": 14,
+      "before50": 10,
+      "after50": 11,
+      "before75": 3,
+      "after75": 4
+    },
+    "shoe": {
+      "gt": 68,
+      "before50": 52,
+      "after50": 54,
+      "before75": 15,
+      "after75": 22
+    },
+    "skirt": {
+      "gt": 1,
+      "before50": 0,
+      "after50": 0,
+      "before75": 0,
+      "after75": 0
+    },
+    "sock": {
+      "gt": 13,
+      "before50": 5,
+      "after50": 5,
+      "before75": 2,
+      "after75": 2
+    },
+    "watch": {
+      "gt": 18,
+      "before50": 18,
+      "after50": 18,
+      "before75": 8,
+      "after75": 14
+    }
+  }
+}
