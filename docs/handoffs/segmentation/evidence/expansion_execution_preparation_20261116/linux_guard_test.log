@@ -1,0 +1,6 @@
+test_linux_wrapper_death_kills_worker_group (test_expansion_execution.RunnerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.124s
+
+OK

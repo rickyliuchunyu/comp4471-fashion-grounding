@@ -1,0 +1,26 @@
+{
+  "source_commit": "8b522a21c987a6c4ad60cb55cc801f3680e43e7d",
+  "status": "passed",
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_expansion_execution.py -v",
+  "total_cases": 10,
+  "passed": 9,
+  "skipped": 1,
+  "skip_reason": "Linux production parent-death path; scheduled separately on server",
+  "elapsed_seconds": 2.351,
+  "followup": {
+    "reason": "Added per-arm run metadata and rechecked affected failure handling only",
+    "test": "RunnerTests.test_failed_phase_stops_and_failed_arm_never_starts_next",
+    "status": "passed",
+    "elapsed_seconds": 0.044
+  },
+  "scope": "new receipt chain, preparation mode, subprocess deadlines/failure handling and paired comparison; no model smoke",
+  "additional_boundary_case": {
+    "test": "RunnerTests.test_exhausted_pair_never_launches_and_records_failure",
+    "source_commit": "e38b8369262b18c6a0ca2bc77314c90a855e337a",
+    "status": "passed",
+    "elapsed_seconds": 0.004,
+    "reason": "Final review found exhausted-budget prelaunch path could leave arm metadata marked running; only that new branch rechecked."
+  },
+  "unique_new_cases": 11,
+  "unique_local_passed": 10
+}

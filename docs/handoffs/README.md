@@ -1,6 +1,8 @@
 # 交接记录入口
 
-最新：[定向train10000技术接收](segmentation/train10000_acceptance_20261116.md)通过，CPU59.929秒；新增5000图/21924实例，旧5k保留及跨分区隔离通过。[5k/10k配对方案](segmentation/train10000_control_plan_20261116.md)已准备，训练入口接线尚待完成，未启动训练/推理/smoke，不冒称人工全面复核或三方冻结。
+最新：[5k/10k证据复用与统一硬超时入口](segmentation/expansion_execution_preparation_20261116.md)已实现，11个新增CPU案例及真实metadata证据组合通过。默认不执行；每组20k、保存的10k/20k完整dev、每组3小时，失败停止且不延长。本轮0训练/推理/旧smoke。
+
+历史：[定向train10000技术接收](segmentation/train10000_acceptance_20261116.md)通过，CPU59.929秒；新增5000图/21924实例，旧5k保留及跨分区隔离通过。[5k/10k配对方案](segmentation/train10000_control_plan_20261116.md)已准备，训练入口接线尚待完成，未启动训练/推理/smoke，不冒称人工全面复核或三方冻结。
 
 历史：[B20k 800→1024 单尺度对照](segmentation/resolution1024_20261116.md) 已完成，137.859秒/900秒硬限。1024 AP62.2498低于800的63.7930，保留B20k＋800；严格小目标匹配35→49。0训练/0smoke，GPU释放。wkq10k待lcy接收，本轮未消费。
 

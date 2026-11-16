@@ -57,3 +57,11 @@ RUN="$FG_ROOT/runs/segmentation/$RUN_ID"
 协调器把实际的两条 trainer 命令写入 `commands.json`，日志分为 `phase_1.log`、`phase_2.log`；训练产物分为 `updates_001_100/`、`updates_101_200/`。手动恢复时须用同样的共享锁、原配置和 `--resume <checkpoint.pth>`，`--output` 指向新目录；`--stop-after` 是绝对 update 编号，并受配置的 max_updates 限制。失败目录保留，新尝试另用 run ID。
 
 旧LSJ pilot及100步checkpoint有补边污染，均不得续训；历史记录保留。当前dev选中18000步，最新完整恢复点为20000步；本轮授权训练及八点评价已完成，GPU已释放，后续不得自动追加训练或重复既有smoke。
+
+## 同预算 5k/10k 对照入口（2026-11-16，仅准备完成）
+
+`PYTHONPATH=src python scripts/run_expansion_control.py --output <新的整对输出目录>` 默认只核配置/证据并显示命令；`--check-inputs` 额外核真实 train/dev 元数据身份，仍不训练。已完成的新 CPU 检查不应无变化重跑。
+
+未来用户明确启动后才加 `--execute`：C5k、D10k 顺序运行，同 COCO/seed42/配方各 20k 成功更新；每组训练后一次性评保存的 10k/20k 权重。每组统一 10800 秒硬限覆盖证据核对、训练、完整dev与选择，整对最多 21600 秒；共享锁、独立进程组截止时间和 Linux parent-death 保护防止子进程遗留。失败不继续下一组、不重启或延长。配置、输出与运行记录固定，组间不恢复 sampler，不覆盖旧候选。
+
+固定方案 `configs/runs/segmentation/expansion_control_plan.json`；[完整命令、实际检查及限制](../../docs/handoffs/segmentation/expansion_execution_preparation_20261116.md)。本轮没有启动训练/推理或验证真实长训练表现。

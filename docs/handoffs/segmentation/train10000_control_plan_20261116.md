@@ -1,6 +1,6 @@
 # 5k / 定向 10k 分割受控训练方案（未启动）
 
-2026-11-16，lcy / segmentation。数据已通过 [增量技术验收](train10000_acceptance_20261116.md)。本轮只准备方案和配置，**没有训练授权，也没有启动或排队 GPU 任务**。以下预算为下一次可审阅的建议，不继承历史阶段授权。
+2026-11-16，lcy / segmentation。数据已通过 [增量技术验收](train10000_acceptance_20261116.md)。方案、配置及[证据复用/硬超时入口](expansion_execution_preparation_20261116.md)现已准备并通过新增CPU检查，**没有启动或排队 GPU 任务**。用户已固定每组3小时上限，但仍要求本轮先不训练；预算配置不等于启动授权。
 
 ## 要回答的问题
 
@@ -35,12 +35,12 @@
 
 即便 D10k 胜过 C5k，还须与复用的当前 B20k＋800（AP=63.79295）比较后决定是否值得替换部署权重。单 seed42 结果只支持这一轮开发决策；不自动追加多种子。若 AP_small/漏检改善但 AP75/边界无改善，结论只能是增加数据帮助了检测，边界问题仍待单独处理。
 
-## 配置、预算与执行前剩余接线
+## 配置、预算与已完成接线
 
 - [C5k 配置](../../../configs/runs/segmentation/expansion_control_train5000.json)、[D10k 配置](../../../configs/runs/segmentation/expansion_control_train10000.json)、[相同 dev 配置](../../../configs/runs/segmentation/expansion_control_dev250.json)、[结构化方案](../../../configs/runs/segmentation/expansion_control_plan.json)。配置已通过现有读取器解析，两个训练配置仅 manifest/annotation hash 不同，[检查结果](evidence/train10000_acceptance_20261116/config_check.json)。
-- **建议每组总硬上限 3 小时、两组累计最多 6 小时**，顺序独占共享 GPU。每组训练内部上限 10000 秒，两个 dev 点合计内部上限 600 秒，剩余用于启动/归档；外层单一截止时间必须覆盖全链路。超时保留完整已写 checkpoint，标记 incomplete，不自动重启/延长、不把某组较少步数与另一组 20k 宣称公平终点。建议每 5k 保存完整恢复点，dev 只评预定 10k/20k，避免额外选择机会。
-- **方案尚非一键运行入口。** 正式执行前需把两组同一源 commit、共享锁、总硬截止时间及训练→dev→比较接入有界 runner。本轮没有实现或运行该 launcher，配置中的预算值不能冒称已证明外层计时有效。
-- **评价证据接线是实际待补项。** 现有 `reuse_eval_package` 有意要求旧评价报告的 train 指纹相同，因此 10k 不能直接复用 5k 报告作为整个分区的验收证明。应增加显式组合证据路径：原 dev receipt 证明 dev 未变，本轮 10k 验收证明新 train 身份及隔离。只核 metadata/hash，不重做 dev 图片/mask 审计；不得篡改旧报告。训练器自身正常建立读取记录不是另起模型 smoke。
+- **已按用户要求固定每组总硬上限 3 小时、两组累计最多 6 小时**，顺序独占共享 GPU。每组训练内部上限 10000 秒，两个 dev 点合计内部上限 600 秒，剩余用于启动/归档；外层单一截止时间必须覆盖全链路。超时保留完整已写 checkpoint，标记 incomplete，不自动重启/延长、不把某组较少步数与另一组 20k 宣称公平终点。建议每 5k 保存完整恢复点，dev 只评预定 10k/20k，避免额外选择机会。
+- **有界入口已实现，默认仅准备。** `scripts/run_expansion_control.py` 按两组同一源 commit、共享锁、每组单一硬截止时间执行训练→保存的10k/20k评价→选择。CPU进程案例已验证共同deadline、子进程树终止及失败停止；真实3小时训练尚未执行。详见[入口交接](expansion_execution_preparation_20261116.md)。
+- **评价证据组合已接通。** 原 `reuse_eval_package` 保持同train指纹限制；新增 `--input-validation-bundle` 将原dev报告与10k验收、接收计划和运行记录按hash绑定。真实两组 metadata/hash 核对通过，不重做 dev 图片/mask 审计，不篡改旧报告。训练器自身正常建立读取记录不是另起模型 smoke。
 - 正式冻结名义所需的新数据人工处置/三方记录由数据负责人和相应成员完善；保留本轮技术验收及生产方原始审核来源，不代签。以后明确启动时再核最新 GitHub、资源、磁盘、共享锁，确认输入仍为本次版本；无需重新做已通过的 COCO/头适配/稳定性/AMP/恢复 smoke。
 
 本轮未改类别损失权重、采样器、网络、训练尺寸或分割候选阈值；未替 wkq 构建数据、未替 wyz 训练排序。数据与权重保持服务器版本，本 PR 仅提交配置、小型验收证据和本角色代码/交接。

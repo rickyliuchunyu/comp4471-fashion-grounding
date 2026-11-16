@@ -81,3 +81,9 @@ TRAIN_RUN="$FG_ROOT/runs/segmentation/segmentation-stability-200-20261112-r02"
 ```
 
 选择器核验报告、预测文件与原 checkpoint hash；只比较同一评估配置/数据、训练配置/数据、训练及评估源码的完整 dev 结果。最大 mask AP 胜出，完全同分选最早 update；重复 update、无正例、失败或 pilot 诊断均拒绝。输出 `selection.json` 引用实际 checkpoint，不另存 `best.pth`。[修复后实际选择](../../docs/handoffs/segmentation/postfix1000_dev_ap_20261112.md)已完成：第500/1000步完整dev AP为35.3047/42.8038，选择第1000步；使用 `s0_postfix_1000.json` 和 `dev_ap_250_postfix_1000.json`。历史50/100步权重已隔离，不再作为可用选择。上述为历史1000步选择；最新正式S0训练/AP和18000步候选交付已完成，见顶部交接。当前用户授权语言dev的阈值已选0.3；接收方实际排序联调仍待完成。
+
+## 接收扩充数据后复用旧 dev 验收（2026-11-16）
+
+评价 CLI 新增 `--input-validation-bundle`，与 `--reuse-validated-inputs` 互斥。C5k 固定旧 dev 报告；D10k 额外固定增量 acceptance、当时接收计划和 run_metadata，由旧 dev→旧5k 与新增5k→保护分区两段隔离证据组成。当前文件 hash、完整证据链、分母和类别映射必须一致；不读取图片/解码mask，不修改旧报告或升级正式冻结状态。旧复用入口仍拒绝变更后的 train 身份。
+
+两个 bundle 位于 `configs/runs/segmentation/expansion_input_train5000.json` 与 `expansion_input_train10000.json`。真实元数据复用已验证，未运行新评价。[入口及证据](../../docs/handoffs/segmentation/expansion_execution_preparation_20261116.md)。
