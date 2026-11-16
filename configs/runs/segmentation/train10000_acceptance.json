@@ -1,0 +1,23 @@
+{
+  "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+  "parent": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+  "protected": {
+    "dev": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+    "test": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1"
+  },
+  "producer_build_commit": "aadcd1b5fc37f74630cf842232390932da363c3a",
+  "producer_handoff_commit": "4b0584ac04ce088084580bcaf946b74575fc6c0c",
+  "package_pins": {
+    "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+    "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3"
+  },
+  "protected_manifest_pins": {
+    "parent": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "dev": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "test": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8"
+  },
+  "parent_annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+  "cpu_hard_limit_seconds": 300,
+  "training_authorized": false
+}
