@@ -1,20 +1,22 @@
 # 当前进度与下一步
 
-最新（2026-11-16）：[B20k 800→1024 对照](handoffs/segmentation/resolution1024_20261116.md) **completed**，总137.859秒/900秒硬限，一次完整dev250新推理、0训练/0smoke。1024 AP=62.2498，低于复用800的63.7930；保留B20k＋800/1333。小目标严格匹配35→49、薄边界改善，但袜子/腰带仍弱。wkq最新 `4b0584a` 已发布定向10k，ready_for_lcy_review；本轮未消费或验收。wyz `103dcc5`、main `7064ebb` 无增量。
+最新（2026-11-16）：[定向 train10000 增量验收](handoffs/segmentation/train10000_acceptance_20261116.md) **passed**，CPU 59.929秒/300秒硬限。实际消费新增5000图/21924实例；旧5000图/17775实例记录保持，新增对旧train/dev/test的身份/group/hash交集均为0。整包10000图/39699实例；源像素/近重复和旧资产字节检查复用已绑定生产证据，未重复smoke、推理或训练。[5k/10k受控方案](handoffs/segmentation/train10000_control_plan_20261116.md)及相同配方配置已准备，尚未实现组合验收凭据的评价接线/有界launcher，未启动训练；技术接收不冒称三方正式冻结。
+
+上一轮（2026-11-16）：[B20k 800→1024 对照](handoffs/segmentation/resolution1024_20261116.md) **completed**，总137.859秒/900秒硬限，一次完整dev250新推理、0训练/0smoke。1024 AP=62.2498，低于复用800的63.7930；保留B20k＋800/1333。小目标严格匹配35→49、薄边界改善，但袜子/腰带仍弱。wkq最新 `4b0584a` 已发布定向10k，ready_for_lcy_review；本轮未消费或验收。wyz `103dcc5`、main `7064ebb` 无增量。
 
 上一轮：2026-11-15；[min_scale 0.1→0.5 单因素对照](handoffs/segmentation/min_scale_trial_20261115.md) **completed**：同一18k→20k完成2000次成功更新，一次完整dev250零错误。按整体AP选B20k **63.79295**，较复用A20k +0.23342、较旧最佳18k +0.21379。总958.213秒/2700秒硬限，3次AMP溢出均按原策略重放；未延长、未重启、未重复smoke或A推理。执行源`e73ef4f`。
 
-**上一轮min_scale只完成自己的分割对照和权重选择。** B的AP_small=10.75248，较旧最佳仅+0.01356，AP75较旧最佳−0.05038，小目标/边界问题未明显改善。现有候选及[最小B1联调][u18000-pipeline]仍对应18k＋0.3（178/290选对、Success@0.5=73.1034%），未因新最佳自动替换缓存或重做联调。前轮[分布分析][train-distribution]和[定向10k需求][train-expansion]保留，wkq现已发布扩充包、lcy尚未接收；数据、排序及全组评价由相应负责人推进。
+**上一轮min_scale只完成自己的分割对照和权重选择。** B的AP_small=10.75248，较旧最佳仅+0.01356，AP75较旧最佳−0.05038，小目标/边界问题未明显改善。现有候选及[最小B1联调][u18000-pipeline]仍对应18k＋0.3（178/290选对、Success@0.5=73.1034%），未因新最佳自动替换缓存或重做联调。前轮[分布分析][train-distribution]和[定向10k需求][train-expansion]保留，wkq已发布扩充包，lcy本轮已完成增量技术接收；数据、排序及全组评价由相应负责人推进。
 
 ## GitHub 同步快照
 
-本轮开工（2026-11-16，[GitHub快照](handoffs/segmentation/evidence/resolution1024_20261116/github_preflight.json)）：lcy=`890711d`，执行源=`7d1fa75`；wkq从f5787f4推进到`4b0584a`并发布定向10k，wyz=`103dcc5`、main=`7064ebb`不变。已核对全部远端分支、五个PR及活跃讨论；#2/#4 open/draft，#5 open/non-draft且base为wkq分支，均未合并；#1/#3 closed-unmerged，无新评论/review。wkq改动限于扩充构建/审计脚本与交接，未更改本轮使用的评价接口或冻结dev250。
+本轮开工（2026-11-16，[GitHub快照](handoffs/segmentation/evidence/train10000_acceptance_20261116/github_preflight.json)）：lcy=`e6f6f37`，增量接收执行源=`cd8e889`；wkq=`4b0584a`、wyz=`103dcc5`、main=`7064ebb`与上次一致。已核对所有远端分支、五个PR及活跃讨论；#2/#4 open/draft，#5 open/non-draft且base为wkq分支；#1/#3 closed-unmerged，无新评论/review，均未合并。按wkq固定交接完成10k消费方技术验收，未修改生产包审核/冻结状态。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：执行源`7d1fa75`，B20k分辨率对照完成，保留800；结果随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[分辨率结果](handoffs/segmentation/resolution1024_20261116.md) / [min_scale结果](handoffs/segmentation/min_scale_trial_20261115.md) |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：接收执行源`cd8e889`，10k增量验收通过，配对方案仅准备；结果随本PR同步 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[10k接收](handoffs/segmentation/train10000_acceptance_20261116.md) / [受控方案](handoffs/segmentation/train10000_control_plan_20261116.md) |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
-| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `4b0584a`；定向10k已发布，待lcy接收，本轮未消费 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md)；旧 #1/#3 已被替代 |
+| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `4b0584a`；定向10k已发布，lcy本轮技术接收通过；非三方正式冻结 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md)；旧 #1/#3 已被替代 |
 
 队友交接链接固定到本次读取的 commit，避免将未合并内容误认为当前 checkout 已包含。下次开工须重新检查远端增量，流程见 [AGENTS.md](../AGENTS.md)。
 
@@ -32,8 +34,8 @@
 | P1 环境与工作区 | in_progress | [lcy 工程检查](handoffs/segmentation/pilot_adapter_20261112.md)、[COCO 八类加载/五图推理](handoffs/segmentation/coco_weights_20261112.md)、[200-update 与跨进程恢复](handoffs/segmentation/stability_200_20261112.md)；[wyz 图文环境与 GPU 编码][wyz-handoff]；wkq 独立 CPU 环境；[lcy AP/候选读取实测][lcy-ap] | 全组交付的接收方复核与环境复现验收；wyz 环境只读复用 base torch，base 变化需重验；非长训练验收 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | [wyz已实现B0/B1/B2与M1弱试训][wyz-latest]；本轮用户授权dev可用、候选coverage及0.3选择完成 | lcy已完成固定B1当前dev联调；其他方法dev预测、统一汇总及B2 lambda选择尚未运行 | A/B |
-| P4 数据扩充冻结 | in_progress | 分割5000/250已固定并使用；wkq定向10k已发布、待lcy接收，未消费；当前116图/290条语言dev按用户授权固定版本用于开发选择，原标注来源保留 | 其余134张dev语言及独立审核/最终测试描述另行完善；不再阻塞当前已授权开发联调 | B，全员 |
-| P5-S 分割训练 | in_progress | S0及min_scale完成，选B20k AP=63.7930；本轮1024 AP=62.2498，保留800；已有18k候选/0.3/B1联调 | 新B候选未导出，现有候选仍18k；小目标/边界与弱细类仍待改善，定向10k待接收 | lcy |
+| P4 数据扩充冻结 | in_progress | 分割5000/250已固定并使用；wkq定向10k已发布、lcy增量消费通过；正式冻结状态保留；当前116图/290条语言dev按用户授权固定版本用于开发选择，原标注来源保留 | 其余134张dev语言及独立审核/最终测试描述另行完善；不再阻塞当前已授权开发联调 | B，全员 |
+| P5-S 分割训练 | in_progress | S0及min_scale完成，选B20k AP=63.7930；本轮1024 AP=62.2498，保留800；已有18k候选/0.3/B1联调 | 新B候选未导出，现有候选仍18k；小目标/边界与弱细类仍待改善；10k已技术接收，等配方5k/10k对照仅准备，未训练 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42机器弱标签试训][wyz-latest]已完成；本轮固定语言dev可用于明确标记的开发对照 | M2实现及M1/M2三种子公平对照、实际dev选模尚未完成；使用查询须保留本次授权依据及原始来源 | A |
 | P6 联调与对照 | in_progress | lcy固定候选→原B1→原mask/框及当前dev联调完成 | wyz其他方法/空间消融、E1、wkq统一汇总和demo仍待完成 | 全员分责 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -47,7 +49,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | B20k＋800保持当前整体AP最佳；1024对照已结束 | 可接收wkq发布的定向10k，仅验证变化影响；据新数据与诊断另定受控训练范围 | 本轮不自动训练、扫描尺寸或换候选；不代构建数据或训练排序 | [本轮结果](handoffs/segmentation/resolution1024_20261116.md)、[wkq10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md) |
+| lcy | 10k技术接收通过；配对5k/10k同预算方案已准备 | 下一步补组合验收凭据的dev复用接线和两组有界runner；保留B20k＋800 | 训练尚未授权；新包正式冻结记录不代签；只做分割，不重跑旧检查 | [接收证据](handoffs/segmentation/train10000_acceptance_20261116.md)、[受控方案](handoffs/segmentation/train10000_control_plan_20261116.md) |
 | wyz（A）/ grounding | 接收18k＋0.3包和本轮独立缓存/联调结果，继续自己的M2/可比训练 | 当前语言dev已由用户授权可用，连同原审核状态和授权记录传递给消费入口 | lcy已调用原B1完成当前dev联调；本人接收及B2/M1/M2实际对照仍待执行，原来源保持 | [选择记录][u18000-selection]、[wyz交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 接收当前候选/查询固定版本，完善剩余dev语言及独立审核记录，准备统一评价 | 当前116图/290查询已按用户授权完成coverage，原文件仍needs_revision；查询/图片/GT指纹和分母齐全 | 完整250图语言覆盖、正式独立审核来源和最终test描述仍不冒称齐备；不阻塞本轮开发选择 | [本轮授权与结果][u18000-selection]、PR #4 |
 
@@ -61,7 +63,7 @@
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
 | 模型代码/数据转换器 | 训练/AP/cache/export已运行；新增显式用户授权dev路径，原accepted默认门禁与匹配器不变，3项必要CPU验证通过 | 已完成0.3选择及lcy最小B1联调；wyz其他排序方法、M2及最终test仍待完成 |
 | 实验结果 | B20k固定权重800→1024：AP63.7930→62.2498，AP_small10.7525→11.5257，严格小目标匹配35→49 | 保留800；中目标AP跌幅主要受1例skirt宏平均影响，不能泛称全面退化。历史18k语言候选/B1未重跑，非B20k语言结果或test |
-| GPU/环境/付费预算 | 本轮总137.859秒/900秒硬限；1024评价内部128.001秒，allocated2.661GiB，0训练 | 19:22 HKT GPU0MiB/0%、无计算进程，协调completed、锁已释放；[结束快照](handoffs/segmentation/evidence/resolution1024_20261116/server_postflight.json)，未延长/重启 |
+| GPU/环境/付费预算 | 本轮仅CPU验收59.929秒/300秒硬限，未请求GPU锁、0训练/推理 | 19:43 HKT GPU0MiB/0%、无计算进程及活动协调任务；数据盘约153.5GiB空闲；[结束快照](handoffs/segmentation/evidence/train10000_acceptance_20261116/server_postflight.json)。建议对照预算每组3小时尚未授权 |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -69,7 +71,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0、min_scale、B20k分辨率对照完成；当前整体AP选B20k＋800，旧18k候选/0.3及最小B1联调保持历史版本。1024对小目标严格形状有帮助，但未通过整体AP门槛，不继续扫描尺寸。wkq已按定向需求发布10k，下一步是lcy接收变化部分，是否训练及预算另行确定；本轮没有10k模型消费或收益证据。wyz继续M2，wkq继续语言审核补写和统一评价；不替队友训练、构建或宣告冻结。
+保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0、min_scale、B20k分辨率对照完成；当前整体AP选B20k＋800，旧18k候选/0.3及最小B1联调保持历史版本。1024对小目标严格形状有帮助，但未通过整体AP门槛，不继续扫描尺寸。wkq已按定向需求发布10k，lcy完成新增读取/旧5k保留/跨分区技术验收。下一步仅补等配方5k/10k训练执行接线，预算另行确定；本轮没有10k模型训练或收益证据。wyz继续M2，wkq继续语言审核补写和统一评价；不替队友训练、构建或宣告冻结。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 

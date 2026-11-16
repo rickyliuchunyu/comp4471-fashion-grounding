@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "acceptance_scope": "segmentation_input_only",
+  "checked_at": "2026-11-16T11:42:18.160307+00:00",
+  "elapsed_seconds": 59.92901771143079,
+  "source_commit": "cd8e8898fa646393dff2b87553d0cb123119e038",
+  "script_sha256": "f2bfb154105d80881d60a62824abcd1f2d3b937220e2ba8bead18858e9d9ba59",
+  "loader_sha256": "66c3216538296201d78df81f7a4a835c2f0d72aead0acb49ec14817f20897827",
+  "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+  "package_pins": {
+    "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+    "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3"
+  },
+  "producer_build_commit": "aadcd1b5fc37f74630cf842232390932da363c3a",
+  "protected_manifest_pins": {
+    "parent": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "dev": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "test": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8"
+  },
+  "total_images": 10000,
+  "total_instances": 39699,
+  "total_groups": 9976,
+  "old_records_exact": {
+    "images": 5000,
+    "annotations": 17775
+  },
+  "old_asset_catalog_matches": 22775,
+  "old_asset_bytes": "reused pinned producer preservation audit; not reread",
+  "added_loader": {
+    "images": 5000,
+    "instances": 21924,
+    "project_category_counts": {
+      "1": 2872,
+      "2": 1926,
+      "3": 595,
+      "4": 1462,
+      "5": 2047,
+      "6": 6059,
+      "7": 1392,
+      "8": 5571
+    },
+    "crowd_skipped": 0,
+    "training_id_mapping": {
+      "1": 0,
+      "2": 1,
+      "3": 2,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "7": 6,
+      "8": 7
+    },
+    "image_manifest_sha256": "1961a2ed84ea18c36d793baff37278fe0a6631e0b5e92fc31a8f3201cfe41d2a",
+    "annotation_sha256": "1d5e6aec59751e10830cf0f848c6644b918f3e6b818b57f54fecb6e325ecdd3f",
+    "scope": "real train-only segmentation input; no query acceptance or performance evaluation"
+  },
+  "added_cross_partition_overlap_counts": {
+    "parent": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    },
+    "dev": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    },
+    "test": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    }
+  },
+  "sampling": {
+    "broad": 3500,
+    "targeted": 1500
+  },
+  "quarantined_not_selected": 126,
+  "reused_audits": {
+    "source_pixels": 21924,
+    "near_duplicates": {
+      "comparisons": "all four original/mirror orientations; new vs frozen and new vs new",
+      "threshold": 6,
+      "flags": []
+    },
+    "old_asset_bytes": 22775
+  },
+  "evidence_hashes": {
+    "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+    "RELEASE.json": "5819b647ad31d6d645cbb7f583ab5655032552ea4d2ff1a3d401a758962b627f",
+    "old_subset_membership.json": "ebc3e7df2472f59b41739e1db7deaa430b789651aaaa0b30dfe7cf652eac2af0",
+    "added_subset_membership.json": "43fcf6853e873cbfbd4d1f214a0736ed5fe403b3c4a216351cca1b900970ad8f",
+    "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+    "sampling_sidecar.json": "5aee511f520b13edf108fcf702d721ff2cf994100c920189e33fff5170da0ee1",
+    "audit/duplicate_audit.json": "e1887132ec4ac1cc57543e50f8fd1aa4f597136823cf11bff5508e3b536928d4",
+    "audit/independent_duplicate_check.json": "339a4381db5d4b085530eeee138797a8b4c5162e459e0cf48ea5a2e00bed657b",
+    "preservation_report.json": "44ad16a5fd6b2937c98e2980a27c1b419789c45610defa3a1236cef41d7c316c",
+    "audit/added_consumer_check_report.json": "ad61360677f5f4df13c59a10240b07f5405ab54f61119b4860d1087f3fc3994c",
+    "audit/visual_audit.json": "66d42cfeb506f9d37980827c0e0dffe4b606d8194acab3491f9ab188dfa38c9e",
+    "audit/distribution_report.json": "2952cebea91b13f2206923a86035ec365df3c15f9e7b8060659ab8cacc1f9445"
+  },
+  "distribution": {
+    "old": {
+      "images": 5000,
+      "groups": 4976,
+      "instances": 17775,
+      "small_instances_le1024": 2165,
+      "extreme_instances_le256": 540
+    },
+    "added": {
+      "images": 5000,
+      "groups": 5000,
+      "instances": 21924,
+      "small_instances_le1024": 5001,
+      "extreme_instances_le256": 1335
+    },
+    "combined": {
+      "images": 10000,
+      "groups": 9976,
+      "instances": 39699,
+      "small_instances_le1024": 7166,
+      "extreme_instances_le256": 1875
+    }
+  },
+  "soft_goals": {
+    "small_sock": {
+      "goal": 200,
+      "actual_added_images": 429,
+      "gap": 0
+    },
+    "small_belt": {
+      "goal": 200,
+      "actual_added_images": 548,
+      "gap": 0
+    },
+    "small_head_accessory": {
+      "goal": 200,
+      "actual_added_images": 547,
+      "gap": 0
+    },
+    "small_glasses": {
+      "goal": 150,
+      "actual_added_images": 548,
+      "gap": 0
+    },
+    "small_shoe": {
+      "goal": 500,
+      "actual_added_images": 1297,
+      "gap": 0
+    },
+    "bag_all": {
+      "goal": 500,
+      "actual_added_images": 1297,
+      "gap": 0
+    },
+    "small_bag": {
+      "goal": 80,
+      "actual_added_images": 182,
+      "gap": 0
+    }
+  },
+  "visual_review_provenance": {
+    "status": "spot_checked",
+    "reviewer": "Codex visual inspection, not human certification",
+    "class_samples": 160,
+    "small_samples": 48,
+    "seed": 2026,
+    "sample_manifests": [
+      "class_preview/sample_manifest.json",
+      "small_preview/sample_manifest.json"
+    ],
+    "observations": [
+      "Eight class sheets and six small-mask zoom sheets inspected. Visible regions generally align with source garment categories; occluded and disconnected regions preserved.",
+      "Very small head accessories (image 20540 annotation 26933, image 20386 annotation 26084) contain only 17 and 15 pixels; exact semantic/boundary correctness cannot be certified from these pixels.",
+      "Small bags can consist mainly of straps or occluded fragments, e.g. image 45371 annotation 52889. Retained faithful official supervision, not treated as newly human relabeled."
+    ],
+    "limitations": [
+      "Not exhaustive boundary review; source label noise remains possible.",
+      "No test images inspected.",
+      "Early preview sheets were generated from completed added assets while full validation continued; final deterministic sheets must match."
+    ]
+  },
+  "formal_three_party_freeze": false,
+  "test_access": "manifest and checksum catalog only",
+  "model_loads": 0,
+  "inference_images": 0,
+  "training_updates": 0,
+  "smoke_runs": 0,
+  "limitations": [
+    "No performance claim; targeted expansion changes size and composition.",
+    "Reused pHash audit is conservative evidence, not proof of all identity/crop relationships.",
+    "Visual audit is Codex spot checking, not human exhaustive certification."
+  ]
+}

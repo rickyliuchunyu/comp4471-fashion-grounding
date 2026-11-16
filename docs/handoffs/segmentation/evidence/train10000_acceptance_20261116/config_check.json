@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "new config parse and factor equality; no model instantiated",
+  "different_keys": [
+    "image_manifest_sha256",
+    "annotation_sha256"
+  ],
+  "max_updates": 20000,
+  "seed": 42,
+  "min_scale": 0.5,
+  "eval_scale": [
+    800,
+    1333
+  ],
+  "evaluation_updates": [
+    10000,
+    20000
+  ]
+}

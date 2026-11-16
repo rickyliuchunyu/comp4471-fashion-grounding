@@ -6,15 +6,17 @@
 
 > [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
 
-上一轮：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)已完成，同一18k→20k、一次完整dev250，选中 **B20k AP=63.7930**（比复用A +0.2334、比旧最佳 +0.2138）。总15分58秒/45分钟硬限，未延长/重启/重复smoke。AP_small较旧最佳仅+0.0136、AP75略低，小目标/边界未明显改善。现有候选和B1交付仍对应18k＋0.3，本轮仅选新权重。此前[分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，wkq现已发布定向10k，待lcy接收，本轮未消费。
+上一轮：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)已完成，同一18k→20k、一次完整dev250，选中 **B20k AP=63.7930**（比复用A +0.2334、比旧最佳 +0.2138）。总15分58秒/45分钟硬限，未延长/重启/重复smoke。AP_small较旧最佳仅+0.0136、AP75略低，小目标/边界未明显改善。现有候选和B1交付仍对应18k＋0.3，本轮仅选新权重。此前[分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，wkq随后发布定向10k，lcy接收结果见下文。
 
-最新（2026-11-16）：[B20k 800→1024 单尺度对照](docs/handoffs/segmentation/resolution1024_20261116.md)完成，共2分18秒/15分钟硬限，仅一次新增dev250推理。1024整体AP降至62.2498，保留 **B20k＋800，AP=63.7930**；小目标严格匹配35→49、薄边界改善，但袜子/腰带仍弱。0训练/0smoke，GPU已释放，候选仍18k版本。
+上一轮（2026-11-16）：[B20k 800→1024 单尺度对照](docs/handoffs/segmentation/resolution1024_20261116.md)完成，共2分18秒/15分钟硬限，仅一次新增dev250推理。1024整体AP降至62.2498，保留 **B20k＋800，AP=63.7930**；小目标严格匹配35→49、薄边界改善，但袜子/腰带仍弱。0训练/0smoke，GPU已释放，候选仍18k版本。
 
 ## 团队与 Codex 开工入口
 
 暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
+
+最新（2026-11-16）：[定向10k增量接收](docs/handoffs/segmentation/train10000_acceptance_20261116.md)技术验收通过：新增5000图/21924实例、旧5k原记录保留、跨分区隔离核对通过，CPU约60秒。已准备[同配方5k/10k受控方案](docs/handoffs/segmentation/train10000_control_plan_20261116.md)，未启动训练/推理或重复smoke。新包人工全面复核及三方正式冻结不由技术接收代签。
 
 ## 项目目的
 

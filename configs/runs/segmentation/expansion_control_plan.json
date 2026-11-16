@@ -1,0 +1,119 @@
+{
+  "status": "prepared_not_started",
+  "training_authorized": false,
+  "comparison": "targeted_expansion_under_equal_updates_not_pure_dataset_size",
+  "owner": "segmentation",
+  "initialization": {
+    "mode": "fresh_official_COCO_both_arms",
+    "path": "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "seed": 42,
+    "optimizer_scheduler_sampler_rng": "fresh identically configured per arm; no cross-dataset resume"
+  },
+  "arms": [
+    {
+      "name": "C5k",
+      "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "training_config": "configs/runs/segmentation/expansion_control_train5000.json"
+    },
+    {
+      "name": "D10k_targeted",
+      "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+      "training_config": "configs/runs/segmentation/expansion_control_train10000.json"
+    }
+  ],
+  "same_successful_updates": 20000,
+  "effective_batch_images": 2,
+  "image_presentations_per_arm": 40000,
+  "nominal_epochs": {
+    "C5k": 8,
+    "D10k_targeted": 4
+  },
+  "evaluation": {
+    "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+    "config": "configs/runs/segmentation/expansion_control_dev250.json",
+    "updates": [
+      10000,
+      20000
+    ],
+    "primary_endpoint": 20000,
+    "images": 250,
+    "gt_instances": 1008,
+    "decoder": "upstream_instance",
+    "max_detections": 100,
+    "score_threshold": null,
+    "scale": [
+      800,
+      1333
+    ],
+    "checkpoint_selection": "maximum complete-dev mask AP within each arm, tie earlier update",
+    "cross_arm_comparison": "separate contrast report; do not pass different training_data/configs to strict within-run selector"
+  },
+  "proposed_budget": {
+    "per_arm_hard_seconds": 10800,
+    "total_pair_hard_seconds": 21600,
+    "training_internal_seconds": 10000,
+    "evaluation_internal_seconds": 600,
+    "automatic_extension": false,
+    "automatic_restart": false,
+    "authorization": "proposal only, not permission to run"
+  },
+  "historical_reference": {
+    "name": "B20k_800",
+    "AP": 63.792950237309874,
+    "checkpoint_sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+    "matched_control": false,
+    "reason": "B used min_scale0.1 through18000 and0.5 only for final2000; new arms use0.5 throughout"
+  },
+  "practical_screen": {
+    "primary_delta_mask_AP_min": 0.5,
+    "delta_AP_small_min": 1.0,
+    "delta_AP75_min": -0.2,
+    "max_drop_per_weak_project_category_AP": 1.0,
+    "weak_project_categories": [
+      "skirt",
+      "outerwear",
+      "bag",
+      "accessory"
+    ],
+    "small_subtype_diagnostics": [
+      "sock",
+      "belt",
+      "head_accessory",
+      "glasses",
+      "shoe",
+      "bag"
+    ],
+    "subtype_denominators": "report n and matched counts at IoU0.5/0.75; avoid tiny-n significance claims",
+    "interpretation": "Predeclared practical go/no-go screen, not statistical significance or expected gain; compare D10k-C5k at update20000"
+  },
+  "reuse": [
+    "official COCO integrity/head adaptation",
+    "training stability and AMP/recovery engineering evidence",
+    "old5000 and unchanged dev pixel/geometry validation",
+    "historical A/B/800/1024 cached results",
+    "producer source-pixel/near-duplicate audits"
+  ],
+  "remaining_before_any_authorized_execution": [
+    "Bind completed incremental acceptance and existing dev receipt in evaluation reuse path; current reuse_eval_package intentionally rejects changed train identity. Do not forge old receipt or rerun unchanged dev audit.",
+    "Use a common pinned source commit and per-arm process-group hard-deadline runner covering training, both dev points and selection. Current JSON plan is not an implemented launcher.",
+    "Resolve and record new package manual-review/three-party freeze status with data owner if required for formal designation; consumer technical pass is not certification.",
+    "Obtain explicit future training instruction, refresh team/resource/lock state, reserve disk for isolated checkpoints; do not run smoke."
+  ],
+  "not_in_scope": [
+    "ranking",
+    "language queries",
+    "test evaluation",
+    "new candidates",
+    "data construction",
+    "new model architecture",
+    "loss weights",
+    "repeat factor sampling",
+    "1024 inference"
+  ],
+  "config_sha256": {
+    "expansion_control_train5000.json": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+    "expansion_control_train10000.json": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
+    "expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3"
+  }
+}
