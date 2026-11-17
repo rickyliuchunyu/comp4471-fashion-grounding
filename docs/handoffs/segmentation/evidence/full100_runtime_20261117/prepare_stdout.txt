@@ -1,0 +1,1 @@
+{"status": "prepared", "execution_requested": false, "ready_for_training": false, "remaining": ["full_dataset_freeze_and_acceptance_binding", "launch_resource_check_and_authorization"]}

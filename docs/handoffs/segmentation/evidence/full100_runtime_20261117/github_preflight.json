@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-11-17T06:57:00+00:00",
+  "initial_heads": {
+    "lcy": "308492f4ec19426845a5aa63f46f58639db2872f",
+    "wkq": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+    "wyz": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "full100_preparation": "8d45fc386d27788e8efda6ca3373f0538380bfd1"
+  },
+  "final_heads": {
+    "lcy": "308492f4ec19426845a5aa63f46f58639db2872f",
+    "wkq": "6eb7b923d32142e2510ffc87e6adf0e549a8f743",
+    "wyz": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-12T09:52:48Z"
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "308492f4ec19426845a5aa63f46f58639db2872f",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T04:41:53Z"
+    },
+    {
+      "number": 3,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "base_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "updated_at": "2026-11-12T09:52:53Z"
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "6eb7b923d32142e2510ffc87e6adf0e549a8f743",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T06:55:28Z"
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "discussion_counts": {
+    "2": 0,
+    "4": 0,
+    "5": 0
+  },
+  "checked_scope": [
+    "all remote branches",
+    "all five PR metadata and descriptions",
+    "three active PR comment/review timelines",
+    "wkq incremental handoff and release/comparison evidence"
+  ],
+  "wkq_increment": {
+    "commit": "6eb7b923d32142e2510ffc87e6adf0e549a8f743",
+    "handoff": "docs/handoffs/data_eval/reviewed_dev_eval_20261117.md",
+    "accepted_queries": 642,
+    "semantic_pairs": 321,
+    "query_images": 246,
+    "manifest_images": 250,
+    "pending_semantic_pairs": 9,
+    "segmentation_candidates": "u18000 / threshold 0.3",
+    "full_segmentation_train_release": false
+  },
+  "pr_description_caveat": "PR2 and PR4 descriptions lag their latest handoffs; handoffs and fixed commit evidence determine the state."
+}

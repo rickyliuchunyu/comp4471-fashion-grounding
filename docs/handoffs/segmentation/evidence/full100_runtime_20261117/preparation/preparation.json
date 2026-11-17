@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "purpose": "full100_resolved_contract",
+  "source_commit": "ee7db25586d688760512cb3c1e0943fbd2b47e8f",
+  "plan_path": "/Users/liuchunyu/Documents/elec4240/course-project-full100-runtime/configs/runs/segmentation/full100_execution_plan.json",
+  "plan_sha256": "507bd55a6009b2c8901d1b5bdc3397d21a916573a32b4458e1ea555217683932",
+  "runtime": {
+    "schema_version": 1,
+    "purpose": "full100_execution_plan",
+    "execute_by_default": false,
+    "recipe": {
+      "path": "configs/runs/segmentation/full100_train_recipe.json",
+      "sha256": "c3e4afd72f201114b5c96269d08ecbf3b0f56c6ef3140db3b2b8f4a355f53c48"
+    },
+    "evaluation": {
+      "path": "configs/runs/segmentation/full100_evaluation_plan.json",
+      "sha256": "f26448f4b08e7533633cb9baf206fbe50fcc5cd412bee4d20ef35cdaf5d56e3b"
+    },
+    "upstream": {
+      "path": "envs/segmentation/upstream.json",
+      "sha256": "2962e7a562a9ac1c037cae1b5144ba321965e06a10a3a504251d26b375f134b8"
+    },
+    "mapping": {
+      "path": "configs/source_category_mapping.json",
+      "sha256": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+    },
+    "categories": {
+      "path": "configs/categories.json",
+      "sha256": "6149973eec9fb45097df1768fab447440421cf1f4ad4d2bd5fc8e7b8ea0d1067"
+    },
+    "python": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "upstream_source": "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "coordination": "/root/autodl-tmp/fashion-grounding/coordination",
+    "runs_root": "/root/autodl-tmp/fashion-grounding/runs/segmentation",
+    "initial_checkpoint": "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "total_wall_seconds": null,
+    "automatic_retry": false,
+    "automatic_epoch_extension": false,
+    "disk_reserve_bytes": 10737418240,
+    "estimated_checkpoint_bytes": 805306368,
+    "legacy_execution_files": [
+      {
+        "path": "configs/runs/segmentation/expansion_control_train5000.json",
+        "sha256": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf"
+      },
+      {
+        "path": "configs/runs/segmentation/expansion_control_train10000.json",
+        "sha256": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8"
+      },
+      {
+        "path": "configs/runs/segmentation/expansion_control_dev250.json",
+        "sha256": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3"
+      },
+      {
+        "path": "configs/runs/segmentation/expansion_control_plan.json",
+        "sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7"
+      },
+      {
+        "path": "scripts/run_expansion_control.py",
+        "sha256": "ae9f499abe108ba5dab577fe1b512f505376136109d4b18c69f86c876b6ed05f"
+      },
+      {
+        "path": "src/fashion_grounding/segmentation/train.py",
+        "sha256": "1640f476836ab306551200edb006e59869226617f794f2800022e5832b13326a"
+      },
+      {
+        "path": "src/fashion_grounding/segmentation/training_state.py",
+        "sha256": "8cde0d057534b8f981983f5bcf636adb83a9441bcf62bbc670867d2663ddf2a7"
+      },
+      {
+        "path": "src/fashion_grounding/segmentation/amp_recovery.py",
+        "sha256": "7363114437e6e7a0894420a9ced22a623ffcc566638bc09ba0b3ef49c002893e"
+      },
+      {
+        "path": "src/fashion_grounding/segmentation/data.py",
+        "sha256": "66c3216538296201d78df81f7a4a835c2f0d72aead0acb49ec14817f20897827"
+      }
+    ]
+  },
+  "ready_for_training": false,
+  "requires_explicit_execute": true,
+  "remaining": [
+    "full_dataset_freeze_and_acceptance_binding",
+    "launch_resource_check_and_authorization"
+  ]
+}

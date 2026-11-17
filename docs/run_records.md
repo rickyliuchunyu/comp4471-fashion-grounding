@@ -1,6 +1,8 @@
 # 实验系列与实际运行记录
 
-2026-11-17新增[完整Fashionpedia / R50 100-epoch准备](handoffs/segmentation/full_fashionpedia_100ep_preparation_20261117.md)：这是配方、冻结清单及评价/恢复计划，真实全量输入和执行接线未就绪。未追加训练/评价run行，未填写AP，不修改原5k/10k运行记录；实际训练须在后续明确启动时另登记。
+2026-11-17新增[完整Fashionpedia / R50 100-epoch执行接线](handoffs/segmentation/full100_runtime_20261117.md)：代码实现和21项不同CPU案例通过，默认准备实际返回ready_for_training=false。真实全量包/冻结/接收尚缺，新GPU训练/推理/恢复未执行；本轮不追加实验run或AP，不改当前5k/10k记录。最新wkq审核语言dev及六项评价只链接其固定分支证据，不复制为lcy运行。
+
+此前2026-11-17[完整Fashionpedia / R50 100-epoch准备](handoffs/segmentation/full_fashionpedia_100ep_preparation_20261117.md)：这是配方、冻结清单及评价/恢复计划，真实全量输入和执行接线未就绪。未追加训练/评价run行，未填写AP，不修改原5k/10k运行记录；实际训练须在后续明确启动时另登记。
 
 2026-11-10。[registry.csv](../experiments/registry.csv) 保留 14 条 `record_type=plan`。2026-11-12 新增 4 条分割 P1 工程 smoke run（随机初始化，3 failed / 1 completed）、1 条 COCO 五图短推理（completed、0 更新）及 2 条 200-update 尝试（1 failed / 1 completed）；它们不是正式 S0 训练或性能结果，所有性能指标仍为空，见 [随机 smoke 交接](handoffs/segmentation/pilot_adapter_20261112.md) 、[COCO 加载交接](handoffs/segmentation/coco_weights_20261112.md) 和 [200-update 交接](handoffs/segmentation/stability_200_20261112.md)。
 

@@ -1,0 +1,6 @@
+test_explicit_own_resume_reconciles_only_dead_owner (test_full100_runtime.Full100ResourceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK

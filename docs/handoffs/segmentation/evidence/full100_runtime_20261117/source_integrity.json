@@ -1,0 +1,61 @@
+{
+  "code_commit": "ee7db25586d688760512cb3c1e0943fbd2b47e8f",
+  "runtime_files": {
+    "configs/runs/segmentation/full100_data_binding.template.json": "e482fe03a57a5db57edcf21c841e6e18b82358e3bc42f7df198c92d6475c9b4e",
+    "configs/runs/segmentation/full100_execution_plan.json": "507bd55a6009b2c8901d1b5bdc3397d21a916573a32b4458e1ea555217683932",
+    "scripts/run_full100.py": "c65c41a8d1e948a39d9ef8682c63090e4ad59c9cb8280061ed7d75b8072f5b33",
+    "src/fashion_grounding/segmentation/full100_contract.py": "0b449fd2b6140e6da261cb7c5c82d8c9d0a8ff15dc3711c304714f6118677ae6",
+    "src/fashion_grounding/segmentation/full100_runtime.py": "5479f8ad4f0ea5e6db2397091117dd75f658d05721b2108967af5efd618c5c7e",
+    "src/fashion_grounding/segmentation/full100_worker.py": "afed45aefe80185706b9e63f0e0362fca6986b4b19a3410762aec6c661bc1c30",
+    "tests/test_full100_runtime.py": "f4a2e1e657f6c34f5d8587d1e7c7f5934f54b1716e8840451870c6682bf042ac"
+  },
+  "legacy_execution_files_unchanged": [
+    {
+      "path": "configs/runs/segmentation/expansion_control_train5000.json",
+      "expected": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+      "actual": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf"
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_train10000.json",
+      "expected": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
+      "actual": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8"
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_dev250.json",
+      "expected": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+      "actual": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3"
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_plan.json",
+      "expected": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+      "actual": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7"
+    },
+    {
+      "path": "scripts/run_expansion_control.py",
+      "expected": "ae9f499abe108ba5dab577fe1b512f505376136109d4b18c69f86c876b6ed05f",
+      "actual": "ae9f499abe108ba5dab577fe1b512f505376136109d4b18c69f86c876b6ed05f"
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/train.py",
+      "expected": "1640f476836ab306551200edb006e59869226617f794f2800022e5832b13326a",
+      "actual": "1640f476836ab306551200edb006e59869226617f794f2800022e5832b13326a"
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/training_state.py",
+      "expected": "8cde0d057534b8f981983f5bcf636adb83a9441bcf62bbc670867d2663ddf2a7",
+      "actual": "8cde0d057534b8f981983f5bcf636adb83a9441bcf62bbc670867d2663ddf2a7"
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/amp_recovery.py",
+      "expected": "7363114437e6e7a0894420a9ced22a623ffcc566638bc09ba0b3ef49c002893e",
+      "actual": "7363114437e6e7a0894420a9ced22a623ffcc566638bc09ba0b3ef49c002893e"
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/data.py",
+      "expected": "66c3216538296201d78df81f7a4a835c2f0d72aead0acb49ec14817f20897827",
+      "actual": "66c3216538296201d78df81f7a4a835c2f0d72aead0acb49ec14817f20897827"
+    }
+  ],
+  "original_checkout_head": "308492f4ec19426845a5aa63f46f58639db2872f",
+  "original_checkout_status": ""
+}

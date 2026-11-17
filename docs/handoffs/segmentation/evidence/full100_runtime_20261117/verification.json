@@ -1,0 +1,44 @@
+{
+  "scope": "new CPU contract/resource/orchestration fixtures only",
+  "unique_cases_passed": 21,
+  "model_loads": 0,
+  "optimizer_updates": 0,
+  "inference_images": 0,
+  "old_smoke_repeated": 0,
+  "actual_batches": [
+    {
+      "command": "PYTHONPATH=src:tests python3 -m unittest test_full100_runtime -v",
+      "tests": 15,
+      "passed": 15,
+      "phase": "initial implementation"
+    },
+    {
+      "command": "PYTHONPATH=src:tests python3 -m unittest test_full100_runtime.Full100ContractTests -v",
+      "tests": 7,
+      "passed": 7,
+      "phase": "affected contract + new native-order adapter"
+    },
+    {
+      "command": "PYTHONPATH=src:tests python3 -m unittest test_full100_runtime.Full100ContractTests test_full100_runtime.Full100ResourceTests -v",
+      "tests": 12,
+      "passed": 11,
+      "errors": 1,
+      "phase": "new resource gates + affected config labels",
+      "failure": "Only the own-resume synthetic fixture used an unresolved macOS /var path; production records use resolved /private/var paths. Fixed fixture root with Path.resolve()."
+    },
+    {
+      "command": "PYTHONPATH=src:tests python3 -m unittest test_full100_runtime.Full100ResourceTests.test_explicit_own_resume_reconciles_only_dead_owner -v",
+      "tests": 1,
+      "passed": 1,
+      "phase": "retested only corrected fixture"
+    }
+  ],
+  "remaining_unverified": [
+    "actual full-data acceptance",
+    "new GPU worker execution",
+    "new full100 numerical state restoration",
+    "Linux parent-death signal execution in this new wrapper",
+    "actual 50-point dev trajectory"
+  ],
+  "reused": "Existing original COCO/adapter/200-update/AMP/native checkpoint/AP evidence and prior 9 preparation checks; not rerun."
+}

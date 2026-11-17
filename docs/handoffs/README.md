@@ -1,6 +1,8 @@
 # 交接记录入口
 
-最新准备：[完整Fashionpedia / Mask2Former-R50 100-epoch](segmentation/full_fashionpedia_100ep_preparation_20261117.md)：冻结清单、配方、50个完整dev评价节点及恢复方案；纯CPU准备入口和9项新增检查通过。实际全量N/hash/冻结与长训练接线待补，未启动训练/推理、未连接服务器，不影响原5k/10k运行。
+最新实现：[完整Fashionpedia / R50 100-epoch执行接线](segmentation/full100_runtime_20261117.md)：独立入口默认准备，每epoch保存/每2epoch完整dev，显式恢复复用有效结果；21项新增CPU案例通过。全量数据冻结仍待补，新GPU执行未验证；原5k/10k按原上限运行，未修改/重跑。团队最新wkq `6eb7b92` 的642条审核dev及B1/B2/M1评价已增量核对。
+
+历史准备：[完整Fashionpedia / Mask2Former-R50 100-epoch](segmentation/full_fashionpedia_100ep_preparation_20261117.md)：冻结清单、配方、50个完整dev评价节点及恢复方案；纯CPU准备入口和9项新增检查通过。实际全量N/hash/冻结与长训练接线待补，未启动训练/推理、未连接服务器，不影响原5k/10k运行。
 
 最新：[5k/10k受控对照](segmentation/expansion_control_20261117.md) 已按用户授权启动；两组各20k、10k/20k完整dev、每组总硬上限3小时，失败即停不延长。执行源dc2fba4，无重复smoke，结果待完成。
 

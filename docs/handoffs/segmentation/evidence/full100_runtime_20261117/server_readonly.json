@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-17T06:58:23.372897+00:00",
+  "read_only": true,
+  "data_disk_free_bytes": 162487693312,
+  "processed_packages": [
+    "fp_data_eval_large_v1",
+    "fp_dev250_v1",
+    "fp_grounded9_draft_v2",
+    "fp_grounded9_reviewed_v1",
+    "fp_language1000_machine_v2",
+    "fp_language1000_visual_draft_v3",
+    "fp_language_dev250_reviewed_v1",
+    "fp_language_dev250_simple_draft_v4",
+    "fp_language_dev250_visual_draft_v3",
+    "fp_language_dev_draft_v2",
+    "fp_pilot20_v2",
+    "fp_test400_holdout_v1",
+    "fp_train10000_targeted_v1",
+    "fp_train5000_v1"
+  ],
+  "gpu": "NVIDIA GeForce RTX 3090, 5461 MiB, 28 %",
+  "compute_pids": "214383",
+  "paired_stage_status": {
+    "status": "running",
+    "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+    "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+    "per_arm_hard_seconds": 10800,
+    "pair_hard_seconds": 21600,
+    "automatic_restart": false,
+    "arms": [
+      {
+        "arm": "C5k",
+        "run_id": "segmentation-expansion-5000-20261117-r01",
+        "status": "running",
+        "hard_deadline_monotonic": 25415217.070304938,
+        "started_at": "2026-11-17T04:40:10.519787+00:00"
+      }
+    ]
+  },
+  "read_scope": [
+    "package_names",
+    "paired_stage_status",
+    "nvidia_smi",
+    "disk_usage"
+  ],
+  "images_read": 0,
+  "masks_decoded": 0,
+  "server_mutations": 0
+}
