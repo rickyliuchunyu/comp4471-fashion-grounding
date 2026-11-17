@@ -1,0 +1,52 @@
+{
+  "base_queries_identical": true,
+  "base_manifest_annotation_candidate_prefix_identical": true,
+  "frozen": {
+    "fp_train5000_v1": {
+      "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+      "SHA256SUMS.json": "92f57e8fe39191bcc80495bfbbda20f3359aa9a0ce42d85c51791f876dd6f953"
+    },
+    "fp_train10000_targeted_v1": {
+      "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+      "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+      "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3"
+    },
+    "fp_dev250_v1": {
+      "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+      "SHA256SUMS.json": "a051bb8808b3ac484da54b525218bc52e86c86ea6c16f11a05863ec16d0893b0"
+    },
+    "fp_test400_holdout_v1": {
+      "image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+      "annotations_coco.json": "283e5b7d868326c8267475495ac0e044720aaf2dc704b44da689c6c667e8d047",
+      "SHA256SUMS.json": "cb1f2bf3ff31098c2ee63c7fc7242e3144103332423293cce139252cc4a074f7"
+    },
+    "fp_language1000_visual_draft_v3": {
+      "image_manifest.json": "1bbff2b4a315b597af195097571022dfed4e432a91ad672e8b3c892e69b24f44",
+      "annotations_coco.json": "ed256cdd7d18b3868736fff5eebc84eed5ec1be09524a8f16f1cfbc8bcb38a09",
+      "SHA256SUMS.json": "b5680a595a743e1a61432d85ecf7ac9f1a7a8371c94e8db7b53a6e1e1f167575"
+    },
+    "fp_language_dev250_reviewed_v1": {
+      "image_manifest.json": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+      "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+      "SHA256SUMS.json": "26b4ca7fbc01c24c75d081db3851c024b7d9a142162831852709a27326096e49"
+    }
+  },
+  "review_pages": {
+    "train": {
+      "semantic_groups": 149,
+      "pages": 6,
+      "blind_target_free": true,
+      "answer_targets_match": true
+    },
+    "dev": {
+      "semantic_groups": 39,
+      "pages": 2,
+      "blind_target_free": true,
+      "answer_targets_match": true
+    }
+  },
+  "old_query_images": 999,
+  "new_query_images": 1148
+}

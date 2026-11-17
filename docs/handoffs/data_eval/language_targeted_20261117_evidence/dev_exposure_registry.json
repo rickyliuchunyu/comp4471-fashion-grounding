@@ -1,0 +1,205 @@
+{
+  "policy": "All 50 visually exposed validation images are reserved for development or quarantine; never future test or training. Original main dev/test unchanged.",
+  "images": [
+    {
+      "image_id": 1000012832,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000015385,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000020292,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000015310,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000020573,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000009700,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000016332,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000020466,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000013596,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000010267,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000016509,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000013257,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000018419,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019795,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019034,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000010325,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019671,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000010425,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000009291,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000015516,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000010603,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000018370,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019190,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000009175,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000017777,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000015708,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019899,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000016954,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000015107,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000015738,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000010001,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000009972,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000020598,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000020459,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000016183,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000012247,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000012797,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000018532,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000011098,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019660,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019496,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000017357,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000019230,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000020734,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000016457,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000010659,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000011968,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000017792,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000012361,
+      "status": "dev_challenge_draft"
+    },
+    {
+      "image_id": 1000011973,
+      "status": "dev_challenge_draft"
+    }
+  ]
+}

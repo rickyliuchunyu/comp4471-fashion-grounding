@@ -1,8 +1,10 @@
 # 当前进度与下一步
 
-更新：2026-11-17（wkq 已审核dev模型评价）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-17（wkq 语言困难增量已发布）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
-**wkq 已导入dev人工审核并完成现有模型两种候选条件的评价。** 321组/642条accepted、246张查询图，9组待处理。M1在GT候选选对91.59%；lcy u18000+0.3预测候选下Success@0.5=83.80%、同类关联选择准确率71.50%。B1/B2同清单对照、子组/错误分析和图片级区间见[交接](handoffs/data_eval/reviewed_dev_eval_20261117.md)。135项CPU测试及4项适配检查通过。没有训练或占用GPU，原train/dev/test划分不变；本轮没有扩充数据。
+**wkq 已导入dev人工审核并完成现有模型两种候选条件的评价。** 321组/642条accepted、246张查询图，9组待处理。M1在GT候选选对91.59%；lcy u18000+0.3预测候选下Success@0.5=83.80%、同类关联选择准确率71.50%。B1/B2同清单对照、子组/错误分析和图片级区间见[交接](handoffs/data_eval/reviewed_dev_eval_20261117.md)。135项CPU测试及4项适配检查通过。没有训练或占用GPU，原train/dev/test划分不变；该次模型评价未扩充数据。
+
+**wkq 已发布语言定向增量。** 最终新增149张训练图/298条AI逐图初标，合并包1149图/3296条；独立dev困难集39图/78条待审，原主dev/test不变。142项测试、7122个hash和5908个源mask/裁剪检查通过，wyz弱标注入口实际可读取。没有训练或GPU使用；[交接、路径、审核和下游步骤](handoffs/data_eval/language_targeted_20261117.md)。
 
 ## 1. 阶段状态
 
@@ -30,8 +32,8 @@
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
 | lcy | 验收新10k包，登记后续分割运行 | [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)；旧dev/test和已有模型候选不变 | 实际加载器验收；训练配置与GPU协调由本人登记 | 新包 shared/processed/fp_train10000_targeted_v1 |
-| wyz（A）/ grounding | 验收大包读取、缓存键和弱标注实验入口 | 用户报告小包接口OK；可使用明确标记的训练机器初标做实验 | 正式dev查询尚待人工验收；不得把needs_revision伪装accepted | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)，新包模型消费未由wkq代验 |
-| wkq（B）/ data_eval | 裁决dev剩余9组，复核train1000与困难增量方案 | [本轮评价及补核入口](handoffs/data_eval/reviewed_dev_eval_20261117.md)：321组accepted，6次同条件评价 | 9组待处理；train视觉v3待人工审核；不使用test调参 | fp_language_dev250_reviewed_v1；135项CPU测试、4项适配检查通过 |
+| wyz（A）/ grounding | 清理后1000 vs1149语言训练对照；空间模块 | [增量数据及入口已由wkq技术验证](handoffs/data_eval/language_targeted_20261117.md)，主dev642条accepted | 新增训练仍为AI弱标注；dev39待审；训练/GPU由本人登记 | 新包、hash、候选与训练输入见交接；不代签收或宣告训练完成 |
+| wkq（B）/ data_eval | 审核新增149训练组、39dev困难组；原9组裁决 | [语言增量交接](handoffs/data_eval/language_targeted_20261117.md)，8页新增审核 | AI初标未人工accepted；新dev审核后单列评价 | fp_language1149_targeted_draft_v1 / fp_language_dev39_challenge_draft_v1；142测试和真实消费检查 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 

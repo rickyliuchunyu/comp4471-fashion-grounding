@@ -80,3 +80,7 @@ run_id: 20261117-dev250-language；角色data_eval；CPU，无训练。补齐134
 ## 2026-11-17 wkq dev250 精简v4
 
 run_id: 20261117-dev250-simple-v4；CPU，无训练。重新看图331组，262改写、68保留、1新增隔离；250图/330组/660条待审，accepted=0。审计固定train1000的1580组文字监督覆盖，保留缺口，train/dev/test划分与mask不变。117测试、1277文件校验、14页载荷检查通过，未做浏览器排版自动化。见[交接](handoffs/data_eval/dev250_simple_draft_20261117.md)。
+
+## 2026-11-17 wkq 语言定向扩充
+
+run_id: 20261117-language-targeted-expansion-r02；CPU数据准备完成。220张训练提议逐图筛为149张，50张unused验证图筛为39张；合并训练1149图/3296条机器初标。142测试、wyz只读加载器7122个hash/5908个mask与裁剪、弱标注入口检查通过；未训练、未占用GPU、未产生新模型指标。原主dev/test不变，所有50张开发曝光已登记。[交接](handoffs/data_eval/language_targeted_20261117.md)。
