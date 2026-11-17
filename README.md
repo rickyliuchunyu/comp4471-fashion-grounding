@@ -4,6 +4,8 @@
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
+最新（2026-11-17）：[5k/10k受控对照](docs/handoffs/segmentation/expansion_control_20261117.md)仅C5k完成，20k权重完整dev AP **64.6957**，高于历史B20k 0.9027点。D10k在159步主动中断，无checkpoint或AP，扩充收益尚未验证。GPU已释放，不自动重启/延长；旧候选与B1交付保留。
+
 > [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
 
 上一轮：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)已完成，同一18k→20k、一次完整dev250，选中 **B20k AP=63.7930**（比复用A +0.2334、比旧最佳 +0.2138）。总15分58秒/45分钟硬限，未延长/重启/重复smoke。AP_small较旧最佳仅+0.0136、AP75略低，小目标/边界未明显改善。现有候选和B1交付仍对应18k＋0.3，本轮仅选新权重。此前[分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，wkq随后发布定向10k，lcy接收结果见下文。
@@ -18,7 +20,7 @@
 
 上一轮（2026-11-16）：[定向10k增量接收](docs/handoffs/segmentation/train10000_acceptance_20261116.md)技术验收通过：新增5000图/21924实例、旧5k原记录保留、跨分区隔离核对通过，CPU约60秒。已准备[同配方5k/10k受控方案](docs/handoffs/segmentation/train10000_control_plan_20261116.md)，未启动训练/推理或重复smoke。新包人工全面复核及三方正式冻结不由技术接收代签。
 
-最新（2026-11-16）：[5k/10k证据复用与硬超时入口](docs/handoffs/segmentation/expansion_execution_preparation_20261116.md)已实现并通过新增CPU检查；真实5k/10k metadata证据组合通过，未重复数据像素或模型检查。两组各20k、保存的10k/20k完整dev、每组3小时硬上限，默认仅准备。本轮没有训练或推理。
+上一轮（2026-11-16）：[5k/10k证据复用与硬超时入口](docs/handoffs/segmentation/expansion_execution_preparation_20261116.md)已实现并通过新增CPU检查；真实5k/10k metadata证据组合通过，未重复数据像素或模型检查。两组各20k、保存的10k/20k完整dev、每组3小时硬上限，默认仅准备。本轮没有训练或推理。
 
 ## 项目目的
 

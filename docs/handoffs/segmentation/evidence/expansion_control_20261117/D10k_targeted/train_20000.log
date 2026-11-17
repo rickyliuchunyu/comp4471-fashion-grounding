@@ -1,0 +1,20 @@
+/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{"update": 1, "total_loss": 111.67417377233505, "grad_norm_before_clip": 1033.8922119140625, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4326233600}
+{"update": 10, "total_loss": 120.5969055891037, "grad_norm_before_clip": 1218.4971923828125, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 20, "total_loss": 95.49927639961243, "grad_norm_before_clip": 1316.290771484375, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 30, "total_loss": 110.69046473503113, "grad_norm_before_clip": 1736.14013671875, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 40, "total_loss": 80.30709254741669, "grad_norm_before_clip": 909.9286499023438, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 50, "total_loss": 83.52546668052673, "grad_norm_before_clip": 700.0906372070312, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 60, "total_loss": 52.15483796596527, "grad_norm_before_clip": 575.5740356445312, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 70, "total_loss": 52.540017172694206, "grad_norm_before_clip": 408.0914611816406, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 80, "total_loss": 39.30981785058975, "grad_norm_before_clip": 372.2280578613281, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 90, "total_loss": 57.93113023042679, "grad_norm_before_clip": 608.3604736328125, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 100, "total_loss": 43.69792020320892, "grad_norm_before_clip": 203.9840087890625, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 110, "total_loss": 58.30184531211853, "grad_norm_before_clip": 512.073974609375, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 120, "total_loss": 49.86070601642132, "grad_norm_before_clip": 464.61273193359375, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 130, "total_loss": 39.7828025072813, "grad_norm_before_clip": 258.40203857421875, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 140, "total_loss": 53.13013482093811, "grad_norm_before_clip": 527.5174560546875, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}
+{"update": 150, "total_loss": 37.819840379059315, "grad_norm_before_clip": 206.78077697753906, "loss_scale": 1.0, "peak_cuda_allocated_bytes": 4691143168}

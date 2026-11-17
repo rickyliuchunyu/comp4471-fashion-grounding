@@ -1,6 +1,6 @@
 {
-  "status": "authorized_for_bounded_execution",
-  "training_authorized": true,
+  "status": "executed_pair_interrupted_no_automatic_restart",
+  "training_authorized": false,
   "comparison": "targeted_expansion_under_equal_updates_not_pure_dataset_size",
   "owner": "segmentation",
   "initialization": {
@@ -90,8 +90,7 @@
     "producer source-pixel/near-duplicate audits"
   ],
   "remaining_before_any_authorized_execution": [
-    "Refresh team/resource/lock snapshot at launch; reuse passed engineering and input acceptance evidence.",
-    "Keep original human-review/formal-freeze provenance; no automatic acceptance or dataset changes."
+    "Do not rerun this attempt or reuse its output/run IDs. Any later execution needs a new explicit instruction; preserve completed C5k evidence."
   ],
   "not_in_scope": [
     "ranking",
@@ -120,7 +119,7 @@
     "evaluation_internal_seconds": 600,
     "automatic_extension": false,
     "automatic_restart": false,
-    "authorization": "2026-11-17 user explicitly authorized both arms: 20000 successful updates each, saved 10000/20000 full dev250, 10800 seconds total per arm, no extension, stop on failure."
+    "authorization": "2026-11-17 initial paired attempt was explicitly authorized. C5k completed; D10k interrupted at159. No automatic retry or extension; no new attempt authorized."
   },
   "historical_report": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
   "input_sha256": {
@@ -134,5 +133,6 @@
   },
   "execution_entry": "scripts/run_expansion_control.py",
   "evaluation_order": "train20000_then_evaluate_saved10000_and20000_in_one_process",
-  "execution_enabled_by_default": false
+  "execution_enabled_by_default": false,
+  "actual_result_record": "docs/handoffs/segmentation/expansion_control_20261117.md"
 }

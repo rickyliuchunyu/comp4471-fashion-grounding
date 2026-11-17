@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-17T07:10:17.029872+00:00",
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "",
+  "shared_lock_free": true,
+  "remaining_owned_processes": [],
+  "active_coordination_records": [],
+  "disk_free_bytes": 161891631104
+}

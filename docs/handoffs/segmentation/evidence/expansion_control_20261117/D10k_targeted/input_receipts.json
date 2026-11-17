@@ -1,0 +1,39 @@
+{
+  "D10k_targeted": {
+    "overlap": {
+      "image_id": 0,
+      "sha256": 0,
+      "group_id": 0,
+      "source_identity": 0
+    },
+    "training_data": {
+      "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+      "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+    },
+    "image_and_mask_reaudit": false,
+    "formal_three_party_freeze": false,
+    "image_count": 250,
+    "annotation_count": 1008,
+    "validation_bundle_sha256": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+    "validation_mode": "accepted_expansion",
+    "reused_evidence": {
+      "dev_report": {
+        "path": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+        "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+      },
+      "acceptance": {
+        "path": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/train10000_acceptance_20261116/acceptance.json",
+        "sha256": "f2217f933e11f1b3f02ae9ea544a6f758de459ee390f4984f6098b51a2990017"
+      },
+      "acceptance_run": {
+        "path": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/train10000_acceptance_20261116/run_metadata.json",
+        "sha256": "cf89cd33d9f655ebc3e27225791672434f2e43428104ca38f8b86271d3314c02"
+      },
+      "acceptance_plan": {
+        "path": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/train10000_acceptance.json",
+        "sha256": "a5b6c07fa74a80dc73bcfa17d30791419929cb7f0c023ae044b2480695fb613c"
+      }
+    },
+    "test_files_read": false
+  }
+}
