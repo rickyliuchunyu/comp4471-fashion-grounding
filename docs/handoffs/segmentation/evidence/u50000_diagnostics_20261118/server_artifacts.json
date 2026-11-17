@@ -1,0 +1,22 @@
+{
+  "per_gt.json": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/per_gt.json",
+    "sha256": "d1e71ea141d4525487cae0f273ad6778f60857c054cf417d4f264e62b98f496d",
+    "bytes": 2009339
+  },
+  "per_detection.json": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/per_detection.json",
+    "sha256": "6d5ed1ad5f9177e2976ce4e6be6bb1056ead9045fb515ba6385042f871617a62",
+    "bytes": 309953
+  },
+  "failure_cases_1.png": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/failure_cases_1.png",
+    "sha256": "9a37170582724ee3250946178f2baa599e1ed4d5e133dc0013f9044136e45199",
+    "bytes": 188138
+  },
+  "failure_cases_2.png": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/failure_cases_2.png",
+    "sha256": "4035857c4d20e1450f1131ad996e6d33205c19f7f44026fa79f820d486f6b8a1",
+    "bytes": 139036
+  }
+}

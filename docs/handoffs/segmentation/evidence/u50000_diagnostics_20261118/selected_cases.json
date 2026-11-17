@@ -1,0 +1,586 @@
+[
+  {
+    "kind": "missing",
+    "annotation_id": 1000003119,
+    "image_id": 1000018539,
+    "category_id": 6,
+    "source_category": "shoe",
+    "area": 1007,
+    "size": "small",
+    "bbox_xywh": [
+      132,
+      927,
+      105,
+      69
+    ],
+    "eval_scaled_bbox_wh": [
+      123.16715542521995,
+      80.93841642228739
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.16356513222331048,
+        "candidate_id": "ap-row-043",
+        "category_id": 6,
+        "score": 0.005705402232706547
+      },
+      "best_other": {
+        "iou": 0.1492094861660079,
+        "candidate_id": "ap-row-082",
+        "category_id": 8,
+        "score": 0.0023917751386761665
+      },
+      "geometry_bucket": "partial_or_mixed_iou_010_050"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.16356513222331048,
+        "candidate_id": "image-1000018539-query-045",
+        "category_id": 6,
+        "score": 0.005705402232706547
+      },
+      "best_other": {
+        "iou": 0.0024707101299115326,
+        "candidate_id": "image-1000018539-query-051",
+        "category_id": 3,
+        "score": 0.0013129751896485686
+      },
+      "geometry_bucket": "partial_or_mixed_iou_010_050"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.1549851924975321,
+        "candidate_id": "image-1000018539-query-070",
+        "category_id": 6,
+        "score": 0.8256937265396118
+      },
+      "best_other": {
+        "iou": 0.002280254777070064,
+        "candidate_id": "image-1000018539-query-058",
+        "category_id": 5,
+        "score": 0.9875648021697998
+      },
+      "geometry_bucket": "partial_or_mixed_iou_010_050"
+    },
+    "matched50": false,
+    "matched75": false,
+    "matched50_candidate_id": null,
+    "matched_extent": null,
+    "matched_boundary_iou_1px": null,
+    "residual_cause": "partial_or_mixed_geometry"
+  },
+  {
+    "kind": "boundary",
+    "annotation_id": 1000002490,
+    "image_id": 1000018023,
+    "category_id": 6,
+    "source_category": "shoe",
+    "area": 973,
+    "size": "small",
+    "bbox_xywh": [
+      240,
+      908,
+      51,
+      89
+    ],
+    "eval_scaled_bbox_wh": [
+      66.3896484375,
+      115.8564453125
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.5043196544276458,
+        "candidate_id": "ap-row-019",
+        "category_id": 6,
+        "score": 0.9769271612167358
+      },
+      "best_other": {
+        "iou": 0.4883088635127787,
+        "candidate_id": "ap-row-079",
+        "category_id": 8,
+        "score": 0.0010738554410636425
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.5043196544276458,
+        "candidate_id": "image-1000018023-query-015",
+        "category_id": 6,
+        "score": 0.9769271016120911
+      },
+      "best_other": {
+        "iou": 0.4883088635127787,
+        "candidate_id": "image-1000018023-query-076",
+        "category_id": 8,
+        "score": 0.0010738554410636425
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.5043196544276458,
+        "candidate_id": "image-1000018023-query-015",
+        "category_id": 6,
+        "score": 0.9769271016120911
+      },
+      "best_other": {
+        "iou": 0.0,
+        "candidate_id": "image-1000018023-query-036",
+        "category_id": 1,
+        "score": 0.9898124933242798
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "matched50": true,
+    "matched75": false,
+    "matched50_candidate_id": "image-1000018023-query-015",
+    "matched_extent": {
+      "iou": 0.5043196544276458,
+      "precision": 0.5151682294539437,
+      "recall": 0.959917780061665,
+      "false_negative_pixels": 39,
+      "false_positive_pixels": 879,
+      "predicted_area": 1813,
+      "gt_area": 973
+    },
+    "matched_boundary_iou_1px": 0.20128824476650564,
+    "residual_cause": "matched50"
+  },
+  {
+    "kind": "missing",
+    "annotation_id": 1000000499,
+    "image_id": 1000015662,
+    "category_id": 7,
+    "source_category": "bag, wallet",
+    "area": 743,
+    "size": "small",
+    "bbox_xywh": [
+      199,
+      207,
+      61,
+      312
+    ],
+    "eval_scaled_bbox_wh": [
+      79.4072265625,
+      406.1484375
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.6745005875440658,
+        "candidate_id": "ap-row-043",
+        "category_id": 7,
+        "score": 0.002067851833999157
+      },
+      "best_other": {
+        "iou": 0.67375,
+        "candidate_id": "ap-row-092",
+        "category_id": 8,
+        "score": 0.0003574777801986784
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.6745005875440658,
+        "candidate_id": "image-1000015662-query-045",
+        "category_id": 7,
+        "score": 0.0020678516011685133
+      },
+      "best_other": {
+        "iou": 0.45376078914919854,
+        "candidate_id": "image-1000015662-query-010",
+        "category_id": 8,
+        "score": 0.0003996869781985879
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.2689393939393939,
+        "candidate_id": "image-1000015662-query-097",
+        "category_id": 7,
+        "score": 0.8257267475128174
+      },
+      "best_other": {
+        "iou": 0.0027567470384945764,
+        "candidate_id": "image-1000015662-query-058",
+        "category_id": 5,
+        "score": 0.9929095506668091
+      },
+      "geometry_bucket": "partial_or_mixed_iou_010_050"
+    },
+    "matched50": false,
+    "matched75": false,
+    "matched50_candidate_id": null,
+    "matched_extent": null,
+    "matched_boundary_iou_1px": null,
+    "residual_cause": "score_filtered"
+  },
+  {
+    "kind": "boundary",
+    "annotation_id": 1000007449,
+    "image_id": 1000011382,
+    "category_id": 7,
+    "source_category": "bag, wallet",
+    "area": 2576,
+    "size": "medium",
+    "bbox_xywh": [
+      333,
+      207,
+      152,
+      201
+    ],
+    "eval_scaled_bbox_wh": [
+      179.08689248895436,
+      236.81885125184095
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.5486953325983095,
+        "candidate_id": "ap-row-026",
+        "category_id": 7,
+        "score": 0.04556456580758095
+      },
+      "best_other": {
+        "iou": 0.07878989361702128,
+        "candidate_id": "ap-row-007",
+        "category_id": 8,
+        "score": 0.004701100755482912
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.5486953325983095,
+        "candidate_id": "image-1000011382-query-027",
+        "category_id": 7,
+        "score": 0.04556456580758095
+      },
+      "best_other": {
+        "iou": 0.07878989361702128,
+        "candidate_id": "image-1000011382-query-006",
+        "category_id": 8,
+        "score": 0.004701100755482912
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.5456224602881419,
+        "candidate_id": "image-1000011382-query-039",
+        "category_id": 7,
+        "score": 0.48066750168800354
+      },
+      "best_other": {
+        "iou": 0.009638834049471606,
+        "candidate_id": "image-1000011382-query-017",
+        "category_id": 1,
+        "score": 0.8544573783874512
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "matched50": true,
+    "matched75": false,
+    "matched50_candidate_id": "image-1000011382-query-039",
+    "matched_extent": {
+      "iou": 0.5456224602881419,
+      "precision": 0.9185323383084577,
+      "recall": 0.5733695652173914,
+      "false_negative_pixels": 1099,
+      "false_positive_pixels": 131,
+      "predicted_area": 1608,
+      "gt_area": 2576
+    },
+    "matched_boundary_iou_1px": 0.0897908979089791,
+    "residual_cause": "matched50"
+  },
+  {
+    "kind": "missing",
+    "annotation_id": 1000003207,
+    "image_id": 1000018669,
+    "category_id": 8,
+    "source_category": "belt",
+    "area": 328,
+    "size": "small",
+    "bbox_xywh": [
+      274,
+      342,
+      13,
+      108
+    ],
+    "eval_scaled_bbox_wh": [
+      15.226939970717424,
+      126.50073206442167
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.031161473087818695,
+        "candidate_id": "ap-row-089",
+        "category_id": 8,
+        "score": 0.0010698068654164672
+      },
+      "best_other": {
+        "iou": 0.006589554854539082,
+        "candidate_id": "ap-row-057",
+        "category_id": 5,
+        "score": 0.9919723868370056
+      },
+      "geometry_bucket": "no_saved_mask_iou_ge_010"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.031161473087818695,
+        "candidate_id": "image-1000018669-query-091",
+        "category_id": 8,
+        "score": 0.0010698068654164672
+      },
+      "best_other": {
+        "iou": 0.012378550074738415,
+        "candidate_id": "image-1000018669-query-037",
+        "category_id": 1,
+        "score": 0.0004319332365412265
+      },
+      "geometry_bucket": "no_saved_mask_iou_ge_010"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.0,
+        "candidate_id": "image-1000018669-query-017",
+        "category_id": 8,
+        "score": 0.9861273765563965
+      },
+      "best_other": {
+        "iou": 0.006589554854539082,
+        "candidate_id": "image-1000018669-query-061",
+        "category_id": 5,
+        "score": 0.9919723868370056
+      },
+      "geometry_bucket": "no_saved_mask_iou_ge_010"
+    },
+    "matched50": false,
+    "matched75": false,
+    "matched50_candidate_id": null,
+    "matched_extent": null,
+    "matched_boundary_iou_1px": null,
+    "residual_cause": "no_saved_mask_iou_ge_010"
+  },
+  {
+    "kind": "boundary",
+    "annotation_id": 1000005209,
+    "image_id": 1000018639,
+    "category_id": 8,
+    "source_category": "headband, head covering, hair accessory",
+    "area": 549,
+    "size": "small",
+    "bbox_xywh": [
+      329,
+      159,
+      75,
+      49
+    ],
+    "eval_scaled_bbox_wh": [
+      87.84773060029283,
+      57.39385065885798
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.5077720207253886,
+        "candidate_id": "ap-row-093",
+        "category_id": 8,
+        "score": 0.9210118651390076
+      },
+      "best_other": {
+        "iou": 0.0,
+        "candidate_id": "ap-row-000",
+        "category_id": 6,
+        "score": 0.010900318622589111
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.5302013422818792,
+        "candidate_id": "image-1000018639-query-030",
+        "category_id": 8,
+        "score": 0.0026421183720231056
+      },
+      "best_other": {
+        "iou": 0.0,
+        "candidate_id": "image-1000018639-query-065",
+        "category_id": 6,
+        "score": 0.9718210101127625
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.5077720207253886,
+        "candidate_id": "image-1000018639-query-092",
+        "category_id": 8,
+        "score": 0.9210118651390076
+      },
+      "best_other": {
+        "iou": 0.0,
+        "candidate_id": "image-1000018639-query-065",
+        "category_id": 6,
+        "score": 0.9718210101127625
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "matched50": true,
+    "matched75": false,
+    "matched50_candidate_id": "image-1000018639-query-092",
+    "matched_extent": {
+      "iou": 0.5077720207253886,
+      "precision": 0.9074074074074074,
+      "recall": 0.5355191256830601,
+      "false_negative_pixels": 255,
+      "false_positive_pixels": 30,
+      "predicted_area": 324,
+      "gt_area": 549
+    },
+    "matched_boundary_iou_1px": 0.30606860158311344,
+    "residual_cause": "matched50"
+  },
+  {
+    "kind": "score_filtered",
+    "annotation_id": 1000002152,
+    "image_id": 1000017610,
+    "category_id": 8,
+    "source_category": "watch",
+    "area": 412,
+    "size": "small",
+    "bbox_xywh": [
+      349,
+      526,
+      25,
+      24
+    ],
+    "eval_scaled_bbox_wh": [
+      29.455081001472756,
+      28.276877761413843
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.8594104308390023,
+        "candidate_id": "ap-row-036",
+        "category_id": 8,
+        "score": 0.0010399760212749243
+      },
+      "best_other": {
+        "iou": 2.895864705200973e-05,
+        "candidate_id": "ap-row-011",
+        "category_id": 1,
+        "score": 0.9933627843856812
+      },
+      "geometry_bucket": "same_iou_ge_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.8594104308390023,
+        "candidate_id": "image-1000017610-query-038",
+        "category_id": 8,
+        "score": 0.0010399760212749243
+      },
+      "best_other": {
+        "iou": 2.895864705200973e-05,
+        "candidate_id": "image-1000017610-query-010",
+        "category_id": 1,
+        "score": 0.9933627843856812
+      },
+      "geometry_bucket": "same_iou_ge_075"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.0,
+        "candidate_id": null,
+        "category_id": null,
+        "score": null
+      },
+      "best_other": {
+        "iou": 2.895864705200973e-05,
+        "candidate_id": "image-1000017610-query-010",
+        "category_id": 1,
+        "score": 0.9933627843856812
+      },
+      "geometry_bucket": "no_saved_mask_iou_ge_010"
+    },
+    "matched50": false,
+    "matched75": false,
+    "matched50_candidate_id": null,
+    "matched_extent": null,
+    "matched_boundary_iou_1px": null,
+    "residual_cause": "score_filtered"
+  },
+  {
+    "kind": "wrong_class_only",
+    "annotation_id": 1000000601,
+    "image_id": 1000015744,
+    "category_id": 6,
+    "source_category": "shoe",
+    "area": 106,
+    "size": "small",
+    "bbox_xywh": [
+      392,
+      779,
+      25,
+      10
+    ],
+    "eval_scaled_bbox_wh": [
+      29.282576866764277,
+      11.71303074670571
+    ],
+    "ap": {
+      "best_same": {
+        "iou": 0.591715976331361,
+        "candidate_id": "ap-row-066",
+        "category_id": 6,
+        "score": 0.0006998792523518205
+      },
+      "best_other": {
+        "iou": 0.591715976331361,
+        "candidate_id": "ap-row-067",
+        "category_id": 8,
+        "score": 0.0007205414585769176
+      },
+      "geometry_bucket": "same_iou_050_075"
+    },
+    "raw": {
+      "best_same": {
+        "iou": 0.40239043824701193,
+        "candidate_id": "image-1000015744-query-071",
+        "category_id": 6,
+        "score": 0.00031650022719986737
+      },
+      "best_other": {
+        "iou": 0.6081081081081081,
+        "candidate_id": "image-1000015744-query-078",
+        "category_id": 8,
+        "score": 0.000594966346397996
+      },
+      "geometry_bucket": "wrong_class_only_iou_ge_050"
+    },
+    "selected": {
+      "best_same": {
+        "iou": 0.3074626865671642,
+        "candidate_id": "image-1000015744-query-065",
+        "category_id": 6,
+        "score": 0.9101529121398926
+      },
+      "best_other": {
+        "iou": 0.0,
+        "candidate_id": "image-1000015744-query-058",
+        "category_id": 2,
+        "score": 0.9892647862434387
+      },
+      "geometry_bucket": "partial_or_mixed_iou_010_050"
+    },
+    "matched50": false,
+    "matched75": false,
+    "matched50_candidate_id": null,
+    "matched_extent": null,
+    "matched_boundary_iou_1px": null,
+    "residual_cause": "wrong_class_only"
+  }
+]
