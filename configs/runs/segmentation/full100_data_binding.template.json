@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "purpose": "full100_data_binding",
+  "train_package": null,
+  "dev_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+  "references": {
+    "freeze": {
+      "path": null,
+      "sha256": null
+    },
+    "acceptance": {
+      "path": null,
+      "sha256": null
+    },
+    "dev_report": {
+      "path": "../../../docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+      "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+    }
+  }
+}
