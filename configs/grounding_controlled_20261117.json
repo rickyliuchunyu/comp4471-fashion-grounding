@@ -1,0 +1,20 @@
+{
+  "run_id": "controlled-20261117-r01",
+  "output": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment",
+  "weak_label_training": true,
+  "seed": 42,
+  "updates": 490,
+  "batch_size": 32,
+  "evaluation_interval": 98,
+  "packages": {
+    "clean1000": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1000_visual_draft_v3",
+    "expanded1149": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1",
+    "dev": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1",
+    "challenge": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1",
+    "test": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1"
+  },
+  "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "old_checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/M1-weak-train-20261112-r01/epoch_05.pt",
+  "predicted_candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-20261115-r01/trial-0.3/candidates_predicted.json"
+}
