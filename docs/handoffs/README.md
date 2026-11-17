@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新省时提案：[现有日志核实与完整数据1–2epoch方案](segmentation/full_data_short_plan_20261117.md)。233小时对应示例4万图100epoch，算术正确但预算过重；改为C5k20k model-only热启动，先1epoch、收益过线才第2epoch。4万图示例含评价约2.43–2.88小时/最多4.87–5.76小时；拟每轮3小时、总6小时硬限。完整包未发布，新短方案执行接线待实现，本轮未启动训练或重复smoke。
+
 当前接续：[完整数据发布缺口与接收准备](segmentation/full_fashionpedia_intake_20261117.md)：已对齐主对话C5k最终结果与侧对话100epoch入口；完整train仍未发布，不重跑smoke、不启动训练。下方旧运行/准备描述为历史快照。
 
 最新状态：[按用户要求停止5k/10k](segmentation/expansion_user_stop_20261117.md)：15:08已停止D10k及整组控制器、GPU和锁释放。C5k已完成20k，组内dev AP64.695685；产物保留，无自动恢复，完整数据100epoch未启动。下文运行描述是此前快照。

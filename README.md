@@ -1,5 +1,7 @@
 # 自然语言引导的服饰实例选择与分割
 
+最新省时提案：[现有日志核实与完整数据1–2epoch方案](docs/handoffs/segmentation/full_data_short_plan_20261117.md)。233小时对应示例4万图100epoch，算术正确但预算过重；改为C5k20k model-only热启动，先1epoch、收益过线才第2epoch。4万图示例含评价约2.43–2.88小时/最多4.87–5.76小时；拟每轮3小时、总6小时硬限。完整包未发布，新短方案执行接线待实现，本轮未启动训练或重复smoke。
+
 当前接续：[完整Fashionpedia发布缺口与分割接收准备](docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)。C5k20k完成，AP64.6957；D10k159步按用户要求中断。独立100epoch入口已实现、21项CPU案例复用，真实完整包/增量接收/冻结待补，暂不启动新训练。以下早期结果段落保留为历史，当前状态以[状态表](docs/status.md)为准。
 
 **图片 + 一句中英文描述 → 描述所指的单个整件服饰的 mask 和 bounding box。**

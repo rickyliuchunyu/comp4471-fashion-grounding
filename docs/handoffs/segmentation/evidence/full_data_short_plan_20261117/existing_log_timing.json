@@ -1,0 +1,29 @@
+{
+  "scope": "read existing numeric logs only; no model import, images, predictions, train or inference",
+  "resource": {
+    "checked_at": "2026-11-17T07:37:41.023131+00:00",
+    "disk_free_bytes": 161685753856,
+    "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+    "compute_processes": "",
+    "shared_lock_free": true,
+    "active_coordination_records": []
+  },
+  "C5k": {
+    "metrics_sha256": "a90e722f54fe8a527d59aee8691d11f5cb3ddf5ff4df1c59ab73f93561a93d17",
+    "successful_rows": 20000,
+    "image_presentations": 40000,
+    "amp_retries": 1,
+    "update_seconds_sum": 8316.431125734001,
+    "update_seconds_mean": 0.4158215562867001,
+    "update_seconds_median": 0.4131331890821457,
+    "update_seconds_p95_nearest_rank": 0.4661129005253315,
+    "train_report_elapsed_seconds": 8400.824364278466,
+    "unattributed_outside_update_timers_seconds": 84.39323854446411,
+    "checkpoint_sizes_bytes": {
+      "checkpoint_005000.pth": 528464397,
+      "checkpoint_010000.pth": 528464397,
+      "checkpoint_015000.pth": 528464397,
+      "checkpoint_020000.pth": 528464397
+    }
+  }
+}

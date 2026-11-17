@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "purpose": "full_fashionpedia_short_training_proposal",
+  "status": "proposal_only_not_executable",
+  "execution_enabled": false,
+  "training_authorized": false,
+  "runtime_ready": false,
+  "supersedes_recommended_plan": "full100_train_recipe.json (historical, not deleted)",
+  "model": "Mask2Former-R50",
+  "dataset_scope": "all accepted eligible official Fashionpedia train, eight classes",
+  "train_package": null,
+  "actual_train_images": null,
+  "training_data_identity": null,
+  "protected_dev": {
+    "images": 250,
+    "instances": 1008,
+    "version": "fp_dev250_v1"
+  },
+  "initialization": {
+    "mode": "weights_only_new_recipe",
+    "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "load_model_strict": true,
+    "retain_eight_class_head": true,
+    "reset": [
+      "optimizer",
+      "scheduler",
+      "sampler",
+      "rng_seed42",
+      "scaler_scale1",
+      "amp_attempt_counter"
+    ],
+    "parent_update": 20000,
+    "local_update_starts_at": 0,
+    "not_exact_resume": true
+  },
+  "epochs": {
+    "primary": 1,
+    "maximum": 2,
+    "second_conditional": true,
+    "update_rule": "ceil(e*N/2), continuous shuffle; at most one rounded extra exposure"
+  },
+  "recipe": {
+    "seed": 42,
+    "image_size": 768,
+    "min_scale": 0.5,
+    "max_scale": 2,
+    "random_flip": "horizontal",
+    "microbatch_images": 2,
+    "accumulation_steps": 1,
+    "effective_batch_images": 2,
+    "learning_rate": 0.00001,
+    "backbone_lr_multiplier": 0.1,
+    "weight_decay": 0.05,
+    "weight_decay_norm": 0,
+    "weight_decay_embed": 0,
+    "warmup_updates": 200,
+    "warmup_start_factor": 0.1,
+    "lr_milestone_epochs": [
+      1
+    ],
+    "lr_decay": 0.1,
+    "amp": true,
+    "amp_initial_scale": 1,
+    "gradient_clip_norm": 0.01,
+    "checkpoint_every_updates": 5000,
+    "checkpoint_at_each_epoch": true,
+    "amp_recovery": {
+      "max_retries_per_update": 4,
+      "max_overflow_events": 16,
+      "min_loss_scale": 0.0001
+    }
+  },
+  "evaluation": {
+    "after_epochs": [
+      1,
+      2
+    ],
+    "protocol": "coco-segm-iou50-95-maxDets100-upstream-instance-v1",
+    "precision": "FP32",
+    "short_edge": 800,
+    "max_size": 1333,
+    "complete_dev_required": true,
+    "baseline_reused": true,
+    "baseline_AP": 64.69568513541032,
+    "baseline_AP_small": 11.04825323386381,
+    "baseline_AP75": 68.4916340793524,
+    "baseline_weak_macro_AP": 48.30311171073026,
+    "weak_categories": [
+      6,
+      7,
+      8
+    ],
+    "selection": "highest complete dev AP including unchanged baseline; ties prefer baseline then earlier epoch",
+    "cache_predictions": true
+  },
+  "continuation_gate": {
+    "all_required": [
+      "epoch1 evaluation complete with250 images1008GT and0 errors",
+      "AP75 >= baseline_AP75 -0.5",
+      "sufficient time for epoch2 under original absolute deadline",
+      "one benefit condition"
+    ],
+    "benefit_conditions_any": [
+      "AP >= baseline_AP+0.3",
+      "AP >= baseline_AP-0.2 AND (AP_small >= baseline_AP_small+1.0 OR weak_macro_AP >= baseline_weak_macro_AP+1.0)"
+    ],
+    "interpretation": "preregistered practical screening heuristic, not significance test or guarantee"
+  },
+  "budget": {
+    "per_epoch_including_eval_max_seconds": 10800,
+    "total_run_max_seconds": 21600,
+    "deadline_begins": "after acquiring shared GPU slot, before metadata/model load",
+    "include": [
+      "metadata_binding",
+      "initialization_or_restore",
+      "training",
+      "checkpoints",
+      "evaluation",
+      "selection"
+    ],
+    "per_epoch_overhead_allowance_seconds": 360,
+    "planning_seconds_per_image_range": [
+      0.21,
+      0.25
+    ],
+    "prelaunch_upper_estimate_must_fit": true,
+    "range_not_confidence_interval": true,
+    "automatic_restart": false,
+    "automatic_epoch_extension": false,
+    "resume_never_resets_absolute_deadline": true
+  },
+  "stop_conditions": [
+    "end of epoch1 if continuation gate not met",
+    "end of epoch2 in all cases",
+    "stage or global hard deadline reached, even if epoch incomplete",
+    "unrecoverable nonfinite loss/gradient, OOM, failed checkpoint or incomplete evaluation",
+    "input/source identity drift or shared GPU conflict"
+  ],
+  "not_implemented_yet": [
+    "new short-plan contract instead of fixed100epoch/fullbatch16 contract",
+    "strict model-only warmstart lineage for changed training data",
+    "hard epoch/global deadline and epoch1 continuation decision in new orchestrator"
+  ],
+  "scope_exclusions": [
+    "no D10k restart",
+    "no new training or inference this turn",
+    "no ranking work",
+    "no test data use",
+    "no repeated smoke or historical test suite"
+  ]
+}

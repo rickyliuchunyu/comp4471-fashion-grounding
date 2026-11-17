@@ -1,0 +1,262 @@
+{
+  "purpose": "existing_log_cost_analysis_not_benchmark",
+  "source_results_commit": "9130810988ecbc44d5c83cbad977817bc3d86c4e",
+  "input_hashes": {
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/train/train_report.json": "ae41214d3a50b5463d2fd6c2d7f74cb583de5b1fe02c148d693f6caca3f3ab7c",
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/train/training_summary.json": "a8257b5c9559cc9009979420ecbe27d598187b7b3bd9c35436da9d4e32aa66ba",
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/phases.json": "a725bf1f999a1a5874b826669a5eabc124c4691dc1b653323e7499d61c77b945",
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+    "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/train_report.json": "d774fcf4185a2ea7d0162600c98704c3edd80ee9e7ba8d0218a1165a37cde663",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/train/train_report.json": "be763cdc9215788cc93dd71617a35649f90712c6a89f54792675758b37930e0e",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_006000/evaluation_report.json": "4507912b7bf49beb32f225839bc7e8f65b9599253510cb42df399dacc079cc94",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_008000/evaluation_report.json": "7c955e7a82984e85e0becaaf13b123873a5fba8117efc20f64ceb8cd99b1cc3b",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_010000/evaluation_report.json": "d4b9c8dfbfcfab70c4869d16f0c5d1f9d8c2a3df6576b7537c2964e01086dd46",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_012000/evaluation_report.json": "a6ba61846ac8aaf9ffd6a60d7883482a6f794d1d891b9a84117aa34d9416f1f1",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_014000/evaluation_report.json": "f7c0510b3912d2702cb44c94bb6107877986419ef767868a28fb90d4dbda67e3",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_016000/evaluation_report.json": "4855afd1808c2c915aa1707783e82c5c2e4de778884e15d8c2f0e14a3d7ae309",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1"
+  },
+  "raw_log_timing": {
+    "metrics_sha256": "a90e722f54fe8a527d59aee8691d11f5cb3ddf5ff4df1c59ab73f93561a93d17",
+    "successful_rows": 20000,
+    "image_presentations": 40000,
+    "amp_retries": 1,
+    "update_seconds_sum": 8316.431125734001,
+    "update_seconds_mean": 0.4158215562867001,
+    "update_seconds_median": 0.4131331890821457,
+    "update_seconds_p95_nearest_rank": 0.4661129005253315,
+    "train_report_elapsed_seconds": 8400.824364278466,
+    "unattributed_outside_update_timers_seconds": 84.39323854446411,
+    "checkpoint_sizes_bytes": {
+      "checkpoint_005000.pth": 528464397,
+      "checkpoint_010000.pth": 528464397,
+      "checkpoint_015000.pth": 528464397,
+      "checkpoint_020000.pth": 528464397
+    }
+  },
+  "training_time_rates": [
+    {
+      "run": "C5k20k",
+      "elapsed_seconds": 8400.824364278466,
+      "successful_updates": 20000,
+      "image_presentations": 40000,
+      "seconds_per_image": 0.21002060910696163
+    },
+    {
+      "run": "B18k_to20k",
+      "elapsed_seconds": 828.6599835380912,
+      "successful_updates": 2000,
+      "image_presentations": 4000,
+      "seconds_per_image": 0.2071649958845228
+    },
+    {
+      "run": "A18k_to20k",
+      "elapsed_seconds": 872.7117969170213,
+      "successful_updates": 2000,
+      "image_presentations": 4000,
+      "seconds_per_image": 0.21817794922925532
+    }
+  ],
+  "hundred_epoch_illustration": {
+    "actual_full_N": null,
+    "illustrative_N": 40000,
+    "image_presentations": 4000000,
+    "old_average_seconds_per_image": 0.21002060910696163,
+    "hours_including_prorated_old_fixed_overheads": 233.35623234106848,
+    "hours_from_summed_update_timers_only": 231.01197571483337,
+    "sequential_microbatch_forwards": 2000000,
+    "accumulation8_optimizer_updates": 250000,
+    "evaluation_50_points_proxy_hours": 1.8528356599466254,
+    "warning": "Not actual N or measured accumulation8 throughput.50 evaluation times are approximate; report times within each evaluation process are cumulative."
+  },
+  "phase_times_seconds": {
+    "train_20000": 8403.229069475085,
+    "full_dev_10000_20000": 266.80833503231406,
+    "select_and_compare": 2.0491915605962276
+  },
+  "update_timers_share_of_training_report": 0.989954171771128,
+  "C5k_loss_windows": {
+    "first1000": 30.22058084799722,
+    "updates14001_15000": 10.749960165782948,
+    "last1000": 10.350174871709635
+  },
+  "historical_S0_dev_curve": [
+    {
+      "update": 6000,
+      "equivalent_5k_epochs": 2.4,
+      "AP": 52.508257461701746,
+      "AP_small": 8.830061941998226
+    },
+    {
+      "update": 8000,
+      "equivalent_5k_epochs": 3.2,
+      "AP": 56.58071038291222,
+      "AP_small": 8.107303973589508
+    },
+    {
+      "update": 10000,
+      "equivalent_5k_epochs": 4.0,
+      "AP": 55.9521776148567,
+      "AP_small": 8.5943296338101
+    },
+    {
+      "update": 12000,
+      "equivalent_5k_epochs": 4.8,
+      "AP": 57.018114346252524,
+      "AP_small": 7.269056446913112
+    },
+    {
+      "update": 14000,
+      "equivalent_5k_epochs": 5.6,
+      "AP": 63.053690736509,
+      "AP_small": 10.171980297603074
+    },
+    {
+      "update": 16000,
+      "equivalent_5k_epochs": 6.4,
+      "AP": 63.366813678680025,
+      "AP_small": 10.766518446722767
+    },
+    {
+      "update": 18000,
+      "equivalent_5k_epochs": 7.2,
+      "AP": 63.57916031199592,
+      "AP_small": 10.738919371879978
+    },
+    {
+      "update": 20000,
+      "equivalent_5k_epochs": 8.0,
+      "AP": 63.55953052351325,
+      "AP_small": 10.664106341649108
+    }
+  ],
+  "baseline_metrics": {
+    "AP": 64.69568513541032,
+    "AP50": 80.38969813728531,
+    "AP75": 68.4916340793524,
+    "AP_small": 11.04825323386381,
+    "AP_medium": 31.309041092388068,
+    "AP_large": 73.73005880531672,
+    "per_category_AP": {
+      "1": 70.11220258780862,
+      "2": 81.76787825548602,
+      "3": 67.52478392915987,
+      "4": 69.37557600690093,
+      "5": 83.8757051717362,
+      "6": 53.7158692902632,
+      "7": 52.27886212324682,
+      "8": 38.91460371868079
+    }
+  },
+  "weak_category_macro_AP": 48.30311171073026,
+  "new_recipe_budget_assumptions": {
+    "seconds_per_image_range": [
+      0.21,
+      0.25
+    ],
+    "per_epoch_non_training_allowance_seconds": 360,
+    "range_is_planning_allowance_not_confidence_interval": true,
+    "primary_epochs": 1,
+    "maximum_epochs": 2,
+    "first_stage_hard_seconds": 10800,
+    "overall_hard_seconds": 21600,
+    "max_N_fitting_upper_planning_bound": 41760
+  },
+  "examples": [
+    {
+      "illustrative_images": 30000,
+      "epochs": 1,
+      "updates": 15000,
+      "image_presentations": 30000,
+      "expected_hours_range": [
+        1.85,
+        2.183333333333333
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 30000,
+      "epochs": 2,
+      "updates": 30000,
+      "image_presentations": 60000,
+      "expected_hours_range": [
+        3.7,
+        4.366666666666666
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 35000,
+      "epochs": 1,
+      "updates": 17500,
+      "image_presentations": 35000,
+      "expected_hours_range": [
+        2.1416666666666666,
+        2.5305555555555554
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 35000,
+      "epochs": 2,
+      "updates": 35000,
+      "image_presentations": 70000,
+      "expected_hours_range": [
+        4.283333333333333,
+        5.061111111111111
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 40000,
+      "epochs": 1,
+      "updates": 20000,
+      "image_presentations": 40000,
+      "expected_hours_range": [
+        2.433333333333333,
+        2.8777777777777778
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 40000,
+      "epochs": 2,
+      "updates": 40000,
+      "image_presentations": 80000,
+      "expected_hours_range": [
+        4.866666666666666,
+        5.7555555555555555
+      ],
+      "fits_upper_estimate_within_stage_caps": true
+    },
+    {
+      "illustrative_images": 45000,
+      "epochs": 1,
+      "updates": 22500,
+      "image_presentations": 45000,
+      "expected_hours_range": [
+        2.725,
+        3.225
+      ],
+      "fits_upper_estimate_within_stage_caps": false
+    },
+    {
+      "illustrative_images": 45000,
+      "epochs": 2,
+      "updates": 45000,
+      "image_presentations": 90000,
+      "expected_hours_range": [
+        5.45,
+        6.45
+      ],
+      "fits_upper_estimate_within_stage_caps": false
+    }
+  ],
+  "new_compute": {
+    "optimizer_updates": 0,
+    "inference_images": 0,
+    "smoke_runs": 0,
+    "model_loads": 0
+  }
+}

@@ -1,5 +1,7 @@
 # 完整 Fashionpedia / Mask2Former-R50：100-epoch 准备
 
+最新预算修订：[现有日志核实与完整数据短方案](full_data_short_plan_20261117.md)取代100epoch作为推荐下一阶段：复用C5k20k，先1epoch，达标才第2epoch，拟定每轮3小时/总6小时。只是提案，短方案契约/热启动/硬截止接线尚未实现，未启动训练。以下100epoch为历史准备，不能直接按新计划执行。
+
 2026-11-17接续说明：本页是历史准备方案，执行接线随后已在[full100 runtime](full100_runtime_20261117.md)实现；原5k/10k已按用户要求停止，不能按本页历史文字继续运行。当前完整包缺口及增量接收范围见[接收准备](full_fashionpedia_intake_20261117.md)，未启动100epoch。
 
 2026-11-17，lcy / segmentation。状态：**preparation_checked / not_executable**。
