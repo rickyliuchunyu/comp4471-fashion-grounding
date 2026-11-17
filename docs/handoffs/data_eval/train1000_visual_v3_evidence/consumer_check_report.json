@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "coco_images_loaded": 1000,
+  "source_masks_pixel_identical": 4784,
+  "candidate_crops_checked": 4784,
+  "phash_method": "32x32 grayscale DCT, top-left 8x8 excluding DC, median, Hamming <=6",
+  "near_duplicate_pairs_within_pilot": [
+    {
+      "image_ids": [
+        29246,
+        31540
+      ],
+      "phash_distance": 6
+    }
+  ],
+  "limitations": [
+    "CPU file/crop checks only; no Detectron2/SigLIP model run or teammate acceptance",
+    "pHash is a candidate finder, not proof of no duplicates; no cross-split/full-dataset duplicate audit",
+    "This check does not perform human review; consult queries_accepted.jsonl and review_release.json when present"
+  ]
+}

@@ -10,13 +10,14 @@ from fashion_grounding.data.schema import read_json, sha256, validate_package, r
 
 # Audit vocabulary only: never used by B0/inference or to rewrite training labels.
 FEATURES = {
+ "beige": r"米色|象牙色|\bbeige\b|\bivory\b",
  "black": r"黑|\bblack\b", "white": r"白|\bwhite\b", "gray": r"灰|\bgr[ae]y\b",
  "blue": r"蓝|\bblue\b", "red": r"红|\bred\b", "green": r"绿|\bgreen\b",
  "pink": r"粉|\bpink\b", "purple": r"紫|\bpurple\b", "orange": r"橙|\borange\b",
  "yellow": r"黄|\byellow\b", "brown": r"棕|褐|\bbrown\b", "gold": r"金色|金框|\bgold\b",
  "silver": r"银|\bsilver\b", "light": r"浅|\blight(?:-colored)?\b",
- "dark": r"深|\bdark\b", "multicolor": r"彩色|\bmulticolou?red\b",
- "left": r"左|\bleft\b", "right": r"右|\bright\b", "middle": r"中间|\bmiddle\b",
+ "dark": r"深|\bdark\b", "multicolor": r"多色|彩色|\bmulticolou?red\b",
+ "left": r"左|\bleft\b", "right": r"右|\bright\b", "middle": r"中央|中间|\bmiddle\b",
  "lower": r"下方|\blower\b", "stripe": r"条纹|条的|\bstriped\b",
  "check": r"格纹|格子|\bchecked\b|\bplaid\b", "dots": r"波点|圆点|\bdots?\b|\bdotted\b",
  "floral": r"花卉|花朵|\bfloral\b", "pattern": r"花纹|图案|印花|\bpatterned\b|\bpatterns\b|\bprinted\b",

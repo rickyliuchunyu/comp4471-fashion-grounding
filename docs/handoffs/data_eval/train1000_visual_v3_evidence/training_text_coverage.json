@@ -1,0 +1,2737 @@
+{
+  "train_records": 2998,
+  "train_semantic_groups": 1499,
+  "train_images": 999,
+  "dev_records": 660,
+  "dev_semantic_groups": 330,
+  "features": {
+    "beige": {
+      "train": {
+        "semantic_groups": 4,
+        "images": 3,
+        "by_category": {
+          "3": 1,
+          "4": 1,
+          "5": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "1": 1,
+          "5": 1,
+          "4": 1
+        }
+      }
+    },
+    "black": {
+      "train": {
+        "semantic_groups": 712,
+        "images": 531,
+        "by_category": {
+          "4": 109,
+          "7": 32,
+          "8": 62,
+          "2": 181,
+          "3": 55,
+          "1": 79,
+          "6": 143,
+          "5": 51
+        }
+      },
+      "dev": {
+        "semantic_groups": 89,
+        "images": 75,
+        "by_category": {
+          "2": 15,
+          "4": 7,
+          "8": 8,
+          "5": 28,
+          "3": 6,
+          "6": 6,
+          "7": 4,
+          "1": 15
+        }
+      }
+    },
+    "white": {
+      "train": {
+        "semantic_groups": 157,
+        "images": 145,
+        "by_category": {
+          "1": 77,
+          "4": 14,
+          "5": 23,
+          "7": 6,
+          "8": 10,
+          "2": 13,
+          "3": 7,
+          "6": 7
+        }
+      },
+      "dev": {
+        "semantic_groups": 45,
+        "images": 44,
+        "by_category": {
+          "4": 3,
+          "2": 4,
+          "3": 3,
+          "5": 16,
+          "1": 14,
+          "8": 3,
+          "7": 2
+        }
+      }
+    },
+    "gray": {
+      "train": {
+        "semantic_groups": 130,
+        "images": 116,
+        "by_category": {
+          "1": 44,
+          "8": 11,
+          "2": 26,
+          "3": 11,
+          "7": 5,
+          "4": 19,
+          "5": 5,
+          "6": 9
+        }
+      },
+      "dev": {
+        "semantic_groups": 17,
+        "images": 17,
+        "by_category": {
+          "1": 8,
+          "5": 4,
+          "4": 3,
+          "7": 1,
+          "2": 1
+        }
+      }
+    },
+    "blue": {
+      "train": {
+        "semantic_groups": 103,
+        "images": 96,
+        "by_category": {
+          "1": 24,
+          "3": 14,
+          "5": 19,
+          "8": 6,
+          "7": 2,
+          "2": 22,
+          "4": 14,
+          "6": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 32,
+        "images": 31,
+        "by_category": {
+          "1": 8,
+          "2": 9,
+          "4": 4,
+          "5": 10,
+          "3": 1
+        }
+      }
+    },
+    "red": {
+      "train": {
+        "semantic_groups": 54,
+        "images": 48,
+        "by_category": {
+          "4": 10,
+          "7": 6,
+          "3": 10,
+          "1": 13,
+          "5": 4,
+          "6": 6,
+          "8": 4,
+          "2": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 33,
+        "images": 29,
+        "by_category": {
+          "5": 9,
+          "8": 10,
+          "2": 3,
+          "1": 3,
+          "3": 3,
+          "7": 3,
+          "4": 2
+        }
+      }
+    },
+    "green": {
+      "train": {
+        "semantic_groups": 23,
+        "images": 21,
+        "by_category": {
+          "7": 1,
+          "2": 3,
+          "1": 7,
+          "5": 6,
+          "8": 2,
+          "4": 3,
+          "3": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 11,
+        "images": 11,
+        "by_category": {
+          "5": 5,
+          "1": 2,
+          "7": 2,
+          "4": 2
+        }
+      }
+    },
+    "pink": {
+      "train": {
+        "semantic_groups": 15,
+        "images": 15,
+        "by_category": {
+          "1": 6,
+          "5": 3,
+          "4": 2,
+          "3": 2,
+          "8": 1,
+          "6": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 11,
+        "images": 11,
+        "by_category": {
+          "5": 4,
+          "1": 5,
+          "7": 1,
+          "4": 1
+        }
+      }
+    },
+    "purple": {
+      "train": {
+        "semantic_groups": 8,
+        "images": 8,
+        "by_category": {
+          "5": 2,
+          "1": 4,
+          "8": 1,
+          "4": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "5": 4,
+          "8": 1,
+          "1": 1,
+          "3": 1
+        }
+      }
+    },
+    "orange": {
+      "train": {
+        "semantic_groups": 6,
+        "images": 5,
+        "by_category": {
+          "3": 2,
+          "1": 2,
+          "5": 1,
+          "4": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "3": 1,
+          "5": 5,
+          "1": 1
+        }
+      }
+    },
+    "yellow": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "5": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "8": 1,
+          "7": 1,
+          "2": 1,
+          "1": 3,
+          "5": 1
+        }
+      }
+    },
+    "brown": {
+      "train": {
+        "semantic_groups": 5,
+        "images": 5,
+        "by_category": {
+          "3": 1,
+          "1": 2,
+          "4": 1,
+          "5": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 13,
+        "images": 13,
+        "by_category": {
+          "5": 2,
+          "7": 2,
+          "4": 3,
+          "3": 1,
+          "8": 4,
+          "2": 1
+        }
+      }
+    },
+    "gold": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "5": 1,
+          "7": 1,
+          "8": 1
+        }
+      }
+    },
+    "silver": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "8": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 2,
+        "images": 2,
+        "by_category": {
+          "5": 1,
+          "4": 1
+        }
+      }
+    },
+    "light": {
+      "train": {
+        "semantic_groups": 33,
+        "images": 33,
+        "by_category": {
+          "1": 10,
+          "8": 4,
+          "3": 4,
+          "5": 10,
+          "4": 3,
+          "7": 1,
+          "6": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 36,
+        "images": 35,
+        "by_category": {
+          "1": 11,
+          "2": 3,
+          "5": 11,
+          "4": 4,
+          "3": 2,
+          "8": 2,
+          "7": 3
+        }
+      }
+    },
+    "dark": {
+      "train": {
+        "semantic_groups": 23,
+        "images": 22,
+        "by_category": {
+          "1": 9,
+          "3": 4,
+          "4": 4,
+          "2": 5,
+          "5": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 36,
+        "images": 35,
+        "by_category": {
+          "5": 8,
+          "3": 3,
+          "4": 8,
+          "2": 2,
+          "7": 3,
+          "8": 8,
+          "1": 4
+        }
+      }
+    },
+    "multicolor": {
+      "train": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "3": 1,
+          "1": 2,
+          "5": 4
+        }
+      },
+      "dev": {
+        "semantic_groups": 9,
+        "images": 9,
+        "by_category": {
+          "7": 2,
+          "3": 1,
+          "5": 3,
+          "1": 1,
+          "2": 1,
+          "8": 1
+        }
+      }
+    },
+    "left": {
+      "train": {
+        "semantic_groups": 126,
+        "images": 115,
+        "by_category": {
+          "6": 87,
+          "2": 12,
+          "1": 5,
+          "7": 9,
+          "4": 12,
+          "8": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 8,
+        "images": 8,
+        "by_category": {
+          "7": 2,
+          "6": 6
+        }
+      }
+    },
+    "right": {
+      "train": {
+        "semantic_groups": 95,
+        "images": 94,
+        "by_category": {
+          "6": 82,
+          "7": 10,
+          "2": 2,
+          "1": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 6,
+        "by_category": {
+          "7": 1,
+          "6": 4,
+          "3": 1,
+          "1": 1
+        }
+      }
+    },
+    "middle": {
+      "train": {
+        "semantic_groups": 6,
+        "images": 4,
+        "by_category": {
+          "3": 2,
+          "1": 4
+        }
+      },
+      "dev": {
+        "semantic_groups": 2,
+        "images": 2,
+        "by_category": {
+          "5": 1,
+          "8": 1
+        }
+      }
+    },
+    "lower": {
+      "train": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "6": 3
+        }
+      },
+      "dev": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "5": 1
+        }
+      }
+    },
+    "stripe": {
+      "train": {
+        "semantic_groups": 81,
+        "images": 75,
+        "by_category": {
+          "4": 12,
+          "5": 17,
+          "3": 13,
+          "1": 29,
+          "2": 10
+        }
+      },
+      "dev": {
+        "semantic_groups": 22,
+        "images": 20,
+        "by_category": {
+          "3": 1,
+          "1": 13,
+          "2": 1,
+          "4": 1,
+          "5": 5,
+          "7": 1
+        }
+      }
+    },
+    "check": {
+      "train": {
+        "semantic_groups": 71,
+        "images": 64,
+        "by_category": {
+          "5": 7,
+          "2": 14,
+          "3": 9,
+          "1": 25,
+          "4": 16
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "1": 3,
+          "3": 1,
+          "5": 2,
+          "8": 1
+        }
+      }
+    },
+    "dots": {
+      "train": {
+        "semantic_groups": 21,
+        "images": 21,
+        "by_category": {
+          "2": 3,
+          "1": 8,
+          "5": 5,
+          "3": 5
+        }
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "3": 2,
+          "2": 1
+        }
+      }
+    },
+    "floral": {
+      "train": {
+        "semantic_groups": 76,
+        "images": 70,
+        "by_category": {
+          "4": 4,
+          "3": 25,
+          "1": 13,
+          "2": 9,
+          "5": 25
+        }
+      },
+      "dev": {
+        "semantic_groups": 6,
+        "images": 6,
+        "by_category": {
+          "5": 3,
+          "1": 1,
+          "8": 2
+        }
+      }
+    },
+    "pattern": {
+      "train": {
+        "semantic_groups": 102,
+        "images": 95,
+        "by_category": {
+          "4": 5,
+          "5": 36,
+          "3": 28,
+          "1": 22,
+          "2": 11
+        }
+      },
+      "dev": {
+        "semantic_groups": 39,
+        "images": 39,
+        "by_category": {
+          "5": 23,
+          "2": 2,
+          "1": 7,
+          "3": 2,
+          "8": 1,
+          "4": 3,
+          "7": 1
+        }
+      }
+    },
+    "leopard": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "8": 2,
+          "7": 1
+        }
+      }
+    },
+    "camouflage": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "3": 1
+        }
+      }
+    },
+    "denim": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 8,
+        "images": 8,
+        "by_category": {
+          "2": 8
+        }
+      }
+    },
+    "hooded": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 3,
+          "4": 1
+        }
+      }
+    },
+    "long_sleeve": {
+      "train": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 2,
+          "5": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 20,
+        "images": 20,
+        "by_category": {
+          "1": 7,
+          "5": 9,
+          "4": 4
+        }
+      }
+    },
+    "short_sleeve": {
+      "train": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 4
+        }
+      },
+      "dev": {
+        "semantic_groups": 16,
+        "images": 16,
+        "by_category": {
+          "1": 9,
+          "5": 7
+        }
+      }
+    },
+    "sleeveless": {
+      "train": {
+        "semantic_groups": 5,
+        "images": 5,
+        "by_category": {
+          "1": 3,
+          "5": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 23,
+        "images": 23,
+        "by_category": {
+          "1": 12,
+          "5": 10,
+          "4": 1
+        }
+      }
+    },
+    "strapless": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "5": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 5,
+        "images": 5,
+        "by_category": {
+          "5": 3,
+          "1": 2
+        }
+      }
+    },
+    "cropped": {
+      "train": {
+        "semantic_groups": 2,
+        "images": 2,
+        "by_category": {
+          "1": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 2,
+          "4": 2
+        }
+      }
+    }
+  },
+  "attention": [
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00001",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": [
+        "multicolor"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00011",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "right"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00012",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00025",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00026",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00037",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00042",
+      "missing_train_text_features": [
+        "hooded"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "hooded"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00044",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00051",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00055",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "middle"
+      ],
+      "missing_in_target_category": [
+        "middle"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00056",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00058",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00060",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "light"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00065",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00082",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown",
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00088",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00089",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00090",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00096",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00104",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00107",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "cropped"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00108",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00111",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "strapless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00112",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00114",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00118",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00120",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00121",
+      "missing_train_text_features": [
+        "gold"
+      ],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": [
+        "gold"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00123",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00124",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00129",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "lower"
+      ],
+      "missing_in_target_category": [
+        "lower"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00130",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00135",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00137",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00138",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00141",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "beige"
+      ],
+      "missing_in_target_category": [
+        "beige"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00143",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00145",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0001",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "beige"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0007",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor",
+        "strapless"
+      ],
+      "missing_in_target_category": [
+        "strapless"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0009",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0010",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0011",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "beige"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0014",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0025",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0027",
+      "missing_train_text_features": [
+        "leopard"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "leopard"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0028",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0029",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0038",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0042",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0044",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": [
+        "multicolor"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0045",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": [
+        "long_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0048",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0050",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "light"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0052",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0057",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0058",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange",
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0059",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0060",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "strapless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0064",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "middle"
+      ],
+      "missing_in_target_category": [
+        "middle"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0067",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0068",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0071",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0073",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "strapless"
+      ],
+      "missing_in_target_category": [
+        "strapless"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0074",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "cropped",
+        "long_sleeve"
+      ],
+      "missing_in_target_category": [
+        "cropped",
+        "long_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0076",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0079",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "floral"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0080",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0081",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0085",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0088",
+      "missing_train_text_features": [
+        "camouflage"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "camouflage"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0089",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "silver"
+      ],
+      "missing_in_target_category": [
+        "silver"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0091",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0093",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "check"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0094",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown",
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "brown",
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0095",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0097",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown",
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0101",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0102",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0103",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0110",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0112",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0113",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0114",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0115",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0117",
+      "missing_train_text_features": [
+        "leopard"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "leopard"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0118",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0121",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0123",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": [
+        "multicolor",
+        "pattern"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0126",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0127",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0128",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0129",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "silver"
+      ],
+      "missing_in_target_category": [
+        "silver"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0131",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0133",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "pink"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0135",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0138",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0140",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0142",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0145",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "multicolor"
+      ],
+      "missing_in_target_category": [
+        "multicolor",
+        "stripe"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0147",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple"
+      ],
+      "missing_in_target_category": [
+        "purple"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0148",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0150",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0153",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0154",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0158",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0160",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0161",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "yellow"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0163",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "short_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0164",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0168",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0170",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": [
+        "sleeveless"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0174",
+      "missing_train_text_features": [
+        "hooded"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "hooded"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0177",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": [
+        "long_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0178",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0179",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "purple",
+        "short_sleeve"
+      ],
+      "missing_in_target_category": [
+        "short_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0180",
+      "missing_train_text_features": [
+        "hooded"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "hooded"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0187",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "cropped"
+      ],
+      "missing_in_target_category": [
+        "cropped"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0190",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0194",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0196",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0201",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange",
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0205",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0209",
+      "missing_train_text_features": [
+        "gold"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "gold"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0212",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim",
+        "light"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0217",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless",
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0219",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark",
+        "pattern"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0222",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "orange"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0223",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0224",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0226",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "strapless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0228",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless",
+        "yellow"
+      ],
+      "missing_in_target_category": [
+        "yellow"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0230",
+      "missing_train_text_features": [
+        "gold"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "gold"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0231",
+      "missing_train_text_features": [
+        "denim"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "denim"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0232",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "dark"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0234",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "floral"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0237",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": [
+        "long_sleeve"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0239",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0241",
+      "missing_train_text_features": [
+        "leopard"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "leopard"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0244",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "long_sleeve",
+        "multicolor"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0245",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "sleeveless"
+      ],
+      "missing_in_target_category": []
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0246",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "brown"
+      ],
+      "missing_in_target_category": [
+        "brown"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0248",
+      "missing_train_text_features": [
+        "hooded"
+      ],
+      "sparse_train_text_features": [],
+      "missing_in_target_category": [
+        "hooded"
+      ]
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0250",
+      "missing_train_text_features": [],
+      "sparse_train_text_features": [
+        "cropped"
+      ],
+      "missing_in_target_category": []
+    }
+  ],
+  "method": "Explicit bilingual text mentions, deduplicated by semantic_query_id; union of translations. Counts do not prove visual absence or model inability; 1-9 is a screening threshold, not a learning guarantee. Machine training labels are not human-accepted. Dev labels were not copied into training.",
+  "before": {
+    "beige": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "1": 1,
+          "5": 1,
+          "4": 1
+        }
+      }
+    },
+    "black": {
+      "train": {
+        "semantic_groups": 772,
+        "images": 557,
+        "by_category": {
+          "4": 107,
+          "7": 33,
+          "5": 56,
+          "8": 67,
+          "2": 196,
+          "3": 65,
+          "1": 95,
+          "6": 153
+        }
+      },
+      "dev": {
+        "semantic_groups": 89,
+        "images": 75,
+        "by_category": {
+          "2": 15,
+          "4": 7,
+          "8": 8,
+          "5": 28,
+          "3": 6,
+          "6": 6,
+          "7": 4,
+          "1": 15
+        }
+      }
+    },
+    "white": {
+      "train": {
+        "semantic_groups": 148,
+        "images": 135,
+        "by_category": {
+          "1": 78,
+          "4": 10,
+          "5": 17,
+          "8": 12,
+          "7": 6,
+          "2": 10,
+          "3": 7,
+          "6": 8
+        }
+      },
+      "dev": {
+        "semantic_groups": 45,
+        "images": 44,
+        "by_category": {
+          "4": 3,
+          "2": 4,
+          "3": 3,
+          "5": 16,
+          "1": 14,
+          "8": 3,
+          "7": 2
+        }
+      }
+    },
+    "gray": {
+      "train": {
+        "semantic_groups": 136,
+        "images": 118,
+        "by_category": {
+          "8": 18,
+          "1": 47,
+          "2": 21,
+          "5": 8,
+          "3": 10,
+          "7": 6,
+          "4": 16,
+          "6": 10
+        }
+      },
+      "dev": {
+        "semantic_groups": 17,
+        "images": 17,
+        "by_category": {
+          "1": 8,
+          "5": 4,
+          "4": 3,
+          "7": 1,
+          "2": 1
+        }
+      }
+    },
+    "blue": {
+      "train": {
+        "semantic_groups": 86,
+        "images": 78,
+        "by_category": {
+          "1": 20,
+          "3": 12,
+          "8": 7,
+          "7": 2,
+          "2": 20,
+          "4": 11,
+          "5": 12,
+          "6": 2
+        }
+      },
+      "dev": {
+        "semantic_groups": 32,
+        "images": 31,
+        "by_category": {
+          "1": 8,
+          "2": 9,
+          "4": 4,
+          "5": 10,
+          "3": 1
+        }
+      }
+    },
+    "red": {
+      "train": {
+        "semantic_groups": 55,
+        "images": 47,
+        "by_category": {
+          "3": 14,
+          "5": 5,
+          "4": 10,
+          "7": 6,
+          "1": 12,
+          "6": 4,
+          "8": 3,
+          "2": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 33,
+        "images": 29,
+        "by_category": {
+          "5": 9,
+          "8": 10,
+          "2": 3,
+          "1": 3,
+          "3": 3,
+          "7": 3,
+          "4": 2
+        }
+      }
+    },
+    "green": {
+      "train": {
+        "semantic_groups": 8,
+        "images": 6,
+        "by_category": {
+          "7": 1,
+          "5": 2,
+          "8": 2,
+          "4": 2,
+          "1": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 11,
+        "images": 11,
+        "by_category": {
+          "5": 5,
+          "1": 2,
+          "7": 2,
+          "4": 2
+        }
+      }
+    },
+    "pink": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 11,
+        "images": 11,
+        "by_category": {
+          "5": 4,
+          "1": 5,
+          "7": 1,
+          "4": 1
+        }
+      }
+    },
+    "purple": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "5": 4,
+          "8": 1,
+          "1": 1,
+          "3": 1
+        }
+      }
+    },
+    "orange": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "3": 1,
+          "5": 5,
+          "1": 1
+        }
+      }
+    },
+    "yellow": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "5": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "8": 1,
+          "7": 1,
+          "2": 1,
+          "1": 3,
+          "5": 1
+        }
+      }
+    },
+    "brown": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 13,
+        "images": 13,
+        "by_category": {
+          "5": 2,
+          "7": 2,
+          "4": 3,
+          "3": 1,
+          "8": 4,
+          "2": 1
+        }
+      }
+    },
+    "gold": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "5": 1,
+          "7": 1,
+          "8": 1
+        }
+      }
+    },
+    "silver": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 2,
+        "images": 2,
+        "by_category": {
+          "5": 1,
+          "4": 1
+        }
+      }
+    },
+    "light": {
+      "train": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "3": 1,
+          "8": 1,
+          "7": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 36,
+        "images": 35,
+        "by_category": {
+          "1": 11,
+          "2": 3,
+          "5": 11,
+          "4": 4,
+          "3": 2,
+          "8": 2,
+          "7": 3
+        }
+      }
+    },
+    "dark": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "1": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 36,
+        "images": 35,
+        "by_category": {
+          "5": 8,
+          "3": 3,
+          "4": 8,
+          "2": 2,
+          "7": 3,
+          "8": 8,
+          "1": 4
+        }
+      }
+    },
+    "multicolor": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 9,
+        "images": 9,
+        "by_category": {
+          "7": 2,
+          "3": 1,
+          "5": 3,
+          "1": 1,
+          "2": 1,
+          "8": 1
+        }
+      }
+    },
+    "left": {
+      "train": {
+        "semantic_groups": 98,
+        "images": 98,
+        "by_category": {
+          "6": 86,
+          "7": 11,
+          "4": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 8,
+        "images": 8,
+        "by_category": {
+          "7": 2,
+          "6": 6
+        }
+      }
+    },
+    "right": {
+      "train": {
+        "semantic_groups": 98,
+        "images": 98,
+        "by_category": {
+          "6": 87,
+          "7": 11
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 6,
+        "by_category": {
+          "7": 1,
+          "6": 4,
+          "3": 1,
+          "1": 1
+        }
+      }
+    },
+    "middle": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 2,
+        "images": 2,
+        "by_category": {
+          "5": 1,
+          "8": 1
+        }
+      }
+    },
+    "lower": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "5": 1
+        }
+      }
+    },
+    "stripe": {
+      "train": {
+        "semantic_groups": 115,
+        "images": 104,
+        "by_category": {
+          "1": 41,
+          "4": 17,
+          "5": 21,
+          "3": 20,
+          "2": 16
+        }
+      },
+      "dev": {
+        "semantic_groups": 22,
+        "images": 20,
+        "by_category": {
+          "3": 1,
+          "1": 13,
+          "2": 1,
+          "4": 1,
+          "5": 5,
+          "7": 1
+        }
+      }
+    },
+    "check": {
+      "train": {
+        "semantic_groups": 85,
+        "images": 77,
+        "by_category": {
+          "5": 9,
+          "3": 14,
+          "2": 14,
+          "1": 29,
+          "4": 19
+        }
+      },
+      "dev": {
+        "semantic_groups": 7,
+        "images": 7,
+        "by_category": {
+          "1": 3,
+          "3": 1,
+          "5": 2,
+          "8": 1
+        }
+      }
+    },
+    "dots": {
+      "train": {
+        "semantic_groups": 41,
+        "images": 39,
+        "by_category": {
+          "5": 10,
+          "2": 5,
+          "1": 13,
+          "4": 2,
+          "3": 11
+        }
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "3": 2,
+          "2": 1
+        }
+      }
+    },
+    "floral": {
+      "train": {
+        "semantic_groups": 103,
+        "images": 96,
+        "by_category": {
+          "3": 28,
+          "4": 6,
+          "5": 40,
+          "1": 20,
+          "2": 9
+        }
+      },
+      "dev": {
+        "semantic_groups": 6,
+        "images": 6,
+        "by_category": {
+          "5": 3,
+          "1": 1,
+          "8": 2
+        }
+      }
+    },
+    "pattern": {
+      "train": {
+        "semantic_groups": 104,
+        "images": 97,
+        "by_category": {
+          "3": 28,
+          "4": 6,
+          "5": 41,
+          "1": 20,
+          "2": 9
+        }
+      },
+      "dev": {
+        "semantic_groups": 39,
+        "images": 39,
+        "by_category": {
+          "5": 23,
+          "2": 2,
+          "1": 7,
+          "3": 2,
+          "8": 1,
+          "4": 3,
+          "7": 1
+        }
+      }
+    },
+    "leopard": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 3,
+        "images": 3,
+        "by_category": {
+          "8": 2,
+          "7": 1
+        }
+      }
+    },
+    "camouflage": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "3": 1
+        }
+      }
+    },
+    "denim": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 8,
+        "images": 8,
+        "by_category": {
+          "2": 8
+        }
+      }
+    },
+    "hooded": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 3,
+          "4": 1
+        }
+      }
+    },
+    "long_sleeve": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 20,
+        "images": 20,
+        "by_category": {
+          "1": 7,
+          "5": 9,
+          "4": 4
+        }
+      }
+    },
+    "short_sleeve": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 16,
+        "images": 16,
+        "by_category": {
+          "1": 9,
+          "5": 7
+        }
+      }
+    },
+    "sleeveless": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 23,
+        "images": 23,
+        "by_category": {
+          "1": 12,
+          "5": 10,
+          "4": 1
+        }
+      }
+    },
+    "strapless": {
+      "train": {
+        "semantic_groups": 0,
+        "images": 0,
+        "by_category": {}
+      },
+      "dev": {
+        "semantic_groups": 5,
+        "images": 5,
+        "by_category": {
+          "5": 3,
+          "1": 2
+        }
+      }
+    },
+    "cropped": {
+      "train": {
+        "semantic_groups": 1,
+        "images": 1,
+        "by_category": {
+          "1": 1
+        }
+      },
+      "dev": {
+        "semantic_groups": 4,
+        "images": 4,
+        "by_category": {
+          "1": 2,
+          "4": 2
+        }
+      }
+    }
+  },
+  "dev_sha256": "970dc962ae93484ec80cfe00af74969b88d5bb74c06e56f28e3d17f804da8489"
+}

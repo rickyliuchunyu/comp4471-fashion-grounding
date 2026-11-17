@@ -1,8 +1,8 @@
 # 当前进度与下一步
 
-更新：2026-11-17（wkq dev250 语义精简v4）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-17（wkq train1000 逐图统一v3）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
-**wkq 已发布 dev250 颜色与空间优先精简草稿 v4，等待人工复核。** 250图/330组/660条；262组改写、68组保留、新增1组隔离。117项CPU测试及全包校验通过，训练文本覆盖缺口已登记，见[交接](handoffs/data_eval/dev250_simple_draft_20261117.md)。此前10k分割包及原train/dev/test划分不变；本轮没有训练。其他成员模型进度以其交接为准。
+**wkq 已完成原train1000逐图初查并发布颜色/空间优先v3草稿。** 保留1000图与4784个原mask，999图有1499组/2998条初标；109组隔离、162组改写、28组替代目标，accepted=0。126项CPU测试、源mask及划分保留检查通过；30页人工审核和独立答案预览已生成，见[交接](handoffs/data_eval/train1000_visual_draft_20261117.md)。原dev250/test400、10k分割包不变，没有训练；dev扩充尚未执行。
 
 ## 1. 阶段状态
 
@@ -31,7 +31,7 @@
 | --- | --- | --- | --- | --- |
 | lcy | 验收新10k包，登记后续分割运行 | [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)；旧dev/test和已有模型候选不变 | 实际加载器验收；训练配置与GPU协调由本人登记 | 新包 shared/processed/fp_train10000_targeted_v1 |
 | wyz（A）/ grounding | 验收大包读取、缓存键和弱标注实验入口 | 用户报告小包接口OK；可使用明确标记的训练机器初标做实验 | 正式dev查询尚待人工验收；不得把needs_revision伪装accepted | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)，新包模型消费未由wkq代验 |
-| wkq（B）/ data_eval | 人工复核dev250逐图草稿并裁决分歧 | [dev250精简v4及14页审核](handoffs/data_eval/dev250_simple_draft_20261117.md)：250图、660条/330组；262组改写，新增1组隔离；已审计训练文本覆盖 | accepted=0，尚待wkq人工选择及裁决；测试描述未生成 | shared/processed/fp_language_dev250_simple_draft_v4；117项CPU测试通过 |
+| wkq（B）/ data_eval | 人工复核train1000统一v3与dev250精简v4，裁决分歧 | [dev250精简v4及14页审核](handoffs/data_eval/dev250_simple_draft_20261117.md)：250图、660条/330组；262组改写，新增1组隔离；已审计训练文本覆盖 | accepted=0，尚待wkq人工选择及裁决；测试描述未生成 | [train1000统一v3](handoffs/data_eval/train1000_visual_draft_20261117.md)；dev250 v4保持不变；126项CPU测试通过 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
