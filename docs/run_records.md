@@ -72,3 +72,7 @@
 
 
 2026-11-16，wkq：20261116-train10000-mirror4，CPU 数据准备完成；新 10k 分割包已发布，旧分区不变，无模型训练或指标。运行元信息：`/root/autodl-tmp/fashion-grounding/runs/data_eval/20261116-train10000-mirror4/run_metadata.json`；见 [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)。数据准备不写入模型实验指标行。
+
+## 2026-11-17 wkq dev250 逐图语义草稿
+
+run_id: 20261117-dev250-language；角色data_eval；CPU，无训练。补齐134图并核查旧290条，发布dev250/331组/662条待审草稿，隔离旧2组，accepted=0。110项测试通过；原分区与mask不变。14页人工审核等待wkq返回。输入/hash/命令/限制见[交接](handoffs/data_eval/dev250_visual_draft_20261117.md)。

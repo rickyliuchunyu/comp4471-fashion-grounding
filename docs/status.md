@@ -31,7 +31,7 @@
 | --- | --- | --- | --- | --- |
 | lcy | 验收新10k包，登记后续分割运行 | [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)；旧dev/test和已有模型候选不变 | 实际加载器验收；训练配置与GPU协调由本人登记 | 新包 shared/processed/fp_train10000_targeted_v1 |
 | wyz（A）/ grounding | 验收大包读取、缓存键和弱标注实验入口 | 用户报告小包接口OK；可使用明确标记的训练机器初标做实验 | 正式dev查询尚待人工验收；不得把needs_revision伪装accepted | 见[大型数据交接](handoffs/data_eval/large_dataset_20261112.md)，新包模型消费未由wkq代验 |
-| wkq（B）/ data_eval | 审核dev草稿并组织补写，接收大包消费验收 | [已发布分区、初标和35页审核入口](handoffs/data_eval/large_dataset_20261112.md)；训练不属本轮职责 | dev仅116图有待审草稿，其余134图待补写；测试描述未生成 | 共享 processed/fp_data_eval_large_v1 与交接文档 |
+| wkq（B）/ data_eval | 人工复核dev250逐图草稿并裁决分歧 | [dev250交接及14页审核](handoffs/data_eval/dev250_visual_draft_20261117.md)：补齐134图、核查旧290条，现662条/331组 | accepted=0，尚待wkq人工选择及裁决；测试描述未生成 | shared/processed/fp_language_dev250_visual_draft_v3；110项CPU测试通过 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
