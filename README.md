@@ -1,5 +1,7 @@
 # 自然语言引导的服饰实例选择与分割
 
+当前接续：[完整Fashionpedia分割发布需求与接收准备](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/48873ec6e6de7b311519be5eb0767fa8f0316d69/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)已同步到独立`segmentation/full100-runtime@48873ec`。完整包实际N/hash、增量接收及冻结待补；100epoch入口已有21项CPU检查记录，本轮复用，不启动训练。C5k结果与D10k停止状态保持，完整数据接线未合并到本结果分支。
+
 **图片 + 一句中英文描述 → 描述所指的单个整件服饰的 mask 和 bounding box。**
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
