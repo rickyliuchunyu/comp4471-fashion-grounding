@@ -1,0 +1,118 @@
+{
+  "C5k/run_metadata.json": {
+    "sha256": "6e4728d53dc1177318f3aaafddcda79516ed7600d87eeebac26606c1e6aabe42",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/run_metadata.json"
+  },
+  "C5k/input_receipts.json": {
+    "sha256": "a12f0bf264ca2823328a0f01469bd54db58795dabf7c162baccf5d88a9777c83",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/input_receipts.json"
+  },
+  "C5k/phases.json": {
+    "sha256": "a725bf1f999a1a5874b826669a5eabc124c4691dc1b653323e7499d61c77b945",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/phases.json"
+  },
+  "C5k/selection.json": {
+    "sha256": "f44ed244e0fd4d0e457ef90cba9da309028f635b20142c0684976f3b0ed5f405",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/selection.json"
+  },
+  "C5k/train/resolved_config.json": {
+    "sha256": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/resolved_config.json"
+  },
+  "C5k/train/data_check.json": {
+    "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/data_check.json"
+  },
+  "C5k/train/initialization.json": {
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/initialization.json"
+  },
+  "C5k/train/train_report.json": {
+    "sha256": "ae41214d3a50b5463d2fd6c2d7f74cb583de5b1fe02c148d693f6caca3f3ab7c",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/train_report.json"
+  },
+  "C5k/train/training_summary.json": {
+    "sha256": "a8257b5c9559cc9009979420ecbe27d598187b7b3bd9c35436da9d4e32aa66ba",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/training_summary.json"
+  },
+  "C5k/train/amp_overflow.jsonl": {
+    "sha256": "374e14f55fc292bbdddfda74496019b95b4b6cac8711a488dca53d60ede981a4",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/amp_overflow.jsonl"
+  },
+  "C5k/dev/resolved_config.json": {
+    "sha256": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/resolved_config.json"
+  },
+  "C5k/dev/data_check.json": {
+    "sha256": "8f2adee20ce453918f7b9fa1b47eab5a64f48a1617bfc108af31d07fa5c5f334",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/data_check.json"
+  },
+  "C5k/dev/run_report.json": {
+    "sha256": "6f97395aa2d76e131a88a9dff922a55fc86e0ae5e0885f38aad20d12455e8b8d",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/run_report.json"
+  },
+  "C5k/diagnostic20000/summary.json": {
+    "sha256": "40a3d9f0ab42b80132cce8c01516e697c5b80f4d8d009793befa24d2712120bb",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/diagnostic20000/summary.json"
+  },
+  "C5k/diagnostic20000/execution.json": {
+    "sha256": "80425fc84856f5a5e36850568d572d0de41f1d85a9d262fc7f12581fd7e116d4",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/diagnostic20000/execution.json"
+  },
+  "C5k/train/checkpoint_005000.sha256": {
+    "sha256": "3330ec0467d52490538a1c4517eff2b69bc9ce8bd5606ace61934f46419f0897",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_005000.sha256"
+  },
+  "C5k/train/checkpoint_010000.sha256": {
+    "sha256": "653fa639a4ea9bbd54068c5e133423a5f682fe3296e188ca8f5f47a6f6f7b9b8",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_010000.sha256"
+  },
+  "C5k/train/checkpoint_015000.sha256": {
+    "sha256": "0e8e56fede7e5ad0c80a85fe47ffc9b5dbe9051492aa445066d4c25948595839",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_015000.sha256"
+  },
+  "C5k/train/checkpoint_020000.sha256": {
+    "sha256": "9055a57a3bdaf46ae1a37399526d6eb8cfc883aab3955f65519d68b20f51d6e3",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.sha256"
+  },
+  "C5k/dev/update_010000/evaluation_report.json": {
+    "sha256": "615eb7473ea6490cf283dd61633c60d27a1693c01c6e235f1efb2e2ce4ca7d37",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_010000/evaluation_report.json"
+  },
+  "C5k/dev/update_010000/evaluation_report.sha256": {
+    "sha256": "287039f8850460fc00bf584fdb3ff8527ed3f2b798c8ee0ea039c2a58426ca68",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_010000/evaluation_report.sha256"
+  },
+  "C5k/dev/update_010000/coco_summary.txt": {
+    "sha256": "370b4a68695647e26adc63b0343af3facb8db516ca1af561f390adf4a400f1b7",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_010000/coco_summary.txt"
+  },
+  "C5k/dev/update_020000/evaluation_report.json": {
+    "sha256": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_020000/evaluation_report.json"
+  },
+  "C5k/dev/update_020000/evaluation_report.sha256": {
+    "sha256": "b30d5f243137473967e4034c97c89cb5dafed2dba57059fd21f8fe8917119ae1",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_020000/evaluation_report.sha256"
+  },
+  "C5k/dev/update_020000/coco_summary.txt": {
+    "sha256": "d26b8aa9ec2ba768b005719671c2d3333f30d551445eff3c3276213f20c7142a",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_020000/coco_summary.txt"
+  },
+  "C5k/coordination.json": {
+    "sha256": "94d31f9b180c1e115ffdfaedd9bab55dab37991b3833a451d81830ca845c421b",
+    "source": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-expansion-5000-20261117-r01.json"
+  },
+  "D10k_targeted/run_metadata_launch.json": {
+    "sha256": "47bcd79d7674c38e262dc6bc4d24b542f864f3e0dd87fb02a0bb0f1aeac10230",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/run_metadata.json"
+  },
+  "D10k_targeted/coordination_launch.json": {
+    "sha256": "d59cca1066b863968e3a47589d3ddb79efcde27637e11f2180d845a2ce5eca6c",
+    "source": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-expansion-10000-20261117-r01.json"
+  },
+  "stage_status_C5k_completed.json": {
+    "sha256": "4afdafebe8ed156e29786cc9ad79a3f7bc5f8749198805725fe40250ed34e4dc",
+    "source": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/stage_status.json"
+  }
+}

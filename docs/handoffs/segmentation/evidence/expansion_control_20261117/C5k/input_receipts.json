@@ -1,0 +1,28 @@
+{
+  "C5k": {
+    "overlap": {
+      "image_id": 0,
+      "sha256": 0,
+      "group_id": 0,
+      "source_image_id": 0
+    },
+    "image_count": 250,
+    "annotation_count": 1008,
+    "training_data": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+    },
+    "validation_reused_from": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+    "validation_report_sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b",
+    "image_and_mask_reaudit": false,
+    "validation_bundle_sha256": "1c21b003e53993a1fec538d91007f852efcd1a95208f78a672986db42ba3c811",
+    "validation_mode": "unchanged_train",
+    "reused_evidence": {
+      "dev_report": {
+        "path": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+        "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+      }
+    },
+    "test_files_read": false
+  }
+}

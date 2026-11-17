@@ -1,0 +1,60 @@
+{
+  "status": "completed",
+  "purpose": "s0_training",
+  "git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "config_sha256": "c4ea5cd7b0061db744d6d04c1c51fc755637cc5f54f8dd07bb7e6219782010da",
+  "start_update": 0,
+  "completed_updates": 20000,
+  "updates_this_process": 20000,
+  "resumed": false,
+  "resume_lineage": [],
+  "elapsed_seconds": 8400.824364278466,
+  "finished_at": "2026-11-17T07:00:13.562566+00:00",
+  "first_loss": 115.21880453824997,
+  "last_loss": 20.397511687129736,
+  "min_loss": 1.2884670764324255,
+  "max_loss": 151.69779360294342,
+  "all_losses_and_gradients_finite": true,
+  "skipped_optimizer_updates": 0,
+  "finite_scope": "successful_updates_only",
+  "amp_overflow_attempts_this_process": 1,
+  "amp_recovery_state": {
+    "overflow_events": 1
+  },
+  "initial_parameter_digests": {
+    "backbone": "dfb43e750e49dde9afbd3f2f0094513acb23f49221d2defb10435c0b4d920b3b",
+    "classifier": "3fc49e80f03df00e3d8b34fde4ea9663d1a90ffb8e46f3bcd547f8fd26d98a3c"
+  },
+  "final_parameter_digests": {
+    "backbone": "b39ddfe570a46e14f13c6495ef5f4dd83c6326a9d69ac7ffd2c98bbc5cfeb031",
+    "classifier": "3696bc240718fab4da6ca9f35940e16d9ab0c714fb1623f7569b3a836e478309"
+  },
+  "backbone_and_classifier_updated": true,
+  "checkpoints": [
+    {
+      "update": 5000,
+      "path": "checkpoint_005000.pth",
+      "sha256": "fea2ca985472d589f94dd2e5beec62e6b419a231a5a797c5bbf2dfe9548c6ff8"
+    },
+    {
+      "update": 10000,
+      "path": "checkpoint_010000.pth",
+      "sha256": "4ae42150b80bb8e346b65b46d12914d14689398adb2ca96a12139859dc4f84fa"
+    },
+    {
+      "update": 15000,
+      "path": "checkpoint_015000.pth",
+      "sha256": "b0c4498240ad1a7f0152e41ef88b6ede60928aeb1738d520c58e86fd9ca8303d"
+    },
+    {
+      "update": 20000,
+      "path": "checkpoint_020000.pth",
+      "sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044"
+    }
+  ],
+  "peak_cuda_allocated_bytes": 4712889344,
+  "peak_cuda_reserved_bytes": 5335154688,
+  "performance_evaluated": false,
+  "sample_count": 40000,
+  "empty_augmented_images": 33
+}

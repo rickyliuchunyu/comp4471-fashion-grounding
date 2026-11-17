@@ -1,0 +1,68 @@
+[
+  {
+    "phase": "train_20000",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "-m",
+      "fashion_grounding.segmentation.train",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "--source",
+      "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+      "--checkpoint",
+      "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+      "--config",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_train5000.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-17T04:40:12.251742+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 8403.229069475085
+  },
+  {
+    "phase": "full_dev_10000_20000",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "-m",
+      "fashion_grounding.segmentation.evaluate",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+      "--training-package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "--source",
+      "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+      "--config",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_dev250.json",
+      "--input-validation-bundle",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_input_train5000.json",
+      "--checkpoints",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_010000.pth",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-17T07:00:14.593043+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 266.80833503231406
+  },
+  {
+    "phase": "select_and_compare",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_expansion_control.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01",
+      "--select-arm",
+      "C5k"
+    ],
+    "status": "completed",
+    "started_at": "2026-11-17T07:04:41.402330+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 2.0491915605962276
+  }
+]

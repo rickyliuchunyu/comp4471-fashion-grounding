@@ -1,0 +1,22 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-expansion-10000-20261117-r01",
+  "status": "running",
+  "wrapper_pid": 222799,
+  "started_at": "2026-11-17T07:04:43.985089+00:00",
+  "budget_seconds": 10784,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_expansion_control.py",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_plan.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01",
+    "--worker-arm",
+    "D10k_targeted"
+  ],
+  "git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "child_pid": 222805
+}

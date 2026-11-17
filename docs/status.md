@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-最新（2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 已按用户授权启动，执行源 `dc2fba4`。C5k 于12:40 HKT启动，D10k须待C5k全链路成功后执行；两组各20k成功更新、保存的10k/20k完整dev，每组总硬上限3小时、失败即停不延长。尚无本轮AP结果；旧工程检查和数据验收复用，未重复smoke。
+最新（2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 执行中。C5k全链路8674.208秒完成；10k/20k完整dev AP55.8283/64.6957，组内选20k（较历史B20k+0.9027）。D10k于15:04:43 HKT从同一COCO初始化启动，硬截止18:04:43 HKT；配对结果待完成。两组各20k、完整dev250、每组总硬限3小时，失败停止不延长。执行源dc2fba4；旧工程/数据检查复用，无重复smoke。
 
 上一轮（2026-11-16）：[5k/10k 证据复用与统一硬超时入口](handoffs/segmentation/expansion_execution_preparation_20261116.md) **implemented / preparation_checked，未启动训练**。最终代码`e38b836`，服务器准备源`8b522a2`；新增11个CPU案例本地10项、服务器Linux专属1项通过；真实5k/10k证据组合读取通过，未打开图片或解码mask。两组各20k成功更新，保存的10k/20k各评完整dev250；每组单一3小时截止时间、整对最多6小时，不自动延长/重启，失败不继续下一组。默认仅准备；训练/推理/旧smoke均为0。
 
@@ -67,7 +67,7 @@
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
 | 模型代码/数据转换器 | 训练/AP/cache/export已运行；新增显式用户授权dev路径，原accepted默认门禁与匹配器不变，3项必要CPU验证通过 | 已完成0.3选择及lcy最小B1联调；wyz其他排序方法、M2及最终test仍待完成 |
 | 实验结果 | B20k固定权重800→1024：AP63.7930→62.2498，AP_small10.7525→11.5257，严格小目标匹配35→49 | 保留800；中目标AP跌幅主要受1例skirt宏平均影响，不能泛称全面退化。历史18k语言候选/B1未重跑，非B20k语言结果或test |
-| GPU/环境/付费预算 | 本轮已启动C5k，GPU由本轮共享锁管理；D10k仅前组完整成功后启动 | 结束GPU0MiB/0%、无计算进程及活动协调任务；数据盘约153.5GiB空闲；[结束快照](handoffs/segmentation/evidence/expansion_execution_preparation_20261116/server_postflight.json)。2026-11-17已明确授权启动，每组3小时限制不变 |
+| GPU/环境/付费预算 | C5k已完成并释放锁，D10k已按顺序启动、由本轮共享锁管理 | 结束GPU0MiB/0%、无计算进程及活动协调任务；数据盘约153.5GiB空闲；[结束快照](handoffs/segmentation/evidence/expansion_execution_preparation_20261116/server_postflight.json)。2026-11-17已明确授权启动，每组3小时限制不变 |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
