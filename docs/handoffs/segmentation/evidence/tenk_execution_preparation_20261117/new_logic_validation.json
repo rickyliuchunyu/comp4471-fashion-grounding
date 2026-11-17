@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "Only new CPU segmented execution contracts; no real model or data loading",
+  "implementation_commit": "6b5fc8c51da6a643cd47e68897be006ce0be0264",
+  "distinct_new_cases": 15,
+  "commands": [
+    {
+      "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_tenk_execution.py -v",
+      "cases": 14,
+      "seconds": 2.458,
+      "result": "OK",
+      "stage": "initial new execution cases"
+    },
+    {
+      "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_tenk_execution.py -k GateTests -v",
+      "cases": 4,
+      "seconds": 0.625,
+      "result": "OK",
+      "stage": "affected gates only after input-pin completeness and new outer-failure case"
+    }
+  ],
+  "limitations": [
+    "Synthetic receipt/checkpoint files; no real checkpoint deserialization",
+    "POSIX sleeping CPU subprocess validates new timer wiring; existing Linux parent-death guard evidence reused",
+    "Final additional run metadata fields are documentation/provenance only, not an additional test claim",
+    "Server runtime not deployed or exercised; no measured 10k throughput, GPU memory, training stability or AP"
+  ],
+  "model_loads": 0,
+  "training_updates": 0,
+  "inference_images": 0,
+  "old_smoke_runs": 0,
+  "source_sha256": {
+    "scripts/run_tenk_adaptation.py": "70639cf403563a32efb466a6a700a0df6dbcca68282bd53a0959b7c6c97681c7",
+    "scripts/prepare_tenk_adaptation.py": "2b6c7627987d1e3594fca672d78ba34059a2cb06386bbaeb4288c328782a6497",
+    "src/fashion_grounding/segmentation/tenk_execution.py": "15fedca6c7261c565a9ff994079df88a3a85e628a5038d2294a60cc828353bb4",
+    "tests/test_tenk_execution.py": "33ad7b2e0c6302fefb6b360bce81c690add29b2628c243e5df0d8021601104d8",
+    "configs/runs/segmentation/tenk_adaptation_plan.json": "461cc7606f4ac154422412ef5ceef566549c45fdfa58bab41c58714e76a35c32"
+  }
+}
