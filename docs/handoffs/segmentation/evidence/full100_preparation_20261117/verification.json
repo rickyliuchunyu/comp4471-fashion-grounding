@@ -1,0 +1,90 @@
+{
+  "recorded_at_utc": "2026-11-17T06:22:13.426463+00:00",
+  "scope": "new preparation logic only; no prior smoke or model tests repeated",
+  "command": "PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_full_data_preparation.py' -v",
+  "exit_code": 0,
+  "tests": 9,
+  "passed": 9,
+  "failed": 0,
+  "reported_test_seconds": 0.044,
+  "test_source_hashes": {
+    "scripts/prepare_full_fashionpedia.py": "937268cda926212b58ee687f8de839217b8ae54b38acabdf00a267a52d1ac2a3",
+    "src/fashion_grounding/segmentation/full_data_preparation.py": "aa99d2f0b6407de90b9aad10598e34c9c975bd6740eed706e188c8c9cefd72b3",
+    "tests/test_full_data_preparation.py": "25475c93dbdf4a40842282a4ce1cd27897122331b901573d49a3f8dc607e6c71"
+  },
+  "configuration_preparation": {
+    "command": "PYTHONPATH=src python3 scripts/prepare_full_fashionpedia.py --output docs/handoffs/segmentation/evidence/full100_preparation_20261117/configuration",
+    "exit_code": 0,
+    "status": "prepared_not_executable",
+    "ready_for_training": false,
+    "population_basis": "unresolved_full_release",
+    "max_updates": null
+  },
+  "protected_files": [
+    {
+      "path": "configs/runs/segmentation/expansion_control_train5000.json",
+      "sha256": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_train10000.json",
+      "sha256": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_dev250.json",
+      "sha256": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runs/segmentation/expansion_control_plan.json",
+      "sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/run_expansion_control.py",
+      "sha256": "ae9f499abe108ba5dab577fe1b512f505376136109d4b18c69f86c876b6ed05f",
+      "unchanged": true
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/train.py",
+      "sha256": "1640f476836ab306551200edb006e59869226617f794f2800022e5832b13326a",
+      "unchanged": true
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/training_state.py",
+      "sha256": "8cde0d057534b8f981983f5bcf636adb83a9441bcf62bbc670867d2663ddf2a7",
+      "unchanged": true
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/amp_recovery.py",
+      "sha256": "7363114437e6e7a0894420a9ced22a623ffcc566638bc09ba0b3ef49c002893e",
+      "unchanged": true
+    },
+    {
+      "path": "src/fashion_grounding/segmentation/data.py",
+      "sha256": "66c3216538296201d78df81f7a4a835c2f0d72aead0acb49ec14817f20897827",
+      "unchanged": true
+    }
+  ],
+  "new_python_ast_files": 3,
+  "json_files_parsed_before_this_record": 8,
+  "git_diff_check": "passed",
+  "operations": {
+    "model_loads": 0,
+    "training_updates": 0,
+    "inference_images": 0,
+    "image_reads": 0,
+    "mask_decodes": 0,
+    "server_connections": 0,
+    "existing_smoke_reruns": 0
+  },
+  "not_verified": [
+    "full training package release or actual N",
+    "formal freeze and new consumer acceptance",
+    "100-epoch GPU execution or throughput",
+    "new long-run launcher and metadata reuse implementation",
+    "actual full100 checkpoint restore/evaluation"
+  ],
+  "original_checkout": "segmentation/pilot-adapter-v1 clean at inspection; no file edits"
+}

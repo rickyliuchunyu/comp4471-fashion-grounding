@@ -1,6 +1,8 @@
 # 当前进度与下一步
 
-最新（2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 已按用户授权启动，执行源 `dc2fba4`。C5k 于12:40 HKT启动，D10k须待C5k全链路成功后执行；两组各20k成功更新、保存的10k/20k完整dev，每组总硬上限3小时、失败即停不延长。尚无本轮AP结果；旧工程检查和数据验收复用，未重复smoke。
+最新准备（2026-11-17）：[完整Fashionpedia / R50 100-epoch准备](handoffs/segmentation/full_fashionpedia_100ep_preparation_20261117.md)已在独立分支完成冻结清单、训练配方、每2epoch完整dev评价与恢复方案，以及不含执行模式的CPU配置解析入口。9项新增CPU检查通过；真实全量N/输入哈希/正式冻结与长训练接线仍待完成，`ready_for_training=false`。不连接服务器、不构建数据、不训练/推理/重复smoke，不改当前5k/10k对照或其3小时截止规则。
+
+原分支启动交接（本轮未复核服务器实时进度，2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 已按用户授权启动，执行源 `dc2fba4`。C5k 于12:40 HKT启动，D10k须待C5k全链路成功后执行；两组各20k成功更新、保存的10k/20k完整dev，每组总硬上限3小时、失败即停不延长。尚无本轮AP结果；旧工程检查和数据验收复用，未重复smoke。
 
 上一轮（2026-11-16）：[5k/10k 证据复用与统一硬超时入口](handoffs/segmentation/expansion_execution_preparation_20261116.md) **implemented / preparation_checked，未启动训练**。最终代码`e38b836`，服务器准备源`8b522a2`；新增11个CPU案例本地10项、服务器Linux专属1项通过；真实5k/10k证据组合读取通过，未打开图片或解码mask。两组各20k成功更新，保存的10k/20k各评完整dev250；每组单一3小时截止时间、整对最多6小时，不自动延长/重启，失败不继续下一组。默认仅准备；训练/推理/旧smoke均为0。
 
@@ -14,13 +16,13 @@
 
 ## GitHub 同步快照
 
-本轮开工（2026-11-17，[GitHub快照](handoffs/segmentation/evidence/expansion_control_20261117/github_preflight.json)）：lcy=`4d60fcd`；wkq更新至`c514a4f`，发布dev250语言v4草稿（250图/330中英组/660条，accepted=0）及训练文本覆盖，分割train/dev未变；wyz=`103dcc5`、main=`7064ebb`无增量。所有远端分支、五个PR、活跃讨论及增量交接已核，无新PR/合并/讨论。wkq记录的源mask疑点待裁决，本轮保持共同dev不改；不消费新语言版本。
+本轮准备开工（2026-11-17，[GitHub快照](handoffs/segmentation/evidence/full100_preparation_20261117/github_preflight.json)）：lcy=`308492f`，wkq=`4bbd7f3`，wyz=`103dcc5`、main=`7064ebb`。已核所有远端分支、五个PR和三个活跃PR的评论/review；#2/#4仍open/draft，#5仍open且依赖wkq，#1/#3关闭未合并，无新讨论。wkq最新train1000视觉草稿v3只改语言审核内容，分割10k和dev/test未变；其源类别/碎片疑点保留待裁决，不能据此声明完整分割包冻结。此次在`segmentation/full-fashionpedia-100ep-prep`独立worktree准备，原checkout不切换，原运行状态不代更新。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`：执行源`dc2fba4`，5k/10k有界对照已启动；新结果待完成 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[入口准备](handoffs/segmentation/expansion_execution_preparation_20261116.md) / [10k接收](handoffs/segmentation/train10000_acceptance_20261116.md) |
+| lcy / rickyliuchunyu | 原分支`segmentation/pilot-adapter-v1`@`308492f`保留5k/10k启动记录；独立`segmentation/full-fashionpedia-100ep-prep`准备完整数据100epoch，未启动 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[入口准备](handoffs/segmentation/expansion_execution_preparation_20261116.md) / [10k接收](handoffs/segmentation/train10000_acceptance_20261116.md) |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
-| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `c514a4f`；语言dev250 v4草稿已发布，accepted=0；分割10k技术接收已通过 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md)；旧 #1/#3 已被替代 |
+| wkq / LE-brawl | `data-eval/p3-baseline-evaluation` @ `4bbd7f3`；train1000视觉草稿v3已发布，人工accepted=0；分割10k不变，完整分割包待发布 | [统一 PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新语言交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0/docs/handoffs/data_eval/train1000_visual_draft_20261117.md)；[10k交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/4b0584ac04ce088084580bcaf946b74575fc6c0c/docs/handoffs/data_eval/train10000_targeted_20261116.md)；旧 #1/#3 已被替代 |
 
 队友交接链接固定到本次读取的 commit，避免将未合并内容误认为当前 checkout 已包含。下次开工须重新检查远端增量，流程见 [AGENTS.md](../AGENTS.md)。
 
@@ -53,7 +55,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 完成本轮5k/10k同预算分割对照 | 监控已启动运行及固定10k/20k评价；失败停止 | 每组3小时总硬限；新包正式冻结记录不代签；历史B20k及候选保持 | [入口及实际CPU证据](handoffs/segmentation/expansion_execution_preparation_20261116.md)、[受控方案](handoffs/segmentation/train10000_control_plan_20261116.md) |
+| lcy | 原5k/10k按原授权运行；另准备完整数据100epoch，暂不启动 | 监控已启动运行及固定10k/20k评价；失败停止 | 原对照每组3小时不变；完整包需正式冻结/增量接收及独立长训练接线；历史B20k及候选保持 | [入口及实际CPU证据](handoffs/segmentation/expansion_execution_preparation_20261116.md)、[受控方案](handoffs/segmentation/train10000_control_plan_20261116.md) |
 | wyz（A）/ grounding | 接收18k＋0.3包和本轮独立缓存/联调结果，继续自己的M2/可比训练 | 当前语言dev已由用户授权可用，连同原审核状态和授权记录传递给消费入口 | lcy已调用原B1完成当前dev联调；本人接收及B2/M1/M2实际对照仍待执行，原来源保持 | [选择记录][u18000-selection]、[wyz交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 接收当前候选/查询固定版本，完善剩余dev语言及独立审核记录，准备统一评价 | 当前116图/290查询已按用户授权完成coverage，原文件仍needs_revision；查询/图片/GT指纹和分母齐全 | 完整250图语言覆盖、正式独立审核来源和最终test描述仍不冒称齐备；不阻塞本轮开发选择 | [本轮授权与结果][u18000-selection]、PR #4 |
 

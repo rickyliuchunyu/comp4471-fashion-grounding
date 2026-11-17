@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_executable",
+  "training_authorized": false,
+  "ready_for_training": false,
+  "plan_sha256": "147b77adaadb8d3e3dc42612754be468ec34ce6543a254c7e34ebe3aec48ee18",
+  "input_references": {
+    "recipe": {
+      "path": "configs/runs/segmentation/full100_train_recipe.json",
+      "sha256": "c3e4afd72f201114b5c96269d08ecbf3b0f56c6ef3140db3b2b8f4a355f53c48"
+    },
+    "evaluation": {
+      "path": "configs/runs/segmentation/full100_evaluation_plan.json",
+      "sha256": "f26448f4b08e7533633cb9baf206fbe50fcc5cd412bee4d20ef35cdaf5d56e3b"
+    },
+    "recovery": {
+      "path": "configs/runs/segmentation/full100_recovery_plan.json",
+      "sha256": "dc30010e8a42eb5ba0aa78501de0e61d4a2fa7c4a9620faa24850fcff61d7f3f"
+    },
+    "freeze_checklist": {
+      "path": "configs/runs/segmentation/full_fashionpedia_freeze_checklist.json",
+      "sha256": "afdde3f6052ab557fc5162a44ef336674b05e9a8cb3622d130484058f2a319eb"
+    },
+    "mapping": {
+      "path": "configs/source_category_mapping.json",
+      "sha256": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+    },
+    "categories": {
+      "path": "configs/categories.json",
+      "sha256": "6149973eec9fb45097df1768fab447440421cf1f4ad4d2bd5fc8e7b8ea0d1067"
+    },
+    "upstream": {
+      "path": "envs/segmentation/upstream.json",
+      "sha256": "2962e7a562a9ac1c037cae1b5144ba321965e06a10a3a504251d26b375f134b8"
+    }
+  },
+  "protected_files_unchanged": true,
+  "data_identity": {
+    "basis": "unresolved_full_release",
+    "images": null,
+    "image_manifest_sha256": null,
+    "annotation_sha256": null
+  },
+  "schedule": null,
+  "train_config_preparation": {
+    "purpose": "s0_training",
+    "seed": 42,
+    "image_manifest_sha256": null,
+    "annotation_sha256": null,
+    "max_updates": null,
+    "learning_rate": 0.0001,
+    "backbone_lr_multiplier": 0.1,
+    "weight_decay": 0.05,
+    "weight_decay_norm": 0.0,
+    "weight_decay_embed": 0.0,
+    "microbatch_images": 2,
+    "accumulation_steps": 8,
+    "effective_batch_images": 16,
+    "warmup_updates": 500,
+    "warmup_start_factor": 0.001,
+    "lr_milestones": null,
+    "lr_decay": 0.1,
+    "amp": true,
+    "amp_initial_scale": 1.0,
+    "gradient_clip_norm": 0.01,
+    "image_size": 768,
+    "min_scale": 0.5,
+    "max_scale": 2.0,
+    "random_flip": "horizontal",
+    "checkpoint_interval": null,
+    "budget_seconds": null,
+    "run_scope": "full_fashionpedia_r50_100ep_preparation_only",
+    "checkpoint_updates": null,
+    "amp_recovery": {
+      "max_retries_per_update": 4,
+      "max_overflow_events": 16,
+      "min_loss_scale": 0.0001
+    }
+  },
+  "evaluation_plan": {
+    "schema_version": 1,
+    "purpose": "full100_evaluation_preparation",
+    "execution_authorized": false,
+    "evaluation_config_template": {
+      "purpose": "dev_checkpoint_selection",
+      "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+      "short_edge": 800,
+      "max_size": 1333,
+      "decoder": "upstream_instance",
+      "max_detections": 100,
+      "amp": false,
+      "run_scope": "full_fashionpedia_100ep_planned_complete_dev",
+      "budget_seconds": null
+    },
+    "dev_images": 250,
+    "dev_instances": 1008,
+    "evaluation_every_epochs": 2,
+    "primary_metric": "segm.AP",
+    "metric_scale": "0_to_100",
+    "selection": {
+      "maximize": "segm.AP",
+      "tie_break": "earliest_completed_update",
+      "require_complete_population": true,
+      "require_exact_checkpoint_sha256": true,
+      "partial_reports_eligible": false
+    },
+    "metrics": [
+      "AP",
+      "AP50",
+      "AP75",
+      "AP_small",
+      "AP_medium",
+      "AP_large",
+      "AP_per_class",
+      "AR100"
+    ],
+    "boundary_metrics": {
+      "status": "planned_separate_offline_adapter_not_implemented",
+      "implementation": "https://github.com/bowenc0221/boundary-iou-api",
+      "dilation_ratio": 0.02,
+      "not_equivalent_to_historical_thin_boundary_iou": true
+    },
+    "cache_identity": [
+      "checkpoint_sha256",
+      "train_image_manifest_sha256",
+      "train_annotation_sha256",
+      "dev_image_manifest_sha256",
+      "dev_annotation_sha256",
+      "evaluation_config_sha256",
+      "evaluator_source_commit"
+    ],
+    "reuse_completed_reports": true,
+    "evaluate_same_update_twice": false,
+    "train_diagnostic": {
+      "status": "not_selected",
+      "images": 256,
+      "selection_seed": 42,
+      "selection": "deterministic_train_only_stratified_before_predictions",
+      "frequency_epochs": 10,
+      "selection_metric": false,
+      "inference_settings": "same_as_dev",
+      "manifest_sha256": null
+    },
+    "confirmation_set": {
+      "status": "not_released",
+      "source": "unassigned_official_validation_groups_only",
+      "used_for_checkpoint_selection": false,
+      "images": null
+    },
+    "test400": {
+      "evaluate_during_development": false,
+      "inspect_images_or_labels_during_preparation": false
+    },
+    "candidate_thresholds_affect_standard_ap": false,
+    "candidate_export": "after_segmentation_checkpoint_selection_only",
+    "dev_annotation_policy": "preserve_v1; any adjudicated_v2 requires separately pinned protocol and comparable reports; never silently mix versions"
+  },
+  "recovery_plan": {
+    "schema_version": 1,
+    "purpose": "full100_recovery_preparation",
+    "execution_authorized": false,
+    "same_run_invariants": [
+      "git_commit",
+      "config_sha256",
+      "training_manifest_sha256",
+      "training_annotation_sha256",
+      "mapping_sha256",
+      "max_updates",
+      "effective_batch_images",
+      "image_size",
+      "learning_rate_schedule"
+    ],
+    "restore_components": [
+      "model",
+      "optimizer",
+      "scheduler",
+      "scaler",
+      "sampler",
+      "rng",
+      "amp_recovery_state"
+    ],
+    "pre_restore": [
+      "checkpoint file SHA256 and sidecar agree",
+      "stored component digests agree",
+      "completed_updates equals scheduler completed_updates",
+      "checkpoint identity matches registered full-data run",
+      "checkpoint below requested absolute stop boundary"
+    ],
+    "post_restore": "compare all live component fingerprints using existing exact restore checks",
+    "resume_from": "latest_integrity_valid_recovery_checkpoint; not automatically best_AP_checkpoint",
+    "scheduler_reset": false,
+    "reinitialize_optimizer": false,
+    "restore_sampler_and_rng": true,
+    "amp": {
+      "reuse_existing_replay_policy": true,
+      "overflow_attempts_advance_schedule": false,
+      "overflow_attempts_count_as_new_data": false,
+      "policy_changes_require_new_record": true
+    },
+    "evaluation_recovery": "reuse valid report with exact cache identity; rerun only absent/failed evaluation; never retrain an existing valid checkpoint",
+    "new_attempt_output_directory": true,
+    "overwrite_prior_run": false,
+    "automatic_retries_or_extension": false,
+    "partial_gradient_resume": "unsupported; resume at optimizer boundary only",
+    "future_execution_requirements": [
+      "metadata-only train input reuse bound to completed acceptance, no whole-package re-audit on every resume",
+      "independent long-run wall-time policy without changing paired 5k/10k launcher",
+      "schedule train/eval boundaries and restore RNG exactly across evaluation",
+      "stream loss aggregates instead of accumulating unbounded in-memory loss_rows",
+      "resource/lock preflight and launch authorization",
+      "record checkpoint sizes and required disk capacity before launch"
+    ]
+  },
+  "freeze_status": "requested_not_released",
+  "remaining_requirements": [
+    "full_dataset_release_and_formal_freeze",
+    "full_dataset_incremental_consumer_acceptance",
+    "long_training_execution_adapter",
+    "evaluation_input_binding_for_full_dataset",
+    "launch_resource_lock_preflight_and_explicit_training_authorization"
+  ],
+  "operations": {
+    "metadata_only": true,
+    "image_reads": 0,
+    "mask_decodes": 0,
+    "model_loads": 0,
+    "training_updates": 0,
+    "inference_images": 0,
+    "server_connections": 0
+  }
+}

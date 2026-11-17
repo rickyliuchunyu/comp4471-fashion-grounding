@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "purpose": "full_fashionpedia_freeze_checklist",
+  "status": "requested_not_released",
+  "formal_freeze": false,
+  "training_authorized": false,
+  "producer_owner": "data_eval/wkq",
+  "consumer_owner": "segmentation/lcy",
+  "dataset": "fashionpedia",
+  "source_split": "train",
+  "full_means": "all_eligible_official_train_images_after_versioned_exclusions_not_raw_dataset_size",
+  "proposed_package_id": "fp_train_full8_v1",
+  "package_path": null,
+  "actual_train_images": null,
+  "actual_train_instances": null,
+  "image_manifest_sha256": null,
+  "annotation_sha256": null,
+  "release_sha256": null,
+  "mapping": {
+    "path": "configs/source_category_mapping.json",
+    "sha256": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+  },
+  "categories": {
+    "path": "configs/categories.json",
+    "sha256": "6149973eec9fb45097df1768fab447440421cf1f4ad4d2bd5fc8e7b8ea0d1067"
+  },
+  "protected": {
+    "existing_dev_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "existing_dev_annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "test_manifest_sha256": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+    "existing_10k_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "existing_10k_annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+  },
+  "checks": [
+    {
+      "id": "source_inventory",
+      "owner": "wkq",
+      "status": "pending_full_release",
+      "requirement": "official train image/annotation source hashes, conversion commit and all-eligible membership reconciliation",
+      "evidence": null
+    },
+    {
+      "id": "mapping",
+      "owner": "wkq+lcy",
+      "status": "pending_full_release",
+      "requirement": "same eight-class mapping; whole-image jumpsuit exclusion; drop part annotations only; keep fine source class",
+      "evidence": null
+    },
+    {
+      "id": "source_identity",
+      "owner": "wkq",
+      "status": "pending_full_release",
+      "requirement": "source IDs, masks, image/group identities and retained old10k records or explicit versioned changes",
+      "evidence": null
+    },
+    {
+      "id": "quality_disposition",
+      "owner": "wkq+reviewers",
+      "status": "pending_full_release",
+      "requirement": "invalid/empty/missing assets, known category/fragment doubts and human decisions with provenance",
+      "evidence": null
+    },
+    {
+      "id": "split_isolation",
+      "owner": "wkq",
+      "status": "pending_full_release",
+      "requirement": "ID/source/group/SHA overlap zero; incremental near-duplicate evidence; exclude unresolved training conflicts with protected sets",
+      "evidence": null
+    },
+    {
+      "id": "protocol_amendment",
+      "owner": "all",
+      "status": "pending_full_release",
+      "requirement": "record full-set expansion rule for existing frozen dev/test; reconcile data_protocol section4 rule rather than silently changing partitions",
+      "evidence": null
+    },
+    {
+      "id": "population_statistics",
+      "owner": "wkq",
+      "status": "pending_full_release",
+      "requirement": "actual N and instances, per-class/source-class/area counts, crowd policy and exclusions; no nominal 45623 count",
+      "evidence": null
+    },
+    {
+      "id": "formal_freeze",
+      "owner": "all",
+      "status": "pending_full_release",
+      "requirement": "producer release and dated member acknowledgements; old human acceptance cannot be copied to new images",
+      "evidence": null
+    },
+    {
+      "id": "consumer_acceptance",
+      "owner": "lcy",
+      "status": "pending_full_release",
+      "requirement": "changed-input-only metadata/loading/geometry acceptance; bind prior checks; no model smoke",
+      "evidence": null
+    },
+    {
+      "id": "dev_version",
+      "owner": "wkq+lcy",
+      "status": "pending_full_release",
+      "requirement": "pin dev250 v1 or publish separately adjudicated v2 before new comparisons; preserve ongoing paired experiment",
+      "evidence": null
+    }
+  ],
+  "known_source_issues": [
+    {
+      "source_image_id": 38309,
+      "status": "awaiting_adjudication",
+      "source_handoff_commit": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+      "issue": "producer reports dress split as top/skirt; language exclusion did not revise segmentation GT"
+    },
+    {
+      "source_image_ids": [
+        29246,
+        31540
+      ],
+      "status": "train_only_near_duplicate_flag",
+      "source_handoff_commit": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+      "issue": "group provenance to reconcile; not itself evidence of cross-split leakage"
+    }
+  ],
+  "reused_evidence": {
+    "old10k_acceptance": {
+      "path": "docs/handoffs/segmentation/evidence/train10000_acceptance_20261116/acceptance.json",
+      "sha256": "f2217f933e11f1b3f02ae9ea544a6f758de459ee390f4984f6098b51a2990017"
+    },
+    "existing_dev_report": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+      "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+    }
+  },
+  "does_not_require_language_queries": true,
+  "confirmation_set_blocks_baseline_training": false
+}

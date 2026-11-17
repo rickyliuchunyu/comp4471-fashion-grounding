@@ -1,0 +1,110 @@
+{
+  "recorded_at_utc": "2026-11-17 06:20:16 UTC",
+  "scope": "read-only team GitHub and handoffs before isolated preparation; no server connection",
+  "base_commit": "308492f4ec19426845a5aa63f46f58639db2872f",
+  "remote_branches": {
+    "segmentation": "308492f4ec19426845a5aa63f46f58639db2872f",
+    "data_eval": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+    "grounding": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb"
+  },
+  "all_pull_requests": [
+    {
+      "number": 1,
+      "title": "Add data_eval pilot validation and human review auditing",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "updated_at": "2026-11-12T09:52:48Z",
+      "body_read": true
+    },
+    {
+      "number": 2,
+      "title": "Segmentation: accepted train10000 and bounded paired 5k/10k launcher",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "308492f4ec19426845a5aa63f46f58639db2872f",
+      "base": "main",
+      "updated_at": "2026-11-17T04:41:53Z",
+      "body_read": true
+    },
+    {
+      "number": 3,
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "updated_at": "2026-11-12T09:52:53Z",
+      "body_read": true
+    },
+    {
+      "number": 4,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+      "base": "main",
+      "updated_at": "2026-11-17T05:09:39Z",
+      "body_read": true
+    },
+    {
+      "number": 5,
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "updated_at": "2026-11-12T12:11:25Z",
+      "body_read": true
+    }
+  ],
+  "active_discussions": [
+    {
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "comments_and_reviews": []
+    },
+    {
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "comments_and_reviews": []
+    },
+    {
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "comments_and_reviews": []
+    }
+  ],
+  "new_prs": [],
+  "merged_prs": [],
+  "handoffs": {
+    "wkq": {
+      "path": "docs/handoffs/data_eval/train1000_visual_draft_20261117.md",
+      "commit": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+      "findings": "language draft only; segmentation 10k/dev/test unchanged; source38309 label doubt, train-only near-duplicate29246/31540; no full segmentation release in latest handoff"
+    },
+    "wyz": {
+      "commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "reuse": "unchanged interfaces/accepted_baselines_and_weak_trial_20261112.md from prior reviewed snapshot"
+    },
+    "lcy": {
+      "path": "docs/handoffs/segmentation/expansion_control_20261117.md",
+      "note": "launch handoff more recent than PR2 preparation body; no server poll or alteration"
+    }
+  },
+  "mutations": "git fetch and separate worktree only at preflight; existing checkout files and training untouched"
+}

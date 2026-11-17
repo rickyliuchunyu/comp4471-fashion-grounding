@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "purpose": "full100_recovery_preparation",
+  "execution_authorized": false,
+  "same_run_invariants": [
+    "git_commit",
+    "config_sha256",
+    "training_manifest_sha256",
+    "training_annotation_sha256",
+    "mapping_sha256",
+    "max_updates",
+    "effective_batch_images",
+    "image_size",
+    "learning_rate_schedule"
+  ],
+  "restore_components": [
+    "model",
+    "optimizer",
+    "scheduler",
+    "scaler",
+    "sampler",
+    "rng",
+    "amp_recovery_state"
+  ],
+  "pre_restore": [
+    "checkpoint file SHA256 and sidecar agree",
+    "stored component digests agree",
+    "completed_updates equals scheduler completed_updates",
+    "checkpoint identity matches registered full-data run",
+    "checkpoint below requested absolute stop boundary"
+  ],
+  "post_restore": "compare all live component fingerprints using existing exact restore checks",
+  "resume_from": "latest_integrity_valid_recovery_checkpoint; not automatically best_AP_checkpoint",
+  "scheduler_reset": false,
+  "reinitialize_optimizer": false,
+  "restore_sampler_and_rng": true,
+  "amp": {
+    "reuse_existing_replay_policy": true,
+    "overflow_attempts_advance_schedule": false,
+    "overflow_attempts_count_as_new_data": false,
+    "policy_changes_require_new_record": true
+  },
+  "evaluation_recovery": "reuse valid report with exact cache identity; rerun only absent/failed evaluation; never retrain an existing valid checkpoint",
+  "new_attempt_output_directory": true,
+  "overwrite_prior_run": false,
+  "automatic_retries_or_extension": false,
+  "partial_gradient_resume": "unsupported; resume at optimizer boundary only",
+  "future_execution_requirements": [
+    "metadata-only train input reuse bound to completed acceptance, no whole-package re-audit on every resume",
+    "independent long-run wall-time policy without changing paired 5k/10k launcher",
+    "schedule train/eval boundaries and restore RNG exactly across evaluation",
+    "stream loss aggregates instead of accumulating unbounded in-memory loss_rows",
+    "resource/lock preflight and launch authorization",
+    "record checkpoint sizes and required disk capacity before launch"
+  ]
+}

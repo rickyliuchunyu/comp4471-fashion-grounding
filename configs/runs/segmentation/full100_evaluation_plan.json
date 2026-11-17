@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "purpose": "full100_evaluation_preparation",
+  "execution_authorized": false,
+  "evaluation_config_template": {
+    "purpose": "dev_checkpoint_selection",
+    "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "short_edge": 800,
+    "max_size": 1333,
+    "decoder": "upstream_instance",
+    "max_detections": 100,
+    "amp": false,
+    "run_scope": "full_fashionpedia_100ep_planned_complete_dev",
+    "budget_seconds": null
+  },
+  "dev_images": 250,
+  "dev_instances": 1008,
+  "evaluation_every_epochs": 2,
+  "primary_metric": "segm.AP",
+  "metric_scale": "0_to_100",
+  "selection": {
+    "maximize": "segm.AP",
+    "tie_break": "earliest_completed_update",
+    "require_complete_population": true,
+    "require_exact_checkpoint_sha256": true,
+    "partial_reports_eligible": false
+  },
+  "metrics": [
+    "AP",
+    "AP50",
+    "AP75",
+    "AP_small",
+    "AP_medium",
+    "AP_large",
+    "AP_per_class",
+    "AR100"
+  ],
+  "boundary_metrics": {
+    "status": "planned_separate_offline_adapter_not_implemented",
+    "implementation": "https://github.com/bowenc0221/boundary-iou-api",
+    "dilation_ratio": 0.02,
+    "not_equivalent_to_historical_thin_boundary_iou": true
+  },
+  "cache_identity": [
+    "checkpoint_sha256",
+    "train_image_manifest_sha256",
+    "train_annotation_sha256",
+    "dev_image_manifest_sha256",
+    "dev_annotation_sha256",
+    "evaluation_config_sha256",
+    "evaluator_source_commit"
+  ],
+  "reuse_completed_reports": true,
+  "evaluate_same_update_twice": false,
+  "train_diagnostic": {
+    "status": "not_selected",
+    "images": 256,
+    "selection_seed": 42,
+    "selection": "deterministic_train_only_stratified_before_predictions",
+    "frequency_epochs": 10,
+    "selection_metric": false,
+    "inference_settings": "same_as_dev",
+    "manifest_sha256": null
+  },
+  "confirmation_set": {
+    "status": "not_released",
+    "source": "unassigned_official_validation_groups_only",
+    "used_for_checkpoint_selection": false,
+    "images": null
+  },
+  "test400": {
+    "evaluate_during_development": false,
+    "inspect_images_or_labels_during_preparation": false
+  },
+  "candidate_thresholds_affect_standard_ap": false,
+  "candidate_export": "after_segmentation_checkpoint_selection_only",
+  "dev_annotation_policy": "preserve_v1; any adjudicated_v2 requires separately pinned protocol and comparable reports; never silently mix versions"
+}
