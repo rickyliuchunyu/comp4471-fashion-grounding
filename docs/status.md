@@ -1,8 +1,10 @@
 # 当前进度与下一步
 
+最新停止（2026-11-17 15:08 HKT）：用户因耗时要求停止当前对照，已停止D10k和整组控制器，无自动重启；GPU 0MiB、无计算进程、共享锁释放。C5k已完成20k及完整dev，组内选择20k AP=64.695685，四份checkpoint/预测/日志保留；D10k未完成、无保存权重，不得据此给出数据量对照结论。此前按原上限完成的继续安排已撤回，完整数据100epoch也未启动。[停止记录](handoffs/segmentation/expansion_user_stop_20261117.md)。
+
 最新接线（2026-11-17）：[完整Fashionpedia / R50 100-epoch执行入口](handoffs/segmentation/full100_runtime_20261117.md)已在独立`segmentation/full100-runtime`分支实现。默认只准备；每epoch保存、每2epoch完整dev、失败后显式恢复并复用已完成评价，21项不同的新增CPU案例通过。实际完整包及正式冻结/接收尚缺，`ready_for_training=false`；新GPU训练/推理/模型恢复未实跑，未重复smoke。原5k/10k配置/代码及上限均不变。此前[准备交接](handoffs/segmentation/full_fashionpedia_100ep_preparation_20261117.md)保留历史状态。
 
-原分支运行（本轮14:58 HKT只读复核C5k仍running，2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 已按用户授权启动，执行源 `dc2fba4`。C5k 于12:40 HKT启动，D10k须待C5k全链路成功后执行；两组各20k成功更新、保存的10k/20k完整dev，每组总硬上限3小时、失败即停不延长。尚无本轮AP结果；旧工程检查和数据验收复用，未重复smoke。
+历史运行快照（14:58 HKT C5k仍running；15:08已按上文停止整组，2026-11-17）：[5k/10k受控对照](handoffs/segmentation/expansion_control_20261117.md) 已按用户授权启动，执行源 `dc2fba4`。C5k 于12:40 HKT启动，D10k须待C5k全链路成功后执行；两组各20k成功更新、保存的10k/20k完整dev，每组总硬上限3小时、失败即停不延长。尚无本轮AP结果；旧工程检查和数据验收复用，未重复smoke。
 
 上一轮（2026-11-16）：[5k/10k 证据复用与统一硬超时入口](handoffs/segmentation/expansion_execution_preparation_20261116.md) **implemented / preparation_checked，未启动训练**。最终代码`e38b836`，服务器准备源`8b522a2`；新增11个CPU案例本地10项、服务器Linux专属1项通过；真实5k/10k证据组合读取通过，未打开图片或解码mask。两组各20k成功更新，保存的10k/20k各评完整dev250；每组单一3小时截止时间、整对最多6小时，不自动延长/重启，失败不继续下一组。默认仅准备；训练/推理/旧smoke均为0。
 
@@ -41,7 +43,7 @@
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | wyz已有B0/B1/B2/M1；wkq已在642条审核dev上完成固定B1/B2/M1的GT及预测候选评价，复用u18000/0.3 | B2仍固定lambda=1未正式选模；M2及完整消融未完成，非最终test | A/B |
 | P4 数据扩充冻结 | in_progress | 分割5000/250已固定；定向10k增量技术接收通过；642条语言dev已有人工审核记录，保留机器初标来源 | 完整分割train发布、正式冻结及增量接收待补；语言另9组待处理，最终test描述未齐；语言进度不阻塞分割准备 | B，全员 |
-| P5-S 分割训练 | in_progress | S0及min_scale完成，选B20k AP=63.7930；本轮1024 AP=62.2498，保留800；已有18k候选/0.3/B1联调 | 新B候选未导出，现有候选仍18k；小目标/边界与弱细类仍待改善；10k已技术接收，等配方5k/10k原上限运行；完整数据100epoch接线CPU通过，实际数据冻结及GPU验证待补 | lcy |
+| P5-S 分割训练 | in_progress | S0及min_scale完成，选B20k AP=63.7930；本轮1024 AP=62.2498，保留800；已有18k候选/0.3/B1联调 | 新B候选未导出，现有候选仍18k；小目标/边界与弱细类仍待改善；10k已技术接收，C5k已完成、D10k按用户要求中断，无有效配对比较；完整数据100epoch接线CPU通过，实际数据冻结及GPU验证待补 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42机器弱标签试训][wyz-latest]已完成；本轮固定语言dev可用于明确标记的开发对照 | M2实现及M1/M2三种子公平对照、实际dev选模尚未完成；使用查询须保留本次授权依据及原始来源 | A |
 | P6 联调与对照 | in_progress | lcy历史B1联调保留；wkq最新642查询上GT/预测B1/B2/M1六项开发评价已汇总 | M2/空间消融、E1、其余公平对照与demo未完成；队友下游本人接收待确认 | 全员分责 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -55,7 +57,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 原5k/10k按原上限完成；接收完整Fashionpedia并闭合冻结后准备启动 | 新100epoch入口、每2epoch完整dev、显式恢复已CPU检查；复用旧工程证据 | 完整包实际N/hash、冻结/受影响输入接收尚缺；新GPU接线未实跑，暂不启动 | [100epoch运行接线](handoffs/segmentation/full100_runtime_20261117.md)、[原对照](handoffs/segmentation/expansion_control_20261117.md) |
+| lcy | 当前训练已按用户要求停止；保留C5k结果，继续完整数据准备须沿既定范围 | 新100epoch入口、每2epoch完整dev、显式恢复已CPU检查；复用旧工程证据 | 完整包实际N/hash、冻结/受影响输入接收尚缺；新GPU接线未实跑，暂不启动 | [100epoch运行接线](handoffs/segmentation/full100_runtime_20261117.md)、[原对照](handoffs/segmentation/expansion_control_20261117.md) |
 | wyz（A）/ grounding | 接收wkq的642查询审核dev和固定B1/B2/M1开发评价，继续M2及公平对照 | 原18k/0.3候选已由wkq复用；已有旧M1与新审核数据可比较，保留模型/数据来源 | wkq代为调用不等于wyz本人接收；M2、正式B2选模及多种子对照未完成 | [wkq评价][wkq-reviewed-dev]、[wyz交接][wyz-latest]、PR #5 |
 | wkq（B）/ data_eval | 发布完整分割train的源清单、排除/裁决、冻结记录；补语言9组待处理 | 已有642条accepted语言dev及B1/B2/M1开发评价；不改原dev/test或当前对照 | 完整分割包尚未发布；最终test描述、M2等方法未齐，不把开发评价当最终结果 | [wkq最新交接][wkq-reviewed-dev]、[完整分割冻结清单](../configs/runs/segmentation/full_fashionpedia_freeze_checklist.json) |
 
@@ -69,7 +71,7 @@
 | 文件交接例及检查器 | locally_checked，仅合成夹具 | [规范补齐交接](handoffs/contract_readiness.md) |
 | 模型代码/数据转换器 | 历史训练/AP/cache/export已运行；新增完整数据100epoch接线仅CPU验证，真实全量数据待冻结 | wkq已复用旧候选完成审核dev的B1/B2/M1开发评价；M2及最终test仍待完成 |
 | 实验结果 | B20k固定权重800→1024：AP63.7930→62.2498，AP_small10.7525→11.5257，严格小目标匹配35→49 | 保留800；中目标AP跌幅主要受1例skirt宏平均影响，不能泛称全面退化。历史18k语言候选/B1未重跑，非B20k语言结果或test |
-| GPU/环境/付费预算 | 14:58 HKT C5k仍running，原每组3小时/整对6小时且失败停；不延长或重启 | [本轮只读快照](handoffs/segmentation/evidence/full100_runtime_20261117/server_readonly.json)：RTX3090 5461MiB，数据盘162487693312bytes空闲；新full100未启动 |
+| GPU/环境/付费预算 | 15:08已按用户要求停止D10k与整组控制器；C5k完成，新full100未启动 | [停止复核](handoffs/segmentation/evidence/expansion_user_stop_20261117/verification.json)：GPU0MiB/0%，无计算进程，锁释放；不自动恢复，未关共享服务器 |
 | 成员简称与角色 | lcy / wyz（A）/ wkq（B）已确认 | [绑定记录](handoffs/team_aliases.md) |
 | GitHub 账号与服务器访问 | lcy：rickyliuchunyu；wkq：LE-brawl；wyz：MayI2004；lcy SSH 已验证 | lcy/wkq 对应 PR 作者；wkq 授权记录、wyz 本人登录/接受邀请见各自交接。两位队友远端运行已有记录，本次未独立验证其各自 SSH 凭据/权限 |
 | 公共权重 revision 与数据 manifest | 分割源码、pilot manifest、COCO 文件 hash，以及 SigLIP 2 revision/权重 hash 已固定；两模型实际加载有证据 | [分割来源记录](../envs/segmentation/upstream.json)；[SigLIP 2 来源与校验][wyz-handoff]（镜像传输、官方 API 核对）；train/dev 指纹及用户人工复核确认已登记消费者 freeze；原生产方历史 RELEASE 不改写 |
@@ -77,7 +79,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0、min_scale、B20k分辨率对照完成；当前整体AP选B20k＋800，旧18k候选/0.3及最小B1联调保持历史版本。1024对小目标严格形状有帮助，但未通过整体AP门槛，不继续扫描尺寸。wkq已按定向需求发布10k，lcy完成新增读取/旧5k保留/跨分区技术验收。等配方5k/10k执行接线现已实现，用户固定每组3小时、20k更新、10k/20k完整dev；本轮已按固定入口启动；完成后再依据真实AP判断，无10k收益预断。独立完整数据100epoch接线已CPU检查，实际完整包及冻结/增量接收仍待wkq交付；暂不启动。wyz继续M2，wkq已发布审核dev及固定B1/B2/M1开发结果，继续补9组查询及全量分割发布；不替队友训练、构建或宣告冻结。
+保持Fashionpedia八类、完整双语单目标和S0/B0/B1/B2/M1/M2/E1主线。S0、min_scale、B20k分辨率对照完成；当前整体AP选B20k＋800，旧18k候选/0.3及最小B1联调保持历史版本。1024对小目标严格形状有帮助，但未通过整体AP门槛，不继续扫描尺寸。wkq已按定向需求发布10k，lcy完成新增读取/旧5k保留/跨分区技术验收。等配方5k/10k执行接线现已实现，用户固定每组3小时、20k更新、10k/20k完整dev；已按固定入口运行；现因用户要求停止，C5k完成而D10k中断，不再自动推进，也无10k收益结论。独立完整数据100epoch接线已CPU检查，实际完整包及冻结/增量接收仍待wkq交付；暂不启动。wyz继续M2，wkq已发布审核dev及固定B1/B2/M1开发结果，继续补9组查询及全量分割发布；不替队友训练、构建或宣告冻结。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 
