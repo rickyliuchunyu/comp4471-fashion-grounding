@@ -1,0 +1,57 @@
+{
+  "record_schema_version": 1,
+  "status": "completed",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "experiment_id": "S0",
+  "split": "train",
+  "candidate_source": "none",
+  "seed": 42,
+  "run_id": "tenk-adaptation-20261117-r01",
+  "git_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "plan_sha256": "3daf833d3f3cf76ddfe88dfc4164dcb00802c8d6789b6ecab31679c1d9bef13f",
+  "started_at": "2026-11-17T09:24:15.236235+00:00",
+  "total_hard_seconds": 28800,
+  "per_segment_hard_seconds": 7200,
+  "deadline_monotonic": 25450260.65680926,
+  "worker_deadline_monotonic": 25450245.65680926,
+  "cleanup_reserve_seconds": 15,
+  "input_sha256": {
+    "configs/runs/segmentation/tenk_model_only_source.json": "9a787ae2b1824ab08dfc68d78d0012f3f94a65bb8e4bc1fad28a0cc95533388a",
+    "configs/runs/segmentation/expansion_input_train10000.json": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+    "configs/runs/segmentation/expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+    "docs/handoffs/segmentation/evidence/tenk_preparation_20261117/visibility_decision.json": "39cd96962665971ebdcdd3ff25ba39c4a9ca84e44a58ca22b4101631d79c6e28",
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+    "configs/runs/segmentation/tenk_adaptation_train_authorized_20261117.json": "f3cccf4a3597ce5cf8242aff1cb9494e2064071c73353c9f8067a52d976c2f74"
+  },
+  "training_authorized": true,
+  "automatic_restart": false,
+  "automatic_extension": false,
+  "model_only_source": {
+    "mode": "model_only",
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "source_completed_updates": 20000,
+    "source_training_data": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+    },
+    "source_config_sha256": "c4ea5cd7b0061db744d6d04c1c51fc755637cc5f54f8dd07bb7e6219782010da",
+    "source_git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+  },
+  "training_config_sha256": "2437450750f2d3b0114e3a670e7c919d45496f1bfb8eba4fc157757607925f2c",
+  "evaluation_config_sha256": "4d732d3d4cd81f12d9f6636c5674b4792bf6536ef8f7fe346ecd3e97a08feaff",
+  "training_data": {
+    "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+  },
+  "evaluation_data": {
+    "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+  },
+  "cached_baseline_report": "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json",
+  "evaluator_code_unchanged_from": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "stop_reason": "max_equivalent_epochs",
+  "elapsed_seconds": 21985.537612039596,
+  "finished_at": "2026-11-17T15:30:37.840470+00:00"
+}

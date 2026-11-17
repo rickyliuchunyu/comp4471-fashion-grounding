@@ -1,0 +1,65 @@
+{
+  "status": "completed",
+  "selection": {
+    "status": "complete_dev_selection",
+    "selected_origin": "tenk",
+    "selected_checkpoint": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+      "completed_updates": 50000,
+      "dev_mask_AP": 69.03133154819832,
+      "compared_updates": [
+        10000,
+        20000,
+        30000,
+        40000,
+        50000
+      ]
+    },
+    "new_run_best": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+      "completed_updates": 50000,
+      "dev_mask_AP": 69.03133154819832,
+      "compared_updates": [
+        10000,
+        20000,
+        30000,
+        40000,
+        50000
+      ]
+    },
+    "cached_baseline": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 64.69568513541032,
+      "compared_updates": [
+        20000
+      ]
+    },
+    "completed_equivalent_epochs": 10,
+    "consecutive_without_new_best": 0,
+    "stop_reason": "max_equivalent_epochs",
+    "cross_run_rule": "max_full_dev_mask_AP; keep cached baseline on tie",
+    "selected_minus_baseline": {
+      "AP": 4.335646412788009,
+      "AP_small": 12.059935859544574,
+      "AP75": 4.993738995739477
+    },
+    "per_category_AP": {
+      "1": 74.75571088260305,
+      "2": 82.78669756886613,
+      "3": 74.24623298338852,
+      "4": 74.64255551083302,
+      "5": 83.21812680452359,
+      "6": 58.493510752658864,
+      "7": 57.706312247587,
+      "8": 46.40150563512641
+    },
+    "further_diagnostics": "Reuse saved predictions for small-target matches and boundary analysis; not computed by this selector"
+  }
+}

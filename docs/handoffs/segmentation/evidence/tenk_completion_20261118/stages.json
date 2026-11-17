@@ -1,0 +1,107 @@
+[
+  {
+    "equivalent_epoch": 2,
+    "update": 10000,
+    "status": "completed",
+    "deadline_monotonic": 25428664.610881273,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4530.215119358152
+  },
+  {
+    "equivalent_epoch": 4,
+    "update": 20000,
+    "status": "completed",
+    "deadline_monotonic": 25433194.826413695,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4395.539075173438
+  },
+  {
+    "equivalent_epoch": 6,
+    "update": 30000,
+    "status": "completed",
+    "deadline_monotonic": 25437590.36610989,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4349.90637492016
+  },
+  {
+    "equivalent_epoch": 8,
+    "update": 40000,
+    "status": "completed",
+    "deadline_monotonic": 25441940.272983752,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4323.03992176801
+  },
+  {
+    "equivalent_epoch": 10,
+    "update": 50000,
+    "status": "completed",
+    "deadline_monotonic": 25446263.313459672,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4382.448683798313
+  }
+]
