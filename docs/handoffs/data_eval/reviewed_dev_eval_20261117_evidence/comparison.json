@@ -1,0 +1,92 @@
+{
+  "gt-B1": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": 0.9018691588785047,
+    "predicted_selection_accuracy": null,
+    "conditional_selection_accuracy": null,
+    "matched_candidate_coverage": null,
+    "geometric_recall_at_0_5": 1.0,
+    "mean_target_mask_iou": 0.9026269506365687,
+    "success_at_0_5": 0.9018691588785047,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.8527085041440344
+  },
+  "gt-B2": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": 0.9190031152647975,
+    "predicted_selection_accuracy": null,
+    "conditional_selection_accuracy": null,
+    "matched_candidate_coverage": null,
+    "geometric_recall_at_0_5": 1.0,
+    "mean_target_mask_iou": 0.9197608829997829,
+    "success_at_0_5": 0.9190031152647975,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.910860678057078
+  },
+  "gt-M1": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": 0.9158878504672897,
+    "predicted_selection_accuracy": null,
+    "conditional_selection_accuracy": null,
+    "matched_candidate_coverage": null,
+    "geometric_recall_at_0_5": 1.0,
+    "mean_target_mask_iou": 0.9163223093398479,
+    "success_at_0_5": 0.9158878504672897,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.854439757485036
+  },
+  "predicted-B1": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": null,
+    "predicted_selection_accuracy": 0.6931464174454829,
+    "conditional_selection_accuracy": 0.7672413793103449,
+    "matched_candidate_coverage": 0.9034267912772586,
+    "geometric_recall_at_0_5": 0.940809968847352,
+    "mean_target_mask_iou": 0.7569544950124512,
+    "success_at_0_5": 0.7975077881619937,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.6512574497820789
+  },
+  "predicted-B2": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": null,
+    "predicted_selection_accuracy": 0.6993769470404985,
+    "conditional_selection_accuracy": 0.7741379310344828,
+    "matched_candidate_coverage": 0.9034267912772586,
+    "geometric_recall_at_0_5": 0.940809968847352,
+    "mean_target_mask_iou": 0.7631304439931857,
+    "success_at_0_5": 0.8037383177570093,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.6762574497820789
+  },
+  "predicted-M1": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": null,
+    "predicted_selection_accuracy": 0.7149532710280374,
+    "conditional_selection_accuracy": 0.7913793103448276,
+    "matched_candidate_coverage": 0.9034267912772586,
+    "geometric_recall_at_0_5": 0.940809968847352,
+    "mean_target_mask_iou": 0.7875664312734293,
+    "success_at_0_5": 0.838006230529595,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.6348295171835878
+  }
+}

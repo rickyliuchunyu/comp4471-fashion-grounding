@@ -1,0 +1,43 @@
+{
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "predictions_sha256": "b90527fe6c73d248ff52b2200e6fb676d8418491301cff33f16aaf03e2471d67",
+  "candidates_sha256": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+  "annotations_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+  "split": "dev",
+  "scope": "evaluation",
+  "run_id": "wkq-dev-gt-M1-20261117-r01",
+  "owner": "data_eval",
+  "executed_by": "wkq",
+  "method": "M1",
+  "candidate_source": "gt",
+  "summary": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": 0.9158878504672897,
+    "predicted_selection_accuracy": null,
+    "conditional_selection_accuracy": null,
+    "matched_candidate_coverage": null,
+    "geometric_recall_at_0_5": 1.0,
+    "mean_target_mask_iou": 0.9163223093398479,
+    "success_at_0_5": 0.9158878504672897,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.854439757485036
+  },
+  "status": "completed",
+  "input_scope": "321 agreed bilingual groups; 9 pending excluded before inference",
+  "inference_metadata": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01/run_metadata.json",
+  "source_hashes": {
+    "scripts/publish_reviewed_dev.py": "ca9e44cdbddd627d13ed1d18285693692a510749fa35ad04884706160a9c6499",
+    "scripts/score_reviewed_dev.py": "c6e19312b433d0083f5128000d4c87b856c870331cfd08fe1389ed5d161568d8",
+    "scripts/analyze_reviewed_dev.py": "f19b5b80c321999ffc871f646be487983a8ccc5045aac83fe552e933c1737954",
+    "scripts/evaluate_existing_grounding.py": "0243c24f1f216a7d76e79905e6c806c910854a6808f8b0de44868691d0091d94",
+    "scripts/check_existing_grounding_adapter.py": "51073362b0fe2e942c167b0fd7bc3d60e9dd6348eadda4020b9cc746f4a789c3",
+    "scripts/render_dev_errors.py": "a1ce7977fcba122b8a0f0a7644b07d4bb6239d6ea157f5509c687ea88df570a9",
+    "scripts/evaluate_predictions.py": "498fb9fc8a2c0998e0d83ae5e4f90aeb74e24dee5a60952abcab570cc38abd86",
+    "src/fashion_grounding/evaluation/metrics.py": "acc8accb44efcfe4ca2d70f5a93083a532b870fb0d0779067c30bb3ab6f05a6d",
+    "src/fashion_grounding/evaluation/matching.py": "0e32cfcae696968f0097b0e1e260b9287b3c2ea2c7d1530ee01adbf48f95f018"
+  },
+  "rules": "B2 lambda=1 fixed diagnostic; M1 old v2 seed42 epoch5; segmentation published u18000+0.3"
+}

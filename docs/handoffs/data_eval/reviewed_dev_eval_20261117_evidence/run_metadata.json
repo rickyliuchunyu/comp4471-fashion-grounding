@@ -1,0 +1,93 @@
+{
+  "owner": "data_eval",
+  "executed_by": "wkq",
+  "status": "completed",
+  "device": "cpu",
+  "threads": 4,
+  "checkpoint_sha256": "ed320169fafc0218ed99ce42cc003c2af7416853972c38db05960e856b888050",
+  "query_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "encoder": {
+    "model_id": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "files": {
+      "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+      "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+      "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+      "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+    },
+    "processor_class": "SiglipProcessor",
+    "versions": {
+      "transformers": "4.51.3",
+      "tokenizers": "0.21.4",
+      "torch": "2.1.2+cu121",
+      "torchvision": "0.16.2+cu121",
+      "Pillow": "10.2.0",
+      "sentencepiece": "0.2.0",
+      "numpy": "1.26.4"
+    },
+    "dtype": "float32",
+    "attention": "eager",
+    "device": "cpu",
+    "max_length": 64,
+    "dimension": 768,
+    "logit_scale": 4.724453449249268,
+    "logit_bias": -16.771724700927734,
+    "padding": "max_length",
+    "truncation": false
+  },
+  "training_encoder_device": "cuda",
+  "optimizer_updates": 0,
+  "source_commit": "4bbd7f3f30e92df8c7d23beabc5ce0ba814716e0",
+  "adapter_sha256": "0243c24f1f216a7d76e79905e6c806c910854a6808f8b0de44868691d0091d94",
+  "grounding_source_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+  "parameter_policy": "fixed epoch5 and B2 lambda1; no search/early stopping/label revision from predictions",
+  "segmentation_policy": "reuse published u18000+0.3 predictions; no new segmentation forwards",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+    "scripts/evaluate_existing_grounding.py",
+    "--grounding-source",
+    "/root/autodl-tmp/fashion-grounding/workspaces/grounding",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/runs/grounding/M1-weak-train-20261112-r01/epoch_05.pt",
+    "--queries",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl",
+    "--gt-candidates",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json",
+    "--predicted-candidates",
+    "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-20261115-r01/trial-0.3/candidates_predicted.json",
+    "--snapshot",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "--revision",
+    "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01"
+  ],
+  "results": {
+    "gt": {
+      "images": 246,
+      "queries": 642,
+      "candidate_sha256": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+      "predictions": {
+        "B1": "9a02580af1ccc49070a7aa70adf310e45cfd0d891d167755a5a2340949f7a988",
+        "B2": "ece144817fd9c3d21c6d587ab846283be5344bab4d551c6c12e5eca0302e1fb8",
+        "M1": "b90527fe6c73d248ff52b2200e6fb676d8418491301cff33f16aaf03e2471d67"
+      },
+      "seconds": 126.47664868459105
+    },
+    "predicted": {
+      "images": 246,
+      "queries": 642,
+      "candidate_sha256": "dfb06d6ca67b77901dcb25107d5dcedde7fdc2a761d4a66257522400dd64b32d",
+      "predictions": {
+        "B1": "44b2278679a1d453a125c85dc6817b36d49ba588f937853eb3d77929c18aedc7",
+        "B2": "b0c8878cca36be751dde41cfed6e88d1f325dadbe6b5c0070b72a29efd62c5d3",
+        "M1": "eae5f4d1ac442c9b48c7b29b00772a4cb31b139317a1f1930a968bae520096c5"
+      },
+      "seconds": 270.2689460217953
+    }
+  },
+  "elapsed_seconds": 270.2693556882441
+}

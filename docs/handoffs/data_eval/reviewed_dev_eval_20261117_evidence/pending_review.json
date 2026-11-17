@@ -1,0 +1,302 @@
+{
+  "rows": [
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0052",
+      "query_ids": [
+        "fp_language_dev250_visual_draft_v3-v0052-zh",
+        "fp_language_dev250_visual_draft_v3-v0052-en"
+      ],
+      "image_id": 1000017313,
+      "queries": {
+        "zh": "棕色开衫",
+        "en": "the brown cardigan"
+      },
+      "draft_target": 1000001910,
+      "human_target": 1000001911,
+      "status": "target_disagreement",
+      "note": "",
+      "edited_queries": {
+        "zh": "棕色开衫",
+        "en": "the brown cardigan"
+      },
+      "checks": {
+        "unique": true,
+        "translation": true,
+        "mask": true
+      },
+      "answer_disclosed": false,
+      "target_agrees": false,
+      "proposed_annotation_id": 1000001911,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 4,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0084",
+      "query_ids": [
+        "fp_language_dev250_visual_draft_v3-v0084-zh",
+        "fp_language_dev250_visual_draft_v3-v0084-en"
+      ],
+      "image_id": 1000016667,
+      "queries": {
+        "zh": "浅灰色印花上衣",
+        "en": "the light gray printed top"
+      },
+      "draft_target": 1000002933,
+      "human_target": 1000002936,
+      "status": "target_disagreement",
+      "note": "",
+      "edited_queries": {
+        "zh": "浅灰色印花上衣",
+        "en": "the light gray printed top"
+      },
+      "checks": {
+        "unique": true,
+        "translation": true,
+        "mask": true
+      },
+      "answer_disclosed": false,
+      "target_agrees": false,
+      "proposed_annotation_id": 1000002936,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 1,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev250_visual_draft_v3-v0222",
+      "query_ids": [
+        "fp_language_dev250_visual_draft_v3-v0222-zh",
+        "fp_language_dev250_visual_draft_v3-v0222-en"
+      ],
+      "image_id": 1000020168,
+      "queries": {
+        "zh": "橙色短连衣裙",
+        "en": "the short orange dress"
+      },
+      "draft_target": 1000004691,
+      "human_target": null,
+      "status": "needs_revision",
+      "note": "这不是粉色，是偏橙色的感觉",
+      "edited_queries": {
+        "zh": "橙色短连衣裙",
+        "en": "the short orange dress"
+      },
+      "checks": {
+        "unique": false,
+        "translation": false,
+        "mask": false
+      },
+      "answer_disclosed": false,
+      "target_agrees": null,
+      "proposed_annotation_id": 1000004691,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 5,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00010",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00010-zh",
+        "fp_language_dev_draft_v2-q00010-en"
+      ],
+      "image_id": 1000017379,
+      "queries": {
+        "zh": "黑色的夹克",
+        "en": "the black jacket"
+      },
+      "draft_target": 1000001948,
+      "human_target": 1000001952,
+      "status": "target_disagreement",
+      "note": "",
+      "edited_queries": {
+        "zh": "黑色的夹克",
+        "en": "the black jacket"
+      },
+      "checks": {
+        "unique": true,
+        "translation": true,
+        "mask": true
+      },
+      "answer_disclosed": false,
+      "target_agrees": false,
+      "proposed_annotation_id": 1000001952,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 4,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00021",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00021-zh",
+        "fp_language_dev_draft_v2-q00021-en"
+      ],
+      "image_id": 1000015529,
+      "queries": {
+        "zh": "黑色的包",
+        "en": "the black bag"
+      },
+      "draft_target": 1000000415,
+      "human_target": null,
+      "status": "not_reviewed",
+      "note": "",
+      "edited_queries": {
+        "zh": "黑色的包",
+        "en": "the black bag"
+      },
+      "checks": {
+        "unique": false,
+        "translation": false,
+        "mask": false
+      },
+      "answer_disclosed": false,
+      "target_agrees": null,
+      "proposed_annotation_id": null,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 7,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00023",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00023-zh",
+        "fp_language_dev_draft_v2-q00023-en"
+      ],
+      "image_id": 1000009610,
+      "queries": {
+        "zh": "黑色腰带",
+        "en": "the black belt"
+      },
+      "draft_target": 1000005855,
+      "human_target": null,
+      "status": "not_reviewed",
+      "note": "",
+      "edited_queries": {
+        "zh": "黑色腰带",
+        "en": "the black belt"
+      },
+      "checks": {
+        "unique": false,
+        "translation": false,
+        "mask": false
+      },
+      "answer_disclosed": false,
+      "target_agrees": null,
+      "proposed_annotation_id": null,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 8,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00034",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00034-zh",
+        "fp_language_dev_draft_v2-q00034-en"
+      ],
+      "image_id": 1000017770,
+      "queries": {
+        "zh": "黑色短裤",
+        "en": "the black shorts"
+      },
+      "draft_target": 1000002299,
+      "human_target": 1000002305,
+      "status": "target_disagreement",
+      "note": "",
+      "edited_queries": {
+        "zh": "黑色短裤",
+        "en": "the black shorts"
+      },
+      "checks": {
+        "unique": true,
+        "translation": true,
+        "mask": true
+      },
+      "answer_disclosed": false,
+      "target_agrees": false,
+      "proposed_annotation_id": 1000002305,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 2,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00103",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00103-zh",
+        "fp_language_dev_draft_v2-q00103-en"
+      ],
+      "image_id": 1000009549,
+      "queries": {
+        "zh": "蓝色的长裤",
+        "en": "the blue trousers"
+      },
+      "draft_target": 1000006655,
+      "human_target": null,
+      "status": "needs_revision",
+      "note": "mask只显示了一条腿",
+      "edited_queries": {
+        "zh": "蓝色的长裤",
+        "en": "the blue trousers"
+      },
+      "checks": {
+        "unique": false,
+        "translation": false,
+        "mask": false
+      },
+      "answer_disclosed": false,
+      "target_agrees": null,
+      "proposed_annotation_id": 1000006655,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 2,
+      "same_category_instance_count": 1
+    },
+    {
+      "semantic_query_id": "fp_language_dev_draft_v2-q00143",
+      "query_ids": [
+        "fp_language_dev_draft_v2-q00143-zh",
+        "fp_language_dev_draft_v2-q00143-en"
+      ],
+      "image_id": 1000010472,
+      "queries": {
+        "zh": "粉色花纹无袖上衣",
+        "en": "the pink patterned sleeveless top"
+      },
+      "draft_target": 1000006474,
+      "human_target": null,
+      "status": "not_reviewed",
+      "note": "",
+      "edited_queries": {
+        "zh": "粉色花纹无袖上衣",
+        "en": "the pink patterned sleeveless top"
+      },
+      "checks": {
+        "unique": true,
+        "translation": true,
+        "mask": true
+      },
+      "answer_disclosed": false,
+      "target_agrees": null,
+      "proposed_annotation_id": 1000006474,
+      "query_types": [
+        "appearance"
+      ],
+      "target_category_id": 1,
+      "same_category_instance_count": 1
+    }
+  ],
+  "model_results_used_for_decisions": false
+}
