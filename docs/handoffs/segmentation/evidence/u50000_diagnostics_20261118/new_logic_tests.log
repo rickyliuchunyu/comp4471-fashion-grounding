@@ -1,0 +1,8 @@
+test_residual_partition_precedence (test_50k_residual_diagnostics.ResidualDerivation) ... ok
+test_threshold_and_empty_and_competition (test_50k_residual_diagnostics.ResidualDerivation) ... ok
+test_ties_and_class_match_existing_mask_matcher (test_50k_residual_diagnostics.ResidualDerivation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
