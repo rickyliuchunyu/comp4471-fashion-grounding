@@ -1,0 +1,843 @@
+{
+  "candidate_source": "gt",
+  "summary": {
+    "queries": 642,
+    "images": 246,
+    "oracle_selection_accuracy": 0.9190031152647975,
+    "predicted_selection_accuracy": null,
+    "conditional_selection_accuracy": null,
+    "matched_candidate_coverage": null,
+    "geometric_recall_at_0_5": 1.0,
+    "mean_target_mask_iou": 0.9197608829997829,
+    "success_at_0_5": 0.9190031152647975,
+    "status_counts": {
+      "success": 642
+    },
+    "macro_category_accuracy": 0.910860678057078
+  },
+  "groups": {
+    "language": {
+      "en": {
+        "queries": 321,
+        "images": 246,
+        "oracle_selection_accuracy": 0.9314641744548287,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9323485090936753,
+        "success_at_0_5": 0.9314641744548287,
+        "status_counts": {
+          "success": 321
+        }
+      },
+      "zh": {
+        "queries": 321,
+        "images": 246,
+        "oracle_selection_accuracy": 0.9065420560747663,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9071732569058898,
+        "success_at_0_5": 0.9065420560747663,
+        "status_counts": {
+          "success": 321
+        }
+      }
+    },
+    "category_id": {
+      "1": {
+        "queries": 146,
+        "images": 73,
+        "oracle_selection_accuracy": 0.910958904109589,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9109663771893185,
+        "success_at_0_5": 0.910958904109589,
+        "status_counts": {
+          "success": 146
+        }
+      },
+      "2": {
+        "queries": 68,
+        "images": 34,
+        "oracle_selection_accuracy": 0.9705882352941176,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9705882352941176,
+        "success_at_0_5": 0.9705882352941176,
+        "status_counts": {
+          "success": 68
+        }
+      },
+      "3": {
+        "queries": 36,
+        "images": 18,
+        "oracle_selection_accuracy": 0.9722222222222222,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9722222222222222,
+        "success_at_0_5": 0.9722222222222222,
+        "status_counts": {
+          "success": 36
+        }
+      },
+      "4": {
+        "queries": 68,
+        "images": 34,
+        "oracle_selection_accuracy": 0.7941176470588235,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.7974948961621182,
+        "success_at_0_5": 0.7941176470588235,
+        "status_counts": {
+          "success": 68
+        }
+      },
+      "5": {
+        "queries": 182,
+        "images": 91,
+        "oracle_selection_accuracy": 0.9615384615384616,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9623336542131646,
+        "success_at_0_5": 0.9615384615384616,
+        "status_counts": {
+          "success": 182
+        }
+      },
+      "6": {
+        "queries": 20,
+        "images": 6,
+        "oracle_selection_accuracy": 0.9,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9,
+        "success_at_0_5": 0.9,
+        "status_counts": {
+          "success": 20
+        }
+      },
+      "7": {
+        "queries": 46,
+        "images": 22,
+        "oracle_selection_accuracy": 0.8695652173913043,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8695719000345048,
+        "success_at_0_5": 0.8695652173913043,
+        "status_counts": {
+          "success": 46
+        }
+      },
+      "8": {
+        "queries": 76,
+        "images": 37,
+        "oracle_selection_accuracy": 0.9078947368421053,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9093514527475383,
+        "success_at_0_5": 0.9078947368421053,
+        "status_counts": {
+          "success": 76
+        }
+      }
+    },
+    "source_category": {
+      "bag, wallet": {
+        "queries": 46,
+        "images": 22,
+        "oracle_selection_accuracy": 0.8695652173913043,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8695719000345048,
+        "success_at_0_5": 0.8695652173913043,
+        "status_counts": {
+          "success": 46
+        }
+      },
+      "belt": {
+        "queries": 12,
+        "images": 6,
+        "oracle_selection_accuracy": 0.9166666666666666,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9257838901539964,
+        "success_at_0_5": 0.9166666666666666,
+        "status_counts": {
+          "success": 12
+        }
+      },
+      "cape": {
+        "queries": 4,
+        "images": 2,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 4
+        }
+      },
+      "cardigan": {
+        "queries": 6,
+        "images": 3,
+        "oracle_selection_accuracy": 0.8333333333333334,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8333333333333334,
+        "success_at_0_5": 0.8333333333333334,
+        "status_counts": {
+          "success": 6
+        }
+      },
+      "coat": {
+        "queries": 20,
+        "images": 10,
+        "oracle_selection_accuracy": 0.7,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.7113855489922365,
+        "success_at_0_5": 0.7,
+        "status_counts": {
+          "success": 20
+        }
+      },
+      "dress": {
+        "queries": 182,
+        "images": 91,
+        "oracle_selection_accuracy": 0.9615384615384616,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9623336542131646,
+        "success_at_0_5": 0.9615384615384616,
+        "status_counts": {
+          "success": 182
+        }
+      },
+      "glasses": {
+        "queries": 12,
+        "images": 6,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 12
+        }
+      },
+      "hat": {
+        "queries": 14,
+        "images": 7,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 14
+        }
+      },
+      "headband, head covering, hair accessory": {
+        "queries": 12,
+        "images": 6,
+        "oracle_selection_accuracy": 0.9166666666666666,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9167067777501398,
+        "success_at_0_5": 0.9166666666666666,
+        "status_counts": {
+          "success": 12
+        }
+      },
+      "jacket": {
+        "queries": 38,
+        "images": 19,
+        "oracle_selection_accuracy": 0.8157894736842105,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8158405778731397,
+        "success_at_0_5": 0.8157894736842105,
+        "status_counts": {
+          "success": 38
+        }
+      },
+      "pants": {
+        "queries": 48,
+        "images": 24,
+        "oracle_selection_accuracy": 0.9791666666666666,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9791666666666666,
+        "success_at_0_5": 0.9791666666666666,
+        "status_counts": {
+          "success": 48
+        }
+      },
+      "scarf": {
+        "queries": 16,
+        "images": 8,
+        "oracle_selection_accuracy": 0.6875,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.6875513996227042,
+        "success_at_0_5": 0.6875,
+        "status_counts": {
+          "success": 16
+        }
+      },
+      "shirt, blouse": {
+        "queries": 26,
+        "images": 13,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 26
+        }
+      },
+      "shoe": {
+        "queries": 20,
+        "images": 6,
+        "oracle_selection_accuracy": 0.9,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9,
+        "success_at_0_5": 0.9,
+        "status_counts": {
+          "success": 20
+        }
+      },
+      "shorts": {
+        "queries": 20,
+        "images": 10,
+        "oracle_selection_accuracy": 0.95,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.95,
+        "success_at_0_5": 0.95,
+        "status_counts": {
+          "success": 20
+        }
+      },
+      "skirt": {
+        "queries": 36,
+        "images": 18,
+        "oracle_selection_accuracy": 0.9722222222222222,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9722222222222222,
+        "success_at_0_5": 0.9722222222222222,
+        "status_counts": {
+          "success": 36
+        }
+      },
+      "sweater": {
+        "queries": 6,
+        "images": 3,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 6
+        }
+      },
+      "top, t-shirt, sweatshirt": {
+        "queries": 108,
+        "images": 54,
+        "oracle_selection_accuracy": 0.8981481481481481,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8981574965966361,
+        "success_at_0_5": 0.8981481481481481,
+        "status_counts": {
+          "success": 108
+        }
+      },
+      "umbrella": {
+        "queries": 2,
+        "images": 1,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 2
+        }
+      },
+      "vest": {
+        "queries": 6,
+        "images": 3,
+        "oracle_selection_accuracy": 0.6666666666666666,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.6666802395339619,
+        "success_at_0_5": 0.6666666666666666,
+        "status_counts": {
+          "success": 6
+        }
+      },
+      "watch": {
+        "queries": 8,
+        "images": 3,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 8
+        }
+      }
+    },
+    "query_types": {
+      "appearance": {
+        "queries": 606,
+        "images": 241,
+        "oracle_selection_accuracy": 0.9224422442244224,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9232449172858185,
+        "success_at_0_5": 0.9224422442244224,
+        "status_counts": {
+          "success": 606
+        }
+      },
+      "combined": {
+        "queries": 26,
+        "images": 10,
+        "oracle_selection_accuracy": 0.8846153846153846,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8846179619482576,
+        "success_at_0_5": 0.8846153846153846,
+        "status_counts": {
+          "success": 26
+        }
+      },
+      "spatial": {
+        "queries": 10,
+        "images": 3,
+        "oracle_selection_accuracy": 0.8,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8,
+        "success_at_0_5": 0.8,
+        "status_counts": {
+          "success": 10
+        }
+      }
+    },
+    "candidate_count": {
+      "1": {
+        "queries": 40,
+        "images": 20,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 40
+        }
+      },
+      "10": {
+        "queries": 4,
+        "images": 2,
+        "oracle_selection_accuracy": 0.75,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.7500270425044541,
+        "success_at_0_5": 0.75,
+        "status_counts": {
+          "success": 4
+        }
+      },
+      "12": {
+        "queries": 2,
+        "images": 1,
+        "oracle_selection_accuracy": 0.5,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.5000145851260884,
+        "success_at_0_5": 0.5,
+        "status_counts": {
+          "success": 2
+        }
+      },
+      "2": {
+        "queries": 56,
+        "images": 23,
+        "oracle_selection_accuracy": 0.9285714285714286,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9287007891561381,
+        "success_at_0_5": 0.9285714285714286,
+        "status_counts": {
+          "success": 56
+        }
+      },
+      "3": {
+        "queries": 126,
+        "images": 56,
+        "oracle_selection_accuracy": 0.9682539682539683,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9682637516096169,
+        "success_at_0_5": 0.9682539682539683,
+        "status_counts": {
+          "success": 126
+        }
+      },
+      "4": {
+        "queries": 158,
+        "images": 59,
+        "oracle_selection_accuracy": 0.9620253164556962,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9631870560822432,
+        "success_at_0_5": 0.9620253164556962,
+        "status_counts": {
+          "success": 158
+        }
+      },
+      "5": {
+        "queries": 120,
+        "images": 43,
+        "oracle_selection_accuracy": 0.9,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9013739377839599,
+        "success_at_0_5": 0.9,
+        "status_counts": {
+          "success": 120
+        }
+      },
+      "6": {
+        "queries": 80,
+        "images": 24,
+        "oracle_selection_accuracy": 0.825,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8260144277577245,
+        "success_at_0_5": 0.825,
+        "status_counts": {
+          "success": 80
+        }
+      },
+      "7": {
+        "queries": 18,
+        "images": 8,
+        "oracle_selection_accuracy": 0.8888888888888888,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8915497821147643,
+        "success_at_0_5": 0.8888888888888888,
+        "status_counts": {
+          "success": 18
+        }
+      },
+      "8": {
+        "queries": 26,
+        "images": 7,
+        "oracle_selection_accuracy": 0.8076923076923077,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.807697393112104,
+        "success_at_0_5": 0.8076923076923077,
+        "status_counts": {
+          "success": 26
+        }
+      },
+      "9": {
+        "queries": 12,
+        "images": 3,
+        "oracle_selection_accuracy": 0.75,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.750021894613925,
+        "success_at_0_5": 0.75,
+        "status_counts": {
+          "success": 12
+        }
+      }
+    },
+    "same_category_instance_count": {
+      "1": {
+        "queries": 566,
+        "images": 228,
+        "oracle_selection_accuracy": 0.9240282685512368,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9246938283766601,
+        "success_at_0_5": 0.9240282685512368,
+        "status_counts": {
+          "success": 566
+        }
+      },
+      "2": {
+        "queries": 56,
+        "images": 23,
+        "oracle_selection_accuracy": 0.875,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8769551449830667,
+        "success_at_0_5": 0.875,
+        "status_counts": {
+          "success": 56
+        }
+      },
+      "3": {
+        "queries": 10,
+        "images": 4,
+        "oracle_selection_accuracy": 0.9,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9000262735367099,
+        "success_at_0_5": 0.9,
+        "status_counts": {
+          "success": 10
+        }
+      },
+      "4": {
+        "queries": 8,
+        "images": 4,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 8
+        }
+      },
+      "6": {
+        "queries": 2,
+        "images": 1,
+        "oracle_selection_accuracy": 0.5,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.5000145851260884,
+        "success_at_0_5": 0.5,
+        "status_counts": {
+          "success": 2
+        }
+      }
+    },
+    "same_source_category_instance_count": {
+      "1": {
+        "queries": 610,
+        "images": 241,
+        "oracle_selection_accuracy": 0.919672131147541,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9204696506325585,
+        "success_at_0_5": 0.919672131147541,
+        "status_counts": {
+          "success": 610
+        }
+      },
+      "2": {
+        "queries": 28,
+        "images": 9,
+        "oracle_selection_accuracy": 0.8928571428571429,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.8928571428571429,
+        "success_at_0_5": 0.8928571428571429,
+        "status_counts": {
+          "success": 28
+        }
+      },
+      "3": {
+        "queries": 4,
+        "images": 1,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 4
+        }
+      }
+    },
+    "area_bin": {
+      "large": {
+        "queries": 550,
+        "images": 227,
+        "oracle_selection_accuracy": 0.9145454545454546,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9154299761561101,
+        "success_at_0_5": 0.9145454545454546,
+        "status_counts": {
+          "success": 550
+        }
+      },
+      "medium": {
+        "queries": 86,
+        "images": 38,
+        "oracle_selection_accuracy": 0.9418604651162791,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 0.9418604651162791,
+        "success_at_0_5": 0.9418604651162791,
+        "status_counts": {
+          "success": 86
+        }
+      },
+      "small": {
+        "queries": 6,
+        "images": 3,
+        "oracle_selection_accuracy": 1.0,
+        "predicted_selection_accuracy": null,
+        "conditional_selection_accuracy": null,
+        "matched_candidate_coverage": null,
+        "geometric_recall_at_0_5": 1.0,
+        "mean_target_mask_iou": 1.0,
+        "success_at_0_5": 1.0,
+        "status_counts": {
+          "success": 6
+        }
+      }
+    }
+  },
+  "paired": {
+    "semantic_query_id": {
+      "groups": 321,
+      "all_correct_rate": 0.8691588785046729,
+      "selection_consistency": 0.897196261682243
+    },
+    "contrast_set_id": {
+      "groups": 0,
+      "all_correct_rate": null
+    },
+    "paraphrase_group_id": {
+      "groups": 0,
+      "all_correct_rate": null
+    }
+  },
+  "provenance": {
+    "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "predictions_sha256": "ece144817fd9c3d21c6d587ab846283be5344bab4d551c6c12e5eca0302e1fb8",
+    "candidates_sha256": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+    "annotations_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "split": "dev",
+    "scope": "evaluation"
+  }
+}

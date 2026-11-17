@@ -4,7 +4,7 @@
 
 成员对应见 [简称绑定](team_aliases.md)。
 
-当前记录：[wkq 大型数据与机器初标](data_eval/large_dataset_20261112.md)、[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
+当前记录：[wkq 已审核dev与现有模型评价](data_eval/reviewed_dev_eval_20261117.md)、[wkq train1000逐图统一及审核](data_eval/train1000_visual_draft_20261117.md)、[wkq 10k 分割定向扩充](data_eval/train10000_targeted_20261116.md)、[wkq 大型数据与机器初标](data_eval/large_dataset_20261112.md)、[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
 
 ## 复制使用的模板
 
@@ -25,6 +25,10 @@
 ```
 
 运行人的实现状态与阶段状态分别记录；P0 接口文档 locally_checked 不等于三名成员已验收。评估结果必须关联 [运行元信息](../run_records.md)。不记录已做实验的叙事时间线，保留复现所需版本和证据即可。
+
+## 2026-11-17 wkq 语言定向增量
+
+[训练1149与独立dev39交接](data_eval/language_targeted_20261117.md)：149新训练图/298条初标，39图dev困难集/78条待审；原划分不变。实际消费检查和142测试通过，没有训练。
 
 Grounding：[wyz SigLIP 2 编码、缓存与 B1 草稿接口](grounding/siglip_baselines_20261112.md)。
 

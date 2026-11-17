@@ -1,0 +1,8 @@
+{
+  "dev_conflicts": [],
+  "train_conflicts": [],
+  "method": "Connected components over 10000 train + fixed dev/test + all unused validation; SHA/URL/four pHash orientations <=6",
+  "pair_flags": 51,
+  "checked_images": 11137,
+  "limitations": "Not exhaustive same-product/crop identity"
+}

@@ -1,0 +1,9 @@
+{
+  "source_package_checksums_passed": true,
+  "reviewed_package_checksums_passed": true,
+  "partitions_unchanged": true,
+  "annotations_unchanged": true,
+  "query_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "candidate_gt_sha256": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+  "candidate_predicted_sha256": "dfb06d6ca67b77901dcb25107d5dcedde7fdc2a761d4a66257522400dd64b32d"
+}

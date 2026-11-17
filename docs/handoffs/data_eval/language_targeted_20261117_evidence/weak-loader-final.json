@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "queries": 3296,
+  "query_images": 1148,
+  "input_queries_target_free": true,
+  "train_only": true,
+  "single_candidate_queries": 36,
+  "training_executed": false,
+  "encoder_loaded": false
+}

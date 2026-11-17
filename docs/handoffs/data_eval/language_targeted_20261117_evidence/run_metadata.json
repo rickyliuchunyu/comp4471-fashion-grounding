@@ -1,0 +1,54 @@
+{
+  "run_id": "20261117-language-targeted-expansion-r02",
+  "executed_by": "wkq",
+  "role": "data_eval",
+  "status": "completed_data_preparation",
+  "python": "3.10.8",
+  "device": "cpu",
+  "gpu_used": false,
+  "training_executed": false,
+  "git_base_commit": "6eb7b923d32142e2510ffc87e6adf0e549a8f743",
+  "code_sha256": {
+    "scripts/prepare_language_expansion.py": "db0d836412f1c337940f02c1d91f7da6c8b0659c7b842de8dc5ae26989a8a77e",
+    "scripts/publish_language_expansion.py": "a9f2ae238f79e330e5755fee7b366772c183d986687a48288905c1d9eb8cc6e4",
+    "scripts/render_language_increment_review.py": "9630e1f60c4d1f7c13538ef5b96b2148d8973b4eb1d5b3fbe8e4cc1b48d2e183"
+  },
+  "provenance": "Scripts were uncommitted during execution; exact hashes and git base identify code. Final publication commit is in Git history.",
+  "release_index": {
+    "train": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1",
+      "hashes": {
+        "image_manifest.json": "8516f2d46d15e5c4179766dfd8e48a4a5ce386a80266b7e6e6f5cfaa7579bcae",
+        "annotations_coco.json": "81c7e18495c374b8cb0dd3218cb93e9c72d9552346f1d589f5b417063e6d8bae",
+        "candidates_gt.json": "f88e6c7b920999c39594177a69b937ca0f9df3e9e4a45a18bf8927304dc3198a",
+        "queries_draft.jsonl": "1f782f6cfbb00cea9794e286eadc4244f75b34a378a8b54a473177d5e2f470a5",
+        "queries_machine_train.jsonl": "1f782f6cfbb00cea9794e286eadc4244f75b34a378a8b54a473177d5e2f470a5",
+        "SHA256SUMS.json": "a560537a36154bde44ccfe1334901b0f987acb051077aa54c4b991999b948c65"
+      }
+    },
+    "dev_challenge": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1",
+      "hashes": {
+        "image_manifest.json": "8fa16d0e557edcdfe42b2ec9f809b18f37951808f8336ceebb450e73801e0180",
+        "annotations_coco.json": "279952b5c86e3ad2bd5241209a6ca4e2b5adfc5617cc07100429d0b737c215ef",
+        "candidates_gt.json": "c587a68d15aea016be97597add202785cb20b2e5f653ffcaec827558a36b6059",
+        "queries_draft.jsonl": "9940648e575eabc8ef842ba39064adb8491c6400865e6e8103be8dd7f5859a08",
+        "queries_machine_train.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "SHA256SUMS.json": "d8f5dd4f5e086db4a3410906014b6f4eaf07a23f839f8667716e7dfff21696c8"
+      }
+    }
+  },
+  "visual_review": {
+    "train_proposals": 220,
+    "train_kept": 149,
+    "dev_proposals": 50,
+    "dev_kept": 39,
+    "human_accepted": 0
+  },
+  "limitations": [
+    "Machine visual drafts, not human acceptance",
+    "No model training or measured benefit",
+    "Targeted dev challenge is not a natural-distribution generalization estimate",
+    "Geometry/source counts do not guarantee distinct physical garments"
+  ]
+}

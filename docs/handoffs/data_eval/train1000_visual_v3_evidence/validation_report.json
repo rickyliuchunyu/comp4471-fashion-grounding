@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "images": 1000,
+  "instances": 4784,
+  "candidates": 4784,
+  "queries": {
+    "queries_draft.jsonl": 2998,
+    "queries_accepted.jsonl": 0
+  },
+  "query_images": 999,
+  "semantic_groups": 1499,
+  "query_records": 2998,
+  "human_accepted": 0,
+  "quarantined_groups": 109,
+  "actions": {
+    "retained": 1309,
+    "quarantine": 109,
+    "revised": 162,
+    "replacement": 28
+  },
+  "source_masks_unchanged": true,
+  "parent_partitions_unchanged": true,
+  "train_dev_overlap": {
+    "image_id": 0,
+    "group_id": 0,
+    "sha256": 0,
+    "source_id": 0
+  },
+  "same_category_competition": 198,
+  "query_types": {
+    "spatial": 21,
+    "appearance": 1273,
+    "combined": 205
+  }
+}
