@@ -1,0 +1,6 @@
+test_legacy_multistep_keeps_minimal_contract_and_state_schema (test_tenk_preparation.WarmstartTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.471s
+
+OK

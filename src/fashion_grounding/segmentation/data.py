@@ -96,13 +96,14 @@ def map_record(record, short_edge=256, max_size=384):
     return record
 
 
-def map_training_record(record, config):
-    """Upstream LSJ transforms with RLE bitmask support, including empty crops."""
-    from detectron2.data import detection_utils as utils, transforms as T
-    from detectron2.structures import BitMasks, Instances
-    import torch
-    image = utils.read_image(record['file_name'], format='RGB')
-    utils.check_image_size(record, image)
+def training_transforms(image, config, annotations=()):
+    """The same pixel-independent geometry for training and visibility diagnosis."""
+    from detectron2.data import transforms as T
+    if 'target_crop' in config:
+        from .target_crop import target_transform
+        selected = target_transform(image, annotations, config)
+        if selected is not None:
+            return selected
     size = config['image_size']
     augmentations = []
     if config['random_flip'] == 'horizontal':
@@ -113,7 +114,21 @@ def map_training_record(record, config):
                           # Binary instance masks require background padding. The
                           # semantic default 255 becomes foreground on bool cast.
                           T.FixedSizeCrop(crop_size=(size, size), seg_pad_value=0)])
-    image, transforms = T.apply_transform_gens(augmentations, image)
+    result, transforms = T.apply_transform_gens(augmentations, image)
+    transforms.view_kind = 'lsj'
+    transforms.target_annotation_id = None
+    return result, transforms
+
+
+def map_training_record(record, config):
+    """Upstream LSJ transforms with RLE bitmask support, including empty crops."""
+    from detectron2.data import detection_utils as utils
+    from detectron2.structures import BitMasks, Instances
+    import torch
+    image = utils.read_image(record['file_name'], format='RGB')
+    utils.check_image_size(record, image)
+    size = config['image_size']
+    image, transforms = training_transforms(image, config, record['annotations'])
     masks, labels = [], []
     for annotation in record['annotations']:
         mask = mask_api.decode(annotation['segmentation'])
@@ -128,5 +143,7 @@ def map_training_record(record, config):
     instances.gt_masks = tensor_masks
     if image.shape != (size, size, 3):
         raise ValueError('LSJ produced an unexpected image shape')
-    return dict(image_id=record['image_id'], image=torch.from_numpy(np.ascontiguousarray(image.transpose(2, 0, 1))),
+    return dict(image_id=record['image_id'], augmentation_view=transforms.view_kind,
+                target_annotation_id=transforms.target_annotation_id,
+                image=torch.from_numpy(np.ascontiguousarray(image.transpose(2, 0, 1))),
                 instances=instances, height=size, width=size)

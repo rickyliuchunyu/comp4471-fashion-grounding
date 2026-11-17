@@ -1,8 +1,10 @@
 # 当前进度与下一步
 
-最新预算修订（2026-11-17）：[省时完整数据方案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)已基于原20k步日志核实。C5k实际40000次曝光/8400.824秒，100epoch×示例4万图约233小时只是旧吞吐外推。推荐C5k20k热启动先1epoch、达标才第2epoch，拟每轮3小时/总6小时；真实N待发布，短配方契约/model-only初始化/硬截止接线尚未实现，当前只做计划，0训练/推理/smoke。历史100epoch入口不作为此次可执行方案。
+最新（2026-11-17）：[10k模型参数热启动与增强诊断](handoffs/segmentation/tenk_preparation_20261117.md)已准备，未启动训练。384张train图×4视图发现小目标裁剪损失；25%定向裁剪虽保住选中目标，却增加其他实例丢失，因此最终配置不启用。C5k20k仅加载模型参数，重置训练状态，LR5e-5/backbone5e-6＋cosine，最多10等效epoch/50000新updates，每2epoch评完整dev250；复用C5k缓存基线。12项新增CPU案例及真实10k元数据读取通过，0新训练/推理/旧smoke。配置禁用执行；未来多段共享锁/硬截止/早停选择接线与启动预算待授权时完成。整组远端未变，服务器GPU空闲，数据盘约150.6GiB。
 
-最新接续（2026-11-17 15:25 HKT）：[完整Fashionpedia发布缺口与分割接收准备](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)已整理，继续现有R50，暂不启动训练。100epoch入口位于独立分支，代码ee7db25，21项新增CPU案例复用；真实完整包N/hash、增量接收及冻结未齐，ready_for_training=false。原定向10k验收脚本不是完整包通用接收器，待实际增量格式发布后只适配受影响范围。C5k结果直接引用，D10k保持中断；0新训练/推理/smoke。GPU0MiB/0%，锁空闲，约150.6GiB可用，未部署新代码。
+历史完整数据提案（已由当前10k路线替代，2026-11-17）：[省时完整数据方案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)已基于原20k步日志核实。C5k实际40000次曝光/8400.824秒，100epoch×示例4万图约233小时只是旧吞吐外推。推荐C5k20k热启动先1epoch、达标才第2epoch，拟每轮3小时/总6小时；真实N待发布，短配方契约/model-only初始化/硬截止接线尚未实现，当前只做计划，0训练/推理/smoke。历史100epoch入口不作为此次可执行方案。
+
+历史完整数据接收准备（非当前10k阻塞，2026-11-17 15:25 HKT）：[完整Fashionpedia发布缺口与分割接收准备](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)已整理，继续现有R50，暂不启动训练。100epoch入口位于独立分支，代码ee7db25，21项新增CPU案例复用；真实完整包N/hash、增量接收及冻结未齐，ready_for_training=false。原定向10k验收脚本不是完整包通用接收器，待实际增量格式发布后只适配受影响范围。C5k结果直接引用，D10k保持中断；0新训练/推理/smoke。GPU0MiB/0%，锁空闲，约150.6GiB可用，未部署新代码。
 
 最新（2026-11-17）：[5k/10k对照结果与中断](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/1ec972363271b5ba70be565de71d1b638dc7477c/docs/handoffs/segmentation/expansion_control_20261117.md) **C5k completed，D10k interrupted，整对未完成**。C5k全链路8674.208秒；10k/20k完整dev AP55.8283/64.6957，选C5k20k（较历史B20k+0.9027）。D10k在159步收到主动停止，0 checkpoint/0 dev AP，不能判断扩充收益；没有自动恢复或延长。GPU已释放，共享锁空闲。执行源dc2fba4，旧工程/数据检查复用，无重复smoke。
 
@@ -42,8 +44,8 @@
 | P1 环境与工作区 | in_progress | [lcy 工程检查](handoffs/segmentation/pilot_adapter_20261112.md)、[COCO 八类加载/五图推理](handoffs/segmentation/coco_weights_20261112.md)、[200-update 与跨进程恢复](handoffs/segmentation/stability_200_20261112.md)；[wyz 图文环境与 GPU 编码][wyz-handoff]；wkq 独立 CPU 环境；[lcy AP/候选读取实测][lcy-ap] | 全组交付的接收方复核与环境复现验收；wyz 环境只读复用 base torch，base 变化需重验；非长训练验收 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | wyz已有B0/B1/B2/M1；wkq在同一642条审核dev上完成固定B1/B2/M1的GT及预测候选评价，复用18k/0.3 | B2仍固定lambda=1，未正式选模；M2及公平消融未完成，非最终test | A/B |
-| P4 数据扩充冻结 | in_progress | 分割5000/250固定、定向10k增量技术接收通过；642条语言dev已有审核，保留机器初标来源 | 完整分割train发布、隔离/裁决、增量接收和正式冻结待补；另9组语言待处理，语言不阻塞分割准备 | B，全员 |
-| P5-S 分割训练 | in_progress | C5k20k完整dev AP64.6957为已完成权重最高，较B20k+0.9027；独立100epoch入口已CPU检查 | D10k159步中断且无checkpoint；完整包及增量接收/冻结未齐，新GPU worker未实跑；不自动训练，旧18k候选保持 | lcy |
+| P4 数据扩充冻结 | in_progress | 分割5000/250固定、定向10k增量技术接收通过；642条语言dev已有审核，保留机器初标来源 | 三方正式冻结与另9组语言待处理；完整train另属历史扩充需求，非当前已接收10k准备的依赖 | B，全员 |
+| P5-S 分割训练 | in_progress | C5k20k完整dev AP64.6957；10k模型参数热启动/cosine/每2epoch评价计划和增强诊断已准备，定向裁剪因其他实例受损未启用 | 新10k尚未训练；配置禁用，未来多段硬截止/早停执行接线与启动预算待明确；旧18k候选保持 | lcy |
 | P5-L 排序训练 | in_progress | [M1 seed42机器弱标签试训][wyz-latest]已完成；本轮固定语言dev可用于明确标记的开发对照 | M2实现及M1/M2三种子公平对照、实际dev选模尚未完成；使用查询须保留本次授权依据及原始来源 | A |
 | P6 联调与对照 | in_progress | lcy历史B1最小联调；wkq最新642查询上GT/预测B1/B2/M1六项开发结果 | M2/空间消融、E1、公平对照和demo未完成；队友下游本人接收待确认 | 全员分责 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -57,9 +59,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 准备完整数据1–2epoch短方案，继续等待完整包 | 复用C5k20k和旧检查；日志核实、明确epoch/预算/停止线已完成 | 实际N/hash及增量接收冻结未齐；新短方案model-only热启动/硬截止接线待实现，暂不启动 | [短方案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)、[接收清单](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md) |
-| wyz（A）/ grounding | 接收wkq的审核dev及固定B1/B2/M1开发评价，推进本人M2/公平对照 | wkq已复用18k/0.3与旧M1；保留模型和查询来源 | wkq代为调用不等于wyz本人接收；M2、B2选模和多种子未完成 | [wkq评价][wkq-reviewed-dev]、[wyz交接][wyz-latest]、PR #5 |
-| wkq（B）/ data_eval | 发布完整分割train源清单、旧10k增量、隔离/裁决与冻结材料；补9组语言 | 642条审核dev与固定方法开发结果已发布；完整包需求已具体化 | 完整分割包未发布，不能复制旧人工确认覆盖新增图；最终test另行准备 | [发布需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)、[wkq交接][wkq-reviewed-dev] |
+| lcy | 依据已准备10k方案推进本人分割优化 | 复用C5k20k及旧验收，model-only/cosine和可见性诊断完成；不启用负结果裁剪 | 未授权启动；未来多段共享锁/总截止/早停选择接线待完成，10k优化不等待完整包或语言任务 | [本轮准备](handoffs/segmentation/tenk_preparation_20261117.md) |
+| wyz（A）/ grounding | 接收wkq审核dev/新增弱标签交接，推进本人M2与公平对照 | 主642查询评价和1149图弱训练输入已有上游交接；本人分支103dcc5未更新 | 上游消费不等于wyz本人验收；M2、B2选模、多种子仍待本人完成，本轮lcy不代做 | [wkq评价][wkq-reviewed-dev]、[wyz交接][wyz-latest]、PR #5 |
+| wkq（B）/ data_eval | 按本人最新交接继续新增语言数据审核与评价维护 | 1149图/3296弱训练描述及独立39图困难dev已发布；主642查询dev不变 | 新39图dev待审核，原9组pending保留；完整分割包需求保留历史，不阻塞当前10k准备 | [最新交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b24515bcda576fe97b354ca9b48e647079831df3/docs/handoffs/data_eval/language_targeted_20261117.md) |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -79,7 +81,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-保持Fashionpedia八类和现有R50，C5k20k AP64.6957与旧18k候选分别保留。D10k停止，不恢复。本轮用旧日志将推荐预算从100epoch改为最多2epoch：先全量1epoch，dev收益满足预登记条件才第2epoch；拟每轮3小时/总6小时，真实N上界预算必须能容纳后才可提出启动。完整包增量接收/冻结、新短方案接线和启动授权仍缺；不以未执行提案冒充训练效果。wkq新增语言草稿未改变分割输入，wyz排序工作由本人继续。
+保持Fashionpedia八类/R50，当前用户已明确转为用现有10k优化分割；完整包/100epoch及完整数据1–2epoch提案仅保留历史。先复用C5k20k模型参数、新建训练状态和cosine调度，最多10等效epoch，每2epoch评完整dev。增强诊断已完成，候选裁剪因其他实例损失增大未纳入训练；不重复诊断或smoke。实际训练与新AP尚未发生，未来启动需明确预算并接好总硬截止/每段评价/早停选择；旧最佳和候选保留。wkq新增语言草稿不改变分割输入，wyz排序工作由本人继续。
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 

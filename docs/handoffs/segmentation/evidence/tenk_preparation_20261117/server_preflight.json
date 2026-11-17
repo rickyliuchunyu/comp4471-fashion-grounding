@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-17T08:30:16.494370+00:00",
+  "shared_lock_free": true,
+  "active_records": [],
+  "system_free_bytes": 28916768768,
+  "data_free_bytes": 161685753856,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "",
+  "source": "Captured from read-only SSH preflight output before CPU diagnostic",
+  "access_note": "One stale local SSH profile failed; existing project connection recovered from handoff history; no credentials or endpoints published."
+}

@@ -2,6 +2,7 @@
 from bisect import bisect_right
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import random
@@ -55,6 +56,22 @@ def read_config(path):
         validate_policy(config['amp_recovery'])
         if config.get('amp') is not True:
             raise ValueError('AMP recovery requires AMP')
+    schedule = config.get('lr_schedule', 'multistep')
+    if schedule not in ('multistep', 'cosine'):
+        raise ValueError('Unknown learning-rate schedule')
+    if schedule == 'cosine' and (config['lr_milestones'] or
+            config['warmup_updates'] >= config['max_updates'] or
+            not 0 <= config.get('lr_min_factor', -1) <= 1):
+        raise ValueError('Invalid cosine schedule')
+    if 'equivalent_epochs' in config:
+        if (type(config['training_images']) is not int or config['training_images'] <= 0
+                or type(config['equivalent_epochs']) is not int or config['equivalent_epochs'] <= 0
+                or config['max_updates'] * config['effective_batch_images'] !=
+                config['training_images'] * config['equivalent_epochs']):
+            raise ValueError('Update budget differs from equivalent-epoch exposure budget')
+    if 'target_crop' in config:
+        from .target_crop import validate_crop
+        validate_crop(config['target_crop'])
     return config
 
 
@@ -103,12 +120,20 @@ class UpdateSchedule:
         self.start = config['warmup_start_factor']
         self.milestones = list(config['lr_milestones'])
         self.gamma = config['lr_decay']
+        self.kind = config.get('lr_schedule', 'multistep')
+        self.max_updates = config['max_updates'] if self.kind == 'cosine' else config.get('max_updates')
+        self.min_factor = config.get('lr_min_factor', 0.)
         self.completed_updates = 0
         self._apply()
 
     def _apply(self):
         alpha = min(self.completed_updates / self.warmup, 1.) if self.warmup else 1.
-        factor = (self.start * (1-alpha) + alpha) * self.gamma ** bisect_right(self.milestones, self.completed_updates)
+        if self.kind == 'cosine':
+            progress = max(0., min(1., (self.completed_updates-self.warmup)/(self.max_updates-self.warmup)))
+            decay = self.min_factor + (1-self.min_factor) * .5 * (1+math.cos(math.pi*progress))
+        else:
+            decay = self.gamma ** bisect_right(self.milestones, self.completed_updates)
+        factor = (self.start * (1-alpha) + alpha) * decay
         for group, base in zip(self.optimizer.param_groups, self.base_lrs):
             group['lr'] = base * factor
 
@@ -117,11 +142,15 @@ class UpdateSchedule:
         self._apply()
 
     def state_dict(self):
-        return {key: getattr(self, key) for key in ('base_lrs', 'warmup', 'start', 'milestones', 'gamma', 'completed_updates')}
+        state = {key: getattr(self, key) for key in ('base_lrs', 'warmup', 'start', 'milestones', 'gamma', 'completed_updates')}
+        # Preserve historical multistep checkpoint schema exactly.
+        if self.kind == 'cosine':
+            state.update(kind=self.kind, max_updates=self.max_updates, min_factor=self.min_factor)
+        return state
 
     def load_state_dict(self, state):
         expected = self.state_dict()
-        if any(state[k] != expected[k] for k in expected if k != 'completed_updates'):
+        if state.keys() != expected.keys() or any(state[k] != expected[k] for k in expected if k != 'completed_updates'):
             raise ValueError('Resume scheduler configuration mismatch')
         self.completed_updates = state['completed_updates']
         self._apply()

@@ -1,0 +1,9 @@
+test_diagnostic_cohorts_disjoint_and_train_selection_deterministic (test_tenk_preparation.VisibilityTests) ... ok
+test_retention_uses_resized_area_and_records_disappearance (test_tenk_preparation.VisibilityTests) ... ok
+test_target_geometry_preserves_edge_target_and_all_other_visible_masks (test_tenk_preparation.VisibilityTests) ... ok
+test_unchosen_crop_keeps_original_lsj_rng_and_pixels (test_tenk_preparation.VisibilityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.741s
+
+OK

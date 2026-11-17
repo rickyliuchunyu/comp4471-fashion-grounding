@@ -1,0 +1,12 @@
+{
+  "source.tar": "53e878d53cdb694d7da00dcc6e284dd592981bb44b680dbc288daa2fac337d71",
+  "crop-source.tar": "03591ec2496c47855fe32af00a926fbc20e2cd7a164c2ec3fae263d88288211b",
+  "validation-source.tar": "3df5c862abb103d14c8efaaa4fa07378d3a503a5f49265710593d9edc78abdc9",
+  "baseline/summary.json": "5f320fa2d9a0e6a800ec977195d7ac090648ec9a8d23df5275c813c4858b5625",
+  "baseline/observations.jsonl": "2fbf8861016d44d35f525850dcb6c86e2c877c2542c8a42ad1ccbb9c3bd0360d",
+  "target_context/summary.json": "e9ce1440e1c1c20b447cc2f6de489c90950e688466a2aaa791e6a1543dbb7959",
+  "target_context/observations.jsonl": "94371becee5415b6bdcf312d085561611a4205f75518517347dcb416b7b24c25",
+  "new_geometry_checks.log": "0e9b72522c99c1e97713b29958627d7590d0083fa802792eec0c5c70509652e5",
+  "accepted_training_load.json": "7d78a6987838bfef5e3a56545a1cc88d0b963848cfb2f97f6b5661bd5e457124",
+  "server_postflight.json": "bdde6d571b57f0fa5717ce32c0f8b80a5d093297da730fa031f67275d6c0b8d7"
+}

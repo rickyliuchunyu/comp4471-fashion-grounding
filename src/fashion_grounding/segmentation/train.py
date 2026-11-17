@@ -49,6 +49,8 @@ def configure_record(cfg, config):
     cfg.SOLVER.WEIGHT_DECAY_EMBED = config['weight_decay_embed']
     cfg.SOLVER.IMS_PER_BATCH = config['effective_batch_images']
     cfg.SOLVER.MAX_ITER = config['max_updates']
+    if config.get('lr_schedule') == 'cosine':
+        cfg.SOLVER.LR_SCHEDULER_NAME = 'ProjectWarmupCosineLR'
     cfg.SOLVER.STEPS = tuple(config['lr_milestones'])
     cfg.SOLVER.GAMMA = config['lr_decay']
     cfg.SOLVER.WARMUP_ITERS = config['warmup_updates']
@@ -73,6 +75,8 @@ def main():
     initial = parser.add_mutually_exclusive_group(required=True)
     initial.add_argument('--checkpoint')
     initial.add_argument('--resume')
+    initial.add_argument('--model-only', help='Pinned project checkpoint specification JSON; resets training state')
+    parser.add_argument('--input-validation-bundle', help='Reuse pinned accepted training input instead of image/mask reaudit')
     transition = parser.add_mutually_exclusive_group()
     transition.add_argument('--resume-extension', help='Reviewed budget-only transition JSON; requires --resume')
     transition.add_argument('--resume-repair', help='Pinned same-budget AMP source-fix recovery JSON; requires --resume')
@@ -83,6 +87,12 @@ def main():
     if (args.resume_extension or args.resume_repair or args.resume_recipe) and not args.resume:
         parser.error('Resume transition requires --resume')
     config = read_config(args.config)
+    if config.get('training_authorized') is False:
+        raise ValueError('Prepared configuration is not authorized for training')
+    if config.get('initialization_mode') == 'model_only' and not (args.model_only or args.resume):
+        raise ValueError('This configuration requires model-only initialization or same-run resume')
+    if config.get('input_validation_bundle_required') and not args.input_validation_bundle:
+        raise ValueError('Use the pinned acceptance receipt; do not repeat image/mask audits')
     stop = config['max_updates'] if args.stop_after is None else args.stop_after
     if not 0 < stop <= config['max_updates']:
         raise ValueError('Stop boundary outside configured budget')
@@ -98,7 +108,13 @@ def main():
     torch.cuda.manual_seed_all(config['seed'])
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
-    records, data_report = load_training_package(args.package)
+    if args.input_validation_bundle:
+        from .accepted_training import load_accepted_training_package
+        records, data_report = load_accepted_training_package(args.package, args.input_validation_bundle)
+    else:
+        records, data_report = load_training_package(args.package)
+    if config.get('training_images', len(records)) != len(records):
+        raise ValueError('Training population differs from equivalent-epoch plan')
     data = {key: data_report[key] for key in ('image_manifest_sha256', 'annotation_sha256')}
     if any(config[key] != data[key] for key in data):
         raise ValueError('Training input differs from pinned data hashes')
@@ -141,6 +157,11 @@ def main():
         initialization = resume_state['initialization']
         initial_digests = resume_state['initial_parameter_digests']
         recovery_state = resume_state.get('amp_recovery_state')
+    elif args.model_only:
+        from .model_warmstart import load_model_only
+        initialization = load_model_only(model, json.loads(Path(args.model_only).read_text()))
+        initial_digests = dict(backbone=state_digest(model.backbone.state_dict()),
+                               classifier=state_digest(model.sem_seg_head.predictor.class_embed.state_dict()))
     else:
         provenance = json.loads(Path(args.provenance).read_text())
         mirror = provenance['checkpoint_mirror']

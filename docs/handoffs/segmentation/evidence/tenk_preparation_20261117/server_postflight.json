@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-17T08:45:10.625661+00:00",
+  "shared_lock_free": true,
+  "active_records": [],
+  "system_free_bytes": 28916768768,
+  "data_free_bytes": 161675124736,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "",
+  "role_checkout_commit": "1ec972363271b5ba70be565de71d1b638dc7477c",
+  "role_checkout_status": ""
+}

@@ -1,8 +1,8 @@
 # 自然语言引导的服饰实例选择与分割
 
-最新预算提案：[完整数据先1epoch、达标才第2epoch](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)。已有日志支持0.21秒/图量级；示例4万图含评价首轮2.43–2.88小时，最多两轮4.87–5.76小时，拟每轮3小时/总6小时。复用C5k20k权重，不重跑COCO初始化训练；新短方案接线和真实完整包仍待补，未启动训练，未重复smoke。
+当前下一步：[10k模型参数热启动与增强可见性准备](docs/handoffs/segmentation/tenk_preparation_20261117.md)已完成。真实train-only诊断后不启用25%定向裁剪，因为其他实例丢失增加；从C5k20k仅加载模型参数、重置优化状态，最多10等效epoch，每2epoch评完整dev250。12项新增CPU案例和10k元数据消费通过；训练配置禁用，未启动训练/推理或重复smoke。未来有界分段执行与启动预算另行明确。
 
-当前接续：[完整Fashionpedia分割发布需求与接收准备](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/48873ec6e6de7b311519be5eb0767fa8f0316d69/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)已同步到独立`segmentation/full100-runtime@48873ec`。完整包实际N/hash、增量接收及冻结待补；100epoch入口已有21项CPU检查记录，本轮复用，不启动训练。C5k结果与D10k停止状态保持，完整数据接线未合并到本结果分支。
+历史完整数据[接收需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)及[1–2epoch提案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)保留在独立分支，未训练；已不作为当前10k优化的前置依赖。
 
 **图片 + 一句中英文描述 → 描述所指的单个整件服饰的 mask 和 bounding box。**
 
