@@ -1,5 +1,7 @@
 # 10k 模型参数热启动执行
 
+更新：截至20:00，运行仍进行中，4epoch完整dev AP66.3351已超过旧最佳，见[中期结果](tenk_progress_20261117_2000.md)。下文保留启动时记录。
+
 2026-11-17，lcy / segmentation。用户在执行器准备完成后明确要求：“做好之后直接开始训练，训练开始后你不用一直盯着”。本记录在启动时补齐实际状态，不把配置授权视为训练完成。
 
 已再次核对整组GitHub，wkq `b24515b`、wyz `103dcc5`、main `7064ebb`与全部PR/活跃讨论均无新变化，交接复用。[GitHub快照](evidence/tenk_launch_20261117/github_preflight.json)。17:21 HKT服务器约150.6GiB数据盘可用，RTX3090显存0、GPU0%、无计算/活动协调记录、锁空闲，本人checkout `1ec9723` clean。[启动前资源](evidence/tenk_launch_20261117/server_preflight.json)。

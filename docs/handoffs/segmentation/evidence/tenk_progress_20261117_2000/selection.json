@@ -1,0 +1,56 @@
+{
+  "status": "complete_dev_selection",
+  "selected_origin": "tenk",
+  "selected_checkpoint": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 66.33509796301517,
+    "compared_updates": [
+      10000,
+      20000
+    ]
+  },
+  "new_run_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 66.33509796301517,
+    "compared_updates": [
+      10000,
+      20000
+    ]
+  },
+  "cached_baseline": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 64.69568513541032,
+    "compared_updates": [
+      20000
+    ]
+  },
+  "completed_equivalent_epochs": 4,
+  "consecutive_without_new_best": 0,
+  "stop_reason": "continue",
+  "cross_run_rule": "max_full_dev_mask_AP; keep cached baseline on tie",
+  "selected_minus_baseline": {
+    "AP": 1.6394128276048576,
+    "AP_small": 8.763086766057238,
+    "AP75": 1.620661559681949
+  },
+  "per_category_AP": {
+    "1": 71.3869662015707,
+    "2": 82.5621938771566,
+    "3": 67.71958718076418,
+    "4": 70.82776332818096,
+    "5": 84.8354722470154,
+    "6": 57.19669105367794,
+    "7": 54.614794785171206,
+    "8": 41.537315030584345
+  },
+  "further_diagnostics": "Reuse saved predictions for small-target matches and boundary analysis; not computed by this selector"
+}

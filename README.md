@@ -1,6 +1,6 @@
 # 自然语言引导的服饰实例选择与分割
 
-当前运行：[10k模型参数热启动](docs/handoffs/segmentation/tenk_launch_20261117.md)已于11月17日17:24 HKT启动，执行源`0541df4`。首批成功更新及日志已确认；总硬上限8小时、每段2小时，每2epoch完整dev评价，失败/早停即停，不自动延长。按用户要求启动后不持续盯守；这是running启动快照，尚无新AP。
+当前运行（11月17日20:00 HKT）：[10k中期结果](docs/handoffs/segmentation/tenk_progress_20261117_2000.md)已完成2/4epoch完整dev，AP63.2350/66.3351；当前新20k最佳较C5k提升1.6394点，AP_small提升8.7631点、AP75提升1.6207点。训练到20986/50000updates，仍running；总8小时/每段2小时与早停规则不变，不持续盯守。未重复推理或smoke，旧下游候选未替换。
 
 启动前准备：[10k有界分段执行准备](docs/handoffs/segmentation/tenk_execution_preparation_20261117.md)已完成（代码`6b5fc8c`）。C5k20k模型参数热启动、最多10等效epoch、每2epoch完整dev、连续3次未改善早停及与缓存基线选权重已接线；拟总8小时/每段2小时，未授权启动。15项新增CPU执行逻辑验证通过；训练/推理/旧smoke均为0，所有启动标记仍关闭。原增强诊断已决定不启用定向裁剪，复用此前结果。
 
