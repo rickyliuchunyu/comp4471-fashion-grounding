@@ -1,0 +1,23 @@
+{
+  "run_id": "segmentation-u50000-dev-candidates-20261118-r01",
+  "total_hard_limit_seconds": 900,
+  "worker_limit_seconds": 890,
+  "new_inference_passes": 1,
+  "new_image_forwards": 250,
+  "training_updates": 0,
+  "automatic_extension": false,
+  "automatic_retries": 0,
+  "thresholds": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "selection_rule": "maximum covered queries; then fewest candidates on unique query images; then higher threshold",
+  "query_records": 642,
+  "query_images": 246,
+  "semantic_groups": 321,
+  "query_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "scope": "50k dev250 cache, offline candidate export, consumer validation and coverage selection only",
+  "validation_reuse": "Unchanged decoder/cache/consumer/matcher, data acceptance, COCO/head loading, stability, resume and deadline mechanism; no historical tests rerun",
+  "new_validation": "Config/selected-checkpoint metadata binding; newly pinned query metadata; new cache and candidate artifact identity, geometry, reader consumption and nested thresholds"
+}

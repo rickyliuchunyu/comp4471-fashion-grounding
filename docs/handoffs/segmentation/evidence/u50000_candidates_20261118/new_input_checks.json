@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "three orchestration scripts parse",
+    "dry preparation has one cache phase and no training",
+    "50k config bound to completed selection metadata",
+    "unchanged decoder and dev identities"
+  ],
+  "old_tests_rerun": 0,
+  "model_loads": 0,
+  "inference_calls": 0
+}
