@@ -55,7 +55,7 @@
     "historical_train_only_estimate_hours": 5.834,
     "note": "8h total and2h per2epoch train+dev segment are proposed ceilings, not permission or a throughput guarantee. Shared-lock outer deadline must include load, checkpoint, evaluation and selection; segment timers cannot reset the total."
   },
-  "execution_preparation_boundary": "Trainer supports model-only and cosine; this preparation command emits disabled phase templates. Bounded multi-segment supervisor and stop/selection execution wiring must be finalized under the later launch instruction; no training executor is invoked here.",
+  "execution_preparation_boundary": "Bounded supervisor, per-segment full dev, plateau stop and cached-baseline selection implemented. Preparation only: no training authorization; future launch requires explicit budget authorization and a clean pinned server checkout. No bare phase commands.",
   "reuse": [
     "accepted10k metadata/old5k retention/isolation receipts",
     "unchanged dev receipt",
@@ -78,5 +78,8 @@
     "docs/handoffs/segmentation/evidence/tenk_preparation_20261117/visibility_decision.json": "39cd96962665971ebdcdd3ff25ba39c4a9ca84e44a58ca22b4101631d79c6e28",
     "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5"
   },
-  "execution_checkout": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation"
+  "execution_checkout": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation",
+  "execution_entry": "scripts/run_tenk_adaptation.py",
+  "runtime_ready": true,
+  "runtime_validation": "Implemented and CPU-tested segmented execution; not deployed or GPU-executed. All launch/budget/trainer flags remain false."
 }

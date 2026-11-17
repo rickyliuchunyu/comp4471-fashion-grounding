@@ -7,20 +7,22 @@ ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT/'configs/runs/segmentation/tenk_adaptation_plan.json'
 
 
-def prepare(plan, root=ROOT):
+def prepare(plan, root=ROOT, *, authorized=False):
     from fashion_grounding.data.schema import sha256
     from fashion_grounding.segmentation.training_state import read_config, config_sha256
     from fashion_grounding.segmentation.input_receipts import read_evidence_bundle, validate_chain
     from fashion_grounding.segmentation.evaluation import read_eval_config
-    if plan['training_authorized'] or plan['execution_enabled']:
-        raise ValueError('Preparation-only plan cannot authorize or execute training')
+    if any(plan[k] is not authorized for k in ('training_authorized', 'execution_enabled')):
+        raise ValueError('Training authorization does not match requested preparation/execution mode')
+    if plan['budget_proposal']['authorized'] is not authorized:
+        raise ValueError('Budget authorization does not match requested mode')
     for name, digest in plan['input_sha256'].items():
         if sha256(root/name) != digest:
             raise ValueError('Prepared input changed: '+name)
     config = read_config(root/plan['training_config'])
     bundle, evidence, _ = read_evidence_bundle(root/plan['input_validation_bundle'])
     validate_chain(bundle, evidence)
-    if (config['training_authorized'] is not False or config['initialization_mode'] != 'model_only'
+    if (config['training_authorized'] is not authorized or config['initialization_mode'] != 'model_only'
             or not config['input_validation_bundle_required']
             or bundle['training_data'] != {k:config[k] for k in bundle['training_data']}
             or config['training_images'] != bundle['train_images'] or config['equivalent_epochs'] != 10
@@ -70,7 +72,7 @@ def prepare(plan, root=ROOT):
         fresh_start_update=0, source_checkpoint_update=source['source_completed_updates'],
         max_updates=config['max_updates'], max_image_presentations=100000,
         baseline_AP=baseline['metrics']['AP'], stages=stages,
-        warning='Command templates remain disabled. A future explicitly authorized bounded supervisor must cover all stages, evaluation and selection; never execute these bare commands on a shared GPU.')
+        warning='Use run_tenk_adaptation.py only after explicit launch and budget authorization; never execute these bare commands on a shared GPU.')
 
 
 def main():
