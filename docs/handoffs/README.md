@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新：[5k/10k受控对照](segmentation/expansion_control_20261117.md) 已按用户授权启动；两组各20k、10k/20k完整dev、每组总硬上限3小时，失败即停不延长。执行源dc2fba4，无重复smoke，结果待完成。
+
 最新：[5k/10k证据复用与统一硬超时入口](segmentation/expansion_execution_preparation_20261116.md)已实现，11个新增CPU案例及真实metadata证据组合通过。默认不执行；每组20k、保存的10k/20k完整dev、每组3小时，失败停止且不延长。本轮0训练/推理/旧smoke。
 
 历史：[定向train10000技术接收](segmentation/train10000_acceptance_20261116.md)通过，CPU59.929秒；新增5000图/21924实例，旧5k保留及跨分区隔离通过。[5k/10k配对方案](segmentation/train10000_control_plan_20261116.md)已准备，训练入口接线尚待完成，未启动训练/推理/smoke，不冒称人工全面复核或三方冻结。

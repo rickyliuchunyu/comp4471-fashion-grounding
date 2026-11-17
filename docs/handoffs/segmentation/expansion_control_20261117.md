@@ -33,4 +33,4 @@ scripts/run_expansion_control.py \
 
 ## 实际状态
 
-启动前登记，尚无本轮训练或AP结果。后续根据真实 run_metadata、stage_status、日志及评价报告更新；不把启动或准备通过写成实验完成。
+2026-11-17 12:40:09 HKT，执行源 `dc2fba429cdc4ffaed8a345f8ff5cd859cec1750`，主进程214370。C5k于12:40:10开始，绝对硬截止不晚于15:40:10 HKT；整对最晚18:40:09 HKT。D10k尚未启动。见 [启动记录](evidence/expansion_control_20261117/launch.json)；本轮AP待真实完成。
