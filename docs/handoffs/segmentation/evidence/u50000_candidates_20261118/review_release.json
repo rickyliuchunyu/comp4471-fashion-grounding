@@ -1,0 +1,19 @@
+{
+  "scope": "reviewed dev subset; pending labels excluded before predictions, not based on model success",
+  "parent": "fp_language_dev250_simple_draft_v4",
+  "parent_query_sha256": "970dc962ae93484ec80cfe00af74969b88d5bb74c06e56f28e3d17f804da8489",
+  "review_files": 14,
+  "accepted_semantics": 321,
+  "accepted_records": 642,
+  "accepted_images": 246,
+  "pending_semantics": 9,
+  "image_count": 250,
+  "status_counts": {
+    "target_agreement_only": 321,
+    "target_disagreement": 4,
+    "needs_revision": 2,
+    "not_reviewed": 3
+  },
+  "targets_or_text_changed": false,
+  "package_complete_human_acceptance": false
+}

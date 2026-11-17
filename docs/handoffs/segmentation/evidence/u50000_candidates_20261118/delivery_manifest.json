@@ -1,0 +1,56 @@
+{
+  "status": "available_fixed_for_development",
+  "published_at": "2026-11-17T16:51:48.567269+00:00",
+  "run_id": "segmentation-u50000-dev-candidates-20261118-r01",
+  "source_run_directory": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01",
+  "server_aliases": true,
+  "storage_policy": "Absolute symlinks to immutable run/input directories; preserve source directories and copy resolved contents across machines.",
+  "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+  "completed_updates": 50000,
+  "source_cache_sha256": "52201ed5c23a2619b9e43112bce88508543d135e591b90d89a77703f1c011f17",
+  "selected_threshold": 0.3,
+  "selection_reason": "most_covered_queries",
+  "selection_sha256": "d853cecbcf3856bb287f6175fdd3b1c83179668fe0cc019999e87b32be67b6c4",
+  "selected_package": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json",
+    "sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "candidate_set_id": "u50000-dev250-20261118-r01-trial-0.3"
+  },
+  "selected_entry": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+  "selected_candidate_manifest_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "query_records": 642,
+  "semantic_groups": 321,
+  "query_images": 246,
+  "evaluation_basis": "user_authorized_development",
+  "upstream_review_status": "642 accepted, 9 pending semantic groups excluded by upstream",
+  "consumer_verification": "lcy executed pinned wyz 103dcc5 reader/crop contract on new artifacts; teammate personal sign-off not claimed",
+  "packages": [
+    {
+      "threshold": 0.3,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3",
+      "images": 250,
+      "candidates": 1279,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    {
+      "threshold": 0.5,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.5",
+      "images": 250,
+      "candidates": 1155,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "60d29a138bd9d2ba8dabe3b0d7f1d86b9d6cbd5eeeb60d44e12131f63b2ecbfe"
+    },
+    {
+      "threshold": 0.7,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.7",
+      "images": 250,
+      "candidates": 1062,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "3aaf1af8e6f0541d7bbed7fc0ccec621c05636ab2adbf4827a3b73e192097468"
+    }
+  ],
+  "reuse_note": "Old 18k packages and selections remain immutable. New candidate_set_id/hash requires new downstream feature namespace.",
+  "scope": "dev250 candidates and offline coverage selection only; no ranking, train/test candidates or training"
+}

@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-17T16:52:17.314063+00:00",
+  "gpu": "0 MiB, 0 %",
+  "gpu_processes": "",
+  "active_coordination": [],
+  "lock_available": true,
+  "free_data_bytes": 155776454656,
+  "server_git_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+  "server_git_status": ""
+}

@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-11-17T16:51:33.389319+00:00",
+  "record_schema_version": 1,
+  "run_id": "selection",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "split": "dev",
+  "candidate_source": "predicted",
+  "git_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+  "source_worktree_dirty": false,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/select_threshold.py",
+    "--config",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/coverage_config.json",
+    "--freeze",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01-inputs/freeze.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/selection",
+    "--budget-seconds",
+    "180",
+    "--user-authorized-dev"
+  ],
+  "query_manifest_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+  "config_sha256": "250a764f99e23f4e03d3c94d4d90acfc6b5606d236055a8c88ee6632ff0b9cfa",
+  "freeze_sha256": "905188c0fdf10b15b1da743f97887c19af8e56705b2a881febf88d272ca2edc8",
+  "source_sha256": "14d0c4e6cfa69e5b98145f95e578634db4f55607f33ced433ed8fafc921229aa",
+  "matcher_sha256": "0e32cfcae696968f0097b0e1e260b9287b3c2ea2c7d1530ee01adbf48f95f018",
+  "python": "3.10.8",
+  "budget_seconds": 180.0,
+  "model_inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0,
+  "evaluation_basis": "user_authorized_development",
+  "source_review_status_counts": {
+    "accepted": 642
+  },
+  "schema_source_sha256": "36d089b3cb2698588c4cecc49e602790c67d06c44e5683976e37ee6b38265f1c",
+  "selected_threshold": 0.3,
+  "elapsed_seconds": 15.21562273427844,
+  "finished_at_utc": "2026-11-17T16:51:48.535353+00:00"
+}

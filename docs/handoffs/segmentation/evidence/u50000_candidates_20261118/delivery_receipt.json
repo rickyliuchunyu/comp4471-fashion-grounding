@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-17T16:53:01.810858+00:00",
+  "selected_entry": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+  "selected_entry_resolves_to": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json",
+  "candidate_set_id": "u50000-dev250-20261118-r01-trial-0.3",
+  "candidate_manifest_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+  "delivery_manifest_sha256": "4f211b675535ba3b40dd630e2a82ddecc1f5993a5170021917913408e5ba2dc0",
+  "source_cache_sha256": "52201ed5c23a2619b9e43112bce88508543d135e591b90d89a77703f1c011f17",
+  "selection_sha256": "d853cecbcf3856bb287f6175fdd3b1c83179668fe0cc019999e87b32be67b6c4",
+  "images": 250,
+  "candidates": 1279,
+  "symlinks": {
+    "cache": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/cache",
+    "selection": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/selection",
+    "language_dev_inputs": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01-inputs",
+    "selected_candidates": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3",
+    "trial-0.3": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3",
+    "trial-0.5": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.5",
+    "trial-0.7": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.7"
+  },
+  "no_new_inference_or_mask_decoding": true
+}

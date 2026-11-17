@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "run_id": "segmentation-u50000-dev-candidates-20261118-r01",
+  "started_at": "2026-11-17T16:44:20.314430+00:00",
+  "hard_limit_seconds": 900,
+  "worker_deadline_monotonic": 25448758.65748089,
+  "git_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+  "automatic_retries": 0,
+  "automatic_extension": false,
+  "optimizer_updates": 0,
+  "new_inference_passes_authorized": 1,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/with_gpu_lock.py",
+    "--coordination",
+    "/root/autodl-tmp/fashion-grounding/coordination",
+    "--run-id",
+    "segmentation-u50000-dev-candidates-20261118-r01",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01",
+    "--seconds",
+    "894",
+    "--",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/u50000_candidates_20261118/run_stage.py",
+    "--worker",
+    "--deadline",
+    "25448758.65748089"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 448.3897033147514,
+  "finished_at": "2026-11-17T16:51:48.693183+00:00"
+}

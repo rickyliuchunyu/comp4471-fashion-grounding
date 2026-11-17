@@ -1,0 +1,14 @@
+{
+  "run_id": "segmentation-u50000-dev-candidates-20261118-r01",
+  "pid": 246190,
+  "started_at": "2026-11-17T16:44:20.080293+00:00",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "docs/handoffs/segmentation/evidence/u50000_candidates_20261118/run_stage.py",
+    "--execute"
+  ],
+  "source_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+  "hard_limit_seconds": 900,
+  "automatic_restart": false,
+  "log": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01.launcher.log"
+}

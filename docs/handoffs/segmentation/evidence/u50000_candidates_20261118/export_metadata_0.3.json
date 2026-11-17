@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "source_cache_sha256": "52201ed5c23a2619b9e43112bce88508543d135e591b90d89a77703f1c011f17",
+  "model_inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0,
+  "images": 250,
+  "candidates": 1279,
+  "threshold_status": "trial_unselected",
+  "selected_threshold": null
+}

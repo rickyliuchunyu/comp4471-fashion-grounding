@@ -1,0 +1,19 @@
+{
+  "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01.evidence.tar.gz",
+  "sha256": "2d6542412bf20795b7b34bed696a09f067d585be0a83b6de6640701f95c7795f",
+  "files": 35,
+  "postflight": {
+    "checked_at": "2026-11-17T16:52:17.314063+00:00",
+    "gpu": "0 MiB, 0 %",
+    "gpu_processes": "",
+    "active_coordination": [],
+    "lock_available": true,
+    "free_data_bytes": 155776454656,
+    "server_git_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+    "server_git_status": ""
+  },
+  "selection": 0.3,
+  "status": "passed",
+  "verified_files": 34,
+  "archive_stays_outside_git": true
+}
