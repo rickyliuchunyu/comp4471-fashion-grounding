@@ -76,3 +76,7 @@
 ## 2026-11-17 wkq dev250 逐图语义草稿
 
 run_id: 20261117-dev250-language；角色data_eval；CPU，无训练。补齐134图并核查旧290条，发布dev250/331组/662条待审草稿，隔离旧2组，accepted=0。110项测试通过；原分区与mask不变。14页人工审核等待wkq返回。输入/hash/命令/限制见[交接](handoffs/data_eval/dev250_visual_draft_20261117.md)。
+
+## 2026-11-17 wkq dev250 精简v4
+
+run_id: 20261117-dev250-simple-v4；CPU，无训练。重新看图331组，262改写、68保留、1新增隔离；250图/330组/660条待审，accepted=0。审计固定train1000的1580组文字监督覆盖，保留缺口，train/dev/test划分与mask不变。117测试、1277文件校验、14页载荷检查通过，未做浏览器排版自动化。见[交接](handoffs/data_eval/dev250_simple_draft_20261117.md)。
