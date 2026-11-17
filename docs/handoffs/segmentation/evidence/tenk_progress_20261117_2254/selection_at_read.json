@@ -1,0 +1,60 @@
+{
+  "status": "complete_dev_selection",
+  "selected_origin": "tenk",
+  "selected_checkpoint": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/train/checkpoint_040000.pth",
+    "completed_updates": 40000,
+    "dev_mask_AP": 68.5896514015614,
+    "compared_updates": [
+      10000,
+      20000,
+      30000,
+      40000
+    ]
+  },
+  "new_run_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/train/checkpoint_040000.pth",
+    "completed_updates": 40000,
+    "dev_mask_AP": 68.5896514015614,
+    "compared_updates": [
+      10000,
+      20000,
+      30000,
+      40000
+    ]
+  },
+  "cached_baseline": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 64.69568513541032,
+    "compared_updates": [
+      20000
+    ]
+  },
+  "completed_equivalent_epochs": 8,
+  "consecutive_without_new_best": 0,
+  "stop_reason": "continue",
+  "cross_run_rule": "max_full_dev_mask_AP; keep cached baseline on tie",
+  "selected_minus_baseline": {
+    "AP": 3.8939662661510823,
+    "AP_small": 10.262205146543202,
+    "AP75": 4.771226712155723
+  },
+  "per_category_AP": {
+    "1": 74.28205832662263,
+    "2": 81.87664800656876,
+    "3": 75.2339728234476,
+    "4": 72.6382552007369,
+    "5": 84.10987908213606,
+    "6": 57.65605751745399,
+    "7": 57.536783760944196,
+    "8": 45.38355649458113
+  },
+  "further_diagnostics": "Reuse saved predictions for small-target matches and boundary analysis; not computed by this selector"
+}

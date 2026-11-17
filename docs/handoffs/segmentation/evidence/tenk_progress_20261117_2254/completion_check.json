@@ -1,0 +1,153 @@
+{
+  "captured_at": "2026-11-17T14:53:50.812528+00:00",
+  "status": "running",
+  "new_completed_updates": 45118,
+  "max_updates": 50000,
+  "equivalent_epochs": 9.0236,
+  "final_worker_result": null,
+  "final_weight_selection_ready": false,
+  "execution_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "checkout_status": "",
+  "stage_status": [
+    {
+      "equivalent_epoch": 2,
+      "update": 10000,
+      "status": "completed",
+      "deadline_monotonic": 25428664.610881273,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4530.215119358152
+    },
+    {
+      "equivalent_epoch": 4,
+      "update": 20000,
+      "status": "completed",
+      "deadline_monotonic": 25433194.826413695,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4395.539075173438
+    },
+    {
+      "equivalent_epoch": 6,
+      "update": 30000,
+      "status": "completed",
+      "deadline_monotonic": 25437590.36610989,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4349.90637492016
+    },
+    {
+      "equivalent_epoch": 8,
+      "update": 40000,
+      "status": "completed",
+      "deadline_monotonic": 25441940.272983752,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4323.03992176801
+    },
+    {
+      "equivalent_epoch": 10,
+      "update": 50000,
+      "status": "running",
+      "deadline_monotonic": 25446263.313459672,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "running"
+        }
+      ]
+    }
+  ],
+  "current_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/train/checkpoint_040000.pth",
+    "completed_updates": 40000,
+    "dev_mask_AP": 68.5896514015614,
+    "compared_updates": [
+      10000,
+      20000,
+      30000,
+      40000
+    ]
+  },
+  "last_metric": {
+    "update": 45118,
+    "total_loss": 5.520777206867933,
+    "grad_norm_before_clip": 139.09591674804688,
+    "grad_norm_after_clip": 0.009999999776482582,
+    "optimizer_step_skipped": false,
+    "amp_retries": 0,
+    "amp_overflow_events_total": 11,
+    "elapsed_seconds": 0.4173409789800644
+  },
+  "gpu": "5665 MiB, 24576 MiB, 25 %",
+  "compute": "241191, /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python, 5656 MiB",
+  "lock_free": false,
+  "active_coordination": [
+    {
+      "name": "tenk-adaptation-20261117-r01.json",
+      "status": "running"
+    }
+  ],
+  "recorded_processes_alive": {
+    "230160": true,
+    "230228": true,
+    "230234": true
+  },
+  "data_free_GiB": 146.00340270996094,
+  "new_model_loads": 0,
+  "new_inference_images": 0,
+  "new_training_launched": false,
+  "smoke_runs": 0,
+  "source_or_process_changes": false,
+  "continuous_monitoring": false
+}
