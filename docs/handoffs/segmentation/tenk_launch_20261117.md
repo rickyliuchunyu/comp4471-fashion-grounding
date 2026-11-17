@@ -12,4 +12,10 @@
 - 复用C5k20k AP64.6957缓存基线。正式新AP、选择结果均等待运行产物；没有重复旧权重推理或smoke。
 - 共享锁覆盖所有段落，启动使用独立会话，不依赖聊天持续在线。用户不要求持续盯守；只确认实际训练已开始后交还控制，执行器自行评价、选择、停止并记录结果。
 
-运行输出预定为 `/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01`。当前记录状态：**authorized_not_started，部署与启动进行中**。未声称训练稳定性、吞吐、显存峰值或新性能已通过。
+运行输出预定为 `/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01`。当前记录状态：**running，已启动**（启动观察时间为17:24:31 HKT）。真实执行源码固定为 `0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f`，通过git bundle将本人干净checkout从1ec9723快进部署；后续GitHub状态记录提交不拉入正在运行的服务器checkout。没有修改队友工作区。
+
+17:24:13 HKT独立会话启动；监督器PID230160，共享锁wrapper230228，worker230234，trainer230302。启动观察已有3个成功updates，最后loss12.8249，梯度裁剪前234.5435/后0.01，AMP重试0，显存5455MiB。模型初始化记录确认只加载model，优化状态重置、八类头未重新初始化。此处仅确认已经开始，不作为长程稳定性、吞吐或性能验收。
+
+[启动快照](evidence/tenk_launch_20261117/startup_snapshot.json)、[运行元信息](evidence/tenk_launch_20261117/run_metadata.json)、[模型初始化](evidence/tenk_launch_20261117/initialization.json)、[真实resolved配置](evidence/tenk_launch_20261117/resolved_config.json)、[复用数据验收记录](evidence/tenk_launch_20261117/data_check.json)、[共享锁记录](evidence/tenk_launch_20261117/coordination_at_start.json)。registry追加本次running训练行；AP保持空白。
+
+绝对总截止约为11月18日01:24 HKT，可能因每段2小时限制、失败或早停提前结束，不自动延长。之后按用户要求不持续轮询。服务端会自行写入各段日志、dev预测和evaluation_report、selection.json、worker_result.json及最终run_metadata；GitHub本轮同步的是启动快照，结束结果下次读取后再同步，不声称后台会自动推送GitHub。

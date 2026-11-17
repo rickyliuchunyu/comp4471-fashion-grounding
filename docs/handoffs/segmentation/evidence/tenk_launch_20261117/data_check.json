@@ -1,0 +1,31 @@
+{
+  "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+  "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+  "images": 10000,
+  "instances": 39699,
+  "crowd_skipped": 0,
+  "project_category_counts": {
+    "1": 5612,
+    "2": 3567,
+    "3": 1157,
+    "4": 2802,
+    "5": 4161,
+    "6": 11099,
+    "7": 2203,
+    "8": 9098
+  },
+  "training_id_mapping": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7
+  },
+  "input_validation_bundle_sha256": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+  "image_and_mask_reaudit": false,
+  "source": "unchanged immutable package; accepted expansion receipt reused",
+  "test_files_read": false
+}

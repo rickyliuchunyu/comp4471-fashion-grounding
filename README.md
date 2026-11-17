@@ -1,7 +1,8 @@
 # 自然语言引导的服饰实例选择与分割
 
-当前执行：用户已追加授权准备后直接启动10k训练；[启动交接](docs/handoffs/segmentation/tenk_launch_20261117.md)记录部署及真实运行状态。使用已准备的总8小时/每段2小时上限，失败或早停即停，不自动延长；启动后不持续盯守。
-当前下一步：[10k有界分段执行准备](docs/handoffs/segmentation/tenk_execution_preparation_20261117.md)已完成（代码`6b5fc8c`）。C5k20k模型参数热启动、最多10等效epoch、每2epoch完整dev、连续3次未改善早停及与缓存基线选权重已接线；拟总8小时/每段2小时，未授权启动。15项新增CPU执行逻辑验证通过；训练/推理/旧smoke均为0，所有启动标记仍关闭。原增强诊断已决定不启用定向裁剪，复用此前结果。
+当前运行：[10k模型参数热启动](docs/handoffs/segmentation/tenk_launch_20261117.md)已于11月17日17:24 HKT启动，执行源`0541df4`。首批成功更新及日志已确认；总硬上限8小时、每段2小时，每2epoch完整dev评价，失败/早停即停，不自动延长。按用户要求启动后不持续盯守；这是running启动快照，尚无新AP。
+
+启动前准备：[10k有界分段执行准备](docs/handoffs/segmentation/tenk_execution_preparation_20261117.md)已完成（代码`6b5fc8c`）。C5k20k模型参数热启动、最多10等效epoch、每2epoch完整dev、连续3次未改善早停及与缓存基线选权重已接线；拟总8小时/每段2小时，未授权启动。15项新增CPU执行逻辑验证通过；训练/推理/旧smoke均为0，所有启动标记仍关闭。原增强诊断已决定不启用定向裁剪，复用此前结果。
 
 历史完整数据[接收需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)及[1–2epoch提案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)保留在独立分支，未训练；已不作为当前10k优化的前置依赖。
 

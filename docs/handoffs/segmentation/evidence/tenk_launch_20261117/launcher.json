@@ -1,0 +1,18 @@
+{
+  "status": "launcher_spawned",
+  "run_id": "tenk-adaptation-20261117-r01",
+  "pid": 230160,
+  "started_at": "2026-11-17T09:24:13.185306+00:00",
+  "execution_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_tenk_adaptation.py",
+    "--plan",
+    "configs/runs/segmentation/tenk_adaptation_launch_20261117.json",
+    "--execute"
+  ],
+  "log": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01.launcher.log",
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01",
+  "detached_session": true,
+  "continuous_chat_monitoring": false
+}

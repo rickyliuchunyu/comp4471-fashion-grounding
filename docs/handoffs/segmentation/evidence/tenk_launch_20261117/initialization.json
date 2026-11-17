@@ -1,0 +1,29 @@
+{
+  "mode": "model_only",
+  "source": {
+    "mode": "model_only",
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "source_completed_updates": 20000,
+    "source_training_data": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+    },
+    "source_config_sha256": "c4ea5cd7b0061db744d6d04c1c51fc755637cc5f54f8dd07bb7e6219782010da",
+    "source_git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+  },
+  "new_completed_updates": 0,
+  "loaded_components": [
+    "model"
+  ],
+  "reset_components": [
+    "optimizer",
+    "scheduler",
+    "scaler",
+    "sampler",
+    "rng",
+    "amp_recovery"
+  ],
+  "model_digest": "0f0935b9b6f775f682d68dcfbba535cc741181e074480f1995ceea55ebd01d48",
+  "classifier_reinitialized": false
+}
