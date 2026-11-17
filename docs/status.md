@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-最新运行（2026-11-17 20:00 HKT）：[10k中期结果](handoffs/segmentation/tenk_progress_20261117_2000.md) **running**，执行源0541df4；已到20986/50000updates（约4.20等效epoch）。2/4epoch完整dev AP63.2350/66.3351，当前最佳新20k比C5k +1.6394，AP_small +8.7631、AP75 +1.6207；八类均提高。3次AMP溢出已重放，0跳过成功更新，最近200步loss/梯度有限。GPU约5.53GiB，总预算仍余约5h24m；原硬限和早停不变，不持续盯守。
+最新结束核查（2026-11-17 20:12 HKT）：[10k训练](handoffs/segmentation/tenk_progress_20261117_2000.md) **仍running**，执行源0541df4，已到22701/50000updates（约4.54epoch），epoch6段训练中，尚无最终worker_result。当前已评最佳仍为新20k/AP66.3351，较C5k +1.6394；复用2/4epoch完整dev报告，不提前确定最终权重。GPU/进程正常，8h硬限/早停不变；本轮不追加训练或重跑推理/smoke，不持续盯守。
 
 本次启动前准备（2026-11-17）：[10k分段执行准备](handoffs/segmentation/tenk_execution_preparation_20261117.md)完成，代码`6b5fc8c`，15项新增CPU案例通过，未部署或启动训练。最多10等效epoch/50000新updates，每2epoch完整dev250；统一总硬截止、每段训练/dev/选择合计上限、失败即停、连续3次不超已有最佳早停，按完整dev AP与C5k缓存基线选择。拟总8小时/每段2小时，四项授权标记仍false；模型加载/新训练/推理/旧smoke均0。原model-only/cosine、负裁剪诊断和全部数据/工程验收复用。新10k性能仍未知；C5k20k AP64.6957和旧候选保留。
 
@@ -22,11 +22,11 @@
 
 ## GitHub 同步快照
 
-20:00本轮已核对全部远端分支、五个PR和活跃讨论，见[最新快照](handoffs/segmentation/evidence/tenk_progress_20261117_2000/github_preflight.json)。读取时本分支6765a0a，实际训练源固定0541df4；wkq b24515b、wyz103dcc5、main7064ebb与两个历史full-data分支均未变，队友交接按相同commit复用。#2/#4 draft，#5 open且依赖#4，#1/#3关闭未合并。PR2正文仍为历史提案，已知编辑接口403；本次以当前交接和真实产物为准，不重复权限尝试。
+20:12本轮已核对全部远端分支、五个PR和活跃讨论，见[最新快照](handoffs/segmentation/evidence/tenk_progress_20261117_2000/github_recheck_2012.json)。读取时本分支cbd031a，实际训练源固定0541df4；wkq b24515b、wyz103dcc5、main7064ebb与两个历史full-data分支均未变，队友交接按相同commit复用。#2/#4 draft，#5 open且依赖#4，#1/#3关闭未合并。PR2正文仍为历史提案，已知编辑接口403；本次以当前交接和真实产物为准，不重复权限尝试。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`读取时6765a0a；执行源0541df4，10k已到20986步/running，当前新20k AP66.3351超过C5k | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[20:00中期结果](handoffs/segmentation/tenk_progress_20261117_2000.md) |
+| lcy / rickyliuchunyu | `segmentation/pilot-adapter-v1`读取时cbd031a；执行源0541df4，10k已到22701步/running，当前新20k AP66.3351超过C5k | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[20:00中期结果](handoffs/segmentation/tenk_progress_20261117_2000.md) |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces` @ `103dcc5` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[实际数据接收、B1/B2 与 M1 交接][wyz-latest] |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation@b24515b`：保留642条审核dev，新增149训练图/39挑战图的语言草稿，未新增分割监督；完整train未发布 | [PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新交接][wkq-reviewed-dev]；原#1/#3关闭未合并 |
 

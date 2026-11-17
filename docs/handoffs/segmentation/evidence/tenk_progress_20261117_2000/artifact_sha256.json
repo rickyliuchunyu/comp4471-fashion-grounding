@@ -9,5 +9,7 @@
   "progress_snapshot.json": "11e92a9127094933d220ec2c7147ee05c09717e116dadf48fa5550601add0481",
   "run_metadata_at_read.json": "c5992a2a4b38a6301aa89d31bc25ced069691316fafc7ce1e769829f3d655d70",
   "selection.json": "c8d506ea504436bc10a1bec6690ce5fdb98fa43701de070ed348b911d90397e1",
-  "stages_at_read.json": "e8db52c592a3e87441573a5a77edcf4f2a24c3280588d4deb4ca9222cc663fa9"
+  "stages_at_read.json": "e8db52c592a3e87441573a5a77edcf4f2a24c3280588d4deb4ca9222cc663fa9",
+  "completion_check_2012.json": "7d2fa8aeb21b295697c6c1e1ebd8b5ab9b0b78bbc5ae11dfc71dd5e30875d061",
+  "github_recheck_2012.json": "e8bd54a8c8c29d519c6a40b12bbf36e1d2083576d75ae0d1b60a4bcfde5cf984"
 }
