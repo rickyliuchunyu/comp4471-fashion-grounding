@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "purpose": "full_fashionpedia_intake_readiness_snapshot",
+  "status": "awaiting_producer_release",
+  "ready_for_training": false,
+  "training_authorized": false,
+  "execution_requested": false,
+  "checked_at": "2026-11-17T07:25:20.904946+00:00",
+  "package_path": null,
+  "actual_train_images": null,
+  "actual_train_instances": null,
+  "image_manifest_sha256": null,
+  "annotation_sha256": null,
+  "producer_commit": "6eb7b923d32142e2510ffc87e6adf0e549a8f743",
+  "runtime_code_commit": "ee7db25586d688760512cb3c1e0943fbd2b47e8f",
+  "missing_from_published_evidence": [
+    "complete_train_package_and_source_population_reconciliation",
+    "old10k_unchanged_modified_removed_added_membership",
+    "new_or_invalidated_source_pixels_geometry_and_near_duplicate_review",
+    "fixed_dev_test_isolation_and_expansion_protocol_amendment",
+    "quality_disposition_and_class_size_statistics",
+    "actual_full_scope_consumer_receipt",
+    "member_freeze_acknowledgements_and_final_binding"
+  ],
+  "consumer_implementation_status": "Existing accept_segmentation_expansion.py is pinned to targeted10k counts and schema; it is not a general full-release receipt producer. Adapt only after actual producer delta/evidence format is supplied.",
+  "reused_checks": "Existing COCO/head/AMP/recovery, old10k acceptance, unchanged full-dev evidence, 9 full preparation and21 runtime CPU cases; none rerun.",
+  "new_activity": {
+    "model_loads": 0,
+    "training_updates": 0,
+    "inference_images": 0,
+    "smoke_runs": 0,
+    "old_tests_rerun": 0,
+    "dataset_pixel_audits": 0
+  },
+  "previous_attempt": {
+    "C5k": "completed_20000_selected",
+    "D10k": "interrupted_at159_no_checkpoint",
+    "automatic_restart": false
+  },
+  "language_dev_dependency": false,
+  "checklist_repo_path": "configs/runs/segmentation/full_fashionpedia_freeze_checklist.json"
+}

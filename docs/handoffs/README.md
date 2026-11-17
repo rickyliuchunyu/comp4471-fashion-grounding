@@ -1,5 +1,7 @@
 # 交接记录入口
 
+当前接续：[完整数据发布缺口与接收准备](segmentation/full_fashionpedia_intake_20261117.md)：已对齐主对话C5k最终结果与侧对话100epoch入口；完整train仍未发布，不重跑smoke、不启动训练。下方旧运行/准备描述为历史快照。
+
 最新状态：[按用户要求停止5k/10k](segmentation/expansion_user_stop_20261117.md)：15:08已停止D10k及整组控制器、GPU和锁释放。C5k已完成20k，组内dev AP64.695685；产物保留，无自动恢复，完整数据100epoch未启动。下文运行描述是此前快照。
 
 最新实现：[完整Fashionpedia / R50 100-epoch执行接线](segmentation/full100_runtime_20261117.md)：独立入口默认准备，每epoch保存/每2epoch完整dev，显式恢复复用有效结果；21项新增CPU案例通过。全量数据冻结仍待补，新GPU执行未验证；原5k/10k按原上限运行，未修改/重跑。团队最新wkq `6eb7b92` 的642条审核dev及B1/B2/M1评价已增量核对。

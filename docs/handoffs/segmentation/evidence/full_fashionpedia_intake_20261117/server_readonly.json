@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-17T07:25:20.904946+00:00",
+  "scope": "read_only_resource_and_release_inventory_no_asset_audit",
+  "disk_free_bytes": 161686339584,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "",
+  "shared_lock_free": true,
+  "active_coordination_records": [],
+  "processed_packages": [
+    "fp_data_eval_large_v1",
+    "fp_dev250_v1",
+    "fp_grounded9_draft_v2",
+    "fp_grounded9_reviewed_v1",
+    "fp_language1000_machine_v2",
+    "fp_language1000_visual_draft_v3",
+    "fp_language1149_targeted_draft_v1",
+    "fp_language_dev250_reviewed_v1",
+    "fp_language_dev250_simple_draft_v4",
+    "fp_language_dev250_visual_draft_v3",
+    "fp_language_dev39_challenge_draft_v1",
+    "fp_language_dev_draft_v2",
+    "fp_pilot20_v2",
+    "fp_test400_holdout_v1",
+    "fp_train10000_targeted_v1",
+    "fp_train5000_v1"
+  ],
+  "segmentation_checkout": "1ec972363271b5ba70be565de71d1b638dc7477c"
+}

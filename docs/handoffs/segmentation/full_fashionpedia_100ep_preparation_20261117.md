@@ -1,5 +1,7 @@
 # 完整 Fashionpedia / Mask2Former-R50：100-epoch 准备
 
+2026-11-17接续说明：本页是历史准备方案，执行接线随后已在[full100 runtime](full100_runtime_20261117.md)实现；原5k/10k已按用户要求停止，不能按本页历史文字继续运行。当前完整包缺口及增量接收范围见[接收准备](full_fashionpedia_intake_20261117.md)，未启动100epoch。
+
 2026-11-17，lcy / segmentation。状态：**preparation_checked / not_executable**。
 用户授权本轮核对整组 GitHub，准备完整数据冻结清单、现有 R50 的100-epoch配置及评价/恢复方案，并同步 GitHub；不启动新训练，不改动正在执行的5k/10k对照。
 
