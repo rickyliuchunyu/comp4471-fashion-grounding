@@ -1,5 +1,7 @@
 # 交接记录入口
 
+最新预算提案：[完整数据先1epoch、达标才第2epoch](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)。已有日志支持0.21秒/图量级；示例4万图含评价首轮2.43–2.88小时，最多两轮4.87–5.76小时，拟每轮3小时/总6小时。复用C5k20k权重，不重跑COCO初始化训练；新短方案接线和真实完整包仍待补，未启动训练，未重复smoke。
+
 当前接续：[完整Fashionpedia分割发布需求与接收准备](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/48873ec6e6de7b311519be5eb0767fa8f0316d69/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)已同步到独立`segmentation/full100-runtime@48873ec`。完整包实际N/hash、增量接收及冻结待补；100epoch入口已有21项CPU检查记录，本轮复用，不启动训练。C5k结果与D10k停止状态保持，完整数据接线未合并到本结果分支。
 
 最新：[5k/10k对照结果与中断](segmentation/expansion_control_20261117.md)：C5k20k完成，10k/20k AP55.8283/64.6957，选20k；D10k159步主动中断，整对未完成。每组3小时上限未延长，GPU已释放，无重复smoke；不自动重启。
