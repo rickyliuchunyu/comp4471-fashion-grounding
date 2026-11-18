@@ -1,0 +1,47 @@
+{
+  "previous_experiment": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment",
+  "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "lexicon": "configs/rule_parser.json",
+  "run_id": "direction-increment-20261118-r01",
+  "predicted_candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+  "previous_50k": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01",
+  "packages": {
+    "clean1000": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1",
+    "expanded1149": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1",
+    "dev": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1",
+    "challenge": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1",
+    "direction74": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_dev_v1",
+    "test": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1"
+  },
+  "package_roles": {
+    "clean1000": "parent1149",
+    "expanded1149": "increment1235"
+  },
+  "pins": {
+    "configs/rule_parser.json": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609",
+    "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1/image_manifest.json": "8516f2d46d15e5c4179766dfd8e48a4a5ce386a80266b7e6e6f5cfaa7579bcae",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1/candidates_gt.json": "f88e6c7b920999c39594177a69b937ca0f9df3e9e4a45a18bf8927304dc3198a",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1/annotations_coco.json": "81c7e18495c374b8cb0dd3218cb93e9c72d9552346f1d589f5b417063e6d8bae",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language1149_targeted_draft_v1/queries_machine_train.jsonl": "1f782f6cfbb00cea9794e286eadc4244f75b34a378a8b54a473177d5e2f470a5",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/image_manifest.json": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/candidates_gt.json": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/annotations_coco.json": "96595ded6bed06cb0bd70654619a742ce28ae61f0a93d44876d162b5152bfc5c",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/queries_machine_train.jsonl": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1/image_manifest.json": "8fa16d0e557edcdfe42b2ec9f809b18f37951808f8336ceebb450e73801e0180",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1/candidates_gt.json": "c587a68d15aea016be97597add202785cb20b2e5f653ffcaec827558a36b6059",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1/annotations_coco.json": "279952b5c86e3ad2bd5241209a6ca4e2b5adfc5617cc07100429d0b737c215ef",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev39_challenge_draft_v1/queries_draft.jsonl": "9940648e575eabc8ef842ba39064adb8491c6400865e6e8103be8dd7f5859a08",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_dev_v1/image_manifest.json": "022943b0703bb91503534a77d8eda7b9f01faca894b276999f13c1de99a31f52",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_dev_v1/candidates_gt.json": "c094f7d1ccd3f43f18a83c225c93b30ee26ac79a9b1ad467f5339679a01420ea",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_dev_v1/annotations_coco.json": "45fcca73136d98956f1000ed63d4ab3b1adb87618295497ea915ab02df42432d",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_dev_v1/queries_draft.jsonl": "fc15fe2beeec95d4a962baebed43e7a842be6ff9b1c6dd77b619da78cc7054c7",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/queries_increment.jsonl": "1be500a9db2ec5d68d7e282ba1b1fd02a00e207a17eeb40bf311919b423c19e3"
+  }
+}
