@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>服饰分割工作台 · Fashionpedia</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">◩</span>Fashionpedia <span class="slash">/</span>
+          <span class="brand-sub">分割实验室</span>
+        </div>
+        <span class="model"><i></i>Mask2Former R50 <b id="modelVersion">加载中</b></span>
+      </div>
+    </header>
+    <main>
+      <div class="title-row">
+        <h1>服饰分割工作台</h1>
+        <nav aria-label="图片来源">
+          <button id="galleryMode" aria-pressed="true">开发集 <small>250</small></button
+          ><button id="uploadMode" aria-pressed="false">我的图片</button>
+        </nav>
+      </div>
+      <section id="uploadPanel" hidden>
+        <div>
+          <strong>分割自己的图片</strong>
+          <p>
+            JPG、PNG 或 WebP，最大 20 MB。点击开始后发送至项目服务器 CPU，处理长边最大 1,440 像素。
+          </p>
+        </div>
+        <div class="upload-actions">
+          <label class="file-button"
+            >选择图片<input id="file" type="file" accept="image/jpeg,image/png,image/webp" /></label
+          ><button id="run" disabled>开始分割</button>
+        </div>
+      </section>
+      <div class="layout">
+        <section class="viewer card" aria-label="图片对照">
+          <div class="cardhead">
+            <div>
+              <span class="eyebrow" id="source">FASHIONPEDIA / DEV</span>
+              <h2 id="photoName">开发集图像</h2>
+            </div>
+            <div class="paging" id="paging">
+              <button id="prev" aria-label="上一张">‹</button
+              ><span
+                ><input id="page" type="number" min="1" max="250" value="1" aria-label="图片序号" />
+                / <span id="total">250</span></span
+              ><button id="next" aria-label="下一张">›</button>
+            </div>
+          </div>
+          <div id="visual" class="visual">
+            <figure>
+              <figcaption>原图</figcaption>
+              <div class="frame"><img id="photo" alt="当前原图" /></div>
+            </figure>
+            <figure>
+              <figcaption>分割叠加</figcaption>
+              <div class="frame"><canvas id="canvas" aria-label="彩色实例掩膜叠加图"></canvas></div>
+            </figure>
+          </div>
+          <div class="empty" id="empty" hidden></div>
+          <div class="foot">
+            <span id="dimensions">—</span
+            ><span id="message" role="status" aria-live="polite"></span>
+          </div>
+          <section id="film" class="film" aria-label="开发集缩略图"></section>
+        </section>
+        <aside class="card inspector">
+          <div class="cardhead">
+            <div>
+              <span class="eyebrow">INSTANCES</span>
+              <h2>预测实例</h2>
+            </div>
+            <span id="count" class="count">0</span>
+          </div>
+          <div class="controls">
+            <label for="threshold">最低置信分数 <output id="thresholdValue">—</output></label
+            ><input id="threshold" type="range" min="0" max="100" disabled />
+            <div class="rangeends"><span id="minimumScore">—</span><span>1.00</span></div>
+            <div class="toggle-row">
+              <label for="boxes">显示边框</label><input id="boxes" type="checkbox" role="switch" />
+            </div>
+          </div>
+          <div id="list" class="instances" aria-label="实例列表"></div>
+          <button id="reset" class="reset" hidden>显示全部实例</button>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,90 +1,41 @@
-# 当前分割候选：50k＋0.3，可直接接入dev
+# 当前分割候选 · 28,318 步
 
-2026-11-18，lcy交付，Codex整理。**ready_for_downstream_development**：wyz/wkq现在可以接入下面的完整dev250候选，无需等待下一轮分割优化、train候选或仓库合并。接收方本人消费/评价尚未代签；后续实验由各自负责人按已有算力安排执行。
+**完整 dev250 固定为 28,318 步权重和 0.3 阈值。** 250 张图共 1,351 个候选，0 张图没有候选。使用同一批 642 条已审核的中英文开发查询，覆盖 606 条（94.39%），旧 50k＋0.3 覆盖 602 条，本次差值为 +4 条。覆盖表示目标在同类一对一 IoU ≥ 0.5 匹配下有候选可用，下游排序准确率另行评价。[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json) · [选择回执](evidence/u28318_candidates_20261118/selection/selection.json)
 
-## 直接使用的路径
+## 替换下游输入
 
-候选输入（传给`CandidatePack`或`--candidates`）：
-
-```text
-/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json
-```
-
-本次选择对应的642条dev查询快照（传给`--queries`）：
+将 `CandidatePack` 或 `--candidates` 指向以下服务器文件。服务器滚动索引位于 `/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json`。每次运行应记录实际使用的版本和摘要。
 
 ```text
-/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl
+/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/selected_candidates/candidates_predicted.json
 ```
 
-交接索引同时放在服务器和GitHub：
+| 输入 | 版本或 SHA-256 |
+|---|---|
+| 候选集 ID | `u28318-dev250-20261118-r01-trial-0.3` |
+| 候选 manifest | `829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2` |
+| 最终 checkpoint | `aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809` |
+| 阈值前缓存 | `d609a55f01c082eaf68b1f2f2bc403278e07e4b50284fd23000d4501d47219c9` |
+| dev 查询 | `ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9` |
 
-```text
-/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json
-/root/autodl-tmp/fashion-grounding/shared/candidates/HANDOFF_50K_DEV250_20261118.md
-```
+- **wyz**：沿用现有 `CandidatePack`、裁剪入口及候选格式。为新候选 manifest 建立独立的区域特征缓存、排序预测和 mask/框结果。候选身份同时绑定候选集 ID 和真实 decoder query ID。文本、语言和编码器签名均相同时可复用文本特征。
+- **wkq**：在新的 predicted-candidate 评价中绑定新版 manifest 和查询摘要，使用独立输出目录。相同标注、查询和评价协议下可沿用 GT 基线。旧候选的覆盖或排序记录仍属于旧版。
+- **查询快照**：`/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl`。642 条查询来自 321 个中英配对、246 张开发图。dev250 的实际导出保留全部 250 张。当前交付范围为 Fashionpedia dev，接收方独立的 MHP 数据及历史实验沿用各自版本。
 
-GitHub对应[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json)。索引是路径/版本清单，不是schema-3候选包；不要直接把索引或`cache/cache.json`传给候选读取器。读到索引后应将其中的固定路径与hash写入各自run metadata，避免后续current指向升级造成版本漂移。[发布回执](evidence/u50000_downstream_handoff_20261118/publication_receipt.json)记录本轮新交接文件的服务器读回校验；原图、mask、权重和既有接口检查直接复用。
+## 三档离线比较
 
-## 固定版本与已有结果
+| 阈值 | 候选数（250 图） | 匹配覆盖 | 匹配覆盖率 | 几何召回率 |
+|---:|---:|---:|---:|---:|
+| 0.3 | 1,351 | 606/642 | 94.39% | 96.88% |
+| 0.5 | 1,198 | 598/642 | 93.15% | 96.26% |
+| 0.7 | 1,070 | 588/642 | 91.59% | 95.33% |
 
-| 项目 | 固定值 |
-| --- | --- |
-| 权重 / 阈值 | 本次10k训练选中的50k / score≥0.3 |
-| candidate_set_id | `u50000-dev250-20261118-r01-trial-0.3` |
-| 候选manifest SHA256 | `c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4` |
-| 查询SHA256 | `ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9` |
-| 图像 / 候选 | 完整dev250 / 1279个；0张零候选图 |
-| 查询范围 | 642条accepted记录，321组中英配对，覆盖246张dev图 |
-| 候选覆盖 | 同类IoU≥0.5一对一覆盖602/642＝93.7695%；不是排序准确率 |
-| 分割AP | 已有完整dev AP69.0313；本次交接未重评 |
-| 格式 | schema 3；类别1–8；原图RGB、原尺寸mask、排他右下角xyxy、真实decoder query ID |
+按覆盖查询数最多选择，同分先取查询图上候选数更少者，再取较高阈值。阈值前缓存包含 24,141 个非空候选，保留原尺寸掩膜、真实 query ID、类别、分数和框。缓存入口为 `/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/cache/cache.json`。只需调整分数阈值时可直接复用。[完整比较](evidence/u28318_candidates_20261118/selection/comparison.csv) · [导出与下游读取回执](evidence/u28318_candidates_20261118/offline_receipt.json)
 
-查询使用当前用户授权的开发口径，保留机器初写及wkq审核来源；另9组pending由上游预先排除，未计入642条。开发快照不冒充整包正式人工验收或最终test。wkq已在相同642条查询上完成的GT结果可按原hash继续复用。
+## GUI 与运行证据
 
-## wyz：更新候选输入与区域特征
+[打开本地工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集读取同一份已选候选包。「我的图片」通过项目服务器 CPU 载入同一 checkpoint 及经摘要校验的解码配置。两个入口的默认阈值均为 0.3，前端显示服务实际返回的更新步数。浏览器上传入口使用一张 dev250 以外的公开项目训练样例作功能检查，结果来自新的 CPU 前向，不参与 dev 覆盖和 AP。[GUI 验收](evidence/u28318_candidates_20261118/gui_receipt.json)
 
-现有`103dcc5`读取器已在本次三档新包通过750次图片读取/3496个候选裁剪，复用该证据，不重跑整套接口smoke。
+首次部署时，将已选目录中的 `candidates_predicted.json`、`image_manifest.json`、`images/`、`masks/` 复制至 `outputs/segmentation_gui/releases/u28318-dev250-20261118-r01/`。本机 Python 环境及 SSH 配置沿用[工作台设置](gui_50k_20261118.md)。
 
-1. 在现有排序入口把`--candidates`换成上面的固定路径；`--queries`固定为上述快照，使用新的run ID/output目录。
-2. 继续使用既有`FeatureCache`。已发布的`visual_spec`包含候选manifest hash、candidate_set_id和候选序列，所以新包会形成新的区域特征键；不得把旧18k区域特征改名后复用。
-3. **相同文本、语言、encoder signature的文本特征可以复用。** `text_spec`不依赖候选版本；无需删除旧缓存或重建整个缓存根目录。编码器/裁剪策略若另行变化，遵循各自既有版本规则。
-4. 排序输出只引用当前包的candidate ID；最终mask/框从该包读取。`image-…-query-…`字符串跨权重可能相同，身份必须同时绑定candidate_set_id和manifest hash。
-
-读取方式保持现有接口即可，以下是接入示例，不是本轮新增验证或已执行的排序：
-
-```python
-from fashion_grounding.grounding.inputs import CandidatePack
-pack = CandidatePack(
-    "/root/autodl-tmp/fashion-grounding/shared/candidates/"
-    "u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json"
-)
-# 延用既有 pack.load(image_id)、crop_regions、排序和输出流程。
-```
-
-## wkq：统一新版predicted条件，保留旧结果
-
-现有`evaluate_predictions.py`的输入参数不变：`--candidates`用本包、`--queries`用固定642条快照；`--annotations`仍是：
-
-```text
-/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json
-```
-
-GT标注SHA256为`74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635`。待队友的新排序输出产生后，用新run ID评价；不要把旧18k预测文件改成50k标签，也不要与旧候选条件的B1/B2/M1结果混成同条件横向对照。B0/B1/B2/M1/M2的新predicted对照使用同一固定候选包，不再各自筛选阈值或重排候选。
-
-旧GT结果在查询/标注/规则等身份不变时可复用；旧18k的候选、特征和历史指标保留原版本。新候选覆盖93.7695%不能作为任一排序方法的新准确率。
-
-## 能立即做什么与范围
-
-- 可立即用：dev区域特征更新、已有排序方法的新版predicted开发评价、从选中candidate ID输出原mask/框。
-- 本包只含dev250，不含train或test候选；它不是语言训练集。M1/M2训练与test安排由对应负责人推进。
-- 50k后续优化只是提案，不阻塞这次交付，也不授权本轮追加分割推理/训练。
-- 共享目录包含指向不可变run/input目录的符号链接。服务器内直接使用即可；跨机器拷贝须复制解析后的完整内容，保留图片、mask与manifest相对结构。
-
-## 依据与接收状态
-
-- [候选生成、阈值选择与技术消费证据](u50000_candidates_dev250_20261118.md)
-- [分割训练与最终权重](tenk_completion_20261118.md)
-- [剩余错误分析及限制](u50000_residual_diagnosis_20261118.md)
-- [本轮整组GitHub快照](evidence/u50000_downstream_handoff_20261118/github_preflight.json)
-
-本轮只发布交接入口、机器索引和状态更新，复用既有验证；不改队友checkout、不运行排序/评价、不代签接收。三方分支保持独立，接入数据文件无需合并lcy全部训练代码。接收方后续只需在自己的handoff记录使用的candidate_set_id/hash、query hash及run ID/结果位置；遇到问题记录具体失败入口，不从环境smoke重做。
+2026-11-18 开工时数据盘约 121 GiB 可用，系统盘约 27 GiB 可用，RTX 3090 占用 0 / 24,576 MiB，GPU 锁空闲。已核对全部七个远端分支及五个 PR，wkq 为 `b82fc99`，wyz 为 `2c47c36`。模型与导出配置通过分割提交 `bc46e85` 固定。共享锁只执行一次完整 dev250 候选推理。三档及阈值选择均为 CPU 离线处理。真实消费验证使用 wyz 当前提交的读取器。三档共检查 3,619 个裁剪。既有完整 dev 分割 AP 71.3205 本次直接复用。队友本人签收状态待对方记录。[GPU 运行回执](evidence/u28318_candidates_20261118/coordination.json) · [缓存回执](evidence/u28318_candidates_20261118/cache_run_metadata.json) · [原始 dev AP](full_single_completion_20261118.md)

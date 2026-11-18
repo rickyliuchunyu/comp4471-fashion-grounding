@@ -1,0 +1,43 @@
+{
+  "model": {
+    "release_id": "u28318-dev250-20261118-r01",
+    "checkpoint": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+    "completed_updates": 28318,
+    "threshold": 0.3
+  },
+  "cached_example": {
+    "id": 1000008811,
+    "devImages": 250,
+    "model": {
+      "release_id": "u28318-dev250-20261118-r01",
+      "checkpoint": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+      "completed_updates": 28318,
+      "threshold": 0.3
+    },
+    "visibleInstances": 4,
+    "count": 4
+  },
+  "upload": {
+    "http_status": 200,
+    "image_id": 4993,
+    "source": "fp_train_full_eligible_v1",
+    "input_sha256": "dbe00dcdc5af4777abf8fed1866641ae3dd69b7a8a3b415b4c50397e0e14b0a5",
+    "size": [
+      1024,
+      680
+    ],
+    "count": 3,
+    "queries": [
+      36,
+      10,
+      61
+    ]
+  },
+  "upload_cpu_forwards": 1,
+  "dev250_upload_forwards": 0,
+  "active_gui": {
+    "port": 8765,
+    "dev_images": 250,
+    "model_verified": true
+  }
+}

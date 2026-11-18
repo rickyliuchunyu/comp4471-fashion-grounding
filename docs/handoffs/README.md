@@ -4,7 +4,7 @@
 
 **全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](segmentation/full_train_protection_20261118.md) · [原增量接收](segmentation/full_train_acceptance_20261118.md)
 
-当前交付（2026-11-18）：[50k＋0.3候选接入说明](segmentation/current_candidates.md) **ready_for_downstream_development**。完整dev250的1279个候选及642条查询快照已固定，机器索引和交接说明同步到服务器共享目录；wyz/wkq可立即更新各自候选输入，不必等待分割继续优化。新候选区域特征使用新hash键，相同文本/语言/编码器的文本特征可复用。wyz 和 wkq 已各自发布基于 50k 候选的 dev 结果。[wyz 评价](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd/docs/handoffs/grounding/u50000_dev_20261118.md) · [wkq 复核](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md)
+**当前交付（2026-11-18）**　GUI 开发集、个人图片和下游 dev250 均已切换到 28,318 步＋0.3。完整 250 图共 1,351 个候选，覆盖 606/642 条审核查询（94.39%）。[版本、路径与阈值比较](segmentation/current_candidates.md)
 
 前次完成（2026-11-18）：[50k离线残余错误分析](segmentation/u50000_residual_diagnosis_20261118.md) **completed**。复用现有AP预测与候选缓存，1008 GT全量分析；固定0.3小目标88/138匹配.5、40/138匹配.75，剩余21低分过滤、24局部几何、3仅异类达标、2无明显重叠。袜6/17、腰带30/47；弱图重采样A/B仅为后续建议；当前优先交接固定候选，未准备或启动新训练。仅CPU诊断与8例看图，0推理/训练/AP重算/smoke；50k＋0.3候选保持。
 

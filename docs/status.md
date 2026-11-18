@@ -6,7 +6,7 @@
 
 保留备选（2026-11-18，非当前扩充前置）：[50k之后的分割优化方案](handoffs/segmentation/u50000_optimization_plan_20261118.md) **planned，未实现/未启动**。该备选拟在现有10k上做75%均匀＋25%弱细类/小目标采样单因素A/B，同一50k模型参数起点、各新增5000updates，末端完整dev；拟每组60分钟硬限。整体AP/AP75不退步并要求针对性提升，当前50k＋0.3交付保持。边界监督另作有条件第二项，不同时改动。
 
-当前交付（2026-11-18）：[50k＋0.3候选接入说明](handoffs/segmentation/current_candidates.md) **ready_for_downstream_development**。完整dev250的1279个候选及642条查询快照已固定，机器索引和交接说明同步到服务器共享目录；wyz/wkq可立即更新各自候选输入，不必等待分割继续优化。新候选区域特征使用新hash键，相同文本/语言/编码器的文本特征可复用。wyz 和 wkq 已各自发布基于 50k 候选的 dev 结果。[wyz 评价](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd/docs/handoffs/grounding/u50000_dev_20261118.md) · [wkq 复核](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md)
+**当前交付（2026-11-18）**　GUI 开发集、个人图片和下游 dev250 均已切换到 28,318 步＋0.3。完整 250 图共 1,351 个候选，覆盖 606/642 条审核查询（94.39%）。[版本、路径与阈值比较](handoffs/segmentation/current_candidates.md)
 
 前次完成（2026-11-18）：[50k离线残余错误分析](handoffs/segmentation/u50000_residual_diagnosis_20261118.md) **completed**。复用现有AP预测与候选缓存，1008 GT全量分析；固定0.3小目标88/138匹配.5、40/138匹配.75，剩余21低分过滤、24局部几何、3仅异类达标、2无明显重叠。袜6/17、腰带30/47；弱图重采样A/B仅为后续建议；当前优先交接固定候选，未准备或启动新训练。仅CPU诊断与8例看图，0推理/训练/AP重算/smoke；50k＋0.3候选保持。
 
@@ -36,11 +36,13 @@
 
 11 月 18 日 21:54 HKT 完成核对。发布前 lcy 分支为 ca351cd，wkq 为 b82fc99，wyz 两个分支均为 2c47c36。PR #2 和 #4 为草稿，#5 开放，#1 和 #3 已关闭。
 
+11 月 18 日制作[50k 分割 GUI](handoffs/segmentation/gui_50k_20261118.md)前复核：lcy 分支为 ca351cd，wyz 两个分支同为 2c47c36。wkq 更新至 a851726，发布独立的外部 MHP v2 多人小包及覆盖记录。GUI 使用原 Fashionpedia dev250 与固定 50k 候选；三方 PR 的开闭状态与下方启动快照一致。[wkq 交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a8517262e57f7bbcf3013e79895efbd8ab18b94b/docs/handoffs/data_eval/mhp2_pilot100_20261118.md)
+
 11 月 18 日启动前已核对全部七个远端分支、五个 PR 及队友交接。wkq 为 ae08c8d，wyz 两个分支均为 2c47c36。#2、#4 为 draft，#5 指向 wkq 分支，#1、#3 已关闭且未合并。[启动前快照](handoffs/segmentation/evidence/full_single_launch_20261118/preflight.json)
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | 训练执行版本 9f1ca24，28,318 步完成并按整体 mask AP 选为最佳 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)、[三方权重比较][full-final] |
+| lcy / rickyliuchunyu | 全量模型、dev250 候选和 GUI 已完成本次交付 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)、[现行候选](handoffs/segmentation/current_candidates.md) |
 | wyz / MayI2004 | 两个 grounding 分支均为 2c47c36，已发布配对目标函数对照 | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)、[本人交接][wyz-pair-objective] |
 | wkq / LE-brawl | data-eval 分支 b82fc99，已发布 MHP 320 张训练和 200 张开发图片 | [PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)、[本人交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b82fc9993676b008cd97f06e5ca91fa2b7c7f26b/docs/handoffs/data_eval/mhp2_binding_expansion_20261118.md) |
 
@@ -61,7 +63,7 @@
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | B0/B1/B2/M1/M2已实现；wyz复算wkq六组评价，B2按GT dev选lambda=2；同642条查询、18k预测候选 | 单seed、同dev选模；多种子及冻结后的独立测试未完成 | A/B |
 | P4 数据扩充冻结 | in_progress | 全量 42,476 张的分割增量接收、5 组历史裁决与 146 张曝光保护均已登记。642 条审核语言 dev 已留档 | 三方正式冻结及尚待处理的语言审核 | B，全员 |
-| P5-S 分割训练 | in_progress | 全量训练和 dev 选模已完成，28,318 步最佳，AP 71.3205 | 已交付候选为旧 50k＋0.3，新权重的候选交付待接入 | lcy |
+| P5-S 分割训练 | done | 权重 28,318 步、完整 dev250 AP 71.3205、固定候选阈值 0.3 及 GUI 已交付 | 下游消费与排序属于 P6 | lcy |
 | P5-L 排序训练 | in_progress | [M1/M2在1000/1149图的四组seed42对照][wyz-current]已完成，每组490updates；M2几何有效但未观察到稳定收益 | 其他种子、人工复核训练监督及冻结后的独立测试仍缺；本轮lcy不代做 | A |
 | P6 联调与对照 | in_progress | 已有 B1 联调及六组评价，wyz 已用 50k 候选评价 642 条审核 dev 查询，wkq 已复核并发布 M2 方位加分对照 | 多种子空间收益、公平完整对照、E1 与 demo 仍待完成 | 全员分责 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -75,7 +77,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 全量训练已完成，28,318 步入选 | 末程较半程小目标 AP +2.8764，较旧 50k +0.3377 | 新权重的候选尚待交付 | [完成记录][full-final] |
+| lcy | 已交付 28,318 步＋0.3 | 新候选由下游读取器逐图核对，GUI 两条路径均已验证 | 队友本人接收待记录 | [当前候选](handoffs/segmentation/current_candidates.md) |
 | wyz（A）/ grounding | 已发布配对目标函数对照 | 保留原 M2 为参考，整图配对指标无改善 | 草稿审核及独立 test 待相应负责人推进 | [本人交接][wyz-pair-objective] |
 | wkq（B）/ data_eval | 已发布同类服饰、颜色与方位监督审计 | 训练划分内的探索草稿及冻结模型探测已有记录 | 独立审核与评估见本人计划 | [本人交接][wkq-binding] |
 
@@ -97,7 +99,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-全量训练于 11 月 18 日 21:47:46 HKT 正常结束，最终选择 28,318 步权重，服务器路径及摘要已登记。当前下游候选交付为 50k＋0.3。[最终权重][full-final] · [现行候选](handoffs/segmentation/current_candidates.md)
+最终选定的 28,318 步模型现供 GUI 与下游 dev250 使用，固定阈值 0.3。[最终权重][full-final] · [候选与 GUI](handoffs/segmentation/current_candidates.md)
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 

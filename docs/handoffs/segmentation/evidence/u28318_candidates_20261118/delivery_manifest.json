@@ -1,0 +1,56 @@
+{
+  "status": "available_fixed_for_development",
+  "published_at": "2026-11-18T14:08:52.686970+00:00",
+  "run_id": "segmentation-u28318-dev-candidates-20261118-r01",
+  "source_run_directory": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u28318-dev-candidates-20261118-r01",
+  "server_aliases": true,
+  "storage_policy": "Absolute symlinks to immutable run/input directories; preserve source directories and copy resolved contents across machines.",
+  "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+  "completed_updates": 28318,
+  "source_cache_sha256": "d609a55f01c082eaf68b1f2f2bc403278e07e4b50284fd23000d4501d47219c9",
+  "selected_threshold": 0.3,
+  "selection_reason": "most_covered_queries",
+  "selection_sha256": "bbc37fcddb60af956bf46bc27c3dc371bc418d964bf0f1dcc3ef062162e9f2a4",
+  "selected_package": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u28318-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json",
+    "sha256": "829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2",
+    "candidate_set_id": "u28318-dev250-20261118-r01-trial-0.3"
+  },
+  "selected_entry": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+  "selected_candidate_manifest_sha256": "829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2",
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "query_records": 642,
+  "semantic_groups": 321,
+  "query_images": 246,
+  "evaluation_basis": "user_authorized_development",
+  "upstream_review_status": "642 accepted, 9 pending semantic groups excluded by upstream",
+  "consumer_verification": "Selected and alternative trials were read and cropped using the wyz 2c47c36 reader; receipt records all crop counts.",
+  "packages": [
+    {
+      "threshold": 0.3,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u28318-dev-candidates-20261118-r01/trial-0.3",
+      "images": 250,
+      "candidates": 1351,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2"
+    },
+    {
+      "threshold": 0.5,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u28318-dev-candidates-20261118-r01/trial-0.5",
+      "images": 250,
+      "candidates": 1198,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "413b3b8d311924f81f1022266ac4f5827978d79bb107daf22550c16e59bc658a"
+    },
+    {
+      "threshold": 0.7,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u28318-dev-candidates-20261118-r01/trial-0.7",
+      "images": 250,
+      "candidates": 1070,
+      "no_candidates_images": 0,
+      "candidate_manifest_sha256": "c1c3b39c76c66de4094c3f8b0bba70b6178e4e0e143044f0264a9fdd15abd94b"
+    }
+  ],
+  "reuse_note": "The 50k version is retained. Pin the new candidate set and manifest for candidate-dependent features and results.",
+  "scope": "dev250 candidates and offline coverage selection only; no ranking, train/test candidates or training"
+}

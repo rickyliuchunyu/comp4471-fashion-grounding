@@ -1,0 +1,67 @@
+{
+  "status": "published_and_readback_verified",
+  "published_at": "2026-11-18T14:13:00.343721+00:00",
+  "run_id": "segmentation-u28318-dev-candidates-20261118-r01",
+  "release_id": "u28318-dev250-20261118-r01",
+  "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+  "completed_updates": 28318,
+  "candidate_set_id": "u28318-dev250-20261118-r01-trial-0.3",
+  "candidate_manifest_sha256": "829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2",
+  "source_cache_sha256": "d609a55f01c082eaf68b1f2f2bc403278e07e4b50284fd23000d4501d47219c9",
+  "selected_threshold": 0.3,
+  "full_dev_passes": 1,
+  "dev_image_forwards": 250,
+  "cached_candidates": 24141,
+  "upload_gui_cpu_forwards_outside_dev": 1,
+  "optimizer_updates": 0,
+  "ap_reruns": 0,
+  "matched_candidate_coverage": 0.9439252336448598,
+  "matched_covered_queries": 606,
+  "comparable_queries": 642,
+  "comparison": [
+    {
+      "threshold": 0.3,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 606,
+      "matched_candidate_coverage": 0.9439252336448598,
+      "geometric_recalled_queries": 622,
+      "geometric_recall_at_0_5": 0.9688473520249221,
+      "candidate_count_on_query_images": 1331,
+      "mean_candidates_on_query_images": 5.4105691056910565,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.5,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 598,
+      "matched_candidate_coverage": 0.9314641744548287,
+      "geometric_recalled_queries": 618,
+      "geometric_recall_at_0_5": 0.9626168224299065,
+      "candidate_count_on_query_images": 1181,
+      "mean_candidates_on_query_images": 4.800813008130081,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.7,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 588,
+      "matched_candidate_coverage": 0.9158878504672897,
+      "geometric_recalled_queries": 612,
+      "geometric_recall_at_0_5": 0.9532710280373832,
+      "candidate_count_on_query_images": 1056,
+      "mean_candidates_on_query_images": 4.2926829268292686,
+      "zero_candidate_images": 0
+    }
+  ],
+  "current_index": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json",
+    "sha256": "c19091fe52178eadfea028ef41299b1a906c600d0412d82c5373a614976992a5"
+  },
+  "server_handoff": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/HANDOFF_U28318_DEV250_20261118.md",
+    "sha256": "149a6d65811f3e5f307caa43dee233afb4bf5d7fb0ae1443bdf3d9d938927070"
+  }
+}
