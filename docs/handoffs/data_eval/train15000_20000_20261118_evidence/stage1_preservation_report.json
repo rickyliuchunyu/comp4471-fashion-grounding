@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "original_parent": "fp_train10000_targeted_v1",
+  "direct_parent": "fp_train10000_targeted_v1",
+  "parent_records_equal": true,
+  "original_parent_records_equal": true,
+  "parent_assets_destination_hash_checked": 49699,
+  "old_source_pixels_decoded": 0,
+  "images": 15000,
+  "new_images": 5000,
+  "instances": 58959,
+  "new_instances": 19260,
+  "sidecar_exactly_delta": true,
+  "formal_freeze": false
+}

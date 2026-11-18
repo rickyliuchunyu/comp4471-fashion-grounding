@@ -1,10 +1,12 @@
 # 当前进度与下一步
 
-更新：2026-11-17（wkq 语言困难增量已发布）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
+更新：2026-11-18（wkq 15k/20k分割增量已发布）。本表反映仓库中可核查的证据，不推断服务器或成员电脑上的未交接工作。路线见 [P0–P10](workflow.md)，运行见 [registry](../experiments/registry.csv)，交接见 [handoffs](handoffs/README.md)。
 
 **wkq 已导入dev人工审核并完成现有模型两种候选条件的评价。** 321组/642条accepted、246张查询图，9组待处理。M1在GT候选选对91.59%；lcy u18000+0.3预测候选下Success@0.5=83.80%、同类关联选择准确率71.50%。B1/B2同清单对照、子组/错误分析和图片级区间见[交接](handoffs/data_eval/reviewed_dev_eval_20261117.md)。135项CPU测试及4项适配检查通过。没有训练或占用GPU，原train/dev/test划分不变；该次模型评价未扩充数据。
 
 **wkq 已发布语言定向增量。** 最终新增149张训练图/298条AI逐图初标，合并包1149图/3296条；独立dev困难集39图/78条待审，原主dev/test不变。142项测试、7122个hash和5908个源mask/裁剪检查通过，wyz弱标注入口实际可读取。没有训练或GPU使用；[交接、路径、审核和下游步骤](handoffs/data_eval/language_targeted_20261117.md)。
+
+**wkq 已发布15k/20k分割增量。** 原10k完整保留，新增两批各5000图、共38249实例；累计20k/77948实例/19976组。新增源像素/身份/隔离检查和5项CPU检查通过，未训练。小包可用0、第二增量源支持边界264，coverage_partial；2组旧分区关联线索另记，相关新图已隔离。待lcy仅新增CPU验收，未formal freeze。见[交接与路径](handoffs/data_eval/train15000_20000_20261118.md)。
 
 ## 1. 阶段状态
 
@@ -16,8 +18,8 @@
 | P1 环境与工作区 | in_progress | [远程只读盘点](handoffs/segmentation/server_inventory.md)：GPU/磁盘/包版本/扩展导入 | 独立工作区、图文环境、GPU 锁与模型小批检查 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | 17组/34条accepted保留；lcy小包消费验收有工作区记录，用户报告wyz接口OK | 旧1组争议仍待处理；不同版本验收不能混用 | B，全员 |
 | P3 基线与评价器 | in_progress | [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)；共享解析/B0/统一评价核心，当前全套117测试通过 | B1/B2实际输出及评价交叉复核 | A/B |
-| P4 数据扩充冻结 | in_progress | [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)：新10k分割包，旧5000/250/400和语言包不变；定向补充/分组/hash/源mask检查通过 | 人工验收、dev草稿复核、独立测试描述、三方消费验收与冻结 | B，全员 |
-| P5-S 分割训练 | in_progress | lcy [10k扩充请求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/149ddf7/docs/handoffs/segmentation/train10000_expansion_request_20261115.md) 引用已有模型/候选；本轮未改动 | 新10k包消费验收与后续运行由lcy登记，本分支不代验 | lcy |
+| P4 数据扩充冻结 | in_progress | [15k/20k交接](handoffs/data_eval/train15000_20000_20261118.md)：两个增量已发布，旧10k/dev/test保留；新增来源/几何/隔离检查通过，coverage_partial | 人工验收、dev草稿复核、独立测试描述、三方消费验收与冻结 | B，全员 |
+| P5-S 分割训练 | in_progress | lcy [15k/20k请求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64e504ed29beb843289931a28349d9da3228d630/docs/handoffs/segmentation/train15000_20000_expansion_request_20261118.md)记录50k+0.3 dev候选已交付；本轮未重测模型 | 两个新增CPU视图验收及后续训练预算由lcy登记，本分支不代验 | lcy |
 | P5-L 排序训练 | in_progress | 已核对wyz旧machine_v2、seed42、5轮M1权重；wkq本轮固定权重dev评价 | 新标注训练对照、M2、其他seed仍待完成 | A |
 | P6 联调与对照 | in_progress | [已审核dev的GT/预测候选B1/B2/M1评价](handoffs/data_eval/reviewed_dev_eval_20261117.md) | 9组标注裁决、正式方法对照/M2/E1、接收方验收 | 全员 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -31,9 +33,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 验收新10k包，登记后续分割运行 | [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)；旧dev/test和已有模型候选不变 | 实际加载器验收；训练配置与GPU协调由本人登记 | 新包 shared/processed/fp_train10000_targeted_v1 |
+| lcy | 验收15k/20k两个新增CPU视图，再定训练预算 | [分割增量交接](handoffs/data_eval/train15000_20000_20261118.md)；旧dev/test与现有候选不变 | 新增加载器验收，源像素检查按hash复用，不跑模型smoke | shared/processed/fp_train15000_targeted_v1 / fp_train20000_targeted_v1 |
 | wyz（A）/ grounding | 清理后1000 vs1149语言训练对照；空间模块 | [增量数据及入口已由wkq技术验证](handoffs/data_eval/language_targeted_20261117.md)，主dev642条accepted | 新增训练仍为AI弱标注；dev39待审；训练/GPU由本人登记 | 新包、hash、候选与训练输入见交接；不代签收或宣告训练完成 |
-| wkq（B）/ data_eval | 审核新增149训练组、39dev困难组；原9组裁决 | [语言增量交接](handoffs/data_eval/language_targeted_20261117.md)，8页新增审核 | AI初标未人工accepted；新dev审核后单列评价 | fp_language1149_targeted_draft_v1 / fp_language_dev39_challenge_draft_v1；142测试和真实消费检查 |
+| wkq（B）/ data_eval | 单独裁决2组旧分区关联线索及源mask疑点；继续149训练组/39dev困难组和原9组审核 | [语言增量交接](handoffs/data_eval/language_targeted_20261117.md)，8页新增审核 | AI初标未人工accepted；新dev审核后单列评价 | fp_language1149_targeted_draft_v1 / fp_language_dev39_challenge_draft_v1；142测试和真实消费检查 |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 

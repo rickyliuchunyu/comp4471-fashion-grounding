@@ -1,0 +1,67 @@
+{
+  "eligible_independent_pixel_fingerprinted": 16173,
+  "eligible_goal_counts": {
+    "small_sock": 422,
+    "small_belt": 659,
+    "small_head_accessory": 789,
+    "small_watch": 1768,
+    "small_shoe": 2475,
+    "bag_all": 2208,
+    "small_bag": 0,
+    "extreme_priority": 1959,
+    "complex_boundary_source": 564
+  },
+  "pixel_invalid": [],
+  "excluded_components": 817,
+  "stages": [
+    {
+      "phase": 1,
+      "goals_actual": {
+        "small_shoe": 784,
+        "extreme_priority": 659,
+        "bag_all": 688,
+        "small_watch": 543,
+        "complex_boundary_source": 300,
+        "small_head_accessory": 255,
+        "small_belt": 300,
+        "small_sock": 200
+      },
+      "goals_shortfall": {
+        "small_sock": 0,
+        "small_belt": 0,
+        "small_head_accessory": 0,
+        "small_watch": 0,
+        "small_shoe": 0,
+        "bag_all": 0,
+        "small_bag": 50,
+        "extreme_priority": 0,
+        "complex_boundary_source": 0
+      }
+    },
+    {
+      "phase": 2,
+      "goals_actual": {
+        "small_shoe": 700,
+        "extreme_priority": 640,
+        "small_watch": 557,
+        "bag_all": 664,
+        "small_head_accessory": 220,
+        "complex_boundary_source": 264,
+        "small_belt": 300,
+        "small_sock": 200
+      },
+      "goals_shortfall": {
+        "small_sock": 0,
+        "small_belt": 0,
+        "small_head_accessory": 0,
+        "small_watch": 0,
+        "small_shoe": 0,
+        "bag_all": 0,
+        "small_bag": 50,
+        "extreme_priority": 0,
+        "complex_boundary_source": 36
+      }
+    }
+  ],
+  "pixel_masks_full_check": "new selected only during conversion; metadata RLE raster checked entire remaining source"
+}

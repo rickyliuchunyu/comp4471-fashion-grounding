@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "packages": [
+    {
+      "release": "fp_train15000_targeted_v1",
+      "metadata_evidence_hashes_checked": 47,
+      "sidecar_rows": 5000,
+      "visual_observations": 18,
+      "old_assets_not_rescanned": true
+    },
+    {
+      "release": "fp_train20000_targeted_v1",
+      "metadata_evidence_hashes_checked": 51,
+      "sidecar_rows": 5000,
+      "visual_observations": 18,
+      "old_assets_not_rescanned": true
+    }
+  ]
+}

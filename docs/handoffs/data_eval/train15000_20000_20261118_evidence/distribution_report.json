@@ -1,0 +1,5178 @@
+{
+  "old10k": {
+    "images": 10000,
+    "groups": 9976,
+    "instances": 39699,
+    "crowd_instances": 0,
+    "small_instances_le1024": 7166,
+    "extreme_instances_le256": 1875,
+    "exactly_1024_instances": 8,
+    "target_image_hits": {
+      "bag_all": 2077,
+      "small_shoe": 2074,
+      "small_belt": 689,
+      "small_sock": 544,
+      "small_glasses": 680,
+      "small_head_accessory": 719,
+      "small_bag": 210
+    },
+    "project_categories": {
+      "1": {
+        "name": "top",
+        "instances": 5612,
+        "images": 5236,
+        "groups": 5229,
+        "small_instances_le1024": 165,
+        "small_images": 163,
+        "extreme_instances_le256": 45,
+        "extreme_images": 45,
+        "absolute_area_bins": {
+          "gt9216": 4287,
+          "1025_9216": 1160,
+          "257_1024": 120,
+          "le256": 45
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 3130,
+          "0.001_0.01": 985,
+          "gt0.1": 1379,
+          "le0.001": 118
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.013863469237810915,
+          0.03858943658086833,
+          0.09823469858899923,
+          0.3015485130279908,
+          0.9112676461963807
+        ]
+      },
+      "2": {
+        "name": "pants",
+        "instances": 3567,
+        "images": 3536,
+        "groups": 3532,
+        "small_instances_le1024": 25,
+        "small_images": 24,
+        "extreme_instances_le256": 5,
+        "extreme_images": 5,
+        "absolute_area_bins": {
+          "gt9216": 3205,
+          "1025_9216": 337,
+          "257_1024": 20,
+          "le256": 5
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 2947,
+          "gt0.1": 355,
+          "0.001_0.01": 250,
+          "le0.001": 15
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.028496488176917717,
+          0.05156230926513672,
+          0.07385399976359293,
+          0.0997863590542522,
+          0.944286669481982
+        ]
+      },
+      "3": {
+        "name": "skirt",
+        "instances": 1157,
+        "images": 1154,
+        "groups": 1154,
+        "small_instances_le1024": 2,
+        "small_images": 1,
+        "extreme_instances_le256": 2,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1082,
+          "1025_9216": 73,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 836,
+          "0.001_0.01": 49,
+          "gt0.1": 270,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.03307015236090776,
+          0.05752139000732064,
+          0.09528930306085044,
+          0.15333348607038144,
+          0.9281567258883249
+        ]
+      },
+      "4": {
+        "name": "outerwear",
+        "instances": 2802,
+        "images": 2714,
+        "groups": 2712,
+        "small_instances_le1024": 7,
+        "small_images": 6,
+        "extreme_instances_le256": 5,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "gt9216": 2743,
+          "1025_9216": 52,
+          "257_1024": 2,
+          "le256": 5
+        },
+        "relative_area_bins": {
+          "gt0.1": 1086,
+          "0.01_0.1": 1679,
+          "0.001_0.01": 30,
+          "le0.001": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.5972271754636236e-05,
+          0.04862244236420393,
+          0.08081969133289249,
+          0.14826491291571922,
+          0.307300324593821,
+          0.8763080234945255
+        ]
+      },
+      "5": {
+        "name": "dress",
+        "instances": 4161,
+        "images": 4145,
+        "groups": 4134,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 4115,
+          "257_1024": 2,
+          "1025_9216": 43,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 2572,
+          "0.01_0.1": 1555,
+          "0.001_0.01": 32,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00014605480205278593,
+          0.07778134164222873,
+          0.11968162556233933,
+          0.2013832301173403,
+          0.29146385192871094,
+          0.8771316756063433
+        ]
+      },
+      "6": {
+        "name": "shoes",
+        "instances": 11099,
+        "images": 5739,
+        "groups": 5729,
+        "small_instances_le1024": 2733,
+        "small_images": 2074,
+        "extreme_instances_le256": 435,
+        "extreme_images": 408,
+        "absolute_area_bins": {
+          "1025_9216": 8035,
+          "257_1024": 2298,
+          "le256": 435,
+          "gt9216": 331
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 8882,
+          "le0.001": 1649,
+          "0.01_0.1": 567,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1455278592375367e-05,
+          0.0014700530891809506,
+          0.002750698771994135,
+          0.004864183924793838,
+          0.0075903627144043905,
+          0.10122456928152493
+        ]
+      },
+      "7": {
+        "name": "bag",
+        "instances": 2203,
+        "images": 2077,
+        "groups": 2075,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 862,
+          "1025_9216": 1126,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1042,
+          "0.001_0.01": 1039,
+          "le0.001": 109,
+          "gt0.1": 13
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.003950854550358837,
+          0.009322956546707504,
+          0.020406715454922807,
+          0.03661817976124858,
+          0.16446999679721816
+        ]
+      },
+      "8": {
+        "name": "accessory",
+        "instances": 9098,
+        "images": 5086,
+        "groups": 5082,
+        "small_instances_le1024": 4016,
+        "small_images": 2757,
+        "extreme_instances_le256": 1359,
+        "extreme_images": 1004,
+        "absolute_area_bins": {
+          "gt9216": 1277,
+          "1025_9216": 3805,
+          "257_1024": 2657,
+          "le256": 1359
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1582,
+          "0.001_0.01": 4454,
+          "le0.001": 3024,
+          "gt0.1": 38
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.0007073634530791789,
+          0.0018853805631486552,
+          0.006475080660102958,
+          0.01677240165734825,
+          0.5504948680351907
+        ]
+      }
+    },
+    "source_categories": {
+      "0": {
+        "name": "shirt, blouse",
+        "instances": 1436,
+        "images": 1427,
+        "groups": 1425,
+        "small_instances_le1024": 24,
+        "small_images": 24,
+        "extreme_instances_le256": 7,
+        "extreme_images": 7,
+        "absolute_area_bins": {
+          "gt9216": 975,
+          "1025_9216": 437,
+          "257_1024": 17,
+          "le256": 7
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 744,
+          "0.001_0.01": 373,
+          "gt0.1": 302,
+          "le0.001": 17
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.008916144496884165,
+          0.029087435171898754,
+          0.08424222714040985,
+          0.27338552474975586,
+          0.8199246724446615
+        ]
+      },
+      "1": {
+        "name": "top, t-shirt, sweatshirt",
+        "instances": 3713,
+        "images": 3619,
+        "groups": 3614,
+        "small_instances_le1024": 134,
+        "small_images": 133,
+        "extreme_instances_le256": 37,
+        "extreme_images": 37,
+        "absolute_area_bins": {
+          "gt9216": 2919,
+          "1025_9216": 660,
+          "257_1024": 97,
+          "le256": 37
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 2162,
+          "0.001_0.01": 553,
+          "gt0.1": 902,
+          "le0.001": 96
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.0172526041666666e-05,
+          0.015327065677966102,
+          0.03940136575768668,
+          0.09717440290995608,
+          0.28813645725205794,
+          0.9057019712552743
+        ]
+      },
+      "2": {
+        "name": "sweater",
+        "instances": 309,
+        "images": 309,
+        "groups": 309,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 281,
+          "1025_9216": 25,
+          "le256": 1,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 157,
+          "0.01_0.1": 126,
+          "0.001_0.01": 23,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003307711693548387,
+          0.040208027859237536,
+          0.10722787773569023,
+          0.3518838882446289,
+          0.5045818547771672,
+          0.9112676461963807
+        ]
+      },
+      "3": {
+        "name": "cardigan",
+        "instances": 220,
+        "images": 218,
+        "groups": 218,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 213,
+          "1025_9216": 7
+        },
+        "relative_area_bins": {
+          "gt0.1": 82,
+          "0.01_0.1": 136,
+          "0.001_0.01": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.001881529508797654,
+          0.036478713810269084,
+          0.06409259086165968,
+          0.16815485574502861,
+          0.3986144065856933,
+          0.8763080234945255
+        ]
+      },
+      "4": {
+        "name": "jacket",
+        "instances": 1804,
+        "images": 1779,
+        "groups": 1779,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 1763,
+          "1025_9216": 38,
+          "257_1024": 1,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 616,
+          "0.01_0.1": 1161,
+          "0.001_0.01": 24,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.5972271754636236e-05,
+          0.04671448890129849,
+          0.07504437494834224,
+          0.1342196604408919,
+          0.2953486265692145,
+          0.8746400439049586
+        ]
+      },
+      "5": {
+        "name": "vest",
+        "instances": 154,
+        "images": 154,
+        "groups": 154,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 112,
+          "1025_9216": 38,
+          "257_1024": 4
+        },
+        "relative_area_bins": {
+          "gt0.1": 18,
+          "0.001_0.01": 36,
+          "0.01_0.1": 98,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006973400843108505,
+          0.010452884330970627,
+          0.02949523423456045,
+          0.05171041030410235,
+          0.1660868673105837,
+          0.6600341796875
+        ]
+      },
+      "6": {
+        "name": "pants",
+        "instances": 2907,
+        "images": 2884,
+        "groups": 2881,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 2765,
+          "1025_9216": 137,
+          "257_1024": 3,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 2494,
+          "gt0.1": 318,
+          "0.001_0.01": 92,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.037913975605570555,
+          0.05625544125733138,
+          0.0775891769784727,
+          0.10207947436904954,
+          0.944286669481982
+        ]
+      },
+      "7": {
+        "name": "shorts",
+        "instances": 660,
+        "images": 657,
+        "groups": 656,
+        "small_instances_le1024": 20,
+        "small_images": 19,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 440,
+          "1025_9216": 200,
+          "257_1024": 17,
+          "le256": 3
+        },
+        "relative_area_bins": {
+          "gt0.1": 37,
+          "0.001_0.01": 158,
+          "0.01_0.1": 453,
+          "le0.001": 12
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          6.612141927083333e-05,
+          0.009737015106275466,
+          0.021609099749107782,
+          0.039295086810885324,
+          0.06959038787573316,
+          0.8977922885572139
+        ]
+      },
+      "8": {
+        "name": "skirt",
+        "instances": 1157,
+        "images": 1154,
+        "groups": 1154,
+        "small_instances_le1024": 2,
+        "small_images": 1,
+        "extreme_instances_le256": 2,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1082,
+          "1025_9216": 73,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 836,
+          "0.001_0.01": 49,
+          "gt0.1": 270,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.03307015236090776,
+          0.05752139000732064,
+          0.09528930306085044,
+          0.15333348607038144,
+          0.9281567258883249
+        ]
+      },
+      "9": {
+        "name": "coat",
+        "instances": 747,
+        "images": 734,
+        "groups": 733,
+        "small_instances_le1024": 4,
+        "small_images": 3,
+        "extreme_instances_le256": 3,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 736,
+          "1025_9216": 7,
+          "le256": 3,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 371,
+          "0.01_0.1": 368,
+          "le0.001": 4,
+          "0.001_0.01": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.7614306784660766e-05,
+          0.06060835697291361,
+          0.09945902446847507,
+          0.16975362559567447,
+          0.3008284631620214,
+          0.8428564723890942
+        ]
+      },
+      "10": {
+        "name": "dress",
+        "instances": 4161,
+        "images": 4145,
+        "groups": 4134,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 4115,
+          "257_1024": 2,
+          "1025_9216": 43,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 2572,
+          "0.01_0.1": 1555,
+          "0.001_0.01": 32,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00014605480205278593,
+          0.07778134164222873,
+          0.11968162556233933,
+          0.2013832301173403,
+          0.29146385192871094,
+          0.8771316756063433
+        ]
+      },
+      "12": {
+        "name": "cape",
+        "instances": 31,
+        "images": 31,
+        "groups": 31,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 31
+        },
+        "relative_area_bins": {
+          "gt0.1": 17,
+          "0.01_0.1": 14
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.03209339488636364,
+          0.0684126334498026,
+          0.11930243081011731,
+          0.20039673168658195,
+          0.30610509072580644,
+          0.5081316066297209
+        ]
+      },
+      "13": {
+        "name": "glasses",
+        "instances": 1454,
+        "images": 1451,
+        "groups": 1449,
+        "small_instances_le1024": 682,
+        "small_images": 680,
+        "extreme_instances_le256": 126,
+        "extreme_images": 126,
+        "absolute_area_bins": {
+          "1025_9216": 749,
+          "257_1024": 556,
+          "le256": 126,
+          "gt9216": 23
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 1014,
+          "le0.001": 412,
+          "0.01_0.1": 28
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.1573545655375554e-05,
+          0.0008979420594912302,
+          0.0015198915629575402,
+          0.0026970021535923754,
+          0.004811503950102238,
+          0.018114089965820312
+        ]
+      },
+      "14": {
+        "name": "hat",
+        "instances": 639,
+        "images": 637,
+        "groups": 636,
+        "small_instances_le1024": 34,
+        "small_images": 34,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "1025_9216": 437,
+          "gt9216": 168,
+          "257_1024": 33,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 402,
+          "0.01_0.1": 219,
+          "le0.001": 18
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00015045470756062766,
+          0.004481749862737921,
+          0.006960690676510989,
+          0.013428450329912023,
+          0.023626680753208288,
+          0.09434567448680352
+        ]
+      },
+      "15": {
+        "name": "headband, head covering, hair accessory",
+        "instances": 1198,
+        "images": 1016,
+        "groups": 1016,
+        "small_instances_le1024": 875,
+        "small_images": 719,
+        "extreme_instances_le256": 433,
+        "extreme_images": 322,
+        "absolute_area_bins": {
+          "gt9216": 62,
+          "1025_9216": 261,
+          "257_1024": 442,
+          "le256": 433
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 76,
+          "0.001_0.01": 386,
+          "le0.001": 729,
+          "gt0.1": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.48323754789272e-06,
+          0.00019631588975170346,
+          0.000716939707528281,
+          0.0016762194697251113,
+          0.006147808887803312,
+          0.18830478488573407
+        ]
+      },
+      "16": {
+        "name": "tie",
+        "instances": 351,
+        "images": 351,
+        "groups": 350,
+        "small_instances_le1024": 106,
+        "small_images": 106,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "1025_9216": 205,
+          "257_1024": 104,
+          "gt9216": 40,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 254,
+          "le0.001": 42,
+          "0.01_0.1": 55
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00011455278592375367,
+          0.0013030379398826979,
+          0.0026060758797653957,
+          0.006122859571554191,
+          0.013095401982378855,
+          0.07787478266837482
+        ]
+      },
+      "17": {
+        "name": "glove",
+        "instances": 336,
+        "images": 185,
+        "groups": 184,
+        "small_instances_le1024": 55,
+        "small_images": 44,
+        "extreme_instances_le256": 5,
+        "extreme_images": 5,
+        "absolute_area_bins": {
+          "1025_9216": 269,
+          "257_1024": 50,
+          "gt9216": 12,
+          "le256": 5
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 279,
+          "0.01_0.1": 31,
+          "le0.001": 26
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.146458638360176e-05,
+          0.00192467352023989,
+          0.0034422665379351403,
+          0.006114211151640739,
+          0.00941354604539489,
+          0.02792711383601757
+        ]
+      },
+      "18": {
+        "name": "watch",
+        "instances": 799,
+        "images": 795,
+        "groups": 793,
+        "small_instances_le1024": 628,
+        "small_images": 626,
+        "extreme_instances_le256": 194,
+        "extreme_images": 194,
+        "absolute_area_bins": {
+          "257_1024": 434,
+          "le256": 194,
+          "1025_9216": 171
+        },
+        "relative_area_bins": {
+          "le0.001": 562,
+          "0.001_0.01": 237
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-05,
+          0.0003762121838206137,
+          0.0006314722324046921,
+          0.001184290673534943,
+          0.002413363191039681,
+          0.0048847198486328125
+        ]
+      },
+      "19": {
+        "name": "belt",
+        "instances": 1789,
+        "images": 1732,
+        "groups": 1730,
+        "small_instances_le1024": 719,
+        "small_images": 689,
+        "extreme_instances_le256": 138,
+        "extreme_images": 136,
+        "absolute_area_bins": {
+          "257_1024": 581,
+          "1025_9216": 901,
+          "gt9216": 169,
+          "le256": 138
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 1069,
+          "0.01_0.1": 251,
+          "le0.001": 468,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.295729472140763e-06,
+          0.0009708432467057101,
+          0.002299647177419355,
+          0.005774892320381231,
+          0.012030642333268423,
+          0.11458582638129103
+        ]
+      },
+      "20": {
+        "name": "leg warmer",
+        "instances": 25,
+        "images": 14,
+        "groups": 14,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 10,
+          "1025_9216": 14,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 15,
+          "0.001_0.01": 10
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0013368754575402634,
+          0.006572079203377386,
+          0.01177459448313783,
+          0.02154299734626647,
+          0.027740308591665416,
+          0.055971472364568085
+        ]
+      },
+      "21": {
+        "name": "tights, stockings",
+        "instances": 988,
+        "images": 503,
+        "groups": 503,
+        "small_instances_le1024": 36,
+        "small_images": 28,
+        "extreme_instances_le256": 9,
+        "extreme_images": 8,
+        "absolute_area_bins": {
+          "gt9216": 510,
+          "1025_9216": 442,
+          "257_1024": 27,
+          "le256": 9
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 617,
+          "0.001_0.01": 344,
+          "le0.001": 27
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.898667279411765e-05,
+          0.007171720353739003,
+          0.013000017944191585,
+          0.020839265161285033,
+          0.02774098714192709,
+          0.09552270436217009
+        ]
+      },
+      "22": {
+        "name": "sock",
+        "instances": 1120,
+        "images": 634,
+        "groups": 634,
+        "small_instances_le1024": 870,
+        "small_images": 544,
+        "extreme_instances_le256": 449,
+        "extreme_images": 314,
+        "absolute_area_bins": {
+          "le256": 449,
+          "257_1024": 421,
+          "1025_9216": 240,
+          "gt9216": 10
+        },
+        "relative_area_bins": {
+          "le0.001": 736,
+          "0.001_0.01": 361,
+          "0.01_0.1": 23
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.00017590473409032556,
+          0.000561308651026393,
+          0.001313516613996023,
+          0.0034028095607937874,
+          0.02068536931818182
+        ]
+      },
+      "23": {
+        "name": "shoe",
+        "instances": 11099,
+        "images": 5739,
+        "groups": 5729,
+        "small_instances_le1024": 2733,
+        "small_images": 2074,
+        "extreme_instances_le256": 435,
+        "extreme_images": 408,
+        "absolute_area_bins": {
+          "1025_9216": 8035,
+          "257_1024": 2298,
+          "le256": 435,
+          "gt9216": 331
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 8882,
+          "le0.001": 1649,
+          "0.01_0.1": 567,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1455278592375367e-05,
+          0.0014700530891809506,
+          0.002750698771994135,
+          0.004864183924793838,
+          0.0075903627144043905,
+          0.10122456928152493
+        ]
+      },
+      "24": {
+        "name": "bag, wallet",
+        "instances": 2203,
+        "images": 2077,
+        "groups": 2075,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 862,
+          "1025_9216": 1126,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1042,
+          "0.001_0.01": 1039,
+          "le0.001": 109,
+          "gt0.1": 13
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.003950854550358837,
+          0.009322956546707504,
+          0.020406715454922807,
+          0.03661817976124858,
+          0.16446999679721816
+        ]
+      },
+      "25": {
+        "name": "scarf",
+        "instances": 363,
+        "images": 358,
+        "groups": 357,
+        "small_instances_le1024": 10,
+        "small_images": 10,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 245,
+          "1025_9216": 108,
+          "le256": 2,
+          "257_1024": 8
+        },
+        "relative_area_bins": {
+          "gt0.1": 21,
+          "0.01_0.1": 247,
+          "0.001_0.01": 91,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0002772013346354167,
+          0.009723583158043706,
+          0.022536828720674487,
+          0.03920271080698026,
+          0.07347415144059437,
+          0.5504948680351907
+        ]
+      },
+      "26": {
+        "name": "umbrella",
+        "instances": 36,
+        "images": 36,
+        "groups": 36,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 28,
+          "1025_9216": 8
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 20,
+          "gt0.1": 9,
+          "0.001_0.01": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0015899524158125916,
+          0.016480208142412023,
+          0.04664305798325104,
+          0.09484028535730699,
+          0.19311422638584752,
+          0.2291357287362259
+        ]
+      }
+    },
+    "area_basis": "decoded original-resolution source mask pixels; no image resizing"
+  },
+  "delta1": {
+    "images": 5000,
+    "groups": 5000,
+    "instances": 19260,
+    "crowd_instances": 0,
+    "small_instances_le1024": 2759,
+    "extreme_instances_le256": 841,
+    "exactly_1024_instances": 2,
+    "target_image_hits": {
+      "small_shoe": 784,
+      "bag_all": 688,
+      "small_glasses": 58,
+      "small_head_accessory": 255,
+      "small_belt": 300,
+      "small_sock": 200
+    },
+    "project_categories": {
+      "1": {
+        "name": "top",
+        "instances": 2894,
+        "images": 2673,
+        "groups": 2673,
+        "small_instances_le1024": 58,
+        "small_images": 57,
+        "extreme_instances_le256": 12,
+        "extreme_images": 12,
+        "absolute_area_bins": {
+          "gt9216": 2249,
+          "1025_9216": 587,
+          "257_1024": 46,
+          "le256": 12
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1636,
+          "gt0.1": 742,
+          "0.001_0.01": 481,
+          "le0.001": 35
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          6.114130434782609e-05,
+          0.015295731864247803,
+          0.041501398835432565,
+          0.10215602662206745,
+          0.28301467895507815,
+          0.8952180134273571
+        ]
+      },
+      "2": {
+        "name": "pants",
+        "instances": 1828,
+        "images": 1819,
+        "groups": 1819,
+        "small_instances_le1024": 8,
+        "small_images": 8,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1687,
+          "1025_9216": 133,
+          "257_1024": 7,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1518,
+          "0.001_0.01": 95,
+          "gt0.1": 209,
+          "le0.001": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.066002949852507e-05,
+          0.033805431241929314,
+          0.05528904511848158,
+          0.07547893612066173,
+          0.10327675384520563,
+          0.9285160035125969
+        ]
+      },
+      "3": {
+        "name": "skirt",
+        "instances": 568,
+        "images": 565,
+        "groups": 565,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 543,
+          "1025_9216": 23,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 135,
+          "0.01_0.1": 416,
+          "0.001_0.01": 15,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013889525293255133,
+          0.03627151491977255,
+          0.057381775480089214,
+          0.09699768138629772,
+          0.16192866798020533,
+          0.9226039637924929
+        ]
+      },
+      "4": {
+        "name": "outerwear",
+        "instances": 1446,
+        "images": 1415,
+        "groups": 1415,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1424,
+          "1025_9216": 21,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 569,
+          "0.01_0.1": 868,
+          "0.001_0.01": 8,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00022910557184750734,
+          0.055708778758619466,
+          0.08339013242302053,
+          0.14658967751542826,
+          0.29399558135941517,
+          0.8700862836234177
+        ]
+      },
+      "5": {
+        "name": "dress",
+        "instances": 2088,
+        "images": 2082,
+        "groups": 2082,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 2073,
+          "257_1024": 3,
+          "1025_9216": 12
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 740,
+          "gt0.1": 1336,
+          "le0.001": 2,
+          "0.001_0.01": 10
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.000530460743045388,
+          0.08075407698418902,
+          0.12870525221500728,
+          0.20979870043669993,
+          0.30038437040152427,
+          0.9086487844563553
+        ]
+      },
+      "6": {
+        "name": "shoes",
+        "instances": 5388,
+        "images": 2799,
+        "groups": 2799,
+        "small_instances_le1024": 1016,
+        "small_images": 784,
+        "extreme_instances_le256": 280,
+        "extreme_images": 266,
+        "absolute_area_bins": {
+          "257_1024": 736,
+          "1025_9216": 4149,
+          "le256": 280,
+          "gt9216": 223
+        },
+        "relative_area_bins": {
+          "le0.001": 671,
+          "0.001_0.01": 4321,
+          "0.01_0.1": 396
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1712893553223388e-05,
+          0.0018085147465427616,
+          0.0032645091082714696,
+          0.005545095009743725,
+          0.008540603432985037,
+          0.0689158071633826
+        ]
+      },
+      "7": {
+        "name": "bag",
+        "instances": 710,
+        "images": 688,
+        "groups": 688,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 320,
+          "1025_9216": 390
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 373,
+          "0.001_0.01": 331,
+          "gt0.1": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00141143798828125,
+          0.00493042350164956,
+          0.011004745881668013,
+          0.022732203307389516,
+          0.04140001234811652,
+          0.24730936686197916
+        ]
+      },
+      "8": {
+        "name": "accessory",
+        "instances": 4338,
+        "images": 2509,
+        "groups": 2509,
+        "small_instances_le1024": 1671,
+        "small_images": 1308,
+        "extreme_instances_le256": 545,
+        "extreme_images": 403,
+        "absolute_area_bins": {
+          "1025_9216": 2009,
+          "gt9216": 658,
+          "257_1024": 1126,
+          "le256": 545
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 2176,
+          "0.01_0.1": 835,
+          "le0.001": 1312,
+          "gt0.1": 15
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8680249632892803e-06,
+          0.000794287197104725,
+          0.0023626512096774194,
+          0.0074404442962389674,
+          0.017674681770342152,
+          0.2537975311279297
+        ]
+      }
+    },
+    "source_categories": {
+      "0": {
+        "name": "shirt, blouse",
+        "instances": 769,
+        "images": 761,
+        "groups": 761,
+        "small_instances_le1024": 8,
+        "small_images": 8,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 512,
+          "1025_9216": 249,
+          "257_1024": 6,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 394,
+          "gt0.1": 164,
+          "0.001_0.01": 208,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00011554143030794165,
+          0.009324596774193549,
+          0.03077174211876833,
+          0.08465405882892804,
+          0.1911857358870969,
+          0.7639953895416025
+        ]
+      },
+      "1": {
+        "name": "top, t-shirt, sweatshirt",
+        "instances": 1858,
+        "images": 1804,
+        "groups": 1804,
+        "small_instances_le1024": 46,
+        "small_images": 46,
+        "extreme_instances_le256": 10,
+        "extreme_images": 10,
+        "absolute_area_bins": {
+          "gt9216": 1500,
+          "1025_9216": 312,
+          "257_1024": 36,
+          "le256": 10
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1109,
+          "0.001_0.01": 250,
+          "gt0.1": 470,
+          "le0.001": 29
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          6.114130434782609e-05,
+          0.017385892507653013,
+          0.04265000464526289,
+          0.10086160003907263,
+          0.28641488159979583,
+          0.7925861791237113
+        ]
+      },
+      "2": {
+        "name": "sweater",
+        "instances": 175,
+        "images": 175,
+        "groups": 175,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 11,
+          "gt9216": 162,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 70,
+          "gt0.1": 93,
+          "0.001_0.01": 10,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006930443548387097,
+          0.0426894379732658,
+          0.11227891312316715,
+          0.31183579388786764,
+          0.48598805708180687,
+          0.8952180134273571
+        ]
+      },
+      "3": {
+        "name": "cardigan",
+        "instances": 148,
+        "images": 147,
+        "groups": 147,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 145,
+          "1025_9216": 3
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 94,
+          "gt0.1": 53,
+          "0.001_0.01": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.008200327555338541,
+          0.03391607573998072,
+          0.07140547338456545,
+          0.17850691460185975,
+          0.471708857183685,
+          0.8700862836234177
+        ]
+      },
+      "4": {
+        "name": "jacket",
+        "instances": 944,
+        "images": 933,
+        "groups": 933,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 927,
+          "1025_9216": 16,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 336,
+          "0.01_0.1": 601,
+          "0.001_0.01": 6,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00022910557184750734,
+          0.05683278850480622,
+          0.08045089536335942,
+          0.13397157596942852,
+          0.27823096132697955,
+          0.6956249477074966
+        ]
+      },
+      "5": {
+        "name": "vest",
+        "instances": 92,
+        "images": 91,
+        "groups": 91,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 75,
+          "1025_9216": 15,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 63,
+          "0.001_0.01": 13,
+          "gt0.1": 15,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006257445931085044,
+          0.022679015890006652,
+          0.038653462404101405,
+          0.06559652428662789,
+          0.1620097635224932,
+          0.4576759338378906
+        ]
+      },
+      "6": {
+        "name": "pants",
+        "instances": 1501,
+        "images": 1494,
+        "groups": 1494,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1462,
+          "1025_9216": 36,
+          "257_1024": 2,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1288,
+          "gt0.1": 185,
+          "0.001_0.01": 26,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.066002949852507e-05,
+          0.0432605381044905,
+          0.059816250920471284,
+          0.07805626832844574,
+          0.10634937454178886,
+          0.9285160035125969
+        ]
+      },
+      "7": {
+        "name": "shorts",
+        "instances": 327,
+        "images": 326,
+        "groups": 326,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 97,
+          "gt9216": 225,
+          "257_1024": 5
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 69,
+          "0.01_0.1": 230,
+          "gt0.1": 24,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006863103953147877,
+          0.010737898060029283,
+          0.022631334769061585,
+          0.04122325192448681,
+          0.07859449325134826,
+          0.9202248965992647
+        ]
+      },
+      "8": {
+        "name": "skirt",
+        "instances": 568,
+        "images": 565,
+        "groups": 565,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 543,
+          "1025_9216": 23,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 135,
+          "0.01_0.1": 416,
+          "0.001_0.01": 15,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013889525293255133,
+          0.03627151491977255,
+          0.057381775480089214,
+          0.09699768138629772,
+          0.16192866798020533,
+          0.9226039637924929
+        ]
+      },
+      "9": {
+        "name": "coat",
+        "instances": 332,
+        "images": 329,
+        "groups": 329,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 330,
+          "1025_9216": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 161,
+          "gt0.1": 170,
+          "0.001_0.01": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00527029191068814,
+          0.06338657493426046,
+          0.10182533230884644,
+          0.18555333712123545,
+          0.3178868562888172,
+          0.8229364809782609
+        ]
+      },
+      "10": {
+        "name": "dress",
+        "instances": 2088,
+        "images": 2082,
+        "groups": 2082,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 2073,
+          "257_1024": 3,
+          "1025_9216": 12
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 740,
+          "gt0.1": 1336,
+          "le0.001": 2,
+          "0.001_0.01": 10
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.000530460743045388,
+          0.08075407698418902,
+          0.12870525221500728,
+          0.20979870043669993,
+          0.30038437040152427,
+          0.9086487844563553
+        ]
+      },
+      "12": {
+        "name": "cape",
+        "instances": 22,
+        "images": 22,
+        "groups": 22,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 22
+        },
+        "relative_area_bins": {
+          "gt0.1": 10,
+          "0.01_0.1": 12
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.01739224926793558,
+          0.06026853496733839,
+          0.09093960008293506,
+          0.19505211733591174,
+          0.24833279327988303,
+          0.6801125733211975
+        ]
+      },
+      "13": {
+        "name": "glasses",
+        "instances": 502,
+        "images": 502,
+        "groups": 502,
+        "small_instances_le1024": 58,
+        "small_images": 58,
+        "extreme_instances_le256": 5,
+        "extreme_images": 5,
+        "absolute_area_bins": {
+          "257_1024": 53,
+          "1025_9216": 435,
+          "le256": 5,
+          "gt9216": 9
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 453,
+          "0.01_0.1": 15,
+          "le0.001": 34
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0001515602122986823,
+          0.001708984375,
+          0.00236479907441349,
+          0.003917541309278839,
+          0.006161937545821117,
+          0.019084930419921875
+        ]
+      },
+      "14": {
+        "name": "hat",
+        "instances": 300,
+        "images": 300,
+        "groups": 300,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 212,
+          "gt9216": 84,
+          "257_1024": 4
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 178,
+          "0.01_0.1": 120,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006675606343283582,
+          0.0053585645390395896,
+          0.008257823955278593,
+          0.013970003889740921,
+          0.026157131818562444,
+          0.0828713809742647
+        ]
+      },
+      "15": {
+        "name": "headband, head covering, hair accessory",
+        "instances": 529,
+        "images": 407,
+        "groups": 407,
+        "small_instances_le1024": 360,
+        "small_images": 255,
+        "extreme_instances_le256": 202,
+        "extreme_images": 114,
+        "absolute_area_bins": {
+          "257_1024": 158,
+          "1025_9216": 139,
+          "le256": 202,
+          "gt9216": 30
+        },
+        "relative_area_bins": {
+          "le0.001": 323,
+          "0.001_0.01": 169,
+          "0.01_0.1": 36,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8680249632892803e-06,
+          0.0001172446925329429,
+          0.0007069681534508076,
+          0.002457157258064516,
+          0.00684023322947214,
+          0.12669687296018275
+        ]
+      },
+      "16": {
+        "name": "tie",
+        "instances": 217,
+        "images": 217,
+        "groups": 217,
+        "small_instances_le1024": 51,
+        "small_images": 51,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "1025_9216": 151,
+          "257_1024": 49,
+          "gt9216": 15,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 178,
+          "0.01_0.1": 24,
+          "le0.001": 15
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003092925219941349,
+          0.0014949138563049853,
+          0.0027712481563421827,
+          0.005972495876099707,
+          0.011405535344918272,
+          0.045365767045454544
+        ]
+      },
+      "17": {
+        "name": "glove",
+        "instances": 158,
+        "images": 84,
+        "groups": 84,
+        "small_instances_le1024": 24,
+        "small_images": 20,
+        "extreme_instances_le256": 4,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "1025_9216": 125,
+          "257_1024": 20,
+          "gt9216": 9,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 125,
+          "le0.001": 15,
+          "0.01_0.1": 18
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00011539459228515625,
+          0.0021197877885331348,
+          0.0041360793693953,
+          0.0066692395574409966,
+          0.01028590509425733,
+          0.027867924323855757
+        ]
+      },
+      "18": {
+        "name": "watch",
+        "instances": 638,
+        "images": 634,
+        "groups": 634,
+        "small_instances_le1024": 547,
+        "small_images": 543,
+        "extreme_instances_le256": 115,
+        "extreme_images": 115,
+        "absolute_area_bins": {
+          "1025_9216": 91,
+          "257_1024": 432,
+          "le256": 115
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 177,
+          "le0.001": 461
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.647307981927711e-05,
+          0.00044281811308651025,
+          0.0006880326704545455,
+          0.0010461766581033214,
+          0.0018322718108504403,
+          0.008846875
+        ]
+      },
+      "19": {
+        "name": "belt",
+        "instances": 881,
+        "images": 851,
+        "groups": 851,
+        "small_instances_le1024": 309,
+        "small_images": 300,
+        "extreme_instances_le256": 70,
+        "extreme_images": 70,
+        "absolute_area_bins": {
+          "1025_9216": 493,
+          "gt9216": 79,
+          "257_1024": 239,
+          "le256": 70
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 563,
+          "0.01_0.1": 109,
+          "le0.001": 208,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1472099853157121e-05,
+          0.0010553175403225806,
+          0.0027177598741319445,
+          0.005991092597471022,
+          0.011667049632352941,
+          0.12414180871212122
+        ]
+      },
+      "20": {
+        "name": "leg warmer",
+        "instances": 16,
+        "images": 9,
+        "groups": 9,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 6,
+          "1025_9216": 9,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 6,
+          "0.001_0.01": 9,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0007987449522760646,
+          0.004996125205893119,
+          0.006839857222309145,
+          0.015297808605205278,
+          0.02056864947697796,
+          0.024329494201030928
+        ]
+      },
+      "21": {
+        "name": "tights, stockings",
+        "instances": 526,
+        "images": 266,
+        "groups": 266,
+        "small_instances_le1024": 9,
+        "small_images": 8,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 306,
+          "1025_9216": 211,
+          "257_1024": 9
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 383,
+          "0.001_0.01": 138,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00038747941068814054,
+          0.009305833488551615,
+          0.014770072264526434,
+          0.02096029600439883,
+          0.0274849420019744,
+          0.06253007010630499
+        ]
+      },
+      "22": {
+        "name": "sock",
+        "instances": 410,
+        "images": 237,
+        "groups": 237,
+        "small_instances_le1024": 306,
+        "small_images": 200,
+        "extreme_instances_le256": 146,
+        "extreme_images": 109,
+        "absolute_area_bins": {
+          "le256": 146,
+          "257_1024": 160,
+          "1025_9216": 100,
+          "gt9216": 4
+        },
+        "relative_area_bins": {
+          "le0.001": 247,
+          "0.001_0.01": 154,
+          "0.01_0.1": 9
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.295729472140763e-06,
+          0.00021741286457640092,
+          0.0006572466092375366,
+          0.001448239884463197,
+          0.00413564886465647,
+          0.01918681112224449
+        ]
+      },
+      "23": {
+        "name": "shoe",
+        "instances": 5388,
+        "images": 2799,
+        "groups": 2799,
+        "small_instances_le1024": 1016,
+        "small_images": 784,
+        "extreme_instances_le256": 280,
+        "extreme_images": 266,
+        "absolute_area_bins": {
+          "257_1024": 736,
+          "1025_9216": 4149,
+          "le256": 280,
+          "gt9216": 223
+        },
+        "relative_area_bins": {
+          "le0.001": 671,
+          "0.001_0.01": 4321,
+          "0.01_0.1": 396
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1712893553223388e-05,
+          0.0018085147465427616,
+          0.0032645091082714696,
+          0.005545095009743725,
+          0.008540603432985037,
+          0.0689158071633826
+        ]
+      },
+      "24": {
+        "name": "bag, wallet",
+        "instances": 710,
+        "images": 688,
+        "groups": 688,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 320,
+          "1025_9216": 390
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 373,
+          "0.001_0.01": 331,
+          "gt0.1": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00141143798828125,
+          0.00493042350164956,
+          0.011004745881668013,
+          0.022732203307389516,
+          0.04140001234811652,
+          0.24730936686197916
+        ]
+      },
+      "25": {
+        "name": "scarf",
+        "instances": 144,
+        "images": 144,
+        "groups": 144,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 101,
+          "1025_9216": 41,
+          "le256": 1,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 102,
+          "0.001_0.01": 31,
+          "gt0.1": 10,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00020219575991189427,
+          0.012158644718397872,
+          0.023913496861483353,
+          0.047620433675822,
+          0.07865457669317387,
+          0.2537975311279297
+        ]
+      },
+      "26": {
+        "name": "umbrella",
+        "instances": 17,
+        "images": 17,
+        "groups": 17,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 15,
+          "1025_9216": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 13,
+          "gt0.1": 3,
+          "0.001_0.01": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.004121036473607038,
+          0.015231224798387098,
+          0.047757194820644215,
+          0.08517491957720588,
+          0.11975663260630501,
+          0.19515963575355758
+        ]
+      }
+    },
+    "area_basis": "decoded original-resolution source mask pixels; no image resizing",
+    "requested_goals": {
+      "small_sock": {
+        "goal_reference_phase1": 200,
+        "actual": 200,
+        "gap": 0
+      },
+      "small_belt": {
+        "goal_reference_phase1": 300,
+        "actual": 300,
+        "gap": 0
+      },
+      "small_head_accessory": {
+        "goal_reference_phase1": 200,
+        "actual": 255,
+        "gap": 0
+      },
+      "small_watch": {
+        "goal_reference_phase1": 150,
+        "actual": 543,
+        "gap": 0
+      },
+      "small_shoe": {
+        "goal_reference_phase1": 700,
+        "actual": 784,
+        "gap": 0
+      },
+      "bag_all": {
+        "goal_reference_phase1": 400,
+        "actual": 688,
+        "gap": 0
+      },
+      "small_bag": {
+        "goal_reference_phase1": 50,
+        "actual": 0,
+        "gap": 50
+      },
+      "extreme_priority": {
+        "goal_reference_phase1": 300,
+        "actual": 659,
+        "gap": 0
+      },
+      "complex_boundary_source": {
+        "goal_reference_phase1": 300,
+        "actual": 300,
+        "gap": 0
+      }
+    },
+    "boundary_evidence": {
+      "status": "passed",
+      "new_images": 5000,
+      "source_masks_pixel_identical": 19260,
+      "geometry_and_source_fields_checked": 19260,
+      "old_masks_decoded": 0,
+      "source_annotation_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+      "manifest_sha256": "8e9874f447aa5f77aae2c5b0b0bb0d934fc77e0ab7dca832b76add2eac2630ac",
+      "annotations_sha256": "ef94a3f1e0dc4a8367c54f126ddffa7da882c436b9323832e309ba0d4032e4f2",
+      "source_supported_complex_images": 300,
+      "geometry_proxy_images": 630,
+      "all_source_annotations_retained_for_selected_images": true,
+      "human_confirmed_images": 0
+    }
+  },
+  "combined15000": {
+    "images": 15000,
+    "groups": 14976,
+    "instances": 58959,
+    "crowd_instances": 0,
+    "small_instances_le1024": 9925,
+    "extreme_instances_le256": 2716,
+    "exactly_1024_instances": 10,
+    "target_image_hits": {
+      "bag_all": 2765,
+      "small_shoe": 2858,
+      "small_belt": 989,
+      "small_sock": 744,
+      "small_glasses": 738,
+      "small_head_accessory": 974,
+      "small_bag": 210
+    },
+    "project_categories": {
+      "1": {
+        "name": "top",
+        "instances": 8506,
+        "images": 7909,
+        "groups": 7902,
+        "small_instances_le1024": 223,
+        "small_images": 220,
+        "extreme_instances_le256": 57,
+        "extreme_images": 57,
+        "absolute_area_bins": {
+          "gt9216": 6536,
+          "1025_9216": 1747,
+          "257_1024": 166,
+          "le256": 57
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 4766,
+          "0.001_0.01": 1466,
+          "gt0.1": 2121,
+          "le0.001": 153
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.014328047676869501,
+          0.03977630704728739,
+          0.09946950225372124,
+          0.2966700312935491,
+          0.9112676461963807
+        ]
+      },
+      "2": {
+        "name": "pants",
+        "instances": 5395,
+        "images": 5355,
+        "groups": 5351,
+        "small_instances_le1024": 33,
+        "small_images": 32,
+        "extreme_instances_le256": 6,
+        "extreme_images": 6,
+        "absolute_area_bins": {
+          "gt9216": 4892,
+          "1025_9216": 470,
+          "257_1024": 27,
+          "le256": 6
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 4465,
+          "gt0.1": 564,
+          "0.001_0.01": 345,
+          "le0.001": 21
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.03015324970705001,
+          0.053039371792521994,
+          0.07445541950665982,
+          0.10121173129529633,
+          0.944286669481982
+        ]
+      },
+      "3": {
+        "name": "skirt",
+        "instances": 1725,
+        "images": 1719,
+        "groups": 1719,
+        "small_instances_le1024": 4,
+        "small_images": 3,
+        "extreme_instances_le256": 4,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 1625,
+          "1025_9216": 96,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1252,
+          "0.001_0.01": 64,
+          "gt0.1": 405,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.0339902625327654,
+          0.057475635980966326,
+          0.0964691967558651,
+          0.15734318640365752,
+          0.9281567258883249
+        ]
+      },
+      "4": {
+        "name": "outerwear",
+        "instances": 4248,
+        "images": 4129,
+        "groups": 4127,
+        "small_instances_le1024": 8,
+        "small_images": 7,
+        "extreme_instances_le256": 6,
+        "extreme_images": 5,
+        "absolute_area_bins": {
+          "gt9216": 4167,
+          "1025_9216": 73,
+          "257_1024": 2,
+          "le256": 6
+        },
+        "relative_area_bins": {
+          "gt0.1": 1655,
+          "0.01_0.1": 2547,
+          "0.001_0.01": 38,
+          "le0.001": 8
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.5972271754636236e-05,
+          0.050839600325329914,
+          0.08151810626144934,
+          0.14791198909457476,
+          0.3018138694204664,
+          0.8763080234945255
+        ]
+      },
+      "5": {
+        "name": "dress",
+        "instances": 6249,
+        "images": 6227,
+        "groups": 6216,
+        "small_instances_le1024": 6,
+        "small_images": 6,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 6188,
+          "257_1024": 5,
+          "1025_9216": 55,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 3908,
+          "0.01_0.1": 2295,
+          "0.001_0.01": 42,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00014605480205278593,
+          0.07902421101485149,
+          0.12280689248783455,
+          0.20472301136363635,
+          0.2953927321683515,
+          0.9086487844563553
+        ]
+      },
+      "6": {
+        "name": "shoes",
+        "instances": 16487,
+        "images": 8538,
+        "groups": 8528,
+        "small_instances_le1024": 3749,
+        "small_images": 2858,
+        "extreme_instances_le256": 715,
+        "extreme_images": 674,
+        "absolute_area_bins": {
+          "1025_9216": 12184,
+          "257_1024": 3034,
+          "le256": 715,
+          "gt9216": 554
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 13203,
+          "le0.001": 2320,
+          "0.01_0.1": 963,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1455278592375367e-05,
+          0.0015746626378524537,
+          0.0029296875,
+          0.005090140151323217,
+          0.007878120999904184,
+          0.10122456928152493
+        ]
+      },
+      "7": {
+        "name": "bag",
+        "instances": 2913,
+        "images": 2765,
+        "groups": 2763,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 1182,
+          "1025_9216": 1516,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1415,
+          "0.001_0.01": 1370,
+          "le0.001": 109,
+          "gt0.1": 19
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.004215016084558824,
+          0.009865858687683285,
+          0.021026611328125,
+          0.03800708250014037,
+          0.24730936686197916
+        ]
+      },
+      "8": {
+        "name": "accessory",
+        "instances": 13436,
+        "images": 7595,
+        "groups": 7591,
+        "small_instances_le1024": 5687,
+        "small_images": 4065,
+        "extreme_instances_le256": 1904,
+        "extreme_images": 1407,
+        "absolute_area_bins": {
+          "gt9216": 1935,
+          "1025_9216": 5814,
+          "257_1024": 3783,
+          "le256": 1904
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 2417,
+          "0.001_0.01": 6630,
+          "le0.001": 4336,
+          "gt0.1": 53
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.0007319747962738243,
+          0.0020664122303292653,
+          0.006778661107038123,
+          0.017218730488761526,
+          0.5504948680351907
+        ]
+      }
+    },
+    "source_categories": {
+      "0": {
+        "name": "shirt, blouse",
+        "instances": 2205,
+        "images": 2188,
+        "groups": 2186,
+        "small_instances_le1024": 32,
+        "small_images": 32,
+        "extreme_instances_le256": 9,
+        "extreme_images": 9,
+        "absolute_area_bins": {
+          "gt9216": 1487,
+          "1025_9216": 686,
+          "257_1024": 23,
+          "le256": 9
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1138,
+          "0.001_0.01": 581,
+          "gt0.1": 466,
+          "le0.001": 20
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.009006712793255132,
+          0.02994409824046921,
+          0.0845174789428711,
+          0.25180801361869415,
+          0.8199246724446615
+        ]
+      },
+      "1": {
+        "name": "top, t-shirt, sweatshirt",
+        "instances": 5571,
+        "images": 5423,
+        "groups": 5418,
+        "small_instances_le1024": 180,
+        "small_images": 179,
+        "extreme_instances_le256": 47,
+        "extreme_images": 47,
+        "absolute_area_bins": {
+          "gt9216": 4419,
+          "1025_9216": 972,
+          "257_1024": 133,
+          "le256": 47
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 3271,
+          "0.001_0.01": 803,
+          "gt0.1": 1372,
+          "le0.001": 125
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.0172526041666666e-05,
+          0.01587925430570373,
+          0.040521875,
+          0.09803142798941795,
+          0.28769258085664334,
+          0.9057019712552743
+        ]
+      },
+      "2": {
+        "name": "sweater",
+        "instances": 484,
+        "images": 484,
+        "groups": 484,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 443,
+          "1025_9216": 36,
+          "le256": 1,
+          "257_1024": 4
+        },
+        "relative_area_bins": {
+          "gt0.1": 250,
+          "0.01_0.1": 196,
+          "0.001_0.01": 33,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003307711693548387,
+          0.04127176060053368,
+          0.10989562342598508,
+          0.33055967459580765,
+          0.5042853820018279,
+          0.9112676461963807
+        ]
+      },
+      "3": {
+        "name": "cardigan",
+        "instances": 368,
+        "images": 365,
+        "groups": 365,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 358,
+          "1025_9216": 10
+        },
+        "relative_area_bins": {
+          "gt0.1": 135,
+          "0.01_0.1": 230,
+          "0.001_0.01": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.001881529508797654,
+          0.03622688785676033,
+          0.06533059512867648,
+          0.172607978553599,
+          0.4151774518137273,
+          0.8763080234945255
+        ]
+      },
+      "4": {
+        "name": "jacket",
+        "instances": 2748,
+        "images": 2712,
+        "groups": 2712,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 2690,
+          "1025_9216": 54,
+          "257_1024": 1,
+          "le256": 3
+        },
+        "relative_area_bins": {
+          "gt0.1": 952,
+          "0.01_0.1": 1762,
+          "0.001_0.01": 30,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.5972271754636236e-05,
+          0.04989177357066761,
+          0.07745159455801326,
+          0.1342196604408919,
+          0.28732378673509384,
+          0.8746400439049586
+        ]
+      },
+      "5": {
+        "name": "vest",
+        "instances": 246,
+        "images": 245,
+        "groups": 245,
+        "small_instances_le1024": 6,
+        "small_images": 6,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 187,
+          "1025_9216": 53,
+          "257_1024": 6
+        },
+        "relative_area_bins": {
+          "gt0.1": 33,
+          "0.001_0.01": 49,
+          "0.01_0.1": 161,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006257445931085044,
+          0.014342724752565983,
+          0.03233811701978073,
+          0.05659164021817427,
+          0.16676517011119565,
+          0.6600341796875
+        ]
+      },
+      "6": {
+        "name": "pants",
+        "instances": 4408,
+        "images": 4378,
+        "groups": 4375,
+        "small_instances_le1024": 8,
+        "small_images": 8,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 4227,
+          "1025_9216": 173,
+          "257_1024": 5,
+          "le256": 3
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 3782,
+          "gt0.1": 503,
+          "0.001_0.01": 118,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.03980199964947624,
+          0.0576171875,
+          0.07785436904325513,
+          0.10327675384520568,
+          0.944286669481982
+        ]
+      },
+      "7": {
+        "name": "shorts",
+        "instances": 987,
+        "images": 983,
+        "groups": 982,
+        "small_instances_le1024": 25,
+        "small_images": 24,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 665,
+          "1025_9216": 297,
+          "257_1024": 22,
+          "le256": 3
+        },
+        "relative_area_bins": {
+          "gt0.1": 61,
+          "0.001_0.01": 227,
+          "0.01_0.1": 683,
+          "le0.001": 16
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          6.612141927083333e-05,
+          0.01022994220132684,
+          0.021948313782991204,
+          0.04033012375532212,
+          0.07361750469213577,
+          0.9202248965992647
+        ]
+      },
+      "8": {
+        "name": "skirt",
+        "instances": 1725,
+        "images": 1719,
+        "groups": 1719,
+        "small_instances_le1024": 4,
+        "small_images": 3,
+        "extreme_instances_le256": 4,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 1625,
+          "1025_9216": 96,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1252,
+          "0.001_0.01": 64,
+          "gt0.1": 405,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.0339902625327654,
+          0.057475635980966326,
+          0.0964691967558651,
+          0.15734318640365752,
+          0.9281567258883249
+        ]
+      },
+      "9": {
+        "name": "coat",
+        "instances": 1079,
+        "images": 1063,
+        "groups": 1062,
+        "small_instances_le1024": 4,
+        "small_images": 3,
+        "extreme_instances_le256": 3,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 1066,
+          "1025_9216": 9,
+          "le256": 3,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 541,
+          "0.01_0.1": 529,
+          "le0.001": 4,
+          "0.001_0.01": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.7614306784660766e-05,
+          0.06177958059021621,
+          0.10025946206011731,
+          0.1737130250274524,
+          0.30830719893359165,
+          0.8428564723890942
+        ]
+      },
+      "10": {
+        "name": "dress",
+        "instances": 6249,
+        "images": 6227,
+        "groups": 6216,
+        "small_instances_le1024": 6,
+        "small_images": 6,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 6188,
+          "257_1024": 5,
+          "1025_9216": 55,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 3908,
+          "0.01_0.1": 2295,
+          "0.001_0.01": 42,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00014605480205278593,
+          0.07902421101485149,
+          0.12280689248783455,
+          0.20472301136363635,
+          0.2953927321683515,
+          0.9086487844563553
+        ]
+      },
+      "12": {
+        "name": "cape",
+        "instances": 53,
+        "images": 53,
+        "groups": 53,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 53
+        },
+        "relative_area_bins": {
+          "gt0.1": 27,
+          "0.01_0.1": 26
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.01739224926793558,
+          0.0657382541232639,
+          0.1032378344941349,
+          0.19625881498893805,
+          0.3024545798203813,
+          0.6801125733211975
+        ]
+      },
+      "13": {
+        "name": "glasses",
+        "instances": 1956,
+        "images": 1953,
+        "groups": 1951,
+        "small_instances_le1024": 740,
+        "small_images": 738,
+        "extreme_instances_le256": 131,
+        "extreme_images": 131,
+        "absolute_area_bins": {
+          "1025_9216": 1184,
+          "257_1024": 609,
+          "le256": 131,
+          "gt9216": 32
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 1467,
+          "le0.001": 446,
+          "0.01_0.1": 43
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.1573545655375554e-05,
+          0.0010706888965148031,
+          0.0017848964083172782,
+          0.002964401524787075,
+          0.005204992210410557,
+          0.019084930419921875
+        ]
+      },
+      "14": {
+        "name": "hat",
+        "instances": 939,
+        "images": 937,
+        "groups": 936,
+        "small_instances_le1024": 38,
+        "small_images": 38,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "1025_9216": 649,
+          "gt9216": 252,
+          "257_1024": 37,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 580,
+          "0.01_0.1": 339,
+          "le0.001": 20
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00015045470756062766,
+          0.004794877181064073,
+          0.007513230846774193,
+          0.013733961591732834,
+          0.024305143384290233,
+          0.09434567448680352
+        ]
+      },
+      "15": {
+        "name": "headband, head covering, hair accessory",
+        "instances": 1727,
+        "images": 1423,
+        "groups": 1423,
+        "small_instances_le1024": 1235,
+        "small_images": 974,
+        "extreme_instances_le256": 635,
+        "extreme_images": 436,
+        "absolute_area_bins": {
+          "gt9216": 92,
+          "1025_9216": 400,
+          "257_1024": 600,
+          "le256": 635
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 112,
+          "0.001_0.01": 555,
+          "le0.001": 1052,
+          "gt0.1": 8
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8680249632892803e-06,
+          0.00017081739538148623,
+          0.0007130910923753666,
+          0.0019201910740469209,
+          0.006497325067934787,
+          0.18830478488573407
+        ]
+      },
+      "16": {
+        "name": "tie",
+        "instances": 568,
+        "images": 568,
+        "groups": 567,
+        "small_instances_le1024": 157,
+        "small_images": 157,
+        "extreme_instances_le256": 4,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "1025_9216": 356,
+          "257_1024": 153,
+          "gt9216": 55,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 432,
+          "le0.001": 57,
+          "0.01_0.1": 79
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00011455278592375367,
+          0.0013903844391495602,
+          0.002706764994855151,
+          0.006020713476764479,
+          0.012577283194781274,
+          0.07787478266837482
+        ]
+      },
+      "17": {
+        "name": "glove",
+        "instances": 494,
+        "images": 269,
+        "groups": 268,
+        "small_instances_le1024": 79,
+        "small_images": 64,
+        "extreme_instances_le256": 9,
+        "extreme_images": 9,
+        "absolute_area_bins": {
+          "1025_9216": 394,
+          "257_1024": 70,
+          "gt9216": 21,
+          "le256": 9
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 404,
+          "0.01_0.1": 49,
+          "le0.001": 41
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.146458638360176e-05,
+          0.0020069166996119488,
+          0.0036881934132091806,
+          0.00624520498893987,
+          0.009875726880320899,
+          0.02792711383601757
+        ]
+      },
+      "18": {
+        "name": "watch",
+        "instances": 1437,
+        "images": 1429,
+        "groups": 1427,
+        "small_instances_le1024": 1175,
+        "small_images": 1169,
+        "extreme_instances_le256": 309,
+        "extreme_images": 309,
+        "absolute_area_bins": {
+          "257_1024": 866,
+          "le256": 309,
+          "1025_9216": 262
+        },
+        "relative_area_bins": {
+          "le0.001": 1023,
+          "0.001_0.01": 414
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.647307981927711e-05,
+          0.0004052304802052786,
+          0.0006682498164464023,
+          0.0010966668191800877,
+          0.0021830930737805863,
+          0.008846875
+        ]
+      },
+      "19": {
+        "name": "belt",
+        "instances": 2670,
+        "images": 2583,
+        "groups": 2581,
+        "small_instances_le1024": 1028,
+        "small_images": 989,
+        "extreme_instances_le256": 208,
+        "extreme_images": 206,
+        "absolute_area_bins": {
+          "257_1024": 820,
+          "1025_9216": 1394,
+          "gt9216": 248,
+          "le256": 208
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 1632,
+          "0.01_0.1": 360,
+          "le0.001": 676,
+          "gt0.1": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.295729472140763e-06,
+          0.0009948147667778863,
+          0.0024550093933284455,
+          0.005872076409789712,
+          0.011925686106962315,
+          0.12414180871212122
+        ]
+      },
+      "20": {
+        "name": "leg warmer",
+        "instances": 41,
+        "images": 23,
+        "groups": 23,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 16,
+          "1025_9216": 23,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 21,
+          "0.001_0.01": 19,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0007987449522760646,
+          0.005286108089398734,
+          0.011266928989751098,
+          0.01795988515739385,
+          0.024329494201030928,
+          0.055971472364568085
+        ]
+      },
+      "21": {
+        "name": "tights, stockings",
+        "instances": 1514,
+        "images": 769,
+        "groups": 769,
+        "small_instances_le1024": 45,
+        "small_images": 36,
+        "extreme_instances_le256": 9,
+        "extreme_images": 8,
+        "absolute_area_bins": {
+          "gt9216": 816,
+          "1025_9216": 653,
+          "257_1024": 36,
+          "le256": 9
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1000,
+          "0.001_0.01": 482,
+          "le0.001": 32
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.898667279411765e-05,
+          0.00803776733373315,
+          0.01376631186387144,
+          0.02088889236338997,
+          0.027644817159582186,
+          0.09552270436217009
+        ]
+      },
+      "22": {
+        "name": "sock",
+        "instances": 1530,
+        "images": 871,
+        "groups": 871,
+        "small_instances_le1024": 1176,
+        "small_images": 744,
+        "extreme_instances_le256": 595,
+        "extreme_images": 423,
+        "absolute_area_bins": {
+          "le256": 595,
+          "257_1024": 581,
+          "1025_9216": 340,
+          "gt9216": 14
+        },
+        "relative_area_bins": {
+          "le0.001": 983,
+          "0.001_0.01": 515,
+          "0.01_0.1": 32
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.0001845135308811501,
+          0.0005837904738641194,
+          0.0013928187135848805,
+          0.0034940309167371822,
+          0.02068536931818182
+        ]
+      },
+      "23": {
+        "name": "shoe",
+        "instances": 16487,
+        "images": 8538,
+        "groups": 8528,
+        "small_instances_le1024": 3749,
+        "small_images": 2858,
+        "extreme_instances_le256": 715,
+        "extreme_images": 674,
+        "absolute_area_bins": {
+          "1025_9216": 12184,
+          "257_1024": 3034,
+          "le256": 715,
+          "gt9216": 554
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 13203,
+          "le0.001": 2320,
+          "0.01_0.1": 963,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.1455278592375367e-05,
+          0.0015746626378524537,
+          0.0029296875,
+          0.005090140151323217,
+          0.007878120999904184,
+          0.10122456928152493
+        ]
+      },
+      "24": {
+        "name": "bag, wallet",
+        "instances": 2913,
+        "images": 2765,
+        "groups": 2763,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 1182,
+          "1025_9216": 1516,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1415,
+          "0.001_0.01": 1370,
+          "le0.001": 109,
+          "gt0.1": 19
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.004215016084558824,
+          0.009865858687683285,
+          0.021026611328125,
+          0.03800708250014037,
+          0.24730936686197916
+        ]
+      },
+      "25": {
+        "name": "scarf",
+        "instances": 507,
+        "images": 502,
+        "groups": 501,
+        "small_instances_le1024": 12,
+        "small_images": 12,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 346,
+          "1025_9216": 149,
+          "le256": 3,
+          "257_1024": 9
+        },
+        "relative_area_bins": {
+          "gt0.1": 31,
+          "0.01_0.1": 349,
+          "0.001_0.01": 122,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00020219575991189427,
+          0.01006560542869396,
+          0.022927056643484628,
+          0.042353744730571845,
+          0.07621150859162626,
+          0.5504948680351907
+        ]
+      },
+      "26": {
+        "name": "umbrella",
+        "instances": 53,
+        "images": 53,
+        "groups": 53,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 43,
+          "1025_9216": 10
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 33,
+          "gt0.1": 12,
+          "0.001_0.01": 8
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0015899524158125916,
+          0.01574241660557185,
+          0.04689366957720588,
+          0.091949462890625,
+          0.1784083372723415,
+          0.2291357287362259
+        ]
+      }
+    },
+    "area_basis": "decoded original-resolution source mask pixels; no image resizing"
+  },
+  "delta2": {
+    "images": 5000,
+    "groups": 5000,
+    "instances": 18989,
+    "crowd_instances": 0,
+    "small_instances_le1024": 2623,
+    "extreme_instances_le256": 801,
+    "exactly_1024_instances": 1,
+    "target_image_hits": {
+      "small_shoe": 700,
+      "bag_all": 664,
+      "small_head_accessory": 220,
+      "small_glasses": 57,
+      "small_belt": 300,
+      "small_sock": 200
+    },
+    "project_categories": {
+      "1": {
+        "name": "top",
+        "instances": 2872,
+        "images": 2666,
+        "groups": 2666,
+        "small_instances_le1024": 74,
+        "small_images": 72,
+        "extreme_instances_le256": 13,
+        "extreme_images": 13,
+        "absolute_area_bins": {
+          "gt9216": 2288,
+          "1025_9216": 510,
+          "257_1024": 61,
+          "le256": 13
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1668,
+          "gt0.1": 723,
+          "0.001_0.01": 430,
+          "le0.001": 51
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00010313531353135314,
+          0.01629809626048532,
+          0.041246120961134815,
+          0.10067859702246819,
+          0.27957024500920225,
+          0.9007911629801097
+        ]
+      },
+      "2": {
+        "name": "pants",
+        "instances": 1869,
+        "images": 1860,
+        "groups": 1860,
+        "small_instances_le1024": 9,
+        "small_images": 9,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1738,
+          "1025_9216": 122,
+          "257_1024": 8,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1538,
+          "gt0.1": 238,
+          "0.001_0.01": 88,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003322030791788856,
+          0.03475531524926686,
+          0.05533268048822715,
+          0.07730759246439874,
+          0.10843547197461748,
+          0.8898160564365671
+        ]
+      },
+      "3": {
+        "name": "skirt",
+        "instances": 571,
+        "images": 570,
+        "groups": 570,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 23,
+          "gt9216": 546,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 16,
+          "0.01_0.1": 402,
+          "gt0.1": 152,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00047755765007320646,
+          0.03688667454208397,
+          0.06187855113636364,
+          0.10430921825816586,
+          0.16603853555718476,
+          0.864607593506674
+        ]
+      },
+      "4": {
+        "name": "outerwear",
+        "instances": 1463,
+        "images": 1424,
+        "groups": 1424,
+        "small_instances_le1024": 3,
+        "small_images": 1,
+        "extreme_instances_le256": 2,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 1437,
+          "1025_9216": 23,
+          "257_1024": 1,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 764,
+          "gt0.1": 680,
+          "0.001_0.01": 17,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.274965800273598e-05,
+          0.05813653727780339,
+          0.09300683880131964,
+          0.1757475969743842,
+          0.33639746243653057,
+          0.8823922508818343
+        ]
+      },
+      "5": {
+        "name": "dress",
+        "instances": 2027,
+        "images": 2023,
+        "groups": 2023,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 2008,
+          "257_1024": 3,
+          "1025_9216": 15,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 1325,
+          "0.01_0.1": 686,
+          "0.001_0.01": 14,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.542555894308943e-05,
+          0.08337734170020569,
+          0.12883465450879766,
+          0.20969986658541862,
+          0.2992130223607039,
+          0.8693477746212122
+        ]
+      },
+      "6": {
+        "name": "shoes",
+        "instances": 5259,
+        "images": 2708,
+        "groups": 2708,
+        "small_instances_le1024": 921,
+        "small_images": 700,
+        "extreme_instances_le256": 287,
+        "extreme_images": 257,
+        "absolute_area_bins": {
+          "257_1024": 634,
+          "le256": 287,
+          "1025_9216": 4067,
+          "gt9216": 271
+        },
+        "relative_area_bins": {
+          "le0.001": 623,
+          "0.001_0.01": 4192,
+          "0.01_0.1": 444
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8722426470588235e-06,
+          0.0018461081944977312,
+          0.0034451794698142414,
+          0.005857943090175953,
+          0.009228143645081913,
+          0.052678426106770836
+        ]
+      },
+      "7": {
+        "name": "bag",
+        "instances": 685,
+        "images": 664,
+        "groups": 664,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 333,
+          "1025_9216": 352
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 363,
+          "0.001_0.01": 307,
+          "gt0.1": 14,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0009889602661132812,
+          0.005015055338541667,
+          0.011801679172767204,
+          0.023335385217231223,
+          0.041847908433849085,
+          0.19027842646059784
+        ]
+      },
+      "8": {
+        "name": "accessory",
+        "instances": 4243,
+        "images": 2490,
+        "groups": 2490,
+        "small_instances_le1024": 1610,
+        "small_images": 1306,
+        "extreme_instances_le256": 497,
+        "extreme_images": 400,
+        "absolute_area_bins": {
+          "1025_9216": 1942,
+          "257_1024": 1113,
+          "gt9216": 691,
+          "le256": 497
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 2112,
+          "le0.001": 1251,
+          "gt0.1": 12,
+          "0.01_0.1": 868
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.719253294289898e-06,
+          0.0008146972455188181,
+          0.0023970170454545455,
+          0.00799449027172661,
+          0.018063875166427417,
+          0.217406868585044
+        ]
+      }
+    },
+    "source_categories": {
+      "0": {
+        "name": "shirt, blouse",
+        "instances": 775,
+        "images": 768,
+        "groups": 768,
+        "small_instances_le1024": 9,
+        "small_images": 9,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 508,
+          "1025_9216": 258,
+          "257_1024": 8,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 148,
+          "0.01_0.1": 405,
+          "le0.001": 5,
+          "0.001_0.01": 217
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003307711693548387,
+          0.008827913208901446,
+          0.025541311201780416,
+          0.07289314474014037,
+          0.2393815518892731,
+          0.7566086109676309
+        ]
+      },
+      "1": {
+        "name": "top, t-shirt, sweatshirt",
+        "instances": 1831,
+        "images": 1785,
+        "groups": 1785,
+        "small_instances_le1024": 60,
+        "small_images": 58,
+        "extreme_instances_le256": 12,
+        "extreme_images": 12,
+        "absolute_area_bins": {
+          "gt9216": 1539,
+          "1025_9216": 232,
+          "257_1024": 48,
+          "le256": 12
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1140,
+          "gt0.1": 453,
+          "0.001_0.01": 193,
+          "le0.001": 45
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00010313531353135314,
+          0.020449820152126097,
+          0.04333194489596879,
+          0.09840259283334174,
+          0.2537100783541056,
+          0.9007911629801097
+        ]
+      },
+      "2": {
+        "name": "sweater",
+        "instances": 178,
+        "images": 178,
+        "groups": 178,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 172,
+          "1025_9216": 6
+        },
+        "relative_area_bins": {
+          "gt0.1": 110,
+          "0.01_0.1": 62,
+          "0.001_0.01": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.002686063028541226,
+          0.06458157181869303,
+          0.1345615778500733,
+          0.37501398518554163,
+          0.4798155969752498,
+          0.897947268225699
+        ]
+      },
+      "3": {
+        "name": "cardigan",
+        "instances": 129,
+        "images": 128,
+        "groups": 128,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 121,
+          "1025_9216": 8
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 82,
+          "gt0.1": 43,
+          "0.001_0.01": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00376715078928047,
+          0.03839111328125,
+          0.06203333536783854,
+          0.14250223377932553,
+          0.3326718864552786,
+          0.8823922508818343
+        ]
+      },
+      "4": {
+        "name": "jacket",
+        "instances": 977,
+        "images": 964,
+        "groups": 964,
+        "small_instances_le1024": 3,
+        "small_images": 1,
+        "extreme_instances_le256": 2,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 963,
+          "1025_9216": 11,
+          "257_1024": 1,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 445,
+          "0.01_0.1": 519,
+          "0.001_0.01": 11,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.274965800273598e-05,
+          0.059455759714076246,
+          0.09289694393382353,
+          0.17328686308651026,
+          0.3345056970692214,
+          0.779370418595679
+        ]
+      },
+      "5": {
+        "name": "vest",
+        "instances": 88,
+        "images": 88,
+        "groups": 88,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 69,
+          "1025_9216": 14,
+          "257_1024": 5
+        },
+        "relative_area_bins": {
+          "gt0.1": 12,
+          "0.01_0.1": 61,
+          "0.001_0.01": 14,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0007689355755131964,
+          0.015480381824897329,
+          0.03728263608870967,
+          0.06022576922195748,
+          0.16725944759559064,
+          0.5010156631469727
+        ]
+      },
+      "6": {
+        "name": "pants",
+        "instances": 1507,
+        "images": 1500,
+        "groups": 1500,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 1464,
+          "1025_9216": 39,
+          "257_1024": 4
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1270,
+          "gt0.1": 208,
+          "0.001_0.01": 25,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00047586178045515396,
+          0.04348681960018689,
+          0.06027718964408233,
+          0.0809166116880877,
+          0.1112703323364258,
+          0.8898160564365671
+        ]
+      },
+      "7": {
+        "name": "shorts",
+        "instances": 362,
+        "images": 360,
+        "groups": 360,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 274,
+          "1025_9216": 83,
+          "257_1024": 4,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 268,
+          "0.001_0.01": 63,
+          "gt0.1": 30,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003322030791788856,
+          0.013241630318618467,
+          0.024267443343998014,
+          0.04642031936310395,
+          0.08183438755966074,
+          0.6445341535555005
+        ]
+      },
+      "8": {
+        "name": "skirt",
+        "instances": 571,
+        "images": 570,
+        "groups": 570,
+        "small_instances_le1024": 2,
+        "small_images": 2,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 23,
+          "gt9216": 546,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 16,
+          "0.01_0.1": 402,
+          "gt0.1": 152,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00047755765007320646,
+          0.03688667454208397,
+          0.06187855113636364,
+          0.10430921825816586,
+          0.16603853555718476,
+          0.864607593506674
+        ]
+      },
+      "9": {
+        "name": "coat",
+        "instances": 344,
+        "images": 334,
+        "groups": 334,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 340,
+          "1025_9216": 4
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 155,
+          "gt0.1": 187,
+          "0.001_0.01": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00298553198313783,
+          0.06482754384916999,
+          0.10460890053726231,
+          0.19616974963207756,
+          0.36035143236027883,
+          0.8523164890680212
+        ]
+      },
+      "10": {
+        "name": "dress",
+        "instances": 2027,
+        "images": 2023,
+        "groups": 2023,
+        "small_instances_le1024": 4,
+        "small_images": 4,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 2008,
+          "257_1024": 3,
+          "1025_9216": 15,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 1325,
+          "0.01_0.1": 686,
+          "0.001_0.01": 14,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.542555894308943e-05,
+          0.08337734170020569,
+          0.12883465450879766,
+          0.20969986658541862,
+          0.2992130223607039,
+          0.8693477746212122
+        ]
+      },
+      "12": {
+        "name": "cape",
+        "instances": 13,
+        "images": 13,
+        "groups": 13,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 13
+        },
+        "relative_area_bins": {
+          "gt0.1": 5,
+          "0.01_0.1": 8
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.019936480480205278,
+          0.05617736548316252,
+          0.07978358345534407,
+          0.10952535053152493,
+          0.15772255108335154,
+          0.28826268513997394
+        ]
+      },
+      "13": {
+        "name": "glasses",
+        "instances": 516,
+        "images": 516,
+        "groups": 516,
+        "small_instances_le1024": 57,
+        "small_images": 57,
+        "extreme_instances_le256": 7,
+        "extreme_images": 7,
+        "absolute_area_bins": {
+          "1025_9216": 444,
+          "257_1024": 50,
+          "le256": 7,
+          "gt9216": 15
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 465,
+          "le0.001": 30,
+          "0.01_0.1": 21
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281525e-05,
+          0.0018046777459639538,
+          0.002392320759710039,
+          0.003907016087343562,
+          0.006583346929837744,
+          0.023348721590909092
+        ]
+      },
+      "14": {
+        "name": "hat",
+        "instances": 282,
+        "images": 282,
+        "groups": 282,
+        "small_instances_le1024": 6,
+        "small_images": 6,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 176,
+          "gt9216": 100,
+          "257_1024": 6
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 138,
+          "0.01_0.1": 141,
+          "le0.001": 3
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0007941025264394829,
+          0.006317431371089033,
+          0.00988586968004078,
+          0.015960397621776826,
+          0.02513216527675953,
+          0.08861033121744792
+        ]
+      },
+      "15": {
+        "name": "headband, head covering, hair accessory",
+        "instances": 446,
+        "images": 384,
+        "groups": 384,
+        "small_instances_le1024": 270,
+        "small_images": 220,
+        "extreme_instances_le256": 125,
+        "extreme_images": 89,
+        "absolute_area_bins": {
+          "gt9216": 46,
+          "1025_9216": 130,
+          "257_1024": 145,
+          "le256": 125
+        },
+        "relative_area_bins": {
+          "gt0.1": 4,
+          "0.001_0.01": 161,
+          "le0.001": 228,
+          "0.01_0.1": 53
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.371926883780332e-05,
+          0.0002788417219764012,
+          0.0009551976625178226,
+          0.0038553686702952664,
+          0.01316330591490878,
+          0.19708090863269795
+        ]
+      },
+      "16": {
+        "name": "tie",
+        "instances": 201,
+        "images": 201,
+        "groups": 201,
+        "small_instances_le1024": 40,
+        "small_images": 40,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "1025_9216": 141,
+          "257_1024": 40,
+          "gt9216": 20
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 155,
+          "0.01_0.1": 31,
+          "le0.001": 15
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006548545021961932,
+          0.001646696297653959,
+          0.003309143603372434,
+          0.006115311584919473,
+          0.013590136288546256,
+          0.033857034691629956
+        ]
+      },
+      "17": {
+        "name": "glove",
+        "instances": 184,
+        "images": 101,
+        "groups": 101,
+        "small_instances_le1024": 21,
+        "small_images": 17,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "1025_9216": 143,
+          "257_1024": 19,
+          "gt9216": 20,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 146,
+          "0.01_0.1": 26,
+          "le0.001": 12
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00019502569750367107,
+          0.002512643763746334,
+          0.0042918771525189674,
+          0.007360976316903538,
+          0.012961305970670205,
+          0.027986526489257812
+        ]
+      },
+      "18": {
+        "name": "watch",
+        "instances": 639,
+        "images": 634,
+        "groups": 634,
+        "small_instances_le1024": 560,
+        "small_images": 557,
+        "extreme_instances_le256": 131,
+        "extreme_images": 131,
+        "absolute_area_bins": {
+          "257_1024": 429,
+          "le256": 131,
+          "1025_9216": 79
+        },
+        "relative_area_bins": {
+          "le0.001": 480,
+          "0.001_0.01": 159
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          3.429150763358779e-05,
+          0.0003970635626070725,
+          0.0006529508797653959,
+          0.0009902512466331442,
+          0.0017210731062190616,
+          0.004443216184017595
+        ]
+      },
+      "19": {
+        "name": "belt",
+        "instances": 831,
+        "images": 799,
+        "groups": 799,
+        "small_instances_le1024": 317,
+        "small_images": 300,
+        "extreme_instances_le256": 66,
+        "extreme_images": 66,
+        "absolute_area_bins": {
+          "1025_9216": 427,
+          "gt9216": 87,
+          "le256": 66,
+          "257_1024": 251
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 509,
+          "0.01_0.1": 113,
+          "le0.001": 209
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.861482771260997e-05,
+          0.000980167618096826,
+          0.0023225577346041057,
+          0.005674946191644823,
+          0.012156914406158358,
+          0.06805896759033203
+        ]
+      },
+      "20": {
+        "name": "leg warmer",
+        "instances": 11,
+        "images": 6,
+        "groups": 6,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "1025_9216": 8,
+          "gt9216": 2,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 6,
+          "0.01_0.1": 4,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.164751838235294e-05,
+          0.0032571600664976896,
+          0.006272370594713656,
+          0.011789377100370504,
+          0.013631301486389686,
+          0.01610824742268041
+        ]
+      },
+      "21": {
+        "name": "tights, stockings",
+        "instances": 535,
+        "images": 269,
+        "groups": 269,
+        "small_instances_le1024": 28,
+        "small_images": 21,
+        "extreme_instances_le256": 7,
+        "extreme_images": 6,
+        "absolute_area_bins": {
+          "gt9216": 278,
+          "1025_9216": 229,
+          "257_1024": 21,
+          "le256": 7
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 341,
+          "0.001_0.01": 174,
+          "le0.001": 20
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.004673753665689e-05,
+          0.007207073387258258,
+          0.013472839534457479,
+          0.020089462555740907,
+          0.028126250124397168,
+          0.0657123394536903
+        ]
+      },
+      "22": {
+        "name": "sock",
+        "instances": 439,
+        "images": 248,
+        "groups": 248,
+        "small_instances_le1024": 309,
+        "small_images": 200,
+        "extreme_instances_le256": 157,
+        "extreme_images": 116,
+        "absolute_area_bins": {
+          "1025_9216": 119,
+          "gt9216": 11,
+          "le256": 157,
+          "257_1024": 152
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 162,
+          "0.01_0.1": 25,
+          "le0.001": 252
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.719253294289898e-06,
+          0.0001838235294117647,
+          0.0006693460296352584,
+          0.001809721336871442,
+          0.005205204759525058,
+          0.05306508341633466
+        ]
+      },
+      "23": {
+        "name": "shoe",
+        "instances": 5259,
+        "images": 2708,
+        "groups": 2708,
+        "small_instances_le1024": 921,
+        "small_images": 700,
+        "extreme_instances_le256": 287,
+        "extreme_images": 257,
+        "absolute_area_bins": {
+          "257_1024": 634,
+          "le256": 287,
+          "1025_9216": 4067,
+          "gt9216": 271
+        },
+        "relative_area_bins": {
+          "le0.001": 623,
+          "0.001_0.01": 4192,
+          "0.01_0.1": 444
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8722426470588235e-06,
+          0.0018461081944977312,
+          0.0034451794698142414,
+          0.005857943090175953,
+          0.009228143645081913,
+          0.052678426106770836
+        ]
+      },
+      "24": {
+        "name": "bag, wallet",
+        "instances": 685,
+        "images": 664,
+        "groups": 664,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 333,
+          "1025_9216": 352
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 363,
+          "0.001_0.01": 307,
+          "gt0.1": 14,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0009889602661132812,
+          0.005015055338541667,
+          0.011801679172767204,
+          0.023335385217231223,
+          0.041847908433849085,
+          0.19027842646059784
+        ]
+      },
+      "25": {
+        "name": "scarf",
+        "instances": 148,
+        "images": 148,
+        "groups": 148,
+        "small_instances_le1024": 1,
+        "small_images": 1,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 104,
+          "1025_9216": 43,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 7,
+          "0.01_0.1": 106,
+          "0.001_0.01": 34,
+          "le0.001": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.016358137829913e-05,
+          0.010213290790178051,
+          0.02240569947278765,
+          0.042620787799736534,
+          0.07203968948981848,
+          0.217406868585044
+        ]
+      },
+      "26": {
+        "name": "umbrella",
+        "instances": 11,
+        "images": 11,
+        "groups": 11,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 8,
+          "1025_9216": 3
+        },
+        "relative_area_bins": {
+          "gt0.1": 1,
+          "0.001_0.01": 3,
+          "0.01_0.1": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0019299837085308058,
+          0.011466034985179448,
+          0.05273293887867647,
+          0.06736304339240579,
+          0.09912683823529411,
+          0.11650788597178684
+        ]
+      }
+    },
+    "area_basis": "decoded original-resolution source mask pixels; no image resizing",
+    "requested_goals": {
+      "small_sock": {
+        "goal_reference_phase1": 200,
+        "actual": 200,
+        "gap": 0
+      },
+      "small_belt": {
+        "goal_reference_phase1": 300,
+        "actual": 300,
+        "gap": 0
+      },
+      "small_head_accessory": {
+        "goal_reference_phase1": 200,
+        "actual": 220,
+        "gap": 0
+      },
+      "small_watch": {
+        "goal_reference_phase1": 150,
+        "actual": 557,
+        "gap": 0
+      },
+      "small_shoe": {
+        "goal_reference_phase1": 700,
+        "actual": 700,
+        "gap": 0
+      },
+      "bag_all": {
+        "goal_reference_phase1": 400,
+        "actual": 664,
+        "gap": 0
+      },
+      "small_bag": {
+        "goal_reference_phase1": 50,
+        "actual": 0,
+        "gap": 50
+      },
+      "extreme_priority": {
+        "goal_reference_phase1": 300,
+        "actual": 640,
+        "gap": 0
+      },
+      "complex_boundary_source": {
+        "goal_reference_phase1": 300,
+        "actual": 264,
+        "gap": 36
+      }
+    },
+    "boundary_evidence": {
+      "status": "passed",
+      "new_images": 5000,
+      "source_masks_pixel_identical": 18989,
+      "geometry_and_source_fields_checked": 18989,
+      "old_masks_decoded": 0,
+      "source_annotation_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+      "manifest_sha256": "41348c4f21e739b55eca6212f610aee80d49b68ea26fd16147e9cc18519554e9",
+      "annotations_sha256": "3ee7866d422ca5c0a9e96a10aa7ebd0f6a1325b1744e0066f744127da4a16778",
+      "source_supported_complex_images": 264,
+      "geometry_proxy_images": 643,
+      "all_source_annotations_retained_for_selected_images": true,
+      "human_confirmed_images": 0
+    }
+  },
+  "combined20000": {
+    "images": 20000,
+    "groups": 19976,
+    "instances": 77948,
+    "crowd_instances": 0,
+    "small_instances_le1024": 12548,
+    "extreme_instances_le256": 3517,
+    "exactly_1024_instances": 11,
+    "target_image_hits": {
+      "bag_all": 3429,
+      "small_shoe": 3558,
+      "small_belt": 1289,
+      "small_sock": 944,
+      "small_glasses": 795,
+      "small_head_accessory": 1194,
+      "small_bag": 210
+    },
+    "project_categories": {
+      "1": {
+        "name": "top",
+        "instances": 11378,
+        "images": 10575,
+        "groups": 10568,
+        "small_instances_le1024": 297,
+        "small_images": 292,
+        "extreme_instances_le256": 70,
+        "extreme_images": 70,
+        "absolute_area_bins": {
+          "gt9216": 8824,
+          "1025_9216": 2257,
+          "257_1024": 227,
+          "le256": 70
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 6434,
+          "0.001_0.01": 1896,
+          "gt0.1": 2844,
+          "le0.001": 204
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.014832303670844024,
+          0.04020146476450228,
+          0.09999075503507435,
+          0.29212884902954106,
+          0.9112676461963807
+        ]
+      },
+      "2": {
+        "name": "pants",
+        "instances": 7264,
+        "images": 7215,
+        "groups": 7211,
+        "small_instances_le1024": 42,
+        "small_images": 41,
+        "extreme_instances_le256": 7,
+        "extreme_images": 7,
+        "absolute_area_bins": {
+          "gt9216": 6630,
+          "1025_9216": 592,
+          "257_1024": 35,
+          "le256": 7
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 6003,
+          "gt0.1": 802,
+          "0.001_0.01": 433,
+          "le0.001": 26
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.031249284045087977,
+          0.05363068852145424,
+          0.07532900238026301,
+          0.1027100079220411,
+          0.944286669481982
+        ]
+      },
+      "3": {
+        "name": "skirt",
+        "instances": 2296,
+        "images": 2289,
+        "groups": 2289,
+        "small_instances_le1024": 6,
+        "small_images": 5,
+        "extreme_instances_le256": 4,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 2171,
+          "1025_9216": 119,
+          "le256": 4,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1654,
+          "0.001_0.01": 80,
+          "gt0.1": 557,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.03458441377184117,
+          0.058796594073792875,
+          0.09835054727593476,
+          0.16008465450879766,
+          0.9281567258883249
+        ]
+      },
+      "4": {
+        "name": "outerwear",
+        "instances": 5711,
+        "images": 5553,
+        "groups": 5551,
+        "small_instances_le1024": 11,
+        "small_images": 8,
+        "extreme_instances_le256": 8,
+        "extreme_images": 6,
+        "absolute_area_bins": {
+          "gt9216": 5604,
+          "1025_9216": 96,
+          "257_1024": 3,
+          "le256": 8
+        },
+        "relative_area_bins": {
+          "gt0.1": 2335,
+          "0.01_0.1": 3311,
+          "0.001_0.01": 55,
+          "le0.001": 10
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.274965800273598e-05,
+          0.05294057001466276,
+          0.08439714884020619,
+          0.15371391492810785,
+          0.3112621307373047,
+          0.8823922508818343
+        ]
+      },
+      "5": {
+        "name": "dress",
+        "instances": 8276,
+        "images": 8250,
+        "groups": 8239,
+        "small_instances_le1024": 10,
+        "small_images": 10,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 8196,
+          "257_1024": 8,
+          "1025_9216": 70,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 5233,
+          "0.01_0.1": 2981,
+          "0.001_0.01": 56,
+          "le0.001": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.542555894308943e-05,
+          0.08000369514299088,
+          0.12423207303250156,
+          0.20623317379425687,
+          0.2968937535829182,
+          0.9086487844563553
+        ]
+      },
+      "6": {
+        "name": "shoes",
+        "instances": 21746,
+        "images": 11246,
+        "groups": 11236,
+        "small_instances_le1024": 4670,
+        "small_images": 3558,
+        "extreme_instances_le256": 1002,
+        "extreme_images": 931,
+        "absolute_area_bins": {
+          "1025_9216": 16251,
+          "257_1024": 3668,
+          "le256": 1002,
+          "gt9216": 825
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 17395,
+          "le0.001": 2943,
+          "0.01_0.1": 1407,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8722426470588235e-06,
+          0.0016367887605368437,
+          0.003047920332027729,
+          0.005273580795807429,
+          0.008197192473146191,
+          0.10122456928152493
+        ]
+      },
+      "7": {
+        "name": "bag",
+        "instances": 3598,
+        "images": 3429,
+        "groups": 3427,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 1515,
+          "1025_9216": 1868,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1778,
+          "0.001_0.01": 1677,
+          "le0.001": 110,
+          "gt0.1": 33
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.004381775471029455,
+          0.010059380147327966,
+          0.02138818284110633,
+          0.03873340058012351,
+          0.24730936686197916
+        ]
+      },
+      "8": {
+        "name": "accessory",
+        "instances": 17679,
+        "images": 10085,
+        "groups": 10081,
+        "small_instances_le1024": 7297,
+        "small_images": 5371,
+        "extreme_instances_le256": 2401,
+        "extreme_images": 1807,
+        "absolute_area_bins": {
+          "gt9216": 2626,
+          "1025_9216": 7756,
+          "257_1024": 4896,
+          "le256": 2401
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 3285,
+          "0.001_0.01": 8742,
+          "le0.001": 5587,
+          "gt0.1": 65
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.0007474569281524927,
+          0.0021475796120058563,
+          0.0070361697462626195,
+          0.017358183651026395,
+          0.5504948680351907
+        ]
+      }
+    },
+    "source_categories": {
+      "0": {
+        "name": "shirt, blouse",
+        "instances": 2980,
+        "images": 2956,
+        "groups": 2954,
+        "small_instances_le1024": 41,
+        "small_images": 41,
+        "extreme_instances_le256": 10,
+        "extreme_images": 10,
+        "absolute_area_bins": {
+          "gt9216": 1995,
+          "1025_9216": 944,
+          "257_1024": 31,
+          "le256": 10
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1543,
+          "0.001_0.01": 798,
+          "gt0.1": 614,
+          "le0.001": 25
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          8.591458944281526e-06,
+          0.008961249656341642,
+          0.028313321260670522,
+          0.0811126798478739,
+          0.24800549280608494,
+          0.8199246724446615
+        ]
+      },
+      "1": {
+        "name": "top, t-shirt, sweatshirt",
+        "instances": 7402,
+        "images": 7208,
+        "groups": 7203,
+        "small_instances_le1024": 240,
+        "small_images": 237,
+        "extreme_instances_le256": 59,
+        "extreme_images": 59,
+        "absolute_area_bins": {
+          "gt9216": 5958,
+          "1025_9216": 1204,
+          "257_1024": 181,
+          "le256": 59
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 4411,
+          "0.001_0.01": 996,
+          "gt0.1": 1825,
+          "le0.001": 170
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          1.0172526041666666e-05,
+          0.01684968546028904,
+          0.0411953563838042,
+          0.09806239322080451,
+          0.2800206415453674,
+          0.9057019712552743
+        ]
+      },
+      "2": {
+        "name": "sweater",
+        "instances": 662,
+        "images": 662,
+        "groups": 662,
+        "small_instances_le1024": 5,
+        "small_images": 5,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 615,
+          "1025_9216": 42,
+          "le256": 1,
+          "257_1024": 4
+        },
+        "relative_area_bins": {
+          "gt0.1": 360,
+          "0.01_0.1": 258,
+          "0.001_0.01": 39,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0003307711693548387,
+          0.044722464510455945,
+          0.11472678114591806,
+          0.34596329537071907,
+          0.49979181543439205,
+          0.9112676461963807
+        ]
+      },
+      "3": {
+        "name": "cardigan",
+        "instances": 497,
+        "images": 493,
+        "groups": 493,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 479,
+          "1025_9216": 18
+        },
+        "relative_area_bins": {
+          "gt0.1": 178,
+          "0.01_0.1": 312,
+          "0.001_0.01": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.001881529508797654,
+          0.03687815946691177,
+          0.06430277446847507,
+          0.1645264387829912,
+          0.38536529541015635,
+          0.8823922508818343
+        ]
+      },
+      "4": {
+        "name": "jacket",
+        "instances": 3725,
+        "images": 3676,
+        "groups": 3676,
+        "small_instances_le1024": 7,
+        "small_images": 5,
+        "extreme_instances_le256": 5,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "gt9216": 3653,
+          "1025_9216": 65,
+          "257_1024": 2,
+          "le256": 5
+        },
+        "relative_area_bins": {
+          "gt0.1": 1397,
+          "0.01_0.1": 2281,
+          "0.001_0.01": 41,
+          "le0.001": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.274965800273598e-05,
+          0.05239358046187683,
+          0.08083274147727272,
+          0.1437059648197853,
+          0.3001369476318359,
+          0.8746400439049586
+        ]
+      },
+      "5": {
+        "name": "vest",
+        "instances": 334,
+        "images": 333,
+        "groups": 333,
+        "small_instances_le1024": 11,
+        "small_images": 11,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 256,
+          "1025_9216": 67,
+          "257_1024": 11
+        },
+        "relative_area_bins": {
+          "gt0.1": 45,
+          "0.001_0.01": 63,
+          "0.01_0.1": 222,
+          "le0.001": 4
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0006257445931085044,
+          0.01442677481038402,
+          0.03290840983653524,
+          0.058273512648748915,
+          0.16684596104107635,
+          0.6600341796875
+        ]
+      },
+      "6": {
+        "name": "pants",
+        "instances": 5915,
+        "images": 5878,
+        "groups": 5875,
+        "small_instances_le1024": 12,
+        "small_images": 12,
+        "extreme_instances_le256": 3,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 5691,
+          "1025_9216": 212,
+          "257_1024": 9,
+          "le256": 3
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 5052,
+          "gt0.1": 711,
+          "0.001_0.01": 143,
+          "le0.001": 9
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.7253024193548386e-05,
+          0.040724850819607285,
+          0.05825426451553255,
+          0.07853667407441349,
+          0.10557545628259679,
+          0.944286669481982
+        ]
+      },
+      "7": {
+        "name": "shorts",
+        "instances": 1349,
+        "images": 1343,
+        "groups": 1342,
+        "small_instances_le1024": 30,
+        "small_images": 29,
+        "extreme_instances_le256": 4,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "gt9216": 939,
+          "1025_9216": 380,
+          "257_1024": 26,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "gt0.1": 91,
+          "0.001_0.01": 290,
+          "0.01_0.1": 951,
+          "le0.001": 17
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          6.612141927083333e-05,
+          0.01099014945652174,
+          0.022485070016474464,
+          0.04133833961925287,
+          0.07662713363132115,
+          0.9202248965992647
+        ]
+      },
+      "8": {
+        "name": "skirt",
+        "instances": 2296,
+        "images": 2289,
+        "groups": 2289,
+        "small_instances_le1024": 6,
+        "small_images": 5,
+        "extreme_instances_le256": 4,
+        "extreme_images": 3,
+        "absolute_area_bins": {
+          "gt9216": 2171,
+          "1025_9216": 119,
+          "le256": 4,
+          "257_1024": 2
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1654,
+          "0.001_0.01": 80,
+          "gt0.1": 557,
+          "le0.001": 5
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00013316761363636363,
+          0.03458441377184117,
+          0.058796594073792875,
+          0.09835054727593476,
+          0.16008465450879766,
+          0.9281567258883249
+        ]
+      },
+      "9": {
+        "name": "coat",
+        "instances": 1423,
+        "images": 1397,
+        "groups": 1396,
+        "small_instances_le1024": 4,
+        "small_images": 3,
+        "extreme_instances_le256": 3,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 1406,
+          "1025_9216": 13,
+          "le256": 3,
+          "257_1024": 1
+        },
+        "relative_area_bins": {
+          "gt0.1": 728,
+          "0.01_0.1": 684,
+          "le0.001": 4,
+          "0.001_0.01": 7
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.7614306784660766e-05,
+          0.06216063737170088,
+          0.10181022039956011,
+          0.1788020133972168,
+          0.32075068155924474,
+          0.8523164890680212
+        ]
+      },
+      "10": {
+        "name": "dress",
+        "instances": 8276,
+        "images": 8250,
+        "groups": 8239,
+        "small_instances_le1024": 10,
+        "small_images": 10,
+        "extreme_instances_le256": 2,
+        "extreme_images": 2,
+        "absolute_area_bins": {
+          "gt9216": 8196,
+          "257_1024": 8,
+          "1025_9216": 70,
+          "le256": 2
+        },
+        "relative_area_bins": {
+          "gt0.1": 5233,
+          "0.01_0.1": 2981,
+          "0.001_0.01": 56,
+          "le0.001": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.542555894308943e-05,
+          0.08000369514299088,
+          0.12423207303250156,
+          0.20623317379425687,
+          0.2968937535829182,
+          0.9086487844563553
+        ]
+      },
+      "12": {
+        "name": "cape",
+        "instances": 66,
+        "images": 66,
+        "groups": 66,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 66
+        },
+        "relative_area_bins": {
+          "gt0.1": 32,
+          "0.01_0.1": 34
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.01739224926793558,
+          0.06233907928828917,
+          0.09871142497829033,
+          0.18558985011497545,
+          0.2880576106693271,
+          0.6801125733211975
+        ]
+      },
+      "13": {
+        "name": "glasses",
+        "instances": 2472,
+        "images": 2469,
+        "groups": 2467,
+        "small_instances_le1024": 797,
+        "small_images": 795,
+        "extreme_instances_le256": 138,
+        "extreme_images": 138,
+        "absolute_area_bins": {
+          "1025_9216": 1628,
+          "257_1024": 659,
+          "le256": 138,
+          "gt9216": 47
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 1932,
+          "le0.001": 476,
+          "0.01_0.1": 64
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.1573545655375554e-05,
+          0.0011632896937932436,
+          0.0019566280008291026,
+          0.00321929126191349,
+          0.005556382881231672,
+          0.023348721590909092
+        ]
+      },
+      "14": {
+        "name": "hat",
+        "instances": 1221,
+        "images": 1219,
+        "groups": 1218,
+        "small_instances_le1024": 44,
+        "small_images": 44,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "1025_9216": 825,
+          "gt9216": 352,
+          "257_1024": 43,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 718,
+          "0.01_0.1": 480,
+          "le0.001": 23
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00015045470756062766,
+          0.005027435392228739,
+          0.008127520161290322,
+          0.0143463045271261,
+          0.024467043163489736,
+          0.09434567448680352
+        ]
+      },
+      "15": {
+        "name": "headband, head covering, hair accessory",
+        "instances": 2173,
+        "images": 1807,
+        "groups": 1807,
+        "small_instances_le1024": 1505,
+        "small_images": 1194,
+        "extreme_instances_le256": 760,
+        "extreme_images": 525,
+        "absolute_area_bins": {
+          "gt9216": 138,
+          "1025_9216": 530,
+          "257_1024": 745,
+          "le256": 760
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 165,
+          "0.001_0.01": 716,
+          "le0.001": 1280,
+          "gt0.1": 12
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8680249632892803e-06,
+          0.00019073486328125,
+          0.0007614606277533039,
+          0.002229483596041056,
+          0.007766808139442357,
+          0.19708090863269795
+        ]
+      },
+      "16": {
+        "name": "tie",
+        "instances": 769,
+        "images": 769,
+        "groups": 768,
+        "small_instances_le1024": 197,
+        "small_images": 197,
+        "extreme_instances_le256": 4,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "1025_9216": 497,
+          "257_1024": 193,
+          "gt9216": 75,
+          "le256": 4
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 587,
+          "le0.001": 72,
+          "0.01_0.1": 110
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.00011455278592375367,
+          0.0014441114568081992,
+          0.0028652515579178886,
+          0.006083074150868878,
+          0.012731709542422117,
+          0.07787478266837482
+        ]
+      },
+      "17": {
+        "name": "glove",
+        "instances": 678,
+        "images": 370,
+        "groups": 369,
+        "small_instances_le1024": 100,
+        "small_images": 81,
+        "extreme_instances_le256": 11,
+        "extreme_images": 11,
+        "absolute_area_bins": {
+          "1025_9216": 537,
+          "257_1024": 89,
+          "gt9216": 41,
+          "le256": 11
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 550,
+          "0.01_0.1": 75,
+          "le0.001": 53
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.146458638360176e-05,
+          0.0021180327611258205,
+          0.003914767902973698,
+          0.0064938575801490594,
+          0.010293856192346327,
+          0.027986526489257812
+        ]
+      },
+      "18": {
+        "name": "watch",
+        "instances": 2076,
+        "images": 2063,
+        "groups": 2061,
+        "small_instances_le1024": 1735,
+        "small_images": 1726,
+        "extreme_instances_le256": 440,
+        "extreme_images": 440,
+        "absolute_area_bins": {
+          "257_1024": 1295,
+          "le256": 440,
+          "1025_9216": 341
+        },
+        "relative_area_bins": {
+          "le0.001": 1503,
+          "0.001_0.01": 573
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.647307981927711e-05,
+          0.0004050821527967115,
+          0.0006593841283837954,
+          0.001061248779296875,
+          0.0020234561077739693,
+          0.008846875
+        ]
+      },
+      "19": {
+        "name": "belt",
+        "instances": 3501,
+        "images": 3382,
+        "groups": 3380,
+        "small_instances_le1024": 1345,
+        "small_images": 1289,
+        "extreme_instances_le256": 274,
+        "extreme_images": 272,
+        "absolute_area_bins": {
+          "257_1024": 1071,
+          "1025_9216": 1821,
+          "gt9216": 335,
+          "le256": 274
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 2141,
+          "0.01_0.1": 473,
+          "le0.001": 885,
+          "gt0.1": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.295729472140763e-06,
+          0.000993745417888563,
+          0.002416112401463964,
+          0.005840705422794117,
+          0.011980846774193548,
+          0.12414180871212122
+        ]
+      },
+      "20": {
+        "name": "leg warmer",
+        "instances": 52,
+        "images": 29,
+        "groups": 29,
+        "small_instances_le1024": 3,
+        "small_images": 3,
+        "extreme_instances_le256": 1,
+        "extreme_images": 1,
+        "absolute_area_bins": {
+          "gt9216": 18,
+          "1025_9216": 31,
+          "257_1024": 2,
+          "le256": 1
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 25,
+          "0.001_0.01": 25,
+          "le0.001": 2
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          4.164751838235294e-05,
+          0.004712307261163983,
+          0.009378551846234054,
+          0.015297808605205278,
+          0.022836196001838234,
+          0.055971472364568085
+        ]
+      },
+      "21": {
+        "name": "tights, stockings",
+        "instances": 2049,
+        "images": 1038,
+        "groups": 1038,
+        "small_instances_le1024": 73,
+        "small_images": 57,
+        "extreme_instances_le256": 16,
+        "extreme_images": 14,
+        "absolute_area_bins": {
+          "gt9216": 1094,
+          "1025_9216": 882,
+          "257_1024": 57,
+          "le256": 16
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1341,
+          "0.001_0.01": 656,
+          "le0.001": 52
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.004673753665689e-05,
+          0.007813931909824047,
+          0.013707478841145834,
+          0.020761260538856303,
+          0.02770608910379956,
+          0.09552270436217009
+        ]
+      },
+      "22": {
+        "name": "sock",
+        "instances": 1969,
+        "images": 1119,
+        "groups": 1119,
+        "small_instances_le1024": 1485,
+        "small_images": 944,
+        "extreme_instances_le256": 752,
+        "extreme_images": 539,
+        "absolute_area_bins": {
+          "le256": 752,
+          "257_1024": 733,
+          "1025_9216": 459,
+          "gt9216": 25
+        },
+        "relative_area_bins": {
+          "le0.001": 1235,
+          "0.001_0.01": 677,
+          "0.01_0.1": 57
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.859626647144949e-06,
+          0.0001844459187408492,
+          0.0006017407935684648,
+          0.0014484008967789166,
+          0.0038930584827011655,
+          0.05306508341633466
+        ]
+      },
+      "23": {
+        "name": "shoe",
+        "instances": 21746,
+        "images": 11246,
+        "groups": 11236,
+        "small_instances_le1024": 4670,
+        "small_images": 3558,
+        "extreme_instances_le256": 1002,
+        "extreme_images": 931,
+        "absolute_area_bins": {
+          "1025_9216": 16251,
+          "257_1024": 3668,
+          "le256": 1002,
+          "gt9216": 825
+        },
+        "relative_area_bins": {
+          "0.001_0.01": 17395,
+          "le0.001": 2943,
+          "0.01_0.1": 1407,
+          "gt0.1": 1
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          2.8722426470588235e-06,
+          0.0016367887605368437,
+          0.003047920332027729,
+          0.005273580795807429,
+          0.008197192473146191,
+          0.10122456928152493
+        ]
+      },
+      "24": {
+        "name": "bag, wallet",
+        "instances": 3598,
+        "images": 3429,
+        "groups": 3427,
+        "small_instances_le1024": 215,
+        "small_images": 210,
+        "extreme_instances_le256": 23,
+        "extreme_images": 23,
+        "absolute_area_bins": {
+          "gt9216": 1515,
+          "1025_9216": 1868,
+          "257_1024": 192,
+          "le256": 23
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 1778,
+          "0.001_0.01": 1677,
+          "le0.001": 110,
+          "gt0.1": 33
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          5.066245527728086e-05,
+          0.004381775471029455,
+          0.010059380147327966,
+          0.02138818284110633,
+          0.03873340058012351,
+          0.24730936686197916
+        ]
+      },
+      "25": {
+        "name": "scarf",
+        "instances": 655,
+        "images": 650,
+        "groups": 649,
+        "small_instances_le1024": 13,
+        "small_images": 13,
+        "extreme_instances_le256": 4,
+        "extreme_images": 4,
+        "absolute_area_bins": {
+          "gt9216": 450,
+          "1025_9216": 192,
+          "le256": 4,
+          "257_1024": 9
+        },
+        "relative_area_bins": {
+          "gt0.1": 38,
+          "0.01_0.1": 455,
+          "0.001_0.01": 156,
+          "le0.001": 6
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          7.016358137829913e-05,
+          0.010096391489910969,
+          0.022909043710443038,
+          0.04239926709362374,
+          0.07502228623249846,
+          0.5504948680351907
+        ]
+      },
+      "26": {
+        "name": "umbrella",
+        "instances": 64,
+        "images": 64,
+        "groups": 64,
+        "small_instances_le1024": 0,
+        "small_images": 0,
+        "extreme_instances_le256": 0,
+        "extreme_images": 0,
+        "absolute_area_bins": {
+          "gt9216": 51,
+          "1025_9216": 13
+        },
+        "relative_area_bins": {
+          "0.01_0.1": 40,
+          "gt0.1": 13,
+          "0.001_0.01": 11
+        },
+        "relative_area_quantiles_0_25_50_75_90_100": [
+          0.0015899524158125916,
+          0.015113092237903226,
+          0.047325432198925044,
+          0.08686855540556065,
+          0.15211120784457485,
+          0.2291357287362259
+        ]
+      }
+    },
+    "area_basis": "decoded original-resolution source mask pixels; no image resizing"
+  }
+}

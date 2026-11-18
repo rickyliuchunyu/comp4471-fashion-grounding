@@ -1,0 +1,46 @@
+{
+  "source_images": 45623,
+  "parent_images": 10000,
+  "metadata_raster_eligible": 34699,
+  "metadata_only_not_pixel_checked": true,
+  "goals_metadata_availability": {
+    "small_sock": 441,
+    "small_belt": 695,
+    "small_head_accessory": 846,
+    "small_watch": 1837,
+    "small_shoe": 4887,
+    "bag_all": 4631,
+    "small_bag": 2,
+    "extreme_priority": 2066,
+    "complex_boundary_source": 584
+  },
+  "excluded": {
+    "jumpsuit": 922,
+    "no_whole": 1,
+    "invalid_raster_metadata": 1
+  },
+  "errors": [
+    {
+      "source_image_id": 34253,
+      "error": "empty/wrong dimension mask"
+    }
+  ],
+  "acquisition_pool": 16990,
+  "pool_goals": {
+    "small_sock": 441,
+    "small_belt": 695,
+    "small_head_accessory": 846,
+    "small_watch": 1837,
+    "small_shoe": 2662,
+    "bag_all": 2275,
+    "small_bag": 2,
+    "extreme_priority": 2066,
+    "complex_boundary_source": 584
+  },
+  "cached_pool_fingerprints": 1434,
+  "estimated_disk_gb": {
+    "new_raw_and_packages_upper_estimate": 30,
+    "note": "rough estimate; copies may use extra disk; no old output deletion"
+  },
+  "complex_boundary_definition": "Official attribute 308 cutout only; source-supported label, not visual quality verification. Geometry proxy separate."
+}

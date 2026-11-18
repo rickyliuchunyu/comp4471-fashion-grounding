@@ -1,0 +1,157 @@
+{
+  "run_id": "20261118-segmentation-staged-v1",
+  "status": "completed",
+  "owner": "data_eval",
+  "executed_by": "wkq",
+  "git_commit": "e16c13a08478d9bea82e09729ee86a7e8684bfc1",
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "executable": "/root/autodl-tmp/fashion-grounding/envs/data_eval/bin/python",
+  "platform": "Linux-5.15.0-135-generic-x86_64-with-glibc2.35",
+  "commands": [
+    "expand_segmentation_staged.py inventory/acquire/select",
+    "build_staged_segmentation.py build/preview/publish",
+    "verify_staged_segmentation.py"
+  ],
+  "training_performed": false,
+  "gpu_used": false,
+  "evaluation": null,
+  "artifacts": [
+    {
+      "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train15000_targeted_v1",
+      "manifest_sha256": "25fee7d9cf609daaa9d2e308fed79b3275160ba7032361f53a5952238709fc9d",
+      "annotations_sha256": "53f4cc2f11b9a18d95226b1bfbfe1f1b2ba104618527b6d087ad91c6c2494b72",
+      "checksums_sha256": "e4071dded84cfa551ec489c0c75ffdd9c5aa36d3feedfc8d10ef9f457a1cd7dd",
+      "release": {
+        "schema_version": 3,
+        "illustrative_only": false,
+        "release_id": "fp_train15000_targeted_v1",
+        "owner": "data_eval",
+        "executed_by": "wkq",
+        "code_commit": "e16c13a08478d9bea82e09729ee86a7e8684bfc1",
+        "parent": "fp_train10000_targeted_v1",
+        "original_parent": "fp_train10000_targeted_v1",
+        "parent_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+        "original_parent_pins": {
+          "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+          "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+          "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3",
+          "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+        },
+        "source_annotation_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+        "mapping_sha256": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "seed": 2026,
+        "phase": 1,
+        "images": 15000,
+        "instances": 58959,
+        "groups": 14976,
+        "parent_images": 10000,
+        "original_parent_images": 10000,
+        "new_groups": 5000,
+        "new_images": 5000,
+        "new_instances": 19260,
+        "cumulative_new_images": 5000,
+        "sampling": {
+          "broad": 2500,
+          "targeted": 2500
+        },
+        "sampling_semantics": "slot budget; priority slots backfill in fixed order once no available deficit can be filled",
+        "actual_selection_modes": {
+          "broad_initial": 2500,
+          "quota_deficit": 814,
+          "broad_backfill": 1686
+        },
+        "technical_status": "passed_for_new_increment",
+        "legacy_bridge_clues": 2,
+        "legacy_bridge_status": "unconfirmed clues; all involved new candidates quarantined; old splits unchanged",
+        "coverage_status": "partial_see_distribution_report",
+        "human_review_status": "not_exhaustive; AI stratified visual spot check only",
+        "formal_freeze": false,
+        "training_performed": false,
+        "model_smoke_performed": false,
+        "new_language_queries": 0,
+        "consumer_acceptance": "pending_lcy_incremental_CPU_loader_check",
+        "delta_cpu_view": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage1_20261118",
+        "source_fidelity_reports": [
+          "audit/stage1_source_fidelity_report.json"
+        ],
+        "sidecar_scope": "sampling_sidecar equals direct phase delta; cumulative_sampling_sidecar equals all additions over original10k",
+        "request": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64e504ed29beb843289931a28349d9da3228d630/docs/handoffs/segmentation/train15000_20000_expansion_request_20261118.md",
+        "limitations": [
+          "Source cutout attribute is supporting evidence, not human-verified mask quality.",
+          "pHash grouping does not prove exhaustive same-product detection.",
+          "Small-bag availability insufficient; second-stage quotas are reported separately, not assumed doubled.",
+          "Original parent duplicate structure preserved; only new groups are independent."
+        ]
+      }
+    },
+    {
+      "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train20000_targeted_v1",
+      "manifest_sha256": "e6c47321a028d5069460564d834f9e0b80e43a975d208271951e0ae06cc1a0e8",
+      "annotations_sha256": "72ba6b8cd696ad86f5690ad5dca5256f814c47f817280b5f1190a3de87932120",
+      "checksums_sha256": "03f83342040827e4537310b33ab8847beba26eb4b6058f4bafa5cb26b0d53c89",
+      "release": {
+        "schema_version": 3,
+        "illustrative_only": false,
+        "release_id": "fp_train20000_targeted_v1",
+        "owner": "data_eval",
+        "executed_by": "wkq",
+        "code_commit": "e16c13a08478d9bea82e09729ee86a7e8684bfc1",
+        "parent": "fp_train15000_targeted_v1",
+        "original_parent": "fp_train10000_targeted_v1",
+        "parent_manifest_sha256": "25fee7d9cf609daaa9d2e308fed79b3275160ba7032361f53a5952238709fc9d",
+        "original_parent_pins": {
+          "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+          "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+          "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3",
+          "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+        },
+        "source_annotation_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+        "mapping_sha256": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "seed": 2026,
+        "phase": 2,
+        "images": 20000,
+        "instances": 77948,
+        "groups": 19976,
+        "parent_images": 15000,
+        "original_parent_images": 10000,
+        "new_groups": 5000,
+        "new_images": 5000,
+        "new_instances": 18989,
+        "cumulative_new_images": 10000,
+        "sampling": {
+          "broad": 2500,
+          "targeted": 2500
+        },
+        "sampling_semantics": "slot budget; priority slots backfill in fixed order once no available deficit can be filled",
+        "actual_selection_modes": {
+          "broad_initial": 2500,
+          "quota_deficit": 1094,
+          "broad_backfill": 1406
+        },
+        "technical_status": "passed_for_new_increment",
+        "legacy_bridge_clues": 2,
+        "legacy_bridge_status": "unconfirmed clues; all involved new candidates quarantined; old splits unchanged",
+        "coverage_status": "partial_see_distribution_report",
+        "human_review_status": "not_exhaustive; AI stratified visual spot check only",
+        "formal_freeze": false,
+        "training_performed": false,
+        "model_smoke_performed": false,
+        "new_language_queries": 0,
+        "consumer_acceptance": "pending_lcy_incremental_CPU_loader_check",
+        "delta_cpu_view": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage2_20261118",
+        "source_fidelity_reports": [
+          "audit/stage1_source_fidelity_report.json",
+          "audit/stage2_source_fidelity_report.json"
+        ],
+        "sidecar_scope": "sampling_sidecar equals direct phase delta; cumulative_sampling_sidecar equals all additions over original10k",
+        "request": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64e504ed29beb843289931a28349d9da3228d630/docs/handoffs/segmentation/train15000_20000_expansion_request_20261118.md",
+        "limitations": [
+          "Source cutout attribute is supporting evidence, not human-verified mask quality.",
+          "pHash grouping does not prove exhaustive same-product detection.",
+          "Small-bag availability insufficient; second-stage quotas are reported separately, not assumed doubled.",
+          "Original parent duplicate structure preserved; only new groups are independent."
+        ]
+      }
+    }
+  ]
+}

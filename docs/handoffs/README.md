@@ -4,7 +4,7 @@
 
 成员对应见 [简称绑定](team_aliases.md)。
 
-当前记录：[wkq 已审核dev与现有模型评价](data_eval/reviewed_dev_eval_20261117.md)、[wkq train1000逐图统一及审核](data_eval/train1000_visual_draft_20261117.md)、[wkq 10k 分割定向扩充](data_eval/train10000_targeted_20261116.md)、[wkq 大型数据与机器初标](data_eval/large_dataset_20261112.md)、[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
+当前记录：[wkq 15k/20k分割增量](data_eval/train15000_20000_20261118.md)、[wkq 已审核dev与现有模型评价](data_eval/reviewed_dev_eval_20261117.md)、[wkq train1000逐图统一及审核](data_eval/train1000_visual_draft_20261117.md)、[wkq 10k 分割定向扩充](data_eval/train10000_targeted_20261116.md)、[wkq 大型数据与机器初标](data_eval/large_dataset_20261112.md)、[wkq 远端接口与复核审计](data_eval/remote_pilot_review_20261112.md)、[接口与状态规范补齐](contract_readiness.md)、[分割角色服务器盘点](segmentation/server_inventory.md)。项目进度汇总见 [状态表](../status.md)，完整阶段条件见 [workflow](../workflow.md)。
 
 ## 复制使用的模板
 
@@ -29,3 +29,7 @@
 ## 2026-11-17 wkq 语言定向增量
 
 [训练1149与独立dev39交接](data_eval/language_targeted_20261117.md)：149新训练图/298条初标，39图dev困难集/78条待审；原划分不变。实际消费检查和142测试通过，没有训练。
+
+## 2026-11-18 wkq 15k/20k分割增量
+
+[分割增量交接](data_eval/train15000_20000_20261118.md)：原10k保留，新增两批各5000独立图；来源/几何/隔离检查通过，软目标缺口和旧分区关联线索如实记录；lcy只验收新增CPU视图，未训练、未正式冻结。

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "images": 5000,
+  "instances": 19260,
+  "candidates": 19260,
+  "queries": {
+    "queries_draft.jsonl": 0,
+    "queries_accepted.jsonl": 0
+  }
+}
