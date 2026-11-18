@@ -27,8 +27,10 @@ def build_order(images, annotations, protection, config):
     policy = config['sampling']
     names = policy['source_names']
     target_count = policy['target_draws']
-    if not names or len(set(names)) != len(names) or target_count % len(names):
-        raise ValueError('Target draws must split evenly across distinct source classes')
+    cycle = policy.get('target_cycle', names)
+    if (not names or len(set(names)) != len(names) or set(cycle) != set(names)
+            or not cycle or target_count % len(cycle)):
+        raise ValueError('Target cycle must cover all source classes in complete cycles')
     groups = {im['image_id']: im['group_id'] for im in images}
     if len(groups) != len(images) or len(images) != config['training_images']:
         raise ValueError('Training membership differs')
@@ -60,7 +62,7 @@ def build_order(images, annotations, protection, config):
     uses, image_uses = Counter(), Counter()
     targeted = []
     for draw in range(target_count):
-        name = names[draw % len(names)]
+        name = cycle[draw % len(cycle)]
         queue = queues[name]
         while queue:
             last, _, group = heapq.heappop(queue)
@@ -86,7 +88,7 @@ def build_order(images, annotations, protection, config):
                   max_extra_per_group=max(uses.values()), pools={})
     for name in names:
         report['pools'][name] = dict(images=sum(map(len, pools[name].values())), groups=len(pools[name]),
-                                     targeted_draws=target_count // len(names))
+                                     targeted_draws=target_count // len(cycle) * cycle.count(name))
     return order, report
 
 

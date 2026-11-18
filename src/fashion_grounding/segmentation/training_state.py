@@ -28,6 +28,15 @@ def read_config(path):
         raise ValueError('Effective batch differs from microbatch x accumulation')
     if config['image_size'] % 32 or config['warmup_updates'] < 0:
         raise ValueError('Invalid spatial size/warmup')
+    if 'mixed_image_sizes' in config:
+        sizes = config['mixed_image_sizes']
+        if (not isinstance(sizes, list) or len(sizes) != 2 or sizes[0] != config['image_size']
+                or any(type(n) is not int or n <= 0 or n % 32 for n in sizes) or sizes[0] >= sizes[1]):
+            raise ValueError('Mixed training requires two increasing stride-aligned image sizes')
+    if 'point_stats_interval' in config:
+        period = config['point_stats_interval']
+        if type(period) is not int or period < 2 or period % 2:
+            raise ValueError('Point statistics must cover complete update pairs')
     if config['lr_milestones'] != sorted(set(config['lr_milestones'])):
         raise ValueError('Learning-rate milestones must be unique and increasing')
     for key in ('image_manifest_sha256', 'annotation_sha256'):
@@ -73,6 +82,15 @@ def read_config(path):
         from .target_crop import validate_crop
         validate_crop(config['target_crop'])
     return config
+
+
+def update_image_size(config, update):
+    """Alternate both sizes within each pair, seed-shuffling their order per pair."""
+    if 'mixed_image_sizes' not in config:
+        return config['image_size']
+    pair, offset = divmod(update - 1, 2)
+    first = random.Random(f"{config['seed']}:{pair}").randrange(2)
+    return config['mixed_image_sizes'][(first + offset) % 2]
 
 
 def config_sha256(config):

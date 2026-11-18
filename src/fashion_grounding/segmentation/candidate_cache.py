@@ -41,7 +41,7 @@ def image_index(manifest):
     return {im['image_id']: im for im in images}
 
 
-def validate_row(row, im, root):
+def validate_row(row, im, root, *, components_required=False):
     require(row['image_id'] == im['image_id'] and
             row['image_size_wh'] == [im['width'], im['height']], 'Wrong image association')
     cs = row['candidates']
@@ -57,6 +57,11 @@ def validate_row(row, im, root):
         require(type(c['category_id']) is int and 1 <= c['category_id'] <= 8, 'Invalid category')
         require(type(c['score']) in (int, float) and math.isfinite(c['score']) and
                 0 <= c['score'] <= 1, 'Invalid score')
+        if components_required or 'class_probability' in c or 'mask_quality' in c:
+            parts = [c.get(k) for k in ('class_probability', 'mask_quality')]
+            require(all(type(v) in (int, float) and 0 <= v <= 1 for v in parts)
+                    and math.isclose(c['score'], parts[0] * parts[1], rel_tol=2e-7, abs_tol=1e-12),
+                    'Invalid candidate score components')
         require(c['source_annotation_id'] is None, 'GT association forbidden')
         path = safe_path(root, c['mask_reference'])
         require(sha256(path) == digest(c['mask_sha256']), 'Mask hash mismatch')
@@ -114,8 +119,10 @@ class CacheWriter:
             write_json(self.root/ref, encode_mask(c.mask))
             row['candidates'].append(dict(candidate_id=c.candidate_id, decoder_query_id=qid,
                 category_id=c.category_id, score=c.score, bbox_xyxy=list(c.bbox_xyxy),
-                mask_reference=ref, mask_sha256=sha256(self.root/ref), source_annotation_id=None))
-        validate_row(row, im, self.root)
+                mask_reference=ref, mask_sha256=sha256(self.root/ref), source_annotation_id=None,
+                **({k: getattr(c, k) for k in ('class_probability', 'mask_quality')}
+                   if self.provenance.get('score_components') else {})))
+        validate_row(row, im, self.root, components_required=bool(self.provenance.get('score_components')))
         record = f'records/{image_id}.json'
         write_json(self.root/record, row)
         self.records[image_id] = dict(image_id=image_id, path=record, sha256=sha256(self.root/record))
@@ -177,7 +184,7 @@ def export_cached(cache_root, output, *, threshold, candidate_set_id, expected_c
     for ref in records:
         im = images[ref['image_id']]
         row = read_json(referenced(ref))
-        validate_row(row, im, root)
+        validate_row(row, im, root, components_required=bool(p.get('score_components')))
         src = safe_path(root, im['file_name'])
         require(sha256(src) == im['sha256'], 'Image hash mismatch')
         dest = safe_path(output, im['file_name'])

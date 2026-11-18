@@ -30,7 +30,27 @@ def validate_config(config):
         'Unsupported decoder configuration; review before changing cache semantics')
     require(config['threshold_options'] == [0.3, 0.5, 0.7] and config['selected_threshold'] is None,
             'This entry produces threshold trials, not accepted-dev selection')
+    if 'score_components' in config:
+        require(config['score_components'] == ['class_probability', 'mask_quality'], 'Unknown score components')
     return config
+
+
+def bind_selected_config(template, selection, report):
+    """Resolve the post-training export by checkpoint hash, not step number."""
+    from .evaluation import choose_checkpoint
+    best = choose_checkpoint([report])
+    chosen = selection['selected_checkpoint']
+    require(selection['stop_reason'] == 'max_updates' and
+            all(chosen[k] == best[k] for k in ('checkpoint_sha256', 'checkpoint_path',
+                                                'completed_updates', 'dev_mask_AP')),
+            'Report is not the final selected checkpoint')
+    dev = template['inputs']['dev']
+    require(report['evaluated_images'] == dev['images']
+            and report['evaluation_data']['image_manifest_sha256'] == dev['image_manifest_sha256']
+            and report['training_data'] == template['training_data'], 'Wrong export population')
+    return dict(template, checkpoint_sha256=chosen['checkpoint_sha256'],
+                completed_updates=chosen['completed_updates'], training_git_commit=report['training_git_commit'],
+                training_config_sha256=report['training_config_sha256'])
 
 
 def input_manifest(package, config, split):
@@ -110,7 +130,8 @@ def generate_cache(args, config):
         checkpoint_sha256=config['checkpoint_sha256'], completed_updates=config['completed_updates'],
         training_git_commit=config['training_git_commit'], export_git_commit=source_commit,
         export_config_sha256=fingerprint(config), source_decoder_sha256=config['source_decoder_sha256'],
-        started_at=datetime.now(timezone.utc).isoformat()), config['decoder'])
+        started_at=datetime.now(timezone.utc).isoformat(),
+        **({'score_components': config['score_components']} if 'score_components' in config else {})), config['decoder'])
     write_json(writer.root/'resolved_export_config.json', config)
     (writer.root/'model_config.yaml').write_text(model_config.dump())
     with torch.inference_mode():
@@ -121,6 +142,9 @@ def generate_cache(args, config):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
+    bind = sub.add_parser('bind-selected', help='Prepare an export config from final selection and its dev report')
+    for key in ('config', 'selection', 'report', 'output'):
+        bind.add_argument('--'+key, required=True)
     cache = sub.add_parser('cache', help='GPU forward pass; use existing shared-GPU lock/timeout wrapper')
     for key in ('config', 'package', 'checkpoint', 'source', 'output', 'run-id'):
         cache.add_argument('--'+key, required=True)
@@ -132,7 +156,13 @@ def main():
     export.add_argument('--threshold', type=float, choices=(0.3, 0.5, 0.7), required=True)
     args = parser.parse_args()
     config = validate_config(read_json(args.config))
-    if args.command == 'cache':
+    if args.command == 'bind-selected':
+        import json
+        resolved = bind_selected_config(config, read_json(args.selection), read_json(args.report))
+        with Path(args.output).open('x') as stream:
+            json.dump(resolved, stream, indent=2, allow_nan=False)
+            stream.write('\n')
+    elif args.command == 'cache':
         generate_cache(args, config)
     else:
         # Reject different decoder/input/producer configuration before exporting.

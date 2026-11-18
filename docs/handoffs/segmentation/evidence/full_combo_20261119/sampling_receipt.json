@@ -1,0 +1,37 @@
+{
+  "uniform_draws": 42476,
+  "targeted_draws": 14160,
+  "distinct_target_images": 8345,
+  "distinct_target_groups": 8344,
+  "max_extra_per_image": 4,
+  "max_extra_per_group": 4,
+  "pools": {
+    "shoe": {
+      "images": 6543,
+      "groups": 6542,
+      "targeted_draws": 7080
+    },
+    "sock": {
+      "images": 964,
+      "groups": 964,
+      "targeted_draws": 3540
+    },
+    "belt": {
+      "images": 1338,
+      "groups": 1337,
+      "targeted_draws": 3540
+    }
+  },
+  "order_sha256": "07a51a52b1a1cb8a5468c542bc3a5a3f5adec88ae977bb46a3a0942cd14bdde6",
+  "total_draws": 56636,
+  "distinct_images": 42476,
+  "half_update": 14159,
+  "half_draws": {
+    "uniform": 21238,
+    "targeted": 7080
+  },
+  "protection_sha256": "6cecceaf3215830f2cb88626f97fa8ee5b29ec5049d9824c1187aedb94fd86fd",
+  "replayed_batch_equal": true,
+  "resumed_suffix_equal": true,
+  "rejects_overrun": true
+}

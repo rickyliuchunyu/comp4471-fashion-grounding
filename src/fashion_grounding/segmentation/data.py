@@ -120,7 +120,7 @@ def training_transforms(image, config, annotations=()):
     return result, transforms
 
 
-def map_training_record(record, config):
+def map_training_record(record, config, *, observe_points=False):
     """Upstream LSJ transforms with RLE bitmask support, including empty crops."""
     from detectron2.data import detection_utils as utils
     from detectron2.structures import BitMasks, Instances
@@ -129,13 +129,16 @@ def map_training_record(record, config):
     utils.check_image_size(record, image)
     size = config['image_size']
     image, transforms = training_transforms(image, config, record['annotations'])
-    masks, labels = [], []
+    masks, labels, point_targets = [], [], []
     for annotation in record['annotations']:
         mask = mask_api.decode(annotation['segmentation'])
         mask = transforms.apply_segmentation(mask).astype(bool)
         if mask.any():
             masks.append(mask)
             labels.append(annotation['category_id'])
+            if observe_points:
+                point_targets.append(dict(annotation_id=annotation['annotation_id'],
+                    source_category=annotation['source_category_name'], original_area=annotation['source_area']))
     tensor_masks = torch.from_numpy(np.stack(masks)) if masks else torch.zeros((0, size, size), dtype=torch.bool)
     instances = Instances((size, size))
     instances.gt_classes = torch.tensor(labels, dtype=torch.int64)
@@ -143,7 +146,10 @@ def map_training_record(record, config):
     instances.gt_masks = tensor_masks
     if image.shape != (size, size, 3):
         raise ValueError('LSJ produced an unexpected image shape')
-    return dict(image_id=record['image_id'], augmentation_view=transforms.view_kind,
+    result = dict(image_id=record['image_id'], augmentation_view=transforms.view_kind,
                 target_annotation_id=transforms.target_annotation_id,
                 image=torch.from_numpy(np.ascontiguousarray(image.transpose(2, 0, 1))),
                 instances=instances, height=size, width=size)
+    if observe_points:
+        result['point_targets'] = point_targets
+    return result

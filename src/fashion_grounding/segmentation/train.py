@@ -4,6 +4,7 @@ No validation/model selection is performed here. Run under with_gpu_lock.py.
 The pilot profile exercises this same trainer for 200 updates only.
 """
 import argparse
+from contextlib import nullcontext
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -24,7 +25,7 @@ from .resume_repair import load_repaired_checkpoint
 from .resume_recipe import load_recipe_checkpoint
 from .amp_recovery import AmpRecovery
 from .training_state import (UpdateSchedule, StatefulSampler, build_optimizer, capture_rng,
-    restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256, checkpoint_due)
+    update_image_size, restore_rng, state_digest, save_checkpoint, load_checkpoint, read_config, config_sha256, checkpoint_due)
 
 
 def component_states(model, optimizer, scheduler, scaler, sampler):
@@ -232,11 +233,21 @@ def main():
     initial_overflows = recovery.overflow_events
     def forward_backward():
         components, image_ids, instance_counts = {}, [], []
+        size = update_image_size(config, completed + 1)
+        mapper = dict(config, image_size=size) if size != config['image_size'] else config
+        period = config.get('point_stats_interval')
+        observe = period is not None and completed % period < 2
+        points = []
         for _ in range(config['accumulation_steps']):
-            batch = [map_training_record(records[sampler.next()], config) for _ in range(config['microbatch_images'])]
+            batch = [map_training_record(records[sampler.next()], mapper, observe_points=observe)
+                     for _ in range(config['microbatch_images'])]
             image_ids.extend(item['image_id'] for item in batch)
             instance_counts.extend(len(item['instances']) for item in batch)
-            with torch.cuda.amp.autocast(enabled=config['amp']):
+            observing = nullcontext()
+            if observe:
+                from .point_observations import observe_final_points
+                observing = observe_final_points(model.criterion, batch, points)
+            with torch.cuda.amp.autocast(enabled=config['amp']), observing:
                 losses = model(batch)
                 loss = sum(losses.values()) / config['accumulation_steps']
             if not losses or any(not torch.isfinite(v).all() for v in losses.values()) or not torch.isfinite(loss).all():
@@ -245,7 +256,12 @@ def main():
             for key, value in losses.items():
                 components[key] = components.get(key, 0.) + float(value.detach()) / config['accumulation_steps']
             del batch, losses, loss
-        return dict(loss_components=components, image_ids=image_ids, instance_counts=instance_counts)
+        details = dict(loss_components=components, image_ids=image_ids, instance_counts=instance_counts)
+        if 'mixed_image_sizes' in config:
+            details['image_size'] = size
+        if observe:
+            details['point_observations'] = points
+        return details
     with (output / 'metrics.jsonl').open('x') as log:
         while completed < stop:
             check_budget()
@@ -277,6 +293,10 @@ def main():
                 cuda_allocated_bytes=torch.cuda.memory_allocated(), cuda_reserved_bytes=torch.cuda.memory_reserved(),
                 peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated(),
                 peak_cuda_reserved_bytes=torch.cuda.max_memory_reserved())
+            if 'image_size' in details:
+                row['image_size'] = details['image_size']
+            if 'point_observations' in details:
+                row['point_observations'] = details['point_observations']
             log.write(json.dumps(row, allow_nan=False)+'\n'); log.flush()
             loss_rows.append(row)
             if completed == start_update+1 or completed % 10 == 0:

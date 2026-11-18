@@ -16,6 +16,7 @@ def prepare(package, protection, config, output):
     batch = config['effective_batch_images']
     updates = config['max_updates']
     names = spec['source_names']
+    cycle = spec.get('target_cycle', names)
     total = len(order)
     extra = spec['target_draws']
     if total != updates * batch:
@@ -29,7 +30,7 @@ def prepare(package, protection, config, output):
     extras, regular, half = [], [], {}
     for i, image in enumerate(order):
         if target_slot(i, total, extra):
-            if image not in eligible[names[len(extras) % len(names)]]:
+            if image not in eligible[cycle[len(extras) % len(cycle)]]:
                 raise ValueError('Wrong targeted draw')
             extras.append(image)
         else:

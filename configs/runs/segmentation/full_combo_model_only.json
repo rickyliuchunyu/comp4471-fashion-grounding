@@ -1,0 +1,12 @@
+{
+  "mode": "model_only",
+  "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+  "sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+  "source_completed_updates": 28318,
+  "source_training_data": {
+    "image_manifest_sha256": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "annotation_sha256": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340"
+  },
+  "source_config_sha256": "0d168b42780cc49a39263f9ace1ca1db621146e03e3aa5cea92b78338f9b7742",
+  "source_git_commit": "9f1ca245fbde243df17ec711854c803e52892617"
+}

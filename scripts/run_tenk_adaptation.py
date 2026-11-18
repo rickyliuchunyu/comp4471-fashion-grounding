@@ -26,7 +26,7 @@ def validate(plan, root=ROOT, *, authorized=False):
     from fashion_grounding.segmentation.tenk_execution import read
     from fashion_grounding.segmentation.training_state import read_config
     from fashion_grounding.segmentation.evaluation import choose_checkpoint
-    if plan.get('profile') == 'full_single_line':
+    if plan.get('profile') in ('full_single_line', 'full_combo'):
         from full_single_plan import prepare_full
         return prepare_full(plan, root, authorized)
     required_pins = {plan[k] for k in ('training_config', 'model_only_source', 'input_validation_bundle',
@@ -82,7 +82,7 @@ def execute_segments(prepared, baseline, output, total_deadline, *, run_phase, t
     """Single worker process group. All callbacks are covered by the same timer."""
     from fashion_grounding.segmentation.tenk_execution import write_atomic, select_progress
     output = Path(output)
-    full = prepared.get('profile') == 'full_single_line'
+    full = prepared.get('profile') in ('full_single_line', 'full_combo')
     segment_limit = prepared.get('per_segment_hard_seconds', SEGMENT_SECONDS)
     reports, epochs, records, previous = [], [], [], None
     for stage in prepared['stages']:
@@ -125,7 +125,7 @@ def execute_segments(prepared, baseline, output, total_deadline, *, run_phase, t
                 else:
                     if full:
                         from full_single_plan import select_full
-                        selection = select_full(baseline, reports+[report], [s['new_run_update'] for s in prepared['stages']])
+                        selection = select_full(baseline, reports+[report], [s['new_run_update'] for s in prepared['stages']], prepared['profile'])
                     else:
                         selection = select_progress(baseline, reports+[report], epochs+[stage['equivalent_epoch']])
                     check()
@@ -214,7 +214,7 @@ def launch(plan_path, plan, prepared, baseline, context, started=STARTED):
         raise TimeoutError('Total budget exhausted before launch')
     output.mkdir(exist_ok=False)
     record = dict(record_schema_version=1, status='running', owner='segmentation', executed_by='lcy',
-        experiment_id='S0', split='train', candidate_source='none', seed=42,
+        experiment_id='S0', split='train', candidate_source='none', seed=context.get('launch_config', {}).get('seed', 42),
         run_id=output.name, git_commit=commit,
         plan_sha256=plan_sha, started_at=datetime.now(timezone.utc).isoformat(),
         total_hard_seconds=total_limit, per_segment_hard_seconds=prepared.get('per_segment_hard_seconds', SEGMENT_SECONDS),

@@ -1,0 +1,33 @@
+{
+  "python": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+  "execution_checkout": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation",
+  "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+  "upstream_source": "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+  "training_config": "configs/runs/segmentation/full_combo_train.json",
+  "model_only_source": "configs/runs/segmentation/full_combo_model_only.json",
+  "input_validation_bundle": "configs/runs/segmentation/full_single_inputs.json",
+  "evaluation_config": "configs/runs/segmentation/expansion_control_dev250.json",
+  "baseline_report": "docs/handoffs/segmentation/evidence/full_single_completion_20261118/update_028318/dev/update_028318/evaluation_report.json",
+  "sampling_receipt": "docs/handoffs/segmentation/evidence/full_combo_20261119/sampling_receipt.json",
+  "profile": "full_combo",
+  "status": "prepared_not_started",
+  "execution_entry": "scripts/run_tenk_adaptation.py",
+  "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train_full_eligible_v1",
+  "future_output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01",
+  "evaluation_updates": [
+    14159,
+    28318
+  ],
+  "total_hard_seconds": 28800,
+  "automatic_extension": false,
+  "automatic_restart": false,
+  "selection_rule": "max full dev250 mask AP; retain cached 28318 on tie, earlier update among new checkpoints",
+  "input_sha256": {
+    "configs/runs/segmentation/full_combo_train.json": "9b53014fc4db1f6703dc0fac6a0f5f4f54f6a0543738b072378d3548a6a7342b",
+    "configs/runs/segmentation/full_combo_model_only.json": "f0fbb65a3ec425f6a304a16a9c26a2ea3f57b74fbbce184db59ffb24c7887b2c",
+    "configs/runs/segmentation/full_single_inputs.json": "7cc48bc0d9c828b4f9199fa84caab3f2ed066200af94b240ae29e9b8dfd7aaf7",
+    "configs/runs/segmentation/expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+    "docs/handoffs/segmentation/evidence/full_single_completion_20261118/update_028318/dev/update_028318/evaluation_report.json": "1d792516b64a9a3cdc007b16e547fb7ba21fc0a3bb601a5b49640271d20d5ebf",
+    "docs/handoffs/segmentation/evidence/full_combo_20261119/sampling_receipt.json": "3ed9273d145911018f602ab8f3f8a4f275124852166e197b12365f8c55c3a95f"
+  }
+}

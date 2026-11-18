@@ -1,5 +1,6 @@
 """Language candidates, deliberately separate from upstream COCO AP decoding."""
 from dataclasses import dataclass
+from typing import Optional
 import json
 from pathlib import Path
 import shutil
@@ -18,6 +19,13 @@ class Candidate:
     bbox_xyxy: tuple
     mask: np.ndarray
     decoder_query_id: int
+    class_probability: Optional[float] = None
+    mask_quality: Optional[float] = None
+
+    def score_components(self):
+        if self.class_probability is None and self.mask_quality is None:
+            return {}
+        return dict(class_probability=self.class_probability, mask_quality=self.mask_quality)
 
 
 def decode_candidates(class_logits, mask_logits, image_id, score_threshold=0.5,
@@ -39,11 +47,13 @@ def decode_candidates(class_logits, mask_logits, image_id, score_threshold=0.5,
     if not torch.isfinite(class_logits).all() or not torch.isfinite(mask_logits).all():
         raise ValueError('Non-finite decoder output')
     probabilities = class_logits.float().softmax(-1)[:, :8]
-    scores, labels = probabilities.max(-1)
+    class_probability, labels = probabilities.max(-1)
     masks = mask_logits > 0
     quality = (mask_logits.float().sigmoid() * masks).flatten(1).sum(1)
     areas = masks.flatten(1).sum(1)
-    scores = scores * quality / (areas + 1e-6)
+    # Preserve float32 operation order for historical ranking and threshold ties.
+    scores = class_probability * quality / (areas + 1e-6)
+    mask_quality = quality / (areas + 1e-6)
     candidates = []
     for qid in range(len(scores)):
         if areas[qid] == 0 or scores[qid] < score_threshold:
@@ -53,7 +63,7 @@ def decode_candidates(class_logits, mask_logits, image_id, score_threshold=0.5,
         candidates.append(Candidate(
             f'image-{image_id}-query-{qid:03d}', int(labels[qid]) + 1,
             float(scores[qid]), (int(xs.min()), int(ys.min()), int(xs.max()) + 1,
-                                 int(ys.max()) + 1), mask, qid))
+                                 int(ys.max()) + 1), mask, qid, float(class_probability[qid]), float(mask_quality[qid])))
     return sorted(candidates, key=lambda c: (-c.score, c.candidate_id))[:max_candidates]
 
 
@@ -162,7 +172,7 @@ def export_package(output, image_manifest, predictions, *, candidate_set_id,
                     category_id=candidate.category_id, score=candidate.score,
                     bbox_xyxy=list(candidate.bbox_xyxy), mask_reference=relative,
                     mask_sha256=sha256(output / relative), decoder_query_id=candidate.decoder_query_id,
-                    source_annotation_id=None))
+                    source_annotation_id=None, **candidate.score_components()))
         rows.append(row)
     package = dict(schema_version=3, illustrative_only=illustrative_only,
         candidate_set_id=candidate_set_id, candidate_source='predicted',
