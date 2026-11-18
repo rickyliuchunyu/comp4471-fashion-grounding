@@ -167,8 +167,33 @@ def preview():
    row["preview_page"]=f"page_{page+1:02d}.jpg";row["tile"]=j+1
   canvas.save(output/f"page_{page+1:02d}.jpg",quality=92)
  write_json(output/"sample_manifest.json",sample);print("PREVIEW_READY",len(sample),flush=True)
+def attach_visual_audit():
+ audit=read_json(RUN/"visual_audit.json");by=defaultdict(list)
+ for record in audit["observations"]:by[(record["phase"],record["image_id"])].append(record)
+ cumulative=[];attached=0
+ stages=read_json(RUN/"selected.json")["stages"];stats=read_json(RUN/"metadata_stats.json")
+ for phase in (1,2):
+  delta=RUN/f"fp_added5000_stage{phase}_20261118";out=RUN/f"fp_train{10000+phase*5000}_targeted_v1"
+  rows=read_json(delta/"sampling_sidecar.json")
+  stage=stages[phase-1];modes={k:"broad_initial" for k in stage["broad"]}
+  counts=Counter(g for k in stage["broad"] for g in stats[k[6:]]["hits"])
+  for k in stage["targeted"]:
+   hits=stats[k[6:]]["hits"];score=sum(max(0,GOALS[g]-counts[g])/GOALS[g] for g in hits)
+   modes[k]="quota_deficit" if score>0 else "broad_backfill";counts.update(hits)
+  for row in rows:
+   row["selection_mode"]=modes["train-"+row["source_image_id"]]
+   row["sampling_field_semantics"]="initial broad/targeted slot; selection_mode distinguishes quota choices from broad backfill"
+
+   row["visual_checks"]=[{"basis":"visual_observation","checker_type":"AI_Codex","date":"2026-11-18","image_id":r["image_id"],"source_annotation_id":r["source_annotation_id"],"target_label":r["stratum"],"observation":r["observation"],"assessment":r["assessment"],"evidence_location":"audit/visual_preview/"+r["preview_page"]+"#tile="+str(r["tile"]),"not_human_confirmed":True} for r in by[(phase,row["image_id"])]]
+  for row in rows:
+   require(all(v["source_annotation_id"] in row["source_annotation_ids"] for v in row["visual_checks"]),"visual observation references another instance")
+   attached+=len(row["visual_checks"])
+  write_json(delta/"sampling_sidecar.json",rows);write_json(out/"sampling_sidecar.json",rows)
+  cumulative+=rows;write_json(out/"cumulative_sampling_sidecar.json",cumulative)
+ require(attached==len(audit["observations"]),"orphan visual observation")
 def publish():
  require(read_json(RUN/"visual_audit.json")["status"]=="ai_spot_checked","visual audit not done")
+ attach_visual_audit()
  protection=read_json(RUN/"protection_inputs.json")
  require({str(p) for p in SHARED.glob("fp_language_dev*/image_manifest.json")}<=set(protection),"new dev protection appeared; recheck selection")
  for f,h in protection.items():require(sha256(f)==h,"protected manifest changed")
@@ -192,7 +217,7 @@ def publish():
   shutil.copyfile(PARENT/"preservation_report.json",audit/"original10k_preservation_report.json")
   direct_parent=PARENT if n==1 else SHARED/"fp_train15000_targeted_v1"
   report=read_json(out/"preservation_report.json");checks=read_json(delta/"source_fidelity_report.json")
-  release={"schema_version":3,"illustrative_only":False,"release_id":out.name,"owner":"data_eval","executed_by":"wkq","code_commit":commit,"parent":direct_parent.name,"original_parent":PARENT.name,"parent_manifest_sha256":sha256(direct_parent/"image_manifest.json"),"original_parent_pins":PINS,"source_annotation_sha256":sha256(SOURCE),"mapping_sha256":sha256(out/"mapping_config.json"),"seed":SEED,"phase":n,"images":report["images"],"instances":report["instances"],"groups":9976+n*5000,"new_images":5000,"new_instances":checks["source_masks_pixel_identical"],"cumulative_new_images":n*5000,"sampling":{"broad":2500,"targeted":2500},"technical_status":"passed","coverage_status":"partial_see_distribution_report","human_review_status":"not_exhaustive; AI stratified visual spot check only","formal_freeze":False,"training_performed":False,"model_smoke_performed":False,"new_language_queries":0,"consumer_acceptance":"pending_lcy_incremental_CPU_loader_check","delta_cpu_view":str(delta),"source_fidelity_reports":[f"audit/stage{p}_source_fidelity_report.json" for p in range(1,n+1)],"sidecar_scope":"sampling_sidecar equals direct phase delta; cumulative_sampling_sidecar equals all additions over original10k","request":"https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64e504ed29beb843289931a28349d9da3228d630/docs/handoffs/segmentation/train15000_20000_expansion_request_20261118.md","limitations":["Source cutout attribute is supporting evidence, not human-verified mask quality.","pHash grouping does not prove exhaustive same-product detection.","Small-bag availability insufficient; second-stage quotas are reported separately, not assumed doubled.","Original parent duplicate structure preserved; only new groups are independent."]}
+  release={"schema_version":3,"illustrative_only":False,"release_id":out.name,"owner":"data_eval","executed_by":"wkq","code_commit":commit,"parent":direct_parent.name,"original_parent":PARENT.name,"parent_manifest_sha256":sha256(direct_parent/"image_manifest.json"),"original_parent_pins":PINS,"source_annotation_sha256":sha256(SOURCE),"mapping_sha256":sha256(out/"mapping_config.json"),"seed":SEED,"phase":n,"images":report["images"],"instances":report["instances"],"groups":9976+n*5000,"parent_images":10000+(n-1)*5000,"original_parent_images":10000,"new_groups":5000,"new_images":5000,"new_instances":checks["source_masks_pixel_identical"],"cumulative_new_images":n*5000,"sampling":{"broad":2500,"targeted":2500},"sampling_semantics":"slot budget; priority slots backfill in fixed order once no available deficit can be filled","actual_selection_modes":dict(Counter(r["selection_mode"] for r in read_json(delta/"sampling_sidecar.json"))),"technical_status":"passed_for_new_increment","legacy_bridge_clues":read_json(RUN/"bridge_audit.json")["active_frozen_train_dev_test_exposure_bridge_count"],"legacy_bridge_status":"unconfirmed clues; all involved new candidates quarantined; old splits unchanged","coverage_status":"partial_see_distribution_report","human_review_status":"not_exhaustive; AI stratified visual spot check only","formal_freeze":False,"training_performed":False,"model_smoke_performed":False,"new_language_queries":0,"consumer_acceptance":"pending_lcy_incremental_CPU_loader_check","delta_cpu_view":str(delta),"source_fidelity_reports":[f"audit/stage{p}_source_fidelity_report.json" for p in range(1,n+1)],"sidecar_scope":"sampling_sidecar equals direct phase delta; cumulative_sampling_sidecar equals all additions over original10k","request":"https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64e504ed29beb843289931a28349d9da3228d630/docs/handoffs/segmentation/train15000_20000_expansion_request_20261118.md","limitations":["Source cutout attribute is supporting evidence, not human-verified mask quality.","pHash grouping does not prove exhaustive same-product detection.","Small-bag availability insufficient; second-stage quotas are reported separately, not assumed doubled.","Original parent duplicate structure preserved; only new groups are independent."]}
   write_json(out/"RELEASE.json",release)
   # Already checked copied assets once. Hash metadata/evidence only now.
   sums=read_json(out/"asset_hashes.json")

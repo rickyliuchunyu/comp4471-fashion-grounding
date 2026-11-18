@@ -23,6 +23,10 @@ def bridge_report(audit,protected):
  return report
 def main():
  selection=read_json(RUN/"selected.json");inv=read_json(RUN/"eligible_inventory.json");protected=read_json(RUN/"protected_fingerprints.json")
+ require(sha256(SOURCE)==read_json(PARENT/"RELEASE.json")["source_annotation_sha256"],"official source differs from parent")
+ exposed=read_json(REPO/"docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json")["images"]
+ exposed_keys={"val-"+str(r["image_id"]-10**9-1) for r in exposed}
+ require(len(exposed_keys)==50 and exposed_keys<={x["key"] for x in protected},"all50 exposure protection incomplete")
  audit=read_json(RUN/"duplicate_audit.json");blocked={r["key"] for r in audit["excluded"]};oldkeys={x["key"] for x in protected}
  keys=[k for st in selection["stages"] for k in st["keys"]];selected=set(keys)
  require(len(keys)==10000==len(selected),"selected duplicate/count")
