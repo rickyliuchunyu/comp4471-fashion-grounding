@@ -37,3 +37,5 @@ Grounding 最新：[wyz 小包/大包验收、B1/B2 与 M1 弱标注试训](grou
 11月17日 wyz 已完成两个训练包上的 M1/M2 同预算对照和 B2 开发集选权重，见[结果与交接](grounding/spatial_controlled_20261117.md)。
 
 Grounding 2026-11-18：[50k 候选接入与开发集评价](grounding/u50000_dev_20261118.md)。
+
+Grounding 2026-11-18：[方位训练增量、颜色分组和草稿诊断](grounding/direction_increment_20261118.md)。
