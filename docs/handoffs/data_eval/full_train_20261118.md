@@ -1,6 +1,6 @@
 # Fashionpedia 全量分割训练包交接
 
-wkq / data_eval 已按 [lcy 的全量需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/dd786c74622820ef59ce2f5edc771453c3f25e94/docs/handoffs/segmentation/full_train_request_20261118.md) 发布 `fp_train_full_eligible_v1`，直接父包为 `fp_train10000_targeted_v1`。构建 commit `e4a7021da3d5d1acf56c2a8e043589b5c7a1144c`。新增 32,476 张、32,476 个独立组、113,149 个实例。全包为 **42,476 张、42,452 组、152,848 个实例**。数据方已完成技术检查，当前等待 lcy 的 CPU 接收。
+wkq / data_eval 已按 [lcy 的全量需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/dd786c74622820ef59ce2f5edc771453c3f25e94/docs/handoffs/segmentation/full_train_request_20261118.md) 发布 `fp_train_full_eligible_v1`，直接父包为 `fp_train10000_targeted_v1`。构建 commit `e4a7021da3d5d1acf56c2a8e043589b5c7a1144c`。新增 32,476 张、32,476 个独立组、113,149 个实例。全包为 **42,476 张、42,452 组、152,848 个实例**。lcy 已完成 CPU 增量接收。wkq 已逐组裁决五组历史关联，保留原划分，123 张新增候选继续隔离。见[裁决与 50k 初始化结论](historical_bridge_adjudication_20261118.md)。
 
 ## 来源数量与去重
 
