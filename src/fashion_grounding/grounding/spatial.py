@@ -10,11 +10,12 @@ class SpatialResidual(nn.Module):
         self.geometry=nn.Sequential(nn.Linear(12,64),nn.GELU(),nn.Linear(64,64),nn.GELU())
         self.spatial=nn.Sequential(nn.Linear(dimension+64,128),nn.GELU(),nn.Linear(128,1))
         nn.init.zeros_(self.spatial[-1].weight);nn.init.zeros_(self.spatial[-1].bias)
-    def forward(self,visual,text,geometry):
+    def spatial_scores(self,text,geometry):
         embedded=self.geometry(geometry)
         t=text[:,None,:].expand(*embedded.shape[:-1],self.dimension)
-        spatial=self.spatial(torch.cat((t,embedded),dim=-1)).squeeze(-1)
-        return self.appearance(visual,text)+spatial
+        return self.spatial(torch.cat((t,embedded),dim=-1)).squeeze(-1)
+    def forward(self,visual,text,geometry):
+        return self.appearance(visual,text)+self.spatial_scores(text,geometry)
 
 def make_head(method,dimension):
     if method=="M1":return AppearanceResidual(dimension)

@@ -148,7 +148,7 @@ def gt_selection(dataset,scores):
             correct+=c["source_annotation_id"]==q["target_instance_id"]
     return int(correct)
 
-def fit(config,method,train,dev,out,signature,*,device="cpu",order=None):
+def fit(config,method,train,dev,out,signature,*,device="cpu",order=None,auxiliary_loss=None):
     out.mkdir();seed=config["seed"];torch.manual_seed(seed);np.random.seed(seed);random.seed(seed)
     device=torch.device(device)
     model=make_head(method,signature["dimension"]).to(device);torch.manual_seed(seed+1000)
@@ -169,7 +169,10 @@ def fit(config,method,train,dev,out,signature,*,device="cpu",order=None):
         ids=order[(update-1)*config["batch_size"]:update*config["batch_size"]]
         batch=tuple(value.to(device) for value in make_batch(samples,ids))
         model.train();optimizer.zero_grad(set_to_none=True)
-        loss=ranking_loss(training_scores(model,batch),batch)
+        logits=training_scores(model,batch)
+        loss=ranking_loss(logits,batch)
+        if auxiliary_loss is not None:
+            loss=loss+auxiliary_loss(model,batch,logits,ids)
         require(bool(torch.isfinite(loss)),"nonfinite training loss")
         loss.backward();optimizer.step();loss_sum+=loss.item()
         if update%config["evaluation_interval"]==0 or update==config["updates"]:
