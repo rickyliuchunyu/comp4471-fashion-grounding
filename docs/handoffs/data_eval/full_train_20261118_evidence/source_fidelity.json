@@ -1,0 +1,8 @@
+{
+  "verified_new_images": 32476,
+  "verified_new_masks": 113149,
+  "method": "schema decode of official mask; exact equality with exported COCO RLE decode; area, bbox and candidate mask bytes checked",
+  "source_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+  "delta_annotation_sha256": "f9a0b91f6472e74fdcf4f104ff254bb5ac33a921d4ba1b96292a9f8bfd25c87b",
+  "delta_manifest_sha256": "efb15a9c8bf96f8c983afbf59a376f639135ec6133fb271262bcd7e1ed3a4f4b"
+}

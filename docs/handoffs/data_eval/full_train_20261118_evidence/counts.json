@@ -1,0 +1,10 @@
+{
+  "parent": 10000,
+  "added": 32476,
+  "excluded_jumpsuit": 922,
+  "component_reaches_frozen_or_protected": 1375,
+  "new_component_representative_only": 794,
+  "isolated_reserved_group": 54,
+  "excluded_no_whole": 1,
+  "excluded_invalid_source_mask": 1
+}
