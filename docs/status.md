@@ -1,6 +1,8 @@
 # 当前进度与下一步
 
-本轮计划（2026-11-18）：[50k之后的分割优化方案](handoffs/segmentation/u50000_optimization_plan_20261118.md) **planned，未实现/未启动**。先准备现有10k的75%均匀＋25%弱细类/小目标采样单因素A/B，同一50k模型参数起点、各新增5000updates，末端完整dev；拟每组60分钟硬限。整体AP/AP75不退步并要求针对性提升，当前50k＋0.3交付保持。边界监督另作有条件第二项，不同时改动。
+当前需求（2026-11-18）：[给wkq的15k–20k定向扩充需求](handoffs/segmentation/train15000_20000_expansion_request_20261118.md) **request_ready，待可行性反馈，未发布/验收新包**。保留旧10k，先追加约5k独立官方train图，视余量再到20k；优先小袜/腰带/鞋/头饰/手表及复杂边界，保留广泛样本。旧dev250/test400及全部50张已曝光validation保护；只做新增部分验收，复用旧证据。50k＋0.3交付保持，重采样A/B为备选而非前置，本轮0训练/推理/smoke。
+
+保留备选（2026-11-18，非当前扩充前置）：[50k之后的分割优化方案](handoffs/segmentation/u50000_optimization_plan_20261118.md) **planned，未实现/未启动**。该备选拟在现有10k上做75%均匀＋25%弱细类/小目标采样单因素A/B，同一50k模型参数起点、各新增5000updates，末端完整dev；拟每组60分钟硬限。整体AP/AP75不退步并要求针对性提升，当前50k＋0.3交付保持。边界监督另作有条件第二项，不同时改动。
 
 当前交付（2026-11-18）：[50k＋0.3候选接入说明](handoffs/segmentation/current_candidates.md) **ready_for_downstream_development**。完整dev250的1279个候选及642条查询快照已固定，机器索引和交接说明同步到服务器共享目录；wyz/wkq可立即更新各自候选输入，不必等待分割继续优化。新候选区域特征使用新hash键，相同文本/语言/编码器的文本特征可复用。接收方本人运行与评价未代签；本轮仅交接，0训练/推理/smoke。
 
@@ -30,11 +32,11 @@
 
 ## GitHub 同步快照
 
-11月18日13:15 HKT复核整组分支、全部5个PR和活跃讨论，见[最新快照](handoffs/segmentation/evidence/u50000_optimization_plan_20261118/github_preflight.json)。读取时本分支87335da；wyz两个grounding分支同为64ed727，已发布M2及1000/1149图单seed对照、B2的GT dev选模；其predicted条件仍18k＋0.3，reader/cache与103dcc5无差异。wkq b24515b、main7064ebb及历史full-data分支未变。PR #2/#4仍draft，#5依赖#4，#1/#3关闭未合并。旧PR2正文不作为最新候选或训练状态依据；未重复正文权限失败尝试。
+11月18日15:41 HKT已复核整组远端分支、全部5个PR及活跃讨论，见[最新快照](handoffs/segmentation/evidence/train15000_20000_request_20261118/github_preflight.json)。开工本分支ba93fb1，wkq b24515b、wyz两个grounding分支64ed727、main7064ebb及历史分支均未变，相关交接按commit复用；未见15k/20k分割发布。wkq149图语言增量仍属旧10k，全部50张dev曝光记录纳入新增训练隔离要求。PR2/4仍draft、PR5依赖PR4且未合并，#1/#3关闭未合并。旧PR2正文不作为最新状态依据，未重复已知失败的正文编辑。
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | 开工87335da；50k＋0.3已交付；弱图采样A/B仅计划 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[当前候选](handoffs/segmentation/current_candidates.md)、[优化计划](handoffs/segmentation/u50000_optimization_plan_20261118.md) |
+| lcy / rickyliuchunyu | 开工ba93fb1；50k＋0.3已交付；15k–20k需求已整理，新包与训练尚未执行 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)；[扩充需求](handoffs/segmentation/train15000_20000_expansion_request_20261118.md) |
 | wyz / MayI2004 | `grounding/siglip-baseline-interfaces`与`grounding/spatial-ranker-dev` @ `64ed727` | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)；[M2受控对照][wyz-current]；旧候选18k，新50k消费未声明 |
 | wkq / LE-brawl | `data-eval/p3-baseline-evaluation@b24515b`：保留642条审核dev，新增149训练图/39挑战图的语言草稿，未新增分割监督；完整train未发布 | [PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)；[最新交接][wkq-reviewed-dev]；原#1/#3关闭未合并 |
 
@@ -69,9 +71,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 准备弱细类/小目标图像重采样的短A/B，按具体反馈维护已交付候选 | 50k错误分析、10k数据、旧验证和候选均复用；本轮只固定方案 | 新采样器/索引及关闭启动的配置尚未实现，不开始训练；不接管排序 | [优化计划](handoffs/segmentation/u50000_optimization_plan_20261118.md)、[当前候选](handoffs/segmentation/current_candidates.md) |
+| lcy | 交付15k–20k分割扩充需求，待真实新包后只做增量接收 | 旧10k固定hash、软目标、复杂边界证据、保留/隔离要求已写；当前50k候选继续使用 | wkq可用量/发布尚待反馈；不先运行重采样A/B、不启动训练、不接管数据构建/排序 | [扩充需求](handoffs/segmentation/train15000_20000_expansion_request_20261118.md)、[当前候选](handoffs/segmentation/current_candidates.md) |
 | wyz（A）/ grounding | 按本人新交接推进剩余空间对照与监督质量工作；可接入50k候选 | M2/四组单seed对照、B2选模及原六项复算已发布，分支64ed727 | 其他种子及独立test仍缺；新50k消费尚未声明，lcy不代做 | [最新交接][wyz-current]、PR #5 |
-| wkq（B）/ data_eval | 按本人最新交接继续新增语言数据审核与评价维护 | 1149图/3296弱训练描述及独立39图困难dev已发布；主642查询不变，新50k候选可用于后续predicted评价 | 新39图dev待审核，原9组pending保留；完整分割包需求保留历史，不阻塞当前10k准备 | [最新交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b24515bcda576fe97b354ca9b48e647079831df3/docs/handoffs/data_eval/language_targeted_20261117.md) |
+| wkq（B）/ data_eval | 按本人最新交接推进语言审核与评价；lcy已另发布15k–20k分割需求供评估，未代签接单 | 1149语言训练包及dev39已发布；原10k分割可复用，新需求已列采集与增量隔离要求 | 新分割可用量、交付版本及安排待wkq本人反馈；原语言待审项保持 | [wkq交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b24515bcda576fe97b354ca9b48e647079831df3/docs/handoffs/data_eval/language_targeted_20261117.md)、[lcy需求](handoffs/segmentation/train15000_20000_expansion_request_20261118.md) |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
