@@ -88,7 +88,8 @@ def merge(parent,delta,out,phase):
   c=read_json(p/"annotations_coco.json")
   return {"image_ids":[i["id"] for i in c["images"]],"annotation_ids":[a["id"] for a in c["annotations"]]}
  old=members(PARENT);par=members(parent);new=members(delta);allmembers=members(out)
- cumulative={key:[x for x in allmembers[key] if x not in set(old[key])] for key in old}
+ oldsets={key:set(values) for key,values in old.items()}
+ cumulative={key:[x for x in allmembers[key] if x not in oldsets[key]] for key in old}
  for name,obj in [("old10k_membership",old),("parent_membership",par),("added_subset_membership",new),("cumulative_added_membership",cumulative),("combined_membership",allmembers)]:write_json(out/(name+".json"),obj)
  side=read_json(delta/"sampling_sidecar.json");write_json(out/"sampling_sidecar.json",side)
  allside=(read_json(parent/"cumulative_sampling_sidecar.json") if phase==2 else [])+side
