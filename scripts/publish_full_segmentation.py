@@ -57,11 +57,12 @@ def run():
     included={r["source_annotation_id"]:r for r in visual}
     observations={k:[included[i] for i in ids if i in included] for k,ids in case_ids.items()}
     boundary={"source_cutout":"See coverage source_cutout_all/shoe/bag; attribute 308","new_geometry":labels,"geometry_basis":"OpenCV RETR_CCOMP on unscaled native foreground; columns image id/project ann id/source category/foreground components/holes. Older 10k pixel audit reused; old topology unknown.","prior_AI_review_sha256":sha256(prior_visual),"prior_AI_images_inspected":36,"retained_AI_images":len(visual),"retained_AI_shoe_images":sum(r["source_category"]=="shoe" for r in visual),"retained_AI_bag_images":sum(r["source_category"]=="bag, wallet" for r in visual),"AI_example_hits":observations,"human_checks_this_run":0,"interpretation":"Documented visible evidence only. Open toe does not establish cutout manufacture; multiple components do not establish occlusion. Remaining semantic statuses unknown. Prior 10k qualitative observations in referenced parent visual audit."}
+    boundary["new_targeted_AI_review"]=read_json(RUN/"visual_observations.json")
     write_json(RUN/"coverage.json",reports);write_json(RUN/"boundary.json",boundary)
     for path,digest in PINS.items():require(sha256(PARENT/path)==digest,"parent changed")
     for p,h in read_json(STAGED/"protection_inputs.json").items():require(sha256(p)==h,"protected input changed")
     audit=FULL/"audit";audit.mkdir(exist_ok=True)
-    for f in ["ledger.json","counts.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","topology_rows.json","download_provenance.json","eligible.json"]:
+    for f in ["ledger.json","counts.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","visual_sample.json","visual_observations.json","shoe_hole.jpg","bag_sparse.jpg","separated.jpg","topology_rows.json","download_provenance.json","eligible.json"]:
         shutil.copyfile(RUN/f,audit/f)
     for f in ["protection_inputs.json","protected_fingerprints.json","input_preflight.json"]:shutil.copyfile(STAGED/f,audit/f)
     shutil.copyfile(PARENT/"audit/visual_audit.json",audit/"parent_visual_audit.json")
