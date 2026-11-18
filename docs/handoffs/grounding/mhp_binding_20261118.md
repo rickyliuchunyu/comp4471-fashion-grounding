@@ -39,6 +39,6 @@ M2-mixed-CE 沿用均匀采样和普通交叉熵，可与 M2-FP 看同预算的�
 
 低至 3 像素的候选裁剪需要显式声明 RGB 的通道布局。原有无歧义裁剪的缓存保留，有歧义时采用新键并重新编码。MHP 草稿向评估器显式开启 draft 参数，默认正式接口仍要求审核通过。
 
-运行目录 `/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/evaluation-resume`。训练、缓存和评估使用 CPU，GPU 由其他任务占用。执行配置、权重哈希、缓存校验和指标详见 [实验证据](mhp_binding_20261118_evidence.json)。预测及评价在四个条件子目录内。复现先分别运行 `scripts/prepare_mhp_binding_features.py --phase train/dev`，再运行 `scripts/run_mhp_binding_study.py`，配置为 `configs/grounding_mhp_binding_20261118.json`。输出指定新目录。
+运行目录 `/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/evaluation-resume`。原训练日志及权重保留在同一运行根目录的 `experiment/`。MHP 官方 COCO 图像条目缺少来源字段，首次评估因此停在 MHP 阶段。修正后按固定图像 ID、文件名和尺寸核验，只恢复 MHP 评分，并按查询、候选、标注、预测哈希复核原 Fashionpedia 评分。训练、缓存和评估使用 CPU，GPU 由其他任务占用。执行配置、权重哈希、缓存校验和指标详见 [实验证据](mhp_binding_20261118_evidence.json)。预测及评价在四个条件子目录内。复现先分别运行 `scripts/prepare_mhp_binding_features.py --phase train/dev`，再运行 `scripts/run_mhp_binding_study.py`，配置为 `configs/grounding_mhp_binding_20261118.json`。输出指定新目录。
 
 数据版本和人工状态见 [wkh 的 MHP v2 交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b82fc99/docs/handoffs/data_eval/mhp2_binding_expansion_20261118.md)。
