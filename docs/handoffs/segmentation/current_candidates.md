@@ -34,7 +34,9 @@
 
 ## GUI 与运行证据
 
-[打开本地工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集读取同一份已选候选包。「我的图片」通过项目服务器 CPU 载入同一 checkpoint 及经摘要校验的解码配置。两个入口的默认阈值均为 0.3，前端显示服务实际返回的更新步数。浏览器上传入口使用一张 dev250 以外的公开项目训练样例作功能检查，结果来自新的 CPU 前向，不参与 dev 覆盖和 AP。[GUI 验收](evidence/u28318_candidates_20261118/gui_receipt.json)
+[打开本地工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集直接显示已选候选包。「我的图片」在项目服务器载入同一权重和解码配置，默认选择自动模式。共享 GPU 空闲时使用 CUDA，忙碌或不可用时使用 CPU 并显示原因。也可选择「仅 GPU」或「仅 CPU」。「仅 GPU」遇忙会提示稍后重试。结果栏显示实际设备，两个入口的默认阈值均为 0.3。
+
+浏览器验收使用同一张开发集以外的公开样例（Fashionpedia 4993，1024 × 680）。自动模式实际使用 NVIDIA GeForce RTX 3090，一次上传返回 HTTP 200，显示 3 个实例及 28,318 步版本。共享锁竞争、回退和释放使用独立临时锁验证。此前的 CPU 上传及缓存版本记录见 [GUI 验收](evidence/u28318_candidates_20261118/gui_receipt.json)。
 
 首次部署时，将已选目录中的 `candidates_predicted.json`、`image_manifest.json`、`images/`、`masks/` 复制至 `outputs/segmentation_gui/releases/u28318-dev250-20261118-r01/`。本机 Python 环境及 SSH 配置沿用[工作台设置](gui_50k_20261118.md)。
 
