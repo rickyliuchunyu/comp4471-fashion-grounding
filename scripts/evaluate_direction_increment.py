@@ -44,7 +44,7 @@ def scores_for(dataset, parent, trained, lexicon, weight):
     return {"B2": b2, "M2-1149": old, "M2-1235": new, "M2-1149-prior": old_prior, "M2-1235-prior": new_prior}
 
 
-def draft_results(dataset, scores, directory, paired):
+def draft_results(dataset, scores, directory, paired, *, scope="unreviewed-dev agreement on GT candidates"):
     # Produce selections for all methods before reading the draft target label.
     selections = {}
     for label, values in scores.items():
@@ -91,7 +91,7 @@ def draft_results(dataset, scores, directory, paired):
             methods[label] = stats
         summary[name] = {"queries": len(group), "images": len(images), "methods": methods}
     directory.mkdir()
-    write_json(directory / "draft_diagnostic.json", {"scope": "unreviewed-dev agreement on GT candidates",
+    write_json(directory / "draft_diagnostic.json", {"scope": scope,
                "candidate_set_id": pack.package["candidate_set_id"], "hashes": dataset["hashes"], "rows": rows, "summary": summary})
     return summary
 

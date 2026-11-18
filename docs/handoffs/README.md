@@ -39,3 +39,5 @@ Grounding 最新：[wyz 小包/大包验收、B1/B2 与 M1 弱标注试训](grou
 Grounding 2026-11-18：[50k 候选接入与开发集评价](grounding/u50000_dev_20261118.md)。
 
 Grounding 2026-11-18：[方位训练增量、颜色分组和草稿诊断](grounding/direction_increment_20261118.md)。
+
+Grounding 2026-11-18：[方位监督占比和空间分支对照](grounding/spatial_supervision_20261118.md)。
