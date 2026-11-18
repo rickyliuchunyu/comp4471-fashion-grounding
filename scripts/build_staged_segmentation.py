@@ -135,9 +135,9 @@ def build():
    for tax in ("project_categories","source_categories"):
     for cid,row in d[tax].items():w.writerow({"subset":subset,"taxonomy":tax,"category_id":cid,**{k:row[k] for k in fields[3:]}})
  print("BUILD_COMPLETE_PENDING_VISUAL",flush=True)
-def preview():
- output=RUN/"visual_preview";output.mkdir(exist_ok=True);sample=[]
- for phase in (1,2):
+def preview(phases=(1,2),directory="visual_preview"):
+ output=RUN/directory;output.mkdir(exist_ok=True);sample=[]
+ for phase in phases:
   delta=RUN/f"fp_added5000_stage{phase}_20261118";side=read_json(delta/"sampling_sidecar.json");co=read_json(delta/"annotations_coco.json");anns={a["source_annotation_id"]:a for a in co["annotations"]};ims={i["id"]:i for i in co["images"]}
   rng=random.Random(SEED+phase)
   for goal in GOALS:
