@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "all": {
+      "rows": 296,
+      "images": 74,
+      "methods": {
+        "B2": {
+          "queries": 276,
+          "both_languages_and_targets": 61,
+          "paired_by_language": {
+            "zh": 61,
+            "en": 67
+          }
+        },
+        "M2": {
+          "queries": 129,
+          "both_languages_and_targets": 0,
+          "paired_by_language": {
+            "zh": 0,
+            "en": 2
+          }
+        },
+        "hybrid": {
+          "queries": 272,
+          "both_languages_and_targets": 60,
+          "paired_by_language": {
+            "zh": 62,
+            "en": 64
+          }
+        }
+      },
+      "corrected": 143,
+      "regressed": 0
+    },
+    "shoe": {
+      "rows": 244,
+      "images": 61,
+      "methods": {
+        "B2": {
+          "queries": 236,
+          "both_languages_and_targets": 55,
+          "paired_by_language": {
+            "zh": 55,
+            "en": 59
+          }
+        },
+        "M2": {
+          "queries": 115,
+          "both_languages_and_targets": 0,
+          "paired_by_language": {
+            "zh": 0,
+            "en": 2
+          }
+        },
+        "hybrid": {
+          "queries": 237,
+          "both_languages_and_targets": 55,
+          "paired_by_language": {
+            "zh": 56,
+            "en": 59
+          }
+        }
+      },
+      "corrected": 122,
+      "regressed": 0
+    },
+    "other": {
+      "rows": 52,
+      "images": 13,
+      "methods": {
+        "B2": {
+          "queries": 40,
+          "both_languages_and_targets": 6,
+          "paired_by_language": {
+            "zh": 6,
+            "en": 8
+          }
+        },
+        "M2": {
+          "queries": 14,
+          "both_languages_and_targets": 0,
+          "paired_by_language": {
+            "zh": 0,
+            "en": 0
+          }
+        },
+        "hybrid": {
+          "queries": 35,
+          "both_languages_and_targets": 5,
+          "paired_by_language": {
+            "zh": 6,
+            "en": 5
+          }
+        }
+      },
+      "corrected": 21,
+      "regressed": 0
+    }
+  },
+  "model": "3a28bfe0dad397b68595c70aafa2ef4a123d835d159ddae3948d51503902f7c8",
+  "queries": "fc15fe2beeec95d4a962baebed43e7a842be6ff9b1c6dd77b619da78cc7054c7",
+  "candidates": "c094f7d1ccd3f43f18a83c225c93b30ee26ac79a9b1ad467f5339679a01420ea",
+  "weight": 2
+}
