@@ -1,0 +1,8 @@
+{
+  "mhp2_binding_dev_v2/queries_draft.jsonl": {
+    "queries": 1036,
+    "query_images": 200,
+    "image_and_masks_decoded": 200,
+    "draft": true
+  }
+}

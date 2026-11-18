@@ -1,0 +1,36 @@
+{
+  "fp_mhp2_binding_train_v2/queries_machine_train.jsonl": {
+    "queries": 5604,
+    "query_images": 1587,
+    "image_and_masks_decoded": 8,
+    "draft": true
+  },
+  "fp_mhp2_binding_dev_v2/queries_accepted.jsonl": {
+    "queries": 642,
+    "query_images": 246,
+    "image_and_masks_decoded": 8,
+    "draft": false
+  },
+  "fp_mhp2_binding_dev_v2/queries_draft.jsonl": {
+    "queries": 1678,
+    "query_images": 446,
+    "image_and_masks_decoded": 8,
+    "draft": true
+  },
+  "mhp2_binding_train_v2/queries_machine_train.jsonl": {
+    "queries": 1692,
+    "query_images": 320,
+    "image_and_masks_decoded": 8,
+    "draft": true
+  },
+  "mhp2_binding_dev_v2/queries_draft.jsonl": {
+    "queries": 1036,
+    "query_images": 200,
+    "image_and_masks_decoded": 8,
+    "draft": true
+  },
+  "training_input": {
+    "entry": "weak_trial.context + controlled.supervised_samples",
+    "unique_target_indices_resolved": 5604
+  }
+}

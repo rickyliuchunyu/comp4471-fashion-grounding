@@ -1,0 +1,61 @@
+{
+  "mhp2_binding_train_v2": {
+    "RELEASE.json": "588550d99fac9e5afec42b1e26cee78a63a404367e7acf4447704ff96fa8786f",
+    "annotation_notes.json": "1f1308aaf14c35d2a6cb51b784ef7745c7d476de39c803ca267bec0b1ff131c2",
+    "annotations_coco.json": "1183dfc3ae34d023ee0c0f5fa4f62a756a19740e553847be23cb72aa3144c13a",
+    "candidates_gt.json": "9097277fa0ba0acfb8c5251f3223b45929c44edfa4267b8155ba16338fb189eb",
+    "image_manifest.json": "4332941b05ba710883c87a7d2c636941a3dfba4364c9dff89543e27ff7ac1f78",
+    "mapping_config.json": "1f0d1880f4e87efca6738beb4139f8d69e9d02fa1f761c7daacbbcbf6b7915cb",
+    "queries_accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "queries_draft.jsonl": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+    "queries_increment.jsonl": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+    "queries_machine_train.jsonl": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+    "selected_pairs.json": "a2b9cf4e10a02e450a40dbd46be603578f589bb74eed8d6a8b97505e98825b21",
+    "validation_report.json": "492d888fa7f9bd347553089f8c07368f0a19b237addf7067d3e834afd2dde2c1"
+  },
+  "mhp2_binding_dev_v2": {
+    "RELEASE.json": "0e5b323b7d91a8d4d4db9b5a64342f7293d76786aa4718ea371bcd0ab5fe95d0",
+    "annotation_notes.json": "b5941811ab10ecf8ac0ced65fd16663c19f3ca663570427674e7bbe35839d39a",
+    "annotations_coco.json": "3b2f1c809b9c5faf51ab36fc46cfbe346781ca173ea641482636d36cae1e6945",
+    "candidates_gt.json": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff",
+    "image_manifest.json": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78",
+    "mapping_config.json": "1f0d1880f4e87efca6738beb4139f8d69e9d02fa1f761c7daacbbcbf6b7915cb",
+    "queries_accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "queries_draft.jsonl": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+    "queries_increment.jsonl": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+    "queries_machine_train.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "selected_pairs.json": "7f1b9390382533c974a3f82245c073a2d498f8f777e8437b9c9b393f278bcc4f",
+    "validation_report.json": "d0a7d36fb460e84d6d983b045bb903e1efae0b8d51eb1ece6ba9195a93f2ef46"
+  },
+  "fp_mhp2_binding_train_v2": {
+    "RELEASE.json": "a3449241d1d4419706662717856d74e5da1d707db3d37598629712366ed7417f",
+    "annotation_notes.json": "66a735040e16fdc56d69daa56725a7951186af5bdd6eb9d0079e3df1219eb746",
+    "annotations_coco.json": "0be0799088a7debca9cad56d79e72fddb554df219a294f1ce0ea10a74bd59f40",
+    "candidates_gt.json": "07e01f047e30584e23ef3fc3029c796e2314a6608ec1b847c7ce3a79bddb532c",
+    "image_manifest.json": "b5336423a288fd20c2df5c1a0f1c9ace21c2658e8a6a806117e754b9dea43d69",
+    "mapping_config.json": "69676da6dee6f858717f0f69bf86faba26885728c0e633237322c67fac90e07d",
+    "queries_accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "queries_draft.jsonl": "38a7409bde3007aa544059445794b806b4f216fe7402ae2e4a8caccddbd2e3a2",
+    "queries_machine_train.jsonl": "38a7409bde3007aa544059445794b806b4f216fe7402ae2e4a8caccddbd2e3a2",
+    "validation_report.json": "57804421b8f05785edabb2390ead627ec5ec38f5fc1c5c221d0f344778e61c1a"
+  },
+  "fp_mhp2_binding_dev_v2": {
+    "RELEASE.json": "ed31ea2e0c7fe01257966a5cee75396951a4e3a1e2728f47dd3614172a81d6c0",
+    "annotation_notes.json": "66a735040e16fdc56d69daa56725a7951186af5bdd6eb9d0079e3df1219eb746",
+    "annotations_coco.json": "b0fb1e559413a371da09ca0f9c4fa1b4d58b21da4e0bf6db4bc8a2599d46ac49",
+    "candidates_gt.json": "e51c12dd36b8bb1baa6242007db17e67cae6cf0c80b4a0f124bd06d21f7ed991",
+    "image_manifest.json": "eaac23367242721bb039f3189493cdf411bb6afc8a35da241a9d5719ea05c44a",
+    "mapping_config.json": "6320d0b4dccc00e62648828f12237e2c11d15f8edf9cd29c453fbaf81a209d86",
+    "queries_accepted.jsonl": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "queries_draft.jsonl": "7587e9ebc31475d5c87be15abfc1e06fced43a1a14a379b48a1dcd18b743eb30",
+    "queries_machine_train.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation_report.json": "a47966d79dafe640d16bb2bf4a8cd7bc60249d473335a9c7f58fc9a41d09309a"
+  },
+  "wkq-mhp2-binding-dev-lcy50k-t03-v2": {
+    "candidates_predicted.json": "44ec469838a365307c425862520aa612bc32c9b9bd17bf1dd3f399cf8ac56414",
+    "coverage.json": "1a9b993d5daa1a9331c225d978b0248bf5ce220fad571c2ba2c8b6e25cd4f58b",
+    "decoder_settings.json": "0d2aa6d32a7b2f0010bce36e1aec5dbaacf814d5d4faef20015fa2328411372f",
+    "image_manifest.json": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78",
+    "matched_pairs.json": "ac4be895f653fca45a0d71381d79c0acdeeb653efd28a1b263b2e71bd43af750"
+  }
+}

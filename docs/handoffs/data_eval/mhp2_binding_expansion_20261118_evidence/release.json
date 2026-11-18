@@ -1,0 +1,114 @@
+{
+  "mhp2_binding_train_v2": {
+    "images": 320,
+    "instances": 2354,
+    "bilingual_rows": 1692,
+    "semantic_groups": 846,
+    "color_pairs": 103,
+    "direction_pairs": 320,
+    "categories": {
+      "skirt": 5,
+      "dress": 13,
+      "bag": 16,
+      "pants": 95,
+      "top": 102,
+      "outerwear": 89
+    },
+    "human_accepted": 0
+  },
+  "mhp2_binding_dev_v2": {
+    "images": 200,
+    "instances": 1484,
+    "bilingual_rows": 1036,
+    "semantic_groups": 518,
+    "color_pairs": 59,
+    "direction_pairs": 200,
+    "categories": {
+      "dress": 7,
+      "bag": 4,
+      "pants": 58,
+      "top": 69,
+      "skirt": 2,
+      "outerwear": 60
+    },
+    "human_accepted": 0
+  },
+  "fp_mhp2_binding_dev_v2": {
+    "sources": [
+      {
+        "package": "fp_language_dev250_reviewed_v1",
+        "images": 250,
+        "query_images": 246,
+        "queries": 642,
+        "query_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+        "image_manifest_sha256": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+        "candidates_sha256": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef"
+      },
+      {
+        "package": "mhp2_binding_dev_v2",
+        "images": 200,
+        "query_images": 200,
+        "queries": 1036,
+        "query_sha256": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+        "image_manifest_sha256": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78",
+        "candidates_sha256": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff"
+      }
+    ],
+    "images": 450,
+    "query_images": 446,
+    "queries": 1678,
+    "accepted": 642,
+    "dev_strata_separate": true
+  },
+  "fp_mhp2_binding_train_v2": {
+    "sources": [
+      {
+        "package": "fp_language_direction_pairs_train_v1",
+        "images": 1235,
+        "query_images": 1234,
+        "queries": 3640,
+        "query_sha256": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+        "image_manifest_sha256": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb",
+        "candidates_sha256": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a"
+      },
+      {
+        "package": "mhp2_train100_binding_v1",
+        "images": 100,
+        "query_images": 33,
+        "queries": 272,
+        "query_sha256": "b46ee6484c15dea81576a0e7bf6658a4d46ade3e291aced7505c7e9f5b55dc77",
+        "image_manifest_sha256": "74b6725d991aacc76cc133f28dded8ed5f50cae801b1f920e94a4914f699add0",
+        "candidates_sha256": "bf686799e33bd2c63872b956a72357ffe5c35271ccf73b71a2863585d7711870"
+      },
+      {
+        "package": "mhp2_binding_train_v2",
+        "images": 320,
+        "query_images": 320,
+        "queries": 1692,
+        "query_sha256": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+        "image_manifest_sha256": "4332941b05ba710883c87a7d2c636941a3dfba4364c9dff89543e27ff7ac1f78",
+        "candidates_sha256": "9097277fa0ba0acfb8c5251f3223b45929c44edfa4267b8155ba16338fb189eb"
+      }
+    ],
+    "images": 1655,
+    "query_images": 1587,
+    "queries": 5604,
+    "accepted": 0,
+    "dev_strata_separate": true
+  },
+  "prediction_coverage": {
+    "counts": {
+      "direction_1": 57,
+      "color_1": 13,
+      "direction_2": 130,
+      "color_2": 42,
+      "direction_0": 13,
+      "color_0": 4
+    },
+    "images": 200,
+    "candidates": 1891,
+    "zero_images": 0,
+    "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+    "candidate_sha256": "44ec469838a365307c425862520aa612bc32c9b9bd17bf1dd3f399cf8ac56414"
+  }
+}
