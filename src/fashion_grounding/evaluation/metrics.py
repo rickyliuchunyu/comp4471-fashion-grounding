@@ -4,7 +4,7 @@ from fashion_grounding.data.schema import require,unique_index
 from fashion_grounding.data.candidates import finite
 from .matching import associate,mask_iou
 
-def evaluate(queries, predictions, candidate_package, candidate_masks, annotations, gt_masks):
+def evaluate(queries, predictions, candidate_package, candidate_masks, annotations, gt_masks, *, allow_draft=False):
     require(bool(queries),"empty evaluation query set")
     qs=unique_index(queries,"query_id");ps=unique_index(predictions,"query_id")
     require(set(qs)==set(ps),"missing or unknown predictions: incomplete run")
@@ -25,7 +25,8 @@ def evaluate(queries, predictions, candidate_package, candidate_masks, annotatio
         else:matches[iid]={}
     rows=[]
     for qid,q in qs.items():
-        require(q["review_status"]=="accepted","unreviewed query")
+        require(q["review_status"] == ("needs_revision" if allow_draft else "accepted"),
+                "expected an unreviewed development query" if allow_draft else "unreviewed query")
         require(q["target_instance_id"] in anns,"missing target")
         target=anns[q["target_instance_id"]]
         require(target["image_id"]==q["image_id"] and not target["iscrowd"],"target image/crowd")

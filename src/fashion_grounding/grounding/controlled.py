@@ -42,6 +42,7 @@ def manifest_separation(paths):
 
 class FeatureBuilder:
     def __init__(self,config,out):
+        self.candidate_features = lambda image, candidates: geometry_features(candidates, image.size)
         self.config=config;self.out=out;self.encoder=None
         self.signature=read_json(config["previous_inference"]+"/run_metadata.json")["encoder"]
         require(self.signature["device"]=="cpu","CPU reference required")
@@ -86,7 +87,7 @@ class FeatureBuilder:
             self.encoded_texts+=len(group)
         by_image={};ids=list(dict.fromkeys(q.image_id for q in queries))
         for index,iid in enumerate(ids,1):
-            image,cs=pack.load(iid);geometry=geometry_features(cs,image.size)
+            image,cs=pack.load(iid);geometry=self.candidate_features(image,cs)
             spec=visual_spec(pack,iid,self.signature)
             visual=self.get(spec,len(cs)) if cs else np.empty((0,self.signature["dimension"]),np.float32)
             if visual is None:
@@ -127,7 +128,7 @@ def training_order(samples,seed,updates,batch_size):
 
 def make_batch(samples,indices):
     batch=padded_batch(samples,indices)
-    geometry=torch.zeros(*batch[0].shape[:2],12)
+    geometry=torch.zeros(*batch[0].shape[:2],samples[indices[0]]["geometry"].shape[-1])
     for b,i in enumerate(indices):geometry[b,:len(samples[i]["geometry"])]=torch.from_numpy(samples[i]["geometry"])
     return (*batch,geometry)
 
@@ -209,7 +210,7 @@ def fit(config,method,train,dev,out,signature,*,device="cpu",order=None,auxiliar
     write_json(out/"run_metadata.json",info)
     return selected,info
 
-def publish_scores(dataset,method,label,scores,out,config):
+def publish_scores(dataset,method,label,scores,out,config,*,draft=False):
     from scripts.evaluate_predictions import evaluate_files
     # scripts is a namespace package when the repository root is on sys.path.
     folder=out/dataset["pack"].package["candidate_source"]
@@ -222,7 +223,7 @@ def publish_scores(dataset,method,label,scores,out,config):
     pred.write_text("".join(json.dumps(r,ensure_ascii=False,allow_nan=False)+"\n" for r in rows))
     (folder/(label+"-scores.jsonl")).write_text("".join(json.dumps({"query_id":e["query"].query_id,
         "candidate_ids":[c.candidate_id for c in e["candidates"]],"scores":None if s is None else s.tolist()})+"\n" for e,s in zip(dataset["examples"],scores)))
-    result=evaluate_files(Path(dataset["query_path"]),pred,dataset["pack"].path,Path(dataset["annotations_path"]),folder/(label+"-evaluation.json"))
+    result=evaluate_files(Path(dataset["query_path"]),pred,dataset["pack"].path,Path(dataset["annotations_path"]),folder/(label+"-evaluation.json"),allow_draft=draft)
     return result
 
 def run(config):

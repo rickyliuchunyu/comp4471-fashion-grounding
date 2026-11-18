@@ -2,6 +2,7 @@
 import torch
 from torch import nn
 from .heads import AppearanceResidual
+from .binding import BindingResidual
 
 class SpatialResidual(nn.Module):
     def __init__(self,dimension):
@@ -20,10 +21,11 @@ class SpatialResidual(nn.Module):
 def make_head(method,dimension):
     if method=="M1":return AppearanceResidual(dimension)
     if method=="M2":return SpatialResidual(dimension)
+    if method=="M2-binding":return BindingResidual(dimension)
     raise ValueError("unknown learned ranker")
 
 def residual(model,visual,text,geometry):
-    return model(visual,text,geometry) if isinstance(model,SpatialResidual) else model(visual,text)
+    return model(visual,text,geometry) if isinstance(model,(SpatialResidual,BindingResidual)) else model(visual,text)
 
 def score_features(model,visual,text,geometry,base):
     """Inference boundary: only frozen features and candidate geometry, never labels."""
