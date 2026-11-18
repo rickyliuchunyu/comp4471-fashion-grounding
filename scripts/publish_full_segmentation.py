@@ -76,7 +76,18 @@ def run():
     for path,digest in PINS.items():require(sha256(PARENT/path)==digest,"parent changed")
     for p,h in read_json(STAGED/"protection_inputs.json").items():require(sha256(p)==h,"protected input changed")
     audit=FULL/"audit";audit.mkdir(exist_ok=True)
-    for f in ["ledger.json","counts.json","frozen_bridge_clues.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","visual_sample.json","visual_observations.json","shoe_hole.jpg","bag_sparse.jpg","separated.jpg","topology_rows.json","download_provenance.json","eligible.json"]:
+    from PIL import Image
+    modes=Counter()
+    for im in read_json(DELTA/"image_manifest.json")["images"]:
+        with Image.open(DELTA/im["file_name"]) as image:
+            modes[image.mode]+=1
+            require(image.size==(im["width"],im["height"]),"original size")
+            if image.mode!="RGB":
+                rgb=image.convert("RGB")
+                rgb.load()
+                require(rgb.mode=="RGB" and rgb.size==image.size,"RGB conversion")
+    write_json(RUN/"image_modes.json",{"original_modes":dict(modes),"non_rgb_verified_with_loader_conversion":sum(v for k,v in modes.items() if k!="RGB")})
+    for f in ["image_modes.json","ledger.json","counts.json","frozen_bridge_clues.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","visual_sample.json","visual_observations.json","shoe_hole.jpg","bag_sparse.jpg","separated.jpg","topology_rows.json","download_provenance.json","eligible.json"]:
         shutil.copyfile(RUN/f,audit/f)
     for f in ["protection_inputs.json","protected_fingerprints.json","input_preflight.json"]:shutil.copyfile(STAGED/f,audit/f)
     shutil.copyfile(PARENT/"audit/visual_audit.json",audit/"parent_visual_audit.json")
