@@ -144,6 +144,11 @@ def preview():
    for row in available[:2]:
     evidence=next(t for t in row["target_evidence"] if t["target_label"]==goal);a=anns[evidence["source_annotation_id"]];im=ims[row["image_id"]]
     sample.append({"phase":phase,"stratum":goal,"image_id":row["image_id"],"source_annotation_id":a["source_annotation_id"],"project_annotation_id":a["id"],"file_name":im["file_name"],"area":a["area"],"source_category":a["source_category_name"],"delta":str(delta)})
+  proxy_rows=[r for r in side if any(e["basis"]=="mask_geometry_proxy" for e in r["boundary_evidence"])]
+  rng.shuffle(proxy_rows)
+  for row in proxy_rows[:2]:
+   e=next(e for e in row["boundary_evidence"] if e["basis"]=="mask_geometry_proxy");a=anns[e["source_annotation_id"]];im=ims[row["image_id"]]
+   sample.append({"phase":phase,"stratum":"geometry_proxy","image_id":row["image_id"],"source_annotation_id":a["source_annotation_id"],"project_annotation_id":a["id"],"file_name":im["file_name"],"area":a["area"],"source_category":a["source_category_name"],"delta":str(delta)})
  # Each tile: full original with target box + enlarged target overlay; no test/old images.
  for page in range((len(sample)+3)//4):
   canvas=Image.new("RGB",(1600,1200),"white");draw=ImageDraw.Draw(canvas)
@@ -157,7 +162,7 @@ def preview():
    x=(j%2)*800;y=(j//2)*600;draw.text((x+8,y+5),f"{page*4+j+1}: phase{row['phase']} {row['stratum']} im{row['image_id']} ann{a['source_annotation_id']}",fill="black")
    draw.text((x+8,y+22),f"{row['source_category']} / area={a['area']} / red overlay is original source mask",fill="black")
    for off,pic in [(0,origin),(400,cropim)]:
-    pic.thumbnail((390,550));canvas.paste(pic,(x+off+(400-pic.width)//2,y+45+(550-pic.height)//2))
+    pic=ImageOps.contain(pic,(390,550));canvas.paste(pic,(x+off+(400-pic.width)//2,y+45+(550-pic.height)//2))
    row["preview_page"]=f"page_{page+1:02d}.jpg";row["tile"]=j+1
   canvas.save(output/f"page_{page+1:02d}.jpg",quality=92)
  write_json(output/"sample_manifest.json",sample);print("PREVIEW_READY",len(sample),flush=True)
@@ -166,13 +171,14 @@ def publish():
  for f,h in read_json(RUN/"protection_inputs.json").items():require(sha256(f)==h,"protected manifest changed")
  for f,h in PINS.items():require(sha256(PARENT/f)==h,"parent changed")
  commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=REPO,text=True).strip()
- auditnames=["feasibility_metadata.json","feasibility_checked.json","duplicate_audit.json","protection_inputs.json","distribution_report.json","distribution_summary.csv","download_provenance.json","visual_audit.json","independent_checks.json","focused_tests.txt"]
+ auditnames=["input_preflight.json","feasibility_metadata.json","feasibility_checked.json","duplicate_audit.json","protected_fingerprints.json","protection_inputs.json","distribution_report.json","distribution_summary.csv","download_provenance.json","visual_audit.json","independent_checks.json","focused_tests.txt"]
  releases=[]
  for n in (1,2):
   out=RUN/f"fp_train{10000+n*5000}_targeted_v1";delta=RUN/f"fp_added5000_stage{n}_20261118"
   require(read_json(RUN/"independent_checks.json")["status"]=="passed","independent checks missing")
   audit=out/"audit";audit.mkdir(exist_ok=True)
   for name in auditnames:shutil.copyfile(RUN/name,audit/name)
+  shutil.copyfile(REPO/"docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json",audit/"dev_exposure_registry.json")
   for phase in range(1,n+1):
    dp=RUN/f"fp_added5000_stage{phase}_20261118"
    for name in ["source_fidelity_report.json","validation_report.json","boundary_evidence.json","conversion_report.json"]:shutil.copyfile(dp/name,audit/f"stage{phase}_{name}")
