@@ -54,13 +54,18 @@ class FeatureCache:
                 shutil.rmtree(temporary)
 
 def visual_spec(pack, image_id, encoder):
-    return {"kind":"image","candidate_manifest_sha256":pack.digest,
+    spec = {"kind":"image","candidate_manifest_sha256":pack.digest,
             "candidate_set_id":pack.package["candidate_set_id"],
             "candidate_source":pack.package["candidate_source"],
             "provenance":pack.package["provenance"],
             "image_sha256":pack.images[image_id]["sha256"],
             "candidate_ids":[c["candidate_id"] for c in pack.rows[image_id]["candidates"]],
             "encoder":encoder,"crop":"exact-mask-bbox-rgb-v1"}
+    # Inferred RGB layout can be ambiguous when the first array has 1 or 3 rows.
+    # Old unambiguous cache entries used the same preprocessing and remain readable.
+    if any(c["bbox_xyxy"][3] - c["bbox_xyxy"][1] in (1, 3) for c in pack.rows[image_id]["candidates"]):
+        spec["rgb_layout"] = "channels_last_explicit"
+    return spec
 
 def text_spec(text, language, encoder):
     return {"kind":"text","original_text":text,"language":language,

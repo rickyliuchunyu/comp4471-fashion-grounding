@@ -52,13 +52,13 @@ def verify(config):
         require(sha256(file) == digest, "changed input: " + file)
 
 
-def run(config_path, out, phase):
+def run(config_path, out, phase, reuse=()):
     config = read_json(config_path)
     verify(config)
     out.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(4)
     torch.set_num_interop_threads(1)
-    builder = builder_for(config, out, config["cache_sources"])
+    builder = builder_for(config, out, [*reuse, *config["cache_sources"]])
     if phase == "train":
         migrate(SimpleNamespace(
             source=config["old_candidates"], destination=config["datasets"]["train"]["candidates"],
@@ -79,5 +79,6 @@ if __name__ == "__main__":
     p.add_argument("--config", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--phase", choices=("train", "dev"), required=True)
+    p.add_argument("--reuse", type=Path, action="append", default=[])
     a = p.parse_args()
-    run(a.config, a.output, a.phase)
+    run(a.config, a.output, a.phase, a.reuse)

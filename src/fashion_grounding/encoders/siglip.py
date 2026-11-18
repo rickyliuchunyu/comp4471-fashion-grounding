@@ -56,7 +56,7 @@ class SiglipEncoder:
         result=[]
         with torch.inference_mode():
             for start in range(0,len(images),self.batch_size):
-                inputs=self.processor(images=images[start:start+self.batch_size],return_tensors="pt").to(self.device)
+                inputs=self.processor.image_processor(images=images[start:start+self.batch_size],input_data_format="channels_last",return_tensors="pt").to(self.device)
                 result.append(self._normalized(self.model.get_image_features(**inputs)))
         return np.concatenate(result) if result else np.empty((0,self.dimension),np.float32)
 
@@ -70,7 +70,7 @@ class SiglipEncoder:
 
     def verify_logits(self,images,texts):
         visual=self.encode_images(images); textual=self.encode_texts(texts)
-        inputs=dict(self.processor(images=images,return_tensors="pt"))
+        inputs=dict(self.processor.image_processor(images=images,input_data_format="channels_last",return_tensors="pt"))
         inputs.update(self._text_inputs(texts))
         with torch.inference_mode():
             standard=self.model(**{k:v.to(self.device) for k,v in inputs.items()}).logits_per_text.cpu().numpy()
