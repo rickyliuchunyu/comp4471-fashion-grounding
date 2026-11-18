@@ -201,7 +201,7 @@ def publish_scores(dataset,method,label,scores,out,config):
     if not folder.exists():
         folder.mkdir();stage_inputs(dataset["pack"],folder)
     ref={"path":"inputs/"+dataset["pack"].path.name,"sha256":dataset["pack"].digest}
-    rows=[prediction_record(e["query"],dataset["pack"],config["run_id"]+"-"+label,method,ref,e["candidates"],score)
+    rows=[prediction_record(e["query"],dataset["pack"],config["run_id"]+"-"+dataset["pack"].package["candidate_source"]+"-"+label,method,ref,e["candidates"],score)
           for e,score in zip(dataset["examples"],scores)]
     pred=folder/(label+"-predictions.jsonl")
     pred.write_text("".join(json.dumps(r,ensure_ascii=False,allow_nan=False)+"\n" for r in rows))
@@ -211,13 +211,24 @@ def publish_scores(dataset,method,label,scores,out,config):
     return result
 
 def run(config):
-    start=time.monotonic();out=Path(config["output"])
-    require(not out.exists(),"run output exists")
+    output = Path(config["output"])
+    output.mkdir(parents=True, exist_ok=False)
+    try:
+        run_in_new_directory(config, output)
+    except Exception as exc:
+        path = output / "run_metadata.json"
+        if path.exists():
+            metadata = read_json(path)
+            metadata.update(status="failed", error_type=type(exc).__name__, error=str(exc))
+            write_json(path, metadata)
+        raise
+
+def run_in_new_directory(config, out):
+    start=time.monotonic()
     require(config["weak_label_training"] is True,"explicit weak-label setting required")
     require(0<config["updates"]<=490 and config["batch_size"]==32,"controlled trial budget exceeded")
     require(config["evaluation_interval"]>0,"invalid evaluation interval")
     torch.set_num_threads(4);torch.set_num_interop_threads(1);torch.use_deterministic_algorithms(True)
-    out.mkdir(parents=True)
     write_json(out/"resolved_config.json",config)
     metadata={**provenance(),"status":"running","scope":"development comparison with weak-label training; not final test"}
     write_json(out/"run_metadata.json",metadata)
@@ -279,9 +290,4 @@ def run(config):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__);p.add_argument("--config",required=True);a=p.parse_args()
-    try:run(read_json(a.config))
-    except Exception as exc:
-        output=Path(read_json(a.config)["output"]);path=output/"run_metadata.json"
-        if path.exists():
-            meta=read_json(path);meta.update(status="failed",error_type=type(exc).__name__,error=str(exc));write_json(path,meta)
-        raise
+    run(read_json(a.config))
