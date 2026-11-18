@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-**全量分割训练包已完成增量接收（2026-11-18）。** wkq 发布 42,476 张训练图。lcy 保留旧 10k 的全部记录，用原八类读取器验收新增 32,476 张、113,149 个实例。新增与 dev250、test400 和 50 张曝光图的身份、分组和 SHA 均无交集。全量正式冻结尚待裁决 5 个历史关联组件，涉及的 123 张新候选均已隔离。[接收结果与弱项覆盖](handoffs/segmentation/full_train_acceptance_20261118.md)
+**全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](handoffs/segmentation/full_train_protection_20261118.md) · [原增量接收](handoffs/segmentation/full_train_acceptance_20261118.md)
 
 保留备选（2026-11-18，非当前扩充前置）：[50k之后的分割优化方案](handoffs/segmentation/u50000_optimization_plan_20261118.md) **planned，未实现/未启动**。该备选拟在现有10k上做75%均匀＋25%弱细类/小目标采样单因素A/B，同一50k模型参数起点、各新增5000updates，末端完整dev；拟每组60分钟硬限。整体AP/AP75不退步并要求针对性提升，当前50k＋0.3交付保持。边界监督另作有条件第二项，不同时改动。
 
@@ -32,13 +32,13 @@
 
 ## GitHub 同步快照
 
-11 月 18 日开工核对整组远端分支、5 个 PR 及讨论。main 为 7064ebb。wkq 已在数据分支答复全量需求并发布包，#2 原评论下暂未单独回复。#2、#4 为 draft，#5 目标为 #4 的工作分支，#1、#3 已关闭且未合并。[开工快照](handoffs/segmentation/evidence/full_train_acceptance_20261118/github_preflight.json)
+11 月 18 日开工核对整组三个角色的远端分支、全部 5 份 PR 及讨论。main 为 7064ebb。#2 和 #4 为 draft，#5 指向 wkq 的数据分支，#1 和 #3 已关闭且未合并。wkq 已在数据分支提交逐组裁决。[开工快照](handoffs/segmentation/evidence/full_train_protection_20261118/github_snapshot.json)
 
 | 成员 / GitHub | 已推送分支与 commit | PR / 最新交接 |
 | --- | --- | --- |
-| lcy / rickyliuchunyu | 开工 dd786c7，全量分割增量接收通过 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)、[接收回执][full-intake] |
-| wyz / MayI2004 | 两个 grounding 分支均为 b5e3729，已用 50k＋0.3 评价 642 条审核 dev 查询 | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)、[50k 联调][wyz-50k] |
-| wkq / LE-brawl | data-eval/p3-baseline-evaluation @ 307e48e，a6dd946 发布全量分割包，随后发布 50k 候选上的排序对照 | [PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)、[全量交接][wkq-full]、[最新排序对照][wkq-spatial] |
+| lcy / rickyliuchunyu | 开工 8168b80，已补齐 146 张曝光图保护记录及 5 组裁决 | [PR #2](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2)、[核对回执][full-protection] |
+| wyz / MayI2004 | 两个 grounding 分支均为 c2fe196，已发布配对曝光与空间分支对照 | [PR #5](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5)、[本人交接][wyz-spatial] |
+| wkq / LE-brawl | data-eval/p3-baseline-evaluation @ 07b0125，五个历史组件已有逐组裁决 | [PR #4](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4)、[本人裁决][wkq-bridges] |
 
 队友交接链接固定到本次读取的 commit，避免将未合并内容误认为当前 checkout 已包含。下次开工须重新检查远端增量，流程见 [AGENTS.md](../AGENTS.md)。
 
@@ -56,8 +56,8 @@
 | P1 环境与工作区 | in_progress | [lcy 工程检查](handoffs/segmentation/pilot_adapter_20261112.md)、[COCO 八类加载/五图推理](handoffs/segmentation/coco_weights_20261112.md)、[200-update 与跨进程恢复](handoffs/segmentation/stability_200_20261112.md)；[wyz 图文环境与 GPU 编码][wyz-handoff]；wkq 独立 CPU 环境；[lcy AP/候选读取实测][lcy-ap] | 全组交付的接收方复核与环境复现验收；wyz 环境只读复用 base torch，base 变化需重验；非长训练验收 | lcy 协调，全员 |
 | P2 真实 GT 小包 | in_progress | [原包 20 图/145 GT](handoffs/data_eval/remote_pilot_review_20261112.md)，lcy 加载与 wyz 145 个裁剪消费通过；[新审核包 9 图/59 候选/18 语义查询/36 双语记录][wkq-handoff]，35 测试、59 mask 与源一致 | [新版 reviewed_v1][wkq-p3] 已有 17 组/34 条 accepted；1 组/2 条 pending；lcy 新包加载/前反向/保存恢复已通过，wyz 实际消费、B1/B2 与统一评价已通过 [103dcc5][wyz-latest]；5 组/10 条 accepted 为已暴露答案的训练再审，非独立测试 | B，全员标注 |
 | P3 基线与评价器 | in_progress | B0/B1/B2/M1/M2已实现；wyz复算wkq六组评价，B2按GT dev选lambda=2；同642条查询、18k预测候选 | 单seed、同dev选模；多种子及冻结后的独立测试未完成 | A/B |
-| P4 数据扩充冻结 | in_progress | 分割 dev250 和旧 10k 验收已复用，全量 42,476 张已发布且增量通过；642 条审核语言 dev 已留档 | 5 个历史近重复关联组待裁决及三方正式冻结，另 9 组语言项待处理 | B，全员 |
-| P5-S 分割训练 | in_progress | 原 10k 五点评价选 50k，固定 dev 候选 50k＋0.3 覆盖 602/642，wyz 已实际消费。全量包增量接收通过 | 约定 train 候选交付仍待安排，全量包正式冻结待裁决 | lcy |
+| P4 数据扩充冻结 | in_progress | 全量 42,476 张的分割增量接收、5 组历史裁决与 146 张曝光保护均已登记。642 条审核语言 dev 已留档 | 三方正式冻结及尚待处理的语言审核 | B，全员 |
+| P5-S 分割训练 | in_progress | 原 10k 五点评价选 50k，固定 dev 候选 50k＋0.3 覆盖 602/642。就历史关联判定，50k 可用于全量初始化 | 约定 train 候选交付及后续训练安排 | lcy |
 | P5-L 排序训练 | in_progress | [M1/M2在1000/1149图的四组seed42对照][wyz-current]已完成，每组490updates；M2几何有效但未观察到稳定收益 | 其他种子、人工复核训练监督及冻结后的独立测试仍缺；本轮lcy不代做 | A |
 | P6 联调与对照 | in_progress | 已有 B1 联调及六组评价，wyz 已用 50k 候选评价 642 条审核 dev 查询，wkq 已复核并发布 M2 方位加分对照 | 多种子空间收益、公平完整对照、E1 与 demo 仍待完成 | 全员分责 |
 | P7 方法锁定 | not_started | freeze 清单 | 权重/词表/阈值/数据及最终运行清单 | B 汇总，全员核对 |
@@ -71,9 +71,9 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | 全量分割包增量技术接收完成 | 32,476 张新增通过原分割读取器，旧 10k 记录和摘要等值 | 等待 5 个历史组件处置，再更新分割冻结状态 | [增量回执][full-intake]、[当前候选](handoffs/segmentation/current_candidates.md) |
-| wyz（A）/ grounding | 已发布 50k 候选排序评价 | 642 条审核 dev 查询，新候选覆盖 93.77%，M2-clean1000 严格选对 78.35% | 其他种子及独立 test 仍缺 | [wyz 最新交接][wyz-50k]、PR #5 |
-| wkq（B）/ data_eval | 已发布全量包、覆盖和隔离记录 | 45,623 张来源已对账，42,476 张入包，3,147 张排除或隔离 | 5 个历史组件待裁决，语言待审事项见本人记录 | [wkq 全量交接][wkq-full]、[分割接收][full-intake] |
+| lcy | 本轮全量分割保护记录已完成 | 可复用 42,476 图接收回执、50k 初始化及 146 张曝光清单 | 全组三方冻结另行登记 | [保护清单与裁决][full-protection]、[原增量回执][full-intake] |
+| wyz（A）/ grounding | 已发布方位训练增量、颜色诊断和后续空间监督对照 | 在既有 642 条审核 dev 和 74 图草稿诊断上有本人结果 | 草稿审核及独立 test 由相应负责人推进 | [方位增量][wyz-direction]、[最新对照][wyz-spatial]、PR #5 |
+| wkq（B）/ data_eval | 全量训练包 5 组历史近重复裁决已发布 | 75 对直接比较保留原划分，123 张候选继续隔离，另已登记两批曝光 | 语言待审事项见本人记录 | [wkq 裁决][wkq-bridges]、[分割补充接收][full-protection] |
 
 无 GPU 不阻塞 CPU 接口开发。使用者可用 lcy/wyz/wkq 自报身份；对应角色已绑定，不根据作者顺序推断全名或账号。三人的工作区与代码分支继续遵守 [团队说明](team_workflow.md)。
 
@@ -93,7 +93,7 @@
 
 ## 4. 范围检查后的优先顺序
 
-全量分割包新增部分已接收。全量正式冻结前需要记录 5 个历史组件的裁决。当前对外候选为 50k＋0.3，wyz 已实际完成新版联调。[分割接收][full-intake] · [下游评价][wyz-50k]
+全量包 5 个历史组件的裁决和 146 张曝光图保护已登记。后续训练准备可绑定原发布清单、补充保护清单和 50k 权重；本轮未启动训练。当前对外候选为 50k＋0.3。[保护清单][full-protection] · [原分割接收][full-intake]
 
 **责任修正：reviewed_v1 接收时重复安排两步训练/保存恢复，是 Codex 未充分复用已有证据的决策问题，不是用户要求不当或 lcy 让项目跑偏。** 后续执行 AGENTS.md 的验证复用规则：具体变化使原证据失效时才补最小检查；没有新增风险就推进下一项交付。新包不自动触发训练 smoke；该次责任修正仅修改文档，未运行模型或训练验证。
 
@@ -160,7 +160,7 @@
 
 [wkq-reviewed-dev]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/6eb7b923d32142e2510ffc87e6adf0e549a8f743/docs/handoffs/data_eval/reviewed_dev_eval_20261117.md
 
-最新wkq增量：[b24515b语言定向扩充交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b24515bcda576fe97b354ca9b48e647079831df3/docs/handoffs/data_eval/language_targeted_20261117.md)。本轮引用其当前642查询dev，仅完成本人50k分割候选与阈值选择，不接新语言训练任务。
+历史 wkq 增量见 [b24515b 语言定向扩充交接](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b24515bcda576fe97b354ca9b48e647079831df3/docs/handoffs/data_eval/language_targeted_20261117.md)。当时使用 642 条审核 dev 完成分割候选与阈值选择。
 
 [wyz-current]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/64ed72794f0a432c8a1aa811cea18cdefbf9fdba/docs/handoffs/grounding/spatial_controlled_20261117.md
 
@@ -168,3 +168,8 @@
 [wkq-full]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a6dd946f4873523d8835b3915af2c60addbc40be/docs/handoffs/data_eval/full_train_20261118.md
 [wyz-50k]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd/docs/handoffs/grounding/u50000_dev_20261118.md
 [wkq-spatial]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md
+
+[full-protection]: handoffs/segmentation/full_train_protection_20261118.md
+[wkq-bridges]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/07b0125a14db02e9b448c097d40df491c70d2c7d/docs/handoffs/data_eval/historical_bridge_adjudication_20261118.md
+[wyz-direction]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/aa8ab465af4d3fe969d3c08cbc05154baf921117/docs/handoffs/grounding/direction_increment_20261118.md
+[wyz-spatial]: https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/c2fe196398de0e4589c0713896459b46be3e17d0/docs/handoffs/grounding/spatial_supervision_20261118.md

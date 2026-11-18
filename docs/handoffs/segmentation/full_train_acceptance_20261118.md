@@ -1,6 +1,6 @@
 # 全量 Fashionpedia 分割训练包增量接收
 
-2026-11-18，lcy / segmentation。**新增 32,476 张通过 CPU 分割输入验收，合并包共 42,476 张、42,452 组、152,848 个实例。** 全量包正式冻结前，仍需裁决 5 个同时触及旧训练图和保护集的近重复组件。相关的 123 张新候选已全部隔离。本次只做数据接收，训练、推理和 smoke 均为零。
+2026-11-18，lcy / segmentation。**新增 32,476 张通过 CPU 分割输入验收，合并包共 42,476 张、42,452 组、152,848 个实例。** 发布时有 5 个同时触及旧训练图和保护集的近重复组件待裁决。后续 wkq 裁决保留原划分，lcy 已接收裁决并补齐 [146 张曝光保护清单](full_train_protection_20261118.md)。相关的 123 张新候选已全部隔离。本次只做数据接收，训练、推理和 smoke 均为零。
 
 | 分割训练数据 | 图片 | 独立组 | 实例 |
 | --- | ---: | ---: | ---: |
@@ -14,7 +14,7 @@
 
 - 旧 10,000 张 manifest / COCO 图片记录、39,699 条 COCO 标注逐项相等。旧、新成员清单互斥，并集等于发布包，实际 CPU 增量视图与合并包的新增记录完全相同。旧图和 mask 共 49,699 个资产摘要逐一对应；沿用 wkq 发布时复制后逐文件计算的 SHA 和旧像素验收。未重新解码旧图或旧 mask。[保留与隔离回执](evidence/full_train_acceptance_20261118/release_check.json)
 - 新增记录对旧 10k、dev250、test400、全部 50 张已曝光图（39 张开发图、11 张隔离图）的项目图片 ID、带官方 split 的源身份、group 和 SHA256 交集全部为零。校验了这些分区在保护指纹表中的身份及绑定，复用发布方对 10,761 份保护指纹及新增代表之间的资源 URL 和原/镜像四组合 pHash 距离 ≤6 核对，保留代表触发数为 0。test 仅读取保护元数据。[发布后审计](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a6dd946f4873523d8835b3915af2c60addbc40be/docs/handoffs/data_eval/full_train_20261118_evidence/postpublish_check.json)
-- 新扫描发现 5 个含旧训练图及 dev/test/曝光图的连通组件。逐组排除的新增数为 67、18、6、7、25，合计 123。五组中的旧 train/dev/test/曝光图命中合计分别为 23/5/3/2。这些关系可能经中间图片传递，实际同源关系仍待判读。建议数据负责人先裁决这 5 组，并记录保留、隔离或换版的决定，再做全量正式冻结。[wkq 的组件明细](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a6dd946f4873523d8835b3915af2c60addbc40be/docs/handoffs/data_eval/full_train_20261118_evidence/frozen_bridge_clues.json)
+- 新扫描发现 5 个含旧训练图及 dev/test/曝光图的连通组件。逐组排除的新增数为 67、18、6、7、25，合计 123。五组中的旧 train/dev/test/曝光图命中合计分别为 23/5/3/2。这些关系可能经中间图片传递。wkq 随后完成 75 对端点的 AI 图像核查，保留原划分；此处保留原发布时点的接收证据。[wkq 的组件明细](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a6dd946f4873523d8835b3915af2c60addbc40be/docs/handoffs/data_eval/full_train_20261118_evidence/frozen_bridge_clues.json)
 - 用原 `load_training_package` 对发布方提供的增量视图实际读取一次，历时 353.77 秒。32,476 张图片通过哈希、RGB 转换与尺寸核对，113,149 份 mask 通过 RLE 解码和 bbox/area 核对。八类从 1–8 映射为 0–7，crowd 跳过 0 个。复用绑定到增量 manifest 和 COCO 标注的 113,149 份官方源 mask 像素一致性检查。[分割读取回执](evidence/full_train_acceptance_20261118/added_reader.json) · [源保真证据](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/a6dd946f4873523d8835b3915af2c60addbc40be/docs/handoffs/data_eval/full_train_20261118_evidence/source_fidelity.json)
 
 ## wkq 回报的覆盖

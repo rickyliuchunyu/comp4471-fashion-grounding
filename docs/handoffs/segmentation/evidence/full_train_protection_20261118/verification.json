@@ -1,0 +1,75 @@
+{
+  "registry_sha256": "6cecceaf3215830f2cb88626f97fa8ee5b29ec5049d9824c1187aedb94fd86fd",
+  "full_train_images": 42476,
+  "test_images": 400,
+  "overlaps": {
+    "full_train": {
+      "image_id": 0,
+      "group_id": 0,
+      "sha256": 0,
+      "source_key": 0
+    },
+    "test400": {
+      "image_id": 0,
+      "group_id": 0,
+      "sha256": 0,
+      "source_key": 0
+    }
+  },
+  "screened_from_guarded_pool": 96,
+  "guarded_pool": 410,
+  "guard_protected": 43237,
+  "historical_groups": [
+    {
+      "group": 1,
+      "comparisons": 56,
+      "quarantine": 67
+    },
+    {
+      "group": 2,
+      "comparisons": 15,
+      "quarantine": 18
+    },
+    {
+      "group": 3,
+      "comparisons": 1,
+      "quarantine": 6
+    },
+    {
+      "group": 4,
+      "comparisons": 1,
+      "quarantine": 7
+    },
+    {
+      "group": 5,
+      "comparisons": 2,
+      "quarantine": 25
+    }
+  ],
+  "review_scope": "Five listed components, same-photo variants and visually identifiable same merchandise/look; no inference, test labels or metrics. AI inspection only.",
+  "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+  "test_images_seen_by_producer_for_dedup_only": 3,
+  "input_sha256": {
+    "published.json": "9bee52f7d410bb7ca8ecbe3c86e253cad1a81383ffffcdc6a3c516bfca3d9395",
+    "shared/processed/fp_train_full_eligible_v1/RELEASE.json": "7567710f2d8446fd106a646051de2e6a4748c31f22252dab07940fbf234e1d35",
+    "shared/processed/fp_train_full_eligible_v1/SHA256SUMS.json": "37d64b68185c99926e49bee3bae7a64dcc6b92cffbf4224011766322e4895948",
+    "shared/processed/fp_train_full_eligible_v1/image_manifest.json": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "shared/processed/fp_train_full_eligible_v1/audit/protection_inputs.json": "ac52e8668c8bb853510328de6e558605eff284df906407e2c13f069a958b5e4c",
+    "shared/processed/fp_train_full_eligible_v1/audit/protected_fingerprints.json": "554eff66f54e70afdeac0429f84b6135d19c0a3896b282f559e4a5060227db3d",
+    "shared/processed/fp_test400_holdout_v1/image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+    "docs/handoffs/data_eval/full_train_20261118_evidence/historical_bridge_adjudication.json": "f57be3c4b360ed9d7c33537aba73c70ded6af54df5590652304782a80a028bf8",
+    "release_check.json": "728dacad8e236a32e8a8d0528313dbd44909f1d8deae8c8beb98b62fe8e68547",
+    "docs/handoffs/data_eval/full_train_20261118_evidence/frozen_bridge_clues.json": "a5579332b51c4001433e35dcf732526d61a86af4c1ef2a92573e55316cdbb034",
+    "final_checkpoint.json": "7f840281aff989d9df60571c4ab6d9ae8973414007429391f13cf59ab3855af5",
+    "runs/data_eval/20261118-nonshoe-pairs-v1/dev_pool_guard.json": "7dd9dc228badfe94ce7850283935d0e534eee685b5b8a01e0ea9c45c2a9f4762",
+    "docs/handoffs/data_eval/direction_pairs_20261118_evidence/separation.json": "aa5e8763c04883186d4d71358a78ce69fb270244598ea3dad02fd1e4c5122a74",
+    "runs/data_eval/20261118-nonshoe-pairs-v1/dev_source/image_manifest.json": "243769f5273797e1e91a7754a699aa209609936038e68ac350512b3700973c59",
+    "runs/data_eval/20261118-nonshoe-pairs-v1/dev-visual-screen.json": "f164af6f6d527546736a1a81153fa37258587c09b34c860be08ba55ffc15e0c2",
+    "shared/processed/fp_train_full_eligible_v1/audit/input_preflight.json": "96bf60c24575ba7f21e746be76231397b59a4681da9802bbe80cee5749b330ff",
+    "runs/data_eval/20261112-large-data-regrouped/fingerprints.json": "fca5d97f4ebe9c0144ac9b05732a75a41ff2b0c503d6464a35bdc9ced5035aba",
+    "docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json": "688e8cc101a570f6c7ce012fe3b092dfb0ced637108e1d89555a3210ec959b9b",
+    "shared/processed/fp_language_dev39_challenge_draft_v1/image_manifest.json": "8fa16d0e557edcdfe42b2ec9f809b18f37951808f8336ceebb450e73801e0180",
+    "docs/handoffs/data_eval/direction_pairs_20261118_evidence/dev_exposure_registry.json": "d13d65d3672454fcf9eeadf38f13af58b8b5ac468b99da980baf1b3c1401252e",
+    "shared/processed/fp_language_direction_pairs_dev_v1/image_manifest.json": "022943b0703bb91503534a77d8eda7b9f01faca894b276999f13c1de99a31f52"
+  }
+}

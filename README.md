@@ -1,6 +1,6 @@
 # 自然语言引导的服饰实例选择与分割
 
-**全量分割训练包已完成增量接收（2026-11-18）。** wkq 发布 42,476 张训练图。lcy 保留旧 10k 的全部记录，用原八类读取器验收新增 32,476 张、113,149 个实例。新增与 dev250、test400 和 50 张曝光图的身份、分组和 SHA 均无交集。全量正式冻结尚待裁决 5 个历史关联组件，涉及的 123 张新候选均已隔离。[接收结果与弱项覆盖](docs/handoffs/segmentation/full_train_acceptance_20261118.md)
+**全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](docs/handoffs/segmentation/full_train_protection_20261118.md) · [原增量接收](docs/handoffs/segmentation/full_train_acceptance_20261118.md)
 
 当前交付（2026-11-18）：[50k＋0.3候选接入说明](docs/handoffs/segmentation/current_candidates.md) **ready_for_downstream_development**。完整dev250的1279个候选及642条查询快照已固定，机器索引和交接说明同步到服务器共享目录；wyz/wkq可立即更新各自候选输入，不必等待分割继续优化。新候选区域特征使用新hash键，相同文本/语言/编码器的文本特征可复用。wyz 和 wkq 已各自发布基于 50k 候选的 dev 结果。[wyz 评价](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd/docs/handoffs/grounding/u50000_dev_20261118.md) · [wkq 复核](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md)
 
