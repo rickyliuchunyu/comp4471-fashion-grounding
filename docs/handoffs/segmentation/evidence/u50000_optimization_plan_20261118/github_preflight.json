@@ -1,0 +1,75 @@
+{
+  "checked_at_utc": "2026-11-18T05:17:48.927Z",
+  "local_head": "87335dae7ce943c3c3f33ba255ec77666efe64d3",
+  "refs": {
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "data_eval": "b24515bcda576fe97b354ca9b48e647079831df3",
+    "grounding": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba",
+    "grounding_spatial_ranker_dev": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "state": "closed",
+      "draft": true,
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:48Z",
+      "discussion": "closed unchanged; existing discussion evidence reused"
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "state": "open",
+      "draft": true,
+      "head_sha": "87335dae7ce943c3c3f33ba255ec77666efe64d3",
+      "base": "main",
+      "merged": false,
+      "updated_at": "2026-11-17T17:34:42Z",
+      "discussion": []
+    },
+    {
+      "number": 3,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "state": "closed",
+      "draft": true,
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "merged": false,
+      "updated_at": "2026-11-12T09:52:53Z",
+      "discussion": "closed unchanged; existing discussion evidence reused"
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "state": "open",
+      "draft": true,
+      "head_sha": "b24515bcda576fe97b354ca9b48e647079831df3",
+      "base": "main",
+      "merged": false,
+      "updated_at": "2026-11-17T07:28:25Z",
+      "discussion": []
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "state": "open",
+      "draft": false,
+      "head_sha": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba",
+      "base": "data-eval/p3-baseline-evaluation",
+      "merged": false,
+      "updated_at": "2026-11-18T02:41:47Z",
+      "discussion": []
+    }
+  ],
+  "grounding_delta": {
+    "handoff": "docs/handoffs/grounding/spatial_controlled_20261117.md",
+    "implemented": "M2, four-way 1000/1149 M1/M2 seed42 controlled trial; B2 GT dev weight selected=2",
+    "predicted_candidates": "u18000-dev250-20261115-r01/trial-0.3",
+    "candidate_reader_and_feature_cache_diff": "none from 103dcc5",
+    "remaining": "other seeds, frozen independent test, reviewed training supervision; no 50k consumption claimed"
+  },
+  "scope": "Planning only. No server access, GPU runs, old checks or teammate edits."
+}
