@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "images": 74,
+  "instances": 379,
+  "candidates": 379,
+  "queries": {
+    "queries_draft.jsonl": 296,
+    "queries_accepted.jsonl": 0
+  },
+  "query_images": 74,
+  "increment_images": 74,
+  "increment_semantic_groups": 148,
+  "semantic_groups": 148,
+  "query_records": 296,
+  "accepted": 0,
+  "rejected_images": 0,
+  "split_overlap": {
+    "fp_train10000_targeted_v1:image_id": 0,
+    "fp_train10000_targeted_v1:group_id": 0,
+    "fp_train10000_targeted_v1:sha256": 0,
+    "fp_dev250_v1:image_id": 0,
+    "fp_dev250_v1:group_id": 0,
+    "fp_dev250_v1:sha256": 0,
+    "fp_test400_holdout_v1:image_id": 0,
+    "fp_test400_holdout_v1:group_id": 0,
+    "fp_test400_holdout_v1:sha256": 0
+  },
+  "base_query_records_preserved": 0,
+  "increment_types": {
+    "spatial": 148
+  },
+  "increment_categories": {
+    "8": 26,
+    "6": 122
+  },
+  "increment_same_category_groups": 148,
+  "increment_same_fine_groups": 148,
+  "pairs": 74,
+  "target_nouns": {
+    "glove": 6,
+    "sock": 6,
+    "shoe": 61,
+    "leg warmer": 1
+  },
+  "axes": {
+    "horizontal": 65,
+    "vertical": 9
+  },
+  "inspected": 96,
+  "discarded": 22,
+  "reviewed_proposal_files": {
+    "dev": "8a17bcdf342577cd7c6dcc096b93117afe5d75840942d623d60653b6b8cd5c12",
+    "devextra": "4cf4771ce0f00796234cbea11348ae45338a4da8f5d4af23995b3f299fe8eaa6"
+  },
+  "all_queries_sha256": "fc15fe2beeec95d4a962baebed43e7a842be6ff9b1c6dd77b619da78cc7054c7",
+  "increment_sha256": "fc15fe2beeec95d4a962baebed43e7a842be6ff9b1c6dd77b619da78cc7054c7"
+}

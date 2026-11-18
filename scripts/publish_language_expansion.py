@@ -18,7 +18,7 @@ def asset_copy(src,dst):
  dst.parent.mkdir(parents=True,exist_ok=True)
  if dst.exists():require(sha256(src)==sha256(dst),"asset collision")
  else:os.link(src,dst)
-def build(source,selected,decisions,out,split,base=None):
+def build(source,selected,decisions,out,split,base=None, *, annotator="codex_visual_author_20261117", template_family="color_space_targeted_v1"):
  require(not out.exists(),"output exists")
  validate_decisions(selected,decisions)
  for root in [source]+([base] if base else []):
@@ -38,14 +38,14 @@ def build(source,selected,decisions,out,split,base=None):
   sid=out.name+f"-q{s['index']:04d}"
   for lang in ("zh","en"):
    rows.append(dict(schema_version=3,illustrative_only=False,query_id=sid+"-"+lang,semantic_query_id=sid,
-    contrast_set_id=None,paraphrase_group_id=None,image_id=im["image_id"],source_dataset="fashionpedia",split=split,
+    contrast_set_id=s.get("contrast_set_id"),paraphrase_group_id=None,image_id=im["image_id"],source_dataset="fashionpedia",split=split,
     query=d["texts"][lang],language=lang,target_instance_id=aid,target_category_id=a["category_id"],
     same_category_instance_count=sum(x["category_id"]==a["category_id"] for x in by[im["image_id"]]),
     same_source_category_instance_count=sum(x["source_category_id"]==a["source_category_id"] for x in by[im["image_id"]]),
     target_source_category_id=a["source_category_id"],target_source_category_name=a["source_category_name"],
     query_types=[d["type"]],spatial_reference="image_view",annotation_version=out.name,
-    annotator="codex_visual_author_20261117",reviewer=None,review_status="needs_revision",
-    authorship="machine_authored_after_visual_inspection_pending_human_review",template_family="color_space_targeted_v1",
+    annotator=annotator,reviewer=None,review_status="needs_revision",
+    authorship="machine_authored_after_visual_inspection_pending_human_review",template_family=template_family,
     visual_evidence_sheet=s["sheet"],training_policy="experimental_machine_labels_only_not_human_accepted" if split=="train" else "dev_review_only_not_training_or_formal_evaluation"))
  manifest=copy.deepcopy(sm);manifest["manifest_id"]=out.name;manifest["images"]=[i for i in sm["images"] if i["image_id"] in keep]
  coco=copy.deepcopy(sc);coco["images"]=[i for i in sc["images"] if i["id"] in keep];coco["annotations"]=[a for a in sc["annotations"] if a["image_id"] in keep]
@@ -93,7 +93,7 @@ def build(source,selected,decisions,out,split,base=None):
  report=validate_package(out)
  report.update(images=len(manifest["images"]),query_images=len({q["image_id"] for q in allrows}),increment_images=len(keep),
   increment_semantic_groups=len(rows)//2,semantic_groups=len(allrows)//2,query_records=len(allrows),accepted=0,
-  rejected_images=len(selected)-len(keep),split_overlap=overlaps,base_query_records_preserved=len(oldrows),
+  rejected_images=len({s["image_id"] for s in selected})-len(keep),split_overlap=overlaps,base_query_records_preserved=len(oldrows),
   increment_types=dict(Counter(q["query_types"][0] for q in rows if q["language"]=="zh")),
   increment_categories=dict(Counter(q["target_category_id"] for q in rows if q["language"]=="zh")),
   increment_same_category_groups=sum(q["same_category_instance_count"]>1 for q in rows if q["language"]=="zh"),
@@ -101,7 +101,7 @@ def build(source,selected,decisions,out,split,base=None):
  write_json(out/"validation_report.json",report)
  write_json(out/"RELEASE.json",dict(release_id=out.name,formal_freeze=False,split=split,source=str(source),base=str(base) if base else None,
   usage="Experimental weak-label training; human review pending" if split=="train" else "Separate targeted dev challenge; human review required before evaluation; never train",
-  audit="Full image and cyan target mask contact sheet visually inspected by Codex; not independent human review",
+  audit="Original image and target-mask evidence visually inspected by Codex; independent human review pending",
   source_annotation_sha256=sha256(source/"annotations_coco.json"),base_queries_sha256=sha256(base/"queries_draft.jsonl") if base else None,statistics=report))
  write_json(out/"SHA256SUMS.json",{str(p.relative_to(out)):sha256(p) for p in sorted(out.rglob("*")) if p.is_file() and p.name!="SHA256SUMS.json"})
  return report

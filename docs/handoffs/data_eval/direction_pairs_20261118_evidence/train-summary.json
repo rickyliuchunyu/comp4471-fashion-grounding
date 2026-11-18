@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "images": 1235,
+  "instances": 6280,
+  "candidates": 6280,
+  "queries": {
+    "queries_draft.jsonl": 3640,
+    "queries_accepted.jsonl": 0
+  },
+  "query_images": 1234,
+  "increment_images": 86,
+  "increment_semantic_groups": 172,
+  "semantic_groups": 1820,
+  "query_records": 3640,
+  "accepted": 0,
+  "rejected_images": 0,
+  "split_overlap": {
+    "fp_dev250_v1:image_id": 0,
+    "fp_dev250_v1:group_id": 0,
+    "fp_dev250_v1:sha256": 0,
+    "fp_test400_holdout_v1:image_id": 0,
+    "fp_test400_holdout_v1:group_id": 0,
+    "fp_test400_holdout_v1:sha256": 0
+  },
+  "base_query_records_preserved": 3296,
+  "increment_types": {
+    "spatial": 172
+  },
+  "increment_categories": {
+    "8": 94,
+    "7": 62,
+    "1": 14,
+    "4": 2
+  },
+  "increment_same_category_groups": 172,
+  "increment_same_fine_groups": 160,
+  "pairs": 86,
+  "target_nouns": {
+    "pair of glasses": 2,
+    "hair ornament": 4,
+    "glove": 22,
+    "leg warmer": 2,
+    "sock": 16,
+    "bag": 31,
+    "umbrella": 1,
+    "top": 7,
+    "jacket": 1
+  },
+  "axes": {
+    "vertical": 18,
+    "horizontal": 68
+  },
+  "inspected": 221,
+  "discarded": 135,
+  "reviewed_proposal_files": {
+    "train": "9113e3f385d43ef24dd77e5245d35c5e831aca1ee0e1d448263ad920b787b6cd",
+    "trainextra": "c1c4b6fd589ddd5ff59628e36acff39870a20aae4123401bf1d7c69328ba988e"
+  },
+  "all_queries_sha256": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+  "increment_sha256": "1be500a9db2ec5d68d7e282ba1b1fd02a00e207a17eeb40bf311919b423c19e3"
+}

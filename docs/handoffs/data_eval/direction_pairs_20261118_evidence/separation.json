@@ -1,0 +1,29 @@
+{
+  "dev_vs_others": {
+    "fp_train_full_eligible_v1/image_id": 0,
+    "fp_train_full_eligible_v1/group_id": 0,
+    "fp_train_full_eligible_v1/sha256": 0,
+    "fp_dev250_v1/image_id": 0,
+    "fp_dev250_v1/group_id": 0,
+    "fp_dev250_v1/sha256": 0,
+    "fp_test400_holdout_v1/image_id": 0,
+    "fp_test400_holdout_v1/group_id": 0,
+    "fp_test400_holdout_v1/sha256": 0,
+    "fp_language_dev39_challenge_draft_v1/image_id": 0,
+    "fp_language_dev39_challenge_draft_v1/group_id": 0,
+    "fp_language_dev39_challenge_draft_v1/sha256": 0,
+    "fp_language_direction_pairs_train_v1/image_id": 0,
+    "fp_language_direction_pairs_train_v1/group_id": 0,
+    "fp_language_direction_pairs_train_v1/sha256": 0
+  },
+  "guard_protected": 43237,
+  "new_candidate_pool_images": 410,
+  "new_pool_images_with_multiple_bags": 0,
+  "dev_exposed": 96,
+  "source_check_commit": "b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd",
+  "consumer_status": "passed",
+  "crops": {
+    "fp_language_direction_pairs_train_v1": 6280,
+    "fp_language_direction_pairs_dev_v1": 379
+  }
+}

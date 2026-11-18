@@ -137,10 +137,13 @@ def select():
   for im in read_json(p/"image_manifest.json")["images"]:
    k=("train-" if im["source_split"]=="official_train2020" else "val-")+im["source_image_id"]
    require(k in cached,"missing frozen fingerprint "+k);require(cached[k]["sha256"]==im["sha256"],"frozen fingerprint hash mismatch "+k);frozen[k]={**cached[k],"group_id":im["group_id"]}
- exposure=REPO/"docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json"
- protection_inputs[str(exposure)]=sha256(exposure)
- for im in read_json(exposure)["images"]:
-  k="val-"+str(im["image_id"]-10**9-1);require(k in cached,"missing exposure fingerprint");frozen[k]=cached[k]
+ exposure_root=REPO/'docs/handoffs/data_eval'
+ registries=sorted(exposure_root.glob('*_evidence/dev_exposure_registry.json'))
+ require(exposure_root/'language_targeted_20261117_evidence/dev_exposure_registry.json' in registries,'missing original exposure registry')
+ for exposure in registries:
+  protection_inputs[str(exposure)]=sha256(exposure)
+  for im in read_json(exposure)['images']:
+   k='val-'+str(im['image_id']-10**9-1);require(k in cached,'missing exposure fingerprint');frozen[k]=cached[k]
  gids={x["group_id"] for x in frozen.values()}
  for k,x in cached.items():
   if x.get("group_id") in gids and k not in frozen:frozen[k]=x

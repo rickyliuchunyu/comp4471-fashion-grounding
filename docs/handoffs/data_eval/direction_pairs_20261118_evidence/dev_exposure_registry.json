@@ -1,0 +1,389 @@
+{
+  "policy": "All visually screened images are development-exposed, including rejected trials. Reserve for development or quarantine.",
+  "images": [
+    {
+      "image_id": 1000010938,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016674,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017611,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020543,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020713,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000011573,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000011438,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000011881,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000012555,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000015237,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000015431,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000017132,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000017196,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000017241,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000017450,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000018558,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000018896,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000009222,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012424,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000014103,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000018719,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020215,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000008951,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009137,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009237,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009395,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009407,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009567,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009836,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009892,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000009896,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010266,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010363,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010513,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010597,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010777,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010855,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010919,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010995,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000011185,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000011218,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000011288,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000011589,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012074,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012085,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012212,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012566,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012730,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012824,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000012890,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000013050,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000013204,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000013446,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000013558,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000013599,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000015238,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000015425,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000015462,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000015594,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000015844,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000015979,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000016063,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016232,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016328,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000016344,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016407,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016620,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016684,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016933,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017137,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017259,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017516,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000017558,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017726,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017849,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017911,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017995,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000018333,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000018359,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000018704,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000019158,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000019413,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000019481,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020181,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020196,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000020200,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020269,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020298,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020504,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000020593,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017040,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000008555,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000017164,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000010853,
+      "status": "dev_pair_draft"
+    },
+    {
+      "image_id": 1000016011,
+      "status": "dev_exposed_quality_quarantine"
+    },
+    {
+      "image_id": 1000018348,
+      "status": "dev_pair_draft"
+    }
+  ]
+}
