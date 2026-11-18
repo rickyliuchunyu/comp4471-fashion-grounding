@@ -43,3 +43,5 @@ Grounding 2026-11-18：[方位训练增量、颜色分组和草稿诊断](ground
 Grounding 2026-11-18：[方位监督占比和空间分支对照](grounding/spatial_supervision_20261118.md)。
 
 Grounding 2026-11-18：[同图双目标训练损失对照](grounding/pair_objective_20261118.md)。
+
+Grounding 2026-11-18：[MHP v2 配对训练、颜色与方位诊断](grounding/mhp_binding_20261118.md)。
