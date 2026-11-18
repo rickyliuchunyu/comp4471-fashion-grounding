@@ -1,0 +1,1388 @@
+[
+  {
+    "proposal": 1,
+    "iid": 2000010134,
+    "sid": 10134,
+    "cat": 1,
+    "ids": [
+      3101340112,
+      3101340212
+    ],
+    "sep": 0.472,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 2,
+    "iid": 2000010134,
+    "sid": 10134,
+    "cat": 2,
+    "ids": [
+      3101340117,
+      3101340217
+    ],
+    "sep": 0.451,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 3,
+    "iid": 2000010134,
+    "sid": 10134,
+    "cat": 4,
+    "ids": [
+      3101340111,
+      3101340211
+    ],
+    "sep": 0.385,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 4,
+    "iid": 2000010861,
+    "sid": 10861,
+    "cat": 4,
+    "ids": [
+      3108610134,
+      3108610211
+    ],
+    "sep": 0.43,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 5,
+    "iid": 2000011570,
+    "sid": 11570,
+    "cat": 1,
+    "ids": [
+      3115700112,
+      3115700212
+    ],
+    "sep": 0.264,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 6,
+    "iid": 2000012938,
+    "sid": 12938,
+    "cat": 1,
+    "ids": [
+      3129380112,
+      3129380212
+    ],
+    "sep": 0.172,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 7,
+    "iid": 2000012938,
+    "sid": 12938,
+    "cat": 2,
+    "ids": [
+      3129380117,
+      3129380217
+    ],
+    "sep": 0.231,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 8,
+    "iid": 2000013415,
+    "sid": 13415,
+    "cat": 2,
+    "ids": [
+      3134150118,
+      3134150217
+    ],
+    "sep": 0.322,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 9,
+    "iid": 2000013429,
+    "sid": 13429,
+    "cat": 1,
+    "ids": [
+      3134290112,
+      3134290212
+    ],
+    "sep": 0.186,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 10,
+    "iid": 2000013429,
+    "sid": 13429,
+    "cat": 2,
+    "ids": [
+      3134290117,
+      3134290218
+    ],
+    "sep": 0.244,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 11,
+    "iid": 2000015058,
+    "sid": 15058,
+    "cat": 1,
+    "ids": [
+      3150580212,
+      3150580112
+    ],
+    "sep": 0.504,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 12,
+    "iid": 2000015058,
+    "sid": 15058,
+    "cat": 2,
+    "ids": [
+      3150580217,
+      3150580117
+    ],
+    "sep": 0.519,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 13,
+    "iid": 2000001608,
+    "sid": 1608,
+    "cat": 1,
+    "ids": [
+      3016080112,
+      3016080212
+    ],
+    "sep": 0.385,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 14,
+    "iid": 2000001608,
+    "sid": 1608,
+    "cat": 2,
+    "ids": [
+      3016080117,
+      3016080217
+    ],
+    "sep": 0.216,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 15,
+    "iid": 2000016592,
+    "sid": 16592,
+    "cat": 1,
+    "ids": [
+      3165920112,
+      3165920212
+    ],
+    "sep": 0.366,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 16,
+    "iid": 2000017049,
+    "sid": 17049,
+    "cat": 1,
+    "ids": [
+      3170490112,
+      3170490312
+    ],
+    "sep": 0.449,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 17,
+    "iid": 2000017049,
+    "sid": 17049,
+    "cat": 2,
+    "ids": [
+      3170490117,
+      3170490317
+    ],
+    "sep": 0.421,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 18,
+    "iid": 2000017673,
+    "sid": 17673,
+    "cat": 1,
+    "ids": [
+      3176730112,
+      3176730214
+    ],
+    "sep": 0.494,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 19,
+    "iid": 2000017673,
+    "sid": 17673,
+    "cat": 2,
+    "ids": [
+      3176730117,
+      3176730217
+    ],
+    "sep": 0.609,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 20,
+    "iid": 2000017698,
+    "sid": 17698,
+    "cat": 1,
+    "ids": [
+      3176980112,
+      3176980215
+    ],
+    "sep": 0.375,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 21,
+    "iid": 2000017698,
+    "sid": 17698,
+    "cat": 7,
+    "ids": [
+      3176980145,
+      3176980245
+    ],
+    "sep": 0.385,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 22,
+    "iid": 2000017840,
+    "sid": 17840,
+    "cat": 4,
+    "ids": [
+      3178400134,
+      3178400234
+    ],
+    "sep": 0.439,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 23,
+    "iid": 2000018232,
+    "sid": 18232,
+    "cat": 2,
+    "ids": [
+      3182320117,
+      3182320317
+    ],
+    "sep": 0.685,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 24,
+    "iid": 2000018232,
+    "sid": 18232,
+    "cat": 4,
+    "ids": [
+      3182320134,
+      3182320334
+    ],
+    "sep": 0.593,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 25,
+    "iid": 2000018540,
+    "sid": 18540,
+    "cat": 1,
+    "ids": [
+      3185400314,
+      3185400412
+    ],
+    "sep": 0.213,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 26,
+    "iid": 2000018540,
+    "sid": 18540,
+    "cat": 2,
+    "ids": [
+      3185400317,
+      3185400417
+    ],
+    "sep": 0.232,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 27,
+    "iid": 2000018540,
+    "sid": 18540,
+    "cat": 4,
+    "ids": [
+      3185400311,
+      3185400411
+    ],
+    "sep": 0.248,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 28,
+    "iid": 2000019104,
+    "sid": 19104,
+    "cat": 1,
+    "ids": [
+      3191040113,
+      3191040213
+    ],
+    "sep": 0.409,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 29,
+    "iid": 2000019104,
+    "sid": 19104,
+    "cat": 2,
+    "ids": [
+      3191040118,
+      3191040218
+    ],
+    "sep": 0.423,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 30,
+    "iid": 2000019845,
+    "sid": 19845,
+    "cat": 1,
+    "ids": [
+      3198450112,
+      3198450214
+    ],
+    "sep": 0.348,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 31,
+    "iid": 2000019879,
+    "sid": 19879,
+    "cat": 1,
+    "ids": [
+      3198790112,
+      3198790212
+    ],
+    "sep": 0.309,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 32,
+    "iid": 2000019879,
+    "sid": 19879,
+    "cat": 4,
+    "ids": [
+      3198790134,
+      3198790211
+    ],
+    "sep": 0.312,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 33,
+    "iid": 2000019886,
+    "sid": 19886,
+    "cat": 5,
+    "ids": [
+      3198860135,
+      3198860435
+    ],
+    "sep": 0.44,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 34,
+    "iid": 2000020008,
+    "sid": 20008,
+    "cat": 1,
+    "ids": [
+      3200080112,
+      3200080212
+    ],
+    "sep": 0.369,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 35,
+    "iid": 2000020008,
+    "sid": 20008,
+    "cat": 2,
+    "ids": [
+      3200080118,
+      3200080218
+    ],
+    "sep": 0.373,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 36,
+    "iid": 2000020785,
+    "sid": 20785,
+    "cat": 5,
+    "ids": [
+      3207850335,
+      3207850435
+    ],
+    "sep": 0.212,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 37,
+    "iid": 2000021464,
+    "sid": 21464,
+    "cat": 1,
+    "ids": [
+      3214640115,
+      3214640212
+    ],
+    "sep": 0.459,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 38,
+    "iid": 2000022145,
+    "sid": 22145,
+    "cat": 1,
+    "ids": [
+      3221450112,
+      3221450212
+    ],
+    "sep": 0.284,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 39,
+    "iid": 2000022145,
+    "sid": 22145,
+    "cat": 2,
+    "ids": [
+      3221450117,
+      3221450217
+    ],
+    "sep": 0.276,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 40,
+    "iid": 2000022145,
+    "sid": 22145,
+    "cat": 4,
+    "ids": [
+      3221450134,
+      3221450234
+    ],
+    "sep": 0.358,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 41,
+    "iid": 2000022810,
+    "sid": 22810,
+    "cat": 1,
+    "ids": [
+      3228100115,
+      3228100215
+    ],
+    "sep": 0.618,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 42,
+    "iid": 2000022810,
+    "sid": 22810,
+    "cat": 2,
+    "ids": [
+      3228100118,
+      3228100218
+    ],
+    "sep": 0.573,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 43,
+    "iid": 2000002329,
+    "sid": 2329,
+    "cat": 1,
+    "ids": [
+      3023290112,
+      3023290215
+    ],
+    "sep": 0.259,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 44,
+    "iid": 2000002329,
+    "sid": 2329,
+    "cat": 2,
+    "ids": [
+      3023290117,
+      3023290217
+    ],
+    "sep": 0.309,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 45,
+    "iid": 2000002467,
+    "sid": 2467,
+    "cat": 2,
+    "ids": [
+      3024670117,
+      3024670217
+    ],
+    "sep": 0.313,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 46,
+    "iid": 2000002473,
+    "sid": 2473,
+    "cat": 1,
+    "ids": [
+      3024730112,
+      3024730212
+    ],
+    "sep": 0.2,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 47,
+    "iid": 2000025602,
+    "sid": 25602,
+    "cat": 5,
+    "ids": [
+      3256020135,
+      3256020235
+    ],
+    "sep": 0.224,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 48,
+    "iid": 2000025602,
+    "sid": 25602,
+    "cat": 7,
+    "ids": [
+      3256020145,
+      3256020245
+    ],
+    "sep": 0.187,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 49,
+    "iid": 2000003023,
+    "sid": 3023,
+    "cat": 1,
+    "ids": [
+      3030230112,
+      3030230212
+    ],
+    "sep": 0.239,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 50,
+    "iid": 2000003023,
+    "sid": 3023,
+    "cat": 2,
+    "ids": [
+      3030230117,
+      3030230217
+    ],
+    "sep": 0.287,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 51,
+    "iid": 2000000363,
+    "sid": 363,
+    "cat": 1,
+    "ids": [
+      3003630115,
+      3003630215
+    ],
+    "sep": 0.485,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 52,
+    "iid": 2000003962,
+    "sid": 3962,
+    "cat": 1,
+    "ids": [
+      3039620112,
+      3039620215
+    ],
+    "sep": 0.252,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 53,
+    "iid": 2000003962,
+    "sid": 3962,
+    "cat": 2,
+    "ids": [
+      3039620117,
+      3039620217
+    ],
+    "sep": 0.294,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 54,
+    "iid": 2000004758,
+    "sid": 4758,
+    "cat": 2,
+    "ids": [
+      3047580117,
+      3047580217
+    ],
+    "sep": 0.404,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 55,
+    "iid": 2000004758,
+    "sid": 4758,
+    "cat": 5,
+    "ids": [
+      3047580135,
+      3047580235
+    ],
+    "sep": 0.41,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 56,
+    "iid": 2000004943,
+    "sid": 4943,
+    "cat": 1,
+    "ids": [
+      3049430112,
+      3049430212
+    ],
+    "sep": 0.593,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 57,
+    "iid": 2000004943,
+    "sid": 4943,
+    "cat": 2,
+    "ids": [
+      3049430117,
+      3049430218
+    ],
+    "sep": 0.599,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 58,
+    "iid": 2000004994,
+    "sid": 4994,
+    "cat": 2,
+    "ids": [
+      3049940117,
+      3049940217
+    ],
+    "sep": 0.441,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 59,
+    "iid": 2000004994,
+    "sid": 4994,
+    "cat": 4,
+    "ids": [
+      3049940111,
+      3049940211
+    ],
+    "sep": 0.389,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 60,
+    "iid": 2000005491,
+    "sid": 5491,
+    "cat": 2,
+    "ids": [
+      3054910117,
+      3054910217
+    ],
+    "sep": 0.217,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 61,
+    "iid": 2000006629,
+    "sid": 6629,
+    "cat": 2,
+    "ids": [
+      3066290217,
+      3066290117
+    ],
+    "sep": 0.255,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 62,
+    "iid": 2000007245,
+    "sid": 7245,
+    "cat": 1,
+    "ids": [
+      3072450112,
+      3072450214
+    ],
+    "sep": 0.284,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 63,
+    "iid": 2000007245,
+    "sid": 7245,
+    "cat": 2,
+    "ids": [
+      3072450117,
+      3072450217
+    ],
+    "sep": 0.289,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 64,
+    "iid": 2000007251,
+    "sid": 7251,
+    "cat": 1,
+    "ids": [
+      3072510112,
+      3072510212
+    ],
+    "sep": 0.273,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 65,
+    "iid": 2000007251,
+    "sid": 7251,
+    "cat": 2,
+    "ids": [
+      3072510117,
+      3072510217
+    ],
+    "sep": 0.369,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 66,
+    "iid": 2000007279,
+    "sid": 7279,
+    "cat": 1,
+    "ids": [
+      3072790114,
+      3072790214
+    ],
+    "sep": 0.191,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 67,
+    "iid": 2000007279,
+    "sid": 7279,
+    "cat": 2,
+    "ids": [
+      3072790117,
+      3072790217
+    ],
+    "sep": 0.241,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 68,
+    "iid": 2000007286,
+    "sid": 7286,
+    "cat": 1,
+    "ids": [
+      3072860115,
+      3072860212
+    ],
+    "sep": 0.293,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 69,
+    "iid": 2000007286,
+    "sid": 7286,
+    "cat": 2,
+    "ids": [
+      3072860117,
+      3072860217
+    ],
+    "sep": 0.289,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 70,
+    "iid": 2000007523,
+    "sid": 7523,
+    "cat": 1,
+    "ids": [
+      3075230112,
+      3075230215
+    ],
+    "sep": 0.368,
+    "decision": "draft_pair",
+    "color_pair": true,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 71,
+    "iid": 2000007523,
+    "sid": 7523,
+    "cat": 2,
+    "ids": [
+      3075230117,
+      3075230217
+    ],
+    "sep": 0.424,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 72,
+    "iid": 2000008162,
+    "sid": 8162,
+    "cat": 1,
+    "ids": [
+      3081620112,
+      3081620215
+    ],
+    "sep": 0.232,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 73,
+    "iid": 2000008604,
+    "sid": 8604,
+    "cat": 1,
+    "ids": [
+      3086040115,
+      3086040215
+    ],
+    "sep": 0.469,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      false
+    ],
+    "both_covered": false
+  },
+  {
+    "proposal": 74,
+    "iid": 2000008604,
+    "sid": 8604,
+    "cat": 4,
+    "ids": [
+      3086040111,
+      3086040211
+    ],
+    "sep": 0.37,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 75,
+    "iid": 2000009268,
+    "sid": 9268,
+    "cat": 1,
+    "ids": [
+      3092680112,
+      3092680215
+    ],
+    "sep": 0.185,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 76,
+    "iid": 2000009268,
+    "sid": 9268,
+    "cat": 2,
+    "ids": [
+      3092680117,
+      3092680217
+    ],
+    "sep": 0.214,
+    "decision": "draft_pair",
+    "color_pair": false,
+    "targets_covered": [
+      true,
+      true
+    ],
+    "both_covered": true
+  },
+  {
+    "proposal": 77,
+    "iid": 2000009297,
+    "sid": 9297,
+    "cat": 5,
+    "ids": [
+      3092970135,
+      3092970235
+    ],
+    "sep": 0.219,
+    "decision": "withheld",
+    "color_pair": false,
+    "targets_covered": [
+      false,
+      true
+    ],
+    "both_covered": false
+  }
+]

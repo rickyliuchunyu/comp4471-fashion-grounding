@@ -1,0 +1,85 @@
+{
+  "scope": "MHP v2 official train pilot; weak semantic labels; single CPU inference; not a dev or test accuracy",
+  "sample": 100,
+  "query_images": 33,
+  "semantic_queries": 136,
+  "bilingual_rows": 272,
+  "gt_instances": 814,
+  "predicted_instances": 845,
+  "no_candidate_images": 0,
+  "match_policy": "same project class; descending candidate score, unique GT assignment at mask IoU >= 0.5",
+  "coverage": {
+    "all_geometric_pairs": {
+      "pairs": 77,
+      "images": 45,
+      "both": 43,
+      "one": 24,
+      "neither": 10,
+      "images_with_both": 27
+    },
+    "visually_selected_direction_pairs": {
+      "pairs": 50,
+      "images": 33,
+      "both": 38,
+      "one": 8,
+      "neither": 4,
+      "images_with_both": 25
+    },
+    "visually_selected_color_pairs": {
+      "pairs": 18,
+      "images": 14,
+      "both": 12,
+      "one": 4,
+      "neither": 2,
+      "images_with_both": 9
+    }
+  },
+  "per_class": {
+    "top": {
+      "direction_pairs": 21,
+      "color_pairs": 10,
+      "both_covered_direction_pairs": 16
+    },
+    "pants": {
+      "direction_pairs": 17,
+      "color_pairs": 4,
+      "both_covered_direction_pairs": 14
+    },
+    "skirt": {
+      "direction_pairs": 0,
+      "color_pairs": 0,
+      "both_covered_direction_pairs": 0
+    },
+    "outerwear": {
+      "direction_pairs": 8,
+      "color_pairs": 2,
+      "both_covered_direction_pairs": 6
+    },
+    "dress": {
+      "direction_pairs": 2,
+      "color_pairs": 1,
+      "both_covered_direction_pairs": 1
+    },
+    "shoes": {
+      "direction_pairs": 0,
+      "color_pairs": 0,
+      "both_covered_direction_pairs": 0
+    },
+    "bag": {
+      "direction_pairs": 2,
+      "color_pairs": 1,
+      "both_covered_direction_pairs": 1
+    },
+    "accessory": {
+      "direction_pairs": 0,
+      "color_pairs": 0,
+      "both_covered_direction_pairs": 0
+    }
+  },
+  "segmentation": {
+    "scorer": "lcy Mask2Former 50k, CPU native reference forward",
+    "score_threshold": 0.3,
+    "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+    "candidate_manifest_sha256": "9cce8498f243b5bf3d9302a41c5680edd9712f932e4ff6a080f3406132526f4c"
+  }
+}
