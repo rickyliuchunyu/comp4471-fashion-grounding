@@ -4,6 +4,23 @@ from collections import Counter
 from pathlib import Path
 from expand_segmentation_staged import *
 from build_staged_segmentation import verify_membership
+def bridge_report(audit,protected):
+ protected={x["key"]:x for x in protected}
+ roles={}
+ for name,label in [("fp_dev250_v1","fixed_dev250"),("fp_test400_holdout_v1","fixed_test400")]:
+  for im in read_json(SHARED/name/"image_manifest.json")["images"]:roles["val-"+im["source_image_id"]]=label
+ for row in read_json(REPO/"docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json")["images"]:
+  roles["val-"+str(row["image_id"]-10**9-1)]=row["status"]
+ oldkeys={"train-"+im["source_image_id"] for im in read_json(PARENT/"image_manifest.json")["images"]}
+ components={tuple(sorted(r["component"])) for r in audit["excluded"] if "component" in r}
+ bridges=[]
+ for comp in sorted(components):
+  train=[k for k in comp if k in protected and k.startswith("train-")];val=[k for k in comp if k in protected and k.startswith("val-")]
+  if train and val:
+   bridges.append({"component":list(comp),"frozen_train_keys":train,"protected_val_keys":val,"actual_old10k_keys":[k for k in train if k in oldkeys],"validation_roles":{k:roles.get(k,"associated_group_member_not_fixed_dev_test_or_exposed50") for k in val},"active_split_bridge":bool(set(train)&oldkeys and any(k in roles for k in val)),"action":"all_new_members_quarantined; frozen_groups_unchanged","interpretation":"perceptual/URL component clue, not visually confirmed leakage"})
+ report={"count":len(bridges),"active_frozen_train_dev_test_exposure_bridge_count":sum(r["active_split_bridge"] for r in bridges),"cross_train_validation_components":bridges,"test_pixels_viewed":False,"review_status":"active bridge clues require separate data-owner disposition; no old split changed"}
+ write_json(RUN/"bridge_audit.json",report)
+ return report
 def main():
  selection=read_json(RUN/"selected.json");inv=read_json(RUN/"eligible_inventory.json");protected=read_json(RUN/"protected_fingerprints.json")
  audit=read_json(RUN/"duplicate_audit.json");blocked={r["key"] for r in audit["excluded"]};oldkeys={x["key"] for x in protected}
@@ -38,6 +55,9 @@ def main():
   reports.append({"phase":n,"new_images":5000,"new_annotations":len(co["annotations"]),"source_masks_checked":evidence["source_masks_pixel_identical"],"source_supported_boundary_images":evidence["source_supported_complex_images"],"proxy_images":evidence["geometry_proxy_images"]})
  for p,h in read_json(RUN/"protection_inputs.json").items():require(sha256(p)==h,"protected file changed")
  for p,h in PINS.items():require(sha256(PARENT/p)==h,"old10k changed")
+ for package,files in read_json(RUN/"input_preflight.json")["protected_pins"].items():
+  for name,h in files.items():require(sha256(SHARED/package/name)==h,"protected fixed pin changed")
  report={"status":"passed","new_images":len(keys),"protected_fingerprints":len(protected),"new_duplicate_conflicts":0,"new_vs_old_and_new_only":True,"old_old_comparisons":0,"phash_orientations":4,"phash_threshold":6,"source_identity_namespace":"fashionpedia/official_train2020/source_id vs fashionpedia/official_val2020/source_id","phases":reports,"parent_pins_and_protection_manifests_unchanged":True,"not_claimed":"No new exhaustive human review or proof that perceptual hashing finds all related products."}
+ report["bridge_audit"]=bridge_report(audit,protected)
  write_json(RUN/"independent_checks.json",report);print(json.dumps(report,indent=2))
 if __name__=="__main__":main()

@@ -169,10 +169,14 @@ def preview():
  write_json(output/"sample_manifest.json",sample);print("PREVIEW_READY",len(sample),flush=True)
 def publish():
  require(read_json(RUN/"visual_audit.json")["status"]=="ai_spot_checked","visual audit not done")
- for f,h in read_json(RUN/"protection_inputs.json").items():require(sha256(f)==h,"protected manifest changed")
+ protection=read_json(RUN/"protection_inputs.json")
+ require({str(p) for p in SHARED.glob("fp_language_dev*/image_manifest.json")}<=set(protection),"new dev protection appeared; recheck selection")
+ for f,h in protection.items():require(sha256(f)==h,"protected manifest changed")
+ for package,files in read_json(RUN/"input_preflight.json")["protected_pins"].items():
+  for name,h in files.items():require(sha256(SHARED/package/name)==h,"protected fixed pin changed")
  for f,h in PINS.items():require(sha256(PARENT/f)==h,"parent changed")
  commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=REPO,text=True).strip()
- auditnames=["input_preflight.json","feasibility_metadata.json","feasibility_checked.json","duplicate_audit.json","protected_fingerprints.json","protection_inputs.json","distribution_report.json","distribution_summary.csv","download_provenance.json","visual_audit.json","independent_checks.json","focused_tests.txt"]
+ auditnames=["input_preflight.json","feasibility_metadata.json","feasibility_checked.json","duplicate_audit.json","bridge_audit.json","protected_fingerprints.json","protection_inputs.json","distribution_report.json","distribution_summary.csv","download_provenance.json","visual_audit.json","independent_checks.json","focused_tests.txt"]
  releases=[]
  for n in (1,2):
   out=RUN/f"fp_train{10000+n*5000}_targeted_v1";delta=RUN/f"fp_added5000_stage{n}_20261118"
