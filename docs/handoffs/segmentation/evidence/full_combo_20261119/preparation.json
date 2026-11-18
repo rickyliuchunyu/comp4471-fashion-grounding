@@ -1,0 +1,129 @@
+{
+  "at": "2026-11-19T02:01:25.803907+08:00",
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_pids": [],
+  "shared_lock_free": true,
+  "running_records": [],
+  "free_bytes": {
+    "/root/autodl-tmp/fashion-grounding": 129237848064,
+    "/": 28914487296
+  },
+  "training_output_created": false,
+  "implementation_commit": "5966dd1ceae3a096a182168c384be36af9149829",
+  "status": "prepared_not_started",
+  "executed_checks": [
+    "test_plan_and_equal_update_number_selection",
+    "test_point_counts_have_known_geometry",
+    "test_scale_pairs_and_sampled_updates_survive_split_without_rng",
+    "test_score_components_survive_cache_and_threshold_projection",
+    "test_mapper_preserves_identity_at_both_sizes",
+    "test_real_final_loss_points_preserve_auxiliary_losses_and_rng"
+  ],
+  "tests_device": "cpu",
+  "training_updates": 0,
+  "model_forwards": 0,
+  "dev_evaluations": 0,
+  "baseline_mask_AP": 71.32050253253068,
+  "training_checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+  "total_hard_seconds": 28800,
+  "stages": [
+    {
+      "stage_name": "update_014159",
+      "new_run_update": 14159,
+      "train": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train_full_eligible_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/launch_config.json",
+        "--input-validation-bundle",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_single_inputs.json",
+        "--stop-after",
+        "14159",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_014159/train",
+        "--model-only",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_combo_model_only.json"
+      ],
+      "full_dev": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.evaluate",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+        "--training-package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train_full_eligible_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_dev250.json",
+        "--input-validation-bundle",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_single_inputs.json",
+        "--checkpoints",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_014159/train/checkpoint_014159.pth",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_014159/dev"
+      ]
+    },
+    {
+      "stage_name": "update_028318",
+      "new_run_update": 28318,
+      "train": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train_full_eligible_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/launch_config.json",
+        "--input-validation-bundle",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_single_inputs.json",
+        "--stop-after",
+        "28318",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train",
+        "--resume",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_014159/train/checkpoint_014159.pth"
+      ],
+      "full_dev": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.evaluate",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+        "--training-package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train_full_eligible_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_dev250.json",
+        "--input-validation-bundle",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_single_inputs.json",
+        "--checkpoints",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/dev"
+      ]
+    }
+  ],
+  "planned_image_draws_by_size": {
+    "896": {
+      "uniform": 21267,
+      "sock": 1758,
+      "belt": 1765,
+      "shoe": 3528
+    },
+    "768": {
+      "uniform": 21209,
+      "shoe": 3552,
+      "belt": 1775,
+      "sock": 1782
+    }
+  }
+}
