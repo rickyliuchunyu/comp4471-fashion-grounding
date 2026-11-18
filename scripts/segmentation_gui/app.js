@@ -143,7 +143,7 @@ async function prepare(data) {
       })
     )
   ]);
-  return { size: data.size, original, instances };
+  return { size: data.size, original, instances, execution: data.execution };
 }
 function show(result) {
   state.result = result;
@@ -195,9 +195,12 @@ function uploadView() {
   $('photoName').textContent = state.file ? state.file.name : '选择一张服饰照片';
   $('run').disabled = !state.file || state.busy;
   $('file').disabled = state.busy;
+  $('device').disabled = state.busy;
   if (state.uploaded) {
     show(state.uploaded);
-    message($('modelVersion').textContent + ' · CPU 推理完成');
+    const { device, name, reason } = state.uploaded.execution;
+    const label = device === 'cuda' ? 'GPU · ' + name : 'CPU';
+    message($('modelVersion').textContent + ' · ' + label + ' 推理完成' + (reason ? '（' + reason + '）' : ''));
     return;
   }
   clear(state.file ? '准备分割' : '选择图片后可在这里对照原图与预测。');
@@ -213,7 +216,7 @@ function uploadView() {
     ctx.font = '18px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(state.busy ? '正在分割…' : '点击「开始分割」查看结果', 300, 155);
-    message(state.busy ? '项目服务器 CPU 正在处理…' : '待提交');
+    message(state.busy ? '项目服务器正在处理…' : '待提交');
   }
 }
 function mode(value) {
@@ -276,7 +279,7 @@ $('run').onclick = async () => {
   try {
     const response = await fetch('/api/predict', {
       method: 'POST',
-      headers: { 'X-Viewer-Token': state.token },
+      headers: { 'X-Viewer-Token': state.token, 'X-Inference-Device': $('device').value },
       body: state.file
     });
     state.uploaded = await prepare(await jsonResponse(response));

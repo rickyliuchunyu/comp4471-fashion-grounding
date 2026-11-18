@@ -1,5 +1,6 @@
 """Linux shared-GPU entry point. Lock is advisory; all roles must adopt it."""
 import argparse
+from contextlib import contextmanager
 from datetime import datetime, timezone
 import fcntl
 import json
@@ -8,6 +9,28 @@ from pathlib import Path
 import signal
 import subprocess
 import time
+
+
+class GpuOccupied(RuntimeError):
+    pass
+
+
+@contextmanager
+def idle_gpu(root):
+    """Hold the team lock only after checking running records and NVIDIA usage."""
+    with (root / 'gpu.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        for path in root.glob('*.json'):
+            record = json.loads(path.read_text())
+            if record.get('status') == 'running':
+                raise GpuOccupied(f'Unresolved running record: {path.name}; verify its process first')
+        processes = subprocess.check_output(['nvidia-smi', '--query-compute-apps=pid', '--format=csv,noheader'], text=True).strip()
+        memory = subprocess.check_output(['nvidia-smi', '--query-gpu=memory.used', '--format=csv,noheader,nounits'], text=True)
+        if not memory.strip():
+            raise ValueError("No GPU memory reading")
+        if processes or any(int(line) > 256 for line in memory.splitlines()):
+            raise GpuOccupied('GPU occupied; refusing to launch')
+        yield
 
 
 def main():
@@ -23,16 +46,7 @@ def main():
     command = args.command[1:] if args.command[0] == '--' else args.command
     root = Path(args.coordination)
     root.mkdir(parents=True, exist_ok=True)
-    with (root / 'gpu.lock').open('a') as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        for path in root.glob('*.json'):
-            record = json.loads(path.read_text())
-            if record.get('status') == 'running':
-                raise RuntimeError(f'Unresolved running record: {path.name}; verify its process first')
-        processes = subprocess.check_output(['nvidia-smi', '--query-compute-apps=pid', '--format=csv,noheader'], text=True).strip()
-        memory = subprocess.check_output(['nvidia-smi', '--query-gpu=memory.used', '--format=csv,noheader,nounits'], text=True)
-        if processes or any(int(line) > 256 for line in memory.splitlines()):
-            raise RuntimeError('GPU occupied; refusing to launch')
+    with idle_gpu(root):
         path = root / (args.run_id + '.json')
         record = dict(role='segmentation', executed_by='lcy', run_id=args.run_id, status='running',
                       wrapper_pid=os.getpid(), started_at=datetime.now(timezone.utc).isoformat(),

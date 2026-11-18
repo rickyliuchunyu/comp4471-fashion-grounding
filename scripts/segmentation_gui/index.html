@@ -30,10 +30,17 @@
         <div>
           <strong>分割自己的图片</strong>
           <p>
-            JPG、PNG 或 WebP，最大 20 MB。点击开始后发送至项目服务器 CPU，处理长边最大 1,440 像素。
+            JPG、PNG 或 WebP，最大 20 MB。点击开始后发送至项目服务器，处理长边最大 1,440 像素。
           </p>
         </div>
         <div class="upload-actions">
+          <label class="device-label">推理设备
+            <select id="device">
+              <option value="auto" selected>自动（优先 GPU）</option>
+              <option value="cuda">仅 GPU</option>
+              <option value="cpu">仅 CPU</option>
+            </select>
+          </label>
           <label class="file-button"
             >选择图片<input id="file" type="file" accept="image/jpeg,image/png,image/webp" /></label
           ><button id="run" disabled>开始分割</button>

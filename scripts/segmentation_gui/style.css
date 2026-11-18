@@ -25,6 +25,7 @@ body {
     sans-serif;
 }
 button,
+select,
 input {
   font: inherit;
 }
@@ -33,6 +34,7 @@ button,
   cursor: pointer;
 }
 button:focus-visible,
+select:focus-visible,
 input:focus-visible,
 .file-button:focus-within {
   outline: 3px solid #3b9978;
@@ -455,8 +457,13 @@ input[role='switch']:checked:before {
 }
 .upload-actions {
   gap: 8px;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
+.device-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+#device,
 .file-button,
 #run {
   position: relative;

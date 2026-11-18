@@ -87,25 +87,30 @@ def normalize(raw):
         return buf.getvalue(), list(image.size)
 
 
-def predict(data, size):
+def predict(data, size, device):
     settings = json.loads((LOCAL / 'ssh.json').read_text())
     server_root = Path(settings['root'])
     checkout = server_root / 'workspaces/segmentation'
-    worker = (HERE / 'cpu_predict.py').read_text()
-    command = ['timeout', '-k', '5', '120', 'nice', '-n', '10', 'env', 'CUDA_VISIBLE_DEVICES=',
+    worker = (HERE / 'predict_upload.py').read_text()
+    command = ['timeout', '-k', '5', '120', 'nice', '-n', '10', 'env',
                'PYTHONDONTWRITEBYTECODE=1', 'OMP_NUM_THREADS=2', 'OPENBLAS_NUM_THREADS=1',
-               'PYTHONPATH=' + str(checkout / 'src'), str(server_root / 'envs/segmentation-v1/bin/python'),
-               '-c', worker, json.dumps(dict(model=MODEL, checkpoint_path=RELEASE['checkpoint']['path'],
+               'PYTHONPATH=' + str(checkout / 'src') + ':' + str(checkout / 'scripts'), str(server_root / 'envs/segmentation-v1/bin/python'),
+               '-c', worker, json.dumps(dict(device=device, model=MODEL, checkpoint_path=RELEASE['checkpoint']['path'],
                                              export_config=RELEASE['export_config']))]
     remote = 'cd ' + shlex.quote(str(checkout)) + ' && ' + shlex.join(command)
     result = subprocess.run(settings['ssh'] + [remote], input=data, capture_output=True, timeout=145)
     if result.returncode:
         print(result.stderr.decode(errors='replace')[-1200:], file=sys.stderr, flush=True)
-        raise RuntimeError('项目服务器 CPU 推理未完成，请检查 SSH 连接后重试。')
+        raise RuntimeError('项目服务器推理未完成，请检查 SSH 连接后重试。')
     response = json.loads(result.stdout)
+    if 'error' in response:
+        raise RuntimeError(response['error'] + '，请稍后重试或选择自动模式。')
+    execution = response['execution']
+    if execution['device'] not in ({'cpu', 'cuda'} if device == 'auto' else {device}):
+        raise RuntimeError('服务器返回的设备与请求不一致。')
     if response['model'] != MODEL or response['size'] != size:
         raise RuntimeError('返回的模型版本或图片尺寸不一致。')
-    return dict(model=MODEL, image=png_url(data), size=size, instances=[display_instance(c, c['rle']) for c in response['instances']])
+    return dict(model=MODEL, execution=execution, image=png_url(data), size=size, instances=[display_instance(c, c['rle']) for c in response['instances']])
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -156,6 +161,9 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_error(404)
         if not self.local() or self.headers.get('Origin') != 'http://' + self.server.authority or self.headers.get('X-Viewer-Token') != TOKEN:
             return self.send_error(403)
+        device = self.headers.get('X-Inference-Device', 'auto')
+        if device not in {'auto', 'cuda', 'cpu'}:
+            return self.respond_json(400, dict(error='请选择有效的推理设备。'))
         length = self.headers.get('Content-Length', '')
         if not length.isdigit() or not 0 < int(length) <= MAX_BYTES:
             return self.respond_json(413, dict(error='请选择 20 MB 以内的图片。'))
@@ -163,11 +171,11 @@ class Handler(BaseHTTPRequestHandler):
             return self.respond_json(409, dict(error='另一张图片正在分割，请稍后重试。'))
         try:
             data, size = normalize(self.rfile.read(int(length)))
-            self.respond_json(200, predict(data, size))
+            self.respond_json(200, predict(data, size, device))
         except (ValueError, UnidentifiedImageError, Image.DecompressionBombError):
             self.respond_json(400, dict(error='图片无法读取，请试用 6000 万像素以内的 JPG、PNG 或 WebP。'))
         except (OSError, RuntimeError, subprocess.TimeoutExpired) as exc:
-            self.respond_json(503, dict(error=str(exc) if isinstance(exc, RuntimeError) else '暂时无法完成 CPU 推理，请检查服务器连接后重试。'))
+            self.respond_json(503, dict(error=str(exc) if isinstance(exc, RuntimeError) else '暂时无法完成推理，请检查服务器连接后重试。'))
         finally:
             UPLOAD.release()
 
