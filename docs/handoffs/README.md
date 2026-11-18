@@ -41,3 +41,5 @@ Grounding 2026-11-18：[50k 候选接入与开发集评价](grounding/u50000_dev
 Grounding 2026-11-18：[方位训练增量、颜色分组和草稿诊断](grounding/direction_increment_20261118.md)。
 
 Grounding 2026-11-18：[方位监督占比和空间分支对照](grounding/spatial_supervision_20261118.md)。
+
+Grounding 2026-11-18：[同图双目标训练损失对照](grounding/pair_objective_20261118.md)。

@@ -1,0 +1,736 @@
+{
+  "experiment": {
+    "git_commit": "a1e666993c2f5d870d22fdd57a2d896e771bc9e8",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/compare_pair_objective.py",
+      "--config",
+      "configs/grounding_direction_increment_20261118.json",
+      "--previous",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01",
+      "--device",
+      "cuda"
+    ],
+    "config_sha256": "58221b9f1f9b07c4b669fb7d203dd0d9638c761d25a9883716d46e3bcc21e1d8",
+    "models": {
+      "M2-CE": {
+        "git_commit": "992acef29698fe9848e418a8bb25df19d470c4c0",
+        "working_tree_dirty": false,
+        "command": [
+          "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+          "-m",
+          "fashion_grounding.grounding.controlled",
+          "--config",
+          "configs/grounding_direction_increment_20261118.json",
+          "--previous-run",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01",
+          "--output",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+          "--device",
+          "cuda"
+        ],
+        "torch": "2.1.2+cu121",
+        "numpy": "1.26.4",
+        "device": "cuda",
+        "owner": "grounding",
+        "executed_by": "wyz",
+        "method": "M2",
+        "seed": 42,
+        "optimizer_updates": 490,
+        "batch_size": 32,
+        "training_query_presentations": 15680,
+        "eligible_queries": 3604,
+        "single_candidate_excluded": 36,
+        "selection": "maximum accepted GT dev accuracy; tie earliest update",
+        "selected_update": 392,
+        "selected_dev_correct": 597,
+        "dev_queries": 642,
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01/M2-pairs50/update_0392.pt",
+        "checkpoint_sha256": "3b42e877a883625edb98811ce5304c6761cbd760aeb954bb647b90b1f0a7ee6b",
+        "training_order_sha256": "552b42807640a7096c45ef7cc95495f029bd6315439a9bbc3131c206366d2ddb",
+        "trainable_parameters": 702082,
+        "encoder_parameters_in_optimizer": 0,
+        "train_inputs": {
+          "candidates": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+          "queries": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+          "images": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb"
+        },
+        "dev_inputs": {
+          "candidates": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+          "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+          "images": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf"
+        },
+        "checkpoint_replay_exact": true,
+        "training_labels": "AI weak labels, not human accepted",
+        "elapsed_seconds": 9.755897536873817,
+        "status": "completed"
+      },
+      "M2-pair-full": {
+        "git_commit": "a1e666993c2f5d870d22fdd57a2d896e771bc9e8",
+        "working_tree_dirty": false,
+        "command": [
+          "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+          "-m",
+          "fashion_grounding.grounding.controlled",
+          "--config",
+          "configs/grounding_direction_increment_20261118.json",
+          "--previous",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+          "--output",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01",
+          "--device",
+          "cuda"
+        ],
+        "torch": "2.1.2+cu121",
+        "numpy": "1.26.4",
+        "device": "cuda",
+        "owner": "grounding",
+        "executed_by": "wyz",
+        "method": "M2",
+        "seed": 42,
+        "optimizer_updates": 490,
+        "batch_size": 32,
+        "training_query_presentations": 15680,
+        "eligible_queries": 3604,
+        "single_candidate_excluded": 36,
+        "selection": "maximum accepted GT dev accuracy; tie earliest update",
+        "selected_update": 490,
+        "selected_dev_correct": 594,
+        "dev_queries": 642,
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01/M2-pair-full/update_0490.pt",
+        "checkpoint_sha256": "3bfdab6d54b4ffcd5771fb4e9e2f03f6bf6f6170212c6433df98a1a1a3426d8d",
+        "training_order_sha256": "552b42807640a7096c45ef7cc95495f029bd6315439a9bbc3131c206366d2ddb",
+        "trainable_parameters": 702082,
+        "encoder_parameters_in_optimizer": 0,
+        "train_inputs": {
+          "candidates": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+          "queries": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+          "images": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb"
+        },
+        "dev_inputs": {
+          "candidates": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+          "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+          "images": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf"
+        },
+        "checkpoint_replay_exact": true,
+        "training_labels": "AI weak labels, not human accepted",
+        "elapsed_seconds": 10.684432376176119,
+        "status": "completed"
+      },
+      "M2-pair-geometry": {
+        "git_commit": "a1e666993c2f5d870d22fdd57a2d896e771bc9e8",
+        "working_tree_dirty": false,
+        "command": [
+          "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+          "-m",
+          "fashion_grounding.grounding.controlled",
+          "--config",
+          "configs/grounding_direction_increment_20261118.json",
+          "--previous",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+          "--output",
+          "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01",
+          "--device",
+          "cuda"
+        ],
+        "torch": "2.1.2+cu121",
+        "numpy": "1.26.4",
+        "device": "cuda",
+        "owner": "grounding",
+        "executed_by": "wyz",
+        "method": "M2",
+        "seed": 42,
+        "optimizer_updates": 490,
+        "batch_size": 32,
+        "training_query_presentations": 15680,
+        "eligible_queries": 3604,
+        "single_candidate_excluded": 36,
+        "selection": "maximum accepted GT dev accuracy; tie earliest update",
+        "selected_update": 392,
+        "selected_dev_correct": 596,
+        "dev_queries": 642,
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01/M2-pair-geometry/update_0392.pt",
+        "checkpoint_sha256": "0c754f57c7228287eea6e47c0c611de7ff25295f31f4c2cb562dde4b61fa5e59",
+        "training_order_sha256": "552b42807640a7096c45ef7cc95495f029bd6315439a9bbc3131c206366d2ddb",
+        "trainable_parameters": 702082,
+        "encoder_parameters_in_optimizer": 0,
+        "train_inputs": {
+          "candidates": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+          "queries": "93212c0573b48aa4dc65e0c6369e68e53750bc8b683d6183b395d9aa19fe827e",
+          "images": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb"
+        },
+        "dev_inputs": {
+          "candidates": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+          "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+          "images": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf"
+        },
+        "checkpoint_replay_exact": true,
+        "training_labels": "AI weak labels, not human accepted",
+        "elapsed_seconds": 13.429987911134958,
+        "status": "completed"
+      }
+    },
+    "draft": {
+      "all": {
+        "queries": 296,
+        "images": 74,
+        "methods": {
+          "M2-CE": {
+            "agreement": 132,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 67,
+              "zh": 70
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 139,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 66,
+              "zh": 72
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 134,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 68,
+              "zh": 70
+            }
+          }
+        }
+      },
+      "shoe": {
+        "queries": 244,
+        "images": 61,
+        "methods": {
+          "M2-CE": {
+            "agreement": 115,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 56,
+              "zh": 57
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 123,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 54,
+              "zh": 59
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 117,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 57,
+              "zh": 57
+            }
+          }
+        }
+      },
+      "non_shoe": {
+        "queries": 52,
+        "images": 13,
+        "methods": {
+          "M2-CE": {
+            "agreement": 17,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 11,
+              "zh": 13
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 16,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 12,
+              "zh": 13
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 17,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 11,
+              "zh": 13
+            }
+          }
+        }
+      },
+      "appearance": {
+        "queries": 0,
+        "images": 0,
+        "methods": {
+          "M2-CE": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          }
+        }
+      },
+      "combined": {
+        "queries": 0,
+        "images": 0,
+        "methods": {
+          "M2-CE": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          }
+        }
+      },
+      "spatial": {
+        "queries": 296,
+        "images": 74,
+        "methods": {
+          "M2-CE": {
+            "agreement": 132,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 67,
+              "zh": 70
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 139,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 66,
+              "zh": 72
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 134,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 1,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 68,
+              "zh": 70
+            }
+          }
+        }
+      }
+    },
+    "train_increment": {
+      "all": {
+        "queries": 344,
+        "images": 86,
+        "methods": {
+          "M2-CE": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 79
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 141,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 80,
+              "zh": 82
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 1
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 81
+            }
+          }
+        }
+      },
+      "shoe": {
+        "queries": 0,
+        "images": 0,
+        "methods": {
+          "M2-CE": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          }
+        }
+      },
+      "non_shoe": {
+        "queries": 344,
+        "images": 86,
+        "methods": {
+          "M2-CE": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 79
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 141,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 80,
+              "zh": 82
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 1
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 81
+            }
+          }
+        }
+      },
+      "appearance": {
+        "queries": 0,
+        "images": 0,
+        "methods": {
+          "M2-CE": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          }
+        }
+      },
+      "combined": {
+        "queries": 0,
+        "images": 0,
+        "methods": {
+          "M2-CE": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 0,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 0,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 0,
+              "zh": 0
+            }
+          }
+        }
+      },
+      "spatial": {
+        "queries": 344,
+        "images": 86,
+        "methods": {
+          "M2-CE": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 2
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 79
+            }
+          },
+          "M2-pair-full": {
+            "agreement": 141,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 3,
+              "zh": 0
+            },
+            "same_instance_by_language": {
+              "en": 80,
+              "zh": 82
+            }
+          },
+          "M2-pair-geometry": {
+            "agreement": 162,
+            "all_four_correct": 0,
+            "both_targets_correct_by_language": {
+              "en": 5,
+              "zh": 1
+            },
+            "same_instance_by_language": {
+              "en": 78,
+              "zh": 81
+            }
+          }
+        }
+      }
+    },
+    "reference": "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "peak_bytes": 88570880,
+    "runtime_versions": {
+      "torch": "2.1.2+cu121",
+      "cuda": "12.1"
+    }
+  },
+  "gpu_coordination": {
+    "role": "grounding",
+    "executed_by": "wyz",
+    "run_id": "pair-objective-20261118-r01",
+    "status": "completed",
+    "wrapper_pid": 298948,
+    "started_at": "2026-11-18T10:16:18.754822+00:00",
+    "budget_seconds": 300,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "-u",
+      "scripts/compare_pair_objective.py",
+      "--config",
+      "configs/grounding_direction_increment_20261118.json",
+      "--previous",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/spatial-supervision-20261118-r01",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01",
+      "--device",
+      "cuda"
+    ],
+    "git_commit": "a1e666993c2f5d870d22fdd57a2d896e771bc9e8",
+    "child_pid": 298954,
+    "exit_code": 0,
+    "elapsed_seconds": 67.42490452900529,
+    "finished_at": "2026-11-18T10:17:26.181648+00:00"
+  },
+  "data_counts": {
+    "color": [
+      958,
+      196,
+      169
+    ],
+    "direction": [
+      302,
+      273,
+      267
+    ],
+    "either": [
+      1089,
+      326,
+      293
+    ]
+  }
+}
