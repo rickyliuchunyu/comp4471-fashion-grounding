@@ -1,0 +1,40 @@
+{
+  "train_color": {
+    "color_appearance": {
+      "semantics": 1076,
+      "single": 1020,
+      "multi_images": 54
+    },
+    "color_appearance_garments": {
+      "semantics": 863,
+      "single": 837,
+      "multi_images": 24
+    }
+  },
+  "strict_review": 59,
+  "total": 42476,
+  "remaining_images": 41008,
+  "semantic_images": 1235,
+  "classes_raw": {
+    "top": 1460,
+    "outerwear": 199,
+    "bag": 111,
+    "dress": 52,
+    "pants": 67,
+    "skirt": 9
+  },
+  "classes_strict": {
+    "top": 11,
+    "bag": 22,
+    "outerwear": 10,
+    "pants": 16
+  },
+  "strict_images": 59,
+  "strict_groups": 59,
+  "train_query_types": {
+    "('spatial',)": 450,
+    "('appearance',)": 2714,
+    "('combined',)": 476
+  },
+  "selected": 79
+}
