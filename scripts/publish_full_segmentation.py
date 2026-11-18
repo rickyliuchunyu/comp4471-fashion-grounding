@@ -29,8 +29,22 @@ def report(root):
         tables["source_cutout_"+name]=counts([a for a in rows if 308 in a["attribute_ids"] and (cid is None or a["source_category_id"]==cid)],groups)
     return tables
 
+def record_bridges(ledger):
+    audit=read_json(RUN/"duplicates.json")
+    components={tuple(sorted(r["component"])) for r in audit["excluded"] if "component" in r}
+    parent={"train-"+i for i,state in ledger.items() if state=="parent"}
+    frozen={r["key"] for r in read_json(STAGED/"protected_fingerprints.json")}
+    val=set()
+    for name in ["fp_dev250_v1","fp_test400_holdout_v1"]:
+        val.update("val-"+im["source_image_id"] for im in read_json(SHARED/name/"image_manifest.json")["images"])
+    exposures=read_json(REPO/"docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json")["images"]
+    val.update("val-"+str(im["image_id"]-10**9-1) for im in exposures)
+    bridges=[c for c in sorted(components) if parent.intersection(c) and val.intersection(c)]
+    write_json(RUN/"frozen_bridge_clues.json",{"review_status":"unconfirmed hash/URL group connections; related new candidates quarantined","components":bridges,"count":len(bridges),"quarantined_new_source_images":sum(len(set(c)-frozen) for c in bridges)})
+
 def run():
     ledger=read_json(RUN/"ledger.json")
+    record_bridges(ledger)
     old=read_json(FULL/"old_subset_membership.json")
     new=read_json(FULL/"added_subset_membership.json")
     final_ids={i["image_id"] for i in read_json(FULL/"image_manifest.json")["images"]}
@@ -62,7 +76,7 @@ def run():
     for path,digest in PINS.items():require(sha256(PARENT/path)==digest,"parent changed")
     for p,h in read_json(STAGED/"protection_inputs.json").items():require(sha256(p)==h,"protected input changed")
     audit=FULL/"audit";audit.mkdir(exist_ok=True)
-    for f in ["ledger.json","counts.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","visual_sample.json","visual_observations.json","shoe_hole.jpg","bag_sparse.jpg","separated.jpg","topology_rows.json","download_provenance.json","eligible.json"]:
+    for f in ["ledger.json","counts.json","frozen_bridge_clues.json","duplicates.json","coverage.json","boundary.json","source_fidelity.json","visual_sample.json","visual_observations.json","shoe_hole.jpg","bag_sparse.jpg","separated.jpg","topology_rows.json","download_provenance.json","eligible.json"]:
         shutil.copyfile(RUN/f,audit/f)
     for f in ["protection_inputs.json","protected_fingerprints.json","input_preflight.json"]:shutil.copyfile(STAGED/f,audit/f)
     shutil.copyfile(PARENT/"audit/visual_audit.json",audit/"parent_visual_audit.json")
