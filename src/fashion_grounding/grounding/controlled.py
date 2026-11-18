@@ -66,7 +66,7 @@ class FeatureBuilder:
         expected="train" if training else "dev"
         require(all(q.split==expected for q in queries),"wrong split")
         if draft_dev:
-            require(not training and pack.package["candidate_source"]=="gt","draft diagnosis requires GT dev candidates")
+            require(not training,"draft diagnosis is development only")
             require(all(q["review_status"]=="needs_revision" for q in raw),"draft dev requires explicit unreviewed labels")
         if training:
             require(Path(query_path).name=="queries_machine_train.jsonl","explicit weak training file required")

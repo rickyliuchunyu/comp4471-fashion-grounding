@@ -1,0 +1,71 @@
+{
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+  "lexicon": "configs/rule_parser.json",
+  "cache_sources": [
+    "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01",
+    "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01"
+  ],
+  "old_candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/candidates_gt.json",
+  "fp_checkpoint_meta": "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01/M2-1235/run_metadata.json",
+  "fp_pair_audit": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01/summary.json",
+  "increment_train": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_train_v2/queries_increment.jsonl",
+  "protected_test_manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/image_manifest.json",
+  "datasets": {
+    "train": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/candidates_gt.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/queries_machine_train.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/annotations_coco.json",
+      "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/image_manifest.json",
+      "count": 5604
+    },
+    "fp_gt": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json",
+      "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json",
+      "count": 642
+    },
+    "fp_pred": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json",
+      "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json",
+      "count": 642
+    },
+    "mhp_gt": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/candidates_gt.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+      "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json",
+      "count": 1036
+    },
+    "mhp_pred": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/wkq-mhp2-binding-dev-lcy50k-t03-v2/candidates_predicted.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+      "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json",
+      "count": 1036
+    }
+  },
+  "pins": {
+    "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "/root/autodl-tmp/fashion-grounding/shared/candidates/wkq-mhp2-binding-dev-lcy50k-t03-v2/candidates_predicted.json": "44ec469838a365307c425862520aa612bc32c9b9bd17bf1dd3f399cf8ac56414",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/candidates_gt.json": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/annotations_coco.json": "0be0799088a7debca9cad56d79e72fddb554df219a294f1ce0ea10a74bd59f40",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/candidates_gt.json": "07e01f047e30584e23ef3fc3029c796e2314a6608ec1b847c7ce3a79bddb532c",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/image_manifest.json": "b5336423a288fd20c2df5c1a0f1c9ace21c2658e8a6a806117e754b9dea43d69",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/queries_machine_train.jsonl": "38a7409bde3007aa544059445794b806b4f216fe7402ae2e4a8caccddbd2e3a2",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json": "3b2f1c809b9c5faf51ab36fc46cfbe346781ca173ea641482636d36cae1e6945",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/candidates_gt.json": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_train_v2/queries_increment.jsonl": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+    "configs/rule_parser.json": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609"
+  }
+}
