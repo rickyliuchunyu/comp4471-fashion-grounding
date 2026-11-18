@@ -3,6 +3,8 @@ import argparse
 from collections import Counter, defaultdict
 import hashlib
 import json
+import os
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -191,39 +193,75 @@ def run(a):
         raise RuntimeError("verified frozen feature is missing")
     builder.model = cache_only
 
-    inputs = build_inputs(builder, config, ("train", "fp_gt"))
-    train, dev = inputs["train"], inputs["fp_gt"]
-    increment_ids = {q["query_id"] for q in map(json.loads, Path(config["increment_train"]).read_text().splitlines())}
-    groups = pairs(train, increment_ids)
-    require({train["raw"][i]["query_id"] for g in groups.values() for i in g} == increment_ids, "incomplete MHP increment")
-    sanity = fit_sanity(train, pairs(train), a.output, builder.signature)
-    print(json.dumps({"small_fit_training_only":sanity}),flush=True)
-    write_json(a.output / "sanity.json", sanity)
+    if a.resume_from:
+        prior_dir = a.resume_from.resolve()
+        sanity = read_json(prior_dir / "sanity.json")
+        results = read_json(prior_dir / "partial_results.json")
+        require(set(results) == {"fp_gt", "fp_pred"}, "resume expects completed Fashionpedia stages")
+        fingerprints = read_json(a.train_features / "summary.json")["hashes"]
+        require(set(fingerprints) == {"train", "fp_gt", "fp_pred"}, "missing fingerprints")
+        models = {}
+        for label, method in {"M2-FP": "M2", **METHODS}.items():
+            info = read_json(config["fp_checkpoint_meta"] if label == "M2-FP" else prior_dir / label / "run_metadata.json")
+            checkpoint = Path(info["checkpoint"])
+            require(sha256(checkpoint)==info["checkpoint_sha256"], "changed checkpoint")
+            state = torch.load(checkpoint, map_location="cpu")
+            require(state["encoder"] == builder.signature and state["method"] == method,
+                    "checkpoint scoring contract mismatch")
+            if label != "M2-FP":
+                require(checkpoint.resolve().is_relative_to(prior_dir / label)
+                        and info["train_inputs"] == fingerprints["train"]
+                        and info["dev_inputs"] == fingerprints["fp_gt"], "unexpected resumed training")
+            model = make_head(method, state["dimension"])
+            model.load_state_dict(state["model"], strict=True)
+            models[label] = (model, method, info)
+        for condition, source in (("fp_gt", "gt"), ("fp_pred", "predicted")):
+            path = prior_dir / condition / source
+            for label in models:
+                result = read_json(path / f"{label}-evaluation.json")
+                refs = result["provenance"]
+                match = fingerprints[condition]
+                require(refs["queries_sha256"] == match["queries"] and refs["candidates_sha256"] == match["candidates"]
+                        and refs["annotations_sha256"] == config["pins"][config["datasets"][condition]["annotations"]]
+                        and refs["predictions_sha256"] == sha256(path / f"{label}-predictions.jsonl")
+                        and result["summary"] == results[condition][label]["summary"], "prior evaluation verification failed")
+            shutil.copytree(prior_dir / condition, a.output / condition, copy_function=os.link)
+        names = ("mhp_gt", "mhp_pred")
+    else:
+        inputs = build_inputs(builder, config, ("train", "fp_gt"))
+        train, dev = inputs["train"], inputs["fp_gt"]
+        increment_ids = {q["query_id"] for q in map(json.loads, Path(config["increment_train"]).read_text().splitlines())}
+        groups = pairs(train, increment_ids)
+        require({train["raw"][i]["query_id"] for g in groups.values() for i in g} == increment_ids, "incomplete MHP increment")
+        sanity = fit_sanity(train, pairs(train), a.output, builder.signature)
+        print(json.dumps({"small_fit_training_only":sanity}),flush=True)
+        write_json(a.output / "sanity.json", sanity)
 
-    prior = read_json(config["fp_checkpoint_meta"])
-    require(prior["seed"] == SETTINGS["seed"] and prior["optimizer_updates"] == SETTINGS["updates"]
-            and sha256(prior["checkpoint"]) == prior["checkpoint_sha256"], "changed reference checkpoint")
-    state = torch.load(prior["checkpoint"], map_location="cpu")
-    require(state["encoder"] == builder.signature, "reference encoder mismatch")
-    reference = make_head("M2", state["dimension"])
-    reference.load_state_dict(state["model"], strict=True)
-    models = {"M2-FP": (reference, "M2", prior)}
-    order = make_order(train, groups, SETTINGS)
-    objective = PairMargin(counter_map(train, groups), "full", 1.0, 2.0)
-    for name, method in METHODS.items():
-        uses_pair = name.endswith("-pair")
-        settings = {**SETTINGS, "loss": "CE+same-image pair margin" if uses_pair else "CE",
-                    "margin": 1.0 if uses_pair else None, "margin_weight": 2.0 if uses_pair else None}
-        model, info = fit_model(method, train, dev, name, a.output, builder.signature, settings,
-                                order if uses_pair else None, objective if uses_pair else None)
-        models[name] = (model, method, info)
-    require(models["M2-mixed-pair"][2]["training_order_sha256"] == models["M2-binding-pair"][2]["training_order_sha256"],
-            "paired methods have different sampling")
+        prior = read_json(config["fp_checkpoint_meta"])
+        require(prior["seed"] == SETTINGS["seed"] and prior["optimizer_updates"] == SETTINGS["updates"]
+                and sha256(prior["checkpoint"]) == prior["checkpoint_sha256"], "changed reference checkpoint")
+        state = torch.load(prior["checkpoint"], map_location="cpu")
+        require(state["encoder"] == builder.signature, "reference encoder mismatch")
+        reference = make_head("M2", state["dimension"])
+        reference.load_state_dict(state["model"], strict=True)
+        models = {"M2-FP": (reference, "M2", prior)}
+        order = make_order(train, groups, SETTINGS)
+        objective = PairMargin(counter_map(train, groups), "full", 1.0, 2.0)
+        for name, method in METHODS.items():
+            uses_pair = name.endswith("-pair")
+            settings = {**SETTINGS, "loss": "CE+same-image pair margin" if uses_pair else "CE",
+                        "margin": 1.0 if uses_pair else None, "margin_weight": 2.0 if uses_pair else None}
+            model, info = fit_model(method, train, dev, name, a.output, builder.signature, settings,
+                                    order if uses_pair else None, objective if uses_pair else None)
+            models[name] = (model, method, info)
+        require(models["M2-mixed-pair"][2]["training_order_sha256"] == models["M2-binding-pair"][2]["training_order_sha256"],
+                "paired methods have different sampling")
 
-    results = {}
-    fingerprints = {k: ds["hashes"] for k, ds in inputs.items()}
-    del train, dev, inputs
-    for name in ("fp_gt", "fp_pred", "mhp_gt", "mhp_pred"):
+        results = {}
+        fingerprints = {k: ds["hashes"] for k, ds in inputs.items()}
+        del train, dev, inputs
+        names = ("fp_gt", "fp_pred", "mhp_gt", "mhp_pred")
+    for name in names:
         data = build_inputs(builder, config, (name,))[name]
         fingerprints[name] = data["hashes"]
         folder = a.output / name
@@ -245,7 +283,7 @@ def run(a):
         "config_sha256": sha256(a.config), "command": [sys.executable,*sys.argv], "settings": SETTINGS,
         "models":{k: m[2] for k,m in models.items()}, "fingerprints":fingerprints,
         "sanity":sanity, "results":results, "cache_misses":builder.encoded_images + builder.encoded_texts,
-        "seconds":time.monotonic() - started,
+        "seconds":time.monotonic() - started, "resumed_from":str(a.resume_from) if a.resume_from else None,
     })
 
 
@@ -253,4 +291,5 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     for key in ("config", "train-features", "dev-features", "output"):
         p.add_argument("--"+key,type=Path,required=True)
+    p.add_argument("--resume-from", type=Path)
     run(p.parse_args())

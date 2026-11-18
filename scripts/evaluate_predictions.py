@@ -14,7 +14,12 @@ def evaluate_files(queries_path,predictions_path,candidates_path,annotations_pat
     images=unique_index(manifest["images"],"image_id");gt_images=unique_index(coco["images"],"id")
     require(set(images)==set(gt_images),"GT/candidate image coverage mismatch")
     for iid,im in images.items():
-        require(all(im[k]==gt_images[iid][k] for k in ("width","height","source_image_id","source_dataset")),"GT/candidate image mismatch")
+        gt_image = gt_images[iid]
+        keys = ("width", "height", "source_image_id", "source_dataset")
+        if allow_draft and im.get("source_dataset") == "mhp_v2" and not any(k in gt_image for k in keys[2:]):
+            # The official MHP COCO image rows carry filename and dimensions but omit source fields.
+            keys = ("width", "height", "file_name")
+        require(all(k in im and k in gt_image and im[k] == gt_image[k] for k in keys), "GT/candidate image mismatch")
     anns=unique_index(coco["annotations"],"id")
     qs=[json.loads(s) for s in queries_path.read_text().splitlines() if s.strip()]
     validate_queries(qs,images,anns,accepted_only=not allow_draft)
