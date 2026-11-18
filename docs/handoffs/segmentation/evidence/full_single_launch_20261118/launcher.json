@@ -1,0 +1,16 @@
+{
+  "run_id": "full-single-50k-20261118-r01",
+  "launcher_pid": 299801,
+  "started_at": "2026-11-18T18:26:59.006149+08:00",
+  "execution_commit": "9f1ca245fbde243df17ec711854c803e52892617",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_tenk_adaptation.py",
+    "--plan",
+    "configs/runs/segmentation/full_single_plan.json",
+    "--execute"
+  ],
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01",
+  "launcher_log": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-launch-20261118-r01/launcher.log",
+  "detached": true
+}

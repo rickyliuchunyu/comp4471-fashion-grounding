@@ -1,0 +1,65 @@
+{
+  "run_id": "full-single-50k-20261118-r01",
+  "status_at_snapshot": "running",
+  "snapshot_hkt": "2026-11-18T18:30:59+08:00",
+  "total_deadline_hkt": "2026-11-18T23:26:59+08:00",
+  "worker_deadline_hkt": "2026-11-18T23:26:44+08:00",
+  "updates": 545,
+  "all_updates_consecutive": true,
+  "all_loss_and_gradient_norms_finite": true,
+  "skipped_steps": 0,
+  "matched_image_order_prefix": true,
+  "images_consumed": 1090,
+  "first": {
+    "update": 1,
+    "total_loss": 5.728775750845671,
+    "grad_norm_before_clip": 68.70989990234375,
+    "grad_norm_after_clip": 0.009999999776482582,
+    "optimizer_step_skipped": false,
+    "amp_overflow_events_total": 0,
+    "image_ids": [
+      16006,
+      18037
+    ],
+    "learning_rates": [
+      2.0000000000000005e-09,
+      2e-08
+    ],
+    "peak_cuda_allocated_bytes": 4326233600
+  },
+  "last": {
+    "update": 545,
+    "total_loss": 9.130507342517376,
+    "grad_norm_before_clip": 124.41645050048828,
+    "grad_norm_after_clip": 0.009999999776482582,
+    "optimizer_step_skipped": false,
+    "amp_overflow_events_total": 0,
+    "image_ids": [
+      7036,
+      47486
+    ],
+    "learning_rates": [
+      1.9999879010277907e-06,
+      1.9999879010277905e-05
+    ],
+    "peak_cuda_allocated_bytes": 4691143168
+  },
+  "gpu_name_memory_used_total_utilization": "NVIDIA GeForce RTX 3090, 5461 MiB, 24576 MiB, 60 %",
+  "compute_pid_memory": "299965, 5452 MiB",
+  "launcher_pid": 299801,
+  "wrapper_pid": 299871,
+  "worker_pid": 299877,
+  "stages": [
+    {
+      "update": 14159,
+      "status": "running",
+      "deadline_monotonic": 25529614.53365858,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "running"
+        }
+      ]
+    }
+  ]
+}
