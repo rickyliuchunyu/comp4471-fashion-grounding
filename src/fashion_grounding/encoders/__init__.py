@@ -1,0 +1,1 @@
+"""Frozen image/text encoders."""

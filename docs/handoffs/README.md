@@ -29,3 +29,11 @@
 ## 2026-11-17 wkq 语言定向增量
 
 [训练1149与独立dev39交接](data_eval/language_targeted_20261117.md)：149新训练图/298条初标，39图dev困难集/78条待审；原划分不变。实际消费检查和142测试通过，没有训练。
+
+Grounding：[wyz SigLIP 2 编码、缓存与 B1 草稿接口](grounding/siglip_baselines_20261112.md)。
+
+Grounding 最新：[wyz 小包/大包验收、B1/B2 与 M1 弱标注试训](grounding/accepted_baselines_and_weak_trial_20261112.md)。
+
+11月17日 wyz 已完成两个训练包上的 M1/M2 同预算对照和 B2 开发集选权重，见[结果与交接](grounding/spatial_controlled_20261117.md)。
+
+Grounding 2026-11-18：[50k 候选接入与开发集评价](grounding/u50000_dev_20261118.md)。

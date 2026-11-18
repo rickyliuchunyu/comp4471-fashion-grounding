@@ -1,0 +1,41 @@
+{
+  "purpose": "engineering_diagnostics_only",
+  "formal_metrics": null,
+  "tests_passed": 36,
+  "pip_check": "passed",
+  "smoke": {
+    "status": "passed",
+    "purpose": "engineering_smoke_only",
+    "formal_metrics": null,
+    "source": "Fashionpedia train pilot with unreviewed draft text",
+    "data_validation": {
+      "status": "passed",
+      "images": 20,
+      "instances": 145,
+      "candidates": 145,
+      "queries": {
+        "queries_draft.jsonl": 80,
+        "queries_accepted.jsonl": 0
+      }
+    },
+    "valid_crops": 145,
+    "logits": {
+      "dimension": 768,
+      "max_abs_logit_error": 1.9073486328125e-06,
+      "frozen": true,
+      "images": 2,
+      "texts": 2
+    },
+    "overlength_rejected": true,
+    "seconds": 4.892993461340666,
+    "peak_allocated_bytes": 1533655552,
+    "candidate_sha256": "61a0f91ff924c5956c3e870bf548866a80c199fadf515236e70786b8cdfa643b"
+  },
+  "B1_draft_queries": 80,
+  "B1_errors": 0,
+  "warm_cache_identical": true,
+  "warm_cache_model_calls": 0,
+  "canonical_B1_implementation_commit": "6e3dddeaf6a296573871886e271232d643c078a5",
+  "B2_shared_parser_available": false,
+  "accepted_queries": 0
+}

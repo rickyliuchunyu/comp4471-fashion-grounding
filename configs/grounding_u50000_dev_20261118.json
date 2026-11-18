@@ -1,0 +1,16 @@
+{
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+  "previous_experiment": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment",
+  "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+  "queries": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl",
+  "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json",
+  "lexicon": "configs/rule_parser.json",
+  "candidate_set_id": "u50000-dev250-20261118-r01-trial-0.3",
+  "sha256": {
+    "candidates": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "annotations": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "lexicon": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609"
+  }
+}
