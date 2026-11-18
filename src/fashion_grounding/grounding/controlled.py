@@ -148,31 +148,40 @@ def gt_selection(dataset,scores):
             correct+=c["source_annotation_id"]==q["target_instance_id"]
     return int(correct)
 
-def fit(config,method,train,dev,out,signature):
+def fit(config,method,train,dev,out,signature,*,device="cpu",order=None):
     out.mkdir();seed=config["seed"];torch.manual_seed(seed);np.random.seed(seed);random.seed(seed)
-    model=make_head(method,signature["dimension"]);torch.manual_seed(seed+1000)
+    device=torch.device(device)
+    model=make_head(method,signature["dimension"]).to(device);torch.manual_seed(seed+1000)
     optimizer=torch.optim.AdamW(model.parameters(),lr=3e-4,weight_decay=.01)
     samples=supervised_samples(train)
-    order=training_order(samples,seed,config["updates"],config["batch_size"])
+    if order is None:
+        order=training_order(samples,seed,config["updates"],config["batch_size"])
+    require(len(order)==config["updates"]*config["batch_size"],"training order must match budget")
     order_hash=hashlib.sha256(np.asarray(order,dtype=np.int64).tobytes()).hexdigest()
     best=-1;best_path=None;history=[];start=time.monotonic();loss_sum=0.
-    initial=predict_scores(model,dev)
+    def evaluate_head():
+        # Preserve CPU feature scoring across training devices.
+        evaluator=copy.deepcopy(model).cpu() if device.type!="cpu" else model
+        return predict_scores(evaluator,dev)
+    initial=evaluate_head()
     require(all(np.array_equal(s,e["base"]) for s,e in zip(initial,dev["examples"]) if s is not None),"zero initialization differs from B1")
     for update in range(1,config["updates"]+1):
         ids=order[(update-1)*config["batch_size"]:update*config["batch_size"]]
-        batch=make_batch(samples,ids);model.train();optimizer.zero_grad(set_to_none=True)
+        batch=tuple(value.to(device) for value in make_batch(samples,ids))
+        model.train();optimizer.zero_grad(set_to_none=True)
         loss=ranking_loss(training_scores(model,batch),batch)
         require(bool(torch.isfinite(loss)),"nonfinite training loss")
         loss.backward();optimizer.step();loss_sum+=loss.item()
         if update%config["evaluation_interval"]==0 or update==config["updates"]:
-            scores=predict_scores(model,dev);correct=gt_selection(dev,scores)
+            scores=evaluate_head();correct=gt_selection(dev,scores)
             record={"update":update,"dev_correct":correct,"dev_queries":len(dev["queries"]),
                 "mean_loss_since_last_eval":loss_sum/(update-(history[-1]["update"] if history else 0))}
             history.append(record);loss_sum=0.
             checkpoint=out/f"update_{update:04d}.pt"
             torch.save({"method":method,"dimension":signature["dimension"],"model":model.state_dict(),
                 "optimizer":optimizer.state_dict(),"encoder":signature,"update":update,
-                "torch_rng":torch.get_rng_state(),"numpy_rng":np.random.get_state(),"python_rng":random.getstate(),
+                "torch_rng":torch.get_rng_state(),"cuda_rng":torch.cuda.get_rng_state(device) if device.type=="cuda" else None,
+                "numpy_rng":np.random.get_state(),"python_rng":random.getstate(),
                 "scheduler":None,"scaler":None,"training_order":order,"training_order_sha256":order_hash,
                 "seed":seed,"config":config,"train_inputs":train["hashes"],"dev_inputs":dev["hashes"]},checkpoint)
             if correct>best:best=correct;best_path=checkpoint
@@ -183,7 +192,7 @@ def fit(config,method,train,dev,out,signature):
     restored=make_head(method,signature["dimension"]);restored.load_state_dict(torch.load(best_path,map_location="cpu")["model"]);restored.eval()
     scores=predict_scores(selected,dev);replay=predict_scores(restored,dev)
     require(all(np.array_equal(a,b) for a,b in zip(scores,replay)),"checkpoint replay")
-    info={**provenance(),"method":method,"seed":seed,"optimizer_updates":config["updates"],
+    info={**provenance(),"device":str(device),"method":method,"seed":seed,"optimizer_updates":config["updates"],
         "batch_size":config["batch_size"],"training_query_presentations":len(order),
         "eligible_queries":sum(len(s["visual"])>1 for s in samples),
         "single_candidate_excluded":sum(len(s["visual"])==1 for s in samples),
