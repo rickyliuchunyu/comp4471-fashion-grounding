@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "purpose": "s0_training",
+  "git_commit": "9f1ca245fbde243df17ec711854c803e52892617",
+  "config_sha256": "0d168b42780cc49a39263f9ace1ca1db621146e03e3aa5cea92b78338f9b7742",
+  "start_update": 0,
+  "completed_updates": 14159,
+  "updates_this_process": 14159,
+  "resumed": false,
+  "resume_lineage": [],
+  "elapsed_seconds": 5742.71431279555,
+  "finished_at": "2026-11-18T12:02:46.520017+00:00",
+  "first_loss": 5.728775750845671,
+  "last_loss": 13.49616563692689,
+  "min_loss": 1.0795781426131725,
+  "max_loss": 67.47325180470943,
+  "all_losses_and_gradients_finite": true,
+  "skipped_optimizer_updates": 0,
+  "finite_scope": "successful_updates_only",
+  "amp_overflow_attempts_this_process": 1,
+  "amp_recovery_state": {
+    "overflow_events": 1
+  },
+  "initial_parameter_digests": {
+    "backbone": "bfeb539e41c985fafe1ff554367cc480f6d3a1c065373ded41780116617db728",
+    "classifier": "98ca2c1df4e91c8f761f942b9ce739dda02360e563ed04cb6ad76d0909bd3a32"
+  },
+  "final_parameter_digests": {
+    "backbone": "c29d4206da59a7951460d980880929a0a27748bbb52b385f51f2a03b9877684b",
+    "classifier": "1f556149390c74d27aabf73959388bc5e598d36fedd7f43e32c5ac0526dd5e5c"
+  },
+  "backbone_and_classifier_updated": true,
+  "checkpoints": [
+    {
+      "update": 14159,
+      "path": "checkpoint_014159.pth",
+      "sha256": "b1be0127e0ca8a8e9ad455bdb6f72fdbf9719fb7c442d62d83e4dcc1a7f8fe35"
+    }
+  ],
+  "peak_cuda_allocated_bytes": 4762097664,
+  "peak_cuda_reserved_bytes": 5335154688,
+  "performance_evaluated": false,
+  "sample_count": 28318,
+  "empty_augmented_images": 28
+}
