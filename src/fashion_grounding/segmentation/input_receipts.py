@@ -13,10 +13,12 @@ def read_evidence_bundle(path):
     path = Path(path).resolve()
     bundle = read_json(path)
     require(bundle['schema_version'] == 1, 'Unknown validation bundle schema')
-    require(bundle['mode'] in ('unchanged_train', 'accepted_expansion'), 'Unknown reuse mode')
+    require(bundle['mode'] in ('unchanged_train', 'accepted_expansion', 'accepted_full_release'), 'Unknown reuse mode')
     required = {'dev_report'}
     if bundle['mode'] == 'accepted_expansion':
         required |= {'acceptance', 'acceptance_plan', 'acceptance_run'}
+    if bundle['mode'] == 'accepted_full_release':
+        required |= {'release', 'acceptance', 'added_reader', 'protection', 'protection_check'}
     require(set(bundle['references']) == required, 'Incomplete evidence references')
     records, paths = {}, {}
     for name, ref in bundle['references'].items():
@@ -31,14 +33,54 @@ def zero_counts(counts, keys):
             'Missing or nonzero partition evidence')
 
 
+def validate_full_release(bundle, records):
+    release, receipt, added = (records[k] for k in ('release', 'acceptance', 'added_reader'))
+    protected, check = records['protection'], records['protection_check']
+    refs = bundle['references']
+    require(receipt['status'] == added['status'] == 'passed'
+            and receipt['release_sha256'] == added['release_sha256'] == protected['release_sha256']
+            == release['release_sha256'], 'Different full release receipts')
+    require(bundle['training_data'] == dict(image_manifest_sha256=release['manifest_sha256'],
+                                           annotation_sha256=release['annotations_sha256'])
+            and bundle['train_images'] == receipt['totals']['images'] == check['full_train_images']
+            and bundle['train_instances'] == receipt['totals']['instances']
+            and added['loader']['images'] + receipt['old_images_exact'] == bundle['train_images']
+            and added['loader']['instances'] + added['loader']['crowd_skipped'] + receipt['old_annotations_exact']
+            == bundle['train_instances'], 'Full release identity or counts differ')
+    require(check['registry_sha256'] == refs['protection']['sha256']
+            and check['input_sha256']['release_check.json'] == refs['acceptance']['sha256']
+            and check['input_sha256']['published.json'] == refs['release']['sha256']
+            and len(protected['images']) == protected['distinct_images'] == 146
+            and check['checkpoint_sha256'] == records['dev_report']['checkpoint_sha256'],
+            'Different exposure protection or historical decision')
+    fields = ('image_id', 'source_identity', 'group_id', 'sha256')
+    for partition in ('parent', 'dev', 'test', 'exposed'):
+        zero_counts(receipt['added_intersections'][partition], fields)
+    for partition in ('full_train', 'test400'):
+        zero_counts(check['overlaps'][partition], ('image_id', 'source_key', 'group_id', 'sha256'))
+    require(records['dev_report']['training_data'] == dict(
+        image_manifest_sha256=release['parent_pins']['image_manifest.json'],
+        annotation_sha256=release['parent_pins']['annotations_coco.json']), 'Cached dev training parent differs')
+
+
+def catalog_pin(bundle, records):
+    if bundle['mode'] == 'accepted_full_release':
+        return records['release']['checksums_sha256']
+    return records['acceptance']['package_pins']['SHA256SUMS.json']
+
+
 def validate_chain(bundle, records):
     report = records['dev_report']
     require(report['purpose'] == 'dev_checkpoint_selection' and report['protocol'] == PROTOCOL
             and report['complete'] is True and report['selection_eligible'] is True
             and report['inference_errors'] == 0, 'Need completed dev receipt')
-    zero_counts(report['overlap'], ('image_id', 'sha256', 'group_id', 'source_image_id'))
+    source_key = 'source_identity' if bundle['mode'] == 'accepted_full_release' else 'source_image_id'
+    zero_counts(report['overlap'], ('image_id', 'sha256', 'group_id', source_key))
     require(report['evaluation_data'] == bundle['evaluation_data'], 'Dev receipt identity differs')
     require(report['evaluated_images'] == bundle['dev_images'], 'Dev receipt population differs')
+    if bundle['mode'] == 'accepted_full_release':
+        validate_full_release(bundle, records)
+        return
     if bundle['mode'] == 'unchanged_train':
         require(report['training_data'] == bundle['training_data'], 'Training identity changed without expansion')
         return
@@ -92,12 +134,13 @@ def reuse_input_receipts(root, config, training_root, bundle_path):
         manifest, coco, check = reuse_eval_package(root, config, training_root, paths['dev_report'])
     else:
         receipt = records['acceptance']
-        require(sha256(training_root/'SHA256SUMS.json') == receipt['package_pins']['SHA256SUMS.json'],
+        require(sha256(training_root/'SHA256SUMS.json') == catalog_pin(bundle, records),
                 'Accepted release catalog changed')
         manifest, coco = read_json(root/'image_manifest.json'), read_json(root/'annotations_coco.json')
         check = dict(overlap=dict(image_id=0, sha256=0, group_id=0, source_identity=0),
                      training_data=bundle['training_data'], image_and_mask_reaudit=False,
-                     formal_three_party_freeze=receipt['formal_three_party_freeze'])
+                     formal_three_party_freeze=(False if bundle['mode'] == 'accepted_full_release'
+                                                else receipt['formal_three_party_freeze']))
     require(manifest['schema_version'] == 3 and manifest['illustrative_only'] is False
             and all(im['split'] == 'dev' for im in manifest['images'])
             and len(manifest['images']) == len(coco['images']) == bundle['dev_images']

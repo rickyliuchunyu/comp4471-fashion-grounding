@@ -1,8 +1,4 @@
-"""Prepare by default; explicitly authorized execution has one 8h total deadline.
-
-Each 2-epoch segment includes train, full dev, receipt checks and selection in
-its 2h limit. No restart, automatic extension, or evaluation of old weights.
-"""
+"""Prepare by default. Explicit launch uses the profile's single shared GPU deadline."""
 import time
 STARTED = time.monotonic()
 
@@ -30,6 +26,9 @@ def validate(plan, root=ROOT, *, authorized=False):
     from fashion_grounding.segmentation.tenk_execution import read
     from fashion_grounding.segmentation.training_state import read_config
     from fashion_grounding.segmentation.evaluation import choose_checkpoint
+    if plan.get('profile') == 'full_single_line':
+        from full_single_plan import prepare_full
+        return prepare_full(plan, root, authorized)
     required_pins = {plan[k] for k in ('training_config', 'model_only_source', 'input_validation_bundle',
                                      'evaluation_config', 'visibility_decision', 'baseline_report')}
     require(required_pins <= set(plan['input_sha256']), 'Missing execution input pin')
@@ -83,17 +82,22 @@ def execute_segments(prepared, baseline, output, total_deadline, *, run_phase, t
     """Single worker process group. All callbacks are covered by the same timer."""
     from fashion_grounding.segmentation.tenk_execution import write_atomic, select_progress
     output = Path(output)
+    full = prepared.get('profile') == 'full_single_line'
+    segment_limit = prepared.get('per_segment_hard_seconds', SEGMENT_SECONDS)
     reports, epochs, records, previous = [], [], [], None
     for stage in prepared['stages']:
         segment_start = clock()
-        deadline = min(total_deadline, segment_start + SEGMENT_SECONDS)
+        deadline = min(total_deadline, segment_start + segment_limit)
         if segment_start >= deadline:
             raise TimeoutError('No total budget remains')
         arm(deadline)  # Re-arms only the segment cap; the absolute total never changes.
-        directory = output/f"epoch_{stage['equivalent_epoch']:02d}"
+        name = stage['stage_name'] if full else f"epoch_{stage['equivalent_epoch']:02d}"
+        directory = output/name
         directory.mkdir(exist_ok=False)
-        record = dict(equivalent_epoch=stage['equivalent_epoch'], update=stage['new_run_update'],
+        record = dict(update=stage['new_run_update'],
                       status='running', deadline_monotonic=deadline, phases=[])
+        if not full:
+            record['equivalent_epoch'] = stage['equivalent_epoch']
         records.append(record)
 
         def persist():
@@ -119,7 +123,11 @@ def execute_segments(prepared, baseline, output, total_deadline, *, run_phase, t
                     run_phase(stage['full_dev'], directory/'full_dev.log')
                     report = eval_receipt(directory/'dev', checkpoint)
                 else:
-                    selection = select_progress(baseline, reports+[report], epochs+[stage['equivalent_epoch']])
+                    if full:
+                        from full_single_plan import select_full
+                        selection = select_full(baseline, reports+[report], [s['new_run_update'] for s in prepared['stages']])
+                    else:
+                        selection = select_progress(baseline, reports+[report], epochs+[stage['equivalent_epoch']])
                     check()
                     write_atomic(directory/'selection.json', selection)
                     write_atomic(output/'selection.json', selection)
@@ -129,7 +137,8 @@ def execute_segments(prepared, baseline, output, total_deadline, *, run_phase, t
             record.update(status='completed', elapsed_seconds=clock()-segment_start)
             persist()
             reports.append(report)
-            epochs.append(stage['equivalent_epoch'])
+            if not full:
+                epochs.append(stage['equivalent_epoch'])
             previous = checkpoint
             # Cover the gap between segments/final reporting too.
             arm(total_deadline)
@@ -157,6 +166,8 @@ def worker(args):
     prepared, baseline, context = validate(plan, authorized=True)
     context['git_commit'] = args.commit
     def guard():
+        if 'launch_config' in context and read(Path(plan['future_output'])/'launch_config.json') != context['launch_config']:
+            raise ValueError('Resolved launch configuration changed')
         source_guard(ROOT, args.commit, plan_path, args.plan_sha, plan['input_sha256'])
     guard()
     output = Path(plan['future_output'])
@@ -176,7 +187,8 @@ def worker(args):
 def launch(plan_path, plan, prepared, baseline, context, started=STARTED):
     from fashion_grounding.data.schema import sha256
     from fashion_grounding.segmentation.tenk_execution import read, write_atomic
-    deadline = started+TOTAL_SECONDS
+    total_limit = prepared.get('total_hard_seconds', TOTAL_SECONDS)
+    deadline = started + total_limit
     if sys.platform != 'linux' or ROOT.resolve() != Path(plan['execution_checkout']).resolve():
         raise ValueError('Execute only in the dedicated Linux segmentation checkout')
     if Path(sys.executable).resolve() != Path(plan['python']).resolve():
@@ -205,7 +217,7 @@ def launch(plan_path, plan, prepared, baseline, context, started=STARTED):
         experiment_id='S0', split='train', candidate_source='none', seed=42,
         run_id=output.name, git_commit=commit,
         plan_sha256=plan_sha, started_at=datetime.now(timezone.utc).isoformat(),
-        total_hard_seconds=TOTAL_SECONDS, per_segment_hard_seconds=SEGMENT_SECONDS,
+        total_hard_seconds=total_limit, per_segment_hard_seconds=prepared.get('per_segment_hard_seconds', SEGMENT_SECONDS),
         deadline_monotonic=deadline, worker_deadline_monotonic=worker_deadline,
         cleanup_reserve_seconds=CLEANUP_SECONDS, input_sha256=plan['input_sha256'],
         training_authorized=True, automatic_restart=False, automatic_extension=False,
@@ -215,6 +227,8 @@ def launch(plan_path, plan, prepared, baseline, context, started=STARTED):
         evaluator_code_unchanged_from=baseline['evaluation_git_commit'])
     write_atomic(output/'run_metadata.json', record)
     write_atomic(output/'prepared_plan.json', prepared)
+    if 'launch_config' in context:
+        write_atomic(output/'launch_config.json', context['launch_config'])
     env = dict(os.environ, PYTHONPATH=str(ROOT/'src'), PYTHONUNBUFFERED='1', TENK_WORKER_PLAN_SHA=plan_sha)
     command = [plan['python'], str(ROOT/'scripts/with_gpu_lock.py'), '--coordination', str(COORDINATION),
         '--run-id', output.name, '--output', str(output), '--seconds', str(max(1, int(worker_deadline-time.monotonic()))),
@@ -226,7 +240,7 @@ def launch(plan_path, plan, prepared, baseline, context, started=STARTED):
         if code != 0:
             raise RuntimeError('Locked worker failed, exit='+str(code))
         result = read(output/'worker_result.json')
-        if result['status'] != 'completed' or result['selection']['stop_reason'] not in ('plateau', 'max_equivalent_epochs'):
+        if result['status'] != 'completed' or result['selection']['stop_reason'] not in ('plateau', 'max_equivalent_epochs', 'max_updates'):
             raise ValueError('Missing terminal selection')
         record.update(status='completed', stop_reason=result['selection']['stop_reason'])
     except BaseException as error:

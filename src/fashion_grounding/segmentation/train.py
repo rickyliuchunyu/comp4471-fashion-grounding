@@ -93,6 +93,11 @@ def main():
         raise ValueError('This configuration requires model-only initialization or same-run resume')
     if config.get('input_validation_bundle_required') and not args.input_validation_bundle:
         raise ValueError('Use the pinned acceptance receipt; do not repeat image/mask audits')
+    if 'input_bundle_sha256' in config and (not args.input_validation_bundle
+            or sha256(args.input_validation_bundle) != config['input_bundle_sha256']):
+        raise ValueError('Wrong pinned input bundle')
+    if args.model_only and 'model_only_spec_sha256' in config and sha256(args.model_only) != config['model_only_spec_sha256']:
+        raise ValueError('Wrong pinned model-only source')
     stop = config['max_updates'] if args.stop_after is None else args.stop_after
     if not 0 < stop <= config['max_updates']:
         raise ValueError('Stop boundary outside configured budget')
@@ -119,7 +124,11 @@ def main():
     if any(config[key] != data[key] for key in data):
         raise ValueError('Training input differs from pinned data hashes')
     records.sort(key=lambda r: r['image_id'])
-    sampler = StatefulSampler(len(records), config['seed'])
+    if 'sampling' in config:
+        from .full_sampling import FixedOrderSampler
+        sampler = FixedOrderSampler([record['image_id'] for record in records], config)
+    else:
+        sampler = StatefulSampler(len(records), config['seed'])
     model, cfg = build_model(args.source, device='cpu')
     cfg = configure_record(cfg, config)
     digest = config_sha256(config)
@@ -191,6 +200,8 @@ def main():
         if actual != expected:
             raise ValueError(f'Restored state mismatch: {[k for k in expected if actual[k] != expected[k]]}')
         completed = resume_state['completed_updates']
+        if 'sampling' in config and sampler.position != completed * config['effective_batch_images']:
+            raise ValueError('Sampler cursor differs from successful update count')
         write_json(output / 'resume_check.json', dict(status='passed', resumed_from_update=completed,
             checkpoint_sha256=sha256(args.resume), exact_components=sorted(expected),
             expected_digests=expected, restored_digests=actual))

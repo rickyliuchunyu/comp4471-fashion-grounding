@@ -67,7 +67,8 @@ def audit_training(directory, stage, previous, context):
             and report['backbone_and_classifier_updated'] is True, 'Training did not finish valid updates')
     data = read(directory/'data_check.json')
     require(all(data[k] == v for k, v in context['training_data'].items())
-            and data['images'] == 10000 and data['instances'] == 39699,
+            and data['images'] == context.get('train_images', 10000)
+            and data['instances'] == context.get('train_instances', 39699),
             'Training data receipt differs')
     initialization = read(directory/'initialization.json')
     require(initialization['mode'] == 'model_only' and initialization['source'] == context['model_only_source']

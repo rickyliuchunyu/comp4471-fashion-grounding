@@ -1,0 +1,85 @@
+{
+  "checked_on": "2026-11-18T18:20:14+08:00",
+  "opening_refs": {
+    "data-eval/p3-baseline-evaluation": "07b0125a14db02e9b448c097d40df491c70d2c7d",
+    "grounding/siglip-baseline-interfaces": "c2fe196398de0e4589c0713896459b46be3e17d0",
+    "grounding/spatial-ranker-dev": "c2fe196398de0e4589c0713896459b46be3e17d0",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "segmentation/pilot-adapter-v1": "af48a30dda42f2fa291b61c3518efb302c4ec0ff"
+  },
+  "opening_prs": [
+    {
+      "n": 5,
+      "head": "c2fe196398de0e4589c0713896459b46be3e17d0",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "discussion": [],
+      "title": "Grounding: SigLIP baselines and controlled M1/M2 spatial comparison on reviewed dev"
+    },
+    {
+      "n": 4,
+      "head": "07b0125a14db02e9b448c097d40df491c70d2c7d",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "discussion": [],
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts"
+    },
+    {
+      "n": 3,
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "discussion": [],
+      "title": "Add visually grounded bilingual drafts and blind human review"
+    },
+    {
+      "n": 2,
+      "head": "af48a30dda42f2fa291b61c3518efb302c4ec0ff",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "discussion": [
+        {
+          "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2#issuecomment-6972670288",
+          "author": "rickyliuchunyu"
+        }
+      ],
+      "title": "Segmentation: C5k results and bounded full-data plan"
+    },
+    {
+      "n": 1,
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "discussion": [],
+      "title": "Add data_eval pilot validation and human review auditing"
+    }
+  ],
+  "pre_push_updates": [
+    [
+      4,
+      "ae08c8de8491256724123f5f2b126b0a7faa74b2",
+      "open",
+      0
+    ],
+    [
+      5,
+      "2c47c3609080a5a1f35914a0ed2269fcba47817d",
+      "open",
+      0
+    ]
+  ],
+  "data_release": "fp_train_full_eligible_v1",
+  "exposures": 146
+}

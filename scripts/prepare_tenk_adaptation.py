@@ -7,6 +7,23 @@ ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT/'configs/runs/segmentation/tenk_adaptation_plan.json'
 
 
+def stage_commands(plan, directory, update, previous, train_config):
+    python = plan['python']
+    checkout = Path(plan['execution_checkout'])
+    train = [python,'-m','fashion_grounding.segmentation.train','--package',plan['training_package'],
+        '--source',plan['upstream_source'],'--config',str(train_config),
+        '--input-validation-bundle',str(checkout/plan['input_validation_bundle']),
+        '--stop-after',str(update),'--output',str(directory/'train')]
+    train += ['--resume',str(previous)] if previous else ['--model-only',str(checkout/plan['model_only_source'])]
+    checkpoint = directory/f'train/checkpoint_{update:06d}.pth'
+    dev = [python,'-m','fashion_grounding.segmentation.evaluate','--package',plan['evaluation_package'],
+        '--training-package',plan['training_package'],'--source',plan['upstream_source'],
+        '--config',str(checkout/plan['evaluation_config']),
+        '--input-validation-bundle',str(checkout/plan['input_validation_bundle']),
+        '--checkpoints',str(checkpoint),'--output',str(directory/'dev')]
+    return train, dev, checkpoint
+
+
 def prepare(plan, root=ROOT, *, authorized=False):
     from fashion_grounding.data.schema import sha256
     from fashion_grounding.segmentation.training_state import read_config, config_sha256
@@ -45,7 +62,7 @@ def prepare(plan, root=ROOT, *, authorized=False):
     epochs_to_updates = lambda e: e*config['training_images']//config['effective_batch_images']
     if config['training_images'] % config['effective_batch_images']:
         raise ValueError('Epoch boundary must align with successful updates')
-    output, python = Path(plan['future_output']), plan['python']
+    output = Path(plan['future_output'])
     checkout = Path(plan['execution_checkout'])
     stages, previous = [], None
     for epoch in plan['evaluation_epochs']:
@@ -53,17 +70,7 @@ def prepare(plan, root=ROOT, *, authorized=False):
         if update not in config['checkpoint_updates']:
             raise ValueError('Evaluation checkpoint is not saved')
         directory = output/f'epoch_{epoch:02d}'
-        train = [python,'-m','fashion_grounding.segmentation.train','--package',plan['training_package'],
-            '--source',plan['upstream_source'],'--config',str(checkout/plan['training_config']),
-            '--input-validation-bundle',str(checkout/plan['input_validation_bundle']),
-            '--stop-after',str(update),'--output',str(directory/'train')]
-        train += ['--resume',str(previous)] if previous else ['--model-only',str(checkout/plan['model_only_source'])]
-        checkpoint = directory/f'train/checkpoint_{update:06d}.pth'
-        dev = [python,'-m','fashion_grounding.segmentation.evaluate','--package',plan['evaluation_package'],
-            '--training-package',plan['training_package'],'--source',plan['upstream_source'],
-            '--config',str(checkout/plan['evaluation_config']),
-            '--input-validation-bundle',str(checkout/plan['input_validation_bundle']),
-            '--checkpoints',str(checkpoint),'--output',str(directory/'dev')]
+        train, dev, checkpoint = stage_commands(plan, directory, update, previous, checkout/plan['training_config'])
         stages.append(dict(equivalent_epoch=epoch, new_run_update=update,
             cumulative_image_presentations=epoch*config['training_images'], train=train, full_dev=dev))
         previous = checkpoint

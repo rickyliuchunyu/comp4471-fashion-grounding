@@ -4,19 +4,19 @@ import json
 from pathlib import Path
 
 from ..data.schema import safe_path, sha256
-from .input_receipts import read_evidence_bundle, validate_chain
+from .input_receipts import read_evidence_bundle, validate_chain, catalog_pin
 
 
 def load_accepted_training_package(root, evidence_path):
     from detectron2.structures import BoxMode
     bundle, evidence, _ = read_evidence_bundle(evidence_path)
     validate_chain(bundle, evidence)
-    if bundle['mode'] != 'accepted_expansion':
+    if bundle['mode'] not in ('accepted_expansion', 'accepted_full_release'):
         raise ValueError('Use existing loader for inputs without accepted expansion evidence')
     root = Path(root)
     data = dict(image_manifest_sha256=sha256(root/'image_manifest.json'),
                 annotation_sha256=sha256(root/'annotations_coco.json'))
-    if data != bundle['training_data'] or sha256(root/'SHA256SUMS.json') != evidence['acceptance']['package_pins']['SHA256SUMS.json']:
+    if data != bundle['training_data'] or sha256(root/'SHA256SUMS.json') != catalog_pin(bundle, evidence):
         raise ValueError('Accepted training metadata changed')
     manifest = json.loads((root/'image_manifest.json').read_text())
     coco = json.loads((root/'annotations_coco.json').read_text())

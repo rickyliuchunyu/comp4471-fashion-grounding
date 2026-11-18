@@ -1,5 +1,7 @@
 # 交接记录入口
 
+**全量分割单线训练已准备，尚未启动（2026-11-18）。** 从 50k 只加载模型参数，42,476 张基础图各一次，穿插 14,160 次小目标定向取图。半程 14,159 步、结束 28,318 步各评完整 dev250，与缓存的 50k 比较选权重。5 小时总硬上限。真实 CPU 采样排程已固定。[配置、验证与执行入口](segmentation/full_single_line_20261118.md)
+
 **全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](segmentation/full_train_protection_20261118.md) · [原增量接收](segmentation/full_train_acceptance_20261118.md)
 
 当前交付（2026-11-18）：[50k＋0.3候选接入说明](segmentation/current_candidates.md) **ready_for_downstream_development**。完整dev250的1279个候选及642条查询快照已固定，机器索引和交接说明同步到服务器共享目录；wyz/wkq可立即更新各自候选输入，不必等待分割继续优化。新候选区域特征使用新hash键，相同文本/语言/编码器的文本特征可复用。wyz 和 wkq 已各自发布基于 50k 候选的 dev 结果。[wyz 评价](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd/docs/handoffs/grounding/u50000_dev_20261118.md) · [wkq 复核](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md)
