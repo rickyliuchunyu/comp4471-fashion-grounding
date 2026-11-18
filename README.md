@@ -80,3 +80,5 @@ Git 跟踪的数据、模型和输出目录保留占位；真实接口包存放�
 Grounding 第一阶段已在远端验证，详见 [wyz 交接](docs/handoffs/grounding/siglip_baselines_20261112.md)：20 图/145 GT 的编码输入与 80 条未复核草稿输出，仅用于接口诊断。
 
 最新 grounding：[B 数据消费验收、B1/B2 与 M1 弱标注试训](docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md)。六包技术验收通过；M1 的训练拟合改善不等于泛化提升。
+
+11月17日 wyz 已完成两个训练包上的 M1/M2 同预算对照和 B2 开发集选权重，见[结果与交接](docs/handoffs/grounding/spatial_controlled_20261117.md)。
