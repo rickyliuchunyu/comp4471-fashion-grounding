@@ -11,7 +11,14 @@ wkq / data_eval，2026-11-18。训练和开发增量均为 Codex 看图初标，
 
 服务器共享根目录 `/root/autodl-tmp/fashion-grounding/shared/processed`。训练使用 `fp_language_direction_pairs_train_v1/candidates_gt.json` 和 `queries_machine_train.jsonl`。新包直接继承 1149 图版的 3296 条记录，共 1235 图、3640 条记录（1234 图有查询）。只做增量统计时读取 `queries_increment.jsonl`。wyz 可用原 M2、种子 42、相同更新预算做对照。同时报告同图一对目标都选对的比例，观察是否只记住了一个方向。
 
-新 dev 包只在 `queries_draft.jsonl` 和 `queries_increment.jsonl` 提供监督草稿。机器训练和人工 accepted 入口均为空。正式复评需要 wkq 审核并冻结查询，lcy 为这 74 张图导出同一检查点和阈值的预测候选。之前 50k/dev250 的预测文件只覆盖原主 dev。保持主 dev 的 642 条历史分母，另报新集、非鞋和鞋三个结果。CPU 已完成数据与消费检查，本次未训练或运行模型评价。
+## 未审核 dev 可以先测试
+
+**wyz 现在就可以用这 74 张图、296 条未审核中英文查询测试现有模型。** 从 `fp_language_direction_pairs_dev_v1/queries_draft.jsonl` 读取查询文本。目标实例 ID 仅用于推理后与草稿答案比对。按鞋类和非鞋类分别报告单条查询选对率，以及同图两个目标均选对的比例，并在结果表标注「未审核 dev 初测」。
+
+- **先测排序。** 使用同包的 `candidates_gt.json`，可通过 `scripts/probe_draft_spatial_prior.py` 对照 B2、M2 和 M2 加方位分，检查模型能否从真实实例掩码中选出描述的目标。
+- **再测端到端。** lcy 用与原 dev250 相同的分割检查点和阈值为这 74 张图导出预测候选后，wyz 即可用同一份草稿查询测试分割加排序，报告与初标目标的严格选对率和掩码 IoU ≥ 0.5 达标率。此步也可在人工审核前运行。
+
+wkq 审核并冻结查询后，用 accepted 清单重新计分。只修正目标 ID 的条目可复用已有预测，改过描述的条目需重新推理。新困难集单列结果，原主 dev 仍按 642 条已审核查询报告。本次交接已完成 CPU 数据与消费检查，新包的模型得分待实测。
 
 ## 覆盖与筛选
 
