@@ -1,0 +1,108 @@
+{
+  "launcher": {
+    "run_id": "full-combo-u28318-20261119-r01",
+    "launcher_pid": 319799,
+    "started_at": "2026-11-19T02:07:19.821919+08:00",
+    "execution_commit": "dfb84558568fce99f49b1b9a36719633d058888a",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "scripts/run_tenk_adaptation.py",
+      "--plan",
+      "configs/runs/segmentation/full_combo_plan.json",
+      "--execute"
+    ],
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01",
+    "launcher_log": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01-launch/launcher.log",
+    "detached": true
+  },
+  "initialization": {
+    "mode": "model_only",
+    "source": {
+      "mode": "model_only",
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+      "sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+      "source_completed_updates": 28318,
+      "source_training_data": {
+        "image_manifest_sha256": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+        "annotation_sha256": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340"
+      },
+      "source_config_sha256": "0d168b42780cc49a39263f9ace1ca1db621146e03e3aa5cea92b78338f9b7742",
+      "source_git_commit": "9f1ca245fbde243df17ec711854c803e52892617"
+    },
+    "new_completed_updates": 0,
+    "loaded_components": [
+      "model"
+    ],
+    "reset_components": [
+      "optimizer",
+      "scheduler",
+      "scaler",
+      "sampler",
+      "rng",
+      "amp_recovery"
+    ],
+    "model_digest": "f17ddffebc77a8b31f9e8e01a6440f06b3d6a05cabfb0ed4c41639454cce25b0",
+    "classifier_reinitialized": false
+  },
+  "snapshot": {
+    "snapshot_hkt": "2026-11-19T02:08:46+08:00",
+    "total_deadline_hkt": "2026-11-19T10:07:19+08:00",
+    "successful_updates": 144,
+    "images_consumed": 288,
+    "image_order_prefix_matches": true,
+    "consecutive_updates": true,
+    "finite_loss_and_gradient_norms": true,
+    "optimizer_steps_skipped": 0,
+    "amp_overflow_events": 0,
+    "updates_by_image_size": {
+      "768": 72,
+      "896": 72
+    },
+    "point_observations": [
+      {
+        "update": 1,
+        "image_size": 896,
+        "matched_instances": 5,
+        "points": 62720,
+        "foreground_hits": 11838,
+        "boundary_hits": 592
+      },
+      {
+        "update": 2,
+        "image_size": 768,
+        "matched_instances": 3,
+        "points": 37632,
+        "foreground_hits": 13852,
+        "boundary_hits": 672
+      }
+    ],
+    "last_metrics": {
+      "update": 144,
+      "image_size": 896,
+      "total_loss": 13.08681458234787,
+      "grad_norm_before_clip": 239.9663848876953,
+      "grad_norm_after_clip": 0.009999999776482582,
+      "learning_rates": [
+        4.771900000000001e-07,
+        4.7719e-06
+      ],
+      "peak_cuda_allocated_bytes": 6144154624,
+      "peak_cuda_reserved_bytes": 6994001920
+    },
+    "gpu": "NVIDIA GeForce RTX 3090, 7043 MiB, 24576 MiB, 10 %",
+    "coordination_status": "running",
+    "stage_at_snapshot": [
+      {
+        "update": 14159,
+        "status": "running",
+        "deadline_monotonic": 25568035.352817655,
+        "phases": [
+          {
+            "phase": "train",
+            "status": "running"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "resources": {
+    "checked_at": "2026-11-19T02:07:00.663254+08:00",
+    "free_data_bytes": 129237798912,
+    "free_system_bytes": 28914487296,
+    "gpu": "NVIDIA GeForce RTX 3090, 0, 24576, 0",
+    "compute_pids": [],
+    "shared_lock_free": true,
+    "running_records": [],
+    "output_exists": false
+  },
+  "pull_requests": [
+    {
+      "number": 1,
+      "state": "closed",
+      "draft": true,
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "discussion_entries": 0
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "draft": true,
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "dfb84558568fce99f49b1b9a36719633d058888a",
+      "base": "main",
+      "discussion_entries": 1
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "draft": true,
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "discussion_entries": 0
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "draft": true,
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "b82fc9993676b008cd97f06e5ca91fa2b7c7f26b",
+      "base": "main",
+      "discussion_entries": 0
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "draft": false,
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "1e0a457cd943a979b18ec8060113bef40669ad16",
+      "base": "data-eval/p3-baseline-evaluation",
+      "discussion_entries": 0
+    }
+  ],
+  "remote_branches": {
+    "origin/data-eval/p3-baseline-evaluation": "b82fc9993676b008cd97f06e5ca91fa2b7c7f26b",
+    "origin/grounding/siglip-baseline-interfaces": "1e0a457cd943a979b18ec8060113bef40669ad16",
+    "origin/grounding/spatial-ranker-dev": "1e0a457cd943a979b18ec8060113bef40669ad16",
+    "origin/main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "origin/segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "origin/segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "origin/segmentation/pilot-adapter-v1": "dfb84558568fce99f49b1b9a36719633d058888a"
+  }
+}

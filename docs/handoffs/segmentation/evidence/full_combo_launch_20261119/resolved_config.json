@@ -1,0 +1,70 @@
+{
+  "purpose": "s0_training",
+  "seed": 43,
+  "image_manifest_sha256": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+  "annotation_sha256": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340",
+  "max_updates": 28318,
+  "learning_rate": 1e-05,
+  "backbone_lr_multiplier": 0.1,
+  "weight_decay": 0.05,
+  "weight_decay_norm": 0.0,
+  "weight_decay_embed": 0.0,
+  "microbatch_images": 2,
+  "accumulation_steps": 1,
+  "effective_batch_images": 2,
+  "warmup_updates": 300,
+  "warmup_start_factor": 0.001,
+  "lr_milestones": [],
+  "lr_decay": 0.1,
+  "amp": true,
+  "amp_initial_scale": 1.0,
+  "gradient_clip_norm": 0.01,
+  "image_size": 768,
+  "min_scale": 0.5,
+  "max_scale": 2.0,
+  "random_flip": "horizontal",
+  "checkpoint_interval": 14159,
+  "budget_seconds": 28800,
+  "run_scope": "full_combo_model_only_28318",
+  "checkpoint_updates": [
+    14159,
+    28318
+  ],
+  "amp_recovery": {
+    "max_retries_per_update": 4,
+    "max_overflow_events": 16,
+    "min_loss_scale": 0.0001
+  },
+  "training_authorized": true,
+  "initialization_mode": "model_only",
+  "input_validation_bundle_required": true,
+  "training_images": 42476,
+  "lr_schedule": "cosine",
+  "lr_min_factor": 0.02,
+  "sampling": {
+    "target_draws": 14160,
+    "source_names": [
+      "shoe",
+      "sock",
+      "belt"
+    ],
+    "max_area": 1024,
+    "max_extra_per_group": 4,
+    "protection_sha256": "6cecceaf3215830f2cb88626f97fa8ee5b29ec5049d9824c1187aedb94fd86fd",
+    "order_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-sampling-20261119-r01/order.json",
+    "target_cycle": [
+      "shoe",
+      "sock",
+      "shoe",
+      "belt"
+    ],
+    "order_sha256": "07a51a52b1a1cb8a5468c542bc3a5a3f5adec88ae977bb46a3a0942cd14bdde6"
+  },
+  "input_bundle_sha256": "7cc48bc0d9c828b4f9199fa84caab3f2ed066200af94b240ae29e9b8dfd7aaf7",
+  "model_only_spec_sha256": "f0fbb65a3ec425f6a304a16a9c26a2ea3f57b74fbbce184db59ffb24c7887b2c",
+  "mixed_image_sizes": [
+    768,
+    896
+  ],
+  "point_stats_interval": 250
+}
