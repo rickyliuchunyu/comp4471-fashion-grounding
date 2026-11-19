@@ -23,4 +23,4 @@
 
 服务器权重为 `/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth`，SHA-256 为 `b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1`。末程训练报告记录 6 次 AMP 溢出重试，优化器跳步为 0；两段各完成 14,159 次成功更新。[半程训练报告](evidence/full_combo_completion_20261119/update_014159/train/train_report.json) · [末程训练报告](evidence/full_combo_completion_20261119/update_028318/train/train_report.json)
 
-当前 GUI 和下游已交付候选引用前一版权重 `aaff8d9dd89e`。本轮交接发布已有报告与新权重的选择结果，本次汇总新增训练和推理次数均为 0。[现行候选索引](current_candidates.md)
+选模完成时，GUI 和下游候选引用前一版权重 `aaff8d9dd89e`。本轮交接发布已有报告与新权重的选择结果，本次汇总新增训练和推理次数均为 0。[现行候选索引](current_candidates.md)

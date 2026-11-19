@@ -1,12 +1,12 @@
 # 自然语言引导的服饰实例选择与分割
 
-**组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。GUI 与下游当前交付仍使用上一版权重 `aaff8d9dd89e`。[完整比较与权重位置](docs/handoffs/segmentation/full_combo_completion_20261119.md)
+**组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。[完整比较与权重位置](docs/handoffs/segmentation/full_combo_completion_20261119.md)
 
 **上一轮全量分割训练（2026-11-18）。** 当轮选用 28,318 步权重。 完整 dev250 的整体 mask AP 为 71.3205，比旧 50k 高 2.2892 点。小目标 AP 从半程 20.5696 回升至 23.4459，比旧 50k 高 0.3377 点。[三份报告与最终权重](docs/handoffs/segmentation/full_single_completion_20261118.md)
 
 **全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](docs/handoffs/segmentation/full_train_protection_20261118.md) · [原增量接收](docs/handoffs/segmentation/full_train_acceptance_20261118.md)
 
-**当前交付（2026-11-18）**　GUI 开发集、个人图片和下游 dev250 均已切换到 28,318 步＋0.3。完整 250 图共 1,351 个候选，覆盖 606/642 条审核查询（94.39%）。[版本、路径与阈值比较](docs/handoffs/segmentation/current_candidates.md)
+**当前交付（2026-11-19）**　GUI 的开发集、个人图片及下游候选均使用组合权重 `b7146787a1fc` 和阈值 0.3。完整 dev250 共 1,320 个候选，覆盖 610/642 条已审核查询（95.02%）。个人图片默认优先使用空闲 GPU。[交接路径与阈值比较](docs/handoffs/segmentation/current_candidates.md)
 
 前次完成（2026-11-18）：[50k离线残余错误分析](docs/handoffs/segmentation/u50000_residual_diagnosis_20261118.md) **completed**。复用现有AP预测与候选缓存，1008 GT全量分析；固定0.3小目标88/138匹配.5、40/138匹配.75，剩余21低分过滤、24局部几何、3仅异类达标、2无明显重叠。袜6/17、腰带30/47；弱图重采样A/B仅为后续建议；当前优先交接固定候选，未准备或启动新训练。仅CPU诊断与8例看图，0推理/训练/AP重算/smoke；50k＋0.3候选保持。
 

@@ -1,0 +1,18 @@
+{
+  "images": 250,
+  "nonempty_cached_candidates": 24111,
+  "discarded_empty_masks": 889,
+  "decoder_query_id_min": 0,
+  "decoder_query_id_max": 99,
+  "score_components": [
+    "class_probability",
+    "mask_quality"
+  ],
+  "max_absolute_product_error": 1.043177633164305e-07,
+  "reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+  "validated_crops": 3566,
+  "dev_full_passes": 1,
+  "gpu_elapsed_seconds": 200.47120716795325,
+  "total_elapsed_seconds": 469,
+  "hard_limit_seconds": 900
+}

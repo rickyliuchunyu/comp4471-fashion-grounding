@@ -1,43 +1,42 @@
-# 当前分割候选 · 28,318 步
+# 当前分割候选 · 组合微调 28,318 步
 
-**完整 dev250 固定为 28,318 步权重和 0.3 阈值。** 250 张图共 1,351 个候选，0 张图没有候选。使用同一批 642 条已审核的中英文开发查询，覆盖 606 条（94.39%），旧 50k＋0.3 覆盖 602 条，本次差值为 +4 条。覆盖表示目标在同类一对一 IoU ≥ 0.5 匹配下有候选可用，下游排序准确率另行评价。[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json) · [选择回执](evidence/u28318_candidates_20261118/selection/selection.json)
+GUI 开发集、个人图片和下游 Fashionpedia dev250 使用组合权重 `b7146787a1fc`，固定阈值 **0.3**。同一批 642 条已审核中英文开发查询中，新版本覆盖 610 条，上一版 `aaff8d9dd89e` 覆盖 606 条，差值为 +4 条。覆盖按同类一对一掩膜 IoU ≥ 0.5 匹配，衡量下游有多少查询能拿到正确候选。排序准确率由下游单独评价。[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json) · [阈值选择回执](evidence/combo_u28318_candidates_20261119/selection/selection.json)
 
-## 替换下游输入
+## 接入方式
 
-将 `CandidatePack` 或 `--candidates` 指向以下服务器文件。服务器滚动索引位于 `/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json`。每次运行应记录实际使用的版本和摘要。
+把 wyz 的 `CandidatePack` 或 `--candidates` 指向以下 manifest，并在下游运行记录中固定候选集 ID 和 SHA-256。滚动索引为 `/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json`。
 
 ```text
-/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/selected_candidates/candidates_predicted.json
+/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json
 ```
 
-| 输入 | 版本或 SHA-256 |
+| 项目 | 版本或 SHA-256 |
 |---|---|
-| 候选集 ID | `u28318-dev250-20261118-r01-trial-0.3` |
-| 候选 manifest | `829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2` |
-| 最终 checkpoint | `aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809` |
-| 阈值前缓存 | `d609a55f01c082eaf68b1f2f2bc403278e07e4b50284fd23000d4501d47219c9` |
-| dev 查询 | `ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9` |
+| 候选集 ID | `combo-u28318-dev250-20261119-r01-trial-0.3` |
+| manifest | `4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd` |
+| checkpoint | `b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1` |
+| 阈值前缓存 | `beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132` |
+| 642 条开发查询 | `ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9` |
 
-- **wyz**：沿用现有 `CandidatePack`、裁剪入口及候选格式。为新候选 manifest 建立独立的区域特征缓存、排序预测和 mask/框结果。候选身份同时绑定候选集 ID 和真实 decoder query ID。文本、语言和编码器签名均相同时可复用文本特征。
-- **wkq**：在新的 predicted-candidate 评价中绑定新版 manifest 和查询摘要，使用独立输出目录。相同标注、查询和评价协议下可沿用 GT 基线。旧候选的覆盖或排序记录仍属于旧版。
-- **查询快照**：`/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl`。642 条查询来自 321 个中英配对、246 张开发图。dev250 的实际导出保留全部 250 张。当前交付范围为 Fashionpedia dev，接收方独立的 MHP 数据及历史实验沿用各自版本。
+- **wyz** 可直接用已验证的 schema 3 读取器。按新版 manifest 建立独立的区域特征、排序预测和输出 mask/框。文本、语言和编码器签名一致时可复用文本特征。
+- **wkq** 可沿用相同查询、标注和协议下的 GT 结果。依赖预测候选的结果需绑定新版 manifest 和独立输出目录。此前的 Fashionpedia 与 MHP 实验仍对应各自记录的输入版本。
 
-## 三档离线比较
+## 阈值与缓存
 
-| 阈值 | 候选数（250 图） | 匹配覆盖 | 匹配覆盖率 | 几何召回率 |
+| 阈值 | dev250 候选数 | 零候选图 | 匹配覆盖 | 匹配覆盖率 |
 |---:|---:|---:|---:|---:|
-| 0.3 | 1,351 | 606/642 | 94.39% | 96.88% |
-| 0.5 | 1,198 | 598/642 | 93.15% | 96.26% |
-| 0.7 | 1,070 | 588/642 | 91.59% | 95.33% |
+| 0.3 | 1,320 | 0 | 610/642 | 95.02% |
+| 0.5 | 1,181 | 0 | 606/642 | 94.39% |
+| 0.7 | 1,065 | 0 | 596/642 | 92.83% |
 
-按覆盖查询数最多选择，同分先取查询图上候选数更少者，再取较高阈值。阈值前缓存包含 24,141 个非空候选，保留原尺寸掩膜、真实 query ID、类别、分数和框。缓存入口为 `/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/cache/cache.json`。只需调整分数阈值时可直接复用。[完整比较](evidence/u28318_candidates_20261118/selection/comparison.csv) · [导出与下游读取回执](evidence/u28318_candidates_20261118/offline_receipt.json)
+按覆盖查询数最多选择，同分依次取查询图上候选更少者、阈值更高者。查询来自 321 组、246 张图，三档都包括全部 250 张图。缓存保存 24,111 个非空候选，字段包含真实 `decoder_query_id`、`class_probability`、`mask_quality`、最终 `score`、框及原尺寸 RLE 掩膜。`score` 为前两项的乘积，掩膜质量分是预测前景内的平均 sigmoid 值。后续更改分数阈值可直接读取以下缓存。[三档完整比较](evidence/combo_u28318_candidates_20261119/selection/comparison.csv) · [分数字段核对](evidence/combo_u28318_candidates_20261119/score_receipt.json)
 
-## GUI 与运行证据
+```text
+/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/cache/cache.json
+```
 
-[打开本地工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集直接显示已选候选包。「我的图片」在项目服务器载入同一权重和解码配置，默认选择自动模式。共享 GPU 空闲时使用 CUDA，忙碌或不可用时使用 CPU 并显示原因。也可选择「仅 GPU」或「仅 CPU」。「仅 GPU」遇忙会提示稍后重试。结果栏显示实际设备，两个入口的默认阈值均为 0.3。
+## GUI 与验证
 
-浏览器验收使用同一张开发集以外的公开样例（Fashionpedia 4993，1024 × 680）。自动模式实际使用 NVIDIA GeForce RTX 3090，一次上传返回 HTTP 200，显示 3 个实例及 28,318 步版本。共享锁竞争、回退和释放使用独立临时锁验证。此前的 CPU 上传及缓存版本记录见 [GUI 验收](evidence/u28318_candidates_20261118/gui_receipt.json)。
+[打开分割工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集直接显示已导出的候选。「我的图片」在服务器加载相同的权重和解码配置，默认优先用空闲 GPU。发布时用一张开发集之外的公开样图上传一次，实际设备为 NVIDIA GeForce RTX 3090。页面显示步数和 checkpoint 短哈希。其他本机部署可将服务器 `selected_candidates/` 的两个 manifest、`images/` 和 `masks/` 复制至 `outputs/segmentation_gui/releases/combo-u28318-dev250-20261119-r01/`。[GUI 验证回执](evidence/combo_u28318_candidates_20261119/gui_receipt.json)
 
-首次部署时，将已选目录中的 `candidates_predicted.json`、`image_manifest.json`、`images/`、`masks/` 复制至 `outputs/segmentation_gui/releases/u28318-dev250-20261118-r01/`。本机 Python 环境及 SSH 配置沿用[工作台设置](gui_50k_20261118.md)。
-
-2026-11-18 开工时数据盘约 121 GiB 可用，系统盘约 27 GiB 可用，RTX 3090 占用 0 / 24,576 MiB，GPU 锁空闲。已核对全部七个远端分支及五个 PR，wkq 为 `b82fc99`，wyz 为 `2c47c36`。模型与导出配置通过分割提交 `bc46e85` 固定。共享锁只执行一次完整 dev250 候选推理。三档及阈值选择均为 CPU 离线处理。真实消费验证使用 wyz 当前提交的读取器。三档共检查 3,619 个裁剪。既有完整 dev 分割 AP 71.3205 本次直接复用。队友本人签收状态待对方记录。[GPU 运行回执](evidence/u28318_candidates_20261118/coordination.json) · [缓存回执](evidence/u28318_candidates_20261118/cache_run_metadata.json) · [原始 dev AP](full_single_completion_20261118.md)
+开工时已核对三人的远端分支、五个 PR 和交接，wkq 为 `b82fc99`，wyz 为 `1e0a457`。数据盘可用 120 GiB，RTX 3090 占用 0/24,576 MiB，共享锁空闲。一次 dev250 候选推理加三档离线导出和选择耗时 469 秒，硬上限 900 秒。使用 wyz 此提交的真实读取器验证了三档的 3,566 个裁剪。既有分割 AP 报告沿用原记录。队友本人签收待对方记录。[GPU 记录](evidence/combo_u28318_candidates_20261119/coordination.json) · [下游读取回执](evidence/combo_u28318_candidates_20261119/offline_receipt.json) · [组合权重选模报告](full_combo_completion_20261119.md)

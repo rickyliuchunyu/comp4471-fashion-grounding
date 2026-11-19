@@ -296,7 +296,7 @@ $('run').onclick = async () => {
 async function start() {
   const data = await jsonResponse(await fetch('/api/gallery'));
   state.model = data.model;
-  $('modelVersion').textContent = data.model.completed_updates.toLocaleString('en-US') + ' 步';
+  $('modelVersion').textContent = data.model.completed_updates.toLocaleString('en-US') + ' 步 · ' + data.model.checkpoint.slice(0, 12);
   const minimum = Math.round(data.model.threshold * 100);
   $('threshold').min = minimum;
   $('threshold').value = minimum;

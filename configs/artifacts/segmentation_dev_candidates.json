@@ -3,25 +3,25 @@
   "purpose": "segmentation_dev_candidate_handoff_index",
   "status": "ready_for_downstream_development",
   "owner": "segmentation",
-  "published_date_hkt": "2026-11-18",
-  "release_id": "u28318-dev250-20261118-r01",
-  "candidate_set_id": "u28318-dev250-20261118-r01-trial-0.3",
+  "published_date_hkt": "2026-11-19",
+  "release_id": "combo-u28318-dev250-20261119-r01",
+  "candidate_set_id": "combo-u28318-dev250-20261119-r01-trial-0.3",
   "candidate_manifest": {
-    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
-    "sha256": "829f699293fd4537ec27dfb549943e5592de37fce91ec929f8371e04cb55fed2"
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+    "sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd"
   },
   "selected_threshold": 0.3,
   "checkpoint": {
-    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
-    "sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth",
+    "sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
     "completed_updates": 28318
   },
   "dev": {
     "images": 250,
-    "candidates": 1351,
+    "candidates": 1320,
     "zero_candidate_images": 0,
     "queries": {
-      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl",
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/language_dev_inputs/queries_accepted.jsonl",
       "sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9"
     },
     "query_records": 642,
@@ -40,27 +40,32 @@
     "full_package_formal_freeze": false
   },
   "selection": {
-    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/selection/selection.json",
-    "sha256": "bbc37fcddb60af956bf46bc27c3dc371bc418d964bf0f1dcc3ef062162e9f2a4",
-    "matched_covered_queries": 606,
-    "matched_candidate_coverage": 0.9439252336448598
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selection/selection.json",
+    "sha256": "20554a4706cfc230e13ecb4d4b1a54509b3f96ce0581c2617cad5eb2efb0301e",
+    "matched_covered_queries": 610,
+    "matched_candidate_coverage": 0.9501557632398754
   },
   "cache": {
-    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/cache/cache.json",
-    "sha256": "d609a55f01c082eaf68b1f2f2bc403278e07e4b50284fd23000d4501d47219c9",
-    "kind": "after one-class-per-query decoding before score threshold; not raw logits"
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/cache/cache.json",
+    "sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132",
+    "kind": "after one-class-per-query decoding before score threshold; not raw logits",
+    "score_components": [
+      "class_probability",
+      "mask_quality"
+    ]
   },
   "delivery_manifest": {
-    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u28318-dev250-20261118-r01/delivery_manifest.json",
-    "sha256": "57a5870235217daae5da241fd73e4f94cd4505b3820356fe98e61acb5710b8d8"
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/delivery_manifest.json",
+    "sha256": "bb6b0727afb3d954889a46e2653c36bd2e91e85e14cd8e75f516c3266e050968"
   },
   "consumer": {
-    "grounding_commit": "2c47c3609080a5a1f35914a0ed2269fcba47817d",
+    "grounding_commit": "1e0a457cd943a979b18ec8060113bef40669ad16",
     "reader": "fashion_grounding.grounding.inputs.CandidatePack",
     "schema": 3,
     "contract_checks": "All three threshold trials passed the pinned CandidatePack reader and crop checks.",
     "image_feature_policy": "Rebuild candidate-dependent region features, ranking predictions and evaluation for this manifest. Preserve old versioned outputs.",
-    "text_feature_policy": "Existing exact text/language/encoder signature cache entries may be reused; no need to clear the shared FeatureCache root"
+    "text_feature_policy": "Existing exact text/language/encoder signature cache entries may be reused; no need to clear the shared FeatureCache root",
+    "reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8"
   },
   "available_splits": [
     "dev"
@@ -76,7 +81,7 @@
     "Release includes dev250 only. Language dev snapshot and model-independent GT remain available under their existing hashes."
   ],
   "export_config": {
-    "path": "configs/runs/segmentation/candidate_u28318_export.json",
-    "sha256": "cd532e9ec4667402e8fad30bb5b5d7ad5cb422410b44c4a238b5dea631668e78"
+    "path": "configs/runs/segmentation/candidate_combo_u28318_export.json",
+    "sha256": "f2fff4dba36a416f1749fb1426daabb5a3e389ee278ba6bbcf6dc18e08969128"
   }
 }

@@ -1,0 +1,4 @@
+threshold,queries,images,covered_queries,matched_candidate_coverage,geometric_recalled_queries,geometric_recall_at_0_5,candidate_count_on_query_images,mean_candidates_on_query_images,zero_candidate_images
+0.3,642,246,610,0.9501557632398754,626,0.9750778816199377,1301,5.288617886178862,0
+0.5,642,246,606,0.9439252336448598,624,0.9719626168224299,1164,4.7317073170731705,0
+0.7,642,246,596,0.9283489096573209,620,0.9657320872274143,1049,4.264227642276423,0
