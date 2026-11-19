@@ -1,6 +1,8 @@
 # 自然语言引导的服饰实例选择与分割
 
-**全量分割训练已结束，最终选用 28,318 步权重（2026-11-18）。** 完整 dev250 的整体 mask AP 为 71.3205，比旧 50k 高 2.2892 点。小目标 AP 从半程 20.5696 回升至 23.4459，比旧 50k 高 0.3377 点。[三份报告与最终权重](docs/handoffs/segmentation/full_single_completion_20261118.md)
+**组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。GUI 与下游当前交付仍使用上一版权重 `aaff8d9dd89e`。[完整比较与权重位置](docs/handoffs/segmentation/full_combo_completion_20261119.md)
+
+**上一轮全量分割训练（2026-11-18）。** 当轮选用 28,318 步权重。 完整 dev250 的整体 mask AP 为 71.3205，比旧 50k 高 2.2892 点。小目标 AP 从半程 20.5696 回升至 23.4459，比旧 50k 高 0.3377 点。[三份报告与最终权重](docs/handoffs/segmentation/full_single_completion_20261118.md)
 
 **全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](docs/handoffs/segmentation/full_train_protection_20261118.md) · [原增量接收](docs/handoffs/segmentation/full_train_acceptance_20261118.md)
 

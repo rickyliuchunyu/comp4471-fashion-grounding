@@ -1,0 +1,42 @@
+[
+  {
+    "update": 14159,
+    "status": "completed",
+    "deadline_monotonic": 25568035.352817655,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 6343.097821105272
+  },
+  {
+    "update": 28318,
+    "status": "completed",
+    "deadline_monotonic": 25568035.352817655,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 6309.435742452741
+  }
+]

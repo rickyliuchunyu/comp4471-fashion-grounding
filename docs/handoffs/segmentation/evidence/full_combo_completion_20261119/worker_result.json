@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "selection": {
+    "selected_origin": "full_combo",
+    "selected_checkpoint": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth",
+      "completed_updates": 28318,
+      "dev_mask_AP": 71.89108509231161,
+      "compared_updates": [
+        14159,
+        28318
+      ]
+    },
+    "new_run_best": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth",
+      "completed_updates": 28318,
+      "dev_mask_AP": 71.89108509231161,
+      "compared_updates": [
+        14159,
+        28318
+      ]
+    },
+    "cached_baseline": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+      "completed_updates": 28318,
+      "dev_mask_AP": 71.32050253253068,
+      "compared_updates": [
+        28318
+      ]
+    },
+    "stop_reason": "max_updates",
+    "selected_minus_baseline": {
+      "AP": 0.5705825597809309,
+      "AP75": 0.1674217899363981,
+      "AP_small": 5.330323754002173
+    }
+  }
+}
