@@ -1,5 +1,7 @@
 # 当前分割候选 · 组合微调 28,318 步
 
+**2026-11-19，lcy 已正式冻结 S0。** 固定候选集为 `combo-u28318-dev250-20261119-r01-trial-0.3`。下游复现时使用下表的版本化 manifest 和完整摘要。全组 P7 待汇总，wyz 与 wkq 待本人签收。[机器可读冻结条目](s0_freeze_20261119.json)
+
 GUI 开发集、个人图片和下游 Fashionpedia dev250 使用组合权重 `b7146787a1fc`，固定阈值 **0.3**。同一批 642 条已审核中英文开发查询中，新版本覆盖 610 条，上一版 `aaff8d9dd89e` 覆盖 606 条，差值为 +4 条。覆盖按同类一对一掩膜 IoU ≥ 0.5 匹配，衡量下游有多少查询能拿到正确候选。排序准确率由下游单独评价。[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json) · [阈值选择回执](evidence/combo_u28318_candidates_20261119/selection/selection.json)
 
 ## 接入方式
@@ -22,6 +24,8 @@ GUI 开发集、个人图片和下游 Fashionpedia dev250 使用组合权重 `b7
 - **wkq** 可沿用相同查询、标注和协议下的 GT 结果。依赖预测候选的结果需绑定新版 manifest 和独立输出目录。此前的 Fashionpedia 与 MHP 实验仍对应各自记录的输入版本。
 
 ## 阈值与缓存
+
+冻结的候选解码使用 800 像素短边、1,333 像素长边上限，每个 query 取一个前景类别，每图最多 100 个候选。生成缓存时分数阈值为 0，交付时按 `score ≥ 0.3` 筛选。交付配置的 SHA-256 指纹为 `2c7de35036c9153b13d1009ebdde810ae8bb5b3723d1c8beb1a4cd39bdcba7cb`，与所选 manifest 的 `provenance.decoder_config_sha256` 一致。[导出配置](../../../configs/runs/segmentation/candidate_combo_u28318_export.json) · [阈值选择回执](evidence/combo_u28318_candidates_20261119/selection/selection.json)
 
 | 阈值 | dev250 候选数 | 零候选图 | 匹配覆盖 | 匹配覆盖率 |
 |---:|---:|---:|---:|---:|
