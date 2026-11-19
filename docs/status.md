@@ -1,6 +1,6 @@
 # 当前进度与下一步
 
-**S0 分割器已由 lcy 于 2026-11-19 冻结。** 固定组合权重 `b7146787a1fc`、正式候选解码配置、0.3 阈值及 dev250 manifest `4daf79030f88`。全组 P7 待汇总，wyz 和 wkq 待本人签收。[S0 冻结条目与完整 SHA-256](handoffs/segmentation/s0_freeze_20261119.json)
+**S0 分割器已由 lcy 于 2026-11-19 冻结。** 固定组合权重 `b7146787a1fc`、正式候选解码配置、0.3 阈值及 dev250 manifest `4daf79030f88`。wyz 排序端已签收并复现覆盖 610/642，wkq 评价端签收及全组 P7 汇总待办。[S0 冻结条目与完整 SHA-256](handoffs/segmentation/s0_freeze_20261119.json)
 
 **组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。[完整比较与权重位置](handoffs/segmentation/full_combo_completion_20261119.md)
 
@@ -69,7 +69,7 @@
 | P4 数据扩充冻结 | in_progress | 全量 42,476 张的分割增量接收、5 组历史裁决与 146 张曝光保护均已登记。642 条审核语言 dev 已留档 | 三方正式冻结及尚待处理的语言审核 | B，全员 |
 | P5-S 分割训练 | done | [S0 已冻结](handoffs/segmentation/s0_freeze_20261119.json)，组合权重 `b7146787a1fc`、dev250 mask AP 71.8911、候选阈值 0.3，GUI 已交付 | 下游消费与排序属于 P6 | lcy |
 | P5-L 排序训练 | in_progress | [M1/M2在1000/1149图的四组seed42对照][wyz-current]已完成，每组490updates；M2几何有效但未观察到稳定收益 | 其他种子、人工复核训练监督及冻结后的独立测试仍缺；本轮lcy不代做 | A |
-| P6 联调与对照 | in_progress | 已有 B1 联调及六组评价，wyz 已用 50k 候选评价 642 条审核 dev 查询，wkq 已复核并发布 M2 方位加分对照 | 多种子空间收益、公平完整对照、E1 与 demo 仍待完成 | 全员分责 |
+| P6 联调与对照 | in_progress | [wyz 已签收冻结的组合候选](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/69f3d1f0a61688470741f95d51686f23dbe2ce48/docs/handoffs/grounding/frozen_combo_dev_20261119.md)，7 种方法各输出 642 条 dev 结果，候选覆盖 610/642。wkq 已复核并发布此前的 M2 方位加分对照 | 多种子空间收益、公平完整对照、E1 与 demo 仍待完成 | 全员分责 |
 | P7 方法锁定 | not_started | lcy 的 [S0 冻结条目](handoffs/segmentation/s0_freeze_20261119.json) 可供汇总 | 全组方法、数据、评价协议及最终运行清单待核对 | B 汇总，全员核对 |
 | P8 最终测试 | not_started | 评价协议 | 完整预测、指标与失败记录 | 全员 |
 | P9 报告与演示 | not_started | 写作分工；此行指最终交付 | 最终实验对应报告、演示与渲染检查 | 全员 |
@@ -81,7 +81,7 @@
 
 | 负责人 | 下一项任务 | 可立即做 | 依赖/阻塞 | 交付位置与证据 |
 | --- | --- | --- | --- | --- |
-| lcy | S0 已冻结并交付 | 下游可按固定 manifest 取用 dev250 候选 | wyz、wkq 本人签收待记录 | [冻结条目](handoffs/segmentation/s0_freeze_20261119.json) · [候选交接](handoffs/segmentation/current_candidates.md) |
+| lcy | S0 已冻结并交付 | 下游可按固定 manifest 取用 dev250 候选 | wyz 已签收，待 wkq 评价端签收 | [冻结条目](handoffs/segmentation/s0_freeze_20261119.json) · [候选交接](handoffs/segmentation/current_candidates.md) |
 | wyz（A）/ grounding | 已发布配对目标函数对照 | 保留原 M2 为参考，整图配对指标无改善 | 草稿审核及独立 test 待相应负责人推进 | [本人交接][wyz-pair-objective] |
 | wkq（B）/ data_eval | 已发布同类服饰、颜色与方位监督审计 | 训练划分内的探索草稿及冻结模型探测已有记录 | 独立审核与评估见本人计划 | [本人交接][wkq-binding] |
 

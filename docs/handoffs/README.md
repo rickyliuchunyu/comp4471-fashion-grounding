@@ -1,6 +1,6 @@
 # 交接记录入口
 
-**S0 分割冻结（2026-11-19，lcy）**　权重、候选解码、0.3 阈值及 dev250 manifest 已登记。开工核对时，分割 PR #2 的交付提交为 `341f431`，wkq 的 PR #4 为 `b82fc99`，wyz 的 PR #5 为 `1e0a457`。全组 P7 和两位接收方的签收待办。[冻结条目](segmentation/s0_freeze_20261119.json) · [下游取包](segmentation/current_candidates.md)
+**S0 分割冻结（2026-11-19，lcy）**　权重、候选解码、0.3 阈值及 dev250 manifest 已登记。开工核对时，分割 PR #2 的交付提交为 `341f431`，wkq 的 PR #4 为 `b82fc99`，wyz 的 PR #5 为 `1e0a457`。wyz 已在 `69f3d1f` 签收并复现 610/642，wkq 评价端签收及全组 P7 汇总待办。[排序端签收](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/69f3d1f0a61688470741f95d51686f23dbe2ce48/docs/handoffs/grounding/frozen_combo_dev_20261119.md) · [冻结条目](segmentation/s0_freeze_20261119.json) · [下游取包](segmentation/current_candidates.md)
 
 **组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。[完整比较与权重位置](segmentation/full_combo_completion_20261119.md)
 

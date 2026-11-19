@@ -1,8 +1,14 @@
 # 当前分割候选 · 组合微调 28,318 步
 
-**2026-11-19，lcy 已正式冻结 S0。** 固定候选集为 `combo-u28318-dev250-20261119-r01-trial-0.3`。下游复现时使用下表的版本化 manifest 和完整摘要。全组 P7 待汇总，wyz 与 wkq 待本人签收。[机器可读冻结条目](s0_freeze_20261119.json)
+**2026-11-19，lcy 已正式冻结 S0。** 固定候选集为 `combo-u28318-dev250-20261119-r01-trial-0.3`。下游复现时使用下表的版本化 manifest 和完整摘要。wyz 已签收，wkq 评价端签收及全组 P7 汇总待办。[机器可读冻结条目](s0_freeze_20261119.json)
 
 GUI 开发集、个人图片和下游 Fashionpedia dev250 使用组合权重 `b7146787a1fc`，固定阈值 **0.3**。同一批 642 条已审核中英文开发查询中，新版本覆盖 610 条，上一版 `aaff8d9dd89e` 覆盖 606 条，差值为 +4 条。覆盖按同类一对一掩膜 IoU ≥ 0.5 匹配，衡量下游有多少查询能拿到正确候选。排序准确率由下游单独评价。[机器可读索引](../../../configs/artifacts/segmentation_dev_candidates.json) · [阈值选择回执](evidence/combo_u28318_candidates_20261119/selection/selection.json)
+
+## 接收方签收
+
+**wyz（排序端）已签收。** 运行 `combo-u28318-reviewed-dev-20261119-r01` 显式使用下列 manifest，完整 SHA-256 与冻结条目一致。7 种方法均输出 642 条已审核查询的结果，按同类一对一掩膜 IoU ≥ 0.5 匹配，候选覆盖复现为 610/642（95.02%）。246 张查询图的区域特征和新版排序结果已分目录保存，492 个文本特征沿用原缓存。[wyz 本人签收](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/69f3d1f0a61688470741f95d51686f23dbe2ce48/docs/handoffs/grounding/frozen_combo_dev_20261119.md) · [运行证据](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/69f3d1f0a61688470741f95d51686f23dbe2ce48/docs/handoffs/grounding/frozen_combo_dev_20261119_evidence.json)
+
+**wkq（评价端）待本人签收。** 全组 P7 仍待汇总。
 
 ## 接入方式
 
@@ -43,4 +49,4 @@ GUI 开发集、个人图片和下游 Fashionpedia dev250 使用组合权重 `b7
 
 [打开分割工作台](../../../scripts/segmentation_gui/打开分割工作台.command)。开发集直接显示已导出的候选。「我的图片」在服务器加载相同的权重和解码配置，默认优先用空闲 GPU。发布时用一张开发集之外的公开样图上传一次，实际设备为 NVIDIA GeForce RTX 3090。页面显示步数和 checkpoint 短哈希。其他本机部署可将服务器 `selected_candidates/` 的两个 manifest、`images/` 和 `masks/` 复制至 `outputs/segmentation_gui/releases/combo-u28318-dev250-20261119-r01/`。[GUI 验证回执](evidence/combo_u28318_candidates_20261119/gui_receipt.json)
 
-开工时已核对三人的远端分支、五个 PR 和交接，wkq 为 `b82fc99`，wyz 为 `1e0a457`。数据盘可用 120 GiB，RTX 3090 占用 0/24,576 MiB，共享锁空闲。一次 dev250 候选推理加三档离线导出和选择耗时 469 秒，硬上限 900 秒。使用 wyz 此提交的真实读取器验证了三档的 3,566 个裁剪。既有分割 AP 报告沿用原记录。队友本人签收待对方记录。[GPU 记录](evidence/combo_u28318_candidates_20261119/coordination.json) · [下游读取回执](evidence/combo_u28318_candidates_20261119/offline_receipt.json) · [组合权重选模报告](full_combo_completion_20261119.md)
+开工时已核对三人的远端分支、五个 PR 和交接，wkq 为 `b82fc99`，wyz 为 `1e0a457`。数据盘可用 120 GiB，RTX 3090 占用 0/24,576 MiB，共享锁空闲。一次 dev250 候选推理加三档离线导出和选择耗时 469 秒，硬上限 900 秒。使用 wyz 此提交的真实读取器验证了三档的 3,566 个裁剪。既有分割 AP 报告沿用原记录。发布时的读取验证见下方回执，后续本人签收见上方记录。[GPU 记录](evidence/combo_u28318_candidates_20261119/coordination.json) · [下游读取回执](evidence/combo_u28318_candidates_20261119/offline_receipt.json) · [组合权重选模报告](full_combo_completion_20261119.md)
