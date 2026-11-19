@@ -1,0 +1,444 @@
+{
+  "run": {
+    "scope": "reviewed development set with frozen heads",
+    "git_commit": "caa66b5a12ba8f1d380f544e4c03400d920c105a",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/evaluate_frozen_grounding_dev.py",
+      "--config",
+      "configs/grounding_fashionpedia_dev_current.json",
+      "--candidates",
+      "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01",
+      "--run-id",
+      "combo-u28318-reviewed-dev-20261119-r01"
+    ],
+    "config_sha256": "a8250cf9494ed2eb227ad3bcf183c53470e6686351b079288b1be2a70a4ec636",
+    "input_paths": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/language_dev_inputs/queries_accepted.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json",
+      "lexicon": "configs/rule_parser.json"
+    },
+    "input_sha256": {
+      "candidates": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+      "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+      "annotations": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+      "lexicon": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609"
+    },
+    "encoder": {
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "files": {
+        "config.json": "fe8b5fe6d5734360678fd71c11c21e1ea3364bd8598d34295d9206335973ffd7",
+        "model.safetensors": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+        "preprocessor_config.json": "9b36b57ebaf20f09bf4c22100ccc21877ea6bfe5aead0c00c59f8af8ccefacfc",
+        "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+        "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+        "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+        "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+      },
+      "processor_class": "SiglipProcessor",
+      "versions": {
+        "transformers": "4.51.3",
+        "tokenizers": "0.21.4",
+        "torch": "2.1.2+cu121",
+        "torchvision": "0.16.2+cu121",
+        "Pillow": "10.2.0",
+        "sentencepiece": "0.2.0",
+        "numpy": "1.26.4"
+      },
+      "dtype": "float32",
+      "attention": "eager",
+      "device": "cpu",
+      "max_length": 64,
+      "dimension": 768,
+      "logit_scale": 4.724453449249268,
+      "logit_bias": -16.771724700927734,
+      "padding": "max_length",
+      "truncation": false
+    },
+    "rule_weight": 2,
+    "run_id": "combo-u28318-reviewed-dev-20261119-r01",
+    "status": "completed",
+    "release": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/delivery_manifest.json",
+      "sha256": "bb6b0727afb3d954889a46e2653c36bd2e91e85e14cd8e75f516c3266e050968",
+      "upstream_commit": "341f4313fc95d55b929aecf3e97e55b91a660c8a"
+    },
+    "candidate_set_id": "combo-u28318-dev250-20261119-r01-trial-0.3",
+    "image_manifest_sha256": "18dd4504fbb8610695771c2fd8da2c207d430c9d85c8f8056be51ead948cce6a",
+    "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+    "threshold": 0.3,
+    "model_checkpoints_sha256": {
+      "M1-clean1000": "5e2636261a5c2ae611bb9cf02cd84e8f5deb027b16404f019782dae1a356b1f7",
+      "M2-clean1000": "3a28bfe0dad397b68595c70aafa2ef4a123d835d159ddae3948d51503902f7c8",
+      "M2-FP": "0d9080cdf78a0d662f58054d0729056b92070cb36bdc20e6a0e99227c1005024",
+      "M2-binding-pair": "cbb4f89803536aee44733fabb821bb7b6e803fe3e7828e6fc2aafc163563d984"
+    },
+    "reference_experiment": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment",
+    "queries": 642,
+    "images": 250,
+    "candidate_count": 1320,
+    "encoded_visual_images": 246,
+    "encoded_texts": 0,
+    "prior_cache_hits": 492
+  },
+  "comparison": {
+    "B1": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7523364485981309,
+        "conditional_selection_accuracy": 0.7918032786885246,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.7805478691591977,
+        "success_at_0_5": 0.8302180685358256,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7182730216953859
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7445482866043613,
+        "conditional_selection_accuracy": 0.7940199335548173,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.770748586763485,
+        "success_at_0_5": 0.8084112149532711,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7046317542038448
+      }
+    },
+    "B2-selected": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7694704049844237,
+        "conditional_selection_accuracy": 0.8098360655737705,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.7941707368423996,
+        "success_at_0_5": 0.8473520249221184,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7834904129997337
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7632398753894081,
+        "conditional_selection_accuracy": 0.813953488372093,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.7856662657716658,
+        "success_at_0_5": 0.8271028037383178,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7760991455081928
+      }
+    },
+    "M1-clean1000": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7663551401869159,
+        "conditional_selection_accuracy": 0.8065573770491803,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.8104610773404405,
+        "success_at_0_5": 0.8629283489096573,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.721994101869214
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7772585669781932,
+        "conditional_selection_accuracy": 0.8289036544850499,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.8076678118018836,
+        "success_at_0_5": 0.8535825545171339,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7239383118163887
+      }
+    },
+    "M2-clean1000": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7772585669781932,
+        "conditional_selection_accuracy": 0.8180327868852459,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.8241887503690657,
+        "success_at_0_5": 0.8800623052959502,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7368341435203736
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7834890965732088,
+        "conditional_selection_accuracy": 0.8355481727574751,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.8147743025616538,
+        "success_at_0_5": 0.8629283489096573,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7332768951766928
+      }
+    },
+    "M2-FP": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7741433021806854,
+        "conditional_selection_accuracy": 0.8147540983606557,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.8227583896112983,
+        "success_at_0_5": 0.8785046728971962,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7307823869517377
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7834890965732088,
+        "conditional_selection_accuracy": 0.8355481727574751,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.8129355619823878,
+        "success_at_0_5": 0.8598130841121495,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.734606215981235
+      }
+    },
+    "M2-binding-pair": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7975077881619937,
+        "conditional_selection_accuracy": 0.839344262295082,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.8253421239850304,
+        "success_at_0_5": 0.8800623052959502,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7447822802818359
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.7912772585669782,
+        "conditional_selection_accuracy": 0.8438538205980066,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.8226039439991751,
+        "success_at_0_5": 0.8691588785046729,
+        "status_counts": {
+          "success": 642
+        },
+        "macro_category_accuracy": 0.7304187164232234
+      }
+    },
+    "B0": {
+      "combo-u28318": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.01557632398753894,
+        "conditional_selection_accuracy": 0.01639344262295082,
+        "matched_candidate_coverage": 0.9501557632398754,
+        "geometric_recall_at_0_5": 0.9750778816199377,
+        "mean_target_mask_iou": 0.0112645211986745,
+        "success_at_0_5": 0.01557632398753894,
+        "status_counts": {
+          "rule_unsupported": 632,
+          "success": 10
+        },
+        "macro_category_accuracy": 0.05543478260869565
+      },
+      "u50000": {
+        "queries": 642,
+        "images": 246,
+        "oracle_selection_accuracy": null,
+        "predicted_selection_accuracy": 0.012461059190031152,
+        "conditional_selection_accuracy": 0.013289036544850499,
+        "matched_candidate_coverage": 0.9376947040498442,
+        "geometric_recall_at_0_5": 0.9688473520249221,
+        "mean_target_mask_iou": 0.00987362478769932,
+        "success_at_0_5": 0.012461059190031152,
+        "status_counts": {
+          "rule_unsupported": 632,
+          "success": 10
+        },
+        "macro_category_accuracy": 0.042934782608695654
+      }
+    }
+  },
+  "verified_prediction_sets": {
+    "B1": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/B1-evaluation.json",
+      "prediction_sha256": "501f3762bd27f59c855de0105478389af9d4f247d5c5dd727c3eb237cc55c2c0",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "B2-selected": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/B2-selected-evaluation.json",
+      "prediction_sha256": "20b8d619fb381dcbee578ae1907bd5a741327bdc210e274567552ba0a2bd708e",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "M1-clean1000": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/M1-clean1000-evaluation.json",
+      "prediction_sha256": "916390e71d77ac2d0746c814589615925c0ed1ac2131d84c42a6a2efa3dc445b",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "M2-clean1000": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/M2-clean1000-evaluation.json",
+      "prediction_sha256": "3f9fb266fb9a9ace918fdf9a58dc96c75a7f89a11cc8f062753a45bb8416bb97",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "M2-FP": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/M2-FP-evaluation.json",
+      "prediction_sha256": "5ad3b3e6b9e729365217b7c4bf507de433bee96df9b488b2a2b2456717c4c6c1",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "M2-binding-pair": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/predicted/M2-binding-pair-evaluation.json",
+      "prediction_sha256": "4893ce8988af431b4ec7e178e0847f6db5211ecdbabfd8fd54a10f00a8c933fe",
+      "queries": 642,
+      "statuses": {
+        "success": 642
+      }
+    },
+    "B0": {
+      "evaluation": "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01/B0/evaluation.json",
+      "prediction_sha256": "0d74ddc03e60c263c97ef0047db1fe3ca19c69cebe2a818fb195524ae63f7ee5",
+      "queries": 642,
+      "statuses": {
+        "rule_unsupported": 632,
+        "success": 10
+      }
+    }
+  },
+  "verified_cache_entries": {
+    "text": 492,
+    "image": 246
+  },
+  "published_release": {
+    "status": "available_fixed_for_development",
+    "published_at": "2026-11-19T07:21:15.233696+00:00",
+    "release_id": "combo-u28318-dev250-20261119-r01",
+    "run_id": "segmentation-combo-u28318-dev-candidates-20261119-r01",
+    "source_run_directory": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01",
+    "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+    "completed_updates": 28318,
+    "source_cache_sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132",
+    "score_components": [
+      "class_probability",
+      "mask_quality"
+    ],
+    "selected_threshold": 0.3,
+    "selection_reason": "most_covered_queries",
+    "selection_sha256": "20554a4706cfc230e13ecb4d4b1a54509b3f96ce0581c2617cad5eb2efb0301e",
+    "selected_package": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.3/candidates_predicted.json",
+      "sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+      "candidate_set_id": "combo-u28318-dev250-20261119-r01-trial-0.3"
+    },
+    "selected_entry": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+    "selected_candidate_manifest_sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+    "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "query_records": 642,
+    "semantic_groups": 321,
+    "query_images": 246,
+    "consumer_reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+    "packages": [
+      {
+        "threshold": 0.3,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.3/candidates_predicted.json",
+        "sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+        "images": 250,
+        "candidates": 1320,
+        "zero_candidate_images": 0
+      },
+      {
+        "threshold": 0.5,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.5/candidates_predicted.json",
+        "sha256": "578180088e165d4623ec8b75b3fe38a7aaed7fc36b54ad1cc47d1f2a3a74bff3",
+        "images": 250,
+        "candidates": 1181,
+        "zero_candidate_images": 0
+      },
+      {
+        "threshold": 0.7,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.7/candidates_predicted.json",
+        "sha256": "4c1a171496f0a837055707e4641386a0a5dfc8849373c8f7446384bb3a05e59d",
+        "images": 250,
+        "candidates": 1065,
+        "zero_candidate_images": 0
+      }
+    ],
+    "scope": "Fashionpedia dev250",
+    "aliases": {
+      "trial-0.3": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.3",
+      "trial-0.5": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.5",
+      "trial-0.7": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.7",
+      "cache": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/cache",
+      "selection": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/selection",
+      "selected_candidates": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.3",
+      "language_dev_inputs": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01-inputs"
+    }
+  }
+}

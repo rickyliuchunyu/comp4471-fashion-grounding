@@ -45,3 +45,5 @@ Grounding 2026-11-18：[方位监督占比和空间分支对照](grounding/spati
 Grounding 2026-11-18：[同图双目标训练损失对照](grounding/pair_objective_20261118.md)。
 
 Grounding 2026-11-18：[MHP v2 配对训练、颜色与方位诊断](grounding/mhp_binding_20261118.md)。
+
+Grounding 2026-11-19：[组合分割冻结候选签收与完整 dev250 评价](grounding/frozen_combo_dev_20261119.md)。
