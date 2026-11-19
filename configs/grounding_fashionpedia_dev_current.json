@@ -1,0 +1,87 @@
+{
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+  "previous_experiment": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment",
+  "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+  "queries": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/language_dev_inputs/queries_accepted.jsonl",
+  "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json",
+  "lexicon": "configs/rule_parser.json",
+  "candidate_set_id": "combo-u28318-dev250-20261119-r01-trial-0.3",
+  "sha256": {
+    "candidates": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+    "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+    "annotations": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "lexicon": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609"
+  },
+  "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+  "threshold": 0.3,
+  "image_count": 250,
+  "candidate_count": 1320,
+  "matched_coverage_count": 610,
+  "release": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/delivery_manifest.json",
+    "sha256": "bb6b0727afb3d954889a46e2653c36bd2e91e85e14cd8e75f516c3266e050968",
+    "upstream_commit": "341f4313fc95d55b929aecf3e97e55b91a660c8a"
+  },
+  "evaluation_id": "combo-u28318",
+  "text_feature_cache": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/features",
+  "heads": {
+    "M1-clean1000": {
+      "method": "M1",
+      "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment/M1-clean1000/update_0490.pt",
+      "checkpoint_sha256": "5e2636261a5c2ae611bb9cf02cd84e8f5deb027b16404f019782dae1a356b1f7"
+    },
+    "M2-clean1000": {
+      "method": "M2",
+      "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment/M2-clean1000/update_0490.pt",
+      "checkpoint_sha256": "3a28bfe0dad397b68595c70aafa2ef4a123d835d159ddae3948d51503902f7c8"
+    },
+    "M2-FP": {
+      "method": "M2",
+      "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01/M2-1235/update_0490.pt",
+      "checkpoint_sha256": "0d9080cdf78a0d662f58054d0729056b92070cb36bdc20e6a0e99227c1005024"
+    },
+    "M2-binding-pair": {
+      "method": "M2-binding",
+      "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/experiment/M2-binding-pair/update_0490.pt",
+      "checkpoint_sha256": "cbb4f89803536aee44733fabb821bb7b6e803fe3e7828e6fc2aafc163563d984"
+    }
+  },
+  "reference_evaluations": {
+    "B0": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/B0/evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "B1": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/predicted/B1-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "B2-selected": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/predicted/B2-selected-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "M1-clean1000": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/predicted/M1-clean1000-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "M2-clean1000": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01/predicted/M2-clean1000-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "M2-FP": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/evaluation-resume/fp_pred/predicted/M2-FP-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    },
+    "M2-binding-pair": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/evaluation-resume/fp_pred/predicted/M2-binding-pair-evaluation.json",
+      "id": "u50000",
+      "candidate_sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4"
+    }
+  }
+}
