@@ -13,8 +13,10 @@ import torch
 from fashion_grounding.data.schema import read_json, require, sha256, write_json
 from fashion_grounding.grounding.binding import binding_geometry
 from fashion_grounding.grounding.controlled import predict_scores, supervised_samples
+from fashion_grounding.grounding.inputs import CandidatePack
 from fashion_grounding.grounding.pair_objective import PairMargin
 from fashion_grounding.grounding.spatial import make_head
+from scripts.evaluate_frozen_grounding_dev import check_release
 from scripts.prepare_mhp_binding_features import build_inputs, builder_for, verify
 from scripts.run_mhp_binding_study import (
     SETTINGS, counter_map, fit_model, make_order, pairs, score_and_publish, split_checks,
@@ -109,9 +111,20 @@ def model_at(path, signature):
 def run(args):
     began = time.monotonic()
     cfg = read_json(args.config)
+    frozen = read_json(args.fp_config)
+    old_candidates = cfg["datasets"]["fp_pred"]["candidates"]
+    new_candidates = Path(frozen["candidates"])
+    for field in ("queries", "annotations"):
+        require(cfg["pins"][cfg["datasets"]["fp_pred"][field]] == frozen["sha256"][field],
+                "frozen FP inputs differ: " + field)
+    check_release(frozen, {"candidates": new_candidates}, CandidatePack(new_candidates))
+    del cfg["pins"][old_candidates]
+    cfg["datasets"]["fp_pred"]["candidates"] = str(new_candidates)
+    cfg["pins"][str(new_candidates)] = frozen["sha256"]["candidates"]
     verify(cfg)
     split_checks(cfg)
     args.output.mkdir(parents=True, exist_ok=False)
+    write_json(args.output / "resolved_config.json", cfg)
     torch.set_num_threads(4)
     torch.set_num_interop_threads(1)
     torch.use_deterministic_algorithms(True)
@@ -167,7 +180,8 @@ def run(args):
 
     write_json(args.output / "summary.json", {
         "status":"completed", "git_commit":subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
-        "config_sha256":sha256(args.config), "command":[sys.executable,*sys.argv],
+        "config_sha256":sha256(args.config), "fp_config_sha256":sha256(args.fp_config),
+        "resolved_config_sha256":sha256(args.output / "resolved_config.json"), "command":[sys.executable,*sys.argv],
         "fit":meta, "split":read_json(args.output/"split.json"), "selection":selected, "history":hist,
         "reviewed_gt_hashes":reviewed_gt, "evaluation":evaluation,
         "encoded_regions":builder.encoded_images, "encoded_texts":builder.encoded_texts,
@@ -177,7 +191,7 @@ def run(args):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
-    for arg in ("config", "output"):
+    for arg in ("config", "fp-config", "output"):
         p.add_argument("--" + arg, type=Path, required=True)
     p.add_argument("--reference", type=Path, action="append", required=True)
     run(p.parse_args())
