@@ -23,13 +23,16 @@ def check_features(values, rows, dimension):
     return values
 
 class FeatureCache:
-    def __init__(self, root):
+    def __init__(self, root, *, references=()):
         self.root=Path(root)
+        self.references=tuple(Path(path) for path in references)
+        require(all(path.is_dir() for path in self.references), "missing reference feature cache")
         self.root.mkdir(parents=True,exist_ok=True)
 
     def get(self, spec, rows, dimension):
-        directory=self.root/cache_key(spec)
-        if not directory.exists():
+        key=cache_key(spec)
+        directory=next((root/key for root in (self.root, *self.references) if (root/key).exists()), None)
+        if directory is None:
             return None
         meta=read_json(directory/"metadata.json")
         require(meta["version"] == CACHE_VERSION and meta["spec"] == spec, "cache identity mismatch")

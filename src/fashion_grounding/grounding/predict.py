@@ -1,6 +1,7 @@
-"""B1/B2 predictions; explicit draft diagnostics, frozen caches and schema-3 outputs."""
+"""Grounding predictions; explicit draft diagnostics, frozen caches and schema-3 outputs."""
 import argparse
 from dataclasses import asdict
+from functools import lru_cache
 import json
 import math
 import os
@@ -13,6 +14,8 @@ from fashion_grounding.data.schema import read_json, write_json, sha256, safe_pa
 from .inputs import CandidatePack, inference_query, crop_regions
 from .cache import FeatureCache, visual_spec, text_spec, check_features
 from .rules import position_scores, shared_parse, rule_coverage
+
+TRANSFORMER_METHODS = ("transformer-full", "transformer-category-only")
 
 def rank_scores(visual,text,scale,bias):
     require(visual.ndim == 2 and text.shape == (1,visual.shape[1]), "feature dimensions differ")
@@ -86,9 +89,33 @@ def stage_inputs(pack,output):
             copy(safe_path(pack.path.parent,c["mask_reference"]),c["mask_reference"])
     return {"path":"inputs/"+pack.path.name,"sha256":pack.digest}
 
-def execute(pack,queries,encoder,cache,run_id,method,ref,rule_weight=0,lexicon=None,parser=shared_parse):
-    require(method in ("B1","B2"), "unknown baseline")
+def execute(pack,queries,encoder,cache,run_id,method,ref,rule_weight=0,lexicon=None,parser=shared_parse,
+            *, transformer=None):
+    require(method in ("B1","B2",*TRANSFORMER_METHODS), "unknown ranking method")
+    require((transformer is not None) == (method in TRANSFORMER_METHODS), "Transformer method/model mismatch")
     require(math.isfinite(rule_weight) and rule_weight>=0, "invalid rule weight")
+
+    @lru_cache(maxsize=1)
+    def image_features(image_id):
+        image, candidates = pack.load(image_id)
+        with image:
+            spec = visual_spec(pack,image_id,encoder.signature)
+            visual = cache.get(spec,len(candidates),encoder.dimension)
+            if visual is None:
+                crops = crop_regions(image,candidates)
+                try:
+                    visual = encoder.encode_images(crops)
+                    cache.put(spec,visual)
+                finally:
+                    for crop in crops:
+                        crop.close()
+            if transformer is not None:
+                from .binding import binding_geometry
+                geometry = binding_geometry(image,candidates)
+            else:
+                geometry = None
+        return candidates, visual, geometry
+
     rows=[]
     for q in queries:
         candidates=[]
@@ -96,11 +123,7 @@ def execute(pack,queries,encoder,cache,run_id,method,ref,rule_weight=0,lexicon=N
             row=pack.rows[q.image_id]
             scores=None
             if row["status"]=="ok":
-                image,candidates=pack.load(q.image_id)
-                vs=visual_spec(pack,q.image_id,encoder.signature)
-                visual=cache.get(vs,len(candidates),encoder.dimension)
-                if visual is None:
-                    visual=encoder.encode_images(crop_regions(image,candidates));cache.put(vs,visual)
+                candidates,visual,geometry=image_features(q.image_id)
                 ts=text_spec(q.query,q.language,encoder.signature)
                 text=cache.get(ts,1,encoder.dimension)
                 if text is None:
@@ -108,6 +131,8 @@ def execute(pack,queries,encoder,cache,run_id,method,ref,rule_weight=0,lexicon=N
                 scores=rank_scores(visual,text,encoder.logit_scale,encoder.logit_bias)
                 if method=="B2":
                     scores=scores+rule_weight*position_scores(candidates,parser(q.query,q.language,lexicon))
+                elif transformer is not None:
+                    scores=transformer.score(visual,text,geometry,scores,candidates)
             record=prediction_record(q,pack,run_id,method,ref,candidates,scores)
         except (ValueError,RuntimeError,OSError) as exc:
             # Preserve the query denominator, with a sanitized public failure message.
@@ -124,26 +149,46 @@ def execute(pack,queries,encoder,cache,run_id,method,ref,rule_weight=0,lexicon=N
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--candidates",required=True);p.add_argument("--queries",required=True)
-    p.add_argument("--snapshot",required=True);p.add_argument("--revision",required=True)
+    p.add_argument("--snapshot");p.add_argument("--revision")
     p.add_argument("--cache",required=True);p.add_argument("--output",required=True)
-    p.add_argument("--run-id",required=True);p.add_argument("--method",choices=["B1","B2"],default="B1")
+    p.add_argument("--reference-cache",action="append",default=[])
+    p.add_argument("--run-id",required=True);p.add_argument("--method",choices=("B1","B2",*TRANSFORMER_METHODS),default="B1")
     p.add_argument("--device",default="cpu");p.add_argument("--batch-size",type=int,default=8)
     p.add_argument("--draft-diagnostic",action="store_true");p.add_argument("--allow-illustrative",action="store_true")
     p.add_argument("--allow-final-test",action="store_true")
     p.add_argument("--rule-weight",type=float,default=0)
     p.add_argument("--lexicon",default="configs/rule_parser.json")
+    p.add_argument("--transformer-release")
+    p.add_argument("--transformer-seed",type=int)
     args=p.parse_args()
+    use_transformer = args.method in TRANSFORMER_METHODS
+    if use_transformer:
+        if args.transformer_release is None:
+            p.error("Transformer methods require --transformer-release")
+        release = read_json(args.transformer_release)
+        args.snapshot = args.snapshot or release["snapshot"]
+        args.revision = args.revision or release["revision"]
+    elif args.transformer_release is not None or args.transformer_seed is not None:
+        p.error("Transformer options require a Transformer method")
+    if args.snapshot is None or args.revision is None:
+        p.error("--snapshot and --revision are required for B1/B2")
     pack=CandidatePack(args.candidates,args.allow_illustrative)
     queries=read_queries(args.queries,pack,args.draft_diagnostic,args.allow_final_test)
     lexicon=read_json(args.lexicon) if args.method=="B2" else None
     if lexicon is not None:
         # Missing shared parser is a setup failure, not 80 spurious query failures.
         shared_parse(queries[0].query,queries[0].language,lexicon)
-    output=Path(args.output);output.mkdir(parents=True,exist_ok=False)
-    ref=stage_inputs(pack,output)
     from fashion_grounding.encoders.siglip import SiglipEncoder
     encoder=SiglipEncoder(args.snapshot,args.revision,args.device,args.batch_size)
-    rows=execute(pack,queries,encoder,FeatureCache(args.cache),args.run_id,args.method,ref,args.rule_weight,lexicon)
+    transformer, transformer_metadata = None, None
+    if use_transformer:
+        from .transformer import load_transformer
+        transformer, transformer_metadata = load_transformer(release,encoder.signature,args.method,args.transformer_seed)
+        transformer_metadata["release_sha256"] = sha256(args.transformer_release)
+    output=Path(args.output);output.mkdir(parents=True,exist_ok=False)
+    ref=stage_inputs(pack,output)
+    cache=FeatureCache(args.cache,references=args.reference_cache)
+    rows=execute(pack,queries,encoder,cache,args.run_id,args.method,ref,args.rule_weight,lexicon,transformer=transformer)
     filename="draft_predictions.jsonl" if args.draft_diagnostic else "predictions.jsonl"
     with (output/filename).open("x",encoding="utf-8") as f:
         for record,_ in rows: f.write(json.dumps(record,ensure_ascii=False,allow_nan=False)+"\n")
@@ -159,6 +204,7 @@ def main():
         "git_commit":subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         "split":queries[0].split,"candidate_source":pack.package["candidate_source"],
         "encoder":encoder.signature,"query_manifest_sha256":sha256(args.queries),
+        **({"transformer": transformer_metadata} if transformer_metadata else {}),
         "candidate_manifest_sha256":pack.digest,"query_count":len(rows),
         "status_counts":{s:sum(r["status"]==s for r,_ in rows) for s in {r["status"] for r,_ in rows}},
         "predictions":{"path":filename,"sha256":sha256(output/filename)},

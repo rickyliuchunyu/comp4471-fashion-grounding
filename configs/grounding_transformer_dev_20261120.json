@@ -1,0 +1,57 @@
+{
+  "release": {
+    "path": "configs/grounding_transformer_20261120.json",
+    "sha256": "71e8a9e847c3ba14a8bcf29218b2226599954ca2c9fad115ce16fad208cf0cb9"
+  },
+  "reference_caches": [
+    "/root/autodl-tmp/fashion-grounding/workspaces/data_eval/outputs/20261120-ranker-architecture-r01/features",
+    "/root/autodl-tmp/fashion-grounding/workspaces/data_eval/outputs/20261120-mhp-combo-crossed-r01/features",
+    "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-handoff-20261120-r01/features"
+  ],
+  "datasets": {
+    "fp_combo": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/language_dev_inputs/queries_accepted.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1/annotations_coco.json",
+      "sha256": {
+        "candidates": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+        "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+        "annotations": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+      },
+      "draft": false,
+      "methods": [
+        "transformer-full",
+        "transformer-category-only"
+      ]
+    },
+    "mhp_gt": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/candidates_gt.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+      "sha256": {
+        "candidates": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff",
+        "queries": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+        "annotations": "3b2f1c809b9c5faf51ab36fc46cfbe346781ca173ea641482636d36cae1e6945"
+      },
+      "draft": true,
+      "methods": [
+        "transformer-full"
+      ]
+    },
+    "mhp_combo": {
+      "candidates": "/root/autodl-tmp/fashion-grounding/workspaces/data_eval/outputs/20261120-mhp-combo-crossed-r01/mhp-combo/candidates_predicted.json",
+      "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+      "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+      "sha256": {
+        "candidates": "20ac7a9a49f40ddb3345c7456695123021294e37748c7cc4f1e60e8588ca599c",
+        "queries": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+        "annotations": "3b2f1c809b9c5faf51ab36fc46cfbe346781ca173ea641482636d36cae1e6945"
+      },
+      "draft": true,
+      "methods": [
+        "transformer-full",
+        "transformer-category-only"
+      ]
+    }
+  }
+}

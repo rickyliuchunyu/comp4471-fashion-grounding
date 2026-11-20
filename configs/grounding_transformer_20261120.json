@@ -1,0 +1,40 @@
+{
+  "handoff_commit": "8945d0b00c66a4ef3c474ca621b80bfb17b2ff7b",
+  "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "encoder": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-release-assets-20261120-r01/encoder.json",
+    "sha256": "bdfc779d1c1b5687815ce2e0d06e905ea72ba1c0765e42c8cf2a026c5c891134"
+  },
+  "default_seed": 42,
+  "checkpoints": {
+    "42": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-release-assets-20261120-r01/attribute-transformer-42.pt",
+      "sha256": "9344be674728684cb84fce555b7f3ff0ad466c606b5b3ab19771e5fa7850e129"
+    },
+    "43": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-release-assets-20261120-r01/attribute-transformer-43.pt",
+      "sha256": "b2f4c1e48105dc70c561671d810c32bc20e0ec3fba1a65756039d281a50709c5"
+    },
+    "44": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-release-assets-20261120-r01/attribute-transformer-44.pt",
+      "sha256": "115a77497e097be876348a1933906742e931d0ca31681f793a8fc109345b1862"
+    }
+  },
+  "category_map": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/transformer-release-assets-20261120-r01/category-map.npy",
+    "sha256": "312962272f84a13b2a8e046534e08fe63e03a7698c9bbba0add7227795a4b14d"
+  },
+  "calibration": {
+    "transformer-full": [
+      5,
+      0,
+      10
+    ],
+    "transformer-category-only": [
+      5,
+      0,
+      0
+    ]
+  }
+}
