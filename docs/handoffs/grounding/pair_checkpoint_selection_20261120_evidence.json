@@ -1,0 +1,540 @@
+{
+  "study": {
+    "status": "completed",
+    "git_commit": "b1c255094c8c13c32abf83c5a45f3090bf46a612",
+    "config_sha256": "4bba44c0d83f9e0329f85ee485d1e709a86242b93dc5c0781af089debb183301",
+    "fp_config_sha256": "a8250cf9494ed2eb227ad3bcf183c53470e6686351b079288b1be2a70a4ec636",
+    "resolved_config_sha256": "2a5c615d305e544ff8b664bfdd517ac9cfde36423c0db3904132b008c629aa41",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+      "scripts/study_pair_checkpoint_selection.py",
+      "--config",
+      "configs/grounding_mhp_binding_20261118.json",
+      "--fp-config",
+      "configs/grounding_fashionpedia_dev_current.json",
+      "--reference",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/train-rgb",
+      "--reference",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/dev-rgb",
+      "--reference",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03"
+    ],
+    "fit": {
+      "git_commit": "b1c255094c8c13c32abf83c5a45f3090bf46a612",
+      "working_tree_dirty": false,
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/grounding-v1/bin/python",
+        "-m",
+        "fashion_grounding.grounding.controlled",
+        "--config",
+        "configs/grounding_mhp_binding_20261118.json",
+        "--fp-config",
+        "configs/grounding_fashionpedia_dev_current.json",
+        "--reference",
+        "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/train-rgb",
+        "--reference",
+        "/root/autodl-tmp/fashion-grounding/runs/grounding/mhp-binding-20261118-r01/dev-rgb",
+        "--reference",
+        "/root/autodl-tmp/fashion-grounding/runs/grounding/combo-u28318-reviewed-dev-20261119-r01",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03"
+      ],
+      "torch": "2.1.2+cu121",
+      "numpy": "1.26.4",
+      "device": "cpu",
+      "owner": "grounding",
+      "executed_by": "wyz",
+      "method": "M2-binding",
+      "seed": 42,
+      "optimizer_updates": 490,
+      "batch_size": 32,
+      "training_query_presentations": 15680,
+      "eligible_queries": 5184,
+      "single_candidate_excluded": 36,
+      "selection": "maximum accepted GT dev accuracy; tie earliest update",
+      "selected_update": 490,
+      "selected_dev_correct": 594,
+      "dev_queries": 642,
+      "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0490.pt",
+      "checkpoint_sha256": "a060c0ad2eb121cc7e173c1975bc3c79090407544acc992376974e37d34edfee",
+      "training_order_sha256": "6274b7824e53aed9173c08a6a8c33ab405dfde87e4d144426c583a712c4401bd",
+      "trainable_parameters": 608793,
+      "encoder_parameters_in_optimizer": 0,
+      "train_inputs": {
+        "candidates": "07e01f047e30584e23ef3fc3029c796e2314a6608ec1b847c7ce3a79bddb532c",
+        "queries": "53f6b103093141d598b075e26a648aa737061dca433e71026031b5e2b9810057",
+        "images": "b5336423a288fd20c2df5c1a0f1c9ace21c2658e8a6a806117e754b9dea43d69"
+      },
+      "dev_inputs": {
+        "candidates": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+        "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+        "images": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf"
+      },
+      "checkpoint_replay_exact": true,
+      "training_labels": "AI weak labels, not human accepted",
+      "elapsed_seconds": 4.397917449474335,
+      "status": "completed"
+    },
+    "split": {
+      "selected_by": "deterministic SHA-256 order within color-present and direction-only strata; 32 groups each",
+      "split_seed": 42,
+      "held_groups": [
+        "mhp2-train-10126",
+        "mhp2-train-10292",
+        "mhp2-train-10395",
+        "mhp2-train-10494",
+        "mhp2-train-10815",
+        "mhp2-train-11760",
+        "mhp2-train-11775",
+        "mhp2-train-11986",
+        "mhp2-train-13887",
+        "mhp2-train-14235",
+        "mhp2-train-14816",
+        "mhp2-train-15880",
+        "mhp2-train-1592",
+        "mhp2-train-16797",
+        "mhp2-train-17516",
+        "mhp2-train-18369",
+        "mhp2-train-18816",
+        "mhp2-train-19116",
+        "mhp2-train-19301",
+        "mhp2-train-19665",
+        "mhp2-train-19881",
+        "mhp2-train-19896",
+        "mhp2-train-20068",
+        "mhp2-train-20232",
+        "mhp2-train-20386",
+        "mhp2-train-20652",
+        "mhp2-train-21160",
+        "mhp2-train-21564",
+        "mhp2-train-21660",
+        "mhp2-train-21662",
+        "mhp2-train-22380",
+        "mhp2-train-22455",
+        "mhp2-train-2307",
+        "mhp2-train-23398",
+        "mhp2-train-23713",
+        "mhp2-train-25016",
+        "mhp2-train-25189",
+        "mhp2-train-3569",
+        "mhp2-train-358",
+        "mhp2-train-4062",
+        "mhp2-train-4159",
+        "mhp2-train-5195",
+        "mhp2-train-5340",
+        "mhp2-train-5624",
+        "mhp2-train-5736",
+        "mhp2-train-6407",
+        "mhp2-train-6772",
+        "mhp2-train-6798",
+        "mhp2-train-7094",
+        "mhp2-train-7134",
+        "mhp2-train-7280",
+        "mhp2-train-7725",
+        "mhp2-train-7900",
+        "mhp2-train-7916",
+        "mhp2-train-8116",
+        "mhp2-train-8616",
+        "mhp2-train-8818",
+        "mhp2-train-8880",
+        "mhp2-train-9290",
+        "mhp2-train-9643",
+        "mhp2-train-9694",
+        "mhp2-train-9744",
+        "mhp2-train-9913",
+        "mhp2-train-9977"
+      ],
+      "held_images": [
+        2000000358,
+        2000001592,
+        2000002307,
+        2000003569,
+        2000004062,
+        2000004159,
+        2000005195,
+        2000005340,
+        2000005624,
+        2000005736,
+        2000006407,
+        2000006772,
+        2000006798,
+        2000007094,
+        2000007134,
+        2000007280,
+        2000007725,
+        2000007900,
+        2000007916,
+        2000008116,
+        2000008616,
+        2000008818,
+        2000008880,
+        2000009290,
+        2000009643,
+        2000009694,
+        2000009744,
+        2000009913,
+        2000009977,
+        2000010126,
+        2000010292,
+        2000010395,
+        2000010494,
+        2000010815,
+        2000011760,
+        2000011775,
+        2000011986,
+        2000013887,
+        2000014235,
+        2000014816,
+        2000015880,
+        2000016797,
+        2000017516,
+        2000018369,
+        2000018816,
+        2000019116,
+        2000019301,
+        2000019665,
+        2000019881,
+        2000019896,
+        2000020068,
+        2000020232,
+        2000020386,
+        2000020652,
+        2000021160,
+        2000021564,
+        2000021660,
+        2000021662,
+        2000022380,
+        2000022455,
+        2000023398,
+        2000023713,
+        2000025016,
+        2000025189
+      ],
+      "fit_images": 1523,
+      "fit_queries": 5220,
+      "fit_sha256": "53f6b103093141d598b075e26a648aa737061dca433e71026031b5e2b9810057",
+      "tuning_images": 64,
+      "tuning_queries": 384,
+      "tuning_sha256": "785eb608d169573269cab8237930fd7c54303656f9867fff2a885214e7fc6d0f"
+    },
+    "selection": {
+      "fp_overall": 490,
+      "mhp_overall": 490,
+      "mhp_direction_pair": 490
+    },
+    "history": [
+      {
+        "update": 98,
+        "fp_correct": 588,
+        "tuning": {
+          "single_correct": 179,
+          "queries": 384,
+          "direction": {
+            "groups": 64,
+            "single_correct": 85,
+            "both_same_language": 3,
+            "all_four_correct": 0
+          },
+          "color": {
+            "groups": 32,
+            "single_correct": 94,
+            "both_same_language": 36,
+            "all_four_correct": 11
+          }
+        },
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0098.pt",
+        "checkpoint_sha256": "6a79d465ab0fb30d759ef6f6733b7ae041be101b4ef8bffe98df6899acd491fc"
+      },
+      {
+        "update": 196,
+        "fp_correct": 589,
+        "tuning": {
+          "single_correct": 192,
+          "queries": 384,
+          "direction": {
+            "groups": 64,
+            "single_correct": 96,
+            "both_same_language": 3,
+            "all_four_correct": 0
+          },
+          "color": {
+            "groups": 32,
+            "single_correct": 96,
+            "both_same_language": 37,
+            "all_four_correct": 12
+          }
+        },
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0196.pt",
+        "checkpoint_sha256": "5065005bbacb72dc2f7daf4fe8d51055ea4d87dfd750dae81b6949ede151c0c7"
+      },
+      {
+        "update": 294,
+        "fp_correct": 590,
+        "tuning": {
+          "single_correct": 206,
+          "queries": 384,
+          "direction": {
+            "groups": 64,
+            "single_correct": 108,
+            "both_same_language": 6,
+            "all_four_correct": 0
+          },
+          "color": {
+            "groups": 32,
+            "single_correct": 98,
+            "both_same_language": 39,
+            "all_four_correct": 13
+          }
+        },
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0294.pt",
+        "checkpoint_sha256": "da4e8a63d3417ea696f652fe0fada91cf907a21d53c1d6e54d8c582f5d3e8bdb"
+      },
+      {
+        "update": 392,
+        "fp_correct": 593,
+        "tuning": {
+          "single_correct": 218,
+          "queries": 384,
+          "direction": {
+            "groups": 64,
+            "single_correct": 114,
+            "both_same_language": 9,
+            "all_four_correct": 0
+          },
+          "color": {
+            "groups": 32,
+            "single_correct": 104,
+            "both_same_language": 42,
+            "all_four_correct": 15
+          }
+        },
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0392.pt",
+        "checkpoint_sha256": "b3b77aa7734edab38a91de26c4ecae7520a572efa59af0549ffcabca8bc0347a"
+      },
+      {
+        "update": 490,
+        "fp_correct": 594,
+        "tuning": {
+          "single_correct": 223,
+          "queries": 384,
+          "direction": {
+            "groups": 64,
+            "single_correct": 117,
+            "both_same_language": 10,
+            "all_four_correct": 0
+          },
+          "color": {
+            "groups": 32,
+            "single_correct": 106,
+            "both_same_language": 44,
+            "all_four_correct": 17
+          }
+        },
+        "checkpoint": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0490.pt",
+        "checkpoint_sha256": "a060c0ad2eb121cc7e173c1975bc3c79090407544acc992376974e37d34edfee"
+      }
+    ],
+    "reviewed_gt_hashes": {
+      "candidates": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+      "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+      "images": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf"
+    },
+    "evaluation": {
+      "fp_pred": {
+        "hashes": {
+          "candidates": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+          "queries": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+          "images": "18dd4504fbb8610695771c2fd8da2c207d430c9d85c8f8056be51ead948cce6a"
+        },
+        "by_update": {
+          "490": {
+            "summary": {
+              "queries": 642,
+              "images": 246,
+              "oracle_selection_accuracy": null,
+              "predicted_selection_accuracy": 0.794392523364486,
+              "conditional_selection_accuracy": 0.8360655737704918,
+              "matched_candidate_coverage": 0.9501557632398754,
+              "geometric_recall_at_0_5": 0.9750778816199377,
+              "mean_target_mask_iou": 0.8242438227036779,
+              "success_at_0_5": 0.8800623052959502,
+              "status_counts": {
+                "success": 642
+              },
+              "macro_category_accuracy": 0.7465651653636034
+            },
+            "pairs": null
+          }
+        }
+      },
+      "mhp_gt": {
+        "hashes": {
+          "candidates": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff",
+          "queries": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+          "images": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78"
+        },
+        "by_update": {
+          "490": {
+            "summary": {
+              "queries": 1036,
+              "images": 200,
+              "oracle_selection_accuracy": 0.556949806949807,
+              "predicted_selection_accuracy": null,
+              "conditional_selection_accuracy": null,
+              "matched_candidate_coverage": null,
+              "geometric_recall_at_0_5": 1.0,
+              "mean_target_mask_iou": 0.5580819736400628,
+              "success_at_0_5": 0.5579150579150579,
+              "status_counts": {
+                "success": 1036
+              },
+              "macro_category_accuracy": 0.5460295831052234
+            },
+            "pairs": {
+              "direction": {
+                "pairs": 200,
+                "all_four_correct": 1,
+                "language_pair_correct": 35,
+                "single_correct": 385,
+                "mask_success": 386,
+                "both_targets_covered_pairs": 200,
+                "all_four_when_covered": 1
+              },
+              "color": {
+                "pairs": 59,
+                "all_four_correct": 24,
+                "language_pair_correct": 77,
+                "single_correct": 192,
+                "mask_success": 192,
+                "both_targets_covered_pairs": 59,
+                "all_four_when_covered": 24
+              }
+            }
+          }
+        }
+      },
+      "mhp_pred": {
+        "hashes": {
+          "candidates": "44ec469838a365307c425862520aa612bc32c9b9bd17bf1dd3f399cf8ac56414",
+          "queries": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+          "images": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78"
+        },
+        "by_update": {
+          "490": {
+            "summary": {
+              "queries": 1036,
+              "images": 200,
+              "oracle_selection_accuracy": null,
+              "predicted_selection_accuracy": 0.3967181467181467,
+              "conditional_selection_accuracy": 0.4963768115942029,
+              "matched_candidate_coverage": 0.7992277992277992,
+              "geometric_recall_at_0_5": 0.8416988416988417,
+              "mean_target_mask_iou": 0.4333803312267582,
+              "success_at_0_5": 0.4594594594594595,
+              "status_counts": {
+                "success": 1036
+              },
+              "macro_category_accuracy": 0.3294594746351745
+            },
+            "pairs": {
+              "direction": {
+                "pairs": 200,
+                "all_four_correct": 2,
+                "language_pair_correct": 21,
+                "single_correct": 270,
+                "mask_success": 314,
+                "both_targets_covered_pairs": 130,
+                "all_four_when_covered": 2
+              },
+              "color": {
+                "pairs": 59,
+                "all_four_correct": 15,
+                "language_pair_correct": 46,
+                "single_correct": 141,
+                "mask_success": 162,
+                "both_targets_covered_pairs": 42,
+                "all_four_when_covered": 15
+              }
+            }
+          }
+        }
+      }
+    },
+    "encoded_regions": 0,
+    "encoded_texts": 0,
+    "seconds": 177.22482936829329
+  },
+  "resolved_config": {
+    "snapshot": "/root/autodl-tmp/fashion-grounding/shared/weights/grounding/siglip2-base-patch16-224-75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "previous_inference": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-reviewed-dev-evaluation/inference-r01",
+    "lexicon": "configs/rule_parser.json",
+    "cache_sources": [
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01",
+      "/root/autodl-tmp/fashion-grounding/runs/grounding/u50000-reviewed-dev-20261118-r01"
+    ],
+    "old_candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/candidates_gt.json",
+    "fp_checkpoint_meta": "/root/autodl-tmp/fashion-grounding/runs/grounding/direction-increment-20261118-r01/M2-1235/run_metadata.json",
+    "fp_pair_audit": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-objective-20261118-r01/summary.json",
+    "increment_train": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_train_v2/queries_increment.jsonl",
+    "protected_test_manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/image_manifest.json",
+    "datasets": {
+      "train": {
+        "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/candidates_gt.json",
+        "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/queries_machine_train.jsonl",
+        "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/annotations_coco.json",
+        "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/image_manifest.json",
+        "count": 5604
+      },
+      "fp_gt": {
+        "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json",
+        "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl",
+        "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json",
+        "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json",
+        "count": 642
+      },
+      "fp_pred": {
+        "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+        "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl",
+        "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json",
+        "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json",
+        "count": 642
+      },
+      "mhp_gt": {
+        "candidates": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/candidates_gt.json",
+        "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+        "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+        "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json",
+        "count": 1036
+      },
+      "mhp_pred": {
+        "candidates": "/root/autodl-tmp/fashion-grounding/shared/candidates/wkq-mhp2-binding-dev-lcy50k-t03-v2/candidates_predicted.json",
+        "queries": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl",
+        "annotations": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json",
+        "manifest": "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json",
+        "count": 1036
+      }
+    },
+    "pins": {
+      "/root/autodl-tmp/fashion-grounding/shared/candidates/wkq-mhp2-binding-dev-lcy50k-t03-v2/candidates_predicted.json": "44ec469838a365307c425862520aa612bc32c9b9bd17bf1dd3f399cf8ac56414",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/candidates_gt.json": "c3bc164a1ec69e27f44151afd51b27bf2f0909ae13bb8c88a9edc329ad1bd6ef",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/image_manifest.json": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_dev250_reviewed_v1/queries_accepted.jsonl": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_language_direction_pairs_train_v1/candidates_gt.json": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/annotations_coco.json": "0be0799088a7debca9cad56d79e72fddb554df219a294f1ce0ea10a74bd59f40",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/candidates_gt.json": "07e01f047e30584e23ef3fc3029c796e2314a6608ec1b847c7ce3a79bddb532c",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/image_manifest.json": "b5336423a288fd20c2df5c1a0f1c9ace21c2658e8a6a806117e754b9dea43d69",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_mhp2_binding_train_v2/queries_machine_train.jsonl": "38a7409bde3007aa544059445794b806b4f216fe7402ae2e4a8caccddbd2e3a2",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_test400_holdout_v1/image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/annotations_coco.json": "3b2f1c809b9c5faf51ab36fc46cfbe346781ca173ea641482636d36cae1e6945",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/candidates_gt.json": "c5e6f6e520b25365e72098368a7be957e46e26d09a86095998cef660096b69ff",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/image_manifest.json": "26c1e5b2a31c0db9241ef6861a545b8211a9013eb6fc96d032fb8b66c9273c78",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_dev_v2/queries_draft.jsonl": "f6fc26420bc06e1e9b9d5bc18584260271e55cd3878d1202c568f028a0270460",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/mhp2_binding_train_v2/queries_increment.jsonl": "6cd4fe2b3386fcb3e9b83de0302b1b6421cf26b1ba75b87fa114ccc9cc688b72",
+      "configs/rule_parser.json": "987935b92f8ff329b3a794d66913abb33515ada98b705b6966bd09b1afac1609",
+      "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd"
+    }
+  }
+}
