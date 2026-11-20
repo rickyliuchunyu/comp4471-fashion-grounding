@@ -115,7 +115,7 @@ def run(args):
     torch.set_num_threads(4)
     torch.set_num_interop_threads(1)
     torch.use_deterministic_algorithms(True)
-    builder = builder_for(cfg, args.output, [str(args.reference)])
+    builder = builder_for(cfg, args.output, [str(path) for path in args.reference])
     builder.candidate_features = binding_geometry
     def unexpected_encoding():
         raise RuntimeError("expected verified cache for every feature")
@@ -177,6 +177,7 @@ def run(args):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
-    for arg in ("config", "reference", "output"):
+    for arg in ("config", "output"):
         p.add_argument("--" + arg, type=Path, required=True)
+    p.add_argument("--reference", type=Path, action="append", required=True)
     run(p.parse_args())
