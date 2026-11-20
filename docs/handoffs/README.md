@@ -51,3 +51,5 @@ Grounding 2026-11-19：[组合分割冻结候选签收与完整 dev250 评价](g
 Grounding 2026-11-20：[比较同图配对与总体准确率选检查点](grounding/pair_checkpoint_selection_20261120.md)。
 
 Grounding 2026-11-20：[学习方向与掩码颜色、组合排序对照与可直接运行入口](grounding/learned_hybrid_attributes_20261120.md)。
+
+Grounding 2026-11-20：[候选 Transformer 原生入口、冻结配置与开发集验收](grounding/transformer_native_20261120.md)。
