@@ -60,3 +60,27 @@ def ranking_components(head, examples):
 def add_components(base, components, weights):
     return [None if scores is None else scores + sum(w * s for w, s in zip(weights, terms))
             for scores, terms in zip(base, components)]
+
+
+
+def hybrid_scores(head, examples, base, weights, lexicon, rule_weight):
+    """Use a uniquely parsed direction when available, otherwise the learned scores."""
+    from .rules import position_scores, shared_parse
+
+    fallback = add_components(base, ranking_components(head, examples), weights)
+    scores = []
+    counts = {"rule": 0, "learned_or_unchanged": 0, "no_candidates": 0}
+    for ex, logits, learned in zip(examples, base, fallback):
+        if logits is None:
+            scores.append(None)
+            counts["no_candidates"] += 1
+            continue
+        query = ex["query"]
+        parsed = shared_parse(query.query, query.language, lexicon)
+        if parsed.direction_status == parsed.category_status == "unique" and not parsed.unsupported_operator:
+            scores.append(logits + rule_weight * position_scores(ex["candidates"], parsed))
+            counts["rule"] += 1
+        else:
+            scores.append(learned)
+            counts["learned_or_unchanged"] += 1
+    return scores, counts

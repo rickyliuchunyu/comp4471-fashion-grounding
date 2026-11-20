@@ -1,0 +1,32 @@
+{
+  "resolved_config": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/resolved_config.json",
+    "sha256": "2a5c615d305e544ff8b664bfdd517ac9cfde36423c0db3904132b008c629aa41"
+  },
+  "frozen_fp_config": {
+    "path": "configs/grounding_fashionpedia_dev_current.json",
+    "sha256": "a8250cf9494ed2eb227ad3bcf183c53470e6686351b079288b1be2a70a4ec636"
+  },
+  "base_checkpoint": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/pair-checkpoint-selection-20261120-r03/M2-binding-fit/update_0490.pt",
+    "sha256": "a060c0ad2eb121cc7e173c1975bc3c79090407544acc992376974e37d34edfee"
+  },
+  "attribute_head": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/learned-attributes-20261120-r01/attribute_head.pt",
+    "sha256": "a72e68327e04b6b19b1f14d20f81a3adc056f01c98d35ed74c9bdee52885c24a"
+  },
+  "rule_selection": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/20261117-spatial-controlled-r01/experiment/B2-dev-selection.json",
+    "sha256": "8fbcbb334ad7c6b82c3f564a268e18bf07da0ab31062d241e1effa711b8f4e45"
+  },
+  "study_summary": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/grounding/learned-attributes-20261120-r01/summary.json",
+    "sha256": "6c900e501a3367347311aff5c2967bf9f688335cad77ef773d14d172f3ba3739"
+  },
+  "weights": [
+    4.0,
+    2.0,
+    8.0
+  ],
+  "routing": "use uniquely parsed supported direction and category; otherwise use the learned attribute gate"
+}
