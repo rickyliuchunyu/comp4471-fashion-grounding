@@ -40,7 +40,7 @@ def run(a):
     attribute_path = pinned(spec["attribute_head"])
     state = torch.load(attribute_path, map_location="cpu")
     require(state["base_checkpoint_sha256"]==spec["base_checkpoint"]["sha256"]
-            and state["selection"]["direction_color"] == spec["weights"], "attribute/base release mismatch")
+            and tuple(state["selection"]["direction_color"]) == tuple(spec["weights"]), "attribute/base release mismatch")
     rule = read_json(pinned(spec["rule_selection"]))
     require(rule["selected_weight"] == 2 and rule["lexicon_sha256"] == sha256(cfg["lexicon"]), "rule selection changed")
     previous = read_json(pinned(spec["study_summary"]))
