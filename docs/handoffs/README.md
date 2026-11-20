@@ -49,3 +49,5 @@ Grounding 2026-11-18：[MHP v2 配对训练、颜色与方位诊断](grounding/m
 Grounding 2026-11-19：[组合分割冻结候选签收与完整 dev250 评价](grounding/frozen_combo_dev_20261119.md)。
 
 Grounding 2026-11-20：[比较同图配对与总体准确率选检查点](grounding/pair_checkpoint_selection_20261120.md)。
+
+Grounding 2026-11-20：[学习方向与掩码颜色、组合排序对照与可直接运行入口](grounding/learned_hybrid_attributes_20261120.md)。
