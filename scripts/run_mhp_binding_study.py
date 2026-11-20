@@ -77,7 +77,7 @@ def sequence(rows, seed):
             yield rows[i]
 
 
-def make_order(data, groups, settings, only_pairs=False):
+def make_order(data, groups, settings, only_pairs=False, *, expected_pair_counts=(320, 103)):
     used = {idx for group in groups.values() for idx in group}
     if only_pairs:
         stream = sequence(list(groups.values()), settings["seed"])
@@ -85,7 +85,7 @@ def make_order(data, groups, settings, only_pairs=False):
     pos, col = [], []
     for members in groups.values():
         (pos if "spatial" in data["raw"][members[0]]["query_types"] else col).append(members)
-    require(len(pos) == 320 and len(col) == 103, "wrong MHP incremental pair groups")
+    require((len(pos), len(col)) == expected_pair_counts, "wrong MHP incremental pair groups")
     position, color = sequence(pos, 43), sequence(col, 44)
     parent = sequence([i for i, e in enumerate(data["examples"]) if i not in used and len(e["visual"]) > 1], 45)
     order = []
