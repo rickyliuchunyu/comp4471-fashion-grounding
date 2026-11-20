@@ -68,7 +68,7 @@ def run(a):
         folder = a.output/name
         folder.mkdir()
         draft = name.startswith("mhp")
-        result = publish_scores(ds,"M2","M2-hybrid-attributes",scores,folder,a.output.name+"-"+name,draft=draft)
+        result = publish_scores(ds,"M2","M2-hybrid-attributes",scores,folder,{"run_id":a.output.name+"-"+name},draft=draft)
         pair_summary = pair_metrics(ds,result["rows"]) if draft else None
         if name=="mhp_pred":
             require(pair_summary["direction"]["both_targets_covered_pairs"]==130
