@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "run_id": "segmentation-u50000-dev-candidates-20261118-r01",
+  "source_commit": "3a40d59a20814edd0dfb15a16c78ef4600851bb6",
+  "hard_limit_seconds": 900,
+  "elapsed_seconds": 448.3897033147514,
+  "new_inference_passes": 1,
+  "image_forwards": 250,
+  "checkpoint_loads": 1,
+  "optimizer_updates": 0,
+  "smoke_reruns": 0,
+  "ap_reruns": 0,
+  "language_ranking_runs": 0,
+  "cache_candidates": 23871,
+  "discarded_empty_masks": 1129,
+  "validated_consumer_crops": 3496,
+  "selected_threshold": 0.3,
+  "selection_reason": "most_covered_queries",
+  "comparison": [
+    {
+      "threshold": 0.3,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 602,
+      "matched_candidate_coverage": 0.9376947040498442,
+      "geometric_recalled_queries": 622,
+      "geometric_recall_at_0_5": 0.9688473520249221,
+      "candidate_count_on_query_images": 1259,
+      "mean_candidates_on_query_images": 5.117886178861789,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.5,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 592,
+      "matched_candidate_coverage": 0.9221183800623053,
+      "geometric_recalled_queries": 614,
+      "geometric_recall_at_0_5": 0.956386292834891,
+      "candidate_count_on_query_images": 1139,
+      "mean_candidates_on_query_images": 4.630081300813008,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.7,
+      "queries": 642,
+      "images": 246,
+      "covered_queries": 580,
+      "matched_candidate_coverage": 0.9034267912772586,
+      "geometric_recalled_queries": 610,
+      "geometric_recall_at_0_5": 0.9501557632398754,
+      "candidate_count_on_query_images": 1048,
+      "mean_candidates_on_query_images": 4.260162601626016,
+      "zero_candidate_images": 0
+    }
+  ],
+  "selected_package": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json",
+    "sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "candidate_set_id": "u50000-dev250-20261118-r01-trial-0.3"
+  },
+  "source_cache_sha256": "52201ed5c23a2619b9e43112bce88508543d135e591b90d89a77703f1c011f17",
+  "query_records": 642,
+  "query_images": 246,
+  "semantic_groups": 321,
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "evaluation_basis": "user_authorized_development",
+  "old_u18000_artifacts_preserved": true,
+  "teammate_personal_acceptance_claimed": false
+}

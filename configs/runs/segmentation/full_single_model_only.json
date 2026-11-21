@@ -1,0 +1,12 @@
+{
+  "mode": "model_only",
+  "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+  "sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+  "source_completed_updates": 50000,
+  "source_training_data": {
+    "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+  },
+  "source_config_sha256": "2437450750f2d3b0114e3a670e7c919d45496f1bfb8eba4fc157757607925f2c",
+  "source_git_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f"
+}

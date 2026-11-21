@@ -1,0 +1,29 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "tenk-adaptation-20261117-r01",
+  "status": "completed",
+  "wrapper_pid": 230228,
+  "started_at": "2026-11-17T09:24:15.423588+00:00",
+  "budget_seconds": 28782,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_tenk_adaptation.py",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/tenk_adaptation_launch_20261117.json",
+    "--execute",
+    "--worker",
+    "--deadline",
+    "25450245.65680926",
+    "--commit",
+    "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+    "--plan-sha",
+    "3daf833d3f3cf76ddfe88dfc4164dcb00802c8d6789b6ecab31679c1d9bef13f"
+  ],
+  "git_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "child_pid": 230234,
+  "exit_code": 0,
+  "elapsed_seconds": 21983.27852712199,
+  "finished_at": "2026-11-17T15:30:37.801950+00:00"
+}

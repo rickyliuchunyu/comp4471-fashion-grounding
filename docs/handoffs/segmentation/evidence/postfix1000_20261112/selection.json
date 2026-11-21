@@ -1,0 +1,21 @@
+{
+  "rule": "max_dev_mask_AP_then_earliest_update",
+  "checkpoint_sha256": "ffd502fd566edbd4a716c7668f8763a752acefb5fb088642e9e7d05cfece64e6",
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-train-20261112-r01/checkpoint_001000.pth",
+  "completed_updates": 1000,
+  "dev_mask_AP": 42.80382240591048,
+  "compared_updates": [
+    500,
+    1000
+  ],
+  "evaluation_reports": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01/update_000500/evaluation_report.json",
+      "sha256": "a9cdf56fd590f4f547eb7670a66d009439d8e16606858eaa1971cc6a9462f383"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01/update_001000/evaluation_report.json",
+      "sha256": "a3ac9441c8a0ecf5dd97556f305b5f360ed0bce7e339042ccdedc0cfa5545cf2"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "started_at": "2026-11-15T12:37:42.451827+00:00",
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "360s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.select_threshold",
+    "--config",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/candidate_u18000_coverage.json",
+    "--freeze",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01-inputs/freeze.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-language-dev-20261115-r01",
+    "--budget-seconds",
+    "300",
+    "--user-authorized-dev"
+  ],
+  "hard_limit_seconds": 360,
+  "cleanup_grace_seconds": 5,
+  "automatic_retries": 0,
+  "git_commit": "bb398225ef34de478c39ea70e18eaa137f9679ab",
+  "GPU_used": false,
+  "exit_code": 0,
+  "elapsed_seconds": 7.044152460992336,
+  "finished_at": "2026-11-15T12:37:49.496170+00:00"
+}

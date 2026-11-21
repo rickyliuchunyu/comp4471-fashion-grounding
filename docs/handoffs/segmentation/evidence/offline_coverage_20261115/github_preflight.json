@@ -1,0 +1,62 @@
+{
+  "checked_date_hkt": "2026-11-15",
+  "repository": "rickyliuchunyu/comp4471-fashion-grounding",
+  "prs": [
+    {
+      "number": 1,
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "title": "Add data_eval pilot validation and human review auditing",
+      "comments": null,
+      "updated_at": "2026-11-12T09:52:48Z"
+    },
+    {
+      "number": 2,
+      "head_sha": "6a6d5d90bc47a1c1b0f8dc658b6e220c128b5876",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "title": "Segmentation: dev-selected u3000, candidate cache and offline export",
+      "comments": [],
+      "updated_at": "2026-11-13T18:50:19Z"
+    },
+    {
+      "number": 3,
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "base": "data-eval/remote-pilot-review",
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "comments": null,
+      "updated_at": "2026-11-12T09:52:53Z"
+    },
+    {
+      "number": 4,
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "comments": [],
+      "updated_at": "2026-11-12T10:45:46Z"
+    },
+    {
+      "number": 5,
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "base": "data-eval/p3-baseline-evaluation",
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "comments": [],
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "teammate_handoffs_reused_at_unchanged_commits": true
+}

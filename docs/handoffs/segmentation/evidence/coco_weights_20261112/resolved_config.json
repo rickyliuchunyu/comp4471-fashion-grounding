@@ -1,0 +1,14 @@
+{
+  "purpose": "P1_COCO_loading_and_inference_NOT_training_or_evaluation",
+  "seed": 42,
+  "optimizer_updates": 0,
+  "image_count": 5,
+  "image_selection": "first_five_by_ascending_image_id",
+  "source_manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+  "short_edge": 256,
+  "max_size": 384,
+  "score_threshold": 0.5,
+  "max_candidates": 100,
+  "amp": false,
+  "budget_seconds": 180
+}

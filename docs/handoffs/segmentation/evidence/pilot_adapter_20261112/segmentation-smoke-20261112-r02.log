@@ -1,0 +1,22 @@
+/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/smoke.py", line 165, in <module>
+    main()
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/smoke.py", line 62, in main
+    kernel_check = check_cuda_extension()
+  File "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src/fashion_grounding/segmentation/model.py", line 81, in check_cuda_extension
+    actual_grad = torch.autograd.grad(actual.sum(), (value, locations, weights))
+  File "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/autograd/__init__.py", line 394, in grad
+    result = Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/autograd/function.py", line 288, in apply
+    return user_fn(self, *args)
+  File "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/autograd/function.py", line 556, in wrapper
+    outputs = fn(ctx, *args)
+  File "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former/mask2former/modeling/pixel_decoder/ops/functions/ms_deform_attn_func.py", line 46, in backward
+    MSDA.ms_deform_attn_backward(
+RuntimeError: grad_output.is_contiguous() INTERNAL ASSERT FAILED at "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former/mask2former/modeling/pixel_decoder/ops/src/cuda/ms_deform_attn_cuda.cu":103, please report a bug to PyTorch. grad_output tensor has to be contiguous

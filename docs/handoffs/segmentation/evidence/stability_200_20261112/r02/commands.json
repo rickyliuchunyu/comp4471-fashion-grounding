@@ -1,0 +1,34 @@
+[
+  [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.train",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--config",
+    "configs/runs/segmentation/pilot_stability_200.json",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r02/updates_001_100",
+    "--stop-after",
+    "100"
+  ],
+  [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.train",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--config",
+    "configs/runs/segmentation/pilot_stability_200.json",
+    "--resume",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r02/updates_001_100/checkpoint_000100.pth",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r02/updates_101_200"
+  ]
+]

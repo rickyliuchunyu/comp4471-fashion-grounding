@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-17T16:25:40.540213+00:00",
+  "run_completed": true,
+  "all_five_full_dev_reports_present": true,
+  "reused_evaluation_reports": [
+    {
+      "epoch": 2,
+      "update": 10000,
+      "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2000/epoch_02/evaluation_report.json",
+      "sha256": "829351de988bda95014150a4f8f6179146fd06ef85100ec97848fc018197c8bc",
+      "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_02/dev/update_010000/evaluation_report.json",
+      "remote_sha256": "829351de988bda95014150a4f8f6179146fd06ef85100ec97848fc018197c8bc"
+    },
+    {
+      "epoch": 4,
+      "update": 20000,
+      "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2000/epoch_04/evaluation_report.json",
+      "sha256": "a35fe18d82a0d00d85239c975b045ebb83cdf2a8b2bb48f750de716d50157fbd",
+      "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/dev/update_020000/evaluation_report.json",
+      "remote_sha256": "a35fe18d82a0d00d85239c975b045ebb83cdf2a8b2bb48f750de716d50157fbd"
+    },
+    {
+      "epoch": 6,
+      "update": 30000,
+      "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2254/epoch_06/evaluation_report.json",
+      "sha256": "b8073c4b331536ad89c26b5d2cd54371956e3d3209cafec47bbbcacf4d007ad4",
+      "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_06/dev/update_030000/evaluation_report.json",
+      "remote_sha256": "b8073c4b331536ad89c26b5d2cd54371956e3d3209cafec47bbbcacf4d007ad4"
+    },
+    {
+      "epoch": 8,
+      "update": 40000,
+      "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2254/epoch_08/evaluation_report.json",
+      "sha256": "452bf6345b24f7bbb63b2445844a55cb51bbe8079d3ae232009c865cce9086cf",
+      "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/dev/update_040000/evaluation_report.json",
+      "remote_sha256": "452bf6345b24f7bbb63b2445844a55cb51bbe8079d3ae232009c865cce9086cf"
+    },
+    {
+      "epoch": 10,
+      "update": 50000,
+      "path": "docs/handoffs/segmentation/evidence/tenk_completion_20261118/epoch_10/evaluation_report.json",
+      "sha256": "b936fc917a2ebafda3f31a0ca9a10ff9eca5654e789b0718573b09b2c916af88",
+      "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/evaluation_report.json",
+      "remote_sha256": "b936fc917a2ebafda3f31a0ca9a10ff9eca5654e789b0718573b09b2c916af88"
+    }
+  ],
+  "baseline_sha256": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+  "offline_existing_selector_matches_worker_selection": true,
+  "selected_checkpoint_exists": true,
+  "checkpoint_sidecar_matches_evaluated_sha256": true,
+  "checkpoint_full_hash_and_tensor_validation": "Reused evaluator/runtime receipts; no repeated weight deserialization or full checkpoint hashing in this review",
+  "stage_budgets_satisfied": true,
+  "source_unchanged": true,
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-17T09:24:15.236235+00:00",
+      "evidence": "tenk_launch_20261117/run_metadata.json"
+    },
+    {
+      "status": "completed",
+      "at": "2026-11-17T15:30:37.840470+00:00",
+      "evidence": "run_metadata.json"
+    }
+  ],
+  "new_model_loads": 0,
+  "new_training_updates": 0,
+  "new_inference_images": 0,
+  "smoke_runs": 0
+}

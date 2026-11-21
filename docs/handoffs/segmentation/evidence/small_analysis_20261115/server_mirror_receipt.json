@@ -1,0 +1,65 @@
+{
+  "status": "verified",
+  "server_mirror": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-small-analysis-20261115-r01",
+  "execution_host": "local macOS CPU; this server step only stores evidence",
+  "archive_sha256": "8e79646df7c0ed2b4dc7f41a6f61363796945bc0c766a4b08f0bc6d6fd372ebd",
+  "files": {
+    "per_detection_20000.jsonl": {
+      "bytes": 6293421,
+      "sha256": "6f0006e37a66fbca5d0ed57151521592ea411a2e5d294605684979dad03e7918"
+    },
+    "small_errors.json": {
+      "bytes": 61921,
+      "sha256": "4c2461c4cca2b5299a31603d00d21f9a548edaf7a1165888c80061594214ddc4"
+    },
+    "run_metadata.json": {
+      "bytes": 4978,
+      "sha256": "3b90b8ab43fa8f679ce1d4137ec681b4b13554c9984e63a791198001ad0371dd"
+    },
+    "per_detection_18000.jsonl": {
+      "bytes": 6293454,
+      "sha256": "e4d5bd85946300d9556c2c882dc25e1cd1b67c78a0f8c2e5ffc533271771287c"
+    },
+    "small_gt_18000.json": {
+      "bytes": 193293,
+      "sha256": "98ec9a7a774e0bf99415c93a0a88d3bbb11c9449d0711f14cf8dc9862798fc83"
+    },
+    "per_gt_20000.jsonl": {
+      "bytes": 499453,
+      "sha256": "145f8213227860bb6d6034bd3de6bcfff772fa2210dc9934e1ee60a79e9a4faa"
+    },
+    "analysis.json": {
+      "bytes": 143089,
+      "sha256": "d6b881b63db38aec1ea9880ce143f4b91462201a412f64cd28c5c940f14bd251"
+    },
+    "per_gt_18000.jsonl": {
+      "bytes": 499399,
+      "sha256": "48dfe5cbe68d48178c9631fc3a8cd24f53bb84bd090d0dff20809bf3f0bf9dea"
+    },
+    "paired_gt.jsonl": {
+      "bytes": 1159283,
+      "sha256": "b134823b32c92ac1170ce91775ae008aa63f668902b8a9d41bfb7a61c35dd347"
+    },
+    "small_errors.log": {
+      "bytes": 44211,
+      "sha256": "27949d368c1a9cba0ff9df2c53dde7025e01ad49a9d959b96309384fe5cd09e1"
+    },
+    "small_gt_20000.json": {
+      "bytes": 193450,
+      "sha256": "d49355606c1da217861c93cee9febd8dc57e0d0089b892b5b72b7e6c6cf71923"
+    },
+    "resolved_config.json": {
+      "bytes": 2008,
+      "sha256": "dddda668433705611bc67ff4b2f2cc3eac2f9651252fcbe521e57b7ce673007a"
+    },
+    "visual_cases_zoomed/case_details.json": {
+      "bytes": 22246,
+      "sha256": "2ac8bffa77517e682b264f7bbc74ce04325a82468ef91712cee77e55e54fced1"
+    },
+    "visual_cases_zoomed/small_object_cases.png": {
+      "bytes": 218966,
+      "sha256": "a21f9fbbce6fc6814521d1fe35a8207be1318a7b8209905088da17ccb3e3a046"
+    }
+  },
+  "uploaded_at": "2026-11-15T10:34:46.925334+00:00"
+}

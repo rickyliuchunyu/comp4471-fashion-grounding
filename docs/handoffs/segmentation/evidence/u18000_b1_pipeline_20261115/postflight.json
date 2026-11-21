@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-15T13:18:21.730173+00:00",
+  "repos": {
+    "segmentation": {
+      "head": "994c1e586989d970a3f41006c301244eda6dbeff",
+      "dirty": ""
+    },
+    "grounding": {
+      "head": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "dirty": ""
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "run_id": "segmentation-train5000-distribution-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "status": "completed",
+  "split": "train",
+  "candidate_source": "none",
+  "git_commit": "a6f8e4c0095a72f9ee5710ee12fe1561e29c1fad",
+  "script_sha256": "79fead78a0834492d74a42ff056baa37bdf54038bfb319c8bc555b9cea12bcd8",
+  "started_at": "2026-11-15T14:04:52.337809+00:00",
+  "finished_at": "2026-11-15T14:04:52.749432+00:00",
+  "elapsed_seconds": 0.41154686734080315,
+  "package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+  "input_sha256": {
+    "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+    "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+  },
+  "environment": {
+    "python": "3.10.8",
+    "dependencies": "Python standard library only"
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/source/analyze_segmentation_training_distribution.py",
+    "--config",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/source/train5000_distribution.json",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/analysis",
+    "--source-commit",
+    "a6f8e4c0095a72f9ee5710ee12fe1561e29c1fad"
+  ],
+  "reused_evidence": [
+    "docs/handoffs/segmentation/large_input_acceptance_20261112.md",
+    "docs/handoffs/segmentation/segmentation_train_dev_freeze_20261112.json",
+    "docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md"
+  ],
+  "model_loads": 0,
+  "inference_images": 0,
+  "optimizer_updates": 0,
+  "images_opened": 0,
+  "masks_decoded": 0,
+  "old_smoke_runs": 0,
+  "final_test_opened": false,
+  "language_queries_read": false,
+  "artifacts": {
+    "distribution.json": "450cd9b5250c0af2c8c13012dcfa864388c64124ed92ac2df56140f342fd8c29",
+    "project_categories.csv": "f96d28c34c4dd3926b5dc08b3385eac05fcececc23800fce6a5f0f65ef20e720",
+    "source_categories.csv": "0d161384f5a19d647d90a82c1faab8c0437b774ead148949062171bdeefd5b7e",
+    "resolved_config.json": "c98d429636c24dd9d0e80fbee05de6dd2ffc923e9584cb46d82ff73abea91d9c"
+  }
+}

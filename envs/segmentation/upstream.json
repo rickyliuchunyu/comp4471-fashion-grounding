@@ -1,0 +1,24 @@
+{
+  "source_repository": "https://github.com/facebookresearch/Mask2Former",
+  "source_commit": "9b0651c6c1d5b3af2e6da0589b719c514ec0d69a",
+  "source_config": "configs/coco/instance-segmentation/maskformer2_R50_bs16_50ep.yaml",
+  "checkpoint_url": "https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl",
+  "checkpoint_model_id": "47430277_2",
+  "checkpoint_sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+  "checkpoint_status": "verified_via_pinned_mirror_loaded_and_five_image_inference_passed",
+  "checkpoint_license": "CC-BY-NC-4.0",
+  "checked_date": "2026-11-12",
+  "smoke_initialization": "random; never load legacy project outputs as course weights",
+  "checkpoint_md5_prefix": "3c8ec9",
+  "checkpoint_mirror": {
+    "repository": "egeozsoy/MM-OR",
+    "revision": "9052e46f2c770601e17ebd797f2505cd54efaea3",
+    "url": "https://huggingface.co/egeozsoy/MM-OR/resolve/9052e46f2c770601e17ebd797f2505cd54efaea3/panoptic_segmentation/mask2former/model_final_3c8ec9.pkl",
+    "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "bytes": 176382166,
+    "reason": "Official HTTPS endpoint certificate expired; mirror SHA256 obtained from HF LFS metadata over verified HTTPS."
+  },
+  "checkpoint_md5": "3c8ec9998b5769ed00abd9c5e51fcefb",
+  "verified_run_id": "segmentation-coco-inference-20261112-r01",
+  "adaptation": "555 tensors loaded exactly; static_query -> query_feat; random 9-output classifier and 9-entry criterion buffer retained; strict adapted checkpoint restore passed"
+}

@@ -1,0 +1,34 @@
+{
+  "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+  "source_cache_sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132",
+  "reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+  "status": "complete",
+  "images": 250,
+  "cached_candidates": 24111,
+  "trials": [
+    {
+      "threshold": 0.3,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.3/candidates_predicted.json",
+      "sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+      "images": 250,
+      "candidates": 1320,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.5,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.5/candidates_predicted.json",
+      "sha256": "578180088e165d4623ec8b75b3fe38a7aaed7fc36b54ad1cc47d1f2a3a74bff3",
+      "images": 250,
+      "candidates": 1181,
+      "zero_candidate_images": 0
+    },
+    {
+      "threshold": 0.7,
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-combo-u28318-dev-candidates-20261119-r01/trial-0.7/candidates_predicted.json",
+      "sha256": "4c1a171496f0a837055707e4641386a0a5dfc8849373c8f7446384bb3a05e59d",
+      "images": 250,
+      "candidates": 1065,
+      "zero_candidate_images": 0
+    }
+  ]
+}

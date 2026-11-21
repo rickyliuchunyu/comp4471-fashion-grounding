@@ -1,0 +1,85 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-dev-analysis-20261114-r02",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "completed",
+  "git_commit": "a91c5811e7d82627d49adca5fbd1b98776d5bee8",
+  "split": "dev",
+  "candidate_source": "none",
+  "seed": 42,
+  "source_script_sha256": "b5fd40957f95d5ec2591e29dfdcffbd3e913a618596052c65a1102ee0611e199",
+  "config_sha256": "0ad6380dc80cecdec15b86286094d0ccaf3199369ecc9f78b8ef618206a7703c",
+  "parent_run_ids": [
+    "segmentation-resume5000-ap-20261113-r01"
+  ],
+  "inputs": {
+    "3000": {
+      "predictions_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000/predictions.json",
+      "predictions_sha256": "ed703ef0039fcb5a355eed6435824696f1153efaced604962b12d2f2026d54ed",
+      "report_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000/evaluation_report.json",
+      "report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_003000.pth",
+      "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148"
+    },
+    "5000": {
+      "predictions_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_005000/predictions.json",
+      "predictions_sha256": "bfbd7f0f4c1f66371f194c6425db32fa18e9f43f16f6540241e7c98d02bb6160",
+      "report_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_005000/evaluation_report.json",
+      "report_sha256": "77b3829ff39e390e7fba29ffaba5754b9c3e1a34a43968dcfe2ccbaa62be074b",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_005000.pth",
+      "checkpoint_sha256": "3a8a016203a453ae249a13db717f535be823d687fbc6241d976b90682907cb11"
+    }
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/analyze_saved_segmentation_predictions_r02.py",
+    "--config",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/dev_error_analysis_3000_5000.json",
+    "--root",
+    "/root/autodl-tmp/fashion-grounding",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02",
+    "--source-commit",
+    "a91c5811e7d82627d49adca5fbd1b98776d5bee8"
+  ],
+  "elapsed_seconds": 6.211748402565718,
+  "finished_at": "2026-11-13T16:47:00.363051+00:00",
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "torch_imported": false,
+  "checkpoint_loaded": false,
+  "queries_read": false,
+  "artifacts": {
+    "resolved_config.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/resolved_config.json",
+      "sha256": "0ad6380dc80cecdec15b86286094d0ccaf3199369ecc9f78b8ef618206a7703c"
+    },
+    "per_gt_3000.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/per_gt_3000.jsonl",
+      "sha256": "93e8bf5d1d929642e166b0031c29e1ee2a915ed4143c6d78db89ecd435578ea3"
+    },
+    "per_detection_3000.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/per_detection_3000.jsonl",
+      "sha256": "ca582c8b4eb2c415c1c413e8a2622c543cbbd8fd2311abffa6877537ed2aaf9c"
+    },
+    "per_gt_5000.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/per_gt_5000.jsonl",
+      "sha256": "c7390ca434e399497eafc63dd55273867e9ac5bfd3d6fba90afecd5931df169e"
+    },
+    "per_detection_5000.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/per_detection_5000.jsonl",
+      "sha256": "1ed4c79fb6cdda0b969053ad21046a837a791683829fa8039023301a7c91783c"
+    },
+    "paired_gt.jsonl": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/paired_gt.jsonl",
+      "sha256": "8b75721d20557a34168e908fc64103a413d17d33014244c68098c0a9465de9c7"
+    },
+    "analysis.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-dev-analysis-20261114-r02/analysis.json",
+      "sha256": "faf56d1eae5ccd69812327fb2cb24cf098f79d8f16a045f91b76e29a3f32ee56"
+    }
+  }
+}

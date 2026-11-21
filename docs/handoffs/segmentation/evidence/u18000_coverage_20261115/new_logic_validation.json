@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tests": 3,
+  "elapsed_seconds": 0.062,
+  "scope": "Only explicit user-authorized dev input path, unchanged source metadata, original accepted gate and target/split guards",
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_user_authorized_dev.py -v",
+  "old_suite_rerun": false,
+  "model_inference_calls": 0
+}

@@ -1,0 +1,360 @@
+{
+  "scope": "CPU diagnosis only; no checkpoint loading, inference, COCOeval rerun or training",
+  "source_commit": "b02f6e9d05b6a59297b64a4ad78494db45c75dd4",
+  "augmentation": {
+    "images": 200,
+    "images_with_padding": 138,
+    "old_instance_counts_match_all_logs": true,
+    "old_instances": 683,
+    "corrected_instances": 654,
+    "ghost_instances": 29,
+    "median_padding_fraction": 0.25390625,
+    "wrong_foreground_fraction": 0.8893707808491892,
+    "source_instances_by_category": {
+      "2": 68,
+      "6": 212,
+      "4": 48,
+      "7": 27,
+      "1": 123,
+      "3": 22,
+      "5": 80,
+      "8": 162
+    },
+    "replay_basis": "seed42 NumPy sequence, logged image order and dimensions; shape-only replay, no RGB decoding/model"
+  },
+  "predictions": {
+    "50": {
+      "predictions_sha256": "43374484b7e747fa4b1ba6acd8aeccf14c2902a3aa5f7b90db71fd2393225411",
+      "gt_instances": 1008,
+      "total_detections": 25000,
+      "empty_masks": 628,
+      "category_agnostic_gt_coverage_at_50": 0.2777777777777778,
+      "same_category_gt_coverage_at_50": 0.07341269841269842,
+      "category_agnostic_gt_coverage_at_75": 0.10218253968253968,
+      "same_category_gt_coverage_at_75": 0.031746031746031744,
+      "scores": {
+        "min": 0.0,
+        "p10": 0.1581848829984665,
+        "median": 0.34123149514198303,
+        "p90": 0.6541011095047,
+        "max": 0.9668574929237366
+      },
+      "prediction_area_fraction": {
+        "min": 0.0,
+        "p10": 0.0003656731828193833,
+        "median": 0.0036890950097529258,
+        "p90": 0.05706927150365449,
+        "max": 0.9980540345491202
+      },
+      "unique_masks_per_image": {
+        "min": 47.0,
+        "p10": 66.0,
+        "median": 80.0,
+        "p90": 87.0,
+        "max": 91.0
+      },
+      "predictions_by_category": {
+        "3": 8743,
+        "1": 3878,
+        "4": 4113,
+        "2": 3197,
+        "7": 2285,
+        "5": 1622,
+        "8": 425,
+        "6": 737
+      },
+      "best_geometry_predicted_class_confusion": [
+        [
+          0,
+          9,
+          14,
+          12,
+          1,
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          2,
+          4,
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          5,
+          2,
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          8,
+          3,
+          9,
+          3,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          50,
+          8,
+          9,
+          4,
+          3,
+          2,
+          0
+        ],
+        [
+          5,
+          8,
+          7,
+          3,
+          1,
+          4,
+          4,
+          0
+        ],
+        [
+          5,
+          1,
+          9,
+          0,
+          9,
+          8,
+          10,
+          1
+        ],
+        [
+          1,
+          1,
+          18,
+          4,
+          0,
+          4,
+          3,
+          1
+        ]
+      ],
+      "by_category": {
+        "1": {
+          "gt": 140,
+          "any_iou50": 42,
+          "same_iou50": 2
+        },
+        "2": {
+          "gt": 91,
+          "any_iou50": 15,
+          "same_iou50": 7
+        },
+        "6": {
+          "gt": 327,
+          "any_iou50": 32,
+          "same_iou50": 6
+        },
+        "4": {
+          "gt": 65,
+          "any_iou50": 29,
+          "same_iou50": 18
+        },
+        "8": {
+          "gt": 200,
+          "any_iou50": 32,
+          "same_iou50": 2
+        },
+        "5": {
+          "gt": 111,
+          "any_iou50": 77,
+          "same_iou50": 10
+        },
+        "7": {
+          "gt": 45,
+          "any_iou50": 43,
+          "same_iou50": 25
+        },
+        "3": {
+          "gt": 29,
+          "any_iou50": 10,
+          "same_iou50": 4
+        }
+      },
+      "scope": "Existing top100 only. Coverage is per-GT any-match, not one-to-one recall/AP. No relabeling or threshold selection."
+    },
+    "100": {
+      "predictions_sha256": "c57de8093be369f9018ebfb607322b3ff74b9f3c6f1200ec05a48b52b1672e7f",
+      "gt_instances": 1008,
+      "total_detections": 25000,
+      "empty_masks": 314,
+      "category_agnostic_gt_coverage_at_50": 0.3343253968253968,
+      "same_category_gt_coverage_at_50": 0.18551587301587302,
+      "category_agnostic_gt_coverage_at_75": 0.1498015873015873,
+      "same_category_gt_coverage_at_75": 0.057539682539682536,
+      "scores": {
+        "min": 0.0,
+        "p10": 0.05765673145651817,
+        "median": 0.1242942214012146,
+        "p90": 0.31175698041915934,
+        "max": 0.9545654654502869
+      },
+      "prediction_area_fraction": {
+        "min": 0.0,
+        "p10": 0.002543177386514502,
+        "median": 0.042164016678885634,
+        "p90": 0.37219184663250365,
+        "max": 1.0
+      },
+      "unique_masks_per_image": {
+        "min": 39.0,
+        "p10": 48.0,
+        "median": 59.0,
+        "p90": 68.0,
+        "max": 83.0
+      },
+      "predictions_by_category": {
+        "4": 3235,
+        "6": 5973,
+        "1": 2978,
+        "5": 4601,
+        "2": 3144,
+        "8": 3586,
+        "7": 877,
+        "3": 606
+      },
+      "best_geometry_predicted_class_confusion": [
+        [
+          1,
+          1,
+          1,
+          9,
+          24,
+          7,
+          1,
+          16
+        ],
+        [
+          6,
+          8,
+          0,
+          0,
+          15,
+          2,
+          0,
+          19
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          3,
+          6,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          19,
+          5,
+          0,
+          14
+        ],
+        [
+          4,
+          6,
+          0,
+          2,
+          42,
+          17,
+          0,
+          17
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          16,
+          0,
+          8
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          5,
+          17,
+          7,
+          4
+        ],
+        [
+          1,
+          1,
+          2,
+          2,
+          3,
+          9,
+          0,
+          2
+        ]
+      ],
+      "by_category": {
+        "1": {
+          "gt": 140,
+          "any_iou50": 60,
+          "same_iou50": 19
+        },
+        "2": {
+          "gt": 91,
+          "any_iou50": 50,
+          "same_iou50": 31
+        },
+        "6": {
+          "gt": 327,
+          "any_iou50": 25,
+          "same_iou50": 19
+        },
+        "4": {
+          "gt": 65,
+          "any_iou50": 42,
+          "same_iou50": 13
+        },
+        "8": {
+          "gt": 200,
+          "any_iou50": 20,
+          "same_iou50": 6
+        },
+        "5": {
+          "gt": 111,
+          "any_iou50": 88,
+          "same_iou50": 77
+        },
+        "7": {
+          "gt": 45,
+          "any_iou50": 36,
+          "same_iou50": 22
+        },
+        "3": {
+          "gt": 29,
+          "any_iou50": 16,
+          "same_iou50": 0
+        }
+      },
+      "scope": "Existing top100 only. Coverage is per-GT any-match, not one-to-one recall/AP. No relabeling or threshold selection."
+    }
+  },
+  "elapsed_seconds": 9.41642164438963
+}

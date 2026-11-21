@@ -1,0 +1,99 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-stability-200-20261112-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "P1 200-update stability check, not full S0 training or evaluation",
+  "status": "failed",
+  "status_history": [
+    {
+      "status": "running",
+      "time": "2026-11-12T08:03:14.194095+00:00"
+    },
+    {
+      "status": "failed",
+      "time": "2026-11-12T08:03:28.092497+00:00"
+    }
+  ],
+  "git_commit": "aa104da11f8eafabc2830ff4295bff2515777062",
+  "split": "train",
+  "candidate_source": "none",
+  "seed": 42,
+  "artifacts": {
+    "logs": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r01/run.log",
+      "sha256": "8cb755968cbb093066f7370a285913fa844600332d3b0c3f56f2b79fbfb70aac"
+    },
+    "coordination": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r01/coordination.json",
+      "sha256": "c07d23c2a9584081113d26b29db95095f27d1c1a578e45870877a5d1e0e4d6e7"
+    },
+    "phase_1_log": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r01/phase_1.log",
+      "sha256": "9c4781bc7d5c1106293e1f7dacfd98870d4a474d9da374adcb9111c4d035f600"
+    },
+    "phase_2_log": null,
+    "resolved_config": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r01/updates_001_100/resolved_config.json",
+      "sha256": "f45b5111b987763d76671b8ed3f8c916f83d3ff8cbf9e293f5cde7c9557491b6"
+    },
+    "image_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/image_manifest.json",
+      "sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111"
+    },
+    "annotation_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/annotations_coco.json",
+      "sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883"
+    },
+    "query_manifest": null,
+    "candidate_manifest": null,
+    "predictions": null,
+    "metrics_phase_1": {
+      "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r01/updates_001_100/metrics.jsonl",
+      "sha256": "edf574692464003eb11d6cea0912425a3b95d75fcd37537d25399b2203c277db"
+    },
+    "metrics_phase_2": null,
+    "stability_report": null,
+    "resume_check": null,
+    "final_checkpoint_check": null,
+    "metrics": null
+  },
+  "parent_run_ids": [],
+  "checkpoint": {
+    "initialization": "COCO non-head weights and new eight-class head",
+    "source_sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "saved": []
+  },
+  "environment": {
+    "path": "docs/handoffs/segmentation/evidence/stability_200_20261112/r02/environment.json",
+    "note": "Environment unchanged between attempts; per-attempt environment fingerprint was only captured after r02."
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/check_segmentation_stability.py",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--checkpoint",
+    "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-stability-200-20261112-r01"
+  ],
+  "evaluation": {
+    "performed": false,
+    "reason": "20 Fashionpedia train images reused for engineering stability; no dev/test AP, query metrics, candidate export or checkpoint selection."
+  },
+  "completed_updates": 6,
+  "planned_updates": 200,
+  "failure": {
+    "attempted_update": 7,
+    "reason": "Non-finite gradient norm at AMP initial scale 128; optimizer step 7 did not run. No 100-update checkpoint was reached."
+  },
+  "notes": [
+    "Run outputs and prior failed attempts are retained.",
+    "All performance fields stay blank. Training loss and speed are engineering telemetry.",
+    "r02 restarts from public COCO initialization at AMP scale 1; it does not continue the six failed-attempt updates."
+  ]
+}

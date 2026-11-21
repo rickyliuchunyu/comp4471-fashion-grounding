@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "purpose": "s0_training",
+  "git_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+  "config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+  "start_update": 1000,
+  "completed_updates": 5000,
+  "updates_this_process": 4000,
+  "resumed": true,
+  "resume_lineage": [
+    {
+      "schema_version": 1,
+      "parent_checkpoint_sha256": "ffd502fd566edbd4a716c7668f8763a752acefb5fb088642e9e7d05cfece64e6",
+      "parent_git_commit": "89797754eb7442b76bf88e2dbfaa23136d90ee13",
+      "parent_config_sha256": "9f184d123173b1d724f8e7c4317a2b33f8782755b979610d029b2418af0d0985",
+      "parent_completed_updates": 1000,
+      "target_config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+      "parent_source_tree": "13b819b6e2567c1d9fd4fd0e34f1439734fabe2d",
+      "target_source_tree": "71d77730c46823a932d6b55fa07ccab9edf00cca",
+      "target_git_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+      "changes": {
+        "max_updates": {
+          "before": 1000,
+          "after": 5000
+        },
+        "checkpoint_updates": {
+          "before": null,
+          "after": [
+            2000,
+            3000,
+            5000
+          ]
+        },
+        "run_scope": {
+          "before": "bounded_post_padding_fix_1000_updates_not_complete_S0",
+          "after": "bounded_resume_update1000_to5000_not_complete_S0"
+        },
+        "budget_seconds": {
+          "before": 600,
+          "after": 2100
+        }
+      },
+      "reason": "User-authorized bounded continuation from valid update1000 to5000; retain recipe and all restored state",
+      "policy_sha256": "f27adab5d05c91a9f0e72d4874d554076c89da4873e9e582623e5311c4b2a66c"
+    }
+  ],
+  "elapsed_seconds": 1561.043182183057,
+  "finished_at": "2026-11-13T16:13:39.182934+00:00",
+  "first_loss": 3.033322498202324,
+  "last_loss": 34.09741950035095,
+  "min_loss": 1.3691591564565897,
+  "max_loss": 84.25696616247296,
+  "all_losses_and_gradients_finite": true,
+  "skipped_optimizer_updates": 0,
+  "initial_parameter_digests": {
+    "backbone": "dfb43e750e49dde9afbd3f2f0094513acb23f49221d2defb10435c0b4d920b3b",
+    "classifier": "3fc49e80f03df00e3d8b34fde4ea9663d1a90ffb8e46f3bcd547f8fd26d98a3c"
+  },
+  "final_parameter_digests": {
+    "backbone": "58ca70082a0974e982d5ca10fbcee84d04b2a7c70bcd4665c8c144cbc348ed25",
+    "classifier": "f5e6c743f174262ec6d95bb55e28ab91484af35d15fa186944c1143b33693097"
+  },
+  "backbone_and_classifier_updated": true,
+  "checkpoints": [
+    {
+      "update": 2000,
+      "path": "checkpoint_002000.pth",
+      "sha256": "36fd8d4bf23c4b812657cf474fdc33feb0e1d8f28a65862f91652d907d8de397"
+    },
+    {
+      "update": 3000,
+      "path": "checkpoint_003000.pth",
+      "sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148"
+    },
+    {
+      "update": 5000,
+      "path": "checkpoint_005000.pth",
+      "sha256": "3a8a016203a453ae249a13db717f535be823d687fbc6241d976b90682907cb11"
+    }
+  ],
+  "peak_cuda_allocated_bytes": 4697312768,
+  "peak_cuda_reserved_bytes": 5549064192,
+  "performance_evaluated": false,
+  "sample_count": 8000,
+  "empty_augmented_images": 3
+}

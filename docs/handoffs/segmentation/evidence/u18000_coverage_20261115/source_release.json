@@ -1,0 +1,11 @@
+{
+  "release_id": "fp_data_eval_large_v1",
+  "code_commit": "6606285bc9127b8dc2845b9b29f9adb9ca397786",
+  "accepted_language_queries": 0,
+  "formal_freeze": false,
+  "usage": "Development draft only; human acceptance required",
+  "source_hashes": {
+    "train": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+    "val": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+  }
+}

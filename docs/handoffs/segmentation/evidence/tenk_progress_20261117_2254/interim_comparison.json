@@ -1,0 +1,81 @@
+{
+  "status": "interim_not_final",
+  "baseline_AP": 64.69568513541032,
+  "completed_dev_stages": [
+    {
+      "equivalent_epoch": 2,
+      "update": 10000,
+      "AP": 63.23498704829675,
+      "AP_small": 12.573658527641243,
+      "AP75": 67.99049381255554,
+      "AP_delta_vs_C5k": -1.4606980871135633,
+      "evaluation_report_path": "epoch_02/dev/update_010000/evaluation_report.json",
+      "checkpoint_sha256": "ca78fb615ebcc177058963ada4d88d2a1a9041ce5103e8c8a6d80b4403d679ed"
+    },
+    {
+      "equivalent_epoch": 4,
+      "update": 20000,
+      "AP": 66.33509796301517,
+      "AP_small": 19.81133999992105,
+      "AP75": 70.11229563903434,
+      "AP_delta_vs_C5k": 1.6394128276048576,
+      "evaluation_report_path": "epoch_04/dev/update_020000/evaluation_report.json",
+      "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861"
+    },
+    {
+      "equivalent_epoch": 6,
+      "update": 30000,
+      "AP": 66.77695372892038,
+      "AP_small": 17.12407874588689,
+      "AP75": 71.56766470916811,
+      "AP_delta_vs_C5k": 2.0812685935100603,
+      "evaluation_report_path": "epoch_06/dev/update_030000/evaluation_report.json",
+      "checkpoint_sha256": "352633b71b144221e2e3f6e93a208477e4ec1b95ce8343fd31b49037ae14b8e4"
+    },
+    {
+      "equivalent_epoch": 8,
+      "update": 40000,
+      "AP": 68.5896514015614,
+      "AP_small": 21.310458380407013,
+      "AP75": 73.26286079150812,
+      "AP_delta_vs_C5k": 3.8939662661510823,
+      "evaluation_report_path": "epoch_08/dev/update_040000/evaluation_report.json",
+      "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b"
+    }
+  ],
+  "current_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/train/checkpoint_040000.pth",
+    "completed_updates": 40000,
+    "dev_mask_AP": 68.5896514015614,
+    "compared_updates": [
+      10000,
+      20000,
+      30000,
+      40000
+    ]
+  },
+  "delta_vs_baseline": {
+    "AP": 3.8939662661510823,
+    "AP_small": 10.262205146543202,
+    "AP75": 4.771226712155723,
+    "AP50": 3.4518031069587636,
+    "AP_medium": 15.779445293873476,
+    "AP_large": 3.985228752768947
+  },
+  "per_category_delta_vs_baseline": {
+    "1": 4.169855738814007,
+    "2": 0.10876975108273257,
+    "3": 7.709188894287735,
+    "4": 3.2626791938359645,
+    "5": 0.23417391039986057,
+    "6": 3.940188227190788,
+    "7": 5.257921637697379,
+    "8": 6.468952775900341
+  },
+  "not_evaluated_yet": [
+    50000
+  ],
+  "new_inference_images": 0
+}

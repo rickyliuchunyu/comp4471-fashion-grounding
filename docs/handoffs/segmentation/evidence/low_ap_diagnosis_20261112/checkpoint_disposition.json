@@ -1,0 +1,45 @@
+{
+  "status": "quarantined_for_training_label_corruption",
+  "reason": "LSJ FixedSizeCrop default seg_pad_value=255 was cast to bool, adding false foreground padding to binary instance targets.",
+  "affected_current_training_source": "b02f6e9d05b6a59297b64a4ad78494db45c75dd4",
+  "fix_commit": "ba94e5b835530069f12e7069c0df896a21a7e0c1",
+  "current_affected_checkpoints": [
+    {
+      "update": 50,
+      "sha256": "86a73b07c88ab2498c1dc56be32992bfd2fc1d0b41eea6e4b01c1d01793b7dd4"
+    },
+    {
+      "update": 100,
+      "sha256": "30f5bf4f5178c83ce420b8396b9f616ceaa2e03be1c28aef69950f15c6482c1d"
+    }
+  ],
+  "allow_resume_or_production_export": false,
+  "original_files_deleted_or_rewritten": false,
+  "original_metrics_retained": true,
+  "metric_interpretation": "AP is the measured performance of models trained with corrupted augmented masks. Evaluator/selector execution evidence remains, but these checkpoints are not valid S0 baselines or continuation points.",
+  "earlier_affected_paths": [
+    "segmentation-stability-200-20261112-r01",
+    "segmentation-stability-200-20261112-r02",
+    "segmentation-ap-integration-20261112-r01 (evaluated affected LSJ pilot weights)"
+  ],
+  "unaffected_evidence": [
+    "Source dataset hash/schema/ID/geometry/source-mask equality",
+    "COCO download and non-head tensor loading",
+    "RGB normalization and 1..8/0..7 mapping",
+    "Numerical finite-gradient and exact-state-resume evidence as engineering properties",
+    "COCO evaluator and selector implementation"
+  ],
+  "not_established": "The separate quantitative contributions of padding corruption and insufficient updates require a clean post-fix training run.",
+  "next_experiment_proposed_not_started": {
+    "initialize": "existing verified official COCO weights; fresh eight-class head; no resume of affected weights",
+    "max_updates": 1000,
+    "checkpoint_and_complete_dev_updates": [
+      500,
+      1000
+    ],
+    "keep_warmup_updates": 500,
+    "train_budget_seconds": 600,
+    "eval_budget_seconds": 600,
+    "purpose": "Observe corrected learning beyond warmup; not repeat engineering smoke or full long training"
+  }
+}

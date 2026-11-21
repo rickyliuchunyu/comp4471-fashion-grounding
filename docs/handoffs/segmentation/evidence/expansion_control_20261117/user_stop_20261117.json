@@ -1,0 +1,215 @@
+{
+  "requested_at": "2026-11-17T07:08:05.831765+00:00",
+  "requested_by": "user",
+  "reason": "Stop the current 5k/10k training because it takes too long; do not continue later arms",
+  "controller_pid": 214370,
+  "verified_processes": [
+    {
+      "pid": 214370,
+      "state": "S",
+      "start_ticks": "2540441561",
+      "cmd": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python scripts/run_expansion_control.py --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01 --execute"
+    },
+    {
+      "pid": 222799,
+      "state": "S",
+      "start_ticks": "2541309130",
+      "cmd": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python /root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/with_gpu_lock.py --coordination /root/autodl-tmp/fashion-grounding/coordination --run-id segmentation-expansion-10000-20261117-r01 --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted --seconds 10784 -- /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python /root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_expansion_control.py --plan /root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_plan.json --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01 --worker-arm D10k_targeted"
+    },
+    {
+      "pid": 222805,
+      "state": "S",
+      "start_ticks": "2541309143",
+      "cmd": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python /root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_expansion_control.py --plan /root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_plan.json --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01 --worker-arm D10k_targeted"
+    },
+    {
+      "pid": 222807,
+      "state": "R",
+      "start_ticks": "2541309316",
+      "cmd": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python -m fashion_grounding.segmentation.train --package /root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1 --source /root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former --checkpoint /root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl --config /root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_train10000.json --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/train"
+    }
+  ],
+  "stage_before": {
+    "status": "running",
+    "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+    "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+    "per_arm_hard_seconds": 10800,
+    "pair_hard_seconds": 21600,
+    "automatic_restart": false,
+    "arms": [
+      {
+        "arm": "C5k",
+        "run_id": "segmentation-expansion-5000-20261117-r01",
+        "status": "completed",
+        "hard_deadline_monotonic": 25415217.070304938,
+        "started_at": "2026-11-17T04:40:10.519787+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 8674.207609664649
+      },
+      {
+        "arm": "D10k_targeted",
+        "run_id": "segmentation-expansion-10000-20261117-r01",
+        "status": "running",
+        "hard_deadline_monotonic": 25423891.283241015,
+        "started_at": "2026-11-17T07:04:43.847894+00:00"
+      }
+    ]
+  },
+  "signals": [
+    {
+      "pid": 214370,
+      "signal": "SIGINT"
+    }
+  ],
+  "artifacts_before": [
+    "C5k/train/checkpoint_005000.pth",
+    "C5k/train/checkpoint_010000.pth",
+    "C5k/train/checkpoint_015000.pth",
+    "C5k/train/checkpoint_020000.pth"
+  ],
+  "stage_after_process_exit": {
+    "status": "interrupted",
+    "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+    "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+    "per_arm_hard_seconds": 10800,
+    "pair_hard_seconds": 21600,
+    "automatic_restart": false,
+    "arms": [
+      {
+        "arm": "C5k",
+        "run_id": "segmentation-expansion-5000-20261117-r01",
+        "status": "completed",
+        "hard_deadline_monotonic": 25415217.070304938,
+        "started_at": "2026-11-17T04:40:10.519787+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 8674.207609664649
+      },
+      {
+        "arm": "D10k_targeted",
+        "run_id": "segmentation-expansion-10000-20261117-r01",
+        "status": "interrupted",
+        "hard_deadline_monotonic": 25423891.283241015,
+        "started_at": "2026-11-17T07:04:43.847894+00:00",
+        "error": "KeyboardInterrupt",
+        "elapsed_seconds": 202.25224849581718,
+        "status_history": [
+          {
+            "previous_status": "failed",
+            "previous_error": "KeyboardInterrupt",
+            "changed_at": "2026-11-17T07:08:06.436027+00:00",
+            "reason": "explicit_user_stop",
+            "evidence": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/user_stop_20261117.json"
+          }
+        ],
+        "interruption_reason": "explicit_user_stop",
+        "finished_at": "2026-11-17T07:08:06.436027+00:00",
+        "automatic_restart": false
+      }
+    ],
+    "error": "KeyboardInterrupt",
+    "elapsed_seconds": 8877.876907408237,
+    "finished_at": "2026-11-17T07:08:06.436027+00:00",
+    "status_history": [
+      {
+        "previous_status": "failed",
+        "previous_error": "KeyboardInterrupt",
+        "changed_at": "2026-11-17T07:08:06.436027+00:00",
+        "reason": "explicit_user_stop",
+        "evidence": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/user_stop_20261117.json"
+      }
+    ],
+    "interruption_reason": "explicit_user_stop"
+  },
+  "records_before_annotation": {
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/run_metadata.json": {
+      "record_schema_version": 1,
+      "run_id": "segmentation-expansion-10000-20261117-r01",
+      "owner": "segmentation",
+      "executed_by": "lcy",
+      "status": "failed",
+      "git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+      "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+      "training_config": "configs/runs/segmentation/expansion_control_train10000.json",
+      "training_config_file_sha256": "b89b8af8509b581bc880d1ab608a49b0e2ea25a0c1395473379af6239b041ad8",
+      "input_validation_bundle": "configs/runs/segmentation/expansion_input_train10000.json",
+      "input_validation_bundle_sha256": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+      "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+      "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+      "seed": 42,
+      "updates": 20000,
+      "evaluation_updates": [
+        10000,
+        20000
+      ],
+      "hard_limit_seconds": 10800,
+      "automatic_restart": false,
+      "automatic_extension": false,
+      "started_at": "2026-11-17T07:04:43.847894+00:00",
+      "artifacts": {
+        "input_receipts.json": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/input_receipts.json",
+        "phases.json": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/phases.json"
+      },
+      "elapsed_seconds": 202.25224849581718,
+      "exit_code": null,
+      "error": "KeyboardInterrupt",
+      "finished_at": "2026-11-17T07:08:06.085075+00:00"
+    },
+    "/root/autodl-tmp/fashion-grounding/coordination/segmentation-expansion-10000-20261117-r01.json": {
+      "role": "segmentation",
+      "executed_by": "lcy",
+      "run_id": "segmentation-expansion-10000-20261117-r01",
+      "status": "running",
+      "wrapper_pid": 222799,
+      "started_at": "2026-11-17T07:04:43.985089+00:00",
+      "budget_seconds": 10784,
+      "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_expansion_control.py",
+        "--plan",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_plan.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01",
+        "--worker-arm",
+        "D10k_targeted"
+      ],
+      "git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+      "child_pid": 222805
+    }
+  },
+  "phases_before_annotation": [
+    {
+      "phase": "train_20000",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--checkpoint",
+        "/root/autodl-tmp/fashion-grounding/shared/weights/mask2former-coco-r50-3c8ec9/model_final_3c8ec9.pkl",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/expansion_control_train10000.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/D10k_targeted/train"
+      ],
+      "status": "running",
+      "started_at": "2026-11-17T07:04:45.709890+00:00"
+    }
+  ],
+  "status": "stopped",
+  "finished_at": "2026-11-17T07:08:06.436027+00:00",
+  "live_owned_pids": [],
+  "gpu_compute_processes": "",
+  "gpu": "0 MiB, 0 %",
+  "artifacts_after": [
+    "C5k/train/checkpoint_005000.pth",
+    "C5k/train/checkpoint_010000.pth",
+    "C5k/train/checkpoint_015000.pth",
+    "C5k/train/checkpoint_020000.pth"
+  ],
+  "stopped_next_arm": true,
+  "server_shutdown_requested": false
+}

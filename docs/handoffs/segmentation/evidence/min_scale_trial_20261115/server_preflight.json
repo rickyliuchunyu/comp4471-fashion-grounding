@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-11-15T14:45:19.667142+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281686528,
+      "free": 28930568192
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 45271961600,
+      "free": 169476403200
+    }
+  },
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "0, NVIDIA GeForce RTX 3090, 0, 24576, 0",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "active_coordination": [],
+  "own_checkout": {
+    "head": {
+      "exit_code": 0,
+      "stdout": "994c1e586989d970a3f41006c301244eda6dbeff",
+      "stderr": ""
+    },
+    "status": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "branch": {
+      "exit_code": 0,
+      "stdout": "segmentation/pilot-adapter-v1",
+      "stderr": ""
+    }
+  },
+  "parent": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "exists": true,
+    "bytes": 528466573,
+    "sha256_sidecar": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01"
+  },
+  "new_run_exists": false,
+  "new_coordination_exists": false
+}

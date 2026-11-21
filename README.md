@@ -1,16 +1,44 @@
 # 自然语言引导的服饰实例选择与分割
 
+**组合分割训练已完成（2026-11-19）。** 05:38 HKT 按完整 dev250 整体 mask AP 选中新增 28,318 步的末程权重 `b7146787a1fc`。整体 AP 71.8911（+0.5706），小目标 AP 28.7762（+5.3303）。[完整比较与权重位置](docs/handoffs/segmentation/full_combo_completion_20261119.md)
+
+**上一轮全量分割训练（2026-11-18）。** 当轮选用 28,318 步权重。 完整 dev250 的整体 mask AP 为 71.3205，比旧 50k 高 2.2892 点。小目标 AP 从半程 20.5696 回升至 23.4459，比旧 50k 高 0.3377 点。[三份报告与最终权重](docs/handoffs/segmentation/full_single_completion_20261118.md)
+
+**全量分割训练包（2026-11-18）**　wkq 已裁决 5 个历史关联组，原划分保留，123 张新增候选继续隔离。42,476 张训练图的成员清单保持原版本。lcy 已将两批 146 张开发曝光图的保护记录与实际 train/test 清单核对，训练和测试交集均为零。[裁决与保护清单](docs/handoffs/segmentation/full_train_protection_20261118.md) · [原增量接收](docs/handoffs/segmentation/full_train_acceptance_20261118.md)
+
+**S0 已冻结（2026-11-19）**　GUI 的开发集、个人图片及下游候选均使用组合权重 `b7146787a1fc` 和阈值 0.3。完整 dev250 共 1,320 个候选，覆盖 610/642 条已审核查询（95.02%）。个人图片默认优先使用空闲 GPU。[S0 冻结条目](docs/handoffs/segmentation/s0_freeze_20261119.json) · [交接路径与阈值比较](docs/handoffs/segmentation/current_candidates.md)
+
+前次完成（2026-11-18）：[50k离线残余错误分析](docs/handoffs/segmentation/u50000_residual_diagnosis_20261118.md) **completed**。复用现有AP预测与候选缓存，1008 GT全量分析；固定0.3小目标88/138匹配.5、40/138匹配.75，剩余21低分过滤、24局部几何、3仅异类达标、2无明显重叠。袜6/17、腰带30/47；弱图重采样A/B仅为后续建议；当前优先交接固定候选，未准备或启动新训练。仅CPU诊断与8例看图，0推理/训练/AP重算/smoke；50k＋0.3候选保持。
+
+前次完成（2026-11-18）：[50k完整dev候选与固定阈值](docs/handoffs/segmentation/u50000_candidates_dev250_20261118.md) **completed**。仅一次250图候选推理，阈值前23871个非空候选；三档0.3/0.5/0.7全dev候选1279/1155/1062，当前642条accepted开发查询覆盖602/592/580，选定 **50k＋0.3，93.7695%**。总448.390秒/900秒硬限，3496个新候选裁剪通过；0训练/0AP重评/0smoke/0排序，GPU与锁已释放。新包已发布，旧18k保留；队友本人接收未代签。
+
+前次完成（11月18日核查）：[10k训练与最终权重](docs/handoffs/segmentation/tenk_completion_20261118.md)已于11月17日23:30正常结束，10epoch/50000成功updates，总6小时6分26秒。2/4/6/8/10epoch完整dev AP为63.2350/66.3351/66.7770/68.5897/**69.0313**；最终选50k，较旧C5k AP+4.3356、AP_small+12.0599、AP75+4.9937。GPU与锁已释放，无自动延长/重启；本轮仅复用结果，0新增训练/推理/smoke。旧18k候选未替换，[最终权重路径及SHA256](docs/handoffs/segmentation/evidence/tenk_completion_20261118/final_checkpoint.json)已固定。
+
+启动前准备：[10k有界分段执行准备](docs/handoffs/segmentation/tenk_execution_preparation_20261117.md)已完成（代码`6b5fc8c`）。C5k20k模型参数热启动、最多10等效epoch、每2epoch完整dev、连续3次未改善早停及与缓存基线选权重已接线；拟总8小时/每段2小时，未授权启动。15项新增CPU执行逻辑验证通过；训练/推理/旧smoke均为0，所有启动标记仍关闭。原增强诊断已决定不启用定向裁剪，复用此前结果。
+
+历史完整数据[接收需求](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_fashionpedia_intake_20261117.md)及[1–2epoch提案](https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/0b8a0a88119d4e68f9386e11b88b94d968e0d8d2/docs/handoffs/segmentation/full_data_short_plan_20261117.md)保留在独立分支，未训练；已不作为当前10k优化的前置依赖。
+
 **图片 + 一句中英文描述 → 描述所指的单个整件服饰的 mask 和 bounding box。**
 
 课程：COMP 4471 / ELEC 4240。三人项目。当前方案版本：`2026-11-05`。
 
-> 当前仓库包含研究计划、数据协议、接口规范和格式示例，尚无课程训练与评估运行代码，也没有新模型实验结果。JSON 是规划配置，不是可以直接运行的训练配置。本文中的数量、超参数与进度均为待验证计划。
+最新（2026-11-17）：[5k/10k受控对照](docs/handoffs/segmentation/expansion_control_20261117.md)仅C5k完成，20k权重完整dev AP **64.6957**，高于历史B20k 0.9027点。D10k在159步主动中断，无checkpoint或AP，扩充收益尚未验证。GPU已释放，不自动重启/延长；旧候选与B1交付保留。
+
+> [正式S0](docs/handoffs/segmentation/s0_recovery20000_20261115.md)选择18k AP=63.5792，dev候选阈值固定0.3。lcy的[最小B1联调](docs/handoffs/segmentation/u18000_b1_pipeline_20261115.md)已完成：当前116图/290查询均输出原mask/框，选对178/290=61.38%，Success@0.5=73.10%。22.572秒，无新分割推理/训练/smoke；调用wyz原B1，不替代其排序研究及wkq全组评价。
+
+上一轮：[min_scale 0.1→0.5 单因素对照](docs/handoffs/segmentation/min_scale_trial_20261115.md)已完成，同一18k→20k、一次完整dev250，选中 **B20k AP=63.7930**（比复用A +0.2334、比旧最佳 +0.2138）。总15分58秒/45分钟硬限，未延长/重启/重复smoke。AP_small较旧最佳仅+0.0136、AP75略低，小目标/边界未明显改善。现有候选和B1交付仍对应18k＋0.3，本轮仅选新权重。此前[分布分析](docs/handoffs/segmentation/train5000_distribution_20261115.md)与[给wkq的10k需求](docs/handoffs/segmentation/train10000_expansion_request_20261115.md)保留，wkq随后发布定向10k，lcy接收结果见下文。
+
+上一轮（2026-11-16）：[B20k 800→1024 单尺度对照](docs/handoffs/segmentation/resolution1024_20261116.md)完成，共2分18秒/15分钟硬限，仅一次新增dev250推理。1024整体AP降至62.2498，保留 **B20k＋800，AP=63.7930**；小目标严格匹配35→49、薄边界改善，但袜子/腰带仍弱。0训练/0smoke，GPU已释放，候选仍18k版本。
 
 ## 团队与 Codex 开工入口
 
-暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。这些是项目成员简称；wyz/wkq 的 GitHub 用户名与访问权限仍待核验。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；完整模型环境仍待验证，见 [服务器检查](docs/handoffs/segmentation/server_inventory.md)。
+暂定职责沿用现有分工，成员简称已于 2026-11-11 确认：**lcy 负责分割与候选，wyz（A）负责图文匹配，wkq（B）负责数据与评估**。GitHub 账号绑定和最新整组分支/PR 证据见 [状态表](docs/status.md)。AutoDL 实例已创建，发起人的 SSH 与基础 PyTorch/CUDA 识别已核验；分割/图文环境已有短检查证据，最新资源快照见 [本轮交接](docs/handoffs/segmentation/u18000_candidates_dev250_20261115.md)。
 
 每次开工先查 [当前进度与下一步](docs/status.md)，再读 [AGENTS.md](AGENTS.md) 、[详细分工与协作说明](docs/team_workflow.md) 和 [完整工作流程](docs/workflow.md)，再读自己的任务卡：[分割](docs/roles/segmentation.md)、[图文](docs/roles/grounding.md)、[数据与评估](docs/roles/data_eval.md)。任务卡包含第一批工作、接口、验收和可直接交给 Codex 的开工说明。三人共同标注并交叉复核，GT 语言基线无需等待分割训练。
+
+上一轮（2026-11-16）：[定向10k增量接收](docs/handoffs/segmentation/train10000_acceptance_20261116.md)技术验收通过：新增5000图/21924实例、旧5k原记录保留、跨分区隔离核对通过，CPU约60秒。已准备[同配方5k/10k受控方案](docs/handoffs/segmentation/train10000_control_plan_20261116.md)，未启动训练/推理或重复smoke。新包人工全面复核及三方正式冻结不由技术接收代签。
+
+上一轮（2026-11-16）：[5k/10k证据复用与硬超时入口](docs/handoffs/segmentation/expansion_execution_preparation_20261116.md)已实现并通过新增CPU检查；真实5k/10k metadata证据组合通过，未重复数据像素或模型检查。两组各20k、保存的10k/20k完整dev、每组3小时硬上限，默认仅准备。本轮没有训练或推理。
 
 ## 项目目的
 
@@ -65,14 +93,16 @@ SigLIP 2 更适合作为起点是研究选择，不是已测得的优势。主�
 
 ## 数据与实验状态
 
-[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 中的实验均未运行。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+[training_plan.json](configs/training_plan.json) 定义规划值，[project.json](configs/project.json) 记录范围与状态；[registry.csv](experiments/registry.csv) 保留计划与历史工程运行，按独立run记录实际训练、dev评价及离线派生分析。真实AP行填写mask AP，工程和派生诊断行不伪装成新增模型性能测量。旧实验登记保存在 [归档表](experiments/archive/registry_20261004.csv)，仅供追溯。
+
+分割既有工程验证见 [200-update交接](docs/handoffs/segmentation/stability_200_20261112.md)，环境见 [分割环境入口](envs/segmentation/README.md)，训练及恢复见 [TRAINING.md](envs/segmentation/TRAINING.md)。[正式S0训练与八点dev选择](docs/handoffs/segmentation/s0_recovery20000_20261115.md)已完成；上轮AMP失败证据保留，本轮受限重放成功处理19315步溢出。
 
 已提供仅使用 Python 标准库的 `python scripts/check_contract_examples.py`，验证合成交接夹具；它不实现数据转换、训练或评价。完整示例和命令见 [examples](examples/README.md)。
 
-数据、模型和输出目录仍为占位。查询与预测示例均带 `illustrative_only`，不计入标注量或结果。原始数据、权重、缓存与私有凭据不上传 GitHub；报告必须引用公开模型与实现，并只报告本次课程实际产生的结果。
+Git跟踪的数据、模型和输出目录保留占位，真实接口包在服务器。reviewed_v1有34条accepted训练查询；当前116图/290条语言dev已按用户明确授权用于开发选择，原needs_revision/机器来源保留，未冒称完整250图语言集或最终test冻结。大数据、权重、缓存和凭据不上传GitHub。
 
 ## 下一步
 
-先在官方训练数据中用 100–200 张图片做标注试点，冻结划分，再用 GT 候选跑 B0/B1/B2；分割环境检查与微调可同时推进。之后训练 M1/M2，接入预测候选，完成 E1 和消融。按暂定角色推进；wyz/wkq 的账号权限、正式训练预算、权重 revision 与数据 manifest 仍待执行时填写；已确认单张 3090 24GB，基础环境检查不代表训练验收。
+按[最新状态](docs/status.md)推进：lcy的S0、18k dev候选及当前用户授权语言dev的0.3选择已完成，已有候选→原B1→原mask/框的最小pipeline及当前dev联调也已完成。wyz接收新候选与授权查询、按精确版本复用本轮独立predicted缓存并继续M2；wkq完善其余dev语言及统一评价。当前开发联调不再等待旧审核标记变更；不伪造审核人、不重复分割推理或追加训练。
 
 沿用现有课程记录：Milestone 为 2026-11-06，Final report 为 2026-12-05，均为香港时间 23:59；2026-11-05 课程页面请求返回登录限制，提交前以 Canvas 最新通知为准。

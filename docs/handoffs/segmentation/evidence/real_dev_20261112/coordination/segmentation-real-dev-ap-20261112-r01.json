@@ -1,0 +1,33 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-real-dev-ap-20261112-r01",
+  "status": "completed",
+  "wrapper_pid": 19483,
+  "started_at": "2026-11-12T13:44:34.609242+00:00",
+  "budget_seconds": 600,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.evaluate",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+    "--training-package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--config",
+    "configs/runs/segmentation/dev_ap_250_bounded.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01",
+    "--checkpoints",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-train-20261112-r01/checkpoint_000050.pth",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-train-20261112-r01/checkpoint_000100.pth"
+  ],
+  "git_commit": "b02f6e9d05b6a59297b64a4ad78494db45c75dd4",
+  "child_pid": 19489,
+  "exit_code": 0,
+  "elapsed_seconds": 235.40745548903942,
+  "finished_at": "2026-11-12T13:48:30.018644+00:00"
+}

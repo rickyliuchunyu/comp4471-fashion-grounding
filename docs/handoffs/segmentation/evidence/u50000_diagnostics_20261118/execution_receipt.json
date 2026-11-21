@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "300s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/analyze_50k_residual_errors.py",
+    "--root",
+    "/root/autodl-tmp/fashion-grounding",
+    "--config",
+    "configs/runs/segmentation/u50000_diagnostics.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01"
+  ],
+  "working_directory": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "src"
+  },
+  "hard_limit_seconds": 300,
+  "cleanup_grace_seconds": 5,
+  "analysis_internal_elapsed_seconds": 6.6032495982944965,
+  "new_logic_tests": 3,
+  "inference_calls": 0,
+  "checkpoint_loads": 0,
+  "optimizer_updates": 0,
+  "ap_recomputations": 0,
+  "smoke_reruns": 0,
+  "production_candidate_or_threshold_changes": 0,
+  "source_commit": "3e4fb9457f13c3f5aa825770a8a0755d1b385ea4",
+  "visual_phase": {
+    "cpu_only": true,
+    "hard_limit_seconds": 60,
+    "rendered_cases": 8,
+    "source_sha256": "d6aa5dcba34676f2f99e2c315634f5d9d88a9507cc905e089a0f5b5698a47e54",
+    "inspection": "Both saved pages inspected; overlays and labels readable. Deliberate illustrations, not random quality sample."
+  },
+  "preflight": {
+    "observed_date_hkt": "2026-11-18",
+    "gpu": "0 MiB, 0 %",
+    "active_coordination": [],
+    "free_data_bytes": 155776352256,
+    "own_server_source_before_deployment": "3a40d59a20814edd0dfb15a16c78ef4600851bb6"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-resolution1024-20261116-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "completed",
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-16T11:19:47.768336+00:00"
+    },
+    {
+      "status": "completed",
+      "at": "2026-11-16T11:22:05.663136+00:00"
+    }
+  ],
+  "git_commit": "7d1fa7502ea4f7971e8e5c101876522a75da138b",
+  "split": "dev",
+  "candidate_source": "none",
+  "seed": 42,
+  "parent_run_ids": [
+    "segmentation-min-scale05-20261115-r01",
+    "segmentation-small-analysis-20261115-r01"
+  ],
+  "checkpoint": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+    "sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+    "weights_unchanged": true
+  },
+  "environment": {
+    "interpreter": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "gpu": "NVIDIA GeForce RTX 3090 24 GiB",
+    "dependencies_reused_from": "envs/segmentation; S0 recovery environment, unchanged this turn",
+    "upstream_provenance": "envs/segmentation/upstream.json"
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_resolution_trial.py",
+    "--plan",
+    "configs/runs/segmentation/resolution1024_stage_plan.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+    "--execute"
+  ],
+  "evaluation": {
+    "new_full_dev_inference_passes": 1,
+    "baseline_800_reused": true,
+    "A_and_old_best_reused": true,
+    "evaluated_images": 250,
+    "GT_instances": 1008,
+    "small_GT_instances": 138,
+    "detections": 25000,
+    "inference_errors": 0,
+    "training_updates": 0,
+    "smoke_runs": 0,
+    "queries_read": false,
+    "test_read": false,
+    "checkpoint_model_unchanged": true,
+    "data_validation_reused": true,
+    "total_hard_limit_seconds": 900,
+    "automatic_restart": false,
+    "source_of_metrics": "dev1024/update_020000/evaluation_report.json"
+  },
+  "artifacts": {
+    "coordination.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/coordination.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/coordination.json",
+      "sha256": "8766ac98a48f2ec9101c944bab13f9b5487fb8280d25324321b15c4ba6f08c7f"
+    },
+    "dev1024.log": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024.log",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024.log",
+      "sha256": "1d887274dbc0210f57f0a3b775e91790dea963e63cf1133653076db17ba70b6d"
+    },
+    "compare.log": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/compare.log",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/compare.log",
+      "sha256": "58d267f56971b8549459c2bd08e94dc5ae46b497355e3d72364bb1050fdc1207"
+    },
+    "stage_status.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/stage_status.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/stage_status.json",
+      "sha256": "f037c0dd67052d0ba7d1fd984155e7e2207fce7f818c85d46b8cf1249bad4dfd"
+    },
+    "evidence_manifest.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/evidence_manifest.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/evidence_manifest.json",
+      "sha256": "c4600b286dc4735fc60944ebc367d1928a5d6aa81de9636f2c3c93013804e115"
+    },
+    "comparison.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/comparison.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/comparison.json",
+      "sha256": "125626d0c8f0140031de463ec4da79e9ec9ea35aec44d08dbd1594b490a6e5bf"
+    },
+    "diagnostic800.log": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/diagnostic800.log",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/diagnostic800.log",
+      "sha256": "8fd30364f6a660f7b0c97ae297ce75eb02c5f2bec1181c82f56ee0a5310d0024"
+    },
+    "server_postflight.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/server_postflight.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/server_postflight.json",
+      "sha256": "be625999a52713f8487a13b21eb58c9fa499e96410ed284b1c5d157276a315e9"
+    },
+    "launch.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/launch.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/launch.json",
+      "sha256": "37cfee73f8abd1fdb072082bbac5f281fb8612d0470c9c2e6f6fade299cef0ef"
+    },
+    "launcher.log": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/launcher.log",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "phases.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/phases.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/phases.json",
+      "sha256": "d91ee8be522fd0a39c7758010bb2ce21a68c671d9e69c88d783ed5bfaadb02b3"
+    },
+    "result_summary.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/result_summary.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/result_summary.json",
+      "sha256": "92b5a753a91466cc9ae58d60710eeeae861637b0e0fae046697fdae70dbcb524"
+    },
+    "diagnostic800/summary.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/diagnostic800/summary.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/diagnostic800/summary.json",
+      "sha256": "f95ab39756d365c859605bbe6542cc898e43fc6bb3fe7de863da5605df013f9b"
+    },
+    "diagnostic800/small_gt.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/diagnostic800/small_gt.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/diagnostic800/small_gt.json",
+      "sha256": "9aa6c714246b8d1c3b8e263c68f8b6b7b8de591a60eabd08a7463233c4b42687"
+    },
+    "diagnostic1024/summary.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/diagnostic1024/summary.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/diagnostic1024/summary.json",
+      "sha256": "7129e6fc3c1bd534b17c4fb4eb71a7088736f76f72a584fb35c8d9211f2cfd92"
+    },
+    "diagnostic1024/small_gt.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/diagnostic1024/small_gt.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/diagnostic1024/small_gt.json",
+      "sha256": "bc4180844fb6d76afb071bd5d4979f2dbd34d2aaa8f11acf05ea1f2f12497c4c"
+    },
+    "dev1024/run_report.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/run_report.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/run_report.json",
+      "sha256": "438f437d1066691ae0b52789f3e33ebe9234bd5b4a9716cc25572cddd49d7415"
+    },
+    "dev1024/data_check.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/data_check.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/data_check.json",
+      "sha256": "50dfd71b061df0df334b21338f5a9abfa80f65dfdf6bc4d858a59614c5feea55"
+    },
+    "dev1024/model_config.yaml": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/model_config.yaml",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/model_config.yaml",
+      "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff"
+    },
+    "dev1024/resolved_config.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/resolved_config.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/resolved_config.json",
+      "sha256": "6cbc9fb1980989a6e07734eb8f008211fa6f833cccde16b34714da7fa6fe0864"
+    },
+    "dev1024/update_020000/coco_summary.txt": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/update_020000/coco_summary.txt",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/update_020000/coco_summary.txt",
+      "sha256": "d204d2b877c806b3d9f2e801078fe31a4aa0fd5d3cdd9b1e4679135984162135"
+    },
+    "dev1024/update_020000/evaluation_report.sha256": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/update_020000/evaluation_report.sha256",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/update_020000/evaluation_report.sha256",
+      "sha256": "06a6fe474313e59625508a9b415203ca54d9bc1fa903bd086e19e837cf141da9"
+    },
+    "dev1024/update_020000/evaluation_report.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/update_020000/evaluation_report.json",
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/dev1024/update_020000/evaluation_report.json",
+      "sha256": "ba79f16dee3a1bb0e360f71aeccab4997134055c1133fbce7618fc03ae8f4c8a"
+    },
+    "predictions": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01/dev1024/update_020000/predictions.json",
+      "sha256": "b4c5f2eb5f70a4ca1f302a5ae95d774a9f2a7e97c47661a187ef42e0d07a43dc",
+      "kept_on_server": true
+    },
+    "plan": {
+      "path": "/Users/liuchunyu/Documents/elec4240/course-project/configs/runs/segmentation/resolution1024_stage_plan.json",
+      "repository_path": "configs/runs/segmentation/resolution1024_stage_plan.json",
+      "sha256": "74655892d91d79745a71e68bc38de1151d7e8861e90494cf45fbbfb42484646a"
+    },
+    "new_logic_validation": {
+      "repository_path": "docs/handoffs/segmentation/evidence/resolution1024_20261116/new_logic_validation.json",
+      "sha256": "d7c954ae1109f4bfc32f51e2a522526f6ea7caaad9e710ca0ce95f02f5d8de94"
+    }
+  },
+  "failure": null,
+  "team_progress_note": "wkq 4b0584a published targeted10k ready_for_lcy_review; not consumed in this run",
+  "finished_at": "2026-11-16T11:22:05.663136+00:00",
+  "elapsed_seconds": 137.85926482081413,
+  "selection": {
+    "resolution": 800,
+    "max_size": 1333,
+    "selected_AP": 63.792950237309874,
+    "rule": "Highest full dev250 mask AP, tie keeps cached 800; no weight changed",
+    "practical_gate_passed": false
+  },
+  "data": {
+    "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+    "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+    "training_identity": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+    },
+    "evaluation_identity": {
+      "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+    }
+  },
+  "archive": {
+    "path": "/tmp/lcy-resolution1024-evidence-20261116.tar.gz",
+    "sha256": "83c90549860970693f3b7b797d770c1ada1c43e31604acb59edadc5e88a049f6",
+    "bytes": 72963,
+    "original_artifacts_verified": 21
+  },
+  "reuse": {
+    "A_report": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json",
+    "old_best_report": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json",
+    "A_small_gt": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/small_analysis_20261115/small_gt_20000.json",
+    "B800_report": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/dev/update_020000/evaluation_report.json",
+    "B800_predictions_sha256": "481cda8a905bd17c38bdf7150bf8d412971f432a44484b2b2b38421367c79312"
+  },
+  "input_and_source_pins": {
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+    "docs/handoffs/segmentation/evidence/small_analysis_20261115/small_gt_20000.json": "d49355606c1da217861c93cee9febd8dc57e0d0089b892b5b72b7e6c6cf71923",
+    "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b",
+    "configs/runs/segmentation/dev_ap_250_resume_20000.json": "125ae86c9a0ebecb5aca83294aa76c0032399860877229473758e516e9d47c40",
+    "configs/runs/segmentation/dev_ap_B20k_1024.json": "6cbc9fb1980989a6e07734eb8f008211fa6f833cccde16b34714da7fa6fe0864",
+    "scripts/analyze_resolution_trial.py": "46fec63be9afffa49e1490ed1150d66fd704589d2d703cf99e95dd9e67b65330",
+    "scripts/run_resolution_trial.py": "8942a6016ef3bf3d619f68a227dddf63e72b4824bf29fe7470f9a5f180273a7c",
+    "scripts/run_min_scale_trial.py": "abd0c406d65defa5ccfd7d5e8e7862bf001c14040b2f29fde22494a2e82c20f6",
+    "scripts/with_gpu_lock.py": "3419bdd0438ad2d732f941033c65342909515b4de539b41bc93794a918584a91",
+    "scripts/analyze_saved_segmentation_predictions.py": "e47d985b3e38cf61c95a7309a425d776f3b882f2b1704433bcedb56ea481bb9a",
+    "scripts/analyze_small_segmentation_errors.py": "183235ce754ac913a50d2551e0f73b165c9a53227a6f83832c3c205d594014d5",
+    "src/fashion_grounding/segmentation/evaluate.py": "4b482a5e1b67c90d7e3a653e3d66a2499c3f7bac29fa9e20108e6083a72fa38f",
+    "src/fashion_grounding/segmentation/evaluation.py": "0efdc43a980410beac211b035f002d232761056d31bd8f2dce15b5b9375ba576"
+  }
+}

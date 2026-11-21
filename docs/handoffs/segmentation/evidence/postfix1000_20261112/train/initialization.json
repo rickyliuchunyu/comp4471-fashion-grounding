@@ -1,0 +1,54 @@
+{
+  "integrity": {
+    "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "md5": "3c8ec9998b5769ed00abd9c5e51fcefb",
+    "bytes": 176382166,
+    "author": "MaskFormer Model Zoo",
+    "tensor_count": 558,
+    "verified_before_deserialization": true
+  },
+  "adaptation": {
+    "skipped_classifier_keys": [
+      "sem_seg_head.predictor.class_embed.bias",
+      "sem_seg_head.predictor.class_embed.weight"
+    ],
+    "retained_loss_buffers": [
+      "criterion.empty_weight"
+    ],
+    "renamed_keys": {
+      "sem_seg_head.predictor.static_query.weight": "sem_seg_head.predictor.query_feat.weight"
+    },
+    "unexpected_keys": [],
+    "loaded_tensor_count": 555,
+    "exact_tensor_equality_verified": true,
+    "retained_tensors_unchanged": true,
+    "shapes": {
+      "criterion.empty_weight": {
+        "source": [
+          81
+        ],
+        "target": [
+          9
+        ]
+      },
+      "sem_seg_head.predictor.class_embed.bias": {
+        "source": [
+          81
+        ],
+        "target": [
+          9
+        ]
+      },
+      "sem_seg_head.predictor.class_embed.weight": {
+        "source": [
+          81,
+          256
+        ],
+        "target": [
+          9,
+          256
+        ]
+      }
+    }
+  }
+}

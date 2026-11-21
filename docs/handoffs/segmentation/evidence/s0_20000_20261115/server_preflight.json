@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-15T07:29:56.157807+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281223680,
+      "free": 28931031040
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 40651087872,
+      "free": 174097276928
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "gpu_processes": "",
+  "coordination_running": [],
+  "server_head": "7e558e365193693c6d6da48b9ca45cb57702e9b3",
+  "server_branch": "segmentation/pilot-adapter-v1",
+  "server_status": "",
+  "checkpoint_stat": {
+    "bytes": 528465357,
+    "mtime_ns": 1794586418086912500
+  },
+  "checkpoint_sidecar": "3a8a016203a453ae249a13db717f535be823d687fbc6241d976b90682907cb11",
+  "run_directory_exists": false,
+  "timeout": "timeout (GNU coreutils) 8.32"
+}

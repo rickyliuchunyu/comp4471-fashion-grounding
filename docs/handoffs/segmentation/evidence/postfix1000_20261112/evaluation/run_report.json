@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "reports": [
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01/update_000500/evaluation_report.json",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01/update_001000/evaluation_report.json"
+  ],
+  "optimizer_updates": 0,
+  "purpose": "dev_checkpoint_selection",
+  "elapsed_seconds": 237.2645844630897
+}

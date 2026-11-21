@@ -1,0 +1,15 @@
+{
+  "status": "interrupted",
+  "completed_updates_in_metrics": 159,
+  "successful_metric_rows": 159,
+  "sample_count": 318,
+  "amp_overflows": 0,
+  "last_loss": 60.83485507965088,
+  "peak_cuda_allocated_bytes": 4691143168,
+  "checkpoint_files": [],
+  "dev_evaluation_exists": false,
+  "metrics_sha256": "15aa220c7e00dab129dd245e5ef93f60651c58ee4c7a51fe9c3d14ed487312d8",
+  "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "paired_comparison_available": false,
+  "no_automatic_restart": true
+}

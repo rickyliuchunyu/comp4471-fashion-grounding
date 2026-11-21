@@ -1,0 +1,32 @@
+{
+  "scope": "Existing metric log aggregation; no training",
+  "updates": 100,
+  "image_exposures": 200,
+  "training_fraction": 0.04,
+  "base_lr": 0.0001,
+  "first_lr": 1.0000000000000001e-07,
+  "last_lr": 1.9880200000000003e-05,
+  "sum_main_lr": 0.0009990099999999998,
+  "lr_sum_divided_by_base_lr": 9.990099999999998,
+  "interpretation": "LR integral is a scale comparison, not an AdamW-equivalent optimization trajectory.",
+  "loss_windows": {
+    "first10": {
+      "total": 400.1401566982269,
+      "loss_ce": 80.04752802848816,
+      "loss_mask": 282.7770993232727,
+      "loss_dice": 37.315529346466064
+    },
+    "updates41_50": {
+      "total": 257.63116533756255,
+      "loss_ce": 53.05948104858398,
+      "loss_mask": 162.62215116024018,
+      "loss_dice": 41.9495331287384
+    },
+    "updates91_100": {
+      "total": 53.89299117326736,
+      "loss_ce": 34.16108796596527,
+      "loss_mask": 10.06485498547554,
+      "loss_dice": 9.667048221826553
+    }
+  }
+}

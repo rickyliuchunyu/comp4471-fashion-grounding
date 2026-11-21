@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "reports": [
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01/update_000050/evaluation_report.json",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-real-dev-ap-20261112-r01/update_000100/evaluation_report.json"
+  ],
+  "optimizer_updates": 0,
+  "purpose": "dev_checkpoint_selection",
+  "elapsed_seconds": 230.6537979580462
+}

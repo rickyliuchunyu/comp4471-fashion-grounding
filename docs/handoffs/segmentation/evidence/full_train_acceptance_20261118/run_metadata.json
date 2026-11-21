@@ -1,0 +1,45 @@
+{
+  "run_id": "full-train-acceptance-20261118-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy via Codex",
+  "status": "completed",
+  "completed_at": "2026-11-18T17:09:45+08:00",
+  "git_commit": "a1943e8e9ce44b45ac665d70053a463b96fe3347",
+  "run_dir": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-train-acceptance-20261118-r01",
+  "producer_handoff_commit": "a6dd946f4873523d8835b3915af2c60addbc40be",
+  "scripts_sha256": {
+    "scripts/accept_full_segmentation_delta.py": "cf3bf618cdafe2bdccdf7301da23062c952e0dd0c77654bd5f5c51b32a4176a2",
+    "scripts/verify_full_segmentation_release.py": "5294c6112b13a783648bf598091473daf29a5588aaad76db193aece0d7156a96",
+    "scripts/accept_segmentation_expansion.py": "f2bfb154105d80881d60a62824abcd1f2d3b937220e2ba8bead18858e9d9ba59",
+    "src/fashion_grounding/segmentation/data.py": "d84aa42a626ac9e96bf301790fd1047e1e6c9ee0a266e0e26fa55279ea47a0a9",
+    "src/fashion_grounding/data/schema.py": "36d089b3cb2698588c4cecc49e602790c67d06c44e5683976e37ee6b38265f1c"
+  },
+  "inputs": {
+    "published.json": "9bee52f7d410bb7ca8ecbe3c86e253cad1a81383ffffcdc6a3c516bfca3d9395",
+    "postpublish_check.json": "e6a451681598a25655b516a3ac38819374acafb830d0f9a56db6ac9587c9c94d",
+    "source_fidelity.json": "aca25be20df3f9a1a5146e38c72c8c0d1961e5c66e5ad7d312b111eaec0ef4dc"
+  },
+  "previous_acceptance_sha256": "a5b6c07fa74a80dc73bcfa17d30791419929cb7f0c023ae044b2480695fb613c",
+  "commands": [
+    "CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout -k 10s 25m /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python -u accept_full_segmentation_delta.py published.json source_fidelity.json added_reader.json",
+    "CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=/root/autodl-tmp/fashion-grounding/workspaces/segmentation/src timeout -k 10s 5m /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python verify_full_segmentation_release.py published.json train10000_acceptance.json postpublish_check.json release_check.json"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "receipt_sha256": {
+    "added_reader.json": "5ea4c83882b48dcf6e5ed0a9993fc3ea89a7b74ec521fc514e5c50b8eed93ac2",
+    "release_check.json": "728dacad8e236a32e8a8d0528313dbd44909f1d8deae8c8beb98b62fe8e68547"
+  },
+  "preflight": {
+    "data_disk_available_df_h": "130G",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_used_MiB": 0,
+    "gpu_utilization_percent": 0
+  },
+  "model_loads": 0,
+  "inference_images": 0,
+  "training_updates": 0,
+  "smoke_runs": 0
+}

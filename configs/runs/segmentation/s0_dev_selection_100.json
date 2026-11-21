@@ -1,0 +1,32 @@
+{
+  "purpose": "s0_training",
+  "seed": 42,
+  "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+  "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+  "max_updates": 100,
+  "learning_rate": 0.0001,
+  "backbone_lr_multiplier": 0.1,
+  "weight_decay": 0.05,
+  "weight_decay_norm": 0.0,
+  "weight_decay_embed": 0.0,
+  "microbatch_images": 2,
+  "accumulation_steps": 1,
+  "effective_batch_images": 2,
+  "warmup_updates": 500,
+  "warmup_start_factor": 0.001,
+  "lr_milestones": [
+    12000,
+    16000
+  ],
+  "lr_decay": 0.1,
+  "amp": true,
+  "amp_initial_scale": 1.0,
+  "gradient_clip_norm": 0.01,
+  "image_size": 768,
+  "min_scale": 0.1,
+  "max_scale": 2.0,
+  "random_flip": "horizontal",
+  "checkpoint_interval": 50,
+  "budget_seconds": 300,
+  "run_scope": "bounded_real_dev_checkpoint_selection_not_complete_S0"
+}

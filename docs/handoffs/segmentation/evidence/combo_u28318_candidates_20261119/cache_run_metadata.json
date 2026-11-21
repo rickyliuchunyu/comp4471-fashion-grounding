@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "completed_images": 250,
+  "cache_sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132",
+  "provenance": {
+    "producer_run_id": "segmentation-combo-u28318-dev-candidates-20261119-r01",
+    "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+    "completed_updates": 28318,
+    "training_git_commit": "dfb84558568fce99f49b1b9a36719633d058888a",
+    "export_git_commit": "3b455c817036cbee3540b7eb165d0e4deb6b20b2",
+    "export_config_sha256": "2b8fe67155874eb57226c0d31ffe15542bf4911b05647f04b684169bbdbb1c3d",
+    "source_decoder_sha256": "dcb619954bebb96e0618e5e7afd4991df44d9c56043398b15a931773785ee0ac",
+    "started_at": "2026-11-19T07:13:30.861692+00:00",
+    "score_components": [
+      "class_probability",
+      "mask_quality"
+    ],
+    "source_image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "decoder_config_sha256": "20fa08acbf252f519ef3098320ec6ecdb5ccf69ab4385045f0b84b4dffb7f4f8",
+    "annotation_manifest_sha256": null
+  }
+}

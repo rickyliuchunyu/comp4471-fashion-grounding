@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "grounding_commit": "66c0da7e066c1235ee618ea7015171e73b82c914",
+  "reader_path": "src/fashion_grounding/grounding/inputs.py",
+  "reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+  "packages": [
+    {
+      "candidate_manifest_sha256": "744468991793d0a273cb2adbc834d6bfd8a651b33330477c2e26a7ccec9fd59a",
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-reviewed-pilot-20261112-r01/candidate_package/candidates_predicted.json",
+      "images": 1,
+      "candidates": 0,
+      "statuses": {
+        "no_candidates": 1
+      },
+      "default_diagnostic_rejection": true,
+      "image_mask_hash_geometry_crop_and_order_checks": "passed"
+    }
+  ],
+  "scope": "candidate consumption only; no encoder, language accuracy or dev acceptance"
+}

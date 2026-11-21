@@ -1,0 +1,14 @@
+{
+  "overlap": {
+    "image_id": 20,
+    "sha256": 20,
+    "group_id": 20,
+    "source_image_id": 20
+  },
+  "image_count": 20,
+  "annotation_count": 145,
+  "training_data": {
+    "image_manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+    "annotation_sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883"
+  }
+}

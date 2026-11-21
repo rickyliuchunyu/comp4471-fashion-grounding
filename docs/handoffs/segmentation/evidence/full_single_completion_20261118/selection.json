@@ -1,0 +1,41 @@
+{
+  "selected_origin": "full_single_line",
+  "selected_checkpoint": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+    "completed_updates": 28318,
+    "dev_mask_AP": 71.32050253253068,
+    "compared_updates": [
+      14159,
+      28318
+    ]
+  },
+  "new_run_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+    "completed_updates": 28318,
+    "dev_mask_AP": 71.32050253253068,
+    "compared_updates": [
+      14159,
+      28318
+    ]
+  },
+  "cached_baseline": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+    "completed_updates": 50000,
+    "dev_mask_AP": 69.03133154819832,
+    "compared_updates": [
+      50000
+    ]
+  },
+  "stop_reason": "max_updates",
+  "selected_minus_baseline": {
+    "AP": 2.289170984332358,
+    "AP75": 2.8274875473530443,
+    "AP_small": 0.33772623602632734
+  }
+}

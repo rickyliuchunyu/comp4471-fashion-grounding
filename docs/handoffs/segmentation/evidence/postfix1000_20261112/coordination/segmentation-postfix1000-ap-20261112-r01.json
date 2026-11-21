@@ -1,0 +1,33 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-postfix1000-ap-20261112-r01",
+  "status": "completed",
+  "wrapper_pid": 23761,
+  "started_at": "2026-11-12T15:52:58.644156+00:00",
+  "budget_seconds": 600,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.evaluate",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+    "--training-package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--config",
+    "configs/runs/segmentation/dev_ap_250_postfix_1000.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-ap-20261112-r01",
+    "--checkpoints",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-train-20261112-r01/checkpoint_000500.pth",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-postfix1000-train-20261112-r01/checkpoint_001000.pth"
+  ],
+  "git_commit": "89797754eb7442b76bf88e2dbfaa23136d90ee13",
+  "child_pid": 23767,
+  "exit_code": 0,
+  "elapsed_seconds": 242.5604135207832,
+  "finished_at": "2026-11-12T15:57:01.206558+00:00"
+}

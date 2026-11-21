@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-15T09:31:47.569593+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281666048,
+      "free": 28930588672
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 44374384640,
+      "free": 170373980160
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %\n",
+  "processes": "",
+  "running_records": [],
+  "own_head": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "own_status": "",
+  "source_tree": "c0747d2a2e95b5250081f942ec78d8365a2ac8d2",
+  "deployed_via": "Git bundle and fast-forward; only segmentation workspace"
+}

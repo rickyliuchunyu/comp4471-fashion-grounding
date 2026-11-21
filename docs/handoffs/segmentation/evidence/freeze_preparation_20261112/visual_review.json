@@ -1,0 +1,53 @@
+{
+  "status": "visual_sampling_completed_with_limitations",
+  "reviewer": "Codex visual inspection",
+  "human_acceptance": false,
+  "reused_samples": 64,
+  "additional_samples": 96,
+  "total_samples": 160,
+  "per_class": 20,
+  "source": "Fashionpedia",
+  "additional_split_counts": {
+    "fp_train5000_v1": 95,
+    "fp_dev250_v1": 1
+  },
+  "findings": [
+    "The 96 added samples broadly align with the visible mapped garment/accessory; no evident systematic mask offset was observed.",
+    "Small accessories, occlusions and ambiguous garment boundaries cannot be certified from overview/crop contact sheets.",
+    "Samples are not a dataset-wide correctness estimate."
+  ],
+  "follow_up": [
+    {
+      "annotation_id": 127856,
+      "category": "skirt",
+      "note": "Runway lower garment may visually resemble wide trousers; source fine category/semantic review should resolve before any relabeling."
+    },
+    {
+      "annotation_id": 271653,
+      "category": "dress",
+      "note": "Heavy outerwear occlusion makes the full garment extent ambiguous."
+    },
+    {
+      "annotation_id": 248669,
+      "category": "accessory",
+      "note": "Tiny visible component; semantic type cannot be certified from crop."
+    },
+    {
+      "annotation_id": 22054,
+      "category": "accessory",
+      "note": "Tiny hair accessory; exact boundary cannot be certified from crop."
+    }
+  ],
+  "prior_follow_up_retained": [
+    16468,
+    42660
+  ],
+  "source_masks_modified": false,
+  "model_runs": 0,
+  "test_images_inspected": 0,
+  "sheets_server_path": "runs/segmentation/segmentation-freeze-preparation-20261112-r01/visual",
+  "remaining_freeze_requirements": [
+    "Actual human near-duplicate review record",
+    "Team freeze disposition referring to the fixed release hashes and outstanding visual limitations"
+  ]
+}

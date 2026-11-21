@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "elapsed_seconds": 4.062790330499411,
+  "hard_limit_seconds": 60,
+  "within_original_C5k_deadline": true,
+  "seconds_before_original_C5k_deadline": 2082.91597148031,
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+}

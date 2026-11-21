@@ -1,0 +1,15 @@
+{
+  "resource_checked_at_utc": "2026-11-15T14:01:19.501730+00:00",
+  "system_free_bytes": 28930568192,
+  "data_free_bytes": 169476476928,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "gpu_memory_used_mib": 0,
+  "gpu_total_mib": 24576,
+  "gpu_utilization_percent": 0,
+  "compute_processes": [],
+  "coordination_checked_at_utc": "2026-11-15T14:03:46.361004+00:00",
+  "active_coordination_records": [],
+  "gpu_lock_acquired": false,
+  "reason": "Read-only annotation CPU statistics; no GPU task",
+  "initial_shell_python_attempt": "python not on PATH, exit127; used existing explicit interpreter, no environment modification"
+}

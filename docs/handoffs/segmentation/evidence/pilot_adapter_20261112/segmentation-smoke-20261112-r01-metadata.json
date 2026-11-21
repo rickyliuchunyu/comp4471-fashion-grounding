@@ -1,0 +1,73 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-smoke-20261112-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "purpose": "P1 engineering smoke, NOT formal S0 training or evaluation",
+  "status": "failed",
+  "status_history": [
+    {
+      "status": "running",
+      "time": "2026-11-12T06:45:35.728352+00:00"
+    },
+    {
+      "status": "failed",
+      "time": "2026-11-12T06:45:44.574400+00:00"
+    }
+  ],
+  "git_commit": "4e4f4f24b88a2deeb9925f3abd96ebdca1821c0a",
+  "split": "train",
+  "candidate_source": "none",
+  "seed": 42,
+  "artifacts": {
+    "logs": {
+      "path": "docs/handoffs/segmentation/evidence/pilot_adapter_20261112/segmentation-smoke-20261112-r01.log",
+      "sha256": "e45b6fed5983485bce5c9962161a950a9d1c19802fe7195cc212ea29ce547940"
+    },
+    "coordination": {
+      "path": "docs/handoffs/segmentation/evidence/pilot_adapter_20261112/segmentation-smoke-20261112-r01.json",
+      "sha256": "044578cd17d4d0e61eb58276ecefd700ba8c27c2bbdeb0df7f18269208dc359e"
+    },
+    "resolved_config": null,
+    "image_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/image_manifest.json",
+      "sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111"
+    },
+    "annotation_manifest": {
+      "path": "shared/processed/fp_pilot20_v2/annotations_coco.json",
+      "sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883"
+    },
+    "query_manifest": null,
+    "candidate_manifest": null,
+    "predictions": null,
+    "metrics": null
+  },
+  "parent_run_ids": [],
+  "checkpoint": {
+    "initialization": "random_no_pretrained_weights",
+    "sha256": null
+  },
+  "environment": null,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "-m",
+    "fashion_grounding.segmentation.smoke",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_pilot20_v2",
+    "--source",
+    "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-smoke-20261112-r01"
+  ],
+  "evaluation": {
+    "performed": false,
+    "reason": "Two-update engineering check; no model selection, AP or language metrics."
+  },
+  "failure": "Copied legacy extension lacks sm_86 kernel; non-finite gradients; no update completed.",
+  "notes": [
+    "Configuration is configs/runs/segmentation/pilot_smoke.json at git_commit; r01-r03 used default GradScaler initial scale 65536; r04 uses explicit 128.",
+    "No query supervision, test split, legacy checkpoint, or official public checkpoint used.",
+    "Failed-run environment hashes were not captured before repair; original errors are preserved."
+  ]
+}

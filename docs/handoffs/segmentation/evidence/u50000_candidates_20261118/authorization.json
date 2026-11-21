@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "authority": "current_user",
+  "authorized_use": "offline_candidate_threshold_selection",
+  "confirmed_by": "current_user",
+  "confirmed_at": "2026-11-18",
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "recorded_at": "2026-11-17T16:44:04.708527+00:00",
+  "user_statement": "那就先核对整组 GitHub、服务器磁盘和 GPU，用 50k 最佳权重对完整 dev250 做一次候选推理，保存真实 query ID 和阈值前缓存，再离线比较 0.3/0.5/0.7 并选择固定候选版本。复用已有接口和检查，只补新产物的必要验证，不重复 smoke、不追加训练，只做我的分割部分，设置硬时间上限，完成后同步 GitHub。",
+  "note": "User authorizes development selection on the current published dev; no new claim of full-package human acceptance or formal team freeze."
+}

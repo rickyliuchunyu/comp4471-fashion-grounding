@@ -1,0 +1,71 @@
+{
+  "checked_at_utc": "2026-11-18T07:56:55.903Z",
+  "branches": {
+    "data-eval/p3-baseline-evaluation": "b24515bcda576fe97b354ca9b48e647079831df3",
+    "grounding/siglip-baseline-interfaces": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba",
+    "grounding/spatial-ranker-dev": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "segmentation/pilot-adapter-v1": "64e504ed29beb843289931a28349d9da3228d630"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "discussion_entries": 0
+    },
+    {
+      "number": 2,
+      "head": "64e504ed29beb843289931a28349d9da3228d630",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "discussion_entries": 0
+    },
+    {
+      "number": 3,
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "discussion_entries": 0
+    },
+    {
+      "number": 4,
+      "head": "b24515bcda576fe97b354ca9b48e647079831df3",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "discussion_entries": 0
+    },
+    {
+      "number": 5,
+      "head": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "discussion_entries": 0
+    }
+  ],
+  "sources": {
+    "wkq_release": "b24515bcda576fe97b354ca9b48e647079831df3:docs/handoffs/data_eval/train10000_targeted_20261116.md",
+    "wkq_exposure": "b24515bcda576fe97b354ca9b48e647079831df3:docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json",
+    "wyz": "64ed72794f0a432c8a1aa811cea18cdefbf9fdba:docs/handoffs/grounding/spatial_controlled_20261117.md"
+  },
+  "last_published_segmentation_parent": "fp_train10000_targeted_v1",
+  "published_full_release_found_on_reviewed_refs": false
+}

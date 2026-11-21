@@ -1,0 +1,19 @@
+{
+  "python": "3.10.8",
+  "torch": "2.1.2+cu121",
+  "torchvision": "0.16.2+cu121",
+  "detectron2": "0.6",
+  "numpy": "1.26.4",
+  "pillow": "10.2.0",
+  "python_prefix": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1",
+  "base_prefix": "/root/miniconda3",
+  "torch_file": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/__init__.py",
+  "detectron2_file": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/detectron2/__init__.py",
+  "extension_file": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/MultiScaleDeformableAttention.cpython-310-x86_64-linux-gnu.so",
+  "extension_sha256": "ea13940d2563ebc48a3f6258743b606ad60aa7f119d3dc4286efb6adc928d6cc",
+  "torch_cuda": "12.1",
+  "arch_list": "8.6",
+  "source_commit": "9b0651c6c1d5b3af2e6da0589b719c514ec0d69a",
+  "failed_clone_removed": true,
+  "legacy_base_modified": false
+}

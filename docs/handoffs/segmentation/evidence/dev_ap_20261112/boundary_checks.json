@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "old_package_rejected_for_inconsistent_flags": true,
+  "pilot_checkpoint_selection_rejected": true,
+  "no_selection_artifact_created": true,
+  "optimizer_updates": 0
+}

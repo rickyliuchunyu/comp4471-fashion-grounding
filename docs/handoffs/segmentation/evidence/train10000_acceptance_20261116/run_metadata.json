@@ -1,0 +1,28 @@
+{
+  "run_id": "segmentation-train10000-acceptance-20261116-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy via Codex",
+  "status": "completed",
+  "git_commit": "cd8e8898fa646393dff2b87553d0cb123119e038",
+  "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 timeout --signal=TERM --kill-after=5s 300s /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python -u scripts/accept_segmentation_expansion.py --plan configs/runs/segmentation/train10000_acceptance.json --output /root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train10000-acceptance-20261116-r01",
+  "exit_code": 0,
+  "hard_timeout_seconds": 300,
+  "acceptance_elapsed_seconds": 59.92901771143079,
+  "training_performed": false,
+  "model_smoke_performed": false,
+  "gpu_lock": "not acquired; CPU-only",
+  "artifacts": {
+    "acceptance.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train10000-acceptance-20261116-r01/acceptance.json",
+      "sha256": "f2217f933e11f1b3f02ae9ea544a6f758de459ee390f4984f6098b51a2990017"
+    },
+    "acceptance_plan.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train10000-acceptance-20261116-r01/acceptance_plan.json",
+      "sha256": "a5b6c07fa74a80dc73bcfa17d30791419929cb7f0c023ae044b2480695fb613c"
+    },
+    "server_postflight.json": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train10000-acceptance-20261116-r01/server_postflight.json",
+      "sha256": "fc6257d34945911a633fc7e72fa2b506bf11298259f40ff331e2517dfe446c66"
+    }
+  }
+}

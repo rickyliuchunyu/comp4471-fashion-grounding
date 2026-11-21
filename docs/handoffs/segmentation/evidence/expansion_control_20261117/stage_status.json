@@ -1,0 +1,53 @@
+{
+  "status": "interrupted",
+  "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+  "per_arm_hard_seconds": 10800,
+  "pair_hard_seconds": 21600,
+  "automatic_restart": false,
+  "arms": [
+    {
+      "arm": "C5k",
+      "run_id": "segmentation-expansion-5000-20261117-r01",
+      "status": "completed",
+      "hard_deadline_monotonic": 25415217.070304938,
+      "started_at": "2026-11-17T04:40:10.519787+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 8674.207609664649
+    },
+    {
+      "arm": "D10k_targeted",
+      "run_id": "segmentation-expansion-10000-20261117-r01",
+      "status": "interrupted",
+      "hard_deadline_monotonic": 25423891.283241015,
+      "started_at": "2026-11-17T07:04:43.847894+00:00",
+      "error": "KeyboardInterrupt",
+      "elapsed_seconds": 202.25224849581718,
+      "status_history": [
+        {
+          "previous_status": "failed",
+          "previous_error": "KeyboardInterrupt",
+          "changed_at": "2026-11-17T07:08:06.436027+00:00",
+          "reason": "explicit_user_stop",
+          "evidence": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/user_stop_20261117.json"
+        }
+      ],
+      "interruption_reason": "explicit_user_stop",
+      "finished_at": "2026-11-17T07:08:06.436027+00:00",
+      "automatic_restart": false
+    }
+  ],
+  "error": "KeyboardInterrupt",
+  "elapsed_seconds": 8877.876907408237,
+  "finished_at": "2026-11-17T07:08:06.436027+00:00",
+  "status_history": [
+    {
+      "previous_status": "failed",
+      "previous_error": "KeyboardInterrupt",
+      "changed_at": "2026-11-17T07:08:06.436027+00:00",
+      "reason": "explicit_user_stop",
+      "evidence": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/user_stop_20261117.json"
+    }
+  ],
+  "interruption_reason": "explicit_user_stop"
+}

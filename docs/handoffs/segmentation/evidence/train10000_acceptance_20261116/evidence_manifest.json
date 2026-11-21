@@ -1,0 +1,12 @@
+{
+  "files": {
+    "github_preflight.json": "ba562427281ea31b7e19e8633a2590f6ef4e2de12e1f39609ddbbcba7cf98b4a",
+    "new_logic_checks.json": "a623e98a383ba0478aa359fa68b942e85a268457d9976be8753af3fa449f8de7",
+    "run_metadata.json": "cf89cd33d9f655ebc3e27225791672434f2e43428104ca38f8b86271d3314c02",
+    "config_check.json": "862948de7a5ed062e741bad3b3ac74f82b0162f7320b0338619944ccd7954ab7",
+    "acceptance.json": "f2217f933e11f1b3f02ae9ea544a6f758de459ee390f4984f6098b51a2990017",
+    "server_preflight.json": "f0910d7f7da318d4418c58d92d638e04f5e8c3da337295fe6c320437b7276a7b",
+    "server_postflight.json": "fc6257d34945911a633fc7e72fa2b506bf11298259f40ff331e2517dfe446c66"
+  },
+  "large_data_in_git": false
+}

@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-13T15:47:25.247312+00:00",
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3280691200,
+      "free": 28931563520
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 38786179072,
+      "free": 175962185728
+    }
+  },
+  "gpu": "index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]\n0, NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %\n",
+  "compute_processes": "pid, process_name, used_gpu_memory [MiB]\n",
+  "running_records": []
+}

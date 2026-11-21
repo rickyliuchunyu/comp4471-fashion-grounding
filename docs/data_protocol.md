@@ -1,6 +1,6 @@
 # 数据转换与双语查询标注协议
 
-版本 `2026-11-05`。本文定义数据进入训练、标注和评估前应满足的条件。源类别已依据官方标注查证；目标映射和划分规则是项目设计，转换程序、完整数据下载和查询标注均未完成。机器可读映射见 [source_category_mapping.json](../configs/source_category_mapping.json)。
+版本 `2026-11-05`。本文定义数据进入训练、标注和评估前应满足的条件。源类别已依据官方标注查证；目标映射和划分规则是项目设计，试点转换与少量审核训练查询已有交付，扩充实现及正式冻结状态见 [状态表](status.md)。机器可读映射见 [source_category_mapping.json](../configs/source_category_mapping.json)。
 
 ## 1. 数据来源与监督覆盖
 

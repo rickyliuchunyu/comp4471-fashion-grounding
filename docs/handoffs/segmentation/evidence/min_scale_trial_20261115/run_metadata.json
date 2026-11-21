@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-min-scale05-20261115-r01",
+  "status": "completed",
+  "git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+  "started_at": "2026-11-15T14:46:25.786437+00:00",
+  "total_hard_limit_seconds": 2700,
+  "latest_hard_end_utc": "2026-11-15T15:31:25.786437+00:00",
+  "automatic_restart": false,
+  "scope": "segmentation_only_min_scale_ablation",
+  "training_updates": [
+    18000,
+    20000
+  ],
+  "evaluation_updates": [
+    20000
+  ],
+  "control_A_reused": true,
+  "prior_best_reused": true,
+  "old_smoke_runs": 0,
+  "run_dir": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01",
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T14:46:25.786437+00:00",
+      "note": "Explicit user authorization; prepared stage launched under its 2700-second deadline and shared GPU lock"
+    },
+    {
+      "status": "completed",
+      "at": "2026-11-15T15:02:24.033882+00:00",
+      "note": "2000 successful updates, one full-dev250 B evaluation and offline A/old-best selection completed within unchanged 2700-second limit"
+    }
+  ],
+  "record_schema_version": 1,
+  "split": "train_then_dev",
+  "candidate_source": "none",
+  "seed": 42,
+  "finished_at": "2026-11-15T15:02:24.033882+00:00",
+  "elapsed_seconds": 958.2127998843789,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_min_scale_trial.py",
+    "--plan",
+    "configs/runs/segmentation/min_scale_05_stage_plan.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01",
+    "--execute"
+  ],
+  "checkpoint": {
+    "parent": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+      "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01"
+    },
+    "selected": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 63.792950237309874,
+      "compared_updates": [
+        20000
+      ]
+    }
+  },
+  "parent_run_ids": [
+    "segmentation-s0-20000-20261115-r01",
+    "segmentation-s0-recovery20000-20261115-r01"
+  ],
+  "environment": {
+    "interpreter": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "gpu": "NVIDIA GeForce RTX 3090 24 GiB",
+    "dependencies_reused_from": "envs/segmentation; S0 recovery environment, unchanged this turn",
+    "upstream_provenance": "envs/segmentation/upstream.json"
+  },
+  "evaluation": {
+    "images": 250,
+    "detections": 25000,
+    "inference_errors": 0,
+    "metric_units": "percent",
+    "evaluation_git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+    "evaluation_config_sha256": "a9f5a0223742402e68b1ac71880e88b83839343c43b9a7846d4b1a8599f1b54c",
+    "metrics": {
+      "AP": 63.792950237309874,
+      "AP50": 79.38882182922018,
+      "AP75": 68.40592118748539,
+      "AP_small": 10.752477571901125,
+      "AP_medium": 40.056825549185945,
+      "AP_large": 71.75583353757136,
+      "per_category_AP": {
+        "1": 70.83823790868455,
+        "2": 82.15598748743926,
+        "3": 66.80580013995241,
+        "4": 70.11355623744365,
+        "5": 83.53235415040596,
+        "6": 50.791151248445765,
+        "7": 48.42326466375297,
+        "8": 37.6832500623544
+      }
+    },
+    "control_A_report_reused": true,
+    "old_best_report_reused": true,
+    "queries_read": false
+  },
+  "failure": null,
+  "selected_group": "trial_B_20000",
+  "current_candidate_delivery": "u18000 threshold 0.3 remains unchanged; no B candidate export in this run",
+  "archive": {
+    "path": "/tmp/segmentation-min-scale05-evidence-20261115.tar.gz",
+    "sha256": "df95fe4e8a27036f5aa6000053699f968457b9df29c2eb35bc97a42280bd68dd",
+    "verified_small_artifacts": 26
+  },
+  "smoke_runs": 0,
+  "repeated_A_inference_images": 0,
+  "artifacts": {
+    "comparison.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/comparison.json",
+      "sha256": "be139fed9edeede699df0ada8d64ba79175f8b891fb2914aca7c98353d3a79e8"
+    },
+    "coordination.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/coordination.json",
+      "sha256": "e4b64d8642cd4bf5063dbb6a836338f6fd9bc36736ed968a27ab19b3de7d8ca3"
+    },
+    "dev/data_check.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/data_check.json",
+      "sha256": "b26aa065f520692c920b1e37f3a44ae7c9c54e16af14599e68f694bda1980c68"
+    },
+    "dev/model_config.yaml": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/model_config.yaml",
+      "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff"
+    },
+    "dev/resolved_config.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/resolved_config.json",
+      "sha256": "125ae86c9a0ebecb5aca83294aa76c0032399860877229473758e516e9d47c40"
+    },
+    "dev/run_report.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/run_report.json",
+      "sha256": "f10bd03a75ea6fc369dd955b79e4bfcd371ca1c753768c387506acafd04836cb"
+    },
+    "dev/update_020000/coco_summary.txt": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/coco_summary.txt",
+      "sha256": "a69f70d916a3b0d615a68c0d91b1cabf953cb189d5140b527b01d9387ded343a"
+    },
+    "dev/update_020000/evaluation_report.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.json",
+      "sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+    },
+    "dev/update_020000/evaluation_report.sha256": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/dev/update_020000/evaluation_report.sha256",
+      "sha256": "db00a724fde85e4c54b04af37f441ea060589d9fb1c911108a848a82b29ec304"
+    },
+    "evidence_manifest.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/evidence_manifest.json",
+      "sha256": "43a4ce4b8afff322bb26ee8dd8d55813550e189d07ccb6529da561d23fe4f943"
+    },
+    "github_preflight.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/github_preflight.json",
+      "sha256": "5e5cf5af22652ebee940783030a196aa53b95ad7fda34dc43fea68dda76cf628"
+    },
+    "launch.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/launch.json",
+      "sha256": "5849460a27c6109dd9db283a87e453a2173cd9ba3a3169b46087494823988d6e"
+    },
+    "launcher.log": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "phases.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/phases.json",
+      "sha256": "a42c8c53ec716d1875cd29aa1b752fb51fe5b338630f57282577a1c3a4be7ce9"
+    },
+    "result_summary.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/result_summary.json",
+      "sha256": "7f3db981cc3fb31a5182e858a69573e24b41c4e4cddd27ab366ccfdd4c73e1bc"
+    },
+    "server_postflight.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/server_postflight.json",
+      "sha256": "97b41bab45caed0b509ba7ca97995b7d627ded060569867c9ba41ecf4ddba33d"
+    },
+    "server_preflight.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/server_preflight.json",
+      "sha256": "83290e3cab13f947575ab97cd973bd5edf6347cfc1b0c188e56cb20b761e2f57"
+    },
+    "stage.log": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/stage.log",
+      "sha256": "76376e2bd01c3e8440a0ac33ea7856c0806656e581bdccd675ef161d744a0b1b"
+    },
+    "stage_status.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/stage_status.json",
+      "sha256": "20191655c0c3ea851236e6c96c3283aa30b05a7e87062cf379dfc14f1bc67895"
+    },
+    "train/amp_overflow.jsonl": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/amp_overflow.jsonl",
+      "sha256": "907278e3fd257af6bca59be8ede4edab9f67f175acd3109414139784f1d11733"
+    },
+    "train/checkpoint_020000.sha256": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/checkpoint_020000.sha256",
+      "sha256": "9178eeeba1287d605634efb5dc8bdef90f3f395550e3c9174e2dc3d97106ca6a"
+    },
+    "train/data_check.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/data_check.json",
+      "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3"
+    },
+    "train/initialization.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/initialization.json",
+      "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62"
+    },
+    "train/metrics.jsonl": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/metrics.jsonl",
+      "sha256": "c6b7c9cb342dd7c520fc0ea9cad7ea8629f180d1396b1ef1e69f17a004a5b389"
+    },
+    "train/model_config.yaml": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/model_config.yaml",
+      "sha256": "5511f286997c61bbc9d183029c70ebbc1866a4734203a0db3487edee8b55dc94"
+    },
+    "train/optimizer_groups.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/optimizer_groups.json",
+      "sha256": "76a676efa06abeefcd53f93b97175b2ae55cd1adc41e7c674be37bdf7fdf58cf"
+    },
+    "train/recipe_transition.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/recipe_transition.json",
+      "sha256": "d9afaa9f95cac76071015cd4f5800b2cf99562c3de3df8dfd0118de6dfae4b71"
+    },
+    "train/resolved_config.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/resolved_config.json",
+      "sha256": "279431d86b957371c15be49b5daa9b0dfe040c2ee551cd6475af008174bf8c85"
+    },
+    "train/resume_check.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/resume_check.json",
+      "sha256": "2951e07325865602e422305f3ffc7becdca2669f1a7b87014bba6462769efaf2"
+    },
+    "train/train_report.json": {
+      "path": "docs/handoffs/segmentation/evidence/min_scale_trial_20261115/train/train_report.json",
+      "sha256": "d774fcf4185a2ea7d0162600c98704c3edd80ee9e7ba8d0218a1165a37cde663"
+    },
+    "production_checkpoint": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+      "sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+      "storage": "server_only"
+    },
+    "dev_predictions": {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/dev/update_020000/predictions.json",
+      "sha256": "481cda8a905bd17c38bdf7150bf8d412971f432a44484b2b2b38421367c79312",
+      "storage": "server_only"
+    }
+  }
+}

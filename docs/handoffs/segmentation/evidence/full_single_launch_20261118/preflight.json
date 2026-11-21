@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-11-18T18:25:07+08:00",
+  "branches": {
+    "data-eval/p3-baseline-evaluation": "ae08c8de8491256724123f5f2b126b0a7faa74b2",
+    "grounding/siglip-baseline-interfaces": "2c47c3609080a5a1f35914a0ed2269fcba47817d",
+    "grounding/spatial-ranker-dev": "2c47c3609080a5a1f35914a0ed2269fcba47817d",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "segmentation/pilot-adapter-v1": "9f1ca245fbde243df17ec711854c803e52892617"
+  },
+  "pull_requests": [
+    {
+      "number": 5,
+      "title": "Grounding: SigLIP baselines and controlled M1/M2 spatial comparison on reviewed dev",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "head": "2c47c3609080a5a1f35914a0ed2269fcba47817d",
+      "base": "data-eval/p3-baseline-evaluation",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "ae08c8de8491256724123f5f2b126b0a7faa74b2",
+      "base": "main",
+      "comments": []
+    },
+    {
+      "number": 3,
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "comments": []
+    },
+    {
+      "number": 2,
+      "title": "Segmentation: C5k results and bounded full-data plan",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "9f1ca245fbde243df17ec711854c803e52892617",
+      "base": "main",
+      "comments": [
+        {
+          "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2#issuecomment-6972670288",
+          "author": "rickyliuchunyu",
+          "excerpt": "@LE-brawl wkq，分割这边改为在已验收的 `fp_train10000_targeted_v1` 上一次准备全部合格的 Fashionpedia 官方训练图，跳过 15k、20k 中间包。请保留旧 10k 全部图片和标注，并将新增图片与 dev250"
+        }
+      ]
+    },
+    {
+      "number": 1,
+      "title": "Add data_eval pilot validation and human review auditing",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "comments": []
+    }
+  ],
+  "server": {
+    "time": "2026-11-18T18:25:07+08:00",
+    "disk_free_GiB": 129.14,
+    "root_free_GiB": 26.93,
+    "gpu": "NVIDIA GeForce RTX 3090, 0 %, 0 MiB, 24576 MiB",
+    "compute_processes": "",
+    "lock_free": true,
+    "active": [],
+    "checkout_commit": "3e4fb9457f13c3f5aa825770a8a0755d1b385ea4",
+    "checkout_branch": "segmentation/pilot-adapter-v1",
+    "checkout_status": "",
+    "run_exists": false,
+    "coord_exists": false,
+    "tmux": null,
+    "has_initial": true,
+    "has_order": true
+  }
+}

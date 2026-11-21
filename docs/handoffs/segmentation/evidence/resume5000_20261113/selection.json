@@ -1,0 +1,26 @@
+{
+  "rule": "max_dev_mask_AP_then_earliest_update",
+  "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_003000.pth",
+  "completed_updates": 3000,
+  "dev_mask_AP": 50.56031359695618,
+  "compared_updates": [
+    2000,
+    3000,
+    5000
+  ],
+  "evaluation_reports": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_002000/evaluation_report.json",
+      "sha256": "59e65ff8beba056d709d4f8bd00a307d318f7cefad3972496b9a69b3f3800e69"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000/evaluation_report.json",
+      "sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_005000/evaluation_report.json",
+      "sha256": "77b3829ff39e390e7fba29ffaba5754b9c3e1a34a43968dcfe2ccbaa62be074b"
+    }
+  ]
+}

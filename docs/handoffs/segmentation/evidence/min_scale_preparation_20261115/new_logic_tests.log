@@ -1,0 +1,17 @@
+test_checkpoint_source_and_config_identities_fail_closed (test_min_scale_trial.RecipeTests) ... ok
+test_new_loader_preserves_old_loader_data_gate_and_state_object (test_min_scale_trial.RecipeTests) ... ok
+test_only_factor_changes_and_six_states_are_not_mutated (test_min_scale_trial.RecipeTests) ... ok
+test_other_factors_rejected_even_with_matching_policy_hash (test_min_scale_trial.RecipeTests) ... ok
+test_comparison_keeps_old_best_or_promotes_b_by_overall_ap (test_min_scale_trial.StageTests) ... ok
+test_expired_budget_never_starts_a_process (test_min_scale_trial.StageTests) ... ok
+test_failed_training_stops_before_dev_and_comparison (test_min_scale_trial.StageTests) ... {"phase": "train_B", "command": ["/Users/liuchunyu/Documents/elec4240/course-project/.venv-segmentation/bin/python", "-m", "fashion_grounding.segmentation.train", "--package", "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1", "--source", "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former", "--resume", "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth", "--resume-recipe", "/Users/liuchunyu/Documents/elec4240/course-project/configs/runs/segmentation/resume_recipe_18000_to_20000.json", "--config", "/Users/liuchunyu/Documents/elec4240/course-project/configs/runs/segmentation/min_scale_05_20000.json", "--output", "/private/var/folders/6b/_qmhvjlj1dj0tqz5lb5pfzf40000gn/T/tmpnqxjuop4/train"], "status": "running", "started_at": "2026-11-15T14:34:34.590808+00:00"}
+ok
+test_only_b_training_and_single_b_dev_command (test_min_scale_trial.StageTests) ... ok
+test_outer_deadline_stops_sleeping_process (test_min_scale_trial.StageTests) ... ok
+test_partial_or_different_dev_is_ineligible (test_min_scale_trial.StageTests) ... ok
+test_worker_timer_requires_own_group_and_uses_absolute_deadline (test_min_scale_trial.StageTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.246s
+
+OK

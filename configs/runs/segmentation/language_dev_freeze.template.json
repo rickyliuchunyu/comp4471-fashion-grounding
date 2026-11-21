@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "purpose": "accepted_language_dev_freeze",
+  "formal_freeze": false,
+  "split": "dev",
+  "confirmed_by": null,
+  "confirmed_at": null,
+  "queries": {"path": null, "sha256": null},
+  "image_manifest": {"path": null, "sha256": null},
+  "annotations": {"path": null, "sha256": null},
+  "review_records": [],
+  "scope": {
+    "kind": null,
+    "description": null,
+    "query_count": null,
+    "query_image_ids": []
+  },
+  "note": "Consumer freeze receipt TEMPLATE ONLY. Populate from wkq's actual accepted release and human review/freeze evidence; never change draft review_status to bypass the gate. Image manifest and COCO references are the pinned full segmentation dev input; scope states the actual language query subset. Paths here are execution inputs, not schema-3 package-relative references."
+}

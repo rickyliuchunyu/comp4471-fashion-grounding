@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-17T16:25:40.540213+00:00",
+  "gpu": "0 MiB, 24576 MiB, 0 %",
+  "compute": "",
+  "data_free_GiB": 145.26649475097656,
+  "lock_free": true,
+  "active_coordination": [],
+  "recorded_process_states": {
+    "230160": "absent",
+    "230228": "absent",
+    "230234": "absent"
+  },
+  "checkout_head": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "checkout_status": ""
+}

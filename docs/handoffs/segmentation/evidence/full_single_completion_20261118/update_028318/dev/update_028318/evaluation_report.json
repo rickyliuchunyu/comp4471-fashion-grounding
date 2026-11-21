@@ -1,0 +1,58 @@
+{
+  "protocol": "coco-segm-iou50-95-maxDets100-upstream-instance-v1",
+  "metric_units": "percent",
+  "metrics": {
+    "AP": 71.32050253253068,
+    "AP50": 86.40983559210004,
+    "AP75": 76.31286062244492,
+    "AP_small": 23.445915329434712,
+    "AP_medium": 54.01135795528476,
+    "AP_large": 80.36315063564952,
+    "per_category_AP": {
+      "1": 76.01074268136844,
+      "2": 86.5759027093984,
+      "3": 76.44062037074947,
+      "4": 75.47081197127066,
+      "5": 87.49733182791765,
+      "6": 60.096934841920636,
+      "7": 60.59061916750882,
+      "8": 47.88105669011135
+    }
+  },
+  "evaluated_images": 250,
+  "detections": 25000,
+  "inference_errors": 0,
+  "complete": true,
+  "training_config_sha256": "0d168b42780cc49a39263f9ace1ca1db621146e03e3aa5cea92b78338f9b7742",
+  "training_git_commit": "9f1ca245fbde243df17ec711854c803e52892617",
+  "schema_version": 1,
+  "purpose": "dev_checkpoint_selection",
+  "selection_eligible": true,
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01/update_028318/train/checkpoint_028318.pth",
+  "checkpoint_sha256": "aaff8d9dd89e5aad4be0d6304eaa12dc0c8bb880395722220fa1f12af33f7809",
+  "completed_updates": 28318,
+  "evaluation_git_commit": "9f1ca245fbde243df17ec711854c803e52892617",
+  "evaluation_config_sha256": "4d732d3d4cd81f12d9f6636c5674b4792bf6536ef8f7fe346ecd3e97a08feaff",
+  "evaluation_data": {
+    "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+  },
+  "training_data": {
+    "image_manifest_sha256": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "annotation_sha256": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340"
+  },
+  "overlap": {
+    "image_id": 0,
+    "sha256": 0,
+    "group_id": 0,
+    "source_identity": 0
+  },
+  "predictions_sha256": "ede2680be898ae8e1645d573cb4c5481dbc0857a2e60fca754f2388f7193672a",
+  "optimizer_updates": 0,
+  "checkpoint_model_unchanged": true,
+  "queries_read": false,
+  "elapsed_seconds": 125.30497863516212,
+  "finished_at": "2026-11-18T13:47:45.293950+00:00",
+  "peak_cuda_allocated_bytes": 2633957888,
+  "peak_cuda_reserved_bytes": 9995026432
+}

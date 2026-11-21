@@ -1,0 +1,49 @@
+{
+  "model": {
+    "release_id": "combo-u28318-dev250-20261119-r01",
+    "checkpoint": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+    "completed_updates": 28318,
+    "threshold": 0.3
+  },
+  "upload": {
+    "requested_device": "auto",
+    "actual_device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3090",
+    "reason": "",
+    "size": [
+      1024,
+      680
+    ],
+    "instances": 3,
+    "query_ids": [
+      36,
+      10,
+      61
+    ],
+    "badge": "28,318 步 · b7146787a1fc",
+    "message": "28,318 步 · b7146787a1fc · GPU · NVIDIA GeForce RTX 3090 推理完成",
+    "input_image_id": 4993,
+    "source": "fp_train_full_eligible_v1",
+    "input_sha256": "dbe00dcdc5af4777abf8fed1866641ae3dd69b7a8a3b415b4c50397e0e14b0a5",
+    "http_status": 200
+  },
+  "cached_example": {
+    "id": 1000008811,
+    "images": 250,
+    "instances": 4,
+    "visible_instances": 4,
+    "label": "28,318 步 · b7146787a1fc"
+  },
+  "production": {
+    "port": 8765,
+    "dev_images": 250,
+    "model": {
+      "release_id": "combo-u28318-dev250-20261119-r01",
+      "checkpoint": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+      "completed_updates": 28318,
+      "threshold": 0.3
+    },
+    "cached_example_readback": true
+  },
+  "nondev_upload_forwards": 1
+}

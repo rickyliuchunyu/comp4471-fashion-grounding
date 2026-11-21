@@ -1,0 +1,815 @@
+{
+  "selected_cases": [
+    {
+      "kind": "no_overlap",
+      "annotation_id": 1000006092,
+      "image_id": 1000009794,
+      "old": {
+        "annotation_id": 1000006092,
+        "image_id": 1000009794,
+        "category_id": 8,
+        "source_category_id": 19,
+        "area": 424,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 2501,
+          "score": 0.0037587154656648636,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 1.79353967010827e-05,
+          "detection_id": 2555,
+          "score": 0.0013925883686169982,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "belt",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 424,
+          "false_positive_pixels": 1311,
+          "predicted_area": 1311,
+          "gt_area": 424
+        },
+        "gt_bbox_xywh": [
+          261,
+          946,
+          33,
+          69
+        ],
+        "gt_bbox_fill": 0.18620992534036013,
+        "approximate_eval_scaled_bbox_wh": [
+          38.82352941176471,
+          81.17647058823529
+        ]
+      },
+      "new": {
+        "annotation_id": 1000006092,
+        "image_id": 1000009794,
+        "category_id": 8,
+        "source_category_id": 19,
+        "area": 424,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 2501,
+          "score": 0.0016272485954687,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 1.2254226176252535e-05,
+          "detection_id": 2546,
+          "score": 0.0015116139547899365,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "belt",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 424,
+          "false_positive_pixels": 1337,
+          "predicted_area": 1337,
+          "gt_area": 424
+        },
+        "gt_bbox_xywh": [
+          261,
+          946,
+          33,
+          69
+        ],
+        "gt_bbox_fill": 0.18620992534036013,
+        "approximate_eval_scaled_bbox_wh": [
+          38.82352941176471,
+          81.17647058823529
+        ]
+      },
+      "crop_xyxy": [
+        245,
+        921,
+        310,
+        1024
+      ],
+      "source_image_sha256": "d8fe6f670d3f553f69b9e98703e447fc7533de0129ccc4c525f3ba7f9e8761fc",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/637d4e5120ce4f3860de94d9727abc30.jpg"
+    },
+    {
+      "kind": "partial_mask",
+      "annotation_id": 1000008221,
+      "image_id": 1000012292,
+      "old": {
+        "annotation_id": 1000008221,
+        "image_id": 1000012292,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 930,
+        "small": true,
+        "best_same": {
+          "iou": 0.4940898345153664,
+          "detection_id": 8867,
+          "score": 0.9108057022094727,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.3957703927492447,
+          "detection_id": 8814,
+          "score": 0.0014724222710356116,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.4940898345153664,
+          "precision": 0.523153942428035,
+          "recall": 0.8989247311827957,
+          "false_negative_pixels": 94,
+          "false_positive_pixels": 762,
+          "predicted_area": 1598,
+          "gt_area": 930
+        },
+        "gt_bbox_xywh": [
+          349,
+          938,
+          49,
+          46
+        ],
+        "gt_bbox_fill": 0.4125998225377107,
+        "approximate_eval_scaled_bbox_wh": [
+          63.7861328125,
+          59.880859375
+        ]
+      },
+      "new": {
+        "annotation_id": 1000008221,
+        "image_id": 1000012292,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 930,
+        "small": true,
+        "best_same": {
+          "iou": 0.49556999409332547,
+          "detection_id": 8865,
+          "score": 0.9150711894035339,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.39223218096457535,
+          "detection_id": 8813,
+          "score": 0.0017663926118984818,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.49556999409332547,
+          "precision": 0.5237203495630461,
+          "recall": 0.9021505376344086,
+          "false_negative_pixels": 91,
+          "false_positive_pixels": 763,
+          "predicted_area": 1602,
+          "gt_area": 930
+        },
+        "gt_bbox_xywh": [
+          349,
+          938,
+          49,
+          46
+        ],
+        "gt_bbox_fill": 0.4125998225377107,
+        "approximate_eval_scaled_bbox_wh": [
+          63.7861328125,
+          59.880859375
+        ]
+      },
+      "crop_xyxy": [
+        331,
+        921,
+        415,
+        1000
+      ],
+      "source_image_sha256": "8eff0bdac60fc2e686767d1bf3064fe0edb5a86c2fbbe2e88b306bc9a7850162",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/cf0a241235163a9a66e5e27ee3e02674.jpg"
+    },
+    {
+      "kind": "boundary_limit",
+      "annotation_id": 1000001244,
+      "image_id": 1000016529,
+      "old": {
+        "annotation_id": 1000001244,
+        "image_id": 1000016529,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 596,
+        "small": true,
+        "best_same": {
+          "iou": 0.7424023154848046,
+          "detection_id": 14969,
+          "score": 0.9651806354522705,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.6909361069836553,
+          "detection_id": 14929,
+          "score": 0.004763205070048571,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 14969,
+          "55": 14969,
+          "60": 14969,
+          "65": 14969,
+          "70": 14969,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.9651806354522705,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 6,
+          "score": 0.9651806354522705,
+          "iou": 0.7424023154848046
+        },
+        "extent": {
+          "iou": 0.7424023154848046,
+          "precision": 0.84375,
+          "recall": 0.860738255033557,
+          "false_negative_pixels": 83,
+          "false_positive_pixels": 95,
+          "predicted_area": 608,
+          "gt_area": 596
+        },
+        "gt_bbox_xywh": [
+          326,
+          851,
+          49,
+          70
+        ],
+        "gt_bbox_fill": 0.17376093294460643,
+        "approximate_eval_scaled_bbox_wh": [
+          57.39385065885798,
+          81.99121522693997
+        ]
+      },
+      "new": {
+        "annotation_id": 1000001244,
+        "image_id": 1000016529,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 596,
+        "small": true,
+        "best_same": {
+          "iou": 0.74235807860262,
+          "detection_id": 14968,
+          "score": 0.965664803981781,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.697151424287856,
+          "detection_id": 14928,
+          "score": 0.0049185557290911674,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 14968,
+          "55": 14968,
+          "60": 14968,
+          "65": 14968,
+          "70": 14968,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.965664803981781,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 6,
+          "score": 0.965664803981781,
+          "iou": 0.74235807860262
+        },
+        "extent": {
+          "iou": 0.74235807860262,
+          "precision": 0.848585690515807,
+          "recall": 0.8557046979865772,
+          "false_negative_pixels": 86,
+          "false_positive_pixels": 91,
+          "predicted_area": 601,
+          "gt_area": 596
+        },
+        "gt_bbox_xywh": [
+          326,
+          851,
+          49,
+          70
+        ],
+        "gt_bbox_fill": 0.17376093294460643,
+        "approximate_eval_scaled_bbox_wh": [
+          57.39385065885798,
+          81.99121522693997
+        ]
+      },
+      "crop_xyxy": [
+        308,
+        826,
+        392,
+        946
+      ],
+      "source_image_sha256": "296c97277f2f133e6896d5a69c90f1f62fcb89fa3438f5036986916596992365",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/643befc8433653bd7647f45c3c89b02f.jpg"
+    },
+    {
+      "kind": "largest_drop",
+      "annotation_id": 1000006019,
+      "image_id": 1000009765,
+      "old": {
+        "annotation_id": 1000006019,
+        "image_id": 1000009765,
+        "category_id": 8,
+        "source_category_id": 15,
+        "area": 140,
+        "small": true,
+        "best_same": {
+          "iou": 0.46078431372549017,
+          "detection_id": 2374,
+          "score": 0.04464643821120262,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 2302,
+          "score": 0.014521456323564053,
+          "category_id": 6
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "headband, head covering, hair accessory",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.46078431372549017,
+          "precision": 0.5949367088607594,
+          "recall": 0.6714285714285714,
+          "false_negative_pixels": 46,
+          "false_positive_pixels": 64,
+          "predicted_area": 158,
+          "gt_area": 140
+        },
+        "gt_bbox_xywh": [
+          330,
+          248,
+          17,
+          14
+        ],
+        "gt_bbox_fill": 0.5882352941176471,
+        "approximate_eval_scaled_bbox_wh": [
+          19.91215226939971,
+          16.398243045387993
+        ]
+      },
+      "new": {
+        "annotation_id": 1000006019,
+        "image_id": 1000009765,
+        "category_id": 8,
+        "source_category_id": 15,
+        "area": 140,
+        "small": true,
+        "best_same": {
+          "iou": 0.22251308900523561,
+          "detection_id": 2347,
+          "score": 0.02707696706056595,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 2302,
+          "score": 0.013386102393269539,
+          "category_id": 6
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "headband, head covering, hair accessory",
+        "geometry_bucket": "partial_or_mixed_iou_010_050",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.22251308900523561,
+          "precision": 0.2599388379204893,
+          "recall": 0.6071428571428571,
+          "false_negative_pixels": 55,
+          "false_positive_pixels": 242,
+          "predicted_area": 327,
+          "gt_area": 140
+        },
+        "gt_bbox_xywh": [
+          330,
+          248,
+          17,
+          14
+        ],
+        "gt_bbox_fill": 0.5882352941176471,
+        "approximate_eval_scaled_bbox_wh": [
+          19.91215226939971,
+          16.398243045387993
+        ]
+      },
+      "crop_xyxy": [
+        306,
+        222,
+        371,
+        287
+      ],
+      "source_image_sha256": "cea78453a9e0ee400dd898de066e10fc76ceb06d02c4fdf9590df2f59b5a4dfb",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/9ce7b758976ec102f8c3ec502e523969.jpg"
+    },
+    {
+      "kind": "largest_gain",
+      "annotation_id": 1000007644,
+      "image_id": 1000011092,
+      "old": {
+        "annotation_id": 1000007644,
+        "image_id": 1000011092,
+        "category_id": 8,
+        "source_category_id": 13,
+        "area": 453,
+        "small": true,
+        "best_same": {
+          "iou": 0.0,
+          "detection_id": 6201,
+          "score": 0.008323190733790398,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 6202,
+          "score": 0.005569356959313154,
+          "category_id": 1
+        },
+        "matched_detection_ids": {
+          "50": 0,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "glasses",
+        "geometry_bucket": "no_saved_mask_iou_ge_010",
+        "matched50": false,
+        "matched75": false,
+        "matched50_score": null,
+        "any_ge50": false,
+        "highest_score_overlap": null,
+        "extent": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "false_negative_pixels": 453,
+          "false_positive_pixels": 346,
+          "predicted_area": 346,
+          "gt_area": 453
+        },
+        "gt_bbox_xywh": [
+          476,
+          172,
+          44,
+          16
+        ],
+        "gt_bbox_fill": 0.6434659090909091,
+        "approximate_eval_scaled_bbox_wh": [
+          51.76470588235294,
+          18.823529411764707
+        ]
+      },
+      "new": {
+        "annotation_id": 1000007644,
+        "image_id": 1000011092,
+        "category_id": 8,
+        "source_category_id": 13,
+        "area": 453,
+        "small": true,
+        "best_same": {
+          "iou": 0.6740157480314961,
+          "detection_id": 6287,
+          "score": 0.014374672435224056,
+          "category_id": 8
+        },
+        "best_other": {
+          "iou": 0.0,
+          "detection_id": 6205,
+          "score": 0.38034650683403015,
+          "category_id": 4
+        },
+        "matched_detection_ids": {
+          "50": 6287,
+          "55": 6287,
+          "60": 6287,
+          "65": 6287,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "glasses",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.014374672435224056,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 8,
+          "score": 0.014374672435224056,
+          "iou": 0.6740157480314961
+        },
+        "extent": {
+          "iou": 0.6740157480314961,
+          "precision": 0.7016393442622951,
+          "recall": 0.9448123620309051,
+          "false_negative_pixels": 25,
+          "false_positive_pixels": 182,
+          "predicted_area": 610,
+          "gt_area": 453
+        },
+        "gt_bbox_xywh": [
+          476,
+          172,
+          44,
+          16
+        ],
+        "gt_bbox_fill": 0.6434659090909091,
+        "approximate_eval_scaled_bbox_wh": [
+          51.76470588235294,
+          18.823529411764707
+        ]
+      },
+      "crop_xyxy": [
+        460,
+        147,
+        535,
+        212
+      ],
+      "source_image_sha256": "2a136033e08ed2267e14800cf5afc7d27e9faaabd3acd90fa62e95824e56c03a",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/7be8af2ebbb6fa133131a2f42bdbe9f6.jpg"
+    },
+    {
+      "kind": "class_score_conflict",
+      "annotation_id": 1000005368,
+      "image_id": 1000009954,
+      "old": {
+        "annotation_id": 1000005368,
+        "image_id": 1000009954,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 144,
+        "small": true,
+        "best_same": {
+          "iou": 0.5404255319148936,
+          "detection_id": 3095,
+          "score": 0.0020634352695196867,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.5404255319148936,
+          "detection_id": 3096,
+          "score": 0.0024546890053898096,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 3006,
+          "55": 0,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.002790892031043768,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 8,
+          "score": 0.003635979723185301,
+          "iou": 0.5311203319502075
+        },
+        "extent": {
+          "iou": 0.5404255319148936,
+          "precision": 0.5825688073394495,
+          "recall": 0.8819444444444444,
+          "false_negative_pixels": 17,
+          "false_positive_pixels": 91,
+          "predicted_area": 218,
+          "gt_area": 144
+        },
+        "gt_bbox_xywh": [
+          384,
+          847,
+          21,
+          12
+        ],
+        "gt_bbox_fill": 0.5714285714285714,
+        "approximate_eval_scaled_bbox_wh": [
+          24.561403508771928,
+          14.035087719298245
+        ]
+      },
+      "new": {
+        "annotation_id": 1000005368,
+        "image_id": 1000009954,
+        "category_id": 6,
+        "source_category_id": 23,
+        "area": 144,
+        "small": true,
+        "best_same": {
+          "iou": 0.5594713656387665,
+          "detection_id": 3006,
+          "score": 0.0026890968438237906,
+          "category_id": 6
+        },
+        "best_other": {
+          "iou": 0.5594713656387665,
+          "detection_id": 3007,
+          "score": 0.0032242489978671074,
+          "category_id": 8
+        },
+        "matched_detection_ids": {
+          "50": 3006,
+          "55": 3006,
+          "60": 0,
+          "65": 0,
+          "70": 0,
+          "75": 0,
+          "80": 0,
+          "85": 0,
+          "90": 0,
+          "95": 0
+        },
+        "source_category_name": "shoe",
+        "geometry_bucket": "same_iou_050_075",
+        "matched50": true,
+        "matched75": false,
+        "matched50_score": 0.0026890968438237906,
+        "any_ge50": true,
+        "highest_score_overlap": {
+          "category_id": 8,
+          "score": 0.0032242489978671074,
+          "iou": 0.5594713656387665
+        },
+        "extent": {
+          "iou": 0.5594713656387665,
+          "precision": 0.6047619047619047,
+          "recall": 0.8819444444444444,
+          "false_negative_pixels": 17,
+          "false_positive_pixels": 83,
+          "predicted_area": 210,
+          "gt_area": 144
+        },
+        "gt_bbox_xywh": [
+          384,
+          847,
+          21,
+          12
+        ],
+        "gt_bbox_fill": 0.5714285714285714,
+        "approximate_eval_scaled_bbox_wh": [
+          24.561403508771928,
+          14.035087719298245
+        ]
+      },
+      "crop_xyxy": [
+        362,
+        820,
+        427,
+        885
+      ],
+      "source_image_sha256": "51da09ef6cc537aaf4f6971005a4cd456bcac9b98663af44b9eecf9c0120b12c",
+      "source_image_path": "outputs/small_analysis_20261115_inputs/shared/processed/fp_dev250_v1/images/8eacc19c92ca15c7d79d66bfb2626fe7.jpg"
+    }
+  ],
+  "selection_rule": "Saved small_errors deterministic cases plus first annotation-ID class-score conflict. Deliberate failures/changes, not random or representative.",
+  "image_sha256": "a21f9fbbce6fc6814521d1fe35a8207be1318a7b8209905088da17ccb3e3a046",
+  "source_script_sha256": "060a1be003f75493811eff1a2889e60943a6d4de07f7ca9655f7fe0307c8ce1f",
+  "inference_calls": 0,
+  "optimizer_updates": 0
+}

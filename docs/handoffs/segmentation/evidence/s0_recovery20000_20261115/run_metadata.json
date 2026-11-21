@@ -1,0 +1,960 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-s0-recovery20000-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "completed",
+  "created_at": "2026-11-15T09:32:12.818554+00:00",
+  "git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "source_tree": "c0747d2a2e95b5250081f942ec78d8365a2ac8d2",
+  "authorization": {
+    "schema_version": 1,
+    "run_id": "segmentation-s0-recovery20000-20261115-r01",
+    "authorized_by": "Current explicit user request",
+    "parent_run_id": "segmentation-s0-20000-20261115-r01",
+    "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "parent_checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "parent_config": "configs/runs/segmentation/s0_resume_20000.json",
+    "training_config": "configs/runs/segmentation/s0_recovery_20000.json",
+    "repair_policy": "configs/runs/segmentation/resume_repair_18000_to_20000.json",
+    "evaluation_config": "configs/runs/segmentation/dev_ap_250_resume_20000.json",
+    "evaluation_config_sha256": "a9f5a0223742402e68b1ac71880e88b83839343c43b9a7846d4b1a8599f1b54c",
+    "evaluation_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000,
+      20000
+    ],
+    "existing_checkpoints": [
+      {
+        "update": 6000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_006000.pth",
+        "sha256": "962da05307b3ab9c19fbb2a83a2d55ae868684adb1bb63f7da5742d1f2392980"
+      },
+      {
+        "update": 8000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_008000.pth",
+        "sha256": "2f6be1d62de01d0e6de6c97147b778788bd26d321fa1b5417f09b3e4a5643684"
+      },
+      {
+        "update": 10000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_010000.pth",
+        "sha256": "3e589721f014cc1153d1dbcef884e40e3f72ff6a357b072a6a621c5a855e0af7"
+      },
+      {
+        "update": 12000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_012000.pth",
+        "sha256": "cc15a7e313cdf4b8cef3389ad9f394cbdd6775849c7c788f7ac525138c375b92"
+      },
+      {
+        "update": 14000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_014000.pth",
+        "sha256": "8095076bcc220b8466dd61da32b96f7fb45c7bc2ea12ff6b1bbde006e7662d17"
+      },
+      {
+        "update": 16000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_016000.pth",
+        "sha256": "48e792d72eb725faed6ab1cf679dd674cc159debf3dd84aa4b6bf96bb9588c44"
+      },
+      {
+        "update": 18000,
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+        "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01"
+      }
+    ],
+    "prior_training_config": "docs/handoffs/segmentation/evidence/resume5000_20261113/train/resolved_config.json",
+    "prior_evaluation_config": "docs/handoffs/segmentation/evidence/resume5000_20261113/evaluation/resolved_config.json",
+    "prior_best_report": "docs/handoffs/segmentation/evidence/resume5000_20261113/update_003000/evaluation_report.json",
+    "prior_best_report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163",
+    "prior_best_checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+    "prior_best_dev_mask_AP": 50.56031359695618,
+    "total_hard_limit_seconds": 10800,
+    "process_group_timeout_seconds": 10790,
+    "wrapper_timeout_seconds": 10795,
+    "wrapper_cleanup_max_seconds": 5,
+    "training_internal_seconds": 8400,
+    "eight_evaluations_shared_seconds": 1800,
+    "automatic_stage_restart": false,
+    "old_smoke_runs": 0,
+    "prior_best_inference_repeated": false
+  },
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/with_gpu_lock.py",
+    "--coordination",
+    "/root/autodl-tmp/fashion-grounding/coordination",
+    "--run-id",
+    "segmentation-s0-recovery20000-20261115-r01",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "--seconds",
+    "10795",
+    "--",
+    "/usr/bin/timeout",
+    "--signal=KILL",
+    "10790s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_s0_recovery.py",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+  ],
+  "parent_run_ids": [
+    "segmentation-s0-20000-20261115-r01"
+  ],
+  "old_smoke_runs": 0,
+  "automatic_stage_restart": false,
+  "total_hard_limit_seconds": 10800,
+  "artifacts": {
+    "phases.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/phases.json",
+      "sha256": "0442fdff73c910ace5309b43b8e30412c1b8334408b992702eb126a08c98e659",
+      "bytes": 4092
+    },
+    "stage.log": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/stage.log",
+      "sha256": "82cab92ebc7f79f9ad66e26a7c536b431dab1f976de3827a90aaf1025586b2a0",
+      "bytes": 48641
+    },
+    "metric_summary.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/metric_summary.json",
+      "sha256": "84adb506da8e35190ea574ece1e1b0c2462521c76e53fce89c29b78c17194957",
+      "bytes": 3549
+    },
+    "overall_selection.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/overall_selection.json",
+      "sha256": "07a4e294ace1c67a7bd508433e9bd88f3a5f311002b2ffcf1a638b15485597f6",
+      "bytes": 6895
+    },
+    "postflight.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/postflight.json",
+      "sha256": "2d463fe0a992184e8ad2079b254c5764bad4f393ccbc75e716eadfccb0253ff1",
+      "bytes": 481
+    },
+    "trajectory_prefix_comparison.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/trajectory_prefix_comparison.json",
+      "sha256": "04600fad0ce0362e0287d93688d686e73ca386b0d4874fe8e5d5f4de10798462",
+      "bytes": 2600
+    },
+    "server_preflight.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/server_preflight.json",
+      "sha256": "1dc1a4000a6ab3903238093aa7cb66453cb92a10e837985052d45bf81a09a959",
+      "bytes": 625
+    },
+    "train/resume_check.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/resume_check.json",
+      "sha256": "2951e07325865602e422305f3ffc7becdca2669f1a7b87014bba6462769efaf2",
+      "bytes": 1309
+    },
+    "train/source_repair.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/source_repair.json",
+      "sha256": "26007861fd79657eece283def8d66dd95ab9aa110b894dc460213113bcc21122",
+      "bytes": 1724
+    },
+    "train/amp_overflow.jsonl": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/amp_overflow.jsonl",
+      "sha256": "8a92d1ade435dab53c9810a54a6ed054faa6fa9eec259cebc9a430c063ee1a49",
+      "bytes": 1487
+    },
+    "train/resolved_config.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/resolved_config.json",
+      "sha256": "22eece5e02f699a6dd3759409a7429f3fc648d82d87f5d080a86c7bf9ba1b685",
+      "bytes": 1131
+    },
+    "train/train_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/train_report.json",
+      "sha256": "be763cdc9215788cc93dd71617a35649f90712c6a89f54792675758b37930e0e",
+      "bytes": 6503
+    },
+    "train/initialization.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/initialization.json",
+      "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+      "bytes": 1257
+    },
+    "train/data_check.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/data_check.json",
+      "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3",
+      "bytes": 627
+    },
+    "train/model_config.yaml": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/model_config.yaml",
+      "sha256": "646e9b5c73cdf69812100ecb9d8417a7a9a7ef2f3b8a232b30b15e26265e780b",
+      "bytes": 7735
+    },
+    "dev/resolved_config.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/resolved_config.json",
+      "sha256": "125ae86c9a0ebecb5aca83294aa76c0032399860877229473758e516e9d47c40",
+      "bytes": 470
+    },
+    "dev/data_check.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/data_check.json",
+      "sha256": "b26aa065f520692c920b1e37f3a44ae7c9c54e16af14599e68f694bda1980c68",
+      "bytes": 368
+    },
+    "dev/run_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/run_report.json",
+      "sha256": "b57a46c0d1951ee2f0d68c13e57bc4bff72087b671ff2051b77972afa1aa77ec",
+      "bytes": 1306
+    },
+    "dev/model_config.yaml": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/model_config.yaml",
+      "sha256": "040a45a0ae9b7aa621ed6d11c9c74fed48cb727d3e16ccbb747c736bb59c2fff",
+      "bytes": 7771
+    },
+    "dev/update_006000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/coco_summary.txt",
+      "sha256": "b4452b6aa39e5ca89f1f6898edcace5131a4bd311736a71fb6e39a2119c95341",
+      "bytes": 1205
+    },
+    "dev/update_006000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.json",
+      "sha256": "4507912b7bf49beb32f225839bc7e8f65b9599253510cb42df399dacc079cc94",
+      "bytes": 2266
+    },
+    "dev/update_006000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.sha256",
+      "sha256": "d675299195e5940517a40a1a49d847190a02f35b483bcc937305aa210d6d9f1b",
+      "bytes": 65
+    },
+    "dev/update_008000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/coco_summary.txt",
+      "sha256": "4eec97b964f96ee7ef2743ab301ab2e362ca369193cf788a2f8be7fb329c8fb6",
+      "bytes": 1205
+    },
+    "dev/update_008000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.json",
+      "sha256": "7c955e7a82984e85e0becaaf13b123873a5fba8117efc20f64ceb8cd99b1cc3b",
+      "bytes": 2262
+    },
+    "dev/update_008000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.sha256",
+      "sha256": "d3d4b381978c64a786ebe58b23d2c6b029c41223e171e4bf75d39f2dc98d60e3",
+      "bytes": 65
+    },
+    "dev/update_010000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/coco_summary.txt",
+      "sha256": "7fdac46e6c21ed10b188c70d25633e8f877848146fbb0338d6694627e60d6a6c",
+      "bytes": 1205
+    },
+    "dev/update_010000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.json",
+      "sha256": "d4b9c8dfbfcfab70c4869d16f0c5d1f9d8c2a3df6576b7537c2964e01086dd46",
+      "bytes": 2259
+    },
+    "dev/update_010000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.sha256",
+      "sha256": "e930f6f643ecfd01149d2db1f85d2a4b1d5ce9f77d8d976b7bc500bfd9b70a79",
+      "bytes": 65
+    },
+    "dev/update_012000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/coco_summary.txt",
+      "sha256": "78cf2c37ca73deb4524aa33c71a41576e724d33b7e13da0260c2901820fb6046",
+      "bytes": 1205
+    },
+    "dev/update_012000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.json",
+      "sha256": "a6ba61846ac8aaf9ffd6a60d7883482a6f794d1d891b9a84117aa34d9416f1f1",
+      "bytes": 2266
+    },
+    "dev/update_012000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.sha256",
+      "sha256": "a46affd51927134b80d15dee7080c1d1838d08338e2fd48e58ad6dea64caee88",
+      "bytes": 65
+    },
+    "dev/update_014000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/coco_summary.txt",
+      "sha256": "0c4f32d9168194123d23b1e067f05f3796c852b7c4e3c89b5a5669ab00dc3b2b",
+      "bytes": 1205
+    },
+    "dev/update_014000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.json",
+      "sha256": "f7c0510b3912d2702cb44c94bb6107877986419ef767868a28fb90d4dbda67e3",
+      "bytes": 2260
+    },
+    "dev/update_014000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.sha256",
+      "sha256": "c0e648ddb278a86dd4c0096f86bd016cd4550d76f4bce67e6f5a210ecca1a733",
+      "bytes": 65
+    },
+    "dev/update_016000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/coco_summary.txt",
+      "sha256": "cb83032251f4d902b648a0946a670c576a65f43d6c27da8d2d892fbb7c330750",
+      "bytes": 1205
+    },
+    "dev/update_016000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.json",
+      "sha256": "4855afd1808c2c915aa1707783e82c5c2e4de778884e15d8c2f0e14a3d7ae309",
+      "bytes": 2264
+    },
+    "dev/update_016000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.sha256",
+      "sha256": "9f51a0b2fcc3a5f884d2cc845f3d2ea8bb618257837a1eb46979edf701a7c794",
+      "bytes": 65
+    },
+    "dev/update_018000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/coco_summary.txt",
+      "sha256": "f4d63feb0fdd1703160bc4712de71da340007794d069588fe8aafff535b5cdc6",
+      "bytes": 1205
+    },
+    "dev/update_018000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.json",
+      "sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+      "bytes": 2264
+    },
+    "dev/update_018000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.sha256",
+      "sha256": "1223797e5e588a175c279d3bdf5b9370ec4d671e9e379564b237f66960d02879",
+      "bytes": 65
+    },
+    "dev/update_020000/coco_summary.txt": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/coco_summary.txt",
+      "sha256": "86eaf2689c1f18c43d9e146cbd28bee8680f06e0302b4bf0a12e45dca68ec467",
+      "bytes": 1205
+    },
+    "dev/update_020000/evaluation_report.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.json",
+      "sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1",
+      "bytes": 2271
+    },
+    "dev/update_020000/evaluation_report.sha256": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.sha256",
+      "sha256": "1932b160ad7a7bc52028c9eb2fc812187be8ddca06297f7879d7eb9591c8c85e",
+      "bytes": 65
+    },
+    "coordination.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-s0-recovery20000-20261115-r01.json",
+      "sha256": "fb576062c4709609ed7141bdd032f4af1b964158c52218f857a912f3f76a83d8",
+      "bytes": 991
+    }
+  },
+  "evaluation": [
+    {
+      "update": 6000,
+      "metrics": {
+        "AP": 52.508257461701746,
+        "AP50": 69.31394712493218,
+        "AP75": 55.09814499825547,
+        "AP_small": 8.830061941998226,
+        "AP_medium": 34.53160231872024,
+        "AP_large": 59.605071724533985,
+        "per_category_AP": {
+          "1": 59.676334623225415,
+          "2": 70.39772316168096,
+          "3": 46.80034726495926,
+          "4": 54.10776796309156,
+          "5": 76.40016096729295,
+          "6": 45.56146150856724,
+          "7": 41.62971239261298,
+          "8": 25.492551812183567
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.json",
+        "sha256": "4507912b7bf49beb32f225839bc7e8f65b9599253510cb42df399dacc079cc94",
+        "bytes": 2266
+      }
+    },
+    {
+      "update": 8000,
+      "metrics": {
+        "AP": 56.58071038291222,
+        "AP50": 73.449058415557,
+        "AP75": 60.145302909119536,
+        "AP_small": 8.107303973589508,
+        "AP_medium": 28.447979942360835,
+        "AP_large": 64.53129694455355,
+        "per_category_AP": {
+          "1": 63.86919794275045,
+          "2": 78.66496516358397,
+          "3": 59.76737137313647,
+          "4": 53.36319053640699,
+          "5": 79.02437508756542,
+          "6": 42.48315291995892,
+          "7": 46.31077568187234,
+          "8": 29.162654358023204
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.json",
+        "sha256": "7c955e7a82984e85e0becaaf13b123873a5fba8117efc20f64ceb8cd99b1cc3b",
+        "bytes": 2262
+      }
+    },
+    {
+      "update": 10000,
+      "metrics": {
+        "AP": 55.9521776148567,
+        "AP50": 74.32017070219183,
+        "AP75": 59.892343011003035,
+        "AP_small": 8.5943296338101,
+        "AP_medium": 30.259856438629427,
+        "AP_large": 63.13583861308779,
+        "per_category_AP": {
+          "1": 59.65126926017824,
+          "2": 72.78179365938084,
+          "3": 66.01741603343652,
+          "4": 56.51148573559004,
+          "5": 76.18306574734927,
+          "6": 45.47928202178491,
+          "7": 41.38858335468167,
+          "8": 29.6045251064521
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.json",
+        "sha256": "d4b9c8dfbfcfab70c4869d16f0c5d1f9d8c2a3df6576b7537c2964e01086dd46",
+        "bytes": 2259
+      }
+    },
+    {
+      "update": 12000,
+      "metrics": {
+        "AP": 57.018114346252524,
+        "AP50": 73.56425409364525,
+        "AP75": 60.938452067948454,
+        "AP_small": 7.269056446913112,
+        "AP_medium": 37.325303180521686,
+        "AP_large": 64.9782570843284,
+        "per_category_AP": {
+          "1": 62.44069059435727,
+          "2": 78.27757100230039,
+          "3": 63.164672270841415,
+          "4": 57.24141763620134,
+          "5": 78.79090331335664,
+          "6": 44.04745267813519,
+          "7": 41.40915453545554,
+          "8": 30.773052739372392
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.json",
+        "sha256": "a6ba61846ac8aaf9ffd6a60d7883482a6f794d1d891b9a84117aa34d9416f1f1",
+        "bytes": 2266
+      }
+    },
+    {
+      "update": 14000,
+      "metrics": {
+        "AP": 63.053690736509,
+        "AP50": 78.99097561971251,
+        "AP75": 67.51207152816441,
+        "AP_small": 10.171980297603074,
+        "AP_medium": 39.34985667366927,
+        "AP_large": 71.02301975463308,
+        "per_category_AP": {
+          "1": 68.91719142706677,
+          "2": 80.96951032672231,
+          "3": 67.68875828837953,
+          "4": 67.5656467324216,
+          "5": 83.42351391899187,
+          "6": 51.77682368564837,
+          "7": 47.60555959582183,
+          "8": 36.48252191701953
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.json",
+        "sha256": "f7c0510b3912d2702cb44c94bb6107877986419ef767868a28fb90d4dbda67e3",
+        "bytes": 2260
+      }
+    },
+    {
+      "update": 16000,
+      "metrics": {
+        "AP": 63.366813678680025,
+        "AP50": 79.42385104942478,
+        "AP75": 68.16308623113683,
+        "AP_small": 10.766518446722767,
+        "AP_medium": 39.85840014500568,
+        "AP_large": 71.57899107640738,
+        "per_category_AP": {
+          "1": 70.51644270303696,
+          "2": 81.80838741528859,
+          "3": 66.17479001264655,
+          "4": 70.59287087808264,
+          "5": 83.27896173483461,
+          "6": 50.293410215497694,
+          "7": 48.0665732362365,
+          "8": 36.20307323381658
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.json",
+        "sha256": "4855afd1808c2c915aa1707783e82c5c2e4de778884e15d8c2f0e14a3d7ae309",
+        "bytes": 2264
+      }
+    },
+    {
+      "update": 18000,
+      "metrics": {
+        "AP": 63.57916031199592,
+        "AP50": 79.29453664866396,
+        "AP75": 68.45630202471166,
+        "AP_small": 10.738919371879978,
+        "AP_medium": 39.88753963917865,
+        "AP_large": 71.71159177543774,
+        "per_category_AP": {
+          "1": 70.84585757862524,
+          "2": 81.63687923283935,
+          "3": 67.10741478829085,
+          "4": 69.68050272088944,
+          "5": 83.29690337662808,
+          "6": 50.706067531285306,
+          "7": 47.88140279435385,
+          "8": 37.47825447305514
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.json",
+        "sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+        "bytes": 2264
+      }
+    },
+    {
+      "update": 20000,
+      "metrics": {
+        "AP": 63.55953052351325,
+        "AP50": 79.13527525999771,
+        "AP75": 68.31303596488857,
+        "AP_small": 10.664106341649108,
+        "AP_medium": 40.26857525084602,
+        "AP_large": 71.6933815458055,
+        "per_category_AP": {
+          "1": 70.51767827746644,
+          "2": 81.61059774869982,
+          "3": 66.10735223932294,
+          "4": 70.1096433237101,
+          "5": 83.49872260488135,
+          "6": 50.825628790900446,
+          "7": 48.147074169305256,
+          "8": 37.65954703381959
+        }
+      },
+      "evaluated_images": 250,
+      "report": {
+        "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.json",
+        "sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1",
+        "bytes": 2271
+      }
+    }
+  ],
+  "failure": null,
+  "wrapper_pid": 124906,
+  "coordination": {
+    "role": "segmentation",
+    "executed_by": "lcy",
+    "run_id": "segmentation-s0-recovery20000-20261115-r01",
+    "status": "completed",
+    "wrapper_pid": 124906,
+    "started_at": "2026-11-15T09:32:13.039325+00:00",
+    "budget_seconds": 10795,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "command": [
+      "/usr/bin/timeout",
+      "--signal=KILL",
+      "10790s",
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "scripts/run_s0_recovery.py",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+    ],
+    "git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+    "child_pid": 124912,
+    "exit_code": 0,
+    "elapsed_seconds": 1853.4878452308476,
+    "finished_at": "2026-11-15T10:03:06.530333+00:00"
+  },
+  "phases": [
+    {
+      "phase": "amp_cuda_regression",
+      "status": "completed",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "tests/test_segmentation_amp_recovery.py",
+        "AmpRecoveryTests.test_actual_scaler_skips_optimizer_and_replays_same_rng_sampler_buffers",
+        "-v"
+      ],
+      "started_at": "2026-11-15T09:32:13.079815+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-15T09:32:16.005925+00:00"
+    },
+    {
+      "phase": "train",
+      "status": "completed",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--resume",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+        "--resume-repair",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resume_repair_18000_to_20000.json",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train"
+      ],
+      "started_at": "2026-11-15T09:32:16.006307+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-15T09:46:51.166781+00:00"
+    },
+    {
+      "phase": "dev",
+      "status": "completed",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.evaluate",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+        "--training-package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/dev_ap_250_resume_20000.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev",
+        "--checkpoints",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_006000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_008000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_010000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_012000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_014000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_016000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/checkpoint_020000.pth"
+      ],
+      "started_at": "2026-11-15T09:46:51.167413+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-15T10:02:59.411201+00:00"
+    },
+    {
+      "phase": "overall_selection",
+      "status": "completed",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "scripts/select_s0_recovery.py",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+        "--plan",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+      ],
+      "started_at": "2026-11-15T10:02:59.412079+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-15T10:03:06.494160+00:00"
+    }
+  ],
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T09:32:13.039325+00:00"
+    },
+    {
+      "status": "completed",
+      "at": "2026-11-15T10:03:06.530333+00:00"
+    }
+  ],
+  "finished_at": "2026-11-15T10:03:06.530333+00:00",
+  "elapsed_seconds": 1853.4878452308476,
+  "metric_summary": {
+    "derived_from": "Existing metrics.jsonl only; no training or evaluator rerun",
+    "completed_rows": 2000,
+    "first_update": 18001,
+    "last_update": 20000,
+    "contiguous_updates": true,
+    "all_recorded_losses_and_gradient_norms_finite": true,
+    "skipped_optimizer_updates": 0,
+    "windows": {
+      "18001_18100": {
+        "rows": 100,
+        "mean_total_loss": 12.317456216271967,
+        "mean_loss_components": {
+          "loss_ce": 0.2781915944069624,
+          "loss_mask": 0.1354977205581963,
+          "loss_dice": 0.7021532908827066
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.1972163609135897,
+          "loss_mask": 1.2798820942547173,
+          "loss_dice": 6.724515155255794
+        },
+        "mean_seconds_per_update": 0.43549794256687163,
+        "learning_rates": [
+          [
+            1.0000000000000002e-07,
+            1.0000000000000002e-06
+          ]
+        ]
+      },
+      "19215_19314": {
+        "rows": 100,
+        "mean_total_loss": 10.489892110251821,
+        "mean_loss_components": {
+          "loss_ce": 0.19847791947424412,
+          "loss_mask": 0.1655819101072848,
+          "loss_dice": 0.5924663217365742
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 2.4307632042700424,
+          "loss_mask": 1.5700651369802654,
+          "loss_dice": 5.532537617683411
+        },
+        "mean_seconds_per_update": 0.40358575377613304,
+        "learning_rates": [
+          [
+            1.0000000000000002e-07,
+            1.0000000000000002e-06
+          ]
+        ]
+      },
+      "19315_19414": {
+        "rows": 100,
+        "mean_total_loss": 13.855122223936487,
+        "mean_loss_components": {
+          "loss_ce": 0.3883872390957549,
+          "loss_mask": 0.15306186953559517,
+          "loss_dice": 0.7747676484286785
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.8832948571885937,
+          "loss_mask": 1.482853017039597,
+          "loss_dice": 7.172757592648268
+        },
+        "mean_seconds_per_update": 0.41143784843385217,
+        "learning_rates": [
+          [
+            1.0000000000000002e-07,
+            1.0000000000000002e-06
+          ]
+        ]
+      },
+      "19901_20000": {
+        "rows": 100,
+        "mean_total_loss": 12.136822525067254,
+        "mean_loss_components": {
+          "loss_ce": 0.3074078953219578,
+          "loss_mask": 0.1602593073807657,
+          "loss_dice": 0.6721886159479618
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.259051838289015,
+          "loss_mask": 1.5006145691685377,
+          "loss_dice": 6.237300298959017
+        },
+        "mean_seconds_per_update": 0.406427846737206,
+        "learning_rates": [
+          [
+            1.0000000000000002e-07,
+            1.0000000000000002e-06
+          ]
+        ]
+      }
+    },
+    "loss_scales": [
+      256.0,
+      512.0
+    ],
+    "sampler_epochs": [
+      7
+    ],
+    "learning_rates_at_boundaries": {
+      "18001": [
+        1.0000000000000002e-07,
+        1.0000000000000002e-06
+      ],
+      "19314": [
+        1.0000000000000002e-07,
+        1.0000000000000002e-06
+      ],
+      "19315": [
+        1.0000000000000002e-07,
+        1.0000000000000002e-06
+      ],
+      "20000": [
+        1.0000000000000002e-07,
+        1.0000000000000002e-06
+      ]
+    },
+    "sample_count": 4000,
+    "unique_sample_images": 4000,
+    "augmented_empty_images": 2,
+    "grad_norm_before_clip_min": 9.787468910217285,
+    "grad_norm_before_clip_max": 3539.6630859375,
+    "grad_norm_after_clip_max": 0.010000001639127731,
+    "peak_cuda_allocated_bytes": 4721178624,
+    "peak_cuda_reserved_bytes": 5549064192,
+    "amp_overflow_events": 1,
+    "amp_replays": 1,
+    "overflow_updates": [
+      19315
+    ],
+    "finite_scope": "successful_updates_only"
+  },
+  "evidence_collection_script": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/collect_evidence.py",
+    "sha256": "f1ef691726a2edfee11b23de06c1e452c410f0b6e4235a16719b909eb4053c24",
+    "bytes": 10435
+  },
+  "evidence_collection_command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/collect_evidence.py"
+  ],
+  "server_only_artifacts": {
+    "train/metrics.jsonl": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/metrics.jsonl",
+      "sha256": "ddf8b132acfb82d22445f201a2859bc9623fd68d4a9e6925eac8283461ecf30a",
+      "bytes": 3268158
+    },
+    "train/checkpoint_020000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/checkpoint_020000.pth",
+      "bytes": 528468429,
+      "sha256": "a16a7d5cf6bd49858a657e99ace13fc6b66950fff6d85bd9cd8ba226ca320744",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "dev/update_006000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/predictions.json",
+      "bytes": 17168517,
+      "sha256": "ff77f83172bb89f720978899bf5f4d159a8dfb2cf4230656328ce61b2fab29fc",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_008000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/predictions.json",
+      "bytes": 25166428,
+      "sha256": "a177e78a5331c07666f577eba840007bea5c83a955acfa607256f7490eb44409",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_010000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/predictions.json",
+      "bytes": 18348230,
+      "sha256": "dd45b1103fb03e172f41428e2e44235984b0040606867bdc06b4c0af2af6889e",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_012000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/predictions.json",
+      "bytes": 17845850,
+      "sha256": "93b028295ec861eeb0054f28fc62180560aa3e81386ef0167df35e8d4c560a4c",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_014000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/predictions.json",
+      "bytes": 16928264,
+      "sha256": "010855bf2004a81c1cf7d5c7ddc2c808b726a59171adeab40a033c87c7b3ee51",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_016000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/predictions.json",
+      "bytes": 16192558,
+      "sha256": "5674f4ece4143d20a809c943b6605efdf46d98b16ba3970f91682c8fb7485742",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_018000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/predictions.json",
+      "bytes": 16198542,
+      "sha256": "83091978215cecbb95977bd2be68f105df6ec64d001e614a4a5fdc8157e42d20",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    },
+    "dev/update_020000/predictions.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/predictions.json",
+      "bytes": 16295520,
+      "sha256": "5bed6eaf5266bd2c8678d9c22dc842a676e96382ca77eac8f4afd0e8a00a243a",
+      "hash_source": "Existing evaluation report; strict selection verifies this hash"
+    }
+  },
+  "selection": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "completed_updates": 18000,
+    "dev_mask_AP": 63.57916031199592,
+    "compared_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000
+    ]
+  },
+  "actual_training_updates": 2000,
+  "amp_overflow_events": [
+    {
+      "attempted_update": 19315,
+      "completed_updates": 19314,
+      "attempt": 1,
+      "loss_scale": 512.0,
+      "nonfinite_gradient_parameters": [
+        "backbone.res2.0.conv1.weight"
+      ],
+      "loss_components": {
+        "loss_ce": 0.18362540006637573,
+        "loss_mask": 1.1709285974502563,
+        "loss_dice": 0.6322518587112427,
+        "loss_ce_0": 1.290414810180664,
+        "loss_mask_0": 1.743777871131897,
+        "loss_dice_0": 0.9475991129875183,
+        "loss_ce_1": 0.4424333870410919,
+        "loss_mask_1": 1.0353670120239258,
+        "loss_dice_1": 0.6632989645004272,
+        "loss_ce_2": 0.3318157196044922,
+        "loss_mask_2": 1.100480318069458,
+        "loss_dice_2": 0.6761055588722229,
+        "loss_ce_3": 0.30208221077919006,
+        "loss_mask_3": 1.1973353624343872,
+        "loss_dice_3": 0.5810459852218628,
+        "loss_ce_4": 0.22498437762260437,
+        "loss_mask_4": 1.1216627359390259,
+        "loss_dice_4": 0.6293035745620728,
+        "loss_ce_5": 0.21590207517147064,
+        "loss_mask_5": 1.1115429401397705,
+        "loss_dice_5": 0.5974340438842773,
+        "loss_ce_6": 0.24268168210983276,
+        "loss_mask_6": 1.1581025123596191,
+        "loss_dice_6": 0.6472897529602051,
+        "loss_ce_7": 0.20684555172920227,
+        "loss_mask_7": 1.18226957321167,
+        "loss_dice_7": 0.614740788936615,
+        "loss_ce_8": 0.1900063306093216,
+        "loss_mask_8": 1.09377920627594,
+        "loss_dice_8": 0.5878043174743652
+      },
+      "image_ids": [
+        27781,
+        30281
+      ],
+      "instance_counts": [
+        1,
+        3
+      ],
+      "overflow_events": 1,
+      "action": "replay_same_effective_batch",
+      "loss_scale_after": 256.0,
+      "optimizer_step_skipped": true,
+      "scheduler_advanced": false,
+      "sampler_rng_buffers_restored": true,
+      "peak_cuda_allocated_bytes": 4697745920
+    }
+  ],
+  "gpu_regression_tests": 1
+}

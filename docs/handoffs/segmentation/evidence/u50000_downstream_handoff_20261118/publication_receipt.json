@@ -1,0 +1,52 @@
+{
+  "published_at_utc": "2026-11-17T17:34:09.694868+00:00",
+  "status": "published_and_readback_verified",
+  "release_id": "u50000-dev250-20261118-r01",
+  "candidate_set_id": "u50000-dev250-20261118-r01-trial-0.3",
+  "files": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json",
+      "sha256": "ba714dd9ccd8057ebc3ba36d2d8bdc9759f413f9f3c2350668807c1e4988177a",
+      "readback_matched": true
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/HANDOFF_50K_DEV250_20261118.md",
+      "sha256": "92805287d90aa43e388c0bb2c64241bd3a5336a27b905b22dc9364a0109e8e63",
+      "readback_matched": true
+    }
+  ],
+  "referenced_metadata_checks": {
+    "candidate_manifest": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selected_candidates/candidates_predicted.json",
+      "sha256": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+      "matched": true
+    },
+    "queries": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/language_dev_inputs/queries_accepted.jsonl",
+      "sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+      "matched": true
+    },
+    "selection": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/selection/selection.json",
+      "sha256": "d853cecbcf3856bb287f6175fdd3b1c83179668fe0cc019999e87b32be67b6c4",
+      "matched": true
+    },
+    "delivery_manifest": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/u50000-dev250-20261118-r01/delivery_manifest.json",
+      "sha256": "4f211b675535ba3b40dd630e2a82ddecc1f5993a5170021917913408e5ba2dc0",
+      "matched": true
+    }
+  },
+  "existing_payload_paths_present": true,
+  "reused_checks": "Existing mask/image geometry, query identity, checkpoint and consumer verification; not rerun.",
+  "new_gpu_model_runs": 0,
+  "new_training": 0,
+  "new_smoke": 0,
+  "downstream_runs": 0,
+  "teammate_checkout_changes": 0,
+  "notes": [
+    "Only new handoff metadata published; candidate, selection and old packages unmodified.",
+    "Server Markdown uses absolute GitHub links; repository Markdown uses relative links.",
+    "Consumer execution/acknowledgement pending; not claimed."
+  ]
+}

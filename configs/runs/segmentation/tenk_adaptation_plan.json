@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "owner": "segmentation",
+  "status": "prepared_not_started",
+  "training_authorized": false,
+  "execution_enabled": false,
+  "scope": "10k model-only performance optimization; not a causal 5k/10k ablation",
+  "training_config": "configs/runs/segmentation/tenk_adaptation_train.json",
+  "model_only_source": "configs/runs/segmentation/tenk_model_only_source.json",
+  "input_validation_bundle": "configs/runs/segmentation/expansion_input_train10000.json",
+  "evaluation_config": "configs/runs/segmentation/expansion_control_dev250.json",
+  "visibility_decision": "docs/handoffs/segmentation/evidence/tenk_preparation_20261117/visibility_decision.json",
+  "baseline_report": "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json",
+  "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1",
+  "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+  "python": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+  "upstream_source": "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+  "future_output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01",
+  "evaluation_epochs": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "checkpoint_policy": "save each equivalent epoch, evaluate every2 immediately before the next training segment; successful updates only",
+  "selection": {
+    "primary": "maximum complete-dev mask AP across new checkpoints and cached C5k20k",
+    "tie": "keep cached baseline on a cross-run tie; earlier update within the new run",
+    "protocol": "fixed dev250/1008GT, upstream_instance, 800/1333, top100, FP32, no score threshold",
+    "secondary": [
+      "AP_small",
+      "AP75",
+      "same-class small-target matches at IoU0.5/0.75",
+      "bag/shoes/accessory AP",
+      "cached boundary diagnostics"
+    ],
+    "baseline_comparison": "separate same-evaluation cross-run comparison; never bypass strict within-run training identity checks"
+  },
+  "stopping": {
+    "max_equivalent_epochs": 10,
+    "minimum_epochs_before_plateau_stop": 4,
+    "consecutive_dev_evaluations_without_new_best": 3,
+    "improvement_definition": "complete-dev AP strictly exceeds incumbent baseline/new best",
+    "on_failure": "stop; retain last complete checkpoint and failed-run logs",
+    "automatic_restart": false,
+    "automatic_extension": false
+  },
+  "budget_proposal": {
+    "authorized": false,
+    "total_hard_seconds": 28800,
+    "per_segment_hard_seconds": 7200,
+    "training_internal_seconds": 7100,
+    "evaluation_internal_seconds": 600,
+    "historical_train_only_estimate_hours": 5.834,
+    "note": "8h total and2h per2epoch train+dev segment are proposed ceilings, not permission or a throughput guarantee. Shared-lock outer deadline must include load, checkpoint, evaluation and selection; segment timers cannot reset the total."
+  },
+  "execution_preparation_boundary": "Bounded supervisor, per-segment full dev, plateau stop and cached-baseline selection implemented. Preparation only: no training authorization; future launch requires explicit budget authorization and a clean pinned server checkout. No bare phase commands.",
+  "reuse": [
+    "accepted10k metadata/old5k retention/isolation receipts",
+    "unchanged dev receipt",
+    "COCO/class-head/AMP/recovery engineering evidence",
+    "all C/A/B/1024 cached results"
+  ],
+  "excluded": [
+    "new training",
+    "segmentation inference",
+    "language/ranking tasks",
+    "test access",
+    "repeat smoke",
+    "new data construction"
+  ],
+  "input_sha256": {
+    "configs/runs/segmentation/tenk_adaptation_train.json": "917457bf521376f9d12dc771fe6d801b5d23a3ad5058c2b2409bafe77311edec",
+    "configs/runs/segmentation/tenk_model_only_source.json": "9a787ae2b1824ab08dfc68d78d0012f3f94a65bb8e4bc1fad28a0cc95533388a",
+    "configs/runs/segmentation/expansion_input_train10000.json": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+    "configs/runs/segmentation/expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+    "docs/handoffs/segmentation/evidence/tenk_preparation_20261117/visibility_decision.json": "39cd96962665971ebdcdd3ff25ba39c4a9ca84e44a58ca22b4101631d79c6e28",
+    "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5"
+  },
+  "execution_checkout": "/root/autodl-tmp/fashion-grounding/workspaces/segmentation",
+  "execution_entry": "scripts/run_tenk_adaptation.py",
+  "runtime_ready": true,
+  "runtime_validation": "Implemented and CPU-tested segmented execution; not deployed or GPU-executed. All launch/budget/trainer flags remain false."
+}

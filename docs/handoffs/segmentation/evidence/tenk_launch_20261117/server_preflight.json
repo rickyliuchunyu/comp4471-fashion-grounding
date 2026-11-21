@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-11-17T09:21:18.156557+00:00",
+  "data_free_bytes": 161675116544,
+  "system_free_bytes": 28920741888,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute": "",
+  "lock_free": true,
+  "active_coordination": [],
+  "checkout_head": "1ec972363271b5ba70be565de71d1b638dc7477c",
+  "checkout_branch": "segmentation/pilot-adapter-v1",
+  "checkout_status": ""
+}

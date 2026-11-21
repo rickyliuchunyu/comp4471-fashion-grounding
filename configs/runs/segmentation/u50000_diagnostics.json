@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "purpose": "offline_50k_residual_segmentation_diagnosis",
+  "budget_seconds": 280,
+  "annotations": "shared/processed/fp_dev250_v1/annotations_coco.json",
+  "ap_predictions": "runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/predictions.json",
+  "ap_report": "runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/evaluation_report.json",
+  "cache": "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/cache",
+  "selected_package": "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json",
+  "prior_coverage": "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/selection/coverage-0.3.json",
+  "input_sha256": {
+    "shared/processed/fp_dev250_v1/annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/predictions.json": "ff5300fcfa3560ae0ce334d26de81948668c2f0a26679b26c11bfceb51c9e510",
+    "runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/evaluation_report.json": "b936fc917a2ebafda3f31a0ca9a10ff9eca5654e789b0718573b09b2c916af88",
+    "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/cache/cache.json": "52201ed5c23a2619b9e43112bce88508543d135e591b90d89a77703f1c011f17",
+    "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/trial-0.3/candidates_predicted.json": "c13af7db0fa5d07a0f62a12a04a138703e7b5a009b4e5a1e3759c3b7a3e05eb4",
+    "runs/segmentation/segmentation-u50000-dev-candidates-20261118-r01/selection/coverage-0.3.json": "a9030ba8e516ce2d68169ec202affd49f9502ebbd7dd326187927666581047e5"
+  }
+}

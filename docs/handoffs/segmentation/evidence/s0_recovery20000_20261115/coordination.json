@@ -1,0 +1,26 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-s0-recovery20000-20261115-r01",
+  "status": "completed",
+  "wrapper_pid": 124906,
+  "started_at": "2026-11-15T09:32:13.039325+00:00",
+  "budget_seconds": 10795,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+  "command": [
+    "/usr/bin/timeout",
+    "--signal=KILL",
+    "10790s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_s0_recovery.py",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_recovery_20000_stage_plan.json"
+  ],
+  "git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "child_pid": 124912,
+  "exit_code": 0,
+  "elapsed_seconds": 1853.4878452308476,
+  "finished_at": "2026-11-15T10:03:06.530333+00:00"
+}

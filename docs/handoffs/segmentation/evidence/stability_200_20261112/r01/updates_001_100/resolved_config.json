@@ -1,0 +1,31 @@
+{
+  "purpose": "pilot_200_update_stability",
+  "seed": 42,
+  "image_manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+  "annotation_sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883",
+  "max_updates": 200,
+  "learning_rate": 0.0001,
+  "backbone_lr_multiplier": 0.1,
+  "weight_decay": 0.05,
+  "weight_decay_norm": 0.0,
+  "weight_decay_embed": 0.0,
+  "microbatch_images": 2,
+  "accumulation_steps": 1,
+  "effective_batch_images": 2,
+  "warmup_updates": 500,
+  "warmup_start_factor": 0.001,
+  "lr_milestones": [
+    12000,
+    16000
+  ],
+  "lr_decay": 0.1,
+  "amp": true,
+  "amp_initial_scale": 128.0,
+  "gradient_clip_norm": 0.01,
+  "image_size": 768,
+  "min_scale": 0.1,
+  "max_scale": 2.0,
+  "random_flip": "horizontal",
+  "checkpoint_interval": 100,
+  "budget_seconds": 900
+}

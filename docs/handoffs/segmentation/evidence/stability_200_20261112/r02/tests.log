@@ -1,0 +1,43 @@
+test_bad_rle_empty_mask_and_outside_polygon_rejected (test_data_pilot.DataBoundaryTests) ... ok
+test_column_major_uncompressed_rle (test_data_pilot.DataBoundaryTests) ... ok
+test_crowd_preserved_but_not_a_query_target (test_data_pilot.DataBoundaryTests) ... ok
+test_disconnected_instance_stays_one_instance (test_data_pilot.DataBoundaryTests) ... ok
+test_drafts_rejected_by_formal_evaluation_gate (test_data_pilot.DataBoundaryTests) ... ok
+test_hand_computed_geometry_and_zero_id (test_data_pilot.DataBoundaryTests) ... ok
+test_image_dimensions_not_silently_corrected (test_data_pilot.DataBoundaryTests) ... ok
+test_jumpsuit_excludes_whole_image (test_data_pilot.DataBoundaryTests) ... ok
+test_part_annotation_only_is_removed (test_data_pilot.DataBoundaryTests) ... ok
+test_paths_cannot_escape (test_data_pilot.DataBoundaryTests) ... ok
+test_query_wrong_image_split_duplicate_and_self_review (test_data_pilot.DataBoundaryTests) ... ok
+test_agreement_never_automatically_accepted (test_review_audit.ReviewTests) ... ok
+test_cross_image_and_crowd_targets (test_review_audit.ReviewTests) ... ok
+test_disagreement_is_preserved (test_review_audit.ReviewTests) ... ok
+test_disclosed_answer_is_not_blind_agreement (test_review_audit.ReviewTests) ... ok
+test_missing_review_is_pending (test_review_audit.ReviewTests) ... ok
+test_rejection_notes_and_malformed_decisions (test_review_audit.ReviewTests) ... ok
+test_translation_and_manifest_mismatch (test_review_audit.ReviewTests) ... ok
+test_unknown_and_duplicate_ids (test_review_audit.ReviewTests) ... ok
+test_missing_extra_wrong_shape_rejected (test_segmentation.AdaptationTests) ... ok
+test_only_classifier_skipped (test_segmentation.AdaptationTests) ... ok
+test_foreground_score_empty_background_and_ties (test_segmentation.DecoderTests) ... ok
+test_invalid_outputs_fail_not_empty (test_segmentation.DecoderTests) ... ok
+test_no_candidates_and_zero_logit (test_segmentation.DecoderTests) ... ok
+test_one_foreground_class_even_when_no_object_wins (test_segmentation.DecoderTests) ... ok
+test_package_roundtrip_and_error_semantics (test_segmentation.DecoderTests) ... ok
+test_rle_column_major_and_edge_bbox (test_segmentation.DecoderTests) ... ok
+test_ambiguous_query_wrong_loss_weight_and_dtype_rejected (test_segmentation_checkpoint.ActualFormatAdaptationTests) ... ok
+test_legacy_query_loaded_and_loss_weight_preserved (test_segmentation_checkpoint.ActualFormatAdaptationTests) ... ok
+test_forbidden_global_and_nonfinite_arrays (test_segmentation_checkpoint.CheckpointReaderTests) ... ok
+test_numeric_model_and_checksum_before_deserialization (test_segmentation_checkpoint.CheckpointReaderTests) ... ok
+test_identity_geometry_empty_image_and_rng_replay (test_segmentation_training.LSJTests) ... ok
+test_optimizer_groups_follow_upstream_policy (test_segmentation_training.TrainingStateTests) ... ok
+test_profile_bounds_and_unpinned_formal_data (test_segmentation_training.TrainingStateTests) ... ok
+test_resume_matches_uninterrupted_updates_and_rng_across_epoch (test_segmentation_training.TrainingStateTests) ... /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+ok
+test_warmup_and_milestones_at_update_boundaries (test_segmentation_training.TrainingStateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.874s
+
+OK

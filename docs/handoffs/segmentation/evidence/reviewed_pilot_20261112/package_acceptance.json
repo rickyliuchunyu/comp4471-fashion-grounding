@@ -1,0 +1,176 @@
+{
+  "status": "passed",
+  "source_package": "fp_grounded9_reviewed_v1",
+  "git_commit": "cb1e77f3723c7c26daf0ab1806e3a1d30f1fea3e",
+  "config_sha256": "c96b36b99a007b08108b54a86f2dc43096103dd413a7ab27322aaf297cd148dc",
+  "checksum_manifest_sha256": "55f72a4d673f0ce232de77e5b850009166443038643bd435f862a669aca4f647",
+  "pinned_hashes": {
+    "image_manifest.json": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+    "annotations_coco.json": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+    "candidates_gt.json": "44969ca41c595d0a0c4ad32321ddceef677d0754b16d09eda6693e10b89be30f",
+    "queries_accepted.jsonl": "dda04845dfa71962a86bc94fccc0ff6d580dc27561a3001a777e9e4c94ae111a"
+  },
+  "published_file_hashes_verified": 84,
+  "schema": {
+    "status": "passed",
+    "images": 9,
+    "instances": 59,
+    "candidates": 59,
+    "queries": {
+      "queries_draft.jsonl": 2,
+      "queries_accepted.jsonl": 34
+    }
+  },
+  "loader": {
+    "images": 9,
+    "instances": 59,
+    "project_category_counts": {
+      "1": 5,
+      "2": 5,
+      "3": 2,
+      "4": 10,
+      "5": 2,
+      "6": 14,
+      "7": 9,
+      "8": 12
+    },
+    "crowd_skipped": 0,
+    "training_id_mapping": {
+      "1": 0,
+      "2": 1,
+      "3": 2,
+      "4": 3,
+      "5": 4,
+      "6": 5,
+      "7": 6,
+      "8": 7
+    },
+    "image_manifest_sha256": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+    "annotation_sha256": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+    "scope": "real train-only segmentation input; no query acceptance or performance evaluation"
+  },
+  "mapped_images": 9,
+  "mapped_instances": 59,
+  "image_checks": [
+    {
+      "image_id": 4360,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 8,
+      "mapped_instances": 8
+    },
+    {
+      "image_id": 9080,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 6,
+      "mapped_instances": 6
+    },
+    {
+      "image_id": 11778,
+      "original_hw": [
+        1024,
+        683
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 7,
+      "mapped_instances": 7
+    },
+    {
+      "image_id": 13898,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 7,
+      "mapped_instances": 7
+    },
+    {
+      "image_id": 15909,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 6,
+      "mapped_instances": 6
+    },
+    {
+      "image_id": 21398,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 6,
+      "mapped_instances": 6
+    },
+    {
+      "image_id": 29705,
+      "original_hw": [
+        1024,
+        682
+      ],
+      "mapped_hw": [
+        384,
+        256
+      ],
+      "original_instances": 7,
+      "mapped_instances": 7
+    },
+    {
+      "image_id": 42973,
+      "original_hw": [
+        914,
+        1024
+      ],
+      "mapped_hw": [
+        256,
+        287
+      ],
+      "original_instances": 6,
+      "mapped_instances": 6
+    },
+    {
+      "image_id": 50126,
+      "original_hw": [
+        682,
+        1024
+      ],
+      "mapped_hw": [
+        256,
+        384
+      ],
+      "original_instances": 6,
+      "mapped_instances": 6
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "gpu_used": false,
+  "scope": "Segmentation data consumption; human annotation quality and dev freeze are not adjudicated"
+}

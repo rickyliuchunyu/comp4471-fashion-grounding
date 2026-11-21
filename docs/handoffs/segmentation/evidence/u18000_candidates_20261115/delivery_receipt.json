@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "shared_directory": "/root/autodl-tmp/fashion-grounding/shared/candidates/u18000-dev250-20261115-r01",
+  "delivery_manifest_sha256": "26727ca67a04de747aba4233cb16270af9f596391473234db8d4d40d55f1a696",
+  "cache_sha256": "a1fcda4a5e7af7f6bf591ec9a6078b205135f66f55f7354d95dafac0b1931772",
+  "total_stage_seconds": 370.6989859305322,
+  "gpu_lock_seconds": 167.66420762240887,
+  "offline_seconds": 202.73864021897316,
+  "hard_limit_seconds": 1800,
+  "cleanup_grace_seconds": 5,
+  "model_forward_calls": 250,
+  "checkpoint_loads": 1,
+  "optimizer_updates": 0,
+  "old_smoke_reruns": 0,
+  "automatic_retries": 0,
+  "consumer_image_reads": 750,
+  "consumer_crops": 3574,
+  "selected_threshold": null,
+  "teammate_signoff": "pending",
+  "postflight": {
+    "checked_at": "2026-11-15T10:59:51.735895+00:00",
+    "disk": {
+      "/": {
+        "total": 32212254720,
+        "used": 3281604608,
+        "free": 28930650112
+      },
+      "/root/autodl-tmp/fashion-grounding": {
+        "total": 214748364800,
+        "used": 45266391040,
+        "free": 169481973760
+      }
+    },
+    "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+    "gpu_processes": "",
+    "active_coordination": []
+  }
+}

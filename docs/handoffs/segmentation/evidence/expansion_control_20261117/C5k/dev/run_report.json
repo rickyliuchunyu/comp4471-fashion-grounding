@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "reports": [
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_010000/evaluation_report.json",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_020000/evaluation_report.json"
+  ],
+  "optimizer_updates": 0,
+  "purpose": "dev_checkpoint_selection",
+  "elapsed_seconds": 264.2243353314698
+}

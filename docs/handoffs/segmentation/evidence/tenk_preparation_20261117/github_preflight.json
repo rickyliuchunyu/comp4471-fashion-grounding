@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-11-17T08:45:09.383Z",
+  "source": "git fetch origin plus GitHub connector PR metadata, active discussions and remote handoffs",
+  "pull_requests": [
+    {
+      "number": 1,
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "title": "Add data_eval pilot validation and human review auditing",
+      "head": "data-eval/remote-pilot-review",
+      "head_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-12T09:52:48Z",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1"
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "title": "Segmentation: C5k results and bounded full-data plan",
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "30baf267be48df93e631edd676f6d0d29982d46d",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T07:48:10Z",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2"
+    },
+    {
+      "number": 3,
+      "state": "closed",
+      "merged": false,
+      "draft": true,
+      "title": "Add visually grounded bilingual drafts and blind human review",
+      "head": "data-eval/grounded-query-pilot",
+      "head_sha": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "base_sha": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "updated_at": "2026-11-12T09:52:53Z",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3"
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "title": "data_eval: reviewed pilot, evaluation core and large dataset drafts",
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "b24515bcda576fe97b354ca9b48e647079831df3",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T07:28:25Z",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4"
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "title": "Grounding: SigLIP baselines, data acceptance and bounded M1 weak-label trial",
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "updated_at": "2026-11-12T12:11:25Z",
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5"
+    }
+  ],
+  "active_discussions": [
+    {
+      "number": 2,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "comments": []
+    }
+  ],
+  "branches": {
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/pilot-adapter-v1": "30baf267be48df93e631edd676f6d0d29982d46d",
+    "segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "data-eval/p3-baseline-evaluation": "b24515bcda576fe97b354ca9b48e647079831df3",
+    "grounding/siglip-baseline-interfaces": "103dcc546714dd7c7866b4259d96a9825d8090ef"
+  },
+  "handoffs_read": [
+    "data-eval/p3-baseline-evaluation:docs/handoffs/data_eval/language_targeted_20261117.md",
+    "grounding/siglip-baseline-interfaces:docs/handoffs/grounding/accepted_baselines_and_weak_trial_20261112.md"
+  ],
+  "conclusion": "No new segmentation labels or interface change; 10k remains the accepted package. Latest user scope supersedes waiting for the full-data plan."
+}

@@ -1,0 +1,80 @@
+{
+  "branches": {
+    "data-eval/p3-baseline-evaluation": "a6dd946f4873523d8835b3915af2c60addbc40be",
+    "grounding/siglip-baseline-interfaces": "b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd",
+    "grounding/spatial-ranker-dev": "b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd",
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "segmentation/full-fashionpedia-100ep-prep": "8d45fc386d27788e8efda6ca3373f0538380bfd1",
+    "segmentation/full100-runtime": "0b8a0a88119d4e68f9386e11b88b94d968e0d8d2",
+    "segmentation/pilot-adapter-v1": "dd786c74622820ef59ce2f5edc771453c3f25e94"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "head": "dc24f2dcde9a967a28bfc825a10ca85bd50713df",
+      "base": "main",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/1",
+      "discussion": []
+    },
+    {
+      "number": 2,
+      "head": "dd786c74622820ef59ce2f5edc771453c3f25e94",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "discussion": [
+        {
+          "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2#issuecomment-6972670288",
+          "user": "rickyliuchunyu"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "head": "75bf2ef50f80bc939c35ba15afe6dc6efb15f3b1",
+      "base": "data-eval/remote-pilot-review",
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/3",
+      "discussion": []
+    },
+    {
+      "number": 4,
+      "head": "a6dd946f4873523d8835b3915af2c60addbc40be",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "discussion": []
+    },
+    {
+      "number": 5,
+      "head": "b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "discussion": []
+    }
+  ],
+  "wkq_handoff": "a6dd946f4873523d8835b3915af2c60addbc40be",
+  "wyz_handoff": "b5e372925dcd6f581fb1a0c8f65bd5dee5dde3cd",
+  "checked_on": "2026-11-18 Asia/Hong_Kong (before acceptance)",
+  "before_push_update": {
+    "changed_head": "data-eval/p3-baseline-evaluation",
+    "sha": "307e48e53137ee21f2dd7820fcfbaadcaca10243",
+    "pr": 4,
+    "state": "open",
+    "draft": true,
+    "handoff": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/blob/307e48e53137ee21f2dd7820fcfbaadcaca10243/docs/handoffs/data_eval/spatial_prior_dev_20261118.md",
+    "changed_scope": "spatial ranking evaluation on dev only; same segmentation release"
+  }
+}

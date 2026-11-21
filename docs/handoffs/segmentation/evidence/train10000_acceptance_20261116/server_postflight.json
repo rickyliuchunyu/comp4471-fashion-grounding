@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-16T11:43:28.072738+00:00",
+  "disk_free_bytes": {
+    "/": 28928532480,
+    "/root/autodl-tmp/fashion-grounding": 164849598464
+  },
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "gpu_processes": "",
+  "active_coordination": [],
+  "own_head": "cd8e8898fa646393dff2b87553d0cb123119e038",
+  "own_status": ""
+}

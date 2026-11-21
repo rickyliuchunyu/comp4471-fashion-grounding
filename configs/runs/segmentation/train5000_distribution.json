@@ -1,0 +1,18 @@
+{
+  "run_id": "segmentation-train5000-distribution-20261115-r01",
+  "purpose": "train_annotation_distribution_and_expansion_requirements_only",
+  "budget_seconds": 60,
+  "input_sha256": {
+    "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+    "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+  },
+  "expected_images": 5000,
+  "expected_instances": 17775,
+  "expected_project_counts": {"1":2740,"2":1641,"3":562,"4":1340,"5":2114,"6":5040,"7":811,"8":3527},
+  "reused_evidence": [
+    "docs/handoffs/segmentation/large_input_acceptance_20261112.md",
+    "docs/handoffs/segmentation/segmentation_train_dev_freeze_20261112.json",
+    "docs/handoffs/segmentation/small_object_analysis_18000_20000_20261115.md"
+  ]
+}

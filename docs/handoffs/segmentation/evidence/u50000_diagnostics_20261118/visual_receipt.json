@@ -1,0 +1,147 @@
+{
+  "status": "completed",
+  "source_sha256": "d6aa5dcba34676f2f99e2c315634f5d9d88a9507cc905e089a0f5b5698a47e54",
+  "artifacts": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/failure_cases_1.png",
+      "sha256": "9a37170582724ee3250946178f2baa599e1ed4d5e133dc0013f9044136e45199"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/u50000-residual-diagnostics-20261118-r01/failure_cases_2.png",
+      "sha256": "4035857c4d20e1450f1131ad996e6d33205c19f7f44026fa79f820d486f6b8a1"
+    }
+  ],
+  "cases": [
+    {
+      "annotation_id": 1000003119,
+      "image_id": 1000018539,
+      "kind": "missing",
+      "crop_box": [
+        79,
+        892,
+        289,
+        1024
+      ],
+      "candidate_id": "image-1000018539-query-045",
+      "score": 0.005705402232706547,
+      "category_id": 6,
+      "mask_iou": 0.16356513222331048,
+      "artifact": "failure_cases_1.png"
+    },
+    {
+      "annotation_id": 1000002490,
+      "image_id": 1000018023,
+      "kind": "boundary",
+      "crop_box": [
+        214,
+        863,
+        316,
+        1024
+      ],
+      "candidate_id": "image-1000018023-query-015",
+      "score": 0.9769271016120911,
+      "category_id": 6,
+      "mask_iou": 0.5043196544276458,
+      "artifact": "failure_cases_1.png"
+    },
+    {
+      "annotation_id": 1000000499,
+      "image_id": 1000015662,
+      "kind": "missing",
+      "crop_box": [
+        168,
+        51,
+        290,
+        675
+      ],
+      "candidate_id": "image-1000015662-query-045",
+      "score": 0.0020678516011685133,
+      "category_id": 7,
+      "mask_iou": 0.6745005875440658,
+      "artifact": "failure_cases_1.png"
+    },
+    {
+      "annotation_id": 1000007449,
+      "image_id": 1000011382,
+      "kind": "boundary",
+      "crop_box": [
+        257,
+        106,
+        561,
+        508
+      ],
+      "candidate_id": "image-1000011382-query-039",
+      "score": 0.48066750168800354,
+      "category_id": 7,
+      "mask_iou": 0.5456224602881419,
+      "artifact": "failure_cases_1.png"
+    },
+    {
+      "annotation_id": 1000003207,
+      "image_id": 1000018669,
+      "kind": "missing",
+      "crop_box": [
+        232,
+        288,
+        328,
+        504
+      ],
+      "candidate_id": "image-1000018669-query-091",
+      "score": 0.0010698068654164672,
+      "category_id": 8,
+      "mask_iou": 0.031161473087818695,
+      "artifact": "failure_cases_2.png"
+    },
+    {
+      "annotation_id": 1000005209,
+      "image_id": 1000018639,
+      "kind": "boundary",
+      "crop_box": [
+        291,
+        134,
+        441,
+        232
+      ],
+      "candidate_id": "image-1000018639-query-092",
+      "score": 0.9210118651390076,
+      "category_id": 8,
+      "mask_iou": 0.5077720207253886,
+      "artifact": "failure_cases_2.png"
+    },
+    {
+      "annotation_id": 1000002152,
+      "image_id": 1000017610,
+      "kind": "score_filtered",
+      "crop_box": [
+        313,
+        490,
+        409,
+        586
+      ],
+      "candidate_id": "image-1000017610-query-038",
+      "score": 0.0010399760212749243,
+      "category_id": 8,
+      "mask_iou": 0.8594104308390023,
+      "artifact": "failure_cases_2.png"
+    },
+    {
+      "annotation_id": 1000000601,
+      "image_id": 1000015744,
+      "kind": "wrong_class_only",
+      "crop_box": [
+        356,
+        736,
+        452,
+        832
+      ],
+      "candidate_id": "image-1000015744-query-078",
+      "score": 0.000594966346397996,
+      "category_id": 8,
+      "mask_iou": 0.6081081081081081,
+      "artifact": "failure_cases_2.png"
+    }
+  ],
+  "inference_calls": 0,
+  "source_masks_changed": false,
+  "selection": "Deterministic examples from all-GT statistics; no labels corrected or candidate payloads modified."
+}

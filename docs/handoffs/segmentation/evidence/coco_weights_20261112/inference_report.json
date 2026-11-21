@@ -1,0 +1,194 @@
+{
+  "purpose": "P1_COCO_loading_and_inference_NOT_training_or_evaluation",
+  "status": "completed",
+  "optimizer_updates": 0,
+  "annotations_read": false,
+  "queries_read": false,
+  "execution_device": "cuda:0",
+  "source_manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+  "images": [
+    {
+      "image_id": 1643,
+      "image_sha256": "34443615cdc2bd49bbdc4b694fb158f13589e1dcea4f0a66ff3690c4b3b75b6b",
+      "class_logits_shape": [
+        100,
+        9
+      ],
+      "mask_logits_original_shape": [
+        100,
+        1024,
+        682
+      ],
+      "resized_image_hw": [
+        384,
+        256
+      ],
+      "padded_image_hw": [
+        384,
+        256
+      ],
+      "all_logits_finite": true,
+      "candidate_count": 43,
+      "elapsed_seconds": 0.6575548574328423
+    },
+    {
+      "image_id": 3165,
+      "image_sha256": "3c544cb5bf9258f3b82d4279a8d799db91d2a7b0e8a07ff90a4b7329db771fb3",
+      "class_logits_shape": [
+        100,
+        9
+      ],
+      "mask_logits_original_shape": [
+        100,
+        1024,
+        683
+      ],
+      "resized_image_hw": [
+        384,
+        256
+      ],
+      "padded_image_hw": [
+        384,
+        256
+      ],
+      "all_logits_finite": true,
+      "candidate_count": 34,
+      "elapsed_seconds": 0.13480312004685402
+    },
+    {
+      "image_id": 11778,
+      "image_sha256": "1f09b31f2d01d07b1eacff4f0c3eebc04fd399a6acf4c5d95358450cbed59b2f",
+      "class_logits_shape": [
+        100,
+        9
+      ],
+      "mask_logits_original_shape": [
+        100,
+        1024,
+        683
+      ],
+      "resized_image_hw": [
+        384,
+        256
+      ],
+      "padded_image_hw": [
+        384,
+        256
+      ],
+      "all_logits_finite": true,
+      "candidate_count": 48,
+      "elapsed_seconds": 0.16698148101568222
+    },
+    {
+      "image_id": 13061,
+      "image_sha256": "f57159ea26c4ff64c55acdb46e5b9b5686dd449535818dbb1e7e57f020a53e51",
+      "class_logits_shape": [
+        100,
+        9
+      ],
+      "mask_logits_original_shape": [
+        100,
+        1024,
+        683
+      ],
+      "resized_image_hw": [
+        384,
+        256
+      ],
+      "padded_image_hw": [
+        384,
+        256
+      ],
+      "all_logits_finite": true,
+      "candidate_count": 10,
+      "elapsed_seconds": 0.09409556165337563
+    },
+    {
+      "image_id": 13898,
+      "image_sha256": "371dfb84e480e665f7fbd76833aa3437e05d8ff0bc0d811305b5d53688568b74",
+      "class_logits_shape": [
+        100,
+        9
+      ],
+      "mask_logits_original_shape": [
+        100,
+        1024,
+        682
+      ],
+      "resized_image_hw": [
+        384,
+        256
+      ],
+      "padded_image_hw": [
+        384,
+        256
+      ],
+      "all_logits_finite": true,
+      "candidate_count": 19,
+      "elapsed_seconds": 0.11250994354486465
+    }
+  ],
+  "integrity": {
+    "sha256": "c18e6551f9c0e951e7ee3a63eb5402b901612e4e141965d4719d13c69a97ec2a",
+    "md5": "3c8ec9998b5769ed00abd9c5e51fcefb",
+    "bytes": 176382166,
+    "author": "MaskFormer Model Zoo",
+    "tensor_count": 558,
+    "verified_before_deserialization": true
+  },
+  "adaptation": {
+    "skipped_classifier_keys": [
+      "sem_seg_head.predictor.class_embed.bias",
+      "sem_seg_head.predictor.class_embed.weight"
+    ],
+    "retained_loss_buffers": [
+      "criterion.empty_weight"
+    ],
+    "renamed_keys": {
+      "sem_seg_head.predictor.static_query.weight": "sem_seg_head.predictor.query_feat.weight"
+    },
+    "unexpected_keys": [],
+    "loaded_tensor_count": 555,
+    "exact_tensor_equality_verified": true,
+    "retained_tensors_unchanged": true,
+    "shapes": {
+      "criterion.empty_weight": {
+        "source": [
+          81
+        ],
+        "target": [
+          9
+        ]
+      },
+      "sem_seg_head.predictor.class_embed.bias": {
+        "source": [
+          81
+        ],
+        "target": [
+          9
+        ]
+      },
+      "sem_seg_head.predictor.class_embed.weight": {
+        "source": [
+          81,
+          256
+        ],
+        "target": [
+          9,
+          256
+        ]
+      }
+    },
+    "adapted_checkpoint_strict_restore_verified": true
+  },
+  "model_state_unchanged_after_inference": true,
+  "adapted_checkpoint_sha256": "4fc1c106e61dd8f72e09afa81af86ebcad2825ea0207d49996247c75a9e1d836",
+  "original_size_rle_roundtrips": 154,
+  "candidate_manifest_sha256": "03674be3642e0199cdd3661311f8664f323585cb647b340c344a9ce8d2bb964b",
+  "candidate_package_illustrative_only": true,
+  "performance_evaluated": false,
+  "elapsed_seconds": 6.905639510601759,
+  "peak_cuda_allocated_bytes": 1125975552,
+  "peak_cuda_reserved_bytes": 1891631104,
+  "git_commit": "c54b292ca119f33e8eb57113157151c3d27fd5f4"
+}

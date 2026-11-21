@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-17T04:39:14.590486+00:00",
+  "source_commit": "4d60fcdbfb12bc286a2409e567577f77bb72c225",
+  "git_status": "",
+  "disk_free_bytes": 164682031104,
+  "gpu": "NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "",
+  "shared_lock_free": true,
+  "active_records": [],
+  "planned_output_exists": false,
+  "planned_run_records_exist": {
+    "segmentation-expansion-5000-20261117-r01": false,
+    "segmentation-expansion-10000-20261117-r01": false
+  }
+}

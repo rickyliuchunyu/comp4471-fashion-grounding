@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-11-15T15:06:07.019314+00:00",
+  "gpu": {
+    "exit_code": 0,
+    "stdout": "0, NVIDIA GeForce RTX 3090, 0, 24576, 0",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "disk": {
+    "/": {
+      "total": 32212254720,
+      "used": 3281772544,
+      "free": 28930482176
+    },
+    "/root/autodl-tmp/fashion-grounding": {
+      "total": 214748364800,
+      "used": 45820649472,
+      "free": 168927715328
+    }
+  },
+  "coordination": {
+    "role": "segmentation",
+    "executed_by": "lcy",
+    "run_id": "segmentation-min-scale05-20261115-r01",
+    "status": "completed",
+    "wrapper_pid": 135534,
+    "started_at": "2026-11-15T14:46:27.350098+00:00",
+    "budget_seconds": 2688,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_min_scale_trial.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/min_scale_05_stage_plan.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01",
+      "--worker"
+    ],
+    "git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+    "child_pid": 135540,
+    "exit_code": 0,
+    "elapsed_seconds": 956.6284365952015,
+    "finished_at": "2026-11-15T15:02:23.982064+00:00"
+  }
+}

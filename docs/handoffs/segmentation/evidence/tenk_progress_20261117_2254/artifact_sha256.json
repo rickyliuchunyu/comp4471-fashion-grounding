@@ -1,0 +1,14 @@
+{
+  "completion_check.json": "2fe8549fd7d00d2c286b7ce99f3a96bc5f0834af1131c7c60a19dda92c2cfad2",
+  "epoch_06/dev_run_report.json": "bd1d395fc434bb1d6378e833d2071864198b05f76b17bcbe2412843c181838f8",
+  "epoch_06/evaluation_report.json": "b8073c4b331536ad89c26b5d2cd54371956e3d3209cafec47bbbcacf4d007ad4",
+  "epoch_06/resume_check.json": "b1279969f53d1e44082519103dfe0119f5b215722803addfc55df51cea270457",
+  "epoch_06/train_report.json": "d820bad2086b88d740a5ffd4b7ae3082bf3477873728a032754fd8c2bc868996",
+  "epoch_08/dev_run_report.json": "550564bf8a60fbe056e11d49669a3a72476e61f5e3488fdee8090efbe943a835",
+  "epoch_08/evaluation_report.json": "452bf6345b24f7bbb63b2445844a55cb51bbe8079d3ae232009c865cce9086cf",
+  "epoch_08/resume_check.json": "c0913fcf28e425693dff50ddbc4153c013439d5c946de5d76f4a608031425f3d",
+  "epoch_08/train_report.json": "adc9ba9532ea65c3aff61461bd9b16ea08a3c0fd3b14d018d196efeca62f6ac5",
+  "github_preflight.json": "94039437a94c35b2b85628c9015ec41880d5b31c0f707bd58ea596164602f29a",
+  "interim_comparison.json": "9eba52ea1f369aafd396c1a31020b78c6486249da2a367646f1c6a64a49d3543",
+  "selection_at_read.json": "70ee2fa1114a1b2525d04c20cc34040a1049d3a21251b1b2d88821fd60c833f8"
+}

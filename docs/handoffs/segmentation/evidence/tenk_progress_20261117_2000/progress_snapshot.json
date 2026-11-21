@@ -1,0 +1,340 @@
+{
+  "captured_at": "2026-11-17T12:00:13.287280+00:00",
+  "run_metadata": {
+    "record_schema_version": 1,
+    "status": "running",
+    "owner": "segmentation",
+    "executed_by": "lcy",
+    "experiment_id": "S0",
+    "split": "train",
+    "candidate_source": "none",
+    "seed": 42,
+    "run_id": "tenk-adaptation-20261117-r01",
+    "git_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+    "plan_sha256": "3daf833d3f3cf76ddfe88dfc4164dcb00802c8d6789b6ecab31679c1d9bef13f",
+    "started_at": "2026-11-17T09:24:15.236235+00:00",
+    "total_hard_seconds": 28800,
+    "per_segment_hard_seconds": 7200,
+    "deadline_monotonic": 25450260.65680926,
+    "worker_deadline_monotonic": 25450245.65680926,
+    "cleanup_reserve_seconds": 15,
+    "input_sha256": {
+      "configs/runs/segmentation/tenk_model_only_source.json": "9a787ae2b1824ab08dfc68d78d0012f3f94a65bb8e4bc1fad28a0cc95533388a",
+      "configs/runs/segmentation/expansion_input_train10000.json": "743d81480ff928f95c95fdb92ecd73b2e50392a227d40e2ea7b0588afc734d72",
+      "configs/runs/segmentation/expansion_control_dev250.json": "8dfb8a476f520a4d3c6ad6a21b9c8e762d25e83f9b7bf1fee99872909b67eee3",
+      "docs/handoffs/segmentation/evidence/tenk_preparation_20261117/visibility_decision.json": "39cd96962665971ebdcdd3ff25ba39c4a9ca84e44a58ca22b4101631d79c6e28",
+      "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+      "configs/runs/segmentation/tenk_adaptation_train_authorized_20261117.json": "f3cccf4a3597ce5cf8242aff1cb9494e2064071c73353c9f8067a52d976c2f74"
+    },
+    "training_authorized": true,
+    "automatic_restart": false,
+    "automatic_extension": false,
+    "model_only_source": {
+      "mode": "model_only",
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+      "sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+      "source_completed_updates": 20000,
+      "source_training_data": {
+        "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+        "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+      },
+      "source_config_sha256": "c4ea5cd7b0061db744d6d04c1c51fc755637cc5f54f8dd07bb7e6219782010da",
+      "source_git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+    },
+    "training_config_sha256": "2437450750f2d3b0114e3a670e7c919d45496f1bfb8eba4fc157757607925f2c",
+    "evaluation_config_sha256": "4d732d3d4cd81f12d9f6636c5674b4792bf6536ef8f7fe346ecd3e97a08feaff",
+    "training_data": {
+      "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+      "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+    },
+    "evaluation_data": {
+      "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+    },
+    "cached_baseline_report": "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json",
+    "evaluator_code_unchanged_from": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+  },
+  "stages": [
+    {
+      "equivalent_epoch": 2,
+      "update": 10000,
+      "status": "completed",
+      "deadline_monotonic": 25428664.610881273,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4530.215119358152
+    },
+    {
+      "equivalent_epoch": 4,
+      "update": 20000,
+      "status": "completed",
+      "deadline_monotonic": 25433194.826413695,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4395.539075173438
+    },
+    {
+      "equivalent_epoch": 6,
+      "update": 30000,
+      "status": "running",
+      "deadline_monotonic": 25437590.36610989,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "running"
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "status": "complete_dev_selection",
+    "selected_origin": "tenk",
+    "selected_checkpoint": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 66.33509796301517,
+      "compared_updates": [
+        10000,
+        20000
+      ]
+    },
+    "new_run_best": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 66.33509796301517,
+      "compared_updates": [
+        10000,
+        20000
+      ]
+    },
+    "cached_baseline": {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 64.69568513541032,
+      "compared_updates": [
+        20000
+      ]
+    },
+    "completed_equivalent_epochs": 4,
+    "consecutive_without_new_best": 0,
+    "stop_reason": "continue",
+    "cross_run_rule": "max_full_dev_mask_AP; keep cached baseline on tie",
+    "selected_minus_baseline": {
+      "AP": 1.6394128276048576,
+      "AP_small": 8.763086766057238,
+      "AP75": 1.620661559681949
+    },
+    "per_category_AP": {
+      "1": 71.3869662015707,
+      "2": 82.5621938771566,
+      "3": 67.71958718076418,
+      "4": 70.82776332818096,
+      "5": 84.8354722470154,
+      "6": 57.19669105367794,
+      "7": 54.614794785171206,
+      "8": 41.537315030584345
+    },
+    "further_diagnostics": "Reuse saved predictions for small-target matches and boundary analysis; not computed by this selector"
+  },
+  "worker_result": null,
+  "coordination": {
+    "role": "segmentation",
+    "executed_by": "lcy",
+    "run_id": "tenk-adaptation-20261117-r01",
+    "status": "running",
+    "wrapper_pid": 230228,
+    "started_at": "2026-11-17T09:24:15.423588+00:00",
+    "budget_seconds": 28782,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_tenk_adaptation.py",
+      "--plan",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/tenk_adaptation_launch_20261117.json",
+      "--execute",
+      "--worker",
+      "--deadline",
+      "25450245.65680926",
+      "--commit",
+      "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+      "--plan-sha",
+      "3daf833d3f3cf76ddfe88dfc4164dcb00802c8d6789b6ecab31679c1d9bef13f"
+    ],
+    "git_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+    "child_pid": 230234
+  },
+  "data_free_GiB": 148.5361671447754,
+  "total_deadline_remaining_seconds": 19439.482930544764,
+  "epochs": [
+    {
+      "stage": "epoch_02",
+      "dev_run": {
+        "status": "completed",
+        "reports": [
+          "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_02/dev/update_010000/evaluation_report.json"
+        ],
+        "optimizer_updates": 0,
+        "purpose": "dev_checkpoint_selection",
+        "elapsed_seconds": 131.82409843057394
+      },
+      "checkpoints": [
+        {
+          "name": "checkpoint_005000.pth",
+          "bytes": 528479821
+        },
+        {
+          "name": "checkpoint_010000.pth",
+          "bytes": 528479821
+        }
+      ],
+      "metric_rows": 10000,
+      "incomplete_lines_at_read": 0,
+      "last_metric": {
+        "update": 10000,
+        "total_loss": 10.042746432125568,
+        "grad_norm_before_clip": 274.1617431640625,
+        "grad_norm_after_clip": 0.010000000707805157,
+        "loss_scale": 16,
+        "optimizer_step_skipped": false,
+        "learning_rates": [
+          0.000004568095794261008,
+          0.00004568095794261008
+        ],
+        "amp_retries": 0,
+        "amp_overflow_events_total": 0,
+        "sampler_epoch": 1,
+        "elapsed_seconds": 0.419894203543663,
+        "peak_cuda_allocated_bytes": 4743024640,
+        "peak_cuda_reserved_bytes": 5335154688
+      },
+      "recent_window": {
+        "rows": 200,
+        "first_update": 9801,
+        "last_update": 10000,
+        "mean_loss": 12.653691122715244,
+        "mean_update_seconds": 0.4241584660671651,
+        "finite_losses_and_gradients": true,
+        "skipped_updates": 0
+      }
+    },
+    {
+      "stage": "epoch_04",
+      "dev_run": {
+        "status": "completed",
+        "reports": [
+          "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/dev/update_020000/evaluation_report.json"
+        ],
+        "optimizer_updates": 0,
+        "purpose": "dev_checkpoint_selection",
+        "elapsed_seconds": 128.95479546114802
+      },
+      "checkpoints": [
+        {
+          "name": "checkpoint_015000.pth",
+          "bytes": 528479885
+        },
+        {
+          "name": "checkpoint_020000.pth",
+          "bytes": 528479885
+        }
+      ],
+      "metric_rows": 10000,
+      "incomplete_lines_at_read": 0,
+      "last_metric": {
+        "update": 20000,
+        "total_loss": 18.623222641646862,
+        "grad_norm_before_clip": 280.7172546386719,
+        "grad_norm_after_clip": 0.009999998845160007,
+        "loss_scale": 64,
+        "optimizer_step_skipped": false,
+        "learning_rates": [
+          0.0000033514634494974263,
+          0.00003351463449497426
+        ],
+        "amp_retries": 0,
+        "amp_overflow_events_total": 3,
+        "sampler_epoch": 3,
+        "elapsed_seconds": 0.40071607008576393,
+        "peak_cuda_allocated_bytes": 4709197824,
+        "peak_cuda_reserved_bytes": 5551161344
+      },
+      "recent_window": {
+        "rows": 200,
+        "first_update": 19801,
+        "last_update": 20000,
+        "mean_loss": 11.777297373434413,
+        "mean_update_seconds": 0.4280475785769522,
+        "finite_losses_and_gradients": true,
+        "skipped_updates": 0
+      }
+    },
+    {
+      "stage": "epoch_06",
+      "dev_run": null,
+      "checkpoints": [],
+      "metric_rows": 986,
+      "incomplete_lines_at_read": 0,
+      "last_metric": {
+        "update": 20986,
+        "total_loss": 4.075868790387176,
+        "grad_norm_before_clip": 20.90497589111328,
+        "grad_norm_after_clip": 0.009999998845160007,
+        "loss_scale": 64,
+        "optimizer_step_skipped": false,
+        "learning_rates": [
+          0.0000032051086075509085,
+          0.00003205108607550909
+        ],
+        "amp_retries": 0,
+        "amp_overflow_events_total": 3,
+        "sampler_epoch": 4,
+        "elapsed_seconds": 0.3791611008346081,
+        "peak_cuda_allocated_bytes": 4697745920,
+        "peak_cuda_reserved_bytes": 5549064192
+      },
+      "recent_window": {
+        "rows": 200,
+        "first_update": 20787,
+        "last_update": 20986,
+        "mean_loss": 11.517488301990088,
+        "mean_update_seconds": 0.4190418408997357,
+        "finite_losses_and_gradients": true,
+        "skipped_updates": 0
+      }
+    }
+  ],
+  "gpu": "5665 MiB, 24576 MiB, 62 %",
+  "compute": "235865, /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python, 5656 MiB",
+  "launcher_tail": "",
+  "supervisor_tail": ""
+}

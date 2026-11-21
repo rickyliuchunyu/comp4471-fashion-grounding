@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "release_id": "fp_train_full_eligible_v1",
+  "release_sha256": "7567710f2d8446fd106a646051de2e6a4748c31f22252dab07940fbf234e1d35",
+  "totals": {
+    "images": 42476,
+    "groups": 42452,
+    "instances": 152848
+  },
+  "old_images_exact": 10000,
+  "old_annotations_exact": 39699,
+  "old_asset_digests_equal": 49699,
+  "source_account": {
+    "parent": 10000,
+    "added": 32476,
+    "excluded_jumpsuit": 922,
+    "component_reaches_frozen_or_protected": 1375,
+    "new_component_representative_only": 794,
+    "isolated_reserved_group": 54,
+    "excluded_no_whole": 1,
+    "excluded_invalid_source_mask": 1
+  },
+  "added_intersections": {
+    "parent": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    },
+    "dev": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    },
+    "test": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    },
+    "exposed": {
+      "image_id": 0,
+      "source_identity": 0,
+      "group_id": 0,
+      "sha256": 0
+    }
+  },
+  "protected_fingerprints": 10761,
+  "producer_retained_duplicate_flags": 0,
+  "exposure_registry_sha256": "688e8cc101a570f6c7ce012fe3b092dfb0ced637108e1d89555a3210ec959b9b",
+  "exposure_status_counts": {
+    "dev_exposed_quality_quarantine": 11,
+    "dev_challenge_draft": 39
+  },
+  "historical_components": [
+    {
+      "members": 86,
+      "frozen_hits": {
+        "parent": 14,
+        "dev": 2,
+        "test": 2,
+        "exposed": 0
+      },
+      "quarantined_new": 67
+    },
+    {
+      "members": 27,
+      "frozen_hits": {
+        "parent": 5,
+        "dev": 1,
+        "test": 1,
+        "exposed": 1
+      },
+      "quarantined_new": 18
+    },
+    {
+      "members": 8,
+      "frozen_hits": {
+        "parent": 1,
+        "dev": 1,
+        "test": 0,
+        "exposed": 0
+      },
+      "quarantined_new": 6
+    },
+    {
+      "members": 9,
+      "frozen_hits": {
+        "parent": 1,
+        "dev": 1,
+        "test": 0,
+        "exposed": 0
+      },
+      "quarantined_new": 7
+    },
+    {
+      "members": 28,
+      "frozen_hits": {
+        "parent": 2,
+        "dev": 0,
+        "test": 0,
+        "exposed": 1
+      },
+      "quarantined_new": 25
+    }
+  ],
+  "quarantined_new_in_historical_components": 123,
+  "historical_review_status": "unconfirmed hash/URL group connections; related new candidates quarantined",
+  "formal_freeze": false,
+  "reused_source_pixel_checks": 113149,
+  "test_access": "identity metadata only"
+}

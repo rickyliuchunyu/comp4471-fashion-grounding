@@ -1,0 +1,114 @@
+{
+  "captured_at": "2026-11-17T12:12:18.849243+00:00",
+  "status": "running",
+  "completed_updates_observed": 22701,
+  "equivalent_epochs": 4.5402,
+  "max_updates": 50000,
+  "execution_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "checkout_status": "",
+  "final_result_present": false,
+  "final_weight_selection_ready": false,
+  "reason": "Authorized run is still active; epoch6 train in progress. Epoch8/10 have no reports yet.",
+  "stage_status": [
+    {
+      "equivalent_epoch": 2,
+      "update": 10000,
+      "status": "completed",
+      "deadline_monotonic": 25428664.610881273,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4530.215119358152
+    },
+    {
+      "equivalent_epoch": 4,
+      "update": 20000,
+      "status": "completed",
+      "deadline_monotonic": 25433194.826413695,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "completed"
+        },
+        {
+          "phase": "full_dev",
+          "status": "completed"
+        },
+        {
+          "phase": "select",
+          "status": "completed"
+        }
+      ],
+      "elapsed_seconds": 4395.539075173438
+    },
+    {
+      "equivalent_epoch": 6,
+      "update": 30000,
+      "status": "running",
+      "deadline_monotonic": 25437590.36610989,
+      "phases": [
+        {
+          "phase": "train",
+          "status": "running"
+        }
+      ]
+    }
+  ],
+  "current_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 66.33509796301517,
+    "compared_updates": [
+      10000,
+      20000
+    ]
+  },
+  "coordination_status": "running",
+  "recorded_processes_alive": {
+    "230160": true,
+    "230228": true,
+    "230234": true
+  },
+  "gpu": "5665 MiB, 24576 MiB, 82 %",
+  "compute": "235865, /root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python, 5656 MiB",
+  "lock_free": false,
+  "active_coordination": [
+    {
+      "name": "tenk-adaptation-20261117-r01.json",
+      "status": "running"
+    }
+  ],
+  "data_free_GiB": 148.5329704284668,
+  "last_metric": {
+    "update": 22701,
+    "total_loss": 16.423965323716402,
+    "grad_norm_before_clip": 221.54161071777344,
+    "grad_norm_after_clip": 0.009999999776482582,
+    "optimizer_step_skipped": false,
+    "amp_retries": 0,
+    "amp_overflow_events_total": 3
+  },
+  "existing_dev_reports_reused": [
+    "epoch_02/evaluation_report.json",
+    "epoch_04/evaluation_report.json"
+  ],
+  "new_training_launched": false,
+  "new_inference_images": 0,
+  "smoke_runs": 0,
+  "process_changes": false,
+  "automatic_extension": false,
+  "continuous_monitoring": false
+}

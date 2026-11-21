@@ -1,0 +1,67 @@
+{
+  "record_schema_version": 1,
+  "freeze_id": "segmentation-train5000-dev250-user-confirmed-20261112",
+  "recorded_at": "2026-11-12T13:41:57.233921+00:00",
+  "status": "accepted_and_pinned_for_bounded_dev_experiment",
+  "scope": [
+    "fp_train5000_v1",
+    "fp_dev250_v1"
+  ],
+  "packages": {
+    "fp_train5000_v1": {
+      "metadata_sha256": {
+        "image_manifest.json": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+        "annotations_coco.json": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "checksum_manifest_sha256": "92f57e8fe39191bcc80495bfbbda20f3359aa9a0ce42d85c51791f876dd6f953",
+      "images": 5000,
+      "instances": 17775
+    },
+    "fp_dev250_v1": {
+      "metadata_sha256": {
+        "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+        "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+        "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f",
+        "RELEASE.json": "a85e1ba6a44cf0aa164da3a5b0e8c55873e25ce12382122d510eddb247e31000"
+      },
+      "checksum_manifest_sha256": "a051bb8808b3ac484da54b525218bc52e86c86ea6c16f11a05863ec16d0893b0",
+      "images": 250,
+      "instances": 1008
+    }
+  },
+  "human_review_confirmation": {
+    "source": "current user conversation",
+    "confirmed_by": "lcy (current user)",
+    "exact_statement": "现在发的就是经过人工复核的，你先用",
+    "supersedes": "Earlier conversation answer stated human review not completed; latest user correction controls.",
+    "individual_reviewers": "not separately supplied; no names or per-pair verdicts fabricated"
+  },
+  "acceptance_basis": {
+    "producer_commit": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+    "grounding_consumer_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "segmentation_consumer_commit": "0c10d1f8c41a1f2525cf3fef05c5ed5f26069bdf",
+    "metadata_rechecked": "unchanged against prior acceptance",
+    "duplicate_disposition": "53 known pairs grouped; 10 cross-source validation images quarantined",
+    "visual_samples": "160 total; prior 64 reused and 96 additional Codex observations"
+  },
+  "authorization": {
+    "max_training_updates": 100,
+    "checkpoint_updates": [
+      50,
+      100
+    ],
+    "complete_dev_images_per_checkpoint": 250,
+    "train_budget_seconds": 300,
+    "eval_budget_seconds": 600,
+    "full_long_training": false,
+    "test_model_evaluation": false
+  },
+  "publication_boundary": {
+    "original_release_files_modified": false,
+    "original_release_formal_freeze": false,
+    "team_individual_signatures_claimed": false,
+    "note": "User confirms current delivered data was human reviewed and instructs immediate use. This separate consumer freeze pins train/dev for the bounded experiment; it does not rewrite producer history, language query acceptance or final method/test freeze."
+  }
+}

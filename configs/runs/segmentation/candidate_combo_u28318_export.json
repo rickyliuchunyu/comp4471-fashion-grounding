@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "selected_checkpoint_candidate_export",
+  "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+  "completed_updates": 28318,
+  "training_config_sha256": "e65c42ed22a6d859fc45b3cc6775189fd518cacc1ed9a2e442db56ce8b7f3f7c",
+  "training_git_commit": "dfb84558568fce99f49b1b9a36719633d058888a",
+  "training_data": {
+    "image_manifest_sha256": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "annotation_sha256": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340"
+  },
+  "source_decoder_sha256": "dcb619954bebb96e0618e5e7afd4991df44d9c56043398b15a931773785ee0ac",
+  "decoder": {
+    "short_edge": 800,
+    "max_size": 1333,
+    "amp": false,
+    "decoder": "one_foreground_class_per_query",
+    "mask_logit_threshold": 0,
+    "score": "foreground_probability_times_positive_mask_sigmoid_mean",
+    "empty_mask_policy": "discard",
+    "score_threshold": 0,
+    "max_candidates": 100,
+    "mask_nms": false
+  },
+  "threshold_options": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "selected_threshold": null,
+  "inputs": {
+    "dev": {
+      "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "images": 250
+    }
+  },
+  "score_components": [
+    "class_probability",
+    "mask_quality"
+  ]
+}

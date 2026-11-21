@@ -1,6 +1,6 @@
 # 实验系列与实际运行记录
 
-2026-11-10。当前 [registry.csv](../experiments/registry.csv) 的 14 行均为 `record_type=plan`；没有真实运行或指标。本次扩充列只完善记录接口，不改变实验状态。
+2026-11-10。[registry.csv](../experiments/registry.csv) 保留 14 条 `record_type=plan`。2026-11-12 新增 4 条分割 P1 工程 smoke run（随机初始化，3 failed / 1 completed）、1 条 COCO 五图短推理（completed、0 更新）及 2 条 200-update 尝试（1 failed / 1 completed）；它们不是正式 S0 训练或性能结果，所有性能指标仍为空，见 [随机 smoke 交接](handoffs/segmentation/pilot_adapter_20261112.md) 、[COCO 加载交接](handoffs/segmentation/coco_weights_20261112.md) 和 [200-update 交接](handoffs/segmentation/stability_200_20261112.md)。
 
 ## 1. 一行代表什么
 

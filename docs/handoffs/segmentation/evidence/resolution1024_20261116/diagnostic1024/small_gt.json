@@ -1,0 +1,7184 @@
+[
+  {
+    "annotation_id": 1000005243,
+    "image_id": 1000008876,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 813,
+    "small": true,
+    "best_same": {
+      "iou": 0.5288725939505041,
+      "detection_id": 164,
+      "score": 0.9183677434921265,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.3658823529411765,
+      "detection_id": 106,
+      "score": 0.00652629230171442,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 164,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9183677434921265,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9183677434921265,
+      "iou": 0.5288725939505041
+    },
+    "extent": {
+      "iou": 0.5288725939505041,
+      "precision": 0.6748538011695906,
+      "recall": 0.7097170971709718,
+      "false_negative_pixels": 236,
+      "false_positive_pixels": 278,
+      "predicted_area": 855,
+      "gt_area": 813
+    },
+    "inner_boundary_iou_1px": 0.07214765100671142
+  },
+  {
+    "annotation_id": 1000005260,
+    "image_id": 1000008936,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 69,
+    "small": true,
+    "best_same": {
+      "iou": 0.5517241379310345,
+      "detection_id": 204,
+      "score": 0.40910443663597107,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.2962962962962963,
+      "detection_id": 268,
+      "score": 0.0037115560844540596,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 204,
+      "55": 204,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.40910443663597107,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.40910443663597107,
+      "iou": 0.5517241379310345
+    },
+    "extent": {
+      "iou": 0.5517241379310345,
+      "precision": 0.7272727272727273,
+      "recall": 0.6956521739130435,
+      "false_negative_pixels": 21,
+      "false_positive_pixels": 18,
+      "predicted_area": 66,
+      "gt_area": 69
+    },
+    "inner_boundary_iou_1px": 0.16666666666666666
+  },
+  {
+    "annotation_id": 1000001462,
+    "image_id": 1000009019,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 989,
+    "small": true,
+    "best_same": {
+      "iou": 0.7687326549491211,
+      "detection_id": 516,
+      "score": 0.9663230776786804,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.0647693817468106,
+      "detection_id": 525,
+      "score": 0.0014880109811201692,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 516,
+      "55": 516,
+      "60": 516,
+      "65": 516,
+      "70": 516,
+      "75": 516,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9663230776786804,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9663230776786804,
+      "iou": 0.7687326549491211
+    },
+    "extent": {
+      "iou": 0.7687326549491211,
+      "precision": 0.9003250270855905,
+      "recall": 0.840242669362993,
+      "false_negative_pixels": 158,
+      "false_positive_pixels": 92,
+      "predicted_area": 923,
+      "gt_area": 989
+    },
+    "inner_boundary_iou_1px": 0.2460136674259681
+  },
+  {
+    "annotation_id": 1000001463,
+    "image_id": 1000009019,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 260,
+    "small": true,
+    "best_same": {
+      "iou": 0.6,
+      "detection_id": 594,
+      "score": 0.8390638828277588,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 502,
+      "score": 0.0019822779577225447,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 594,
+      "55": 594,
+      "60": 594,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8390638828277588,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8390638828277588,
+      "iou": 0.6
+    },
+    "extent": {
+      "iou": 0.6,
+      "precision": 0.7,
+      "recall": 0.8076923076923077,
+      "false_negative_pixels": 50,
+      "false_positive_pixels": 90,
+      "predicted_area": 300,
+      "gt_area": 260
+    },
+    "inner_boundary_iou_1px": 0.10471204188481675
+  },
+  {
+    "annotation_id": 1000005413,
+    "image_id": 1000009098,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 375,
+    "small": true,
+    "best_same": {
+      "iou": 0.0,
+      "detection_id": 601,
+      "score": 0.006961693987250328,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 606,
+      "score": 0.9881045818328857,
+      "category_id": 5
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_negative_pixels": 375,
+      "false_positive_pixels": 107,
+      "predicted_area": 107,
+      "gt_area": 375
+    },
+    "inner_boundary_iou_1px": 0.0
+  },
+  {
+    "annotation_id": 1000005631,
+    "image_id": 1000009354,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 200,
+    "small": true,
+    "best_same": {
+      "iou": 0.7251184834123223,
+      "detection_id": 992,
+      "score": 0.0024571518879383802,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 904,
+      "score": 0.0017480693059042096,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 991,
+      "55": 991,
+      "60": 991,
+      "65": 991,
+      "70": 991,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.1442314237356186,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.1442314237356186,
+      "iou": 0.716
+    },
+    "extent": {
+      "iou": 0.7251184834123223,
+      "precision": 0.9329268292682927,
+      "recall": 0.765,
+      "false_negative_pixels": 47,
+      "false_positive_pixels": 11,
+      "predicted_area": 164,
+      "gt_area": 200
+    },
+    "inner_boundary_iou_1px": 0.3951612903225806
+  },
+  {
+    "annotation_id": 1000005632,
+    "image_id": 1000009354,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 277,
+    "small": true,
+    "best_same": {
+      "iou": 0.4080267558528428,
+      "detection_id": 973,
+      "score": 0.0012545441277325153,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.4080267558528428,
+      "detection_id": 974,
+      "score": 0.0017043431289494038,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.4080267558528428,
+      "precision": 0.8472222222222222,
+      "recall": 0.4404332129963899,
+      "false_negative_pixels": 155,
+      "false_positive_pixels": 22,
+      "predicted_area": 144,
+      "gt_area": 277
+    },
+    "inner_boundary_iou_1px": 0.14285714285714285
+  },
+  {
+    "annotation_id": 1000006623,
+    "image_id": 1000009482,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 72,
+    "small": true,
+    "best_same": {
+      "iou": 0.6060606060606061,
+      "detection_id": 1223,
+      "score": 0.020846787840127945,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.007507844016136262,
+      "detection_id": 1211,
+      "score": 0.9161574840545654,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 1294,
+      "55": 1294,
+      "60": 1223,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.03076506406068802,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.03076506406068802,
+      "iou": 0.5567010309278351
+    },
+    "extent": {
+      "iou": 0.6060606060606061,
+      "precision": 0.6896551724137931,
+      "recall": 0.8333333333333334,
+      "false_negative_pixels": 12,
+      "false_positive_pixels": 27,
+      "predicted_area": 87,
+      "gt_area": 72
+    },
+    "inner_boundary_iou_1px": 0.32941176470588235
+  },
+  {
+    "annotation_id": 1000006624,
+    "image_id": 1000009482,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 174,
+    "small": true,
+    "best_same": {
+      "iou": 0.6188340807174888,
+      "detection_id": 1284,
+      "score": 0.02439050003886223,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.005073431241655541,
+      "detection_id": 1269,
+      "score": 0.9796220064163208,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 1204,
+      "55": 1204,
+      "60": 1204,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.11093423515558243,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.11093423515558243,
+      "iou": 0.6
+    },
+    "extent": {
+      "iou": 0.6188340807174888,
+      "precision": 0.7379679144385026,
+      "recall": 0.7931034482758621,
+      "false_negative_pixels": 36,
+      "false_positive_pixels": 49,
+      "predicted_area": 187,
+      "gt_area": 174
+    },
+    "inner_boundary_iou_1px": 0.25903614457831325
+  },
+  {
+    "annotation_id": 1000006642,
+    "image_id": 1000009482,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 351,
+    "small": true,
+    "best_same": {
+      "iou": 0.3649122807017544,
+      "detection_id": 1289,
+      "score": 0.02267785556614399,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.3649122807017544,
+      "detection_id": 1288,
+      "score": 0.01605120673775673,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3649122807017544,
+      "precision": 0.38235294117647056,
+      "recall": 0.8888888888888888,
+      "false_negative_pixels": 39,
+      "false_positive_pixels": 504,
+      "predicted_area": 816,
+      "gt_area": 351
+    },
+    "inner_boundary_iou_1px": 0.08552631578947369
+  },
+  {
+    "annotation_id": 1000006643,
+    "image_id": 1000009482,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 530,
+    "small": true,
+    "best_same": {
+      "iou": 0.6048265460030166,
+      "detection_id": 1292,
+      "score": 0.9102261662483215,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 1203,
+      "score": 0.9121739864349365,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 1292,
+      "55": 1292,
+      "60": 1292,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9102261662483215,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9102261662483215,
+      "iou": 0.6048265460030166
+    },
+    "extent": {
+      "iou": 0.6048265460030166,
+      "precision": 0.7509363295880149,
+      "recall": 0.7566037735849057,
+      "false_negative_pixels": 129,
+      "false_positive_pixels": 133,
+      "predicted_area": 534,
+      "gt_area": 530
+    },
+    "inner_boundary_iou_1px": 0.2113289760348584
+  },
+  {
+    "annotation_id": 1000005784,
+    "image_id": 1000009542,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 615,
+    "small": true,
+    "best_same": {
+      "iou": 0.7723035952063915,
+      "detection_id": 1456,
+      "score": 0.9579189419746399,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.27177177177177175,
+      "detection_id": 1418,
+      "score": 0.0029958984814584255,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 1456,
+      "55": 1456,
+      "60": 1456,
+      "65": 1456,
+      "70": 1456,
+      "75": 1456,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9579189419746399,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9579189419746399,
+      "iou": 0.7723035952063915
+    },
+    "extent": {
+      "iou": 0.7723035952063915,
+      "precision": 0.8100558659217877,
+      "recall": 0.943089430894309,
+      "false_negative_pixels": 35,
+      "false_positive_pixels": 136,
+      "predicted_area": 716,
+      "gt_area": 615
+    },
+    "inner_boundary_iou_1px": 0.26649746192893403
+  },
+  {
+    "annotation_id": 1000005785,
+    "image_id": 1000009550,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 671,
+    "small": true,
+    "best_same": {
+      "iou": 0.6467889908256881,
+      "detection_id": 1609,
+      "score": 0.005500332452356815,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.5768551236749117,
+      "detection_id": 1655,
+      "score": 0.004781415220350027,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 1673,
+      "55": 1609,
+      "60": 1609,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.021714188158512115,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.04860774055123329,
+      "iou": 0.5063913470993117
+    },
+    "extent": {
+      "iou": 0.6467889908256881,
+      "precision": 0.7372549019607844,
+      "recall": 0.8405365126676602,
+      "false_negative_pixels": 107,
+      "false_positive_pixels": 201,
+      "predicted_area": 765,
+      "gt_area": 671
+    },
+    "inner_boundary_iou_1px": 0.2082018927444795
+  },
+  {
+    "annotation_id": 1000005786,
+    "image_id": 1000009550,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 224,
+    "small": true,
+    "best_same": {
+      "iou": 0.8,
+      "detection_id": 1635,
+      "score": 0.9197372198104858,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.018276762402088774,
+      "detection_id": 1628,
+      "score": 0.0038963668048381805,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 1635,
+      "55": 1635,
+      "60": 1635,
+      "65": 1635,
+      "70": 1635,
+      "75": 1635,
+      "80": 1635,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9197372198104858,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9197372198104858,
+      "iou": 0.8
+    },
+    "extent": {
+      "iou": 0.8,
+      "precision": 0.9230769230769231,
+      "recall": 0.8571428571428571,
+      "false_negative_pixels": 32,
+      "false_positive_pixels": 16,
+      "predicted_area": 208,
+      "gt_area": 224
+    },
+    "inner_boundary_iou_1px": 0.39316239316239315
+  },
+  {
+    "annotation_id": 1000005789,
+    "image_id": 1000009550,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 669,
+    "small": true,
+    "best_same": {
+      "iou": 0.6861826697892272,
+      "detection_id": 1602,
+      "score": 0.00361213949508965,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.03563414894753713,
+      "detection_id": 1662,
+      "score": 0.9860072135925293,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 1615,
+      "55": 1615,
+      "60": 1615,
+      "65": 1626,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8139041066169739,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8139041066169739,
+      "iou": 0.6461001164144354
+    },
+    "extent": {
+      "iou": 0.6861826697892272,
+      "precision": 0.7600518806744487,
+      "recall": 0.8759342301943199,
+      "false_negative_pixels": 83,
+      "false_positive_pixels": 185,
+      "predicted_area": 771,
+      "gt_area": 669
+    },
+    "inner_boundary_iou_1px": 0.2638888888888889
+  },
+  {
+    "annotation_id": 1000005800,
+    "image_id": 1000009554,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 605,
+    "small": true,
+    "best_same": {
+      "iou": 0.6229143492769744,
+      "detection_id": 1721,
+      "score": 0.007548212539404631,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 1701,
+      "score": 0.03702348843216896,
+      "category_id": 4
+    },
+    "matched_detection_ids": {
+      "50": 1793,
+      "55": 1793,
+      "60": 1786,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.7592982649803162,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.7592982649803162,
+      "iou": 0.5963636363636363
+    },
+    "extent": {
+      "iou": 0.6229143492769744,
+      "precision": 0.6557377049180327,
+      "recall": 0.9256198347107438,
+      "false_negative_pixels": 45,
+      "false_positive_pixels": 294,
+      "predicted_area": 854,
+      "gt_area": 605
+    },
+    "inner_boundary_iou_1px": 0.14240506329113925
+  },
+  {
+    "annotation_id": 1000005857,
+    "image_id": 1000009610,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 833,
+    "small": true,
+    "best_same": {
+      "iou": 0.7512291052114061,
+      "detection_id": 1822,
+      "score": 0.003175823949277401,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.7512291052114061,
+      "detection_id": 1900,
+      "score": 0.0020047470461577177,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 1869,
+      "55": 1869,
+      "60": 1869,
+      "65": 1869,
+      "70": 1869,
+      "75": 1822,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9616736769676208,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9616736769676208,
+      "iou": 0.7482161060142711
+    },
+    "extent": {
+      "iou": 0.7512291052114061,
+      "precision": 0.8059071729957806,
+      "recall": 0.9171668667466987,
+      "false_negative_pixels": 69,
+      "false_positive_pixels": 184,
+      "predicted_area": 948,
+      "gt_area": 833
+    },
+    "inner_boundary_iou_1px": 0.2394678492239468
+  },
+  {
+    "annotation_id": 1000005906,
+    "image_id": 1000009657,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 964,
+    "small": true,
+    "best_same": {
+      "iou": 0.8844270323212536,
+      "detection_id": 2016,
+      "score": 0.004383631981909275,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.06842067116039718,
+      "detection_id": 2009,
+      "score": 0.009860001504421234,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 2066,
+      "55": 2066,
+      "60": 2066,
+      "65": 2066,
+      "70": 2066,
+      "75": 2066,
+      "80": 2066,
+      "85": 2071,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9467669129371643,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9467669129371643,
+      "iou": 0.8324561403508772
+    },
+    "extent": {
+      "iou": 0.8844270323212536,
+      "precision": 0.940625,
+      "recall": 0.9367219917012448,
+      "false_negative_pixels": 61,
+      "false_positive_pixels": 57,
+      "predicted_area": 960,
+      "gt_area": 964
+    },
+    "inner_boundary_iou_1px": 0.17716535433070865
+  },
+  {
+    "annotation_id": 1000006010,
+    "image_id": 1000009722,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 883,
+    "small": true,
+    "best_same": {
+      "iou": 0.8464052287581699,
+      "detection_id": 2288,
+      "score": 0.009515959769487381,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.8464052287581699,
+      "detection_id": 2289,
+      "score": 0.014464526437222958,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 2288,
+      "55": 2288,
+      "60": 2288,
+      "65": 2288,
+      "70": 2288,
+      "75": 2288,
+      "80": 2288,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.009515959769487381,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.019864199683070183,
+      "iou": 0.6184649610678532
+    },
+    "extent": {
+      "iou": 0.8464052287581699,
+      "precision": 0.9568965517241379,
+      "recall": 0.8799546998867497,
+      "false_negative_pixels": 106,
+      "false_positive_pixels": 35,
+      "predicted_area": 812,
+      "gt_area": 883
+    },
+    "inner_boundary_iou_1px": 0.27102803738317754
+  },
+  {
+    "annotation_id": 1000006019,
+    "image_id": 1000009765,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 140,
+    "small": true,
+    "best_same": {
+      "iou": 0.16314553990610328,
+      "detection_id": 2326,
+      "score": 0.015729257836937904,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.025910364145658265,
+      "detection_id": 2346,
+      "score": 0.02032788284122944,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.16314553990610328,
+      "precision": 0.16333725029377202,
+      "recall": 0.9928571428571429,
+      "false_negative_pixels": 1,
+      "false_positive_pixels": 712,
+      "predicted_area": 851,
+      "gt_area": 140
+    },
+    "inner_boundary_iou_1px": 0.039755351681957186
+  },
+  {
+    "annotation_id": 1000007943,
+    "image_id": 1000009792,
+    "category_id": 3,
+    "source_category_id": 8,
+    "area": 297,
+    "small": true,
+    "best_same": {
+      "iou": 0.0,
+      "detection_id": 2445,
+      "score": 0.029499663040041924,
+      "category_id": 3
+    },
+    "best_other": {
+      "iou": 0.007664717732029676,
+      "detection_id": 2446,
+      "score": 0.021046672016382217,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "skirt",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_negative_pixels": 297,
+      "false_positive_pixels": 11418,
+      "predicted_area": 11418,
+      "gt_area": 297
+    },
+    "inner_boundary_iou_1px": 0.0
+  },
+  {
+    "annotation_id": 1000006092,
+    "image_id": 1000009794,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 424,
+    "small": true,
+    "best_same": {
+      "iou": 0.0,
+      "detection_id": 2507,
+      "score": 0.0017350738635286689,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 1.2316029312149762e-05,
+      "detection_id": 2553,
+      "score": 0.006888451520353556,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_negative_pixels": 424,
+      "false_positive_pixels": 1227,
+      "predicted_area": 1227,
+      "gt_area": 424
+    },
+    "inner_boundary_iou_1px": 0.0
+  },
+  {
+    "annotation_id": 1000005368,
+    "image_id": 1000009954,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 144,
+    "small": true,
+    "best_same": {
+      "iou": 0.502092050209205,
+      "detection_id": 3077,
+      "score": 0.002563607646152377,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.49603174603174605,
+      "detection_id": 3005,
+      "score": 0.0034014687407761812,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 3074,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.0030524202156811953,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.0030524202156811953,
+      "iou": 0.5
+    },
+    "extent": {
+      "iou": 0.502092050209205,
+      "precision": 0.5581395348837209,
+      "recall": 0.8333333333333334,
+      "false_negative_pixels": 24,
+      "false_positive_pixels": 95,
+      "predicted_area": 215,
+      "gt_area": 144
+    },
+    "inner_boundary_iou_1px": 0.24193548387096775
+  },
+  {
+    "annotation_id": 1000005369,
+    "image_id": 1000009954,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 100,
+    "small": true,
+    "best_same": {
+      "iou": 0.3103448275862069,
+      "detection_id": 3070,
+      "score": 0.002758024027571082,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.30978260869565216,
+      "detection_id": 3095,
+      "score": 0.0032092940527945757,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3103448275862069,
+      "precision": 0.3795180722891566,
+      "recall": 0.63,
+      "false_negative_pixels": 37,
+      "false_positive_pixels": 103,
+      "predicted_area": 166,
+      "gt_area": 100
+    },
+    "inner_boundary_iou_1px": 0.14678899082568808
+  },
+  {
+    "annotation_id": 1000006197,
+    "image_id": 1000009989,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 300,
+    "small": true,
+    "best_same": {
+      "iou": 0.7020648967551623,
+      "detection_id": 3120,
+      "score": 0.9632523059844971,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6561604584527221,
+      "detection_id": 3141,
+      "score": 0.002390471054241061,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 3120,
+      "55": 3120,
+      "60": 3120,
+      "65": 3120,
+      "70": 3120,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9632523059844971,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9632523059844971,
+      "iou": 0.7020648967551623
+    },
+    "extent": {
+      "iou": 0.7020648967551623,
+      "precision": 0.8592057761732852,
+      "recall": 0.7933333333333333,
+      "false_negative_pixels": 62,
+      "false_positive_pixels": 39,
+      "predicted_area": 277,
+      "gt_area": 300
+    },
+    "inner_boundary_iou_1px": 0.24468085106382978
+  },
+  {
+    "annotation_id": 1000006204,
+    "image_id": 1000009990,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 270,
+    "small": true,
+    "best_same": {
+      "iou": 0.8122977346278317,
+      "detection_id": 3242,
+      "score": 0.9403458833694458,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.7249190938511327,
+      "detection_id": 3232,
+      "score": 0.0021707050036638975,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 3242,
+      "55": 3242,
+      "60": 3242,
+      "65": 3242,
+      "70": 3242,
+      "75": 3242,
+      "80": 3242,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9403458833694458,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9403458833694458,
+      "iou": 0.8122977346278317
+    },
+    "extent": {
+      "iou": 0.8122977346278317,
+      "precision": 0.8655172413793103,
+      "recall": 0.9296296296296296,
+      "false_negative_pixels": 19,
+      "false_positive_pixels": 39,
+      "predicted_area": 290,
+      "gt_area": 270
+    },
+    "inner_boundary_iou_1px": 0.2517482517482518
+  },
+  {
+    "annotation_id": 1000006243,
+    "image_id": 1000010036,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 634,
+    "small": true,
+    "best_same": {
+      "iou": 0.7338501291989664,
+      "detection_id": 3451,
+      "score": 0.014178651385009289,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.06000385876905267,
+      "detection_id": 3482,
+      "score": 0.0042254263535141945,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 3494,
+      "55": 3494,
+      "60": 3494,
+      "65": 3451,
+      "70": 3451,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.5660796165466309,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.5660796165466309,
+      "iou": 0.6481481481481481
+    },
+    "extent": {
+      "iou": 0.7338501291989664,
+      "precision": 0.8022598870056498,
+      "recall": 0.8958990536277602,
+      "false_negative_pixels": 66,
+      "false_positive_pixels": 140,
+      "predicted_area": 708,
+      "gt_area": 634
+    },
+    "inner_boundary_iou_1px": 0.16778523489932887
+  },
+  {
+    "annotation_id": 1000006244,
+    "image_id": 1000010036,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 306,
+    "small": true,
+    "best_same": {
+      "iou": 0.20448662640207074,
+      "detection_id": 3461,
+      "score": 0.01245206594467163,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.04849412965798877,
+      "detection_id": 3438,
+      "score": 0.006303153932094574,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.20448662640207074,
+      "precision": 0.21743119266055047,
+      "recall": 0.7745098039215687,
+      "false_negative_pixels": 69,
+      "false_positive_pixels": 853,
+      "predicted_area": 1090,
+      "gt_area": 306
+    },
+    "inner_boundary_iou_1px": 0.11594202898550725
+  },
+  {
+    "annotation_id": 1000006312,
+    "image_id": 1000010185,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 131,
+    "small": true,
+    "best_same": {
+      "iou": 0.388,
+      "detection_id": 3893,
+      "score": 0.011571506038308144,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.388,
+      "detection_id": 3894,
+      "score": 0.005270437803119421,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.388,
+      "precision": 0.44907407407407407,
+      "recall": 0.7404580152671756,
+      "false_negative_pixels": 34,
+      "false_positive_pixels": 119,
+      "predicted_area": 216,
+      "gt_area": 131
+    },
+    "inner_boundary_iou_1px": 0.11049723756906077
+  },
+  {
+    "annotation_id": 1000006375,
+    "image_id": 1000010231,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 518,
+    "small": true,
+    "best_same": {
+      "iou": 0.6034214618973561,
+      "detection_id": 3937,
+      "score": 0.9621549248695374,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.19250425894378195,
+      "detection_id": 3901,
+      "score": 0.003720448585227132,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 3937,
+      "55": 3937,
+      "60": 3937,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9621549248695374,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9621549248695374,
+      "iou": 0.6034214618973561
+    },
+    "extent": {
+      "iou": 0.6034214618973561,
+      "precision": 0.7563352826510721,
+      "recall": 0.749034749034749,
+      "false_negative_pixels": 130,
+      "false_positive_pixels": 125,
+      "predicted_area": 513,
+      "gt_area": 518
+    },
+    "inner_boundary_iou_1px": 0.1357615894039735
+  },
+  {
+    "annotation_id": 1000006445,
+    "image_id": 1000010396,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 145,
+    "small": true,
+    "best_same": {
+      "iou": 0.2787524366471735,
+      "detection_id": 4211,
+      "score": 0.013116402551531792,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 4201,
+      "score": 0.04886573925614357,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.2787524366471735,
+      "precision": 0.27984344422700586,
+      "recall": 0.9862068965517241,
+      "false_negative_pixels": 2,
+      "false_positive_pixels": 368,
+      "predicted_area": 511,
+      "gt_area": 145
+    },
+    "inner_boundary_iou_1px": 0.05907172995780591
+  },
+  {
+    "annotation_id": 1000006530,
+    "image_id": 1000010545,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 400,
+    "small": true,
+    "best_same": {
+      "iou": 0.8116591928251121,
+      "detection_id": 4623,
+      "score": 0.010912677273154259,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.00036682750641948134,
+      "detection_id": 4630,
+      "score": 0.9875455498695374,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 4692,
+      "55": 4692,
+      "60": 4692,
+      "65": 4692,
+      "70": 4692,
+      "75": 4692,
+      "80": 4623,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9395666122436523,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9395666122436523,
+      "iou": 0.7862068965517242
+    },
+    "extent": {
+      "iou": 0.8116591928251121,
+      "precision": 0.8872549019607843,
+      "recall": 0.905,
+      "false_negative_pixels": 38,
+      "false_positive_pixels": 46,
+      "predicted_area": 408,
+      "gt_area": 400
+    },
+    "inner_boundary_iou_1px": 0.26229508196721313
+  },
+  {
+    "annotation_id": 1000006871,
+    "image_id": 1000010796,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 122,
+    "small": true,
+    "best_same": {
+      "iou": 0.07838479809976247,
+      "detection_id": 5194,
+      "score": 0.01423048134893179,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.07838479809976247,
+      "detection_id": 5193,
+      "score": 0.006613664794713259,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.07838479809976247,
+      "precision": 0.09939759036144578,
+      "recall": 0.27049180327868855,
+      "false_negative_pixels": 89,
+      "false_positive_pixels": 299,
+      "predicted_area": 332,
+      "gt_area": 122
+    },
+    "inner_boundary_iou_1px": 0.08098591549295775
+  },
+  {
+    "annotation_id": 1000006987,
+    "image_id": 1000010905,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 741,
+    "small": true,
+    "best_same": {
+      "iou": 0.8187579214195184,
+      "detection_id": 5512,
+      "score": 0.016000961884856224,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 5502,
+      "score": 0.004916179459542036,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 5589,
+      "55": 5589,
+      "60": 5589,
+      "65": 5589,
+      "70": 5589,
+      "75": 5589,
+      "80": 5589,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9217462539672852,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9217462539672852,
+      "iou": 0.8007290400972054
+    },
+    "extent": {
+      "iou": 0.8187579214195184,
+      "precision": 0.930835734870317,
+      "recall": 0.8717948717948718,
+      "false_negative_pixels": 95,
+      "false_positive_pixels": 48,
+      "predicted_area": 694,
+      "gt_area": 741
+    },
+    "inner_boundary_iou_1px": 0.19661016949152543
+  },
+  {
+    "annotation_id": 1000007067,
+    "image_id": 1000010958,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 601,
+    "small": true,
+    "best_same": {
+      "iou": 0.5295857988165681,
+      "detection_id": 5813,
+      "score": 0.9412802457809448,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5088235294117647,
+      "detection_id": 5868,
+      "score": 0.0030201110057532787,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 5813,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9412802457809448,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9412802457809448,
+      "iou": 0.5295857988165681
+    },
+    "extent": {
+      "iou": 0.5295857988165681,
+      "precision": 0.8267898383371824,
+      "recall": 0.5956738768718802,
+      "false_negative_pixels": 243,
+      "false_positive_pixels": 75,
+      "predicted_area": 433,
+      "gt_area": 601
+    },
+    "inner_boundary_iou_1px": 0.13866666666666666
+  },
+  {
+    "annotation_id": 1000007984,
+    "image_id": 1000010985,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 220,
+    "small": true,
+    "best_same": {
+      "iou": 0.7747035573122529,
+      "detection_id": 5924,
+      "score": 0.0019614240154623985,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 5901,
+      "score": 0.004373262636363506,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 5930,
+      "55": 5930,
+      "60": 5930,
+      "65": 5930,
+      "70": 5930,
+      "75": 5912,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.7359612584114075,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.7359612584114075,
+      "iou": 0.726643598615917
+    },
+    "extent": {
+      "iou": 0.7747035573122529,
+      "precision": 0.8558951965065502,
+      "recall": 0.8909090909090909,
+      "false_negative_pixels": 24,
+      "false_positive_pixels": 33,
+      "predicted_area": 229,
+      "gt_area": 220
+    },
+    "inner_boundary_iou_1px": 0.3475177304964539
+  },
+  {
+    "annotation_id": 1000007639,
+    "image_id": 1000011092,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 64,
+    "small": true,
+    "best_same": {
+      "iou": 0.23104693140794225,
+      "detection_id": 6231,
+      "score": 0.022165976464748383,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.18823529411764706,
+      "detection_id": 6266,
+      "score": 0.7109893560409546,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.23104693140794225,
+      "precision": 0.23104693140794225,
+      "recall": 1.0,
+      "false_negative_pixels": 0,
+      "false_positive_pixels": 213,
+      "predicted_area": 277,
+      "gt_area": 64
+    },
+    "inner_boundary_iou_1px": 0.025
+  },
+  {
+    "annotation_id": 1000007640,
+    "image_id": 1000011092,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 63,
+    "small": true,
+    "best_same": {
+      "iou": 0.4380165289256198,
+      "detection_id": 6296,
+      "score": 0.06623513996601105,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.09761388286334056,
+      "detection_id": 6215,
+      "score": 0.007488134317100048,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.4380165289256198,
+      "precision": 0.4774774774774775,
+      "recall": 0.8412698412698413,
+      "false_negative_pixels": 10,
+      "false_positive_pixels": 58,
+      "predicted_area": 111,
+      "gt_area": 63
+    },
+    "inner_boundary_iou_1px": 0.3191489361702128
+  },
+  {
+    "annotation_id": 1000007644,
+    "image_id": 1000011092,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 453,
+    "small": true,
+    "best_same": {
+      "iou": 0.75,
+      "detection_id": 6250,
+      "score": 0.013550936244428158,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 6201,
+      "score": 0.04589502513408661,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 6278,
+      "55": 6278,
+      "60": 6278,
+      "65": 6278,
+      "70": 6250,
+      "75": 6250,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.030360087752342224,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.030360087752342224,
+      "iou": 0.658357771260997
+    },
+    "extent": {
+      "iou": 0.75,
+      "precision": 0.7576271186440678,
+      "recall": 0.9867549668874173,
+      "false_negative_pixels": 6,
+      "false_positive_pixels": 143,
+      "predicted_area": 590,
+      "gt_area": 453
+    },
+    "inner_boundary_iou_1px": 0.1625
+  },
+  {
+    "annotation_id": 1000008970,
+    "image_id": 1000011243,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 142,
+    "small": true,
+    "best_same": {
+      "iou": 0.7911392405063291,
+      "detection_id": 6785,
+      "score": 0.0018888411577790976,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.002403846153846154,
+      "detection_id": 6791,
+      "score": 0.001909060520119965,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 6763,
+      "55": 6763,
+      "60": 6763,
+      "65": 6763,
+      "70": 6763,
+      "75": 6715,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9722046256065369,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9722046256065369,
+      "iou": 0.7467532467532467
+    },
+    "extent": {
+      "iou": 0.7911392405063291,
+      "precision": 0.8865248226950354,
+      "recall": 0.8802816901408451,
+      "false_negative_pixels": 17,
+      "false_positive_pixels": 16,
+      "predicted_area": 141,
+      "gt_area": 142
+    },
+    "inner_boundary_iou_1px": 0.3333333333333333
+  },
+  {
+    "annotation_id": 1000008973,
+    "image_id": 1000011243,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 60,
+    "small": true,
+    "best_same": {
+      "iou": 0.24719101123595505,
+      "detection_id": 6727,
+      "score": 0.01793755404651165,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.027804410354745925,
+      "detection_id": 6771,
+      "score": 0.982377290725708,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.24719101123595505,
+      "precision": 0.43137254901960786,
+      "recall": 0.36666666666666664,
+      "false_negative_pixels": 38,
+      "false_positive_pixels": 29,
+      "predicted_area": 51,
+      "gt_area": 60
+    },
+    "inner_boundary_iou_1px": 0.14772727272727273
+  },
+  {
+    "annotation_id": 1000008975,
+    "image_id": 1000011243,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 99,
+    "small": true,
+    "best_same": {
+      "iou": 0.3114754098360656,
+      "detection_id": 6726,
+      "score": 0.009729569777846336,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.04367816091954023,
+      "detection_id": 6718,
+      "score": 0.9847062826156616,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3114754098360656,
+      "precision": 0.6229508196721312,
+      "recall": 0.3838383838383838,
+      "false_negative_pixels": 61,
+      "false_positive_pixels": 23,
+      "predicted_area": 61,
+      "gt_area": 99
+    },
+    "inner_boundary_iou_1px": 0.14285714285714285
+  },
+  {
+    "annotation_id": 1000007451,
+    "image_id": 1000011382,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 984,
+    "small": true,
+    "best_same": {
+      "iou": 0.81,
+      "detection_id": 7167,
+      "score": 0.9744131565093994,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.003827751196172249,
+      "detection_id": 7147,
+      "score": 0.011235191486775875,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 7167,
+      "55": 7167,
+      "60": 7167,
+      "65": 7167,
+      "70": 7167,
+      "75": 7167,
+      "80": 7167,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9744131565093994,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9744131565093994,
+      "iou": 0.81
+    },
+    "extent": {
+      "iou": 0.81,
+      "precision": 0.8848063555114201,
+      "recall": 0.9054878048780488,
+      "false_negative_pixels": 93,
+      "false_positive_pixels": 116,
+      "predicted_area": 1007,
+      "gt_area": 984
+    },
+    "inner_boundary_iou_1px": 0.13564668769716087
+  },
+  {
+    "annotation_id": 1000007454,
+    "image_id": 1000011394,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 782,
+    "small": true,
+    "best_same": {
+      "iou": 0.802158273381295,
+      "detection_id": 7216,
+      "score": 0.9712612628936768,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.009054325955734407,
+      "detection_id": 7300,
+      "score": 0.004224166739732027,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 7216,
+      "55": 7216,
+      "60": 7216,
+      "65": 7216,
+      "70": 7216,
+      "75": 7216,
+      "80": 7216,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9712612628936768,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9712612628936768,
+      "iou": 0.802158273381295
+    },
+    "extent": {
+      "iou": 0.802158273381295,
+      "precision": 0.9278779472954231,
+      "recall": 0.8554987212276215,
+      "false_negative_pixels": 113,
+      "false_positive_pixels": 52,
+      "predicted_area": 721,
+      "gt_area": 782
+    },
+    "inner_boundary_iou_1px": 0.08650519031141868
+  },
+  {
+    "annotation_id": 1000007455,
+    "image_id": 1000011394,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 679,
+    "small": true,
+    "best_same": {
+      "iou": 0.6902106567534076,
+      "detection_id": 7263,
+      "score": 0.9667941331863403,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.46521145975443384,
+      "detection_id": 7268,
+      "score": 0.0052560181356966496,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 7263,
+      "55": 7263,
+      "60": 7263,
+      "65": 7263,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9667941331863403,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9667941331863403,
+      "iou": 0.6902106567534076
+    },
+    "extent": {
+      "iou": 0.6902106567534076,
+      "precision": 0.8131386861313868,
+      "recall": 0.8203240058910162,
+      "false_negative_pixels": 122,
+      "false_positive_pixels": 128,
+      "predicted_area": 685,
+      "gt_area": 679
+    },
+    "inner_boundary_iou_1px": 0.0755287009063444
+  },
+  {
+    "annotation_id": 1000007635,
+    "image_id": 1000011631,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 487,
+    "small": true,
+    "best_same": {
+      "iou": 0.6902800658978583,
+      "detection_id": 7590,
+      "score": 0.9534685611724854,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 7502,
+      "score": 0.014341210946440697,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 7590,
+      "55": 7590,
+      "60": 7590,
+      "65": 7590,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9534685611724854,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9534685611724854,
+      "iou": 0.6902800658978583
+    },
+    "extent": {
+      "iou": 0.6902800658978583,
+      "precision": 0.7773654916512059,
+      "recall": 0.8603696098562629,
+      "false_negative_pixels": 68,
+      "false_positive_pixels": 120,
+      "predicted_area": 539,
+      "gt_area": 487
+    },
+    "inner_boundary_iou_1px": 0.16796875
+  },
+  {
+    "annotation_id": 1000007727,
+    "image_id": 1000011776,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 785,
+    "small": true,
+    "best_same": {
+      "iou": 0.8635851183765502,
+      "detection_id": 7693,
+      "score": 0.9458094835281372,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 7601,
+      "score": 0.01978253945708275,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 7693,
+      "55": 7693,
+      "60": 7693,
+      "65": 7693,
+      "70": 7693,
+      "75": 7693,
+      "80": 7693,
+      "85": 7693,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9458094835281372,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9458094835281372,
+      "iou": 0.8635851183765502
+    },
+    "extent": {
+      "iou": 0.8635851183765502,
+      "precision": 0.8824884792626728,
+      "recall": 0.975796178343949,
+      "false_negative_pixels": 19,
+      "false_positive_pixels": 102,
+      "predicted_area": 868,
+      "gt_area": 785
+    },
+    "inner_boundary_iou_1px": 0.32280701754385965
+  },
+  {
+    "annotation_id": 1000007833,
+    "image_id": 1000011904,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 372,
+    "small": true,
+    "best_same": {
+      "iou": 0.7749419953596288,
+      "detection_id": 7790,
+      "score": 0.7045289874076843,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.00854449027695934,
+      "detection_id": 7793,
+      "score": 0.04748636856675148,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 7790,
+      "55": 7790,
+      "60": 7790,
+      "65": 7790,
+      "70": 7790,
+      "75": 7790,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.7045289874076843,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.7045289874076843,
+      "iou": 0.7749419953596288
+    },
+    "extent": {
+      "iou": 0.7749419953596288,
+      "precision": 0.8498727735368957,
+      "recall": 0.8978494623655914,
+      "false_negative_pixels": 38,
+      "false_positive_pixels": 59,
+      "predicted_area": 393,
+      "gt_area": 372
+    },
+    "inner_boundary_iou_1px": 0.2524271844660194
+  },
+  {
+    "annotation_id": 1000007903,
+    "image_id": 1000012043,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 850,
+    "small": true,
+    "best_same": {
+      "iou": 0.7593840230991338,
+      "detection_id": 8117,
+      "score": 0.9568060636520386,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.14076576576576577,
+      "detection_id": 8168,
+      "score": 0.009055527858436108,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 8117,
+      "55": 8117,
+      "60": 8117,
+      "65": 8117,
+      "70": 8117,
+      "75": 8117,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9568060636520386,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9568060636520386,
+      "iou": 0.7593840230991338
+    },
+    "extent": {
+      "iou": 0.7593840230991338,
+      "precision": 0.8067484662576687,
+      "recall": 0.928235294117647,
+      "false_negative_pixels": 61,
+      "false_positive_pixels": 189,
+      "predicted_area": 978,
+      "gt_area": 850
+    },
+    "inner_boundary_iou_1px": 0.10596026490066225
+  },
+  {
+    "annotation_id": 1000007904,
+    "image_id": 1000012043,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 947,
+    "small": true,
+    "best_same": {
+      "iou": 0.803921568627451,
+      "detection_id": 8166,
+      "score": 0.9815735816955566,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.19102296450939457,
+      "detection_id": 8171,
+      "score": 0.00853572878986597,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 8166,
+      "55": 8166,
+      "60": 8166,
+      "65": 8166,
+      "70": 8166,
+      "75": 8166,
+      "80": 8166,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9815735816955566,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9815735816955566,
+      "iou": 0.803921568627451
+    },
+    "extent": {
+      "iou": 0.803921568627451,
+      "precision": 0.8741116751269036,
+      "recall": 0.9091869060190074,
+      "false_negative_pixels": 86,
+      "false_positive_pixels": 124,
+      "predicted_area": 985,
+      "gt_area": 947
+    },
+    "inner_boundary_iou_1px": 0.13026819923371646
+  },
+  {
+    "annotation_id": 1000008042,
+    "image_id": 1000012113,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 767,
+    "small": true,
+    "best_same": {
+      "iou": 0.43352601156069365,
+      "detection_id": 8282,
+      "score": 0.018522115424275398,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.016740145794229343,
+      "detection_id": 8259,
+      "score": 0.9884923100471497,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.43352601156069365,
+      "precision": 0.541795665634675,
+      "recall": 0.6844850065189049,
+      "false_negative_pixels": 242,
+      "false_positive_pixels": 444,
+      "predicted_area": 969,
+      "gt_area": 767
+    },
+    "inner_boundary_iou_1px": 0.04656319290465632
+  },
+  {
+    "annotation_id": 1000008184,
+    "image_id": 1000012258,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 366,
+    "small": true,
+    "best_same": {
+      "iou": 0.1609271523178808,
+      "detection_id": 8602,
+      "score": 0.012884805910289288,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.008675534991324466,
+      "detection_id": 8610,
+      "score": 0.015313164331018925,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.1609271523178808,
+      "precision": 0.17519826964671953,
+      "recall": 0.6639344262295082,
+      "false_negative_pixels": 123,
+      "false_positive_pixels": 1144,
+      "predicted_area": 1387,
+      "gt_area": 366
+    },
+    "inner_boundary_iou_1px": 0.051194539249146756
+  },
+  {
+    "annotation_id": 1000008188,
+    "image_id": 1000012258,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 368,
+    "small": true,
+    "best_same": {
+      "iou": 0.7544303797468355,
+      "detection_id": 8605,
+      "score": 0.8978268504142761,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 8606,
+      "score": 0.027333520352840424,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 8605,
+      "55": 8605,
+      "60": 8605,
+      "65": 8605,
+      "70": 8605,
+      "75": 8605,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.8978268504142761,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8978268504142761,
+      "iou": 0.7544303797468355
+    },
+    "extent": {
+      "iou": 0.7544303797468355,
+      "precision": 0.916923076923077,
+      "recall": 0.8097826086956522,
+      "false_negative_pixels": 70,
+      "false_positive_pixels": 27,
+      "predicted_area": 325,
+      "gt_area": 368
+    },
+    "inner_boundary_iou_1px": 0.19879518072289157
+  },
+  {
+    "annotation_id": 1000008198,
+    "image_id": 1000012276,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 619,
+    "small": true,
+    "best_same": {
+      "iou": 0.8966565349544073,
+      "detection_id": 8718,
+      "score": 0.9683489203453064,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 8701,
+      "score": 0.3326735198497772,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 8718,
+      "55": 8718,
+      "60": 8718,
+      "65": 8718,
+      "70": 8718,
+      "75": 8718,
+      "80": 8718,
+      "85": 8718,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9683489203453064,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9683489203453064,
+      "iou": 0.8966565349544073
+    },
+    "extent": {
+      "iou": 0.8966565349544073,
+      "precision": 0.9379968203497615,
+      "recall": 0.9531502423263328,
+      "false_negative_pixels": 29,
+      "false_positive_pixels": 39,
+      "predicted_area": 629,
+      "gt_area": 619
+    },
+    "inner_boundary_iou_1px": 0.3422459893048128
+  },
+  {
+    "annotation_id": 1000008200,
+    "image_id": 1000012276,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 357,
+    "small": true,
+    "best_same": {
+      "iou": 0.6898876404494382,
+      "detection_id": 8791,
+      "score": 0.0034069931134581566,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 8701,
+      "score": 0.3326735198497772,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 8794,
+      "55": 8794,
+      "60": 8794,
+      "65": 8794,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.94495689868927,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.94495689868927,
+      "iou": 0.6635071090047393
+    },
+    "extent": {
+      "iou": 0.6898876404494382,
+      "precision": 0.7772151898734178,
+      "recall": 0.8599439775910365,
+      "false_negative_pixels": 50,
+      "false_positive_pixels": 88,
+      "predicted_area": 395,
+      "gt_area": 357
+    },
+    "inner_boundary_iou_1px": 0.2697841726618705
+  },
+  {
+    "annotation_id": 1000008221,
+    "image_id": 1000012292,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 930,
+    "small": true,
+    "best_same": {
+      "iou": 0.5932885906040268,
+      "detection_id": 8865,
+      "score": 0.9242779612541199,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.3511205976520811,
+      "detection_id": 8813,
+      "score": 0.0014563323929905891,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 8865,
+      "55": 8865,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9242779612541199,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9242779612541199,
+      "iou": 0.5932885906040268
+    },
+    "extent": {
+      "iou": 0.5932885906040268,
+      "precision": 0.6121883656509696,
+      "recall": 0.9505376344086022,
+      "false_negative_pixels": 46,
+      "false_positive_pixels": 560,
+      "predicted_area": 1444,
+      "gt_area": 930
+    },
+    "inner_boundary_iou_1px": 0.1245136186770428
+  },
+  {
+    "annotation_id": 1000008222,
+    "image_id": 1000012292,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 731,
+    "small": true,
+    "best_same": {
+      "iou": 0.6794310722100656,
+      "detection_id": 8854,
+      "score": 0.0018267331179231405,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6794310722100656,
+      "detection_id": 8855,
+      "score": 0.0017441085074096918,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 8818,
+      "55": 8820,
+      "60": 8820,
+      "65": 8820,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8973471522331238,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.8973471522331238,
+      "iou": 0.5163727959697733
+    },
+    "extent": {
+      "iou": 0.6794310722100656,
+      "precision": 0.7723880597014925,
+      "recall": 0.8495212038303693,
+      "false_negative_pixels": 110,
+      "false_positive_pixels": 183,
+      "predicted_area": 804,
+      "gt_area": 731
+    },
+    "inner_boundary_iou_1px": 0.1349206349206349
+  },
+  {
+    "annotation_id": 1000008292,
+    "image_id": 1000012433,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 772,
+    "small": true,
+    "best_same": {
+      "iou": 0.6916752312435765,
+      "detection_id": 9150,
+      "score": 0.01023987028747797,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.007590804507285992,
+      "detection_id": 9113,
+      "score": 0.9850922226905823,
+      "category_id": 5
+    },
+    "matched_detection_ids": {
+      "50": 9192,
+      "55": 9192,
+      "60": 9192,
+      "65": 9192,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8930932283401489,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8930932283401489,
+      "iou": 0.6779497098646035
+    },
+    "extent": {
+      "iou": 0.6916752312435765,
+      "precision": 0.7700228832951945,
+      "recall": 0.8717616580310881,
+      "false_negative_pixels": 99,
+      "false_positive_pixels": 201,
+      "predicted_area": 874,
+      "gt_area": 772
+    },
+    "inner_boundary_iou_1px": 0.22045454545454546
+  },
+  {
+    "annotation_id": 1000008297,
+    "image_id": 1000012433,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 620,
+    "small": true,
+    "best_same": {
+      "iou": 0.5656424581005587,
+      "detection_id": 9151,
+      "score": 0.011919726617634296,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5744985673352435,
+      "detection_id": 9127,
+      "score": 0.002478924347087741,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9183,
+      "55": 9183,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.024842670187354088,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.024842670187354088,
+      "iou": 0.5587096774193548
+    },
+    "extent": {
+      "iou": 0.5656424581005587,
+      "precision": 0.8083832335329342,
+      "recall": 0.6532258064516129,
+      "false_negative_pixels": 215,
+      "false_positive_pixels": 96,
+      "predicted_area": 501,
+      "gt_area": 620
+    },
+    "inner_boundary_iou_1px": 0.18722466960352424
+  },
+  {
+    "annotation_id": 1000008329,
+    "image_id": 1000012479,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 752,
+    "small": true,
+    "best_same": {
+      "iou": 0.6361355081555834,
+      "detection_id": 9222,
+      "score": 0.004716895055025816,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6361355081555834,
+      "detection_id": 9223,
+      "score": 0.0013576963683590293,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9205,
+      "55": 9205,
+      "60": 9205,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.01198706217110157,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.01198706217110157,
+      "iou": 0.6274509803921569
+    },
+    "extent": {
+      "iou": 0.6361355081555834,
+      "precision": 0.9184782608695652,
+      "recall": 0.6742021276595744,
+      "false_negative_pixels": 245,
+      "false_positive_pixels": 45,
+      "predicted_area": 552,
+      "gt_area": 752
+    },
+    "inner_boundary_iou_1px": 0.1032258064516129
+  },
+  {
+    "annotation_id": 1000008357,
+    "image_id": 1000012526,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 111,
+    "small": true,
+    "best_same": {
+      "iou": 0.6344827586206897,
+      "detection_id": 9379,
+      "score": 0.002195176435634494,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6344827586206897,
+      "detection_id": 9380,
+      "score": 0.003472115844488144,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9379,
+      "55": 9379,
+      "60": 9379,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.002195176435634494,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.003472115844488144,
+      "iou": 0.6344827586206897
+    },
+    "extent": {
+      "iou": 0.6344827586206897,
+      "precision": 0.7301587301587301,
+      "recall": 0.8288288288288288,
+      "false_negative_pixels": 19,
+      "false_positive_pixels": 34,
+      "predicted_area": 126,
+      "gt_area": 111
+    },
+    "inner_boundary_iou_1px": 0.2727272727272727
+  },
+  {
+    "annotation_id": 1000008363,
+    "image_id": 1000012527,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 185,
+    "small": true,
+    "best_same": {
+      "iou": 0.7351598173515982,
+      "detection_id": 9491,
+      "score": 0.8725283741950989,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 9402,
+      "score": 0.020646121352910995,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 9491,
+      "55": 9491,
+      "60": 9491,
+      "65": 9491,
+      "70": 9491,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8725283741950989,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8725283741950989,
+      "iou": 0.7351598173515982
+    },
+    "extent": {
+      "iou": 0.7351598173515982,
+      "precision": 0.8256410256410256,
+      "recall": 0.8702702702702703,
+      "false_negative_pixels": 24,
+      "false_positive_pixels": 34,
+      "predicted_area": 195,
+      "gt_area": 185
+    },
+    "inner_boundary_iou_1px": 0.2672413793103448
+  },
+  {
+    "annotation_id": 1000008364,
+    "image_id": 1000012527,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 60,
+    "small": true,
+    "best_same": {
+      "iou": 0.5643564356435643,
+      "detection_id": 9433,
+      "score": 0.024827195331454277,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 9402,
+      "score": 0.020646121352910995,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 9433,
+      "55": 9433,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.024827195331454277,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.024827195331454277,
+      "iou": 0.5643564356435643
+    },
+    "extent": {
+      "iou": 0.5643564356435643,
+      "precision": 0.5816326530612245,
+      "recall": 0.95,
+      "false_negative_pixels": 3,
+      "false_positive_pixels": 41,
+      "predicted_area": 98,
+      "gt_area": 60
+    },
+    "inner_boundary_iou_1px": 0.1891891891891892
+  },
+  {
+    "annotation_id": 1000008394,
+    "image_id": 1000012547,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 936,
+    "small": true,
+    "best_same": {
+      "iou": 0.5919678714859438,
+      "detection_id": 9522,
+      "score": 0.019791672006249428,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.36730769230769234,
+      "detection_id": 9563,
+      "score": 0.006247054319828749,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9522,
+      "55": 9522,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.019791672006249428,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.019791672006249428,
+      "iou": 0.5919678714859438
+    },
+    "extent": {
+      "iou": 0.5919678714859438,
+      "precision": 0.7045889101338432,
+      "recall": 0.7873931623931624,
+      "false_negative_pixels": 199,
+      "false_positive_pixels": 309,
+      "predicted_area": 1046,
+      "gt_area": 936
+    },
+    "inner_boundary_iou_1px": 0.1090146750524109
+  },
+  {
+    "annotation_id": 1000008544,
+    "image_id": 1000012771,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 1024,
+    "small": true,
+    "best_same": {
+      "iou": 0.7298534798534798,
+      "detection_id": 9860,
+      "score": 0.9513408541679382,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6922374429223744,
+      "detection_id": 9852,
+      "score": 0.0014926532749086618,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9860,
+      "55": 9860,
+      "60": 9860,
+      "65": 9860,
+      "70": 9860,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9513408541679382,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9513408541679382,
+      "iou": 0.7298534798534798
+    },
+    "extent": {
+      "iou": 0.7298534798534798,
+      "precision": 0.9213872832369943,
+      "recall": 0.7783203125,
+      "false_negative_pixels": 227,
+      "false_positive_pixels": 68,
+      "predicted_area": 865,
+      "gt_area": 1024
+    },
+    "inner_boundary_iou_1px": 0.22085889570552147
+  },
+  {
+    "annotation_id": 1000008548,
+    "image_id": 1000012776,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 1001,
+    "small": true,
+    "best_same": {
+      "iou": 0.8656716417910447,
+      "detection_id": 9970,
+      "score": 0.9701334238052368,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.05905511811023622,
+      "detection_id": 9983,
+      "score": 0.0016460019396618009,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 9970,
+      "55": 9970,
+      "60": 9970,
+      "65": 9970,
+      "70": 9970,
+      "75": 9970,
+      "80": 9970,
+      "85": 9970,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9701334238052368,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9701334238052368,
+      "iou": 0.8656716417910447
+    },
+    "extent": {
+      "iou": 0.8656716417910447,
+      "precision": 0.928928928928929,
+      "recall": 0.9270729270729271,
+      "false_negative_pixels": 73,
+      "false_positive_pixels": 71,
+      "predicted_area": 999,
+      "gt_area": 1001
+    },
+    "inner_boundary_iou_1px": 0.3076923076923077
+  },
+  {
+    "annotation_id": 1000008802,
+    "image_id": 1000013094,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 166,
+    "small": true,
+    "best_same": {
+      "iou": 0.6265060240963856,
+      "detection_id": 10287,
+      "score": 0.02180427685379982,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.044767607641859136,
+      "detection_id": 10266,
+      "score": 0.9818538427352905,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 10287,
+      "55": 10287,
+      "60": 10287,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.02180427685379982,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.02180427685379982,
+      "iou": 0.6265060240963856
+    },
+    "extent": {
+      "iou": 0.6265060240963856,
+      "precision": 0.6527196652719666,
+      "recall": 0.9397590361445783,
+      "false_negative_pixels": 10,
+      "false_positive_pixels": 83,
+      "predicted_area": 239,
+      "gt_area": 166
+    },
+    "inner_boundary_iou_1px": 0.16666666666666666
+  },
+  {
+    "annotation_id": 1000008902,
+    "image_id": 1000013261,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 209,
+    "small": true,
+    "best_same": {
+      "iou": 0.7430830039525692,
+      "detection_id": 10456,
+      "score": 0.0004283457528799772,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 10402,
+      "score": 0.0,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 10436,
+      "55": 10436,
+      "60": 10436,
+      "65": 10436,
+      "70": 10456,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.049986883997917175,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.049986883997917175,
+      "iou": 0.6702508960573477
+    },
+    "extent": {
+      "iou": 0.7430830039525692,
+      "precision": 0.8103448275862069,
+      "recall": 0.8995215311004785,
+      "false_negative_pixels": 21,
+      "false_positive_pixels": 44,
+      "predicted_area": 232,
+      "gt_area": 209
+    },
+    "inner_boundary_iou_1px": 0.29936305732484075
+  },
+  {
+    "annotation_id": 1000009159,
+    "image_id": 1000013471,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 380,
+    "small": true,
+    "best_same": {
+      "iou": 0.7198275862068966,
+      "detection_id": 10871,
+      "score": 0.956569254398346,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.7601809954751131,
+      "detection_id": 10820,
+      "score": 0.0013063058722764254,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 10871,
+      "55": 10871,
+      "60": 10871,
+      "65": 10871,
+      "70": 10871,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.956569254398346,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.956569254398346,
+      "iou": 0.7198275862068966
+    },
+    "extent": {
+      "iou": 0.7198275862068966,
+      "precision": 0.7990430622009569,
+      "recall": 0.8789473684210526,
+      "false_negative_pixels": 46,
+      "false_positive_pixels": 84,
+      "predicted_area": 418,
+      "gt_area": 380
+    },
+    "inner_boundary_iou_1px": 0.3824561403508772
+  },
+  {
+    "annotation_id": 1000009283,
+    "image_id": 1000013582,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 678,
+    "small": true,
+    "best_same": {
+      "iou": 0.6,
+      "detection_id": 10971,
+      "score": 0.943629264831543,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5784061696658098,
+      "detection_id": 10922,
+      "score": 0.0028561437502503395,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 10971,
+      "55": 10971,
+      "60": 10971,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.943629264831543,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.943629264831543,
+      "iou": 0.6
+    },
+    "extent": {
+      "iou": 0.6,
+      "precision": 0.8088737201365188,
+      "recall": 0.6991150442477876,
+      "false_negative_pixels": 204,
+      "false_positive_pixels": 112,
+      "predicted_area": 586,
+      "gt_area": 678
+    },
+    "inner_boundary_iou_1px": 0.21725239616613418
+  },
+  {
+    "annotation_id": 1000000059,
+    "image_id": 1000015090,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 853,
+    "small": true,
+    "best_same": {
+      "iou": 0.3032817804602037,
+      "detection_id": 11224,
+      "score": 0.9133907556533813,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.23601950100372812,
+      "detection_id": 11231,
+      "score": 0.0038091428577899933,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3032817804602037,
+      "precision": 0.30899308224442734,
+      "recall": 0.9425556858147714,
+      "false_negative_pixels": 49,
+      "false_positive_pixels": 1798,
+      "predicted_area": 2602,
+      "gt_area": 853
+    },
+    "inner_boundary_iou_1px": 0.10331384015594541
+  },
+  {
+    "annotation_id": 1000000060,
+    "image_id": 1000015090,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 855,
+    "small": true,
+    "best_same": {
+      "iou": 0.27636363636363637,
+      "detection_id": 11273,
+      "score": 0.9021118879318237,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.26652675760755506,
+      "detection_id": 11216,
+      "score": 0.0024325952399522066,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.27636363636363637,
+      "precision": 0.27811044577511645,
+      "recall": 0.9777777777777777,
+      "false_negative_pixels": 19,
+      "false_positive_pixels": 2170,
+      "predicted_area": 3006,
+      "gt_area": 855
+    },
+    "inner_boundary_iou_1px": 0.09043659043659044
+  },
+  {
+    "annotation_id": 1000000073,
+    "image_id": 1000015098,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 881,
+    "small": true,
+    "best_same": {
+      "iou": 0.8322784810126582,
+      "detection_id": 11371,
+      "score": 0.9672379493713379,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.47528916929547843,
+      "detection_id": 11319,
+      "score": 0.0010195431532338262,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 11371,
+      "55": 11371,
+      "60": 11371,
+      "65": 11371,
+      "70": 11371,
+      "75": 11371,
+      "80": 11371,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9672379493713379,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9672379493713379,
+      "iou": 0.8322784810126582
+    },
+    "extent": {
+      "iou": 0.8322784810126582,
+      "precision": 0.9217289719626168,
+      "recall": 0.8955732122587968,
+      "false_negative_pixels": 92,
+      "false_positive_pixels": 67,
+      "predicted_area": 856,
+      "gt_area": 881
+    },
+    "inner_boundary_iou_1px": 0.4011299435028249
+  },
+  {
+    "annotation_id": 1000000207,
+    "image_id": 1000015280,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 502,
+    "small": true,
+    "best_same": {
+      "iou": 0.7504332755632582,
+      "detection_id": 11768,
+      "score": 0.0011617710115388036,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.7403508771929824,
+      "detection_id": 11792,
+      "score": 0.0006741501856595278,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 11793,
+      "55": 11793,
+      "60": 11793,
+      "65": 11793,
+      "70": 11793,
+      "75": 11789,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.8975871801376343,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8975871801376343,
+      "iou": 0.7403508771929824
+    },
+    "extent": {
+      "iou": 0.7504332755632582,
+      "precision": 0.8523622047244095,
+      "recall": 0.8625498007968128,
+      "false_negative_pixels": 69,
+      "false_positive_pixels": 75,
+      "predicted_area": 508,
+      "gt_area": 502
+    },
+    "inner_boundary_iou_1px": 0.349009900990099
+  },
+  {
+    "annotation_id": 1000000448,
+    "image_id": 1000015560,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 209,
+    "small": true,
+    "best_same": {
+      "iou": 0.29745042492917845,
+      "detection_id": 12493,
+      "score": 0.0460672453045845,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.29745042492917845,
+      "detection_id": 12492,
+      "score": 0.019725250080227852,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.29745042492917845,
+      "precision": 0.42168674698795183,
+      "recall": 0.5023923444976076,
+      "false_negative_pixels": 104,
+      "false_positive_pixels": 144,
+      "predicted_area": 249,
+      "gt_area": 209
+    },
+    "inner_boundary_iou_1px": 0.09895833333333333
+  },
+  {
+    "annotation_id": 1000000449,
+    "image_id": 1000015560,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 95,
+    "small": true,
+    "best_same": {
+      "iou": 0.12406576980568013,
+      "detection_id": 12478,
+      "score": 0.009945443831384182,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.11621621621621622,
+      "detection_id": 12429,
+      "score": 0.023250382393598557,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.12406576980568013,
+      "precision": 0.1263318112633181,
+      "recall": 0.8736842105263158,
+      "false_negative_pixels": 12,
+      "false_positive_pixels": 574,
+      "predicted_area": 657,
+      "gt_area": 95
+    },
+    "inner_boundary_iou_1px": 0.06896551724137931
+  },
+  {
+    "annotation_id": 1000000499,
+    "image_id": 1000015662,
+    "category_id": 7,
+    "source_category_id": 24,
+    "area": 743,
+    "small": true,
+    "best_same": {
+      "iou": 0.6599788806758183,
+      "detection_id": 12583,
+      "score": 0.002122248522937298,
+      "category_id": 7
+    },
+    "best_other": {
+      "iou": 0.6599788806758183,
+      "detection_id": 12584,
+      "score": 0.00161432393360883,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 12553,
+      "55": 12553,
+      "60": 12583,
+      "65": 12583,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "bag, wallet",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.04906758666038513,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 7,
+      "score": 0.04906758666038513,
+      "iou": 0.5678073510773131
+    },
+    "extent": {
+      "iou": 0.6599788806758183,
+      "precision": 0.7539203860072377,
+      "recall": 0.8411843876177658,
+      "false_negative_pixels": 118,
+      "false_positive_pixels": 204,
+      "predicted_area": 829,
+      "gt_area": 743
+    },
+    "inner_boundary_iou_1px": 0.24898785425101214
+  },
+  {
+    "annotation_id": 1000000517,
+    "image_id": 1000015677,
+    "category_id": 8,
+    "source_category_id": 17,
+    "area": 828,
+    "small": true,
+    "best_same": {
+      "iou": 0.8078758949880668,
+      "detection_id": 12615,
+      "score": 0.004502355121076107,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.8078758949880668,
+      "detection_id": 12614,
+      "score": 0.0014143832959234715,
+      "category_id": 4
+    },
+    "matched_detection_ids": {
+      "50": 12639,
+      "55": 12639,
+      "60": 12639,
+      "65": 12615,
+      "70": 12615,
+      "75": 12615,
+      "80": 12615,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glove",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.006519942078739405,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.006519942078739405,
+      "iou": 0.6376811594202898
+    },
+    "extent": {
+      "iou": 0.8078758949880668,
+      "precision": 0.9854439592430859,
+      "recall": 0.8176328502415459,
+      "false_negative_pixels": 151,
+      "false_positive_pixels": 10,
+      "predicted_area": 687,
+      "gt_area": 828
+    },
+    "inner_boundary_iou_1px": 0.14015151515151514
+  },
+  {
+    "annotation_id": 1000000518,
+    "image_id": 1000015677,
+    "category_id": 8,
+    "source_category_id": 17,
+    "area": 159,
+    "small": true,
+    "best_same": {
+      "iou": 0.6186046511627907,
+      "detection_id": 12627,
+      "score": 0.00387574452906847,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.09757613424487259,
+      "detection_id": 12607,
+      "score": 0.00283750775270164,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 12654,
+      "55": 12654,
+      "60": 12654,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glove",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.005795700941234827,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.005795700941234827,
+      "iou": 0.6082949308755761
+    },
+    "extent": {
+      "iou": 0.6186046511627907,
+      "precision": 0.7037037037037037,
+      "recall": 0.8364779874213837,
+      "false_negative_pixels": 26,
+      "false_positive_pixels": 56,
+      "predicted_area": 189,
+      "gt_area": 159
+    },
+    "inner_boundary_iou_1px": 0.25217391304347825
+  },
+  {
+    "annotation_id": 1000000522,
+    "image_id": 1000015687,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 386,
+    "small": true,
+    "best_same": {
+      "iou": 0.8036529680365296,
+      "detection_id": 12780,
+      "score": 0.01014978252351284,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 1.4190435646374343e-05,
+      "detection_id": 12745,
+      "score": 0.2576421797275543,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 12742,
+      "55": 12742,
+      "60": 12780,
+      "65": 12780,
+      "70": 12780,
+      "75": 12780,
+      "80": 12780,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9006465077400208,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9006465077400208,
+      "iou": 0.5996810207336523
+    },
+    "extent": {
+      "iou": 0.8036529680365296,
+      "precision": 0.8712871287128713,
+      "recall": 0.9119170984455959,
+      "false_negative_pixels": 34,
+      "false_positive_pixels": 52,
+      "predicted_area": 404,
+      "gt_area": 386
+    },
+    "inner_boundary_iou_1px": 0.22560975609756098
+  },
+  {
+    "annotation_id": 1000000527,
+    "image_id": 1000015687,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 210,
+    "small": true,
+    "best_same": {
+      "iou": 0.5968253968253968,
+      "detection_id": 12762,
+      "score": 0.946384608745575,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5966666666666667,
+      "detection_id": 12795,
+      "score": 0.004148903768509626,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 12762,
+      "55": 12762,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.946384608745575,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.946384608745575,
+      "iou": 0.5968253968253968
+    },
+    "extent": {
+      "iou": 0.5968253968253968,
+      "precision": 0.6416382252559727,
+      "recall": 0.8952380952380953,
+      "false_negative_pixels": 22,
+      "false_positive_pixels": 105,
+      "predicted_area": 293,
+      "gt_area": 210
+    },
+    "inner_boundary_iou_1px": 0.10759493670886076
+  },
+  {
+    "annotation_id": 1000000600,
+    "image_id": 1000015744,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 236,
+    "small": true,
+    "best_same": {
+      "iou": 0.3362218370883882,
+      "detection_id": 12814,
+      "score": 0.8409674763679504,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.3362218370883882,
+      "detection_id": 12815,
+      "score": 0.0021645131055265665,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3362218370883882,
+      "precision": 0.36261682242990656,
+      "recall": 0.8220338983050848,
+      "false_negative_pixels": 42,
+      "false_positive_pixels": 341,
+      "predicted_area": 535,
+      "gt_area": 236
+    },
+    "inner_boundary_iou_1px": 0.13333333333333333
+  },
+  {
+    "annotation_id": 1000000601,
+    "image_id": 1000015744,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 106,
+    "small": true,
+    "best_same": {
+      "iou": 0.5766871165644172,
+      "detection_id": 12852,
+      "score": 0.0015113498084247112,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5380434782608695,
+      "detection_id": 12878,
+      "score": 0.00182789983227849,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 12877,
+      "55": 12847,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.003914408385753632,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.003914408385753632,
+      "iou": 0.5380434782608695
+    },
+    "extent": {
+      "iou": 0.5766871165644172,
+      "precision": 0.6225165562913907,
+      "recall": 0.8867924528301887,
+      "false_negative_pixels": 12,
+      "false_positive_pixels": 57,
+      "predicted_area": 151,
+      "gt_area": 106
+    },
+    "inner_boundary_iou_1px": 0.31451612903225806
+  },
+  {
+    "annotation_id": 1000000687,
+    "image_id": 1000015852,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 636,
+    "small": true,
+    "best_same": {
+      "iou": 0.8041666666666667,
+      "detection_id": 13354,
+      "score": 0.04479813203215599,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.10698496905393456,
+      "detection_id": 13361,
+      "score": 0.005798537749797106,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 13354,
+      "55": 13354,
+      "60": 13354,
+      "65": 13354,
+      "70": 13354,
+      "75": 13354,
+      "80": 13354,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.04479813203215599,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.04479813203215599,
+      "iou": 0.8041666666666667
+    },
+    "extent": {
+      "iou": 0.8041666666666667,
+      "precision": 0.8733031674208145,
+      "recall": 0.910377358490566,
+      "false_negative_pixels": 57,
+      "false_positive_pixels": 84,
+      "predicted_area": 663,
+      "gt_area": 636
+    },
+    "inner_boundary_iou_1px": 0.1640625
+  },
+  {
+    "annotation_id": 1000000688,
+    "image_id": 1000015852,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 1012,
+    "small": true,
+    "best_same": {
+      "iou": 0.47246376811594204,
+      "detection_id": 13394,
+      "score": 0.9379197955131531,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.025253840145795365,
+      "detection_id": 13400,
+      "score": 0.004466491751372814,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.47246376811594204,
+      "precision": 0.5333769633507853,
+      "recall": 0.8053359683794467,
+      "false_negative_pixels": 197,
+      "false_positive_pixels": 713,
+      "predicted_area": 1528,
+      "gt_area": 1012
+    },
+    "inner_boundary_iou_1px": 0.18535127055306427
+  },
+  {
+    "annotation_id": 1000000693,
+    "image_id": 1000015861,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 252,
+    "small": true,
+    "best_same": {
+      "iou": 0.5284090909090909,
+      "detection_id": 13415,
+      "score": 0.9614524245262146,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.46726190476190477,
+      "detection_id": 13496,
+      "score": 0.0009993059793487191,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 13415,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9614524245262146,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9614524245262146,
+      "iou": 0.5284090909090909
+    },
+    "extent": {
+      "iou": 0.5284090909090909,
+      "precision": 0.6503496503496503,
+      "recall": 0.7380952380952381,
+      "false_negative_pixels": 66,
+      "false_positive_pixels": 100,
+      "predicted_area": 286,
+      "gt_area": 252
+    },
+    "inner_boundary_iou_1px": 0.14953271028037382
+  },
+  {
+    "annotation_id": 1000000929,
+    "image_id": 1000016059,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 694,
+    "small": true,
+    "best_same": {
+      "iou": 0.5921348314606741,
+      "detection_id": 13741,
+      "score": 0.9580903649330139,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.5047058823529412,
+      "detection_id": 13721,
+      "score": 0.0005244276253506541,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 13741,
+      "55": 13741,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9580903649330139,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9580903649330139,
+      "iou": 0.5921348314606741
+    },
+    "extent": {
+      "iou": 0.5921348314606741,
+      "precision": 0.7289073305670816,
+      "recall": 0.7593659942363112,
+      "false_negative_pixels": 167,
+      "false_positive_pixels": 196,
+      "predicted_area": 723,
+      "gt_area": 694
+    },
+    "inner_boundary_iou_1px": 0.10571428571428572
+  },
+  {
+    "annotation_id": 1000001009,
+    "image_id": 1000016161,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 444,
+    "small": true,
+    "best_same": {
+      "iou": 0.75390625,
+      "detection_id": 14020,
+      "score": 0.9672135710716248,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6551724137931034,
+      "detection_id": 14024,
+      "score": 0.0027428853791207075,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14020,
+      "55": 14020,
+      "60": 14020,
+      "65": 14020,
+      "70": 14020,
+      "75": 14020,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9672135710716248,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9672135710716248,
+      "iou": 0.75390625
+    },
+    "extent": {
+      "iou": 0.75390625,
+      "precision": 0.8502202643171806,
+      "recall": 0.8693693693693694,
+      "false_negative_pixels": 58,
+      "false_positive_pixels": 68,
+      "predicted_area": 454,
+      "gt_area": 444
+    },
+    "inner_boundary_iou_1px": 0.1624548736462094
+  },
+  {
+    "annotation_id": 1000002880,
+    "image_id": 1000016220,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 486,
+    "small": true,
+    "best_same": {
+      "iou": 0.8022388059701493,
+      "detection_id": 14130,
+      "score": 0.0034344561863690615,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 3.430531732418525e-05,
+      "detection_id": 14140,
+      "score": 0.9895418882369995,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 14173,
+      "55": 14173,
+      "60": 14173,
+      "65": 14173,
+      "70": 14173,
+      "75": 14173,
+      "80": 14130,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.8206117749214172,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8206117749214172,
+      "iou": 0.7902912621359224
+    },
+    "extent": {
+      "iou": 0.8022388059701493,
+      "precision": 0.8958333333333334,
+      "recall": 0.8847736625514403,
+      "false_negative_pixels": 56,
+      "false_positive_pixels": 50,
+      "predicted_area": 480,
+      "gt_area": 486
+    },
+    "inner_boundary_iou_1px": 0.3224489795918367
+  },
+  {
+    "annotation_id": 1000002895,
+    "image_id": 1000016244,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 977,
+    "small": true,
+    "best_same": {
+      "iou": 0.6419981498612396,
+      "detection_id": 14257,
+      "score": 0.9532082080841064,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.33719806763285026,
+      "detection_id": 14233,
+      "score": 0.009973768144845963,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14257,
+      "55": 14257,
+      "60": 14257,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9532082080841064,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9532082080841064,
+      "iou": 0.6419981498612396
+    },
+    "extent": {
+      "iou": 0.6419981498612396,
+      "precision": 0.8696741854636592,
+      "recall": 0.7103377686796315,
+      "false_negative_pixels": 283,
+      "false_positive_pixels": 104,
+      "predicted_area": 798,
+      "gt_area": 977
+    },
+    "inner_boundary_iou_1px": 0.14699792960662525
+  },
+  {
+    "annotation_id": 1000002896,
+    "image_id": 1000016244,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 951,
+    "small": true,
+    "best_same": {
+      "iou": 0.7798475867908552,
+      "detection_id": 14271,
+      "score": 0.9722973704338074,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.43286573146292584,
+      "detection_id": 14278,
+      "score": 0.010458615608513355,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14271,
+      "55": 14271,
+      "60": 14271,
+      "65": 14271,
+      "70": 14271,
+      "75": 14271,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9722973704338074,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9722973704338074,
+      "iou": 0.7798475867908552
+    },
+    "extent": {
+      "iou": 0.7798475867908552,
+      "precision": 0.8001737619461338,
+      "recall": 0.9684542586750788,
+      "false_negative_pixels": 30,
+      "false_positive_pixels": 230,
+      "predicted_area": 1151,
+      "gt_area": 951
+    },
+    "inner_boundary_iou_1px": 0.20307692307692307
+  },
+  {
+    "annotation_id": 1000001138,
+    "image_id": 1000016432,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 713,
+    "small": true,
+    "best_same": {
+      "iou": 0.4402730375426621,
+      "detection_id": 14418,
+      "score": 0.004335556644946337,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.4389312977099237,
+      "detection_id": 14467,
+      "score": 0.008877379819750786,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.4402730375426621,
+      "precision": 0.6998191681735986,
+      "recall": 0.5427769985974754,
+      "false_negative_pixels": 326,
+      "false_positive_pixels": 166,
+      "predicted_area": 553,
+      "gt_area": 713
+    },
+    "inner_boundary_iou_1px": 0.10197368421052631
+  },
+  {
+    "annotation_id": 1000001182,
+    "image_id": 1000016498,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 81,
+    "small": true,
+    "best_same": {
+      "iou": 0.64,
+      "detection_id": 14695,
+      "score": 0.009662633761763573,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.03773584905660377,
+      "detection_id": 14642,
+      "score": 0.002205219818279147,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14680,
+      "55": 14680,
+      "60": 14680,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.14982064068317413,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.14982064068317413,
+      "iou": 0.6213592233009708
+    },
+    "extent": {
+      "iou": 0.64,
+      "precision": 0.7710843373493976,
+      "recall": 0.7901234567901234,
+      "false_negative_pixels": 17,
+      "false_positive_pixels": 19,
+      "predicted_area": 83,
+      "gt_area": 81
+    },
+    "inner_boundary_iou_1px": 0.2222222222222222
+  },
+  {
+    "annotation_id": 1000001183,
+    "image_id": 1000016498,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 964,
+    "small": true,
+    "best_same": {
+      "iou": 0.7696160267111853,
+      "detection_id": 14665,
+      "score": 0.976958692073822,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.07448979591836735,
+      "detection_id": 14622,
+      "score": 0.0026470450684428215,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14665,
+      "55": 14665,
+      "60": 14665,
+      "65": 14665,
+      "70": 14665,
+      "75": 14665,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.976958692073822,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.976958692073822,
+      "iou": 0.7696160267111853
+    },
+    "extent": {
+      "iou": 0.7696160267111853,
+      "precision": 0.7975778546712803,
+      "recall": 0.9564315352697096,
+      "false_negative_pixels": 42,
+      "false_positive_pixels": 234,
+      "predicted_area": 1156,
+      "gt_area": 964
+    },
+    "inner_boundary_iou_1px": 0.2
+  },
+  {
+    "annotation_id": 1000001244,
+    "image_id": 1000016529,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 596,
+    "small": true,
+    "best_same": {
+      "iou": 0.7168508287292817,
+      "detection_id": 14969,
+      "score": 0.9634189009666443,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.4398216939078752,
+      "detection_id": 14932,
+      "score": 0.007084369659423828,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 14969,
+      "55": 14969,
+      "60": 14969,
+      "65": 14969,
+      "70": 14969,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9634189009666443,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9634189009666443,
+      "iou": 0.7168508287292817
+    },
+    "extent": {
+      "iou": 0.7168508287292817,
+      "precision": 0.8021638330757341,
+      "recall": 0.8708053691275168,
+      "false_negative_pixels": 77,
+      "false_positive_pixels": 128,
+      "predicted_area": 647,
+      "gt_area": 596
+    },
+    "inner_boundary_iou_1px": 0.26666666666666666
+  },
+  {
+    "annotation_id": 1000001245,
+    "image_id": 1000016529,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 881,
+    "small": true,
+    "best_same": {
+      "iou": 0.6156982670744139,
+      "detection_id": 14910,
+      "score": 0.012445970438420773,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 14903,
+      "score": 0.01619569957256317,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 14929,
+      "55": 14910,
+      "60": 14910,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9336156249046326,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9336156249046326,
+      "iou": 0.5206349206349207
+    },
+    "extent": {
+      "iou": 0.6156982670744139,
+      "precision": 0.8579545454545454,
+      "recall": 0.6855845629965948,
+      "false_negative_pixels": 277,
+      "false_positive_pixels": 100,
+      "predicted_area": 704,
+      "gt_area": 881
+    },
+    "inner_boundary_iou_1px": 0.14460784313725492
+  },
+  {
+    "annotation_id": 1000001265,
+    "image_id": 1000016554,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 312,
+    "small": true,
+    "best_same": {
+      "iou": 0.7552631578947369,
+      "detection_id": 15169,
+      "score": 0.9844289422035217,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.7380952380952381,
+      "detection_id": 15126,
+      "score": 0.010867723263800144,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 15169,
+      "55": 15169,
+      "60": 15169,
+      "65": 15169,
+      "70": 15169,
+      "75": 15169,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9844289422035217,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9844289422035217,
+      "iou": 0.7552631578947369
+    },
+    "extent": {
+      "iou": 0.7552631578947369,
+      "precision": 0.8084507042253521,
+      "recall": 0.9198717948717948,
+      "false_negative_pixels": 25,
+      "false_positive_pixels": 68,
+      "predicted_area": 355,
+      "gt_area": 312
+    },
+    "inner_boundary_iou_1px": 0.2011173184357542
+  },
+  {
+    "annotation_id": 1000001266,
+    "image_id": 1000016554,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 259,
+    "small": true,
+    "best_same": {
+      "iou": 0.7051282051282052,
+      "detection_id": 15119,
+      "score": 0.9557337164878845,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6055276381909548,
+      "detection_id": 15118,
+      "score": 0.002692204201593995,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 15119,
+      "55": 15119,
+      "60": 15119,
+      "65": 15119,
+      "70": 15119,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9557337164878845,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9557337164878845,
+      "iou": 0.7051282051282052
+    },
+    "extent": {
+      "iou": 0.7051282051282052,
+      "precision": 0.8058608058608059,
+      "recall": 0.8494208494208494,
+      "false_negative_pixels": 39,
+      "false_positive_pixels": 53,
+      "predicted_area": 273,
+      "gt_area": 259
+    },
+    "inner_boundary_iou_1px": 0.2810810810810811
+  },
+  {
+    "annotation_id": 1000001276,
+    "image_id": 1000016573,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 788,
+    "small": true,
+    "best_same": {
+      "iou": 0.7822222222222223,
+      "detection_id": 15265,
+      "score": 0.9683635234832764,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.2109181141439206,
+      "detection_id": 15274,
+      "score": 0.0025217561051249504,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 15265,
+      "55": 15265,
+      "60": 15265,
+      "65": 15265,
+      "70": 15265,
+      "75": 15265,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9683635234832764,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9683635234832764,
+      "iou": 0.7822222222222223
+    },
+    "extent": {
+      "iou": 0.7822222222222223,
+      "precision": 0.8627450980392157,
+      "recall": 0.8934010152284264,
+      "false_negative_pixels": 84,
+      "false_positive_pixels": 112,
+      "predicted_area": 816,
+      "gt_area": 788
+    },
+    "inner_boundary_iou_1px": 0.21079691516709512
+  },
+  {
+    "annotation_id": 1000001432,
+    "image_id": 1000016723,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 540,
+    "small": true,
+    "best_same": {
+      "iou": 0.5974625144175317,
+      "detection_id": 15709,
+      "score": 0.9481468796730042,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 15702,
+      "score": 0.008879579603672028,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 15709,
+      "55": 15709,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9481468796730042,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9481468796730042,
+      "iou": 0.5974625144175317
+    },
+    "extent": {
+      "iou": 0.5974625144175317,
+      "precision": 0.6130177514792899,
+      "recall": 0.9592592592592593,
+      "false_negative_pixels": 22,
+      "false_positive_pixels": 327,
+      "predicted_area": 845,
+      "gt_area": 540
+    },
+    "inner_boundary_iou_1px": 0.187683284457478
+  },
+  {
+    "annotation_id": 1000001433,
+    "image_id": 1000016723,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 368,
+    "small": true,
+    "best_same": {
+      "iou": 0.6512059369202227,
+      "detection_id": 15769,
+      "score": 0.9487701654434204,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.8142493638676844,
+      "detection_id": 15706,
+      "score": 0.012042360380291939,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 15769,
+      "55": 15769,
+      "60": 15769,
+      "65": 15769,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9487701654434204,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9487701654434204,
+      "iou": 0.6512059369202227
+    },
+    "extent": {
+      "iou": 0.6512059369202227,
+      "precision": 0.6724137931034483,
+      "recall": 0.9538043478260869,
+      "false_negative_pixels": 17,
+      "false_positive_pixels": 171,
+      "predicted_area": 522,
+      "gt_area": 368
+    },
+    "inner_boundary_iou_1px": 0.15625
+  },
+  {
+    "annotation_id": 1000001632,
+    "image_id": 1000016897,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 198,
+    "small": true,
+    "best_same": {
+      "iou": 0.42513368983957217,
+      "detection_id": 16163,
+      "score": 0.03688017278909683,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.016629010393131496,
+      "detection_id": 16159,
+      "score": 0.9880825877189636,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.42513368983957217,
+      "precision": 0.4746268656716418,
+      "recall": 0.803030303030303,
+      "false_negative_pixels": 39,
+      "false_positive_pixels": 176,
+      "predicted_area": 335,
+      "gt_area": 198
+    },
+    "inner_boundary_iou_1px": 0.271889400921659
+  },
+  {
+    "annotation_id": 1000001633,
+    "image_id": 1000016897,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 309,
+    "small": true,
+    "best_same": {
+      "iou": 0.12307692307692308,
+      "detection_id": 16120,
+      "score": 0.015083988197147846,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.030030355594102342,
+      "detection_id": 16116,
+      "score": 0.9762915372848511,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.12307692307692308,
+      "precision": 0.17813765182186234,
+      "recall": 0.284789644012945,
+      "false_negative_pixels": 221,
+      "false_positive_pixels": 406,
+      "predicted_area": 494,
+      "gt_area": 309
+    },
+    "inner_boundary_iou_1px": 0.02364864864864865
+  },
+  {
+    "annotation_id": 1000001640,
+    "image_id": 1000016897,
+    "category_id": 8,
+    "source_category_id": 14,
+    "area": 340,
+    "small": true,
+    "best_same": {
+      "iou": 0.8088642659279779,
+      "detection_id": 16176,
+      "score": 0.1169840544462204,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 16105,
+      "score": 0.008213300257921219,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 16141,
+      "55": 16141,
+      "60": 16141,
+      "65": 16141,
+      "70": 16141,
+      "75": 16141,
+      "80": 16176,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "hat",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.12219224125146866,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.12219224125146866,
+      "iou": 0.7507002801120448
+    },
+    "extent": {
+      "iou": 0.8088642659279779,
+      "precision": 0.9329073482428115,
+      "recall": 0.8588235294117647,
+      "false_negative_pixels": 48,
+      "false_positive_pixels": 21,
+      "predicted_area": 313,
+      "gt_area": 340
+    },
+    "inner_boundary_iou_1px": 0.2645161290322581
+  },
+  {
+    "annotation_id": 1000002981,
+    "image_id": 1000017109,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 461,
+    "small": true,
+    "best_same": {
+      "iou": 0.8019417475728156,
+      "detection_id": 16687,
+      "score": 0.007007560692727566,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 16602,
+      "score": 0.004148951731622219,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 16691,
+      "55": 16691,
+      "60": 16691,
+      "65": 16691,
+      "70": 16691,
+      "75": 16691,
+      "80": 16687,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9365158677101135,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9365158677101135,
+      "iou": 0.7938342967244701
+    },
+    "extent": {
+      "iou": 0.8019417475728156,
+      "precision": 0.8843683083511777,
+      "recall": 0.89587852494577,
+      "false_negative_pixels": 48,
+      "false_positive_pixels": 54,
+      "predicted_area": 467,
+      "gt_area": 461
+    },
+    "inner_boundary_iou_1px": 0.36254980079681276
+  },
+  {
+    "annotation_id": 1000002982,
+    "image_id": 1000017109,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 106,
+    "small": true,
+    "best_same": {
+      "iou": 0.0,
+      "detection_id": 16602,
+      "score": 0.004148951731622219,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 5.3974114014918446e-05,
+      "detection_id": 16607,
+      "score": 0.9746865034103394,
+      "category_id": 5
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_negative_pixels": 106,
+      "false_positive_pixels": 185,
+      "predicted_area": 185,
+      "gt_area": 106
+    },
+    "inner_boundary_iou_1px": 0.0
+  },
+  {
+    "annotation_id": 1000001806,
+    "image_id": 1000017199,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 534,
+    "small": true,
+    "best_same": {
+      "iou": 0.8548387096774194,
+      "detection_id": 16754,
+      "score": 0.7484255433082581,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.8548387096774194,
+      "detection_id": 16755,
+      "score": 0.16593371331691742,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 16754,
+      "55": 16754,
+      "60": 16754,
+      "65": 16754,
+      "70": 16754,
+      "75": 16754,
+      "80": 16754,
+      "85": 16754,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.7484255433082581,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.7484255433082581,
+      "iou": 0.8548387096774194
+    },
+    "extent": {
+      "iou": 0.8548387096774194,
+      "precision": 0.9520958083832335,
+      "recall": 0.8932584269662921,
+      "false_negative_pixels": 57,
+      "false_positive_pixels": 24,
+      "predicted_area": 501,
+      "gt_area": 534
+    },
+    "inner_boundary_iou_1px": 0.33707865168539325
+  },
+  {
+    "annotation_id": 1000003055,
+    "image_id": 1000017208,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 560,
+    "small": true,
+    "best_same": {
+      "iou": 0.8311475409836065,
+      "detection_id": 16833,
+      "score": 0.24831213057041168,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.008948545861297539,
+      "detection_id": 16834,
+      "score": 0.0018007148755714297,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 16833,
+      "55": 16833,
+      "60": 16833,
+      "65": 16833,
+      "70": 16833,
+      "75": 16833,
+      "80": 16833,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.24831213057041168,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.24831213057041168,
+      "iou": 0.8311475409836065
+    },
+    "extent": {
+      "iou": 0.8311475409836065,
+      "precision": 0.9102333931777379,
+      "recall": 0.9053571428571429,
+      "false_negative_pixels": 53,
+      "false_positive_pixels": 50,
+      "predicted_area": 557,
+      "gt_area": 560
+    },
+    "inner_boundary_iou_1px": 0.24489795918367346
+  },
+  {
+    "annotation_id": 1000001867,
+    "image_id": 1000017254,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 852,
+    "small": true,
+    "best_same": {
+      "iou": 0.8119747899159664,
+      "detection_id": 17087,
+      "score": 0.004955384414643049,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 17008,
+      "score": 0.9859131574630737,
+      "category_id": 5
+    },
+    "matched_detection_ids": {
+      "50": 17090,
+      "55": 17090,
+      "60": 17090,
+      "65": 17090,
+      "70": 17090,
+      "75": 17090,
+      "80": 17090,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.970007061958313,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.970007061958313,
+      "iou": 0.8093716719914803
+    },
+    "extent": {
+      "iou": 0.8119747899159664,
+      "precision": 0.8854524627720504,
+      "recall": 0.9072769953051644,
+      "false_negative_pixels": 79,
+      "false_positive_pixels": 100,
+      "predicted_area": 873,
+      "gt_area": 852
+    },
+    "inner_boundary_iou_1px": 0.27918781725888325
+  },
+  {
+    "annotation_id": 1000001926,
+    "image_id": 1000017328,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 773,
+    "small": true,
+    "best_same": {
+      "iou": 0.9025316455696203,
+      "detection_id": 17244,
+      "score": 0.0022413497790694237,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 17201,
+      "score": 0.0014809995191171765,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 17294,
+      "55": 17294,
+      "60": 17294,
+      "65": 17294,
+      "70": 17294,
+      "75": 17294,
+      "80": 17294,
+      "85": 17294,
+      "90": 17294,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9809094667434692,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9809094667434692,
+      "iou": 0.9
+    },
+    "extent": {
+      "iou": 0.9025316455696203,
+      "precision": 0.9767123287671233,
+      "recall": 0.9223803363518758,
+      "false_negative_pixels": 60,
+      "false_positive_pixels": 17,
+      "predicted_area": 730,
+      "gt_area": 773
+    },
+    "inner_boundary_iou_1px": 0.4196078431372549
+  },
+  {
+    "annotation_id": 1000001929,
+    "image_id": 1000017328,
+    "category_id": 7,
+    "source_category_id": 24,
+    "area": 998,
+    "small": true,
+    "best_same": {
+      "iou": 0.7129629629629629,
+      "detection_id": 17214,
+      "score": 0.002566220238804817,
+      "category_id": 7
+    },
+    "best_other": {
+      "iou": 0.46570048309178746,
+      "detection_id": 17212,
+      "score": 0.0023527536541223526,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 17237,
+      "55": 17237,
+      "60": 17237,
+      "65": 17221,
+      "70": 17221,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "bag, wallet",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.015770697966217995,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 7,
+      "score": 0.015770697966217995,
+      "iou": 0.6053540587219344
+    },
+    "extent": {
+      "iou": 0.7129629629629629,
+      "precision": 0.8167791706846673,
+      "recall": 0.8486973947895792,
+      "false_negative_pixels": 151,
+      "false_positive_pixels": 190,
+      "predicted_area": 1037,
+      "gt_area": 998
+    },
+    "inner_boundary_iou_1px": 0.16706443914081145
+  },
+  {
+    "annotation_id": 1000001930,
+    "image_id": 1000017328,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 618,
+    "small": true,
+    "best_same": {
+      "iou": 0.756797583081571,
+      "detection_id": 17204,
+      "score": 0.0014952486380934715,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.756797583081571,
+      "detection_id": 17205,
+      "score": 0.0027214614674448967,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 17265,
+      "55": 17265,
+      "60": 17265,
+      "65": 17265,
+      "70": 17271,
+      "75": 17204,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9628301858901978,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9628301858901978,
+      "iou": 0.6852331606217616
+    },
+    "extent": {
+      "iou": 0.756797583081571,
+      "precision": 0.9192660550458716,
+      "recall": 0.8106796116504854,
+      "false_negative_pixels": 117,
+      "false_positive_pixels": 44,
+      "predicted_area": 545,
+      "gt_area": 618
+    },
+    "inner_boundary_iou_1px": 0.2595419847328244
+  },
+  {
+    "annotation_id": 1000001931,
+    "image_id": 1000017328,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 533,
+    "small": true,
+    "best_same": {
+      "iou": 0.8260135135135135,
+      "detection_id": 17210,
+      "score": 0.0017405968392267823,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.8260135135135135,
+      "detection_id": 17211,
+      "score": 0.0027072809170931578,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 17216,
+      "55": 17216,
+      "60": 17267,
+      "65": 17267,
+      "70": 17267,
+      "75": 17210,
+      "80": 17210,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9570769667625427,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9570769667625427,
+      "iou": 0.5511302475780409
+    },
+    "extent": {
+      "iou": 0.8260135135135135,
+      "precision": 0.8923357664233577,
+      "recall": 0.9174484052532833,
+      "false_negative_pixels": 44,
+      "false_positive_pixels": 59,
+      "predicted_area": 548,
+      "gt_area": 533
+    },
+    "inner_boundary_iou_1px": 0.3568281938325991
+  },
+  {
+    "annotation_id": 1000002152,
+    "image_id": 1000017610,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 412,
+    "small": true,
+    "best_same": {
+      "iou": 0.8577878103837472,
+      "detection_id": 18020,
+      "score": 0.026753542944788933,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 5.785195684244019e-05,
+      "detection_id": 18036,
+      "score": 0.9935125708580017,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 18020,
+      "55": 18020,
+      "60": 18020,
+      "65": 18020,
+      "70": 18020,
+      "75": 18020,
+      "80": 18020,
+      "85": 18020,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.026753542944788933,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.026753542944788933,
+      "iou": 0.8577878103837472
+    },
+    "extent": {
+      "iou": 0.8577878103837472,
+      "precision": 0.9245742092457421,
+      "recall": 0.9223300970873787,
+      "false_negative_pixels": 32,
+      "false_positive_pixels": 31,
+      "predicted_area": 411,
+      "gt_area": 412
+    },
+    "inner_boundary_iou_1px": 0.3142857142857143
+  },
+  {
+    "annotation_id": 1000002212,
+    "image_id": 1000017659,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 146,
+    "small": true,
+    "best_same": {
+      "iou": 0.6613756613756614,
+      "detection_id": 18216,
+      "score": 0.018636273220181465,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 18202,
+      "score": 0.19364963471889496,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 18272,
+      "55": 18272,
+      "60": 18272,
+      "65": 18272,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.032070182263851166,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.032070182263851166,
+      "iou": 0.65625
+    },
+    "extent": {
+      "iou": 0.6613756613756614,
+      "precision": 0.7440476190476191,
+      "recall": 0.8561643835616438,
+      "false_negative_pixels": 21,
+      "false_positive_pixels": 43,
+      "predicted_area": 168,
+      "gt_area": 146
+    },
+    "inner_boundary_iou_1px": 0.1452991452991453
+  },
+  {
+    "annotation_id": 1000002228,
+    "image_id": 1000017690,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 646,
+    "small": true,
+    "best_same": {
+      "iou": 0.40105540897097625,
+      "detection_id": 18319,
+      "score": 0.002439176896587014,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.3181208053691275,
+      "detection_id": 18390,
+      "score": 0.0024723901879042387,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.40105540897097625,
+      "precision": 0.7307692307692307,
+      "recall": 0.47058823529411764,
+      "false_negative_pixels": 342,
+      "false_positive_pixels": 112,
+      "predicted_area": 416,
+      "gt_area": 646
+    },
+    "inner_boundary_iou_1px": 0.14553990610328638
+  },
+  {
+    "annotation_id": 1000002402,
+    "image_id": 1000017907,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 768,
+    "small": true,
+    "best_same": {
+      "iou": 0.7993079584775087,
+      "detection_id": 19035,
+      "score": 0.0006248508580029011,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.7717265353418308,
+      "detection_id": 19024,
+      "score": 0.0007307538762688637,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 19067,
+      "55": 19067,
+      "60": 19067,
+      "65": 19067,
+      "70": 19067,
+      "75": 19035,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9405816793441772,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9405816793441772,
+      "iou": 0.726932668329177
+    },
+    "extent": {
+      "iou": 0.7993079584775087,
+      "precision": 0.875,
+      "recall": 0.90234375,
+      "false_negative_pixels": 75,
+      "false_positive_pixels": 99,
+      "predicted_area": 792,
+      "gt_area": 768
+    },
+    "inner_boundary_iou_1px": 0.19696969696969696
+  },
+  {
+    "annotation_id": 1000002490,
+    "image_id": 1000018023,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 973,
+    "small": true,
+    "best_same": {
+      "iou": 0.5073569482288829,
+      "detection_id": 19423,
+      "score": 0.964540421962738,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.2403393025447691,
+      "detection_id": 19496,
+      "score": 0.001271622721105814,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 19423,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.964540421962738,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.964540421962738,
+      "iou": 0.5073569482288829
+    },
+    "extent": {
+      "iou": 0.5073569482288829,
+      "precision": 0.5192414947016174,
+      "recall": 0.9568345323741008,
+      "false_negative_pixels": 42,
+      "false_positive_pixels": 862,
+      "predicted_area": 1793,
+      "gt_area": 973
+    },
+    "inner_boundary_iou_1px": 0.21256038647342995
+  },
+  {
+    "annotation_id": 1000002493,
+    "image_id": 1000018023,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 275,
+    "small": true,
+    "best_same": {
+      "iou": 0.897887323943662,
+      "detection_id": 19498,
+      "score": 0.0014353300211951137,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0003409187761015938,
+      "detection_id": 19457,
+      "score": 0.977081835269928,
+      "category_id": 2
+    },
+    "matched_detection_ids": {
+      "50": 19494,
+      "55": 19494,
+      "60": 19494,
+      "65": 19494,
+      "70": 19494,
+      "75": 19494,
+      "80": 19494,
+      "85": 19494,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.8986339569091797,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8986339569091797,
+      "iou": 0.8576158940397351
+    },
+    "extent": {
+      "iou": 0.897887323943662,
+      "precision": 0.9659090909090909,
+      "recall": 0.9272727272727272,
+      "false_negative_pixels": 20,
+      "false_positive_pixels": 9,
+      "predicted_area": 264,
+      "gt_area": 275
+    },
+    "inner_boundary_iou_1px": 0.5412844036697247
+  },
+  {
+    "annotation_id": 1000002680,
+    "image_id": 1000018247,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 167,
+    "small": true,
+    "best_same": {
+      "iou": 0.2727272727272727,
+      "detection_id": 19995,
+      "score": 0.0052878037095069885,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.23130193905817176,
+      "detection_id": 19935,
+      "score": 0.011942248791456223,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.2727272727272727,
+      "precision": 0.38388625592417064,
+      "recall": 0.48502994011976047,
+      "false_negative_pixels": 86,
+      "false_positive_pixels": 130,
+      "predicted_area": 211,
+      "gt_area": 167
+    },
+    "inner_boundary_iou_1px": 0.10328638497652583
+  },
+  {
+    "annotation_id": 1000003606,
+    "image_id": 1000018353,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 554,
+    "small": true,
+    "best_same": {
+      "iou": 0.3864329268292683,
+      "detection_id": 20067,
+      "score": 0.9443333148956299,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.35744322960470987,
+      "detection_id": 20073,
+      "score": 0.00993322767317295,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.3864329268292683,
+      "precision": 0.4007905138339921,
+      "recall": 0.9151624548736462,
+      "false_negative_pixels": 47,
+      "false_positive_pixels": 758,
+      "predicted_area": 1265,
+      "gt_area": 554
+    },
+    "inner_boundary_iou_1px": 0.11139896373056994
+  },
+  {
+    "annotation_id": 1000003001,
+    "image_id": 1000018407,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 863,
+    "small": true,
+    "best_same": {
+      "iou": 0.545934530095037,
+      "detection_id": 20156,
+      "score": 0.005389016587287188,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.39195979899497485,
+      "detection_id": 20175,
+      "score": 0.033444032073020935,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 20191,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.8971065282821655,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.8971065282821655,
+      "iou": 0.5352112676056338
+    },
+    "extent": {
+      "iou": 0.545934530095037,
+      "precision": 0.8602329450915142,
+      "recall": 0.5990730011587485,
+      "false_negative_pixels": 346,
+      "false_positive_pixels": 84,
+      "predicted_area": 601,
+      "gt_area": 863
+    },
+    "inner_boundary_iou_1px": 0.12258064516129032
+  },
+  {
+    "annotation_id": 1000003089,
+    "image_id": 1000018510,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 105,
+    "small": true,
+    "best_same": {
+      "iou": 0.4125,
+      "detection_id": 20344,
+      "score": 0.004239535890519619,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.37969924812030076,
+      "detection_id": 20302,
+      "score": 0.0019361545564606786,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.4125,
+      "precision": 0.4230769230769231,
+      "recall": 0.9428571428571428,
+      "false_negative_pixels": 6,
+      "false_positive_pixels": 135,
+      "predicted_area": 234,
+      "gt_area": 105
+    },
+    "inner_boundary_iou_1px": 0.2807017543859649
+  },
+  {
+    "annotation_id": 1000003119,
+    "image_id": 1000018539,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 1007,
+    "small": true,
+    "best_same": {
+      "iou": 0.4877126654064272,
+      "detection_id": 20686,
+      "score": 0.002548331394791603,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.25513196480938416,
+      "detection_id": 20644,
+      "score": 0.0021970602683722973,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "partial_or_mixed_iou_010_050",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.4877126654064272,
+      "precision": 0.91005291005291,
+      "recall": 0.5124131082423039,
+      "false_negative_pixels": 491,
+      "false_positive_pixels": 51,
+      "predicted_area": 567,
+      "gt_area": 1007
+    },
+    "inner_boundary_iou_1px": 0.15869017632241814
+  },
+  {
+    "annotation_id": 1000003144,
+    "image_id": 1000018567,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 842,
+    "small": true,
+    "best_same": {
+      "iou": 0.5749741468459152,
+      "detection_id": 20769,
+      "score": 0.9181406497955322,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.2349809885931559,
+      "detection_id": 20768,
+      "score": 0.0019772695377469063,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 20769,
+      "55": 20769,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9181406497955322,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9181406497955322,
+      "iou": 0.5749741468459152
+    },
+    "extent": {
+      "iou": 0.5749741468459152,
+      "precision": 0.8164464023494861,
+      "recall": 0.6603325415676959,
+      "false_negative_pixels": 286,
+      "false_positive_pixels": 125,
+      "predicted_area": 681,
+      "gt_area": 842
+    },
+    "inner_boundary_iou_1px": 0.18650088809946713
+  },
+  {
+    "annotation_id": 1000003145,
+    "image_id": 1000018567,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 759,
+    "small": true,
+    "best_same": {
+      "iou": 0.6896551724137931,
+      "detection_id": 20800,
+      "score": 0.0016975183971226215,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.2869897959183674,
+      "detection_id": 20735,
+      "score": 0.0017248046351596713,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 20771,
+      "55": 20756,
+      "60": 20756,
+      "65": 20756,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9104078412055969,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9104078412055969,
+      "iou": 0.5273159144893111
+    },
+    "extent": {
+      "iou": 0.6896551724137931,
+      "precision": 0.7911001236093943,
+      "recall": 0.8432147562582345,
+      "false_negative_pixels": 119,
+      "false_positive_pixels": 169,
+      "predicted_area": 809,
+      "gt_area": 759
+    },
+    "inner_boundary_iou_1px": 0.1882770870337478
+  },
+  {
+    "annotation_id": 1000003187,
+    "image_id": 1000018611,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 607,
+    "small": true,
+    "best_same": {
+      "iou": 0.7782874617737003,
+      "detection_id": 20858,
+      "score": 0.0024420327972620726,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.006615598885793872,
+      "detection_id": 20835,
+      "score": 0.0006612614961341023,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 20895,
+      "55": 20895,
+      "60": 20895,
+      "65": 20895,
+      "70": 20895,
+      "75": 20895,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9596834182739258,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9596834182739258,
+      "iou": 0.7758887171561051
+    },
+    "extent": {
+      "iou": 0.7782874617737003,
+      "precision": 0.9154676258992805,
+      "recall": 0.8385502471169687,
+      "false_negative_pixels": 98,
+      "false_positive_pixels": 47,
+      "predicted_area": 556,
+      "gt_area": 607
+    },
+    "inner_boundary_iou_1px": 0.32644628099173556
+  },
+  {
+    "annotation_id": 1000005205,
+    "image_id": 1000018639,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 797,
+    "small": true,
+    "best_same": {
+      "iou": 0.8512396694214877,
+      "detection_id": 20902,
+      "score": 0.5923526883125305,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.19143639531989046,
+      "detection_id": 20955,
+      "score": 0.9800811409950256,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 20902,
+      "55": 20902,
+      "60": 20902,
+      "65": 20902,
+      "70": 20902,
+      "75": 20902,
+      "80": 20902,
+      "85": 20902,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.5923526883125305,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.5923526883125305,
+      "iou": 0.8512396694214877
+    },
+    "extent": {
+      "iou": 0.8512396694214877,
+      "precision": 0.9351491569390402,
+      "recall": 0.904642409033877,
+      "false_negative_pixels": 76,
+      "false_positive_pixels": 50,
+      "predicted_area": 771,
+      "gt_area": 797
+    },
+    "inner_boundary_iou_1px": 0.18779342723004694
+  },
+  {
+    "annotation_id": 1000005206,
+    "image_id": 1000018639,
+    "category_id": 8,
+    "source_category_id": 22,
+    "area": 520,
+    "small": true,
+    "best_same": {
+      "iou": 0.8772893772893773,
+      "detection_id": 20979,
+      "score": 0.02804315835237503,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.30646193218170187,
+      "detection_id": 20912,
+      "score": 0.9699567556381226,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 20903,
+      "55": 20903,
+      "60": 20903,
+      "65": 20903,
+      "70": 20903,
+      "75": 20903,
+      "80": 20903,
+      "85": 20903,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "sock",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.08830160647630692,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.08830160647630692,
+      "iou": 0.8733705772811918
+    },
+    "extent": {
+      "iou": 0.8772893772893773,
+      "precision": 0.9485148514851485,
+      "recall": 0.9211538461538461,
+      "false_negative_pixels": 41,
+      "false_positive_pixels": 26,
+      "predicted_area": 505,
+      "gt_area": 520
+    },
+    "inner_boundary_iou_1px": 0.2947976878612717
+  },
+  {
+    "annotation_id": 1000005209,
+    "image_id": 1000018639,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 549,
+    "small": true,
+    "best_same": {
+      "iou": 0.5453125,
+      "detection_id": 20978,
+      "score": 0.0256943516433239,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.01048370354992734,
+      "detection_id": 20945,
+      "score": 0.007958324626088142,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 20927,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.3084898889064789,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.3084898889064789,
+      "iou": 0.5296803652968036
+    },
+    "extent": {
+      "iou": 0.5453125,
+      "precision": 0.7931818181818182,
+      "recall": 0.6357012750455373,
+      "false_negative_pixels": 200,
+      "false_positive_pixels": 91,
+      "predicted_area": 440,
+      "gt_area": 549
+    },
+    "inner_boundary_iou_1px": 0.25790754257907544
+  },
+  {
+    "annotation_id": 1000003207,
+    "image_id": 1000018669,
+    "category_id": 8,
+    "source_category_id": 19,
+    "area": 328,
+    "small": true,
+    "best_same": {
+      "iou": 0.0027090482210583348,
+      "detection_id": 21042,
+      "score": 0.0013847764348611236,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.005771511999270006,
+      "detection_id": 21010,
+      "score": 0.9884470701217651,
+      "category_id": 5
+    },
+    "matched_detection_ids": {
+      "50": 0,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "belt",
+    "geometry_bucket": "no_saved_mask_iou_ge_010",
+    "matched50": false,
+    "matched75": false,
+    "matched50_score": null,
+    "any_ge50": false,
+    "highest_score_overlap": null,
+    "extent": {
+      "iou": 0.0027090482210583348,
+      "precision": 0.0027839643652561247,
+      "recall": 0.09146341463414634,
+      "false_negative_pixels": 298,
+      "false_positive_pixels": 10746,
+      "predicted_area": 10776,
+      "gt_area": 328
+    },
+    "inner_boundary_iou_1px": 0.008353221957040573
+  },
+  {
+    "annotation_id": 1000003955,
+    "image_id": 1000019505,
+    "category_id": 8,
+    "source_category_id": 15,
+    "area": 223,
+    "small": true,
+    "best_same": {
+      "iou": 0.6888888888888889,
+      "detection_id": 22124,
+      "score": 0.010777913965284824,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.017061611374407582,
+      "detection_id": 22108,
+      "score": 0.003005971433594823,
+      "category_id": 6
+    },
+    "matched_detection_ids": {
+      "50": 22187,
+      "55": 22187,
+      "60": 22187,
+      "65": 22187,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "headband, head covering, hair accessory",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.04828735068440437,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.04828735068440437,
+      "iou": 0.6708860759493671
+    },
+    "extent": {
+      "iou": 0.6888888888888889,
+      "precision": 0.7982832618025751,
+      "recall": 0.8340807174887892,
+      "false_negative_pixels": 37,
+      "false_positive_pixels": 47,
+      "predicted_area": 233,
+      "gt_area": 223
+    },
+    "inner_boundary_iou_1px": 0.12666666666666668
+  },
+  {
+    "annotation_id": 1000004107,
+    "image_id": 1000019588,
+    "category_id": 8,
+    "source_category_id": 18,
+    "area": 301,
+    "small": true,
+    "best_same": {
+      "iou": 0.8704819277108434,
+      "detection_id": 22391,
+      "score": 0.1118520200252533,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.8704819277108434,
+      "detection_id": 22390,
+      "score": 0.030519412830471992,
+      "category_id": 7
+    },
+    "matched_detection_ids": {
+      "50": 22391,
+      "55": 22391,
+      "60": 22391,
+      "65": 22391,
+      "70": 22391,
+      "75": 22391,
+      "80": 22391,
+      "85": 22391,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "watch",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.1118520200252533,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.1118520200252533,
+      "iou": 0.8704819277108434
+    },
+    "extent": {
+      "iou": 0.8704819277108434,
+      "precision": 0.903125,
+      "recall": 0.9601328903654485,
+      "false_negative_pixels": 12,
+      "false_positive_pixels": 31,
+      "predicted_area": 320,
+      "gt_area": 301
+    },
+    "inner_boundary_iou_1px": 0.359375
+  },
+  {
+    "annotation_id": 1000004108,
+    "image_id": 1000019588,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 693,
+    "small": true,
+    "best_same": {
+      "iou": 0.7133995037220844,
+      "detection_id": 22368,
+      "score": 0.9594519734382629,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.6607369758576874,
+      "detection_id": 22358,
+      "score": 0.0026560602709650993,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 22368,
+      "55": 22368,
+      "60": 22368,
+      "65": 22368,
+      "70": 22368,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9594519734382629,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9594519734382629,
+      "iou": 0.7133995037220844
+    },
+    "extent": {
+      "iou": 0.7133995037220844,
+      "precision": 0.8357558139534884,
+      "recall": 0.8297258297258298,
+      "false_negative_pixels": 118,
+      "false_positive_pixels": 113,
+      "predicted_area": 688,
+      "gt_area": 693
+    },
+    "inner_boundary_iou_1px": 0.12224938875305623
+  },
+  {
+    "annotation_id": 1000004740,
+    "image_id": 1000020239,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 653,
+    "small": true,
+    "best_same": {
+      "iou": 0.7730307076101469,
+      "detection_id": 23975,
+      "score": 0.0017338107572868466,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.7730307076101469,
+      "detection_id": 23976,
+      "score": 0.005649895872920752,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 23969,
+      "55": 23969,
+      "60": 23969,
+      "65": 23969,
+      "70": 23969,
+      "75": 23975,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.954399049282074,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.954399049282074,
+      "iou": 0.7040358744394619
+    },
+    "extent": {
+      "iou": 0.7730307076101469,
+      "precision": 0.8577777777777778,
+      "recall": 0.886676875957121,
+      "false_negative_pixels": 74,
+      "false_positive_pixels": 96,
+      "predicted_area": 675,
+      "gt_area": 653
+    },
+    "inner_boundary_iou_1px": 0.1446280991735537
+  },
+  {
+    "annotation_id": 1000004745,
+    "image_id": 1000020243,
+    "category_id": 8,
+    "source_category_id": 13,
+    "area": 788,
+    "small": true,
+    "best_same": {
+      "iou": 0.8540229885057471,
+      "detection_id": 24095,
+      "score": 0.9779605269432068,
+      "category_id": 8
+    },
+    "best_other": {
+      "iou": 0.0,
+      "detection_id": 24002,
+      "score": 0.27361828088760376,
+      "category_id": 1
+    },
+    "matched_detection_ids": {
+      "50": 24095,
+      "55": 24095,
+      "60": 24095,
+      "65": 24095,
+      "70": 24095,
+      "75": 24095,
+      "80": 24095,
+      "85": 24095,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "glasses",
+    "geometry_bucket": "same_iou_ge_075",
+    "matched50": true,
+    "matched75": true,
+    "matched50_score": 0.9779605269432068,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 8,
+      "score": 0.9779605269432068,
+      "iou": 0.8540229885057471
+    },
+    "extent": {
+      "iou": 0.8540229885057471,
+      "precision": 0.9006060606060606,
+      "recall": 0.9428934010152284,
+      "false_negative_pixels": 45,
+      "false_positive_pixels": 82,
+      "predicted_area": 825,
+      "gt_area": 788
+    },
+    "inner_boundary_iou_1px": 0.3378839590443686
+  },
+  {
+    "annotation_id": 1000004913,
+    "image_id": 1000020406,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 1002,
+    "small": true,
+    "best_same": {
+      "iou": 0.6771595900439239,
+      "detection_id": 24266,
+      "score": 0.9576484560966492,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.47063758389261745,
+      "detection_id": 24269,
+      "score": 0.0017195058753713965,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 24266,
+      "55": 24266,
+      "60": 24266,
+      "65": 24266,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9576484560966492,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9576484560966492,
+      "iou": 0.6771595900439239
+    },
+    "extent": {
+      "iou": 0.6771595900439239,
+      "precision": 0.7176105508145849,
+      "recall": 0.9231536926147704,
+      "false_negative_pixels": 77,
+      "false_positive_pixels": 364,
+      "predicted_area": 1289,
+      "gt_area": 1002
+    },
+    "inner_boundary_iou_1px": 0.1609907120743034
+  },
+  {
+    "annotation_id": 1000001881,
+    "image_id": 1000023338,
+    "category_id": 6,
+    "source_category_id": 23,
+    "area": 555,
+    "small": true,
+    "best_same": {
+      "iou": 0.5416666666666666,
+      "detection_id": 24719,
+      "score": 0.9143108129501343,
+      "category_id": 6
+    },
+    "best_other": {
+      "iou": 0.1254355400696864,
+      "detection_id": 24707,
+      "score": 0.012582642957568169,
+      "category_id": 8
+    },
+    "matched_detection_ids": {
+      "50": 24719,
+      "55": 0,
+      "60": 0,
+      "65": 0,
+      "70": 0,
+      "75": 0,
+      "80": 0,
+      "85": 0,
+      "90": 0,
+      "95": 0
+    },
+    "source_category_name": "shoe",
+    "geometry_bucket": "same_iou_050_075",
+    "matched50": true,
+    "matched75": false,
+    "matched50_score": 0.9143108129501343,
+    "any_ge50": true,
+    "highest_score_overlap": {
+      "category_id": 6,
+      "score": 0.9143108129501343,
+      "iou": 0.5416666666666666
+    },
+    "extent": {
+      "iou": 0.5416666666666666,
+      "precision": 0.8783783783783784,
+      "recall": 0.5855855855855856,
+      "false_negative_pixels": 230,
+      "false_positive_pixels": 45,
+      "predicted_area": 370,
+      "gt_area": 555
+    },
+    "inner_boundary_iou_1px": 0.11038961038961038
+  }
+]

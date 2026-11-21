@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "reports": [
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-ap-integration-20261112-r01/update_000100/evaluation_report.json",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-ap-integration-20261112-r01/update_000200/evaluation_report.json"
+  ],
+  "optimizer_updates": 0,
+  "purpose": "pilot_ap_integration",
+  "elapsed_seconds": 21.741590790450573
+}

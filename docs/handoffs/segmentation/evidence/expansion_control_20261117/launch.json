@@ -1,0 +1,17 @@
+{
+  "pid": 214370,
+  "started_at": "2026-11-17T04:40:09.058045+00:00",
+  "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/run_expansion_control.py",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01",
+    "--execute"
+  ],
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01",
+  "per_arm_hard_seconds": 10800,
+  "total_pair_hard_seconds": 21600,
+  "automatic_extension": false,
+  "automatic_restart": false
+}

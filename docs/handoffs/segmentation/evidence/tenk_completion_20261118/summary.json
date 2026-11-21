@@ -1,0 +1,250 @@
+{
+  "status": "completed",
+  "run_id": "tenk-adaptation-20261117-r01",
+  "execution_commit": "0541df4f7abbb7bc569bbbc59a4b9ed52f1a3c2f",
+  "completed_updates": 50000,
+  "completed_equivalent_epochs": 10,
+  "image_presentations": 100000,
+  "finished_at": "2026-11-17T15:30:37.840470+00:00",
+  "finished_at_hkt": "2026-11-17T23:30:37.840470+08:00",
+  "elapsed_seconds": 21985.537612039596,
+  "stop_reason": "max_equivalent_epochs",
+  "total_hard_seconds": 28800,
+  "per_segment_hard_seconds": 7200,
+  "stages": [
+    {
+      "epoch": 2,
+      "updates": 10000,
+      "metrics": {
+        "AP": 63.23498704829675,
+        "AP50": 80.55379491480012,
+        "AP75": 67.99049381255554,
+        "AP_small": 12.573658527641243,
+        "AP_medium": 32.08755884961353,
+        "AP_large": 73.57814841249903,
+        "per_category_AP": {
+          "1": 70.98271238979534,
+          "2": 76.91465048220427,
+          "3": 67.32218162295787,
+          "4": 64.45794764602044,
+          "5": 84.0279801294328,
+          "6": 52.07450177685827,
+          "7": 52.183620429997205,
+          "8": 37.916301909107844
+        }
+      },
+      "checkpoint_sha256": "ca78fb615ebcc177058963ada4d88d2a1a9041ce5103e8c8a6d80b4403d679ed",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_02/train/checkpoint_010000.pth",
+      "evaluation_report": {
+        "epoch": 2,
+        "update": 10000,
+        "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2000/epoch_02/evaluation_report.json",
+        "sha256": "829351de988bda95014150a4f8f6179146fd06ef85100ec97848fc018197c8bc",
+        "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_02/dev/update_010000/evaluation_report.json",
+        "remote_sha256": "829351de988bda95014150a4f8f6179146fd06ef85100ec97848fc018197c8bc"
+      }
+    },
+    {
+      "epoch": 4,
+      "updates": 20000,
+      "metrics": {
+        "AP": 66.33509796301517,
+        "AP50": 82.02821222634023,
+        "AP75": 70.11229563903434,
+        "AP_small": 19.81133999992105,
+        "AP_medium": 53.53129100370655,
+        "AP_large": 74.72393993919484,
+        "per_category_AP": {
+          "1": 71.3869662015707,
+          "2": 82.5621938771566,
+          "3": 67.71958718076418,
+          "4": 70.82776332818096,
+          "5": 84.8354722470154,
+          "6": 57.19669105367794,
+          "7": 54.614794785171206,
+          "8": 41.537315030584345
+        }
+      },
+      "checkpoint_sha256": "7e36f6d4661c97ba9dc071672c409d0591941bacb6c53120018c97dc91661861",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/train/checkpoint_020000.pth",
+      "evaluation_report": {
+        "epoch": 4,
+        "update": 20000,
+        "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2000/epoch_04/evaluation_report.json",
+        "sha256": "a35fe18d82a0d00d85239c975b045ebb83cdf2a8b2bb48f750de716d50157fbd",
+        "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_04/dev/update_020000/evaluation_report.json",
+        "remote_sha256": "a35fe18d82a0d00d85239c975b045ebb83cdf2a8b2bb48f750de716d50157fbd"
+      }
+    },
+    {
+      "epoch": 6,
+      "updates": 30000,
+      "metrics": {
+        "AP": 66.77695372892038,
+        "AP50": 82.72112978124724,
+        "AP75": 71.56766470916811,
+        "AP_small": 17.12407874588689,
+        "AP_medium": 47.29740654448585,
+        "AP_large": 75.57106583016247,
+        "per_category_AP": {
+          "1": 72.7961893165167,
+          "2": 80.67775424518021,
+          "3": 70.20307968217462,
+          "4": 70.83299901839261,
+          "5": 83.64072568786904,
+          "6": 57.49762853933941,
+          "7": 55.991021401659225,
+          "8": 42.57623194023124
+        }
+      },
+      "checkpoint_sha256": "352633b71b144221e2e3f6e93a208477e4ec1b95ce8343fd31b49037ae14b8e4",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_06/train/checkpoint_030000.pth",
+      "evaluation_report": {
+        "epoch": 6,
+        "update": 30000,
+        "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2254/epoch_06/evaluation_report.json",
+        "sha256": "b8073c4b331536ad89c26b5d2cd54371956e3d3209cafec47bbbcacf4d007ad4",
+        "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_06/dev/update_030000/evaluation_report.json",
+        "remote_sha256": "b8073c4b331536ad89c26b5d2cd54371956e3d3209cafec47bbbcacf4d007ad4"
+      }
+    },
+    {
+      "epoch": 8,
+      "updates": 40000,
+      "metrics": {
+        "AP": 68.5896514015614,
+        "AP50": 83.84150124424407,
+        "AP75": 73.26286079150812,
+        "AP_small": 21.310458380407013,
+        "AP_medium": 47.08848638626154,
+        "AP_large": 77.71528755808566,
+        "per_category_AP": {
+          "1": 74.28205832662263,
+          "2": 81.87664800656876,
+          "3": 75.2339728234476,
+          "4": 72.6382552007369,
+          "5": 84.10987908213606,
+          "6": 57.65605751745399,
+          "7": 57.536783760944196,
+          "8": 45.38355649458113
+        }
+      },
+      "checkpoint_sha256": "663f807fcd5d8a394f2eefde70020e3b500af282c077be0cfd49cfca7f4d499b",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/train/checkpoint_040000.pth",
+      "evaluation_report": {
+        "epoch": 8,
+        "update": 40000,
+        "path": "docs/handoffs/segmentation/evidence/tenk_progress_20261117_2254/epoch_08/evaluation_report.json",
+        "sha256": "452bf6345b24f7bbb63b2445844a55cb51bbe8079d3ae232009c865cce9086cf",
+        "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_08/dev/update_040000/evaluation_report.json",
+        "remote_sha256": "452bf6345b24f7bbb63b2445844a55cb51bbe8079d3ae232009c865cce9086cf"
+      }
+    },
+    {
+      "epoch": 10,
+      "updates": 50000,
+      "metrics": {
+        "AP": 69.03133154819832,
+        "AP50": 84.21766442355236,
+        "AP75": 73.48537307509187,
+        "AP_small": 23.108189093408384,
+        "AP_medium": 45.80018040659121,
+        "AP_large": 77.63248376317581,
+        "per_category_AP": {
+          "1": 74.75571088260305,
+          "2": 82.78669756886613,
+          "3": 74.24623298338852,
+          "4": 74.64255551083302,
+          "5": 83.21812680452359,
+          "6": 58.493510752658864,
+          "7": 57.706312247587,
+          "8": 46.40150563512641
+        }
+      },
+      "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+      "evaluation_report": {
+        "epoch": 10,
+        "update": 50000,
+        "path": "docs/handoffs/segmentation/evidence/tenk_completion_20261118/epoch_10/evaluation_report.json",
+        "sha256": "b936fc917a2ebafda3f31a0ca9a10ff9eca5654e789b0718573b09b2c916af88",
+        "remote_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/dev/update_050000/evaluation_report.json",
+        "remote_sha256": "b936fc917a2ebafda3f31a0ca9a10ff9eca5654e789b0718573b09b2c916af88"
+      }
+    }
+  ],
+  "baseline": {
+    "path": "docs/handoffs/segmentation/evidence/expansion_control_20261117/C5k/dev/update_020000/evaluation_report.json",
+    "sha256": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5",
+    "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "metrics": {
+      "AP": 64.69568513541032,
+      "AP50": 80.38969813728531,
+      "AP75": 68.4916340793524,
+      "AP_small": 11.04825323386381,
+      "AP_medium": 31.309041092388068,
+      "AP_large": 73.73005880531672,
+      "per_category_AP": {
+        "1": 70.11220258780862,
+        "2": 81.76787825548602,
+        "3": 67.52478392915987,
+        "4": 69.37557600690093,
+        "5": 83.8757051717362,
+        "6": 53.7158692902632,
+        "7": 52.27886212324682,
+        "8": 38.91460371868079
+      }
+    }
+  },
+  "selected_checkpoint": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/tenk-adaptation-20261117-r01/epoch_10/train/checkpoint_050000.pth",
+    "completed_updates": 50000,
+    "dev_mask_AP": 69.03133154819832,
+    "compared_updates": [
+      10000,
+      20000,
+      30000,
+      40000,
+      50000
+    ]
+  },
+  "delta_vs_C5k": {
+    "AP": 4.335646412788009,
+    "AP50": 3.8279662862670563,
+    "AP75": 4.993738995739477,
+    "AP_small": 12.059935859544574,
+    "AP_medium": 14.491139314203142,
+    "AP_large": 3.902424957859097
+  },
+  "delta_vs_40k": {
+    "AP": 0.44168014663692645,
+    "AP50": 0.3761631793082927,
+    "AP75": 0.22251228358375386,
+    "AP_small": 1.7977307130013713,
+    "AP_medium": -1.2883059796703336,
+    "AP_large": -0.08280379490985013
+  },
+  "per_category_delta_vs_C5k": {
+    "1": 4.6435082947944295,
+    "2": 1.0188193133801065,
+    "3": 6.721449054228657,
+    "4": 5.266979503932092,
+    "5": -0.6575783672126079,
+    "6": 4.777641462395664,
+    "7": 5.427450124340183,
+    "8": 7.486901916445625
+  },
+  "amp_overflow_replays_total": 14,
+  "skipped_optimizer_updates": 0,
+  "all_successful_losses_and_gradients_finite": true,
+  "peak_training_cuda_allocated_bytes": 4766990336,
+  "peak_training_cuda_reserved_bytes": 5551161344,
+  "saved_checkpoints": 10,
+  "selection_rule": "max complete-dev mask AP; earlier new-run update on ties; cached baseline on cross-run tie",
+  "scope": "Final checkpoint for this completed 10k optimization run; not full-project method freeze or final test",
+  "new_training_updates_this_review": 0,
+  "new_inference_images_this_review": 0,
+  "smoke_runs_this_review": 0
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "scope": "S0_segmentation",
+  "status": "frozen",
+  "owner": "lcy",
+  "registered_at_hkt": "2026-11-19T15:36:49+08:00",
+  "release_evidence_git_commit": "341f4313fc95d55b929aecf3e97e55b91a660c8a",
+  "checkpoint": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-combo-u28318-20261119-r01/update_028318/train/checkpoint_028318.pth",
+    "sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+    "completed_updates": 28318
+  },
+  "training": {
+    "git_commit": "dfb84558568fce99f49b1b9a36719633d058888a",
+    "resolved_config": "docs/handoffs/segmentation/evidence/full_combo_launch_20261119/resolved_config.json",
+    "config_fingerprint_sha256": "e65c42ed22a6d859fc45b3cc6775189fd518cacc1ed9a2e442db56ce8b7f3f7c",
+    "seed": 43
+  },
+  "candidate_export": {
+    "git_commit": "3b455c817036cbee3540b7eb165d0e4deb6b20b2",
+    "config_file": {
+      "path": "configs/runs/segmentation/candidate_combo_u28318_export.json",
+      "sha256": "f2fff4dba36a416f1749fb1426daabb5a3e389ee278ba6bbcf6dc18e08969128"
+    },
+    "decoder_source_file": {
+      "path": "src/fashion_grounding/segmentation/predict.py",
+      "sha256": "dcb619954bebb96e0618e5e7afd4991df44d9c56043398b15a931773785ee0ac"
+    },
+    "pre_threshold_decoder_fingerprint_sha256": "20fa08acbf252f519ef3098320ec6ecdb5ccf69ab4385045f0b84b4dffb7f4f8",
+    "resolved_decoder": {
+      "short_edge": 800,
+      "max_size": 1333,
+      "amp": false,
+      "decoder": "one_foreground_class_per_query",
+      "mask_logit_threshold": 0,
+      "score": "foreground_probability_times_positive_mask_sigmoid_mean",
+      "empty_mask_policy": "discard",
+      "score_threshold": 0.3,
+      "max_candidates": 100,
+      "mask_nms": false
+    },
+    "resolved_decoder_fingerprint_sha256": "2c7de35036c9153b13d1009ebdde810ae8bb5b3723d1c8beb1a4cd39bdcba7cb",
+    "fingerprint_function": "fashion_grounding.segmentation.candidate_cache.fingerprint",
+    "score_components": [
+      "class_probability",
+      "mask_quality"
+    ]
+  },
+  "dev_candidates": {
+    "split": "dev",
+    "release_id": "combo-u28318-dev250-20261119-r01",
+    "candidate_set_id": "combo-u28318-dev250-20261119-r01-trial-0.3",
+    "manifest": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/selected_candidates/candidates_predicted.json",
+      "sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd"
+    },
+    "threshold": 0.3,
+    "images": 250,
+    "candidates": 1320,
+    "pre_threshold_cache": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/combo-u28318-dev250-20261119-r01/cache/cache.json",
+      "sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132"
+    }
+  },
+  "evidence": {
+    "checkpoint_selection": "docs/handoffs/segmentation/evidence/full_combo_completion_20261119/selection.json",
+    "threshold_selection": "docs/handoffs/segmentation/evidence/combo_u28318_candidates_20261119/selection/selection.json",
+    "publication_receipt": "docs/handoffs/segmentation/evidence/combo_u28318_candidates_20261119/release_receipt.json",
+    "release_index": {
+      "path": "configs/artifacts/segmentation_dev_candidates.json",
+      "sha256": "1576f4c10a63e448009441d8da48581e8a0c60f1d9a36cd3fbb18484d5e819a3"
+    }
+  },
+  "team_status_at_registration": {
+    "P7": "not_started",
+    "acknowledgements": {
+      "wyz": "pending",
+      "wkq": "pending"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Thu Nov 12 08:05:49 UTC 2026
+Filesystem        1B-blocks        Used    Available Use% Mounted on
+overlay         32212254720  3280687104  28931567616  11% /
+/dev/nvme0n1   214748364800 30866554880 183881809920  15% /root/autodl-tmp
+name, memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+NVIDIA GeForce RTX 3090, 0 MiB, 24125 MiB, 0 %
+pid, process_name, used_gpu_memory [MiB]

@@ -1,0 +1,117 @@
+{
+  "derived_from": "Existing old and new metrics only; no failed-batch replay outside training",
+  "compared_updates": 1314,
+  "fields": [
+    "total_loss",
+    "components",
+    "grad_norm_before_clip",
+    "grad_norm_after_clip",
+    "loss_scale",
+    "learning_rates",
+    "image_ids",
+    "instance_counts",
+    "sampler_epoch"
+  ],
+  "all_compared_values_exactly_equal": false,
+  "mismatch_count": 1314,
+  "first_mismatches": [
+    {
+      "update": 18001,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18002,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip"
+      ]
+    },
+    {
+      "update": 18003,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18004,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip"
+      ]
+    },
+    {
+      "update": 18005,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18006,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18007,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18008,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18009,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    },
+    {
+      "update": 18010,
+      "fields": [
+        "total_loss",
+        "components",
+        "grad_norm_before_clip",
+        "grad_norm_after_clip"
+      ]
+    }
+  ],
+  "prior_metrics": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/metrics.jsonl",
+    "sha256": "02948530441b1ae5ec5a4aee7d0cafeaf972769363f9b2d787978da1330ec6fe",
+    "bytes": 22325219
+  },
+  "new_metrics": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/metrics.jsonl",
+    "sha256": "ddf8b132acfb82d22445f201a2859bc9623fd68d4a9e6925eac8283461ecf30a",
+    "bytes": 3268158
+  }
+}

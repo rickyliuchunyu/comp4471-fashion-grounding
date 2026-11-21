@@ -1,0 +1,8 @@
+test_disabled_trainer_stops_before_output_or_loading (test_tenk_preparation.PlanTests) ... ok
+test_planned_phases_reset_only_once_and_never_exceed_ten_epochs (test_tenk_preparation.PlanTests) ... ok
+test_unapproved_execution_and_changed_evaluation_spacing_rejected (test_tenk_preparation.PlanTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.584s
+
+OK

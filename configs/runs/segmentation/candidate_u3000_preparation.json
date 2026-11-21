@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "purpose": "candidate_delivery_preparation_only",
+  "status": "prepared_not_executed",
+  "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_003000.pth",
+  "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+  "completed_updates": 3000,
+  "model_source_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+  "short_edge": 800,
+  "max_size": 1333,
+  "amp": false,
+  "decoder": "one_foreground_class_per_query",
+  "class_probability": "softmax over 8 foreground plus no-object; argmax over foreground",
+  "mask_logit_threshold": 0,
+  "score": "foreground class probability * mean(sigmoid(mask_logits) on positive mask), denominator area+1e-6",
+  "empty_mask_policy": "discard",
+  "max_candidates": 100,
+  "mask_nms": false,
+  "score_threshold": null,
+  "threshold_selection": {
+    "selected_threshold": null,
+    "query_manifest_sha256": null,
+    "options": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "criterion": "max matched query coverage, then min candidate count on unique dev images, then higher threshold",
+    "status": "not_run_no_accepted_language_dev"
+  },
+  "default_for_future_explicit_diagnostic_only": 0.5,
+  "source_decoder_path": "src/fashion_grounding/segmentation/predict.py",
+  "source_decoder_sha256": "6c9c6b38027961e94705153110b3eed177575074f527fed9e11c12fd5e56a815",
+  "execution_authorized_this_stage": false
+}

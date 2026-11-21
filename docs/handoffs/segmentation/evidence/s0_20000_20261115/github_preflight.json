@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-11-15 07:31:53 UTC",
+  "fetch_status": "success",
+  "branches": [
+    {
+      "branch": "data-eval/p3-baseline-evaluation"
+    },
+    {
+      "branch": "grounding/siglip-baseline-interfaces"
+    },
+    {
+      "branch": "main"
+    },
+    {
+      "branch": "segmentation/pilot-adapter-v1"
+    }
+  ],
+  "prs": [
+    {
+      "number": 2,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "16aa0eb0255f847fc90809628ba769e88db0931a",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "base": "main",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "comments": []
+    }
+  ],
+  "inventory_pr_numbers": [
+    2,
+    5,
+    4,
+    3,
+    1
+  ],
+  "teammate_handoffs_unchanged": true,
+  "source_preparation_commit": "16aa0eb0255f847fc90809628ba769e88db0931a"
+}

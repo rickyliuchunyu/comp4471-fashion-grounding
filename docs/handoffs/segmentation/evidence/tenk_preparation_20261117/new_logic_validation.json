@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "new logic only; no historical suite, smoke, model forward/backward or live checkpoint reload",
+  "local_model_only_and_cosine": {
+    "cases": 4,
+    "passed": 4,
+    "elapsed_seconds": 0.549,
+    "details": [
+      "strict model-only with new optimizer/scheduler/sampler and unchanged new RNG",
+      "wrong source/hash/data and incompatible head rejected",
+      "cosine warmup/midpoint/end and resumed LR without warmup reset",
+      "epoch exposure budget rejects changed image count"
+    ]
+  },
+  "server_new_geometry": {
+    "cases": 4,
+    "passed": 4,
+    "log": "new_geometry_checks.log"
+  },
+  "local_plan_and_launch_guard": {
+    "cases": 3,
+    "passed": 3,
+    "log": "new_plan_checks.log"
+  },
+  "server_metadata_loader": {
+    "real_images": 10000,
+    "real_instances": 39699,
+    "reference": "accepted_training_load.json",
+    "rgb_decode": false,
+    "mask_reaudit": false
+  },
+  "limitations": [
+    "No actual C5k20k model-only load or forward on GPU; strict new loader checked using synthetic CPU checkpoint",
+    "No new full dev AP or training gain measured",
+    "Future multi-segment bounded launch/early-stop execution is not invoked by this preparation entry"
+  ],
+  "local_multistep_backward_compatibility": {
+    "cases": 1,
+    "passed": 1,
+    "log": "new_schedule_compatibility.log",
+    "reason": "Shared scheduler gained cosine; retain the existing minimal multistep constructor and historical checkpoint state keys"
+  }
+}

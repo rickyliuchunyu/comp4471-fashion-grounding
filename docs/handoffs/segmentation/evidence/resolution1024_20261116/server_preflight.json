@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-16T11:18:56.708115+00:00",
+  "disk_free_bytes": {
+    "/": 28929593344,
+    "/root/autodl-tmp/fashion-grounding": 164873617408
+  },
+  "gpu": "index, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]\n0, NVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %",
+  "compute_processes": "pid, process_name, used_gpu_memory [MiB]",
+  "active_records": [],
+  "own_checkout": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+  "own_checkout_status": "",
+  "run_exists": false,
+  "checkpoint_bytes": 528468813,
+  "checkpoint_sidecar": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+  "baseline_report_sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b",
+  "baseline_predictions_bytes": 16094722
+}

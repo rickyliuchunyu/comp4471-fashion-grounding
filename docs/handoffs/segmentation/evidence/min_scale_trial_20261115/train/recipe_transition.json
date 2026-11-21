@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "transition_type": "min_scale_ablation_v1",
+  "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "parent_git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+  "parent_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+  "parent_completed_updates": 18000,
+  "control_config_sha256": "082027ad52aea05413326ea289989ac769bd8b2d15aa17a1d4b3ee9bdd5c64bd",
+  "target_config_sha256": "8370a2e2980b833c86b65b24937af944f97460a27d7c64e0110cb73b90e6310f",
+  "parent_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "target_source_tree": "10539274179674320d1e2c5a74cbff3df6272185",
+  "target_git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+  "control_git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "control_to_target_changes": {
+    "run_scope": {
+      "before": "formal_S0_same_budget_AMP_recovery_update18000_to20000",
+      "after": "single_factor_min_scale_05_update18000_to20000"
+    },
+    "checkpoint_updates": {
+      "before": [
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000
+      ],
+      "after": [
+        20000
+      ]
+    },
+    "budget_seconds": {
+      "before": 8400,
+      "after": 2100
+    },
+    "min_scale": {
+      "before": 0.1,
+      "after": 0.5
+    }
+  },
+  "changed_source_files": [
+    "src/fashion_grounding/segmentation/export_candidates.py",
+    "src/fashion_grounding/segmentation/pipeline.py",
+    "src/fashion_grounding/segmentation/resume_recipe.py",
+    "src/fashion_grounding/segmentation/select_threshold.py",
+    "src/fashion_grounding/segmentation/train.py"
+  ],
+  "restored_state_overrides": {},
+  "update_budget_extended": false,
+  "reason": "Explicitly authorized preparation only: one min_scale factor, same full u18000 state, unchanged LR/AMP/data; future B ends at u20000 under a shared 45-minute cap. No automatic launch or restart.",
+  "policy_sha256": "c6e7488c3403b878acf29713b44f51fdc0b008593f1891d233d7828c7870e693"
+}

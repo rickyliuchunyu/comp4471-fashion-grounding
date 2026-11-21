@@ -1,0 +1,56 @@
+[
+  {
+    "equivalent_epoch": 2,
+    "update": 10000,
+    "status": "completed",
+    "deadline_monotonic": 25428664.610881273,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4530.215119358152
+  },
+  {
+    "equivalent_epoch": 4,
+    "update": 20000,
+    "status": "completed",
+    "deadline_monotonic": 25433194.826413695,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "completed"
+      },
+      {
+        "phase": "full_dev",
+        "status": "completed"
+      },
+      {
+        "phase": "select",
+        "status": "completed"
+      }
+    ],
+    "elapsed_seconds": 4395.539075173438
+  },
+  {
+    "equivalent_epoch": 6,
+    "update": 30000,
+    "status": "running",
+    "deadline_monotonic": 25437590.36610989,
+    "phases": [
+      {
+        "phase": "train",
+        "status": "running"
+      }
+    ]
+  }
+]

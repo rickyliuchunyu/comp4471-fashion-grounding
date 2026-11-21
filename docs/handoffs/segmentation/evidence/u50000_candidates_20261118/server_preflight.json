@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checked_at": "2026-11-17T16:44:04.708527+00:00",
+  "gpu": "0 MiB, 0 %",
+  "gpu_processes": "",
+  "active_coordination": [],
+  "gpu_lock_available": true,
+  "free_data_bytes": 155976876032,
+  "new_query_metadata_checked": true,
+  "query_records": 642,
+  "semantic_groups": 321,
+  "query_images": 246,
+  "query_review_status_counts": {
+    "accepted": 642
+  },
+  "queries_sha256": "ac8d6af9d1b854452627b2f6d72aed58a91bee0642344ac37932f8701fb841d9",
+  "freeze_sha256": "905188c0fdf10b15b1da743f97887c19af8e56705b2a881febf88d272ca2edc8",
+  "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+  "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+  "source_language_manifest_sha256": "d238390354491acb809422415ff6e45ac4a2503a1664da4ab620ded4cceb90cf",
+  "input_manifest_identity_equal": true,
+  "checkpoint_sidecar_matches_selected": true,
+  "decoder_sha256": "6c9c6b38027961e94705153110b3eed177575074f527fed9e11c12fd5e56a815",
+  "consumer_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+  "model_loads": 0,
+  "inference_calls": 0,
+  "optimizer_updates": 0,
+  "smoke_reruns": 0,
+  "reused": "Existing dev250/10k acceptance, model/head/stability/resume, decoder, matcher and consumer implementation evidence."
+}

@@ -1,0 +1,126 @@
+{
+  "record_schema_version": 1,
+  "prepared_at": "2026-11-14",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "status": "prepared_not_exported",
+  "candidate_payload_exists": false,
+  "production_ready": false,
+  "selected_checkpoint": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_003000.pth",
+    "completed_updates": 3000,
+    "dev_mask_AP": 50.56031359695618,
+    "compared_updates": [
+      2000,
+      3000,
+      5000
+    ],
+    "evaluation_reports": [
+      {
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_002000/evaluation_report.json",
+        "sha256": "59e65ff8beba056d709d4f8bd00a307d318f7cefad3972496b9a69b3f3800e69"
+      },
+      {
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000/evaluation_report.json",
+        "sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163"
+      },
+      {
+        "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_005000/evaluation_report.json",
+        "sha256": "77b3829ff39e390e7fba29ffaba5754b9c3e1a34a43968dcfe2ccbaa62be074b"
+      }
+    ]
+  },
+  "selection_record_sha256": "c9bd7e1ba335df7b849b5edacac0c3efd283797585327692a85a4b77382e51cc",
+  "decoder_preparation": {
+    "path": "configs/runs/segmentation/candidate_u3000_preparation.json",
+    "sha256": "debb5e5a2df2e3adc14a9d877dee8ebe08ce1d21dc137a1235ab95362aa11a61"
+  },
+  "runtime_environment": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1",
+  "upstream_model_record": "envs/segmentation/upstream.json",
+  "input_packages": {
+    "train": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "predictions_available": false
+    },
+    "dev": {
+      "path": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+      "manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "ap_predictions_available": true,
+      "language_candidates_available": false
+    }
+  },
+  "existing_dev_predictions": {
+    "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000/predictions.json",
+    "sha256": "ed703ef0039fcb5a355eed6435824696f1153efaced604962b12d2f2026d54ed",
+    "decoder": "upstream query-class top100",
+    "fields": [
+      "image_id",
+      "category_id",
+      "score",
+      "segmentation"
+    ],
+    "missing": [
+      "decoder_query_id",
+      "class_logits",
+      "mask_logits"
+    ],
+    "cannot_reconstruct_language_candidates_reason": "Top100 query-class selection is lossy. Equal binary masks do not establish query identity. Combined score does not recover class/mask logits; assigning output rank as query ID would be fabricated."
+  },
+  "consumer": {
+    "wyz_commit": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+    "path": "src/fashion_grounding/grounding/inputs.py",
+    "api": "CandidatePack(path).load(image_id); crop_regions(image, candidates)",
+    "schema_version": 3,
+    "acceptance_status": "prior small-package interface evidence reused; new u3000 payload not yet available or accepted"
+  },
+  "payload_contract": {
+    "candidate_source": "predicted",
+    "illustrative_only": false,
+    "source_annotation_id": null,
+    "candidate_id": "image-{image_id}-query-{decoder_query_id:03d}",
+    "order": "score descending, then candidate_id lexicographic",
+    "one_candidate_per_decoder_query": true,
+    "mask": "original HxW compressed COCO RLE; relative reference and SHA256",
+    "bbox": "original pixels xyxy exclusive max, computed only from predicted mask",
+    "required_files": [
+      "image_manifest.json",
+      "candidates_predicted.json",
+      "masks/*.json",
+      "images/*",
+      "resolved_decoder_config.json",
+      "run_metadata.json"
+    ],
+    "no_candidates": "preserve each image row; do not drop queries",
+    "inference_error": "distinct from zero candidates; propagate error"
+  },
+  "remaining_work": [
+    {
+      "item": "One authorized forward pass per needed image with pinned u3000 and one-class-per-query decoder; retain pre-threshold candidate cache with real query IDs for offline 0.3/0.5/0.7 filtering",
+      "status": "not_authorized_this_stage_not_run"
+    },
+    {
+      "item": "Accepted frozen language dev and query hash for registered threshold choice",
+      "status": "upstream_pending"
+    },
+    {
+      "item": "Production candidate CLI/orchestration around existing predict_instances/export_package; current evaluate export is diagnostic-only",
+      "status": "not_implemented_for_formal_export"
+    },
+    {
+      "item": "A/B receive actual candidate payload, verify changed package geometry/order/provenance, create a new predicted cache namespace",
+      "status": "pending_payload"
+    }
+  ],
+  "forbidden_shortcuts": [
+    "AP result row rank as decoder query ID",
+    "deduplicating binary masks and claiming exact query identity",
+    "GT-derived mask corrections",
+    "using pending language queries as accepted",
+    "calling raw AP recall matched query coverage"
+  ],
+  "gpu_inference_calls_this_stage": 0,
+  "optimizer_updates_this_stage": 0
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "phase": "train",
+    "status": "failed",
+    "started_at": "2026-11-15T07:33:22.415663+00:00",
+    "command": [
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "-m",
+      "fashion_grounding.segmentation.train",
+      "--package",
+      "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+      "--source",
+      "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+      "--resume",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_005000.pth",
+      "--resume-extension",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resume_5000_to_20000.json",
+      "--config",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_resume_20000.json",
+      "--output",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train"
+    ],
+    "exit_code": 1,
+    "finished_at": "2026-11-15T09:05:23.876235+00:00"
+  }
+]

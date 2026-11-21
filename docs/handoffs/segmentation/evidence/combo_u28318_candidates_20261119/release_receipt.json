@@ -1,0 +1,15 @@
+{
+  "status": "published_and_readback_verified",
+  "published_at": "2026-11-19T07:22:35.616535+00:00",
+  "run_id": "segmentation-combo-u28318-dev-candidates-20261119-r01",
+  "release_id": "combo-u28318-dev250-20261119-r01",
+  "checkpoint_sha256": "b7146787a1fc8f16f4694f2a9d05c294a49090b095de901b63b963f162a640c1",
+  "candidate_manifest_sha256": "4daf79030f88bc285d35272cc8e7160e0143d99216b05740a3569f946bb186bd",
+  "source_cache_sha256": "beb84fab9ee980b564be2d74966a931fea0b0a54b9613dc3508d474bd9d75132",
+  "selected_threshold": 0.3,
+  "current_index": {
+    "path": "/root/autodl-tmp/fashion-grounding/shared/candidates/SEGMENTATION_DEV_CURRENT.json",
+    "sha256": "1576f4c10a63e448009441d8da48581e8a0c60f1d9a36cd3fbb18484d5e819a3"
+  },
+  "previous_release_id": "u28318-dev250-20261118-r01"
+}

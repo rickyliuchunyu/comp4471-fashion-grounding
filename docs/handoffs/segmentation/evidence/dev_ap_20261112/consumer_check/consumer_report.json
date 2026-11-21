@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "grounding_commit": "66c0da7e066c1235ee618ea7015171e73b82c914",
+  "reader_path": "src/fashion_grounding/grounding/inputs.py",
+  "reader_sha256": "74153d2e43d34379d9f6b9b0c9537742402010b00c140935ada7191d03cb13a8",
+  "packages": [
+    {
+      "candidate_manifest_sha256": "a41fd3b6ee3c1288b6edf473259498f5164a490b33288ea7480ebde2fc45b59a",
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-ap-integration-20261112-r01/update_000100/candidate_package/candidates_predicted.json",
+      "images": 20,
+      "candidates": 39,
+      "statuses": {
+        "no_candidates": 6,
+        "ok": 14
+      },
+      "default_diagnostic_rejection": true,
+      "image_mask_hash_geometry_crop_and_order_checks": "passed"
+    },
+    {
+      "candidate_manifest_sha256": "3bccdf35a2650d8c22bedaf16a726bd5e71a8825ff119a584ab25570ca169e1f",
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-ap-integration-20261112-r01/update_000200/candidate_package/candidates_predicted.json",
+      "images": 20,
+      "candidates": 11,
+      "statuses": {
+        "no_candidates": 12,
+        "ok": 8
+      },
+      "default_diagnostic_rejection": true,
+      "image_mask_hash_geometry_crop_and_order_checks": "passed"
+    }
+  ],
+  "scope": "candidate consumption only; no encoder, language accuracy or dev acceptance"
+}

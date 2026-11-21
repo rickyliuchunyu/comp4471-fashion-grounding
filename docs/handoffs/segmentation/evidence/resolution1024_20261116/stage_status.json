@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "started_at": "2026-11-16T11:19:47.904080+00:00",
+  "hard_limit_seconds": 900,
+  "git_commit": "7d1fa7502ea4f7971e8e5c101876522a75da138b",
+  "automatic_restart": false,
+  "new_inference_passes_authorized": 1,
+  "training_updates": 0,
+  "elapsed_seconds": 137.85926482081413,
+  "finished_at": "2026-11-16T11:22:05.663136+00:00"
+}

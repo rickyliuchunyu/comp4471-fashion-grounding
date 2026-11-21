@@ -1,0 +1,2181 @@
+{
+  "status": "completed",
+  "checked_at": "2026-11-17T08:39:29.071210+00:00",
+  "input": {
+    "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54"
+  },
+  "config": {
+    "seed": 42,
+    "image_manifest_sha256": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotation_sha256": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+    "learning_rate": 0.0001,
+    "backbone_lr_multiplier": 0.1,
+    "weight_decay": 0.05,
+    "weight_decay_norm": 0.0,
+    "weight_decay_embed": 0.0,
+    "microbatch_images": 2,
+    "accumulation_steps": 1,
+    "effective_batch_images": 2,
+    "warmup_updates": 500,
+    "warmup_start_factor": 0.001,
+    "lr_milestones": [
+      12000,
+      16000
+    ],
+    "lr_decay": 0.1,
+    "amp": true,
+    "amp_initial_scale": 1.0,
+    "gradient_clip_norm": 0.01,
+    "image_size": 768,
+    "min_scale": 0.5,
+    "max_scale": 2.0,
+    "random_flip": "horizontal",
+    "amp_recovery": {
+      "max_retries_per_update": 4,
+      "max_overflow_events": 16,
+      "min_loss_scale": 0.0001
+    },
+    "target_crop": {
+      "version": 1,
+      "probability": 0.25,
+      "max_source_area": 1024,
+      "min_context_fraction": 0.5,
+      "bbox_context_multiplier": 3.0
+    }
+  },
+  "seed": 20261117,
+  "views": 4,
+  "selected_images": 384,
+  "parent_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+  "image_ids_by_cohort": {
+    "uniform": [
+      222,
+      967,
+      1076,
+      1533,
+      1814,
+      2063,
+      2280,
+      2765,
+      2778,
+      2833,
+      4627,
+      4713,
+      4828,
+      5010,
+      5411,
+      6338,
+      7112,
+      7333,
+      7434,
+      7784,
+      7807,
+      9774,
+      11624,
+      11910,
+      12426,
+      12593,
+      13159,
+      13272,
+      13373,
+      13614,
+      14339,
+      14373,
+      14531,
+      15157,
+      15169,
+      15468,
+      16241,
+      16343,
+      16516,
+      16546,
+      17080,
+      17411,
+      17470,
+      17929,
+      18212,
+      18397,
+      19995,
+      20130,
+      20763,
+      20817,
+      21946,
+      22627,
+      23908,
+      24026,
+      24115,
+      24946,
+      24947,
+      24981,
+      25041,
+      25078,
+      25498,
+      25698,
+      25908,
+      26014,
+      26195,
+      26230,
+      26651,
+      26735,
+      26764,
+      27218,
+      27224,
+      27283,
+      27892,
+      28098,
+      28786,
+      28799,
+      28824,
+      28942,
+      29223,
+      30026,
+      30093,
+      31216,
+      31266,
+      31438,
+      31465,
+      32063,
+      32089,
+      33043,
+      33483,
+      33585,
+      34128,
+      34159,
+      34572,
+      34850,
+      34978,
+      35288,
+      35622,
+      36070,
+      36138,
+      36781,
+      37180,
+      37370,
+      37543,
+      37636,
+      37734,
+      39043,
+      39130,
+      39262,
+      39270,
+      39832,
+      40182,
+      40754,
+      41754,
+      42725,
+      43375,
+      43502,
+      44723,
+      45409,
+      46060,
+      46204,
+      46432,
+      46511,
+      47548,
+      47697,
+      47901,
+      47918,
+      49260,
+      50002
+    ],
+    "targeted": [
+      58,
+      251,
+      285,
+      513,
+      529,
+      554,
+      859,
+      910,
+      935,
+      978,
+      1244,
+      1423,
+      1475,
+      1590,
+      1643,
+      1859,
+      1879,
+      1976,
+      1989,
+      1991,
+      1995,
+      2182,
+      2287,
+      2321,
+      2336,
+      2975,
+      3011,
+      3216,
+      3221,
+      3331,
+      3334,
+      3601,
+      3611,
+      3726,
+      3794,
+      3927,
+      3970,
+      4078,
+      4095,
+      4891,
+      5051,
+      5143,
+      5155,
+      5249,
+      5358,
+      5415,
+      5516,
+      5657,
+      5834,
+      5860,
+      5983,
+      6049,
+      6192,
+      6244,
+      6313,
+      6319,
+      6457,
+      6490,
+      6519,
+      6585,
+      6629,
+      6669,
+      6688,
+      7480,
+      7497,
+      7616,
+      7935,
+      7978,
+      8162,
+      8249,
+      8252,
+      8259,
+      8274,
+      8444,
+      8825,
+      8900,
+      9428,
+      9697,
+      10074,
+      10300,
+      10372,
+      10600,
+      10706,
+      10950,
+      11106,
+      11546,
+      11639,
+      12086,
+      12225,
+      12984,
+      12991,
+      13041,
+      13278,
+      13448,
+      13602,
+      13921,
+      14243,
+      14587,
+      14883,
+      15149,
+      15371,
+      15481,
+      15826,
+      16130,
+      16203,
+      16260,
+      16627,
+      16808,
+      16969,
+      17283,
+      17364,
+      17381,
+      17706,
+      18622,
+      18663,
+      18823,
+      18903,
+      19201,
+      19366,
+      19393,
+      19523,
+      20245,
+      20324,
+      20508,
+      20700,
+      20773,
+      20781,
+      20835,
+      20908,
+      20929,
+      21719,
+      21859,
+      21866,
+      21919,
+      21942,
+      22131,
+      22349,
+      22429,
+      22449,
+      22497,
+      22541,
+      22625,
+      22634,
+      22694,
+      22743,
+      22991,
+      23009,
+      23034,
+      23089,
+      23183,
+      23367,
+      23411,
+      23449,
+      23476,
+      23752,
+      23789,
+      24179,
+      24211,
+      24256,
+      24361,
+      24438,
+      24513,
+      24669,
+      24693,
+      24821,
+      24993,
+      25007,
+      25132,
+      25232,
+      25398,
+      25673,
+      25992,
+      25993,
+      26104,
+      26118,
+      26159,
+      26261,
+      26314,
+      26335,
+      26377,
+      26408,
+      26450,
+      26686,
+      27584,
+      28306,
+      28622,
+      28930,
+      29393,
+      29880,
+      30412,
+      30433,
+      31176,
+      31540,
+      31726,
+      31749,
+      31876,
+      32091,
+      32234,
+      33032,
+      33229,
+      33438,
+      33763,
+      33972,
+      34122,
+      34693,
+      35182,
+      35434,
+      35483,
+      36290,
+      36446,
+      36778,
+      37071,
+      38399,
+      38415,
+      38865,
+      39000,
+      39198,
+      39612,
+      39671,
+      39852,
+      39865,
+      39934,
+      40406,
+      41046,
+      41513,
+      41539,
+      41888,
+      41943,
+      42197,
+      42385,
+      42475,
+      42797,
+      42914,
+      43187,
+      43662,
+      44407,
+      44729,
+      44786,
+      45177,
+      45459,
+      45704,
+      46429,
+      47040,
+      47387,
+      47399,
+      47416,
+      47699,
+      48483,
+      48990,
+      49014,
+      49073,
+      49369,
+      49607,
+      50126,
+      50448,
+      50452
+    ]
+  },
+  "groups": {
+    "added5k/non_small": {
+      "observations": 3228,
+      "unique_instances": 807,
+      "unique_images": 203,
+      "disappeared_count": 343,
+      "disappeared_rate": 0.10625774473358117,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 570,
+      "retained_below_half_rate": 0.17657992565055763,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 5460.5,
+        "p90": 65495.90000000002
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 83.0,
+        "p90": 277.3000000000002
+      },
+      "area_below_64_rate": 0.11028500619578686
+    },
+    "added5k/small": {
+      "observations": 1692,
+      "unique_instances": 423,
+      "unique_images": 166,
+      "disappeared_count": 204,
+      "disappeared_rate": 0.12056737588652482,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 238,
+      "retained_below_half_rate": 0.14066193853427897,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 287.0,
+        "p90": 1386.000000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 19.0,
+        "p90": 46.0
+      },
+      "area_below_64_rate": 0.2293144208037825
+    },
+    "all/non_small": {
+      "observations": 5952,
+      "unique_instances": 1488,
+      "unique_images": 384,
+      "disappeared_count": 645,
+      "disappeared_rate": 0.10836693548387097,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 1082,
+      "retained_below_half_rate": 0.18178763440860216,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 5368.5,
+        "p90": 70667.50000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 83.0,
+        "p90": 284.0
+      },
+      "area_below_64_rate": 0.11340725806451613
+    },
+    "all/small": {
+      "observations": 2744,
+      "unique_instances": 686,
+      "unique_images": 305,
+      "disappeared_count": 350,
+      "disappeared_rate": 0.12755102040816327,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 401,
+      "retained_below_half_rate": 0.14613702623906705,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 279.0,
+        "p90": 1391.2000000000016
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 19.0,
+        "p90": 46.0
+      },
+      "area_below_64_rate": 0.23068513119533526
+    },
+    "context_views/non_small": {
+      "observations": 1108,
+      "unique_instances": 836,
+      "unique_images": 203,
+      "disappeared_count": 237,
+      "disappeared_rate": 0.213898916967509,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 401,
+      "retained_below_half_rate": 0.361913357400722,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 8504.5,
+        "p90": 98317.90000000005
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 0.8401824732953724,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 99.0,
+        "p90": 321.30000000000007
+      },
+      "area_below_64_rate": 0.22202166064981949
+    },
+    "context_views/small": {
+      "observations": 603,
+      "unique_instances": 448,
+      "unique_images": 203,
+      "disappeared_count": 104,
+      "disappeared_rate": 0.1724709784411277,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 115,
+      "retained_below_half_rate": 0.19071310116086235,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 762.0,
+        "p90": 1986.4000000000005
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 30.0,
+        "p90": 59.0
+      },
+      "area_below_64_rate": 0.19900497512437812
+    },
+    "fine/bag, wallet/non_small": {
+      "observations": 432,
+      "unique_instances": 108,
+      "unique_images": 96,
+      "disappeared_count": 12,
+      "disappeared_rate": 0.027777777777777776,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 39,
+      "retained_below_half_rate": 0.09027777777777778,
+      "augmented_area_quantiles": {
+        "p10": 922.3,
+        "p50": 5619.5,
+        "p90": 28799.6
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.5700971550707853,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 37.1,
+        "p50": 93.0,
+        "p90": 195.0
+      },
+      "area_below_64_rate": 0.032407407407407406
+    },
+    "fine/bag, wallet/small": {
+      "observations": 132,
+      "unique_instances": 33,
+      "unique_images": 30,
+      "disappeared_count": 5,
+      "disappeared_rate": 0.03787878787878788,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 6,
+      "retained_below_half_rate": 0.045454545454545456,
+      "augmented_area_quantiles": {
+        "p10": 119.4,
+        "p50": 684.0,
+        "p90": 1817.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 10.100000000000001,
+        "p50": 31.0,
+        "p90": 73.50000000000003
+      },
+      "area_below_64_rate": 0.06060606060606061
+    },
+    "fine/belt/non_small": {
+      "observations": 132,
+      "unique_instances": 33,
+      "unique_images": 32,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.015151515151515152,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 7,
+      "retained_below_half_rate": 0.05303030303030303,
+      "augmented_area_quantiles": {
+        "p10": 367.8,
+        "p50": 2555.5,
+        "p90": 8151.100000000006
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.849542433324564,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 16.1,
+        "p50": 52.5,
+        "p90": 113.60000000000002
+      },
+      "area_below_64_rate": 0.022727272727272728
+    },
+    "fine/belt/small": {
+      "observations": 212,
+      "unique_instances": 53,
+      "unique_images": 53,
+      "disappeared_count": 8,
+      "disappeared_rate": 0.03773584905660377,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 9,
+      "retained_below_half_rate": 0.04245283018867924,
+      "augmented_area_quantiles": {
+        "p10": 60.1,
+        "p50": 429.5,
+        "p90": 1735.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 6.0,
+        "p50": 18.0,
+        "p90": 43.0
+      },
+      "area_below_64_rate": 0.10849056603773585
+    },
+    "fine/cape/non_small": {
+      "observations": 4,
+      "unique_instances": 1,
+      "unique_images": 1,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 104487.7,
+        "p50": 144288.5,
+        "p90": 178428.4
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.7505018728155162,
+        "p50": 0.9500568219070307,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 213.4,
+        "p50": 285.5,
+        "p90": 330.3
+      },
+      "area_below_64_rate": 0.0
+    },
+    "fine/cardigan/non_small": {
+      "observations": 48,
+      "unique_instances": 12,
+      "unique_images": 12,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 2,
+      "retained_below_half_rate": 0.041666666666666664,
+      "augmented_area_quantiles": {
+        "p10": 9138.1,
+        "p50": 35740.5,
+        "p90": 134999.00000000003
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.6530164444839219,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 145.0,
+        "p50": 258.5,
+        "p90": 548.7000000000002
+      },
+      "area_below_64_rate": 0.0
+    },
+    "fine/coat/non_small": {
+      "observations": 232,
+      "unique_instances": 58,
+      "unique_images": 56,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 12,
+      "retained_below_half_rate": 0.05172413793103448,
+      "augmented_area_quantiles": {
+        "p10": 6554.1,
+        "p50": 31128.0,
+        "p90": 110969.50000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.6563876808415642,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 83.1,
+        "p50": 196.0,
+        "p90": 380.70000000000005
+      },
+      "area_below_64_rate": 0.0
+    },
+    "fine/coat/small": {
+      "observations": 16,
+      "unique_instances": 4,
+      "unique_images": 3,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 16.5,
+        "p50": 82.5,
+        "p90": 484.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 3.0,
+        "p50": 10.0,
+        "p90": 29.0
+      },
+      "area_below_64_rate": 0.375
+    },
+    "fine/dress/non_small": {
+      "observations": 468,
+      "unique_instances": 117,
+      "unique_images": 117,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.004273504273504274,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 25,
+      "retained_below_half_rate": 0.053418803418803416,
+      "augmented_area_quantiles": {
+        "p10": 11959.5,
+        "p50": 58661.5,
+        "p90": 154790.90000000002
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.6146114786248856,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 99.0,
+        "p50": 229.5,
+        "p90": 399.3
+      },
+      "area_below_64_rate": 0.004273504273504274
+    },
+    "fine/dress/small": {
+      "observations": 12,
+      "unique_instances": 3,
+      "unique_images": 3,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 109.3,
+        "p50": 196.5,
+        "p90": 716.1
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 5.2,
+        "p50": 10.5,
+        "p90": 42.9
+      },
+      "area_below_64_rate": 0.08333333333333333
+    },
+    "fine/glasses/non_small": {
+      "observations": 148,
+      "unique_instances": 37,
+      "unique_images": 37,
+      "disappeared_count": 43,
+      "disappeared_rate": 0.2905405405405405,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 44,
+      "retained_below_half_rate": 0.2972972972972973,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 851.5,
+        "p90": 3918.900000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 25.0,
+        "p90": 69.60000000000002
+      },
+      "area_below_64_rate": 0.2905405405405405
+    },
+    "fine/glasses/small": {
+      "observations": 276,
+      "unique_instances": 69,
+      "unique_images": 69,
+      "disappeared_count": 31,
+      "disappeared_rate": 0.11231884057971014,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 33,
+      "retained_below_half_rate": 0.11956521739130435,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 254.5,
+        "p90": 1227.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 17.5,
+        "p90": 36.0
+      },
+      "area_below_64_rate": 0.19202898550724637
+    },
+    "fine/glove/non_small": {
+      "observations": 100,
+      "unique_instances": 25,
+      "unique_images": 20,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.01,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 3,
+      "retained_below_half_rate": 0.03,
+      "augmented_area_quantiles": {
+        "p10": 379.6,
+        "p50": 1824.5,
+        "p90": 5005.1
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 18.9,
+        "p50": 48.0,
+        "p90": 85.20000000000002
+      },
+      "area_below_64_rate": 0.01
+    },
+    "fine/glove/small": {
+      "observations": 104,
+      "unique_instances": 26,
+      "unique_images": 20,
+      "disappeared_count": 4,
+      "disappeared_rate": 0.038461538461538464,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 7,
+      "retained_below_half_rate": 0.0673076923076923,
+      "augmented_area_quantiles": {
+        "p10": 99.6,
+        "p50": 635.0,
+        "p90": 1814.7
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 8.3,
+        "p50": 23.0,
+        "p90": 45.400000000000006
+      },
+      "area_below_64_rate": 0.0673076923076923
+    },
+    "fine/hat/non_small": {
+      "observations": 152,
+      "unique_instances": 38,
+      "unique_images": 37,
+      "disappeared_count": 22,
+      "disappeared_rate": 0.14473684210526316,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 37,
+      "retained_below_half_rate": 0.24342105263157895,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 2270.5,
+        "p90": 12467.600000000011
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 58.0,
+        "p90": 116.0
+      },
+      "area_below_64_rate": 0.17763157894736842
+    },
+    "fine/hat/small": {
+      "observations": 72,
+      "unique_instances": 18,
+      "unique_images": 18,
+      "disappeared_count": 4,
+      "disappeared_rate": 0.05555555555555555,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 4,
+      "retained_below_half_rate": 0.05555555555555555,
+      "augmented_area_quantiles": {
+        "p10": 95.10000000000001,
+        "p50": 751.5,
+        "p90": 1691.1
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 15.0,
+        "p50": 35.5,
+        "p90": 57.0
+      },
+      "area_below_64_rate": 0.05555555555555555
+    },
+    "fine/headband, head covering, hair accessory/non_small": {
+      "observations": 52,
+      "unique_instances": 13,
+      "unique_images": 13,
+      "disappeared_count": 13,
+      "disappeared_rate": 0.25,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 18,
+      "retained_below_half_rate": 0.34615384615384615,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 1096.0,
+        "p90": 10571.499999999998
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 46.5,
+        "p90": 136.8
+      },
+      "area_below_64_rate": 0.25
+    },
+    "fine/headband, head covering, hair accessory/small": {
+      "observations": 164,
+      "unique_instances": 41,
+      "unique_images": 37,
+      "disappeared_count": 35,
+      "disappeared_rate": 0.21341463414634146,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 38,
+      "retained_below_half_rate": 0.23170731707317074,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 119.0,
+        "p90": 846.9000000000004
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 14.0,
+        "p90": 44.400000000000034
+      },
+      "area_below_64_rate": 0.3902439024390244
+    },
+    "fine/jacket/non_small": {
+      "observations": 336,
+      "unique_instances": 84,
+      "unique_images": 83,
+      "disappeared_count": 5,
+      "disappeared_rate": 0.01488095238095238,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 26,
+      "retained_below_half_rate": 0.07738095238095238,
+      "augmented_area_quantiles": {
+        "p10": 4782.0,
+        "p50": 35522.0,
+        "p90": 111646.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.626868810745004,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 77.5,
+        "p50": 206.5,
+        "p90": 386.0
+      },
+      "area_below_64_rate": 0.01488095238095238
+    },
+    "fine/jacket/small": {
+      "observations": 12,
+      "unique_instances": 3,
+      "unique_images": 3,
+      "disappeared_count": 3,
+      "disappeared_rate": 0.25,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 3,
+      "retained_below_half_rate": 0.25,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 66.0,
+        "p90": 1027.7000000000003
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 10.5,
+        "p90": 40.2
+      },
+      "area_below_64_rate": 0.5
+    },
+    "fine/leg warmer/non_small": {
+      "observations": 4,
+      "unique_instances": 1,
+      "unique_images": 1,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 4029.2,
+        "p50": 7341.5,
+        "p90": 10259.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 66.5,
+        "p50": 88.0,
+        "p90": 106.0
+      },
+      "area_below_64_rate": 0.0
+    },
+    "fine/leg warmer/small": {
+      "observations": 4,
+      "unique_instances": 1,
+      "unique_images": 1,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.25,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 1,
+      "retained_below_half_rate": 0.25,
+      "augmented_area_quantiles": {
+        "p10": 144.60000000000002,
+        "p50": 559.0,
+        "p90": 773.2
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.30000000000000004,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 7.200000000000001,
+        "p50": 25.5,
+        "p90": 29.8
+      },
+      "area_below_64_rate": 0.25
+    },
+    "fine/pants/non_small": {
+      "observations": 556,
+      "unique_instances": 139,
+      "unique_images": 136,
+      "disappeared_count": 20,
+      "disappeared_rate": 0.03597122302158273,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 76,
+      "retained_below_half_rate": 0.1366906474820144,
+      "augmented_area_quantiles": {
+        "p10": 3563.0,
+        "p50": 20848.5,
+        "p90": 71063.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.33366186404686243,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 55.0,
+        "p50": 147.0,
+        "p90": 274.0
+      },
+      "area_below_64_rate": 0.039568345323741004
+    },
+    "fine/pants/small": {
+      "observations": 20,
+      "unique_instances": 5,
+      "unique_images": 5,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 2,
+      "retained_below_half_rate": 0.1,
+      "augmented_area_quantiles": {
+        "p10": 52.5,
+        "p50": 146.5,
+        "p90": 1349.4000000000015
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.8924333974182918,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 5.9,
+        "p50": 12.0,
+        "p90": 33.90000000000004
+      },
+      "area_below_64_rate": 0.15
+    },
+    "fine/scarf/non_small": {
+      "observations": 72,
+      "unique_instances": 18,
+      "unique_images": 18,
+      "disappeared_count": 8,
+      "disappeared_rate": 0.1111111111111111,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 10,
+      "retained_below_half_rate": 0.1388888888888889,
+      "augmented_area_quantiles": {
+        "p10": 64.90000000000035,
+        "p50": 5606.0,
+        "p90": 33267.299999999996
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.03045567948341666,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 2.800000000000015,
+        "p50": 100.0,
+        "p90": 210.09999999999997
+      },
+      "area_below_64_rate": 0.1111111111111111
+    },
+    "fine/scarf/small": {
+      "observations": 40,
+      "unique_instances": 10,
+      "unique_images": 10,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.05,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 2,
+      "retained_below_half_rate": 0.05,
+      "augmented_area_quantiles": {
+        "p10": 74.50000000000001,
+        "p50": 443.0,
+        "p90": 1819.8000000000002
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 8.700000000000001,
+        "p50": 28.0,
+        "p90": 61.30000000000002
+      },
+      "area_below_64_rate": 0.1
+    },
+    "fine/shirt, blouse/non_small": {
+      "observations": 276,
+      "unique_instances": 69,
+      "unique_images": 69,
+      "disappeared_count": 5,
+      "disappeared_rate": 0.018115942028985508,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 28,
+      "retained_below_half_rate": 0.10144927536231885,
+      "augmented_area_quantiles": {
+        "p10": 1167.0,
+        "p50": 10121.5,
+        "p90": 114064.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.5056762662915307,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 49.5,
+        "p50": 159.5,
+        "p90": 389.5
+      },
+      "area_below_64_rate": 0.021739130434782608
+    },
+    "fine/shirt, blouse/small": {
+      "observations": 60,
+      "unique_instances": 15,
+      "unique_images": 15,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.016666666666666666,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 1,
+      "retained_below_half_rate": 0.016666666666666666,
+      "augmented_area_quantiles": {
+        "p10": 16.6,
+        "p50": 304.5,
+        "p90": 1302.6000000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 6.0,
+        "p50": 30.0,
+        "p90": 102.10000000000002
+      },
+      "area_below_64_rate": 0.21666666666666667
+    },
+    "fine/shoe/non_small": {
+      "observations": 1616,
+      "unique_instances": 404,
+      "unique_images": 236,
+      "disappeared_count": 441,
+      "disappeared_rate": 0.2728960396039604,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 595,
+      "retained_below_half_rate": 0.3681930693069307,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 936.0,
+        "p90": 5095.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 33.0,
+        "p90": 80.0
+      },
+      "area_below_64_rate": 0.2834158415841584
+    },
+    "fine/shoe/small": {
+      "observations": 608,
+      "unique_instances": 152,
+      "unique_images": 112,
+      "disappeared_count": 132,
+      "disappeared_rate": 0.21710526315789475,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 158,
+      "retained_below_half_rate": 0.2598684210526316,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 283.5,
+        "p90": 1461.500000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 20.0,
+        "p90": 49.30000000000007
+      },
+      "area_below_64_rate": 0.2631578947368421
+    },
+    "fine/shorts/non_small": {
+      "observations": 140,
+      "unique_instances": 35,
+      "unique_images": 35,
+      "disappeared_count": 5,
+      "disappeared_rate": 0.03571428571428571,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 14,
+      "retained_below_half_rate": 0.1,
+      "augmented_area_quantiles": {
+        "p10": 685.6,
+        "p50": 6948.5,
+        "p90": 56611.60000000005
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.5607568863406838,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 25.0,
+        "p50": 90.5,
+        "p90": 227.0
+      },
+      "area_below_64_rate": 0.04285714285714286
+    },
+    "fine/shorts/small": {
+      "observations": 52,
+      "unique_instances": 13,
+      "unique_images": 12,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.038461538461538464,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 2,
+      "retained_below_half_rate": 0.038461538461538464,
+      "augmented_area_quantiles": {
+        "p10": 84.3,
+        "p50": 418.5,
+        "p90": 1423.6
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 8.100000000000001,
+        "p50": 25.0,
+        "p90": 54.0
+      },
+      "area_below_64_rate": 0.07692307692307693
+    },
+    "fine/skirt/non_small": {
+      "observations": 188,
+      "unique_instances": 47,
+      "unique_images": 47,
+      "disappeared_count": 7,
+      "disappeared_rate": 0.03723404255319149,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 16,
+      "retained_below_half_rate": 0.0851063829787234,
+      "augmented_area_quantiles": {
+        "p10": 3919.6,
+        "p50": 20168.5,
+        "p90": 73988.50000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.5156726765027839,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 54.4,
+        "p50": 143.5,
+        "p90": 268.3
+      },
+      "area_below_64_rate": 0.03723404255319149
+    },
+    "fine/skirt/small": {
+      "observations": 8,
+      "unique_instances": 2,
+      "unique_images": 1,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 1,
+      "retained_below_half_rate": 0.125,
+      "augmented_area_quantiles": {
+        "p10": 36.0,
+        "p50": 121.5,
+        "p90": 249.19999999999996
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.38762651821862354,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 3.8000000000000003,
+        "p50": 6.5,
+        "p90": 10.899999999999999
+      },
+      "area_below_64_rate": 0.375
+    },
+    "fine/sock/non_small": {
+      "observations": 56,
+      "unique_instances": 14,
+      "unique_images": 11,
+      "disappeared_count": 15,
+      "disappeared_rate": 0.26785714285714285,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 16,
+      "retained_below_half_rate": 0.2857142857142857,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 776.5,
+        "p90": 2973.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 24.5,
+        "p90": 53.5
+      },
+      "area_below_64_rate": 0.26785714285714285
+    },
+    "fine/sock/small": {
+      "observations": 476,
+      "unique_instances": 119,
+      "unique_images": 69,
+      "disappeared_count": 85,
+      "disappeared_rate": 0.17857142857142858,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 92,
+      "retained_below_half_rate": 0.19327731092436976,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 113.5,
+        "p90": 858.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 12.0,
+        "p90": 35.0
+      },
+      "area_below_64_rate": 0.41386554621848737
+    },
+    "fine/sweater/non_small": {
+      "observations": 60,
+      "unique_instances": 15,
+      "unique_images": 15,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.016666666666666666,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 8,
+      "retained_below_half_rate": 0.13333333333333333,
+      "augmented_area_quantiles": {
+        "p10": 5785.1,
+        "p50": 32977.0,
+        "p90": 251974.60000000006
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.43220635125222073,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 79.10000000000001,
+        "p50": 218.5,
+        "p90": 669.0000000000001
+      },
+      "area_below_64_rate": 0.016666666666666666
+    },
+    "fine/sweater/small": {
+      "observations": 12,
+      "unique_instances": 3,
+      "unique_images": 3,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.08333333333333333,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 1,
+      "retained_below_half_rate": 0.08333333333333333,
+      "augmented_area_quantiles": {
+        "p10": 102.4,
+        "p50": 520.0,
+        "p90": 1084.1000000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 13.8,
+        "p50": 31.5,
+        "p90": 93.0
+      },
+      "area_below_64_rate": 0.08333333333333333
+    },
+    "fine/tie/non_small": {
+      "observations": 32,
+      "unique_instances": 8,
+      "unique_images": 8,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.0625,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 3,
+      "retained_below_half_rate": 0.09375,
+      "augmented_area_quantiles": {
+        "p10": 225.10000000000002,
+        "p50": 1301.5,
+        "p90": 7017.400000000003
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.7496615561875896,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 13.3,
+        "p50": 35.0,
+        "p90": 63.20000000000002
+      },
+      "area_below_64_rate": 0.0625
+    },
+    "fine/tie/small": {
+      "observations": 84,
+      "unique_instances": 21,
+      "unique_images": 21,
+      "disappeared_count": 11,
+      "disappeared_rate": 0.13095238095238096,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 11,
+      "retained_below_half_rate": 0.13095238095238096,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 742.0,
+        "p90": 1684.4
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 27.0,
+        "p90": 44.400000000000006
+      },
+      "area_below_64_rate": 0.14285714285714285
+    },
+    "fine/tights, stockings/non_small": {
+      "observations": 204,
+      "unique_instances": 51,
+      "unique_images": 32,
+      "disappeared_count": 12,
+      "disappeared_rate": 0.058823529411764705,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 35,
+      "retained_below_half_rate": 0.1715686274509804,
+      "augmented_area_quantiles": {
+        "p10": 649.0,
+        "p50": 3972.0,
+        "p90": 13204.900000000005
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.17203356198910755,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 20.0,
+        "p50": 52.5,
+        "p90": 109.70000000000002
+      },
+      "area_below_64_rate": 0.058823529411764705
+    },
+    "fine/tights, stockings/small": {
+      "observations": 84,
+      "unique_instances": 21,
+      "unique_images": 17,
+      "disappeared_count": 10,
+      "disappeared_rate": 0.11904761904761904,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 12,
+      "retained_below_half_rate": 0.14285714285714285,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 247.5,
+        "p90": 1433.5000000000002
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 18.0,
+        "p90": 59.400000000000006
+      },
+      "area_below_64_rate": 0.20238095238095238
+    },
+    "fine/top, t-shirt, sweatshirt/non_small": {
+      "observations": 564,
+      "unique_instances": 141,
+      "unique_images": 137,
+      "disappeared_count": 19,
+      "disappeared_rate": 0.03368794326241135,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 49,
+      "retained_below_half_rate": 0.08687943262411348,
+      "augmented_area_quantiles": {
+        "p10": 1692.1000000000001,
+        "p50": 13608.5,
+        "p90": 133007.99999999994
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.5785472039493662,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 44.0,
+        "p50": 136.0,
+        "p90": 383.4
+      },
+      "area_below_64_rate": 0.03368794326241135
+    },
+    "fine/top, t-shirt, sweatshirt/small": {
+      "observations": 100,
+      "unique_instances": 25,
+      "unique_images": 24,
+      "disappeared_count": 8,
+      "disappeared_rate": 0.08,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 9,
+      "retained_below_half_rate": 0.09,
+      "augmented_area_quantiles": {
+        "p10": 36.9,
+        "p50": 407.5,
+        "p90": 1810.9000000000008
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.8790456319399735,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 8.0,
+        "p50": 23.5,
+        "p90": 46.50000000000004
+      },
+      "area_below_64_rate": 0.16
+    },
+    "fine/umbrella/non_small": {
+      "observations": 12,
+      "unique_instances": 3,
+      "unique_images": 3,
+      "disappeared_count": 2,
+      "disappeared_rate": 0.16666666666666666,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 5,
+      "retained_below_half_rate": 0.4166666666666667,
+      "augmented_area_quantiles": {
+        "p10": 77.90000000000006,
+        "p50": 14701.5,
+        "p90": 48812.40000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.00257059831607183,
+        "p50": 0.9042772919278976,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 3.400000000000003,
+        "p50": 189.0,
+        "p90": 312.3
+      },
+      "area_below_64_rate": 0.16666666666666666
+    },
+    "fine/vest/non_small": {
+      "observations": 44,
+      "unique_instances": 11,
+      "unique_images": 11,
+      "disappeared_count": 1,
+      "disappeared_rate": 0.022727272727272728,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 5,
+      "retained_below_half_rate": 0.11363636363636363,
+      "augmented_area_quantiles": {
+        "p10": 1478.3,
+        "p50": 11276.5,
+        "p90": 50241.700000000026
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.522504876925158,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 31.6,
+        "p50": 116.5,
+        "p90": 281.0
+      },
+      "area_below_64_rate": 0.022727272727272728
+    },
+    "fine/vest/small": {
+      "observations": 16,
+      "unique_instances": 4,
+      "unique_images": 4,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 332.5,
+        "p50": 1172.0,
+        "p90": 1610.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.9130434782608696,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 18.5,
+        "p50": 36.5,
+        "p90": 43.0
+      },
+      "area_below_64_rate": 0.0
+    },
+    "fine/watch/non_small": {
+      "observations": 24,
+      "unique_instances": 6,
+      "unique_images": 5,
+      "disappeared_count": 7,
+      "disappeared_rate": 0.2916666666666667,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 9,
+      "retained_below_half_rate": 0.375,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 414.5,
+        "p90": 1747.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 27.0,
+        "p90": 59.8
+      },
+      "area_below_64_rate": 0.3333333333333333
+    },
+    "fine/watch/small": {
+      "observations": 180,
+      "unique_instances": 45,
+      "unique_images": 45,
+      "disappeared_count": 7,
+      "disappeared_rate": 0.03888888888888889,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 9,
+      "retained_below_half_rate": 0.05,
+      "augmented_area_quantiles": {
+        "p10": 39.800000000000004,
+        "p50": 246.5,
+        "p90": 856.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 8.0,
+        "p50": 19.0,
+        "p90": 37.0
+      },
+      "area_below_64_rate": 0.16666666666666666
+    },
+    "old5k/non_small": {
+      "observations": 2724,
+      "unique_instances": 681,
+      "unique_images": 181,
+      "disappeared_count": 302,
+      "disappeared_rate": 0.11086637298091043,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 512,
+      "retained_below_half_rate": 0.18795888399412627,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 5301.0,
+        "p90": 76999.40000000001
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 84.0,
+        "p90": 289.0
+      },
+      "area_below_64_rate": 0.1171071953010279
+    },
+    "old5k/small": {
+      "observations": 1052,
+      "unique_instances": 263,
+      "unique_images": 139,
+      "disappeared_count": 146,
+      "disappeared_rate": 0.13878326996197718,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 163,
+      "retained_below_half_rate": 0.15494296577946767,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 263.0,
+        "p90": 1406.7999999999995
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 18.0,
+        "p90": 45.89999999999998
+      },
+      "area_below_64_rate": 0.23288973384030418
+    },
+    "selected_targets": {
+      "observations": 269,
+      "unique_instances": 229,
+      "unique_images": 203,
+      "disappeared_count": 0,
+      "disappeared_rate": 0.0,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 0,
+      "retained_below_half_rate": 0.0,
+      "augmented_area_quantiles": {
+        "p10": 247.8,
+        "p50": 1189.0,
+        "p90": 2068.6000000000004
+      },
+      "retained_fraction_quantiles": {
+        "p10": 1.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 16.0,
+        "p50": 39.0,
+        "p90": 67.20000000000002
+      },
+      "area_below_64_rate": 0.01486988847583643
+    },
+    "targeted/extreme": {
+      "observations": 748,
+      "unique_instances": 187,
+      "unique_images": 121,
+      "disappeared_count": 94,
+      "disappeared_rate": 0.12566844919786097,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 102,
+      "retained_below_half_rate": 0.13636363636363635,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 80.0,
+        "p90": 375.9000000000002
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 10.0,
+        "p90": 26.0
+      },
+      "area_below_64_rate": 0.45588235294117646
+    },
+    "targeted/non_small": {
+      "observations": 4336,
+      "unique_instances": 1084,
+      "unique_images": 256,
+      "disappeared_count": 500,
+      "disappeared_rate": 0.11531365313653137,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 799,
+      "retained_below_half_rate": 0.1842712177121771,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 4528.5,
+        "p90": 55378.5
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 76.0,
+        "p90": 255.5
+      },
+      "area_below_64_rate": 0.1194649446494465
+    },
+    "targeted/small": {
+      "observations": 2420,
+      "unique_instances": 605,
+      "unique_images": 256,
+      "disappeared_count": 287,
+      "disappeared_rate": 0.11859504132231405,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 329,
+      "retained_below_half_rate": 0.1359504132231405,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 277.0,
+        "p90": 1364.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 19.0,
+        "p90": 45.09999999999991
+      },
+      "area_below_64_rate": 0.228099173553719
+    },
+    "uniform/extreme": {
+      "observations": 68,
+      "unique_instances": 17,
+      "unique_images": 15,
+      "disappeared_count": 12,
+      "disappeared_rate": 0.17647058823529413,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 12,
+      "retained_below_half_rate": 0.17647058823529413,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 94.5,
+        "p90": 479.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 13.0,
+        "p90": 30.300000000000004
+      },
+      "area_below_64_rate": 0.38235294117647056
+    },
+    "uniform/non_small": {
+      "observations": 1616,
+      "unique_instances": 404,
+      "unique_images": 128,
+      "disappeared_count": 145,
+      "disappeared_rate": 0.08972772277227722,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 283,
+      "retained_below_half_rate": 0.1751237623762376,
+      "augmented_area_quantiles": {
+        "p10": 147.0,
+        "p50": 9580.0,
+        "p90": 113170.0
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.01783158271823347,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 12.0,
+        "p50": 110.0,
+        "p90": 361.5
+      },
+      "area_below_64_rate": 0.09715346534653466
+    },
+    "uniform/small": {
+      "observations": 324,
+      "unique_instances": 81,
+      "unique_images": 49,
+      "disappeared_count": 63,
+      "disappeared_rate": 0.19444444444444445,
+      "vanished_during_resize_count": 0,
+      "vanished_during_resize_rate": 0.0,
+      "retained_below_half_count": 72,
+      "retained_below_half_rate": 0.2222222222222222,
+      "augmented_area_quantiles": {
+        "p10": 0.0,
+        "p50": 310.5,
+        "p90": 1654.1999999999996
+      },
+      "retained_fraction_quantiles": {
+        "p10": 0.0,
+        "p50": 1.0,
+        "p90": 1.0
+      },
+      "min_bbox_side_quantiles": {
+        "p10": 0.0,
+        "p50": 19.0,
+        "p90": 48.0
+      },
+      "area_below_64_rate": 0.25
+    }
+  },
+  "elapsed_seconds": 115.33572450652719,
+  "scope": "train-only geometry; uniform and enriched cohorts separate; repeated views are not independent images",
+  "model_loads": 0,
+  "training_updates": 0,
+  "inference_images": 0,
+  "rgb_files_read": 0,
+  "dev_or_test_read": false,
+  "limitation": "Does not measure AP, semantic annotation correctness, or actual loss-point coverage",
+  "target_context_views": 269,
+  "observations_sha256": "94371becee5415b6bdcf312d085561611a4205f75518517347dcb416b7b24c25"
+}

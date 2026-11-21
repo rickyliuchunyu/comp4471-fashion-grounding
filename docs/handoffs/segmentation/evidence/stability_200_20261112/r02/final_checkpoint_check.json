@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checkpoint_sha256": "9b6a215c9294e3080539a6e03937182df37b4fa3665136283e981706d979002a",
+  "completed_updates": 200,
+  "exact_component_digests": {
+    "model": "138f151db8ae269bc7ee3b048e6367d072e44edbda639c2fe495d49198781e21",
+    "optimizer": "9c2bb38cc3df5e864245986fd18dee19e9dea2e7478363bf3968f8b8b4a45bef",
+    "scheduler": "df2e23534cc1b287f47b89080c56d1564df217129bc97869857ea3473aa93c86",
+    "scaler": "56f8908b12c9af3f206239d2faaf3f594539f20f7676e342265d37b691701306",
+    "sampler": "c212dcaef8e36596521d483d79db15101754be6087b8f1b62ec3390ccfcdc1a8",
+    "rng": "28efb41eee84957221188a2428dc5544d6c3403917a345f7b1c6448a03249390"
+  },
+  "optimizer_step_values": [
+    200
+  ],
+  "optimizer_state_tensors_finite": true,
+  "sample_sequence_matches_uninterrupted_sampler": true,
+  "total_images": 400,
+  "loss_component_count": 30,
+  "cuda_context_initialized": false
+}

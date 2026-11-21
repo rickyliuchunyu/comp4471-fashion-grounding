@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "tests": 4,
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_expansion_acceptance.py -v",
+  "scope": [
+    "old-subset equality",
+    "duplicate/incomplete memberships",
+    "source-ID namespaces and cross-partition identity overlap",
+    "new-group uniqueness"
+  ],
+  "model_loads": 0,
+  "training_updates": 0
+}

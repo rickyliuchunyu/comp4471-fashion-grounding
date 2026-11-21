@@ -1,0 +1,26 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-expansion-5000-20261117-r01",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "status": "running",
+  "git_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750",
+  "plan_sha256": "f4ccfaca850595524cf338871b24e0a032735a6e3d0c12c35504fa3360c4d3f7",
+  "training_config": "configs/runs/segmentation/expansion_control_train5000.json",
+  "training_config_file_sha256": "0ee62814cdbec8bdbfa68346c7c3e18324bf16da2a11248635fcb93070707eaf",
+  "input_validation_bundle": "configs/runs/segmentation/expansion_input_train5000.json",
+  "input_validation_bundle_sha256": "1c21b003e53993a1fec538d91007f852efcd1a95208f78a672986db42ba3c811",
+  "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+  "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+  "seed": 42,
+  "updates": 20000,
+  "evaluation_updates": [
+    10000,
+    20000
+  ],
+  "hard_limit_seconds": 10800,
+  "automatic_restart": false,
+  "automatic_extension": false,
+  "started_at": "2026-11-17T04:40:10.519787+00:00",
+  "artifacts": {}
+}

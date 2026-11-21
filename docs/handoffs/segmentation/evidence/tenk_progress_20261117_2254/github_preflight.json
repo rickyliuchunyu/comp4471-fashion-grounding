@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-11-17T14:53:50.812528+00:00",
+  "all_pr_numbers": [
+    2,
+    4,
+    5,
+    3,
+    1
+  ],
+  "prs": [
+    {
+      "number": 2,
+      "state": "open",
+      "draft": true,
+      "head": "segmentation/pilot-adapter-v1",
+      "head_sha": "2df5558e958cb48572e98038475dcec7ffccbd17",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T12:13:50Z"
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "draft": true,
+      "head": "data-eval/p3-baseline-evaluation",
+      "head_sha": "b24515bcda576fe97b354ca9b48e647079831df3",
+      "base": "main",
+      "base_sha": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+      "updated_at": "2026-11-17T07:28:25Z"
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "draft": false,
+      "head": "grounding/siglip-baseline-interfaces",
+      "head_sha": "103dcc546714dd7c7866b4259d96a9825d8090ef",
+      "base": "data-eval/p3-baseline-evaluation",
+      "base_sha": "f5787f4ac7b6941abdadc43f9fbdc666eba93925",
+      "updated_at": "2026-11-12T12:11:25Z"
+    }
+  ],
+  "active_discussions": [
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/2",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #2 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/4",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #4 comments"
+    },
+    {
+      "comments": [],
+      "url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments",
+      "display_url": "https://github.com/rickyliuchunyu/comp4471-fashion-grounding/pull/5",
+      "display_title": "rickyliuchunyu/comp4471-fashion-grounding PR #5 comments"
+    }
+  ],
+  "handoff_delta": "No teammate branch or handoff changes: wkq b24515b, wyz103dcc5, main7064ebb. Own remote2df5558; prior handoff reads reused."
+}

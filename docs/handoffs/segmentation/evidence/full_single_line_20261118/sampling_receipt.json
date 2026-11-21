@@ -1,0 +1,47 @@
+{
+  "uniform_draws": 42476,
+  "targeted_draws": 14160,
+  "distinct_target_images": 8416,
+  "distinct_target_groups": 8414,
+  "max_extra_per_image": 4,
+  "max_extra_per_group": 4,
+  "pools": {
+    "sock": {
+      "images": 964,
+      "groups": 964,
+      "targeted_draws": 2832
+    },
+    "belt": {
+      "images": 1338,
+      "groups": 1337,
+      "targeted_draws": 2832
+    },
+    "shoe": {
+      "images": 6543,
+      "groups": 6542,
+      "targeted_draws": 2832
+    },
+    "headband, head covering, hair accessory": {
+      "images": 1504,
+      "groups": 1504,
+      "targeted_draws": 2832
+    },
+    "watch": {
+      "images": 2386,
+      "groups": 2385,
+      "targeted_draws": 2832
+    }
+  },
+  "order_sha256": "4f4933a5739f954a9941efa450192cb0491fe051398b49e0667f790f5a45d58d",
+  "total_draws": 56636,
+  "distinct_images": 42476,
+  "half_update": 14159,
+  "half_draws": {
+    "uniform": 21238,
+    "targeted": 7080
+  },
+  "protection_sha256": "6cecceaf3215830f2cb88626f97fa8ee5b29ec5049d9824c1187aedb94fd86fd",
+  "replayed_batch_equal": true,
+  "resumed_suffix_equal": true,
+  "rejects_overrun": true
+}

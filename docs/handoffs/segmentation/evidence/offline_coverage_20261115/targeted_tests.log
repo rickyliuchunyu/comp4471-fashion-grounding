@@ -1,0 +1,15 @@
+test_all_gt_participate_in_association_even_without_query (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_budget_and_matcher_pin_are_enforced (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_cli_is_model_free_and_keeps_inputs_immutable (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_exact_half_iou_score_and_id_ties_crowd (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_freeze_scope_evidence_and_hash_gates (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_mask_corruption_leaves_failed_run_without_selection (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_query_gates_do_not_open_candidate_files (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_real_entry_coverage_geometry_empty_denominator_and_no_pixels (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_selection_count_and_high_threshold_ties (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+test_wrong_candidate_provenance_or_inventory_rejected (test_segmentation_threshold_selection.ThresholdSelectionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.187s
+
+OK

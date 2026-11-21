@@ -1,0 +1,15 @@
+{
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_segmentation_threshold_selection.py -v",
+  "exit_code": 0,
+  "tests": 10,
+  "seconds": 0.187,
+  "scope": "New offline selection logic only, synthetic masks and metadata; not dev performance",
+  "upstream_matcher_byte_identical": true,
+  "file_sha256": {
+    "src/fashion_grounding/evaluation/matching.py": "0e32cfcae696968f0097b0e1e260b9287b3c2ea2c7d1530ee01adbf48f95f018",
+    "src/fashion_grounding/segmentation/select_threshold.py": "9392edb1240119194e1dde47c9421ba9dcdb9c80185890254229d9ed42dba79f",
+    "tests/test_segmentation_threshold_selection.py": "70395b765a4f454ffe5d2014654c2cc1024c0e8976d3c8fa0a9c488d817022ed",
+    "configs/runs/segmentation/candidate_u3000_coverage.json": "370e9470caa1a0e5a0a9ab8f67ac1fb1cd90e538e79e5102840ccc3f63fdb6d4"
+  },
+  "real_evaluation_executed": false
+}

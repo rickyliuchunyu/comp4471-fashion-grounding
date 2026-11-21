@@ -1,0 +1,76 @@
+{
+  "files": {
+    "run_metadata.json": {
+      "sha256": "cf84e2d1a3908a5eaaafbee8204e6fa0596edee1e63af1e71ef37f45d58d33b3",
+      "bytes": 1984
+    },
+    "selection.json": {
+      "sha256": "bd9f89515fc90faa9ebf7d0c3fd0211c80cf27a994c168c1548aeb8a56be6c82",
+      "bytes": 4996
+    },
+    "comparison.csv": {
+      "sha256": "3748c9f8123377a425715777f5be52668d95bd7072bfacaedd2b413e6465f516",
+      "bytes": 454
+    },
+    "coverage-0.3.json": {
+      "sha256": "8314e0b2f34ef700a0bdeac7717141e4e858ce41e8c8ed19ff1810717e6a1993",
+      "bytes": 151698
+    },
+    "coverage-0.5.json": {
+      "sha256": "b2676cf302c4010c740e0dd5683a3ac0aa1069cd7e2e3a3fba293bb055503a90",
+      "bytes": 151277
+    },
+    "coverage-0.7.json": {
+      "sha256": "adf763af69ef110502a712ab09c16c211c0b1b8fbd50bb5d2315e022ea15fd3d",
+      "bytes": 150525
+    },
+    "resolved_config.json": {
+      "sha256": "ab283c8fa3d0aa0b645af84fde25c1b0cb4263c6fb1915e3a502274be28a5726",
+      "bytes": 1317
+    },
+    "resolved_freeze.json": {
+      "sha256": "9afbef83ea43121e105c8a24f46e6a7d470d5a01e60913658aa480a10b7410aa",
+      "bytes": 3970
+    },
+    "delivery_manifest.json": {
+      "sha256": "3f2866c976b66482dea545a5179727342ad36e2d3a52f2c19717201b22dbd05d",
+      "bytes": 1803
+    },
+    "postflight.json": {
+      "sha256": "9c1b45ca5076796c3419baae385dfcf06bf69bf666c0a2b41f085663b9feba1d",
+      "bytes": 165
+    },
+    "execution_receipt.json": {
+      "sha256": "6d66e85141edf9ff33bcf4fad97b9208aaa3b2da2277e12216e1ac2ea18bfc37",
+      "bytes": 1052
+    },
+    "coverage.log": {
+      "sha256": "b3299fd5f8d94d5b9cd60b7be4488fa92e20551d91bc2734e4c615241dca3ede",
+      "bytes": 45
+    },
+    "github_preflight.json": {
+      "sha256": "0daf1308e87d6e86010a5fa367286b2ef8d0433a39e48b1a17bd11c991ed0f5b",
+      "bytes": 1713
+    },
+    "server_preflight.json": {
+      "sha256": "526ce0d04d2128f2bb037d50f206bf3e630b9fcb9d31ef2fd0800b576c38df7b",
+      "bytes": 4719
+    },
+    "new_logic_validation.json": {
+      "sha256": "7610e657be6d550196b6ddac30a5ed367247ae516a31b38d86071195ebbc4c1e",
+      "bytes": 384
+    },
+    "source_release.json": {
+      "sha256": "27188eba64d1e869c58b6773d8d5b7a01f0cde039cff10e9f5c4bf7ed970bdca",
+      "bytes": 413
+    },
+    "authorization.json": {
+      "sha256": "3d70bef06495f4e880c67fbe869af66bcef737dd2520e229e3d15a2289143d27",
+      "bytes": 1260
+    },
+    "freeze.json": {
+      "sha256": "9afbef83ea43121e105c8a24f46e6a7d470d5a01e60913658aa480a10b7410aa",
+      "bytes": 3970
+    }
+  }
+}

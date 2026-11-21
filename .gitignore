@@ -15,3 +15,5 @@ outputs/*
 *.pth
 *.pt
 *.onnx
+
+.venv-segmentation/

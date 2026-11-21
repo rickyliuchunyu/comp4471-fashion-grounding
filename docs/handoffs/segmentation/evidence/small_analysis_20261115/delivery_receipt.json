@@ -1,0 +1,126 @@
+{
+  "status": "completed",
+  "execution_host": "local macOS CPU; saved inputs copied from authorized server",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6",
+  "packages": {
+    "numpy": "2.0.2",
+    "pycocotools": "2.0.11",
+    "Pillow": "11.3.0",
+    "matplotlib": "3.9.4"
+  },
+  "analysis_source_commit": "33fcd74742cc53134aac83b128c7bbf999cf8407",
+  "cpu_wall_limit_seconds": 600,
+  "matching_elapsed_seconds": 1.9390348750000002,
+  "supplement_elapsed_seconds": 0.346501167,
+  "combined_process_wall_seconds": 2.456073834,
+  "new_inference_calls": 0,
+  "new_optimizer_updates": 0,
+  "checkpoint_loads": 0,
+  "old_smoke_runs": 0,
+  "new_logic_tests": 2,
+  "training_change_made": false,
+  "selection_changed": false,
+  "local_raw_run": "/Users/liuchunyu/Documents/elec4240/course-project/outputs/segmentation-small-analysis-20261115-r01",
+  "archive_sha256": "7900ded4459877c6ea84871ec6aeecc360446d17018228f65a69873f7755b1fe",
+  "visual_cases": {
+    "path": "/Users/liuchunyu/Documents/elec4240/course-project/outputs/segmentation-small-analysis-20261115-r01/visual_cases_zoomed/small_object_cases.png",
+    "sha256": "a21f9fbbce6fc6814521d1fe35a8207be1318a7b8209905088da17ccb3e3a046",
+    "image_count": 6,
+    "selection": "deliberate failures and changes, not random",
+    "published_to_git": false
+  },
+  "artifacts": {
+    "analysis.log": {
+      "sha256": "905effb79b7cab91f0b91e463ec1a7257ec4889341bd15ccf7d5bf1cebb446c9",
+      "bytes": 203
+    },
+    "case_details.json": {
+      "sha256": "2ac8bffa77517e682b264f7bbc74ce04325a82468ef91712cee77e55e54fced1",
+      "bytes": 22246
+    },
+    "github_preflight.json": {
+      "sha256": "ce4d526977c287d2bb372672485ac8ae2032df2e744ecd0b463dde320db73fac",
+      "bytes": 36863
+    },
+    "small_errors.json": {
+      "sha256": "4c2461c4cca2b5299a31603d00d21f9a548edaf7a1165888c80061594214ddc4",
+      "bytes": 61921
+    },
+    "run_metadata.json": {
+      "sha256": "3b90b8ab43fa8f679ce1d4137ec681b4b13554c9984e63a791198001ad0371dd",
+      "bytes": 4978
+    },
+    "small_diagnostics.png": {
+      "sha256": "24953433005853d4030d80eff6985f15470de6f6aa7cea23f208eb3aa59162a1",
+      "bytes": 190914
+    },
+    "small_gt_18000.json": {
+      "sha256": "98ec9a7a774e0bf99415c93a0a88d3bbb11c9449d0711f14cf8dc9862798fc83",
+      "bytes": 193293
+    },
+    "new_logic_validation.json": {
+      "sha256": "021c5451ea4ddddf00d3db69eb8ba6c63ab844aa70fb10b20e2d22d0162c15db",
+      "bytes": 366
+    },
+    "server_preflight.json": {
+      "sha256": "7d47549ee1195be51fd1501dc9d9691d4c19bd20b589bb5674aa646cab811783",
+      "bytes": 503
+    },
+    "analysis.json": {
+      "sha256": "d6b881b63db38aec1ea9880ce143f4b91462201a412f64cd28c5c940f14bd251",
+      "bytes": 143089
+    },
+    "small_gt_20000.json": {
+      "sha256": "d49355606c1da217861c93cee9febd8dc57e0d0089b892b5b72b7e6c6cf71923",
+      "bytes": 193450
+    },
+    "resolved_config.json": {
+      "sha256": "dddda668433705611bc67ff4b2f2cc3eac2f9651252fcbe521e57b7ce673007a",
+      "bytes": 2008
+    }
+  },
+  "record_schema_version": 1,
+  "run_id": "segmentation-small-analysis-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "split": "dev",
+  "candidate_source": "none",
+  "seed": 42,
+  "git_commit": "33fcd74742cc53134aac83b128c7bbf999cf8407",
+  "parent_run_ids": [
+    "segmentation-s0-recovery20000-20261115-r01"
+  ],
+  "command": [
+    "/Users/liuchunyu/Documents/elec4240/course-project/.venv-segmentation/bin/python",
+    "scripts/analyze_saved_segmentation_predictions.py",
+    "--root",
+    "/Users/liuchunyu/Documents/elec4240/course-project/outputs/small_analysis_20261115_inputs",
+    "--config",
+    "configs/runs/segmentation/dev_error_analysis_18000_20000.json",
+    "--output",
+    "/Users/liuchunyu/Documents/elec4240/course-project/outputs/segmentation-small-analysis-20261115-r01",
+    "--source-commit",
+    "33fcd74742cc53134aac83b128c7bbf999cf8407"
+  ],
+  "supplement_command": [
+    ".venv-segmentation/bin/python",
+    "scripts/analyze_small_segmentation_errors.py",
+    "--analysis",
+    "/Users/liuchunyu/Documents/elec4240/course-project/outputs/segmentation-small-analysis-20261115-r01",
+    "--root",
+    "/Users/liuchunyu/Documents/elec4240/course-project/outputs/small_analysis_20261115_inputs"
+  ],
+  "source_run_metadata_sha256": "3b90b8ab43fa8f679ce1d4137ec681b4b13554c9984e63a791198001ad0371dd",
+  "source_script_hashes": {
+    "analyze_saved_segmentation_predictions.py": "e47d985b3e38cf61c95a7309a425d776f3b882f2b1704433bcedb56ea481bb9a",
+    "analyze_small_segmentation_errors.py": "183235ce754ac913a50d2551e0f73b165c9a53227a6f83832c3c205d594014d5",
+    "render_small_segmentation_cases.py": "060a1be003f75493811eff1a2889e60943a6d4de07f7ca9655f7fe0307c8ce1f",
+    "plot_small_segmentation_diagnostics.py": "6659d326ecaf092a20d3c1d2dbc3fa74dc3ff8876c90074aabdf48b0917ba7e3"
+  },
+  "server_mirror": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-small-analysis-20261115-r01",
+  "server_mirror_receipt": "server_mirror_receipt.json",
+  "server_mirror_archive_sha256": "8e79646df7c0ed2b4dc7f41a6f61363796945bc0c766a4b08f0bc6d6fd372ebd"
+}

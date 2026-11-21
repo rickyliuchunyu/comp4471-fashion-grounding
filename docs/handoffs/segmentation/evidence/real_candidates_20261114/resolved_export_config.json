@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "u3000_candidate_export",
+  "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+  "completed_updates": 3000,
+  "training_config_sha256": "cdd0ed08810fe4f017ad87671071b12670470b7b76885ef84b357173b1296b11",
+  "training_git_commit": "b61d78f2d279645caade7adf5c7390c617bc6770",
+  "training_data": {
+    "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+    "annotation_sha256": "5563bcdff7386585bd8f2fc78eaa761974f2bb4dd8fc097d90d3567c0aee88a4"
+  },
+  "source_decoder_sha256": "6c9c6b38027961e94705153110b3eed177575074f527fed9e11c12fd5e56a815",
+  "decoder": {
+    "short_edge": 800,
+    "max_size": 1333,
+    "amp": false,
+    "decoder": "one_foreground_class_per_query",
+    "mask_logit_threshold": 0,
+    "score": "foreground_probability_times_positive_mask_sigmoid_mean",
+    "empty_mask_policy": "discard",
+    "score_threshold": 0,
+    "max_candidates": 100,
+    "mask_nms": false
+  },
+  "threshold_options": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "selected_threshold": null,
+  "inputs": {
+    "train": {
+      "image_manifest_sha256": "82916717a867c1e2fe4ae8b42ea34072e97b3edef9113ecf83a855e390a0c0f3",
+      "images": 5000
+    },
+    "dev": {
+      "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "images": 250
+    }
+  }
+}

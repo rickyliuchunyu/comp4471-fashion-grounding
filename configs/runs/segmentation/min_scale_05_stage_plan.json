@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "segmentation-min-scale05-20261115-r01",
+  "status": "prepared_not_started",
+  "training_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+  "evaluation_package": "/root/autodl-tmp/fashion-grounding/shared/processed/fp_dev250_v1",
+  "upstream_source": "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+  "coordination": "/root/autodl-tmp/fashion-grounding/coordination",
+  "parent_checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+  "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+  "recipe_policy": "configs/runs/segmentation/resume_recipe_18000_to_20000.json",
+  "training_config": "configs/runs/segmentation/min_scale_05_20000.json",
+  "evaluation_config": "configs/runs/segmentation/dev_ap_250_resume_20000.json",
+  "control_report": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json",
+  "prior_best_report": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json",
+  "plan_path": "configs/runs/segmentation/min_scale_05_stage_plan.json",
+  "evaluation_updates": [
+    20000
+  ],
+  "reuse_control_A": true,
+  "total_hard_limit_seconds": 2700,
+  "training_internal_seconds": 2100,
+  "automatic_restart": false,
+  "old_smoke_runs": 0,
+  "input_sha256": {
+    "configs/runs/segmentation/resume_recipe_18000_to_20000.json": "c6e7488c3403b878acf29713b44f51fdc0b008593f1891d233d7828c7870e693",
+    "configs/runs/segmentation/min_scale_05_20000.json": "279431d86b957371c15be49b5daa9b0dfe040c2ee551cd6475af008174bf8c85",
+    "configs/runs/segmentation/dev_ap_250_resume_20000.json": "125ae86c9a0ebecb5aca83294aa76c0032399860877229473758e516e9d47c40",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc",
+    "configs/runs/segmentation/s0_recovery_20000.json": "22eece5e02f699a6dd3759409a7429f3fc648d82d87f5d080a86c7bf9ba1b685",
+    "configs/runs/segmentation/s0_resume_20000.json": "e1f0502871ced62d2d6301937ed84762cbef46182c76f72d63a84144bcdbc92f",
+    "configs/runs/segmentation/resume_repair_18000_to_20000.json": "b9cbfeebdc36e2a4a0383601bbc167e4a96dfc4d41fcbd025e9f16633ea3012e",
+    "scripts/run_min_scale_trial.py": "abd0c406d65defa5ccfd7d5e8e7862bf001c14040b2f29fde22494a2e82c20f6",
+    "scripts/select_min_scale_trial.py": "b8f4c2648af11d2f315df296512804612ccda17fec53833c4131e37708073788",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/train/train_report.json": "be763cdc9215788cc93dd71617a35649f90712c6a89f54792675758b37930e0e",
+    "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/train/resume_check.json": "2951e07325865602e422305f3ffc7becdca2669f1a7b87014bba6462769efaf2"
+  },
+  "control_train_report": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/train/train_report.json",
+  "control_resume_check": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/train/resume_check.json"
+}

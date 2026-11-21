@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "selected_group": "trial_B_20000",
+  "selected": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "87c18e83bf024596a8c2020785ac352900c30d526704c018efdbe40b23617112",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-min-scale05-20261115-r01/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 63.792950237309874,
+    "compared_updates": [
+      20000
+    ]
+  },
+  "B_minus_A_AP_points": {
+    "AP": 0.2334197137966214,
+    "AP50": 0.25354656922246477,
+    "AP75": 0.09288522259681997,
+    "AP_small": 0.08837123025201699,
+    "AP_medium": -0.21174970166007512,
+    "AP_large": 0.0624519917658688,
+    "per_category_AP": {
+      "1": 0.32055963121810294,
+      "2": 0.5453897387394449,
+      "3": 0.6984479006294748,
+      "4": 0.003912913733543633,
+      "5": 0.03363154552461367,
+      "6": -0.03447754245468104,
+      "7": 0.27619049444771093,
+      "8": 0.023703028534804105
+    }
+  },
+  "B_minus_prior_best_AP": 0.2137899253139537,
+  "control_inference_repeated": false,
+  "model_runs": 0,
+  "scientific_factor": {
+    "min_scale": [
+      0.1,
+      0.5
+    ]
+  },
+  "interpretation": "One low-LR seed42 continuation screen; no statistical significance claim",
+  "recipe_transition": {
+    "schema_version": 1,
+    "transition_type": "min_scale_ablation_v1",
+    "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "parent_git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+    "parent_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+    "parent_completed_updates": 18000,
+    "control_config_sha256": "082027ad52aea05413326ea289989ac769bd8b2d15aa17a1d4b3ee9bdd5c64bd",
+    "target_config_sha256": "8370a2e2980b833c86b65b24937af944f97460a27d7c64e0110cb73b90e6310f",
+    "parent_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+    "target_source_tree": "10539274179674320d1e2c5a74cbff3df6272185",
+    "target_git_commit": "e73ef4ffa9d1a72cee041e23d9b49b673c23bdad",
+    "control_git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+    "control_to_target_changes": {
+      "budget_seconds": {
+        "before": 8400,
+        "after": 2100
+      },
+      "min_scale": {
+        "before": 0.1,
+        "after": 0.5
+      },
+      "run_scope": {
+        "before": "formal_S0_same_budget_AMP_recovery_update18000_to20000",
+        "after": "single_factor_min_scale_05_update18000_to20000"
+      },
+      "checkpoint_updates": {
+        "before": [
+          6000,
+          8000,
+          10000,
+          12000,
+          14000,
+          16000,
+          18000,
+          20000
+        ],
+        "after": [
+          20000
+        ]
+      }
+    },
+    "changed_source_files": [
+      "src/fashion_grounding/segmentation/export_candidates.py",
+      "src/fashion_grounding/segmentation/pipeline.py",
+      "src/fashion_grounding/segmentation/resume_recipe.py",
+      "src/fashion_grounding/segmentation/select_threshold.py",
+      "src/fashion_grounding/segmentation/train.py"
+    ],
+    "restored_state_overrides": {},
+    "update_budget_extended": false,
+    "reason": "Explicitly authorized preparation only: one min_scale factor, same full u18000 state, unchanged LR/AMP/data; future B ends at u20000 under a shared 45-minute cap. No automatic launch or restart.",
+    "policy_sha256": "c6e7488c3403b878acf29713b44f51fdc0b008593f1891d233d7828c7870e693"
+  },
+  "stage_plan_sha256": "e462cfcf1d1d2603bb1b10973ffb907b5bea2bbefa1dac9060283aaf53e24296",
+  "evidence": {
+    "control_report": {
+      "path": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_020000/evaluation_report.json",
+      "sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1"
+    },
+    "prior_best_report": {
+      "path": "docs/handoffs/segmentation/evidence/s0_recovery20000_20261115/dev/update_018000/evaluation_report.json",
+      "sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc"
+    }
+  },
+  "trial_report_sha256": "5fd656d3639778ef528c0d8de9d881c3a3ea783672ccbee68555290fde015d7b"
+}

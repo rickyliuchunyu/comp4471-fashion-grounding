@@ -1,0 +1,18 @@
+{
+  "status": "launched",
+  "timeout_pid": 128703,
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "1800s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-dev-candidates-20261115-r01/run_stage.py",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-u18000-dev-candidates-20261115-r01",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation"
+  ],
+  "started_at": "2026-11-15T10:53:11.485661+00:00",
+  "hard_limit_seconds": 1800,
+  "cleanup_grace_seconds": 5,
+  "automatic_retries": 0
+}

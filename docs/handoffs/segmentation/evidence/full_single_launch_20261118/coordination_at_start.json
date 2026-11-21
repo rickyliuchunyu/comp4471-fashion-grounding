@@ -1,0 +1,26 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "full-single-50k-20261118-r01",
+  "status": "running",
+  "wrapper_pid": 299871,
+  "started_at": "2026-11-18T10:27:00.646924+00:00",
+  "budget_seconds": 17983,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/full-single-50k-20261118-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_tenk_adaptation.py",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/full_single_plan.json",
+    "--execute",
+    "--worker",
+    "--deadline",
+    "25529614.53365858",
+    "--commit",
+    "9f1ca245fbde243df17ec711854c803e52892617",
+    "--plan-sha",
+    "9079848ab2899d6439e14ea37788b9d7f5a0566fb5ccd6788922b77db4d9d028"
+  ],
+  "git_commit": "9f1ca245fbde243df17ec711854c803e52892617",
+  "child_pid": 299877
+}

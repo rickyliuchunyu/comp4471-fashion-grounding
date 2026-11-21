@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "arm": "C5k",
+  "selected": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "d9deacc85d1bf402cf6417a71226bd51e1fc98b631dcd30c9afcc22d51b51044",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/train/checkpoint_020000.pth",
+    "completed_updates": 20000,
+    "dev_mask_AP": 64.69568513541032,
+    "compared_updates": [
+      10000,
+      20000
+    ]
+  },
+  "reports": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_010000/evaluation_report.json",
+      "sha256": "615eb7473ea6490cf283dd61633c60d27a1693c01c6e235f1efb2e2ce4ca7d37"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-expansion-control-20261117-r01/C5k/dev/update_020000/evaluation_report.json",
+      "sha256": "5bb36bfb42cddcd44610ba3b10546784e12de15fb76fc87554e4b493655d5fc5"
+    }
+  ],
+  "evaluation_updates": [
+    10000,
+    20000
+  ],
+  "source_commit": "dc2fba429cdc4ffaed8a345f8ff5cd859cec1750"
+}

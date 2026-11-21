@@ -1,0 +1,24 @@
+{
+  "role": "segmentation",
+  "executed_by": "lcy",
+  "run_id": "segmentation-resolution1024-20261116-r01",
+  "status": "completed",
+  "wrapper_pid": 167455,
+  "started_at": "2026-11-16T11:19:51.696045+00:00",
+  "budget_seconds": 881,
+  "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/scripts/run_resolution_trial.py",
+    "--plan",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resolution1024_stage_plan.json",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resolution1024-20261116-r01",
+    "--gpu-worker"
+  ],
+  "git_commit": "7d1fa7502ea4f7971e8e5c101876522a75da138b",
+  "child_pid": 167461,
+  "exit_code": 0,
+  "elapsed_seconds": 130.24061009660363,
+  "finished_at": "2026-11-16T11:22:01.940421+00:00"
+}

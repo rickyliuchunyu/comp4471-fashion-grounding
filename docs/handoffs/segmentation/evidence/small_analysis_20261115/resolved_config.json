@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "purpose": "paired_saved_AP_prediction_diagnostics",
+  "package": "shared/processed/fp_dev250_v1",
+  "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+  "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+  "diagnostic_high_score": 0.5,
+  "cpu_wall_time_limit_seconds": 600,
+  "inputs": [
+    {
+      "update": 18000,
+      "directory": "runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000",
+      "report_sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc"
+    },
+    {
+      "update": 20000,
+      "directory": "runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000",
+      "report_sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1"
+    }
+  ],
+  "diagnostic_definitions": {
+    "ap": "Original full COCO AP, unchanged raw predictions; matching recomputed on CPU to expose diagnostics; exact agreement with saved reports required.",
+    "matched_gt": "COCO all-area per-class greedy matches at IoU .50/.75, not language query coverage. Small subgroup here filters GT area<=1024 from all-area matching; AP-small itself follows COCO area-specific ignore matching.",
+    "best_iou": "Independent maximum over saved top100 detections, not one-to-one; same/other class separated.",
+    "fp_outcomes": "At IoU .50/.75: ignored, TP, duplicate same-class overlap, wrong-class overlap, max overlap>=.1 localization/mixed, otherwise background/unannotated. These are descriptive, not causal counterfactual AP gains.",
+    "high_score": "Fixed score>=.5 diagnostic slice; no threshold search or language candidate selection.",
+    "sizes": "COCO area ranges including boundary overlap; areas in original-image pixels.",
+    "queries": "No language queries read; GT labels used only for diagnostics, never candidate production."
+  },
+  "parent_run_ids": [
+    "segmentation-s0-recovery20000-20261115-r01"
+  ]
+}

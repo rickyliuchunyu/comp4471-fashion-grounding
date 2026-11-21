@@ -1,0 +1,122 @@
+{
+  "commands.json": {
+    "sha256": "5ce73c48697379c055478b6920edb18f5674dbd866df3511bdab7e4f1123917b",
+    "bytes": 1360
+  },
+  "phase_1.log": {
+    "sha256": "81c1a2c18f8197c1d59bc2a2c6cf06d1e547e5c641fa578a0bc27712e8fb5e72",
+    "bytes": 3675
+  },
+  "phase_2.log": {
+    "sha256": "d0fccf27701f207d42728bd17ac53c8ddcb7a5d7c32aab455a1ecc90668d29ff",
+    "bytes": 4128
+  },
+  "stability_report.json": {
+    "sha256": "21702fc786432fadaa5bc86ce2b83314ffc86b4b694f04ed85b91b2ac7896824",
+    "bytes": 1138
+  },
+  "postflight.log": {
+    "sha256": "59ebeb771e71cf1c409d59a123b24d9ea3716641aa4f0973bac5738b004e4c46",
+    "bytes": 484
+  },
+  "final_checkpoint_check.json": {
+    "sha256": "1e0e9126fbabd2515b7de5c75f4ca783879280d9d3934ab8428014702363f7bc",
+    "bytes": 905
+  },
+  "environment.json": {
+    "sha256": "7b58943d55e6c06717928cbbac71c2dbd342d12971f5c209714510929d1956d5",
+    "bytes": 287
+  },
+  "coordination.json": {
+    "sha256": "d09ce9e704f72dee84cac646bea134672fa61f0982f7c2aa0b4d16cb785d2319",
+    "bytes": 1098
+  },
+  "run.log": {
+    "sha256": "79565692b51d84baa71ede77a91c4cf7f3741630f5ba502382e86ee209bfdbc1",
+    "bytes": 1044
+  },
+  "preflight.log": {
+    "sha256": "98c35a5c9da043ab1cf4069ec3bd07bd418258fc87773855a77778a732c1629f",
+    "bytes": 385
+  },
+  "tests.log": {
+    "sha256": "24afe239d25520192d4af9efb9c41e1069c1729ce84104ac0828253cb7dedf09",
+    "bytes": 3702
+  },
+  "updates_001_100/resolved_config.json": {
+    "sha256": "3b646a2da8f4c608a9f1d9b9700abea73f646446f5d6cc9207c28d452719138f",
+    "bytes": 836
+  },
+  "updates_001_100/data_check.json": {
+    "sha256": "f7add249d2cb0f26e9c631012d3e132c712c4cceed910a22428014a79c254215",
+    "bytes": 606
+  },
+  "updates_001_100/initialization.json": {
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "bytes": 1257
+  },
+  "updates_001_100/model_config.yaml": {
+    "sha256": "6614659f4dbdf788775701dbaa1628edfb369d2ddfc723fbee97d36c01bee5c8",
+    "bytes": 7733
+  },
+  "updates_001_100/optimizer_groups.json": {
+    "sha256": "8cee83f678e422a9342a2ca170f205b9ee364c25b5f6df42bcea01908b0d1e37",
+    "bytes": 64154
+  },
+  "updates_001_100/metrics.jsonl": {
+    "sha256": "9d0457a3bdcadc21e3f5c1587a80153d395c59a5dfdcde36897422b5efd85fe8",
+    "bytes": 153136
+  },
+  "updates_001_100/checkpoint_000100.pth": {
+    "sha256": "e52807441672b352b7f029664fd74f9f6455e746403c0a52e3c663149df6480f",
+    "bytes": 528449357
+  },
+  "updates_001_100/checkpoint_000100.sha256": {
+    "sha256": "caa102c6af6da73a4f4219c0ddb8fe5ab6302357aa3dbd350b1d8c300818b43d",
+    "bytes": 65
+  },
+  "updates_001_100/train_report.json": {
+    "sha256": "7b2d06bd7d66ca75f108ad606dcb252c46d6dfb37b1eb380d755fead16071c7a",
+    "bytes": 1431
+  },
+  "updates_101_200/resume_check.json": {
+    "sha256": "f37b69bdbfa02791ee845e3e15012f01f727b57b3688c516f20932a02aef77da",
+    "bytes": 1307
+  },
+  "updates_101_200/resolved_config.json": {
+    "sha256": "3b646a2da8f4c608a9f1d9b9700abea73f646446f5d6cc9207c28d452719138f",
+    "bytes": 836
+  },
+  "updates_101_200/data_check.json": {
+    "sha256": "f7add249d2cb0f26e9c631012d3e132c712c4cceed910a22428014a79c254215",
+    "bytes": 606
+  },
+  "updates_101_200/initialization.json": {
+    "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+    "bytes": 1257
+  },
+  "updates_101_200/model_config.yaml": {
+    "sha256": "6614659f4dbdf788775701dbaa1628edfb369d2ddfc723fbee97d36c01bee5c8",
+    "bytes": 7733
+  },
+  "updates_101_200/optimizer_groups.json": {
+    "sha256": "c44d8ffd2871756826905fe07cee9a4bf62ac845d40900404a3e7545adae0785",
+    "bytes": 60570
+  },
+  "updates_101_200/metrics.jsonl": {
+    "sha256": "febc219136772510691de6ae3dc4a576e3ac5669c10dee1b4fac87cbc98e02a4",
+    "bytes": 155651
+  },
+  "updates_101_200/checkpoint_000200.pth": {
+    "sha256": "9b6a215c9294e3080539a6e03937182df37b4fa3665136283e981706d979002a",
+    "bytes": 528449357
+  },
+  "updates_101_200/checkpoint_000200.sha256": {
+    "sha256": "11a2932a3e277ecba283c8a83852984cff795648c125d064d6aa44fff2156c47",
+    "bytes": 65
+  },
+  "updates_101_200/train_report.json": {
+    "sha256": "355dff154f1a4aca40260985e6af5c0ae49b8b486b33468d2b04a9d83922404a",
+    "bytes": 1434
+  }
+}

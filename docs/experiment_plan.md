@@ -1,6 +1,6 @@
 # 实验设计与评估规则
 
-版本 `2026-11-05`。所有实验仍为计划，无已运行结果。参数见 [training_plan.json](../configs/training_plan.json)，数据见 [协议](data_protocol.md)。实验系列在 [registry.csv](../experiments/registry.csv) 登记，旧编号保留于 [历史表](../experiments/archive/registry_20261004.csv)。
+版本 `2026-11-05`。本文定义正式实验；已有工程检查和训练试点诊断，尚无正式 dev/test 成绩，实际状态见 [状态表](status.md)。参数见 [training_plan.json](../configs/training_plan.json)，数据见 [协议](data_protocol.md)。实验系列在 [registry.csv](../experiments/registry.csv) 登记，旧编号保留于 [历史表](../experiments/archive/registry_20261004.csv)。
 
 ## 1. 问题与核心实验
 

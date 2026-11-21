@@ -1,0 +1,111 @@
+{
+  "checked_at_utc": "2026-11-12T09:05:21.810668+00:00",
+  "shared_directories": [
+    "features",
+    "processed",
+    "weights"
+  ],
+  "published_processed_packages": [
+    {
+      "package": "fp_grounded9_draft_v2",
+      "manifest_sha256": "7436199536ef1ec622ca64ee5b60c53e406568648db971f05292f37e758f879f",
+      "image_count": 9,
+      "split_counts": {
+        "train": 9
+      },
+      "illustrative_only": false,
+      "annotation_sha256": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+      "annotation_count": 59
+    },
+    {
+      "package": "fp_grounded9_reviewed_v1",
+      "manifest_sha256": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+      "image_count": 9,
+      "split_counts": {
+        "train": 9
+      },
+      "illustrative_only": false,
+      "annotation_sha256": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+      "annotation_count": 59
+    },
+    {
+      "package": "fp_pilot20_v2",
+      "manifest_sha256": "1b1ec9f25c37cd7b910dfe2882cc33637be37f3fba32e6f7b0c32592b570f111",
+      "image_count": 20,
+      "split_counts": {
+        "train": 20
+      },
+      "illustrative_only": false,
+      "annotation_sha256": "96f8edfce9b224992979cc282d6dc960849835cb06f0f83f5ad6e2ef225a4883",
+      "annotation_count": 145
+    }
+  ],
+  "unresolved_running_records": [],
+  "recorded_training_profiles": [
+    {
+      "path": "runs/segmentation/segmentation-stability-200-20261112-r01/updates_001_100/resolved_config.json",
+      "purpose": "pilot_200_update_stability",
+      "max_updates": 200,
+      "checkpoints": []
+    },
+    {
+      "path": "runs/segmentation/segmentation-stability-200-20261112-r02/updates_001_100/resolved_config.json",
+      "purpose": "pilot_200_update_stability",
+      "max_updates": 200,
+      "checkpoints": [
+        "checkpoint_000100.pth"
+      ]
+    },
+    {
+      "path": "runs/segmentation/segmentation-stability-200-20261112-r02/updates_101_200/resolved_config.json",
+      "purpose": "pilot_200_update_stability",
+      "max_updates": 200,
+      "checkpoints": [
+        "checkpoint_000200.pth"
+      ]
+    }
+  ],
+  "gpu": "name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3090, 0 MiB, 24576 MiB, 0 %\n",
+  "compute_processes": "pid, process_name, used_gpu_memory [MiB]\n",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay          30G  3.1G   27G  11% /\n/dev/nvme0n1    200G   30G  171G  15% /root/autodl-tmp\n",
+  "scope": "Read-only published package inventory, no image/model run or human-review re-adjudication",
+  "github": {
+    "main": "7064ebb933584f2922607e51ce392e1572fd7dbb",
+    "grounding/siglip-baseline-interfaces": "66c0da7e066c1235ee618ea7015171e73b82c914",
+    "data-eval/p3-baseline-evaluation": "66dd07c56fb02ae90af7a12de3524650d2fe6455",
+    "segmentation/pilot-adapter-v1": "754d543abd5ebc311782a734b06aa1427819b107",
+    "prs": [
+      {
+        "number": 1,
+        "state": "open",
+        "draft": true,
+        "discussion_entries": 0
+      },
+      {
+        "number": 2,
+        "state": "open",
+        "draft": true,
+        "discussion_entries": 0
+      },
+      {
+        "number": 3,
+        "state": "open",
+        "draft": true,
+        "discussion_entries": 0
+      },
+      {
+        "number": 4,
+        "state": "open",
+        "draft": true,
+        "discussion_entries": 0
+      }
+    ]
+  },
+  "decision": {
+    "frozen_segmentation_train_dev_ready": false,
+    "dev_ap_started": false,
+    "checkpoint_selection_started": false,
+    "training_started": false,
+    "reason": "Latest data_eval handoff says P4 unfinished; all three published processed manifests are train-only."
+  }
+}

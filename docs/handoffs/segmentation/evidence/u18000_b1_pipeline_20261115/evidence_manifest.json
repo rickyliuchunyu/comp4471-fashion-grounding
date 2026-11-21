@@ -1,0 +1,40 @@
+{
+  "files": {
+    "run_metadata.json": {
+      "sha256": "1e31269308d1cf6666fcf3e664fb7fdf921018644f38883a04c2a80f0a02222c",
+      "bytes": 4344
+    },
+    "resolved_config.json": {
+      "sha256": "00be6f8eee6752bb8322766ee9da2581bc16f9fb1d65d2b5ff2f666ee5ef2f58",
+      "bytes": 2307
+    },
+    "evaluation.json": {
+      "sha256": "80e4f8dc45f05650dbd56e7f0455ac37d294898837881d745807b2b07e382c22",
+      "bytes": 139276
+    },
+    "errors.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "delivery_manifest.json": {
+      "sha256": "0586edd296368cf1714c332cf04fa5202cbd13d30900d83af52a78b3b0940096",
+      "bytes": 1571
+    },
+    "postflight.json": {
+      "sha256": "ba53505abc5026278b19874a199144fee6a293769376feff4543a9baf3792534",
+      "bytes": 271
+    },
+    "execution_receipt.json": {
+      "sha256": "fc177cca92f8e960c34bed374af502b8980c0ff1a153a43e78ec65201ae8cd4e",
+      "bytes": 1406
+    },
+    "stage.log": {
+      "sha256": "b6321710c8512521e64e3dbb579282ce8da753c03cca805b2b37987349528b25",
+      "bytes": 465
+    },
+    "gpu_coordination.json": {
+      "sha256": "c0e206432557a7c99a56d4ccf1c159ee0ea646061d51fceb44e14814fca91c1b",
+      "bytes": 1136
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "images": 9,
+  "instances": 59,
+  "project_category_counts": {
+    "1": 5,
+    "2": 5,
+    "3": 2,
+    "4": 10,
+    "5": 2,
+    "6": 14,
+    "7": 9,
+    "8": 12
+  },
+  "crowd_skipped": 0,
+  "training_id_mapping": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7
+  },
+  "image_manifest_sha256": "1729076fac3d27862388ed8187a62ba7f89f90a1383873b81c73f0abf2590e2e",
+  "annotation_sha256": "552e0eb7942d706a85fc72f56d387a2b378991b76c57ed573cace55a728f7d17",
+  "scope": "real train-only segmentation input; no query acceptance or performance evaluation",
+  "mapped_instances": 59,
+  "mapped_images": 9
+}

@@ -1,0 +1,542 @@
+{
+  "record_schema_version": 1,
+  "run_id": "segmentation-s0-20000-20261115-r01",
+  "experiment_id": "S0",
+  "owner": "segmentation",
+  "executed_by": "lcy",
+  "decision_executor": "Codex",
+  "status": "failed",
+  "created_at": "2026-11-15T07:33:22.277714+00:00",
+  "git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+  "source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+  "authorization": {
+    "source": "Current explicit user request to launch formal S0",
+    "start_update": 5000,
+    "target_update": 20000,
+    "evaluation_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000,
+      20000
+    ],
+    "complete_dev_images": 250,
+    "total_hard_limit_seconds": 10800,
+    "no_smoke": true,
+    "automatic_extension": false,
+    "automatic_retry": false
+  },
+  "environment": "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1",
+  "environment_modified": false,
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "scripts/with_gpu_lock.py",
+    "--coordination",
+    "/root/autodl-tmp/fashion-grounding/coordination",
+    "--run-id",
+    "segmentation-s0-20000-20261115-r01",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01",
+    "--seconds",
+    "10795",
+    "--",
+    "/usr/bin/timeout",
+    "--signal=KILL",
+    "10790s",
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/s0_20000_20261115/run_stage.py",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01"
+  ],
+  "preparation_commit": "16aa0eb0255f847fc90809628ba769e88db0931a",
+  "freeze_record": "docs/handoffs/segmentation/segmentation_train_dev_freeze_20261112.json",
+  "parent_run_id": "segmentation-resume5000-train-20261113-r01",
+  "prior_best_update": 3000,
+  "status_history": [
+    {
+      "status": "running",
+      "at": "2026-11-15T07:33:22.380523+00:00"
+    },
+    {
+      "status": "failed",
+      "at": "2026-11-15T09:05:23.915850+00:00"
+    }
+  ],
+  "wrapper_pid": 119888,
+  "started_at": "2026-11-15T07:33:22.380523+00:00",
+  "failure": {
+    "attempted_update": 19315,
+    "completed_updates": 19314,
+    "image_ids": [
+      27781,
+      30281
+    ],
+    "instance_counts": [
+      1,
+      3
+    ],
+    "loss_components": {
+      "loss_ce": 0.1833193153142929,
+      "loss_mask": 1.1457825899124146,
+      "loss_dice": 0.6332644820213318,
+      "loss_ce_0": 1.2902954816818237,
+      "loss_mask_0": 1.7147308588027954,
+      "loss_dice_0": 0.9570374488830566,
+      "loss_ce_1": 0.44672176241874695,
+      "loss_mask_1": 1.0157456398010254,
+      "loss_dice_1": 0.664630651473999,
+      "loss_ce_2": 0.3359103500843048,
+      "loss_mask_2": 1.0782636404037476,
+      "loss_dice_2": 0.6741071343421936,
+      "loss_ce_3": 0.29837068915367126,
+      "loss_mask_3": 1.1771243810653687,
+      "loss_dice_3": 0.58154296875,
+      "loss_ce_4": 0.2219642698764801,
+      "loss_mask_4": 1.1072213649749756,
+      "loss_dice_4": 0.6269586086273193,
+      "loss_ce_5": 0.21997790038585663,
+      "loss_mask_5": 1.094071626663208,
+      "loss_dice_5": 0.5999071598052979,
+      "loss_ce_6": 0.24209561944007874,
+      "loss_mask_6": 1.133583903312683,
+      "loss_dice_6": 0.645487904548645,
+      "loss_ce_7": 0.2112831175327301,
+      "loss_mask_7": 1.1565288305282593,
+      "loss_dice_7": 0.6143606901168823,
+      "loss_ce_8": 0.19197852909564972,
+      "loss_mask_8": 1.0667389631271362,
+      "loss_dice_8": 0.5866551399230957
+    },
+    "loss_scale": 512.0,
+    "nonfinite_gradient_parameters": [
+      "backbone.res2.0.conv1.weight"
+    ],
+    "peak_cuda_allocated_bytes": 4720745472
+  },
+  "evaluation_status": "not_started",
+  "selection_status": "not_started",
+  "actual_new_optimizer_updates": 14314,
+  "checkpoint_recovery": {
+    "checked_at": "2026-11-15T09:08:35.924729+00:00",
+    "last_saved_update": 18000,
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "checkpoint_bytes": 528466573,
+    "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "sidecar_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "byte_integrity_passed": true,
+    "checkpoint_deserialized": false,
+    "last_successful_update": 19314,
+    "unsaved_successful_updates": 1314,
+    "failed_attempt": 19315,
+    "resume_executed": false,
+    "note": "Last fully saved state; no recovery trial or model load. AMP behavior must be addressed before retrying this failed trajectory."
+  },
+  "automatic_retry_performed": false,
+  "old_smoke_runs": 0,
+  "baseline_selected_update_remains": 3000,
+  "finished_at": "2026-11-15T09:05:23.915850+00:00",
+  "elapsed_seconds": 5521.975832220167,
+  "coordination": {
+    "role": "segmentation",
+    "executed_by": "lcy",
+    "run_id": "segmentation-s0-20000-20261115-r01",
+    "status": "failed",
+    "wrapper_pid": 119888,
+    "started_at": "2026-11-15T07:33:22.380523+00:00",
+    "budget_seconds": 10795,
+    "output": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01",
+    "command": [
+      "/usr/bin/timeout",
+      "--signal=KILL",
+      "10790s",
+      "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+      "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/docs/handoffs/segmentation/evidence/s0_20000_20261115/run_stage.py",
+      "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01"
+    ],
+    "git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+    "child_pid": 119894,
+    "exit_code": 1,
+    "elapsed_seconds": 5521.975832220167,
+    "finished_at": "2026-11-15T09:05:23.915850+00:00"
+  },
+  "phases": [
+    {
+      "phase": "train",
+      "status": "failed",
+      "started_at": "2026-11-15T07:33:22.415663+00:00",
+      "command": [
+        "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+        "-m",
+        "fashion_grounding.segmentation.train",
+        "--package",
+        "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+        "--source",
+        "/root/autodl-tmp/fashion-grounding/vendor/segmentation/Mask2Former",
+        "--resume",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_005000.pth",
+        "--resume-extension",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/resume_5000_to_20000.json",
+        "--config",
+        "/root/autodl-tmp/fashion-grounding/workspaces/segmentation/configs/runs/segmentation/s0_resume_20000.json",
+        "--output",
+        "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train"
+      ],
+      "exit_code": 1,
+      "finished_at": "2026-11-15T09:05:23.876235+00:00"
+    }
+  ],
+  "metric_summary": {
+    "derived_from": "Existing metrics.jsonl only; no training or evaluator rerun",
+    "completed_rows": 14314,
+    "first_update": 5001,
+    "last_update": 19314,
+    "contiguous_updates": true,
+    "all_recorded_losses_and_gradient_norms_finite": true,
+    "skipped_optimizer_updates": 0,
+    "windows": {
+      "5001_5100": {
+        "rows": 100,
+        "mean_total_loss": 16.874374092491344,
+        "mean_loss_components": {
+          "loss_ce": 0.444910823777318,
+          "loss_mask": 0.2317951949313283,
+          "loss_dice": 0.8886155086755753
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 4.763382532503456,
+          "loss_mask": 2.2370913616847248,
+          "loss_dice": 8.30857867091894
+        },
+        "mean_seconds_per_update": 0.4289597009494901,
+        "learning_rates": [
+          [
+            1e-05,
+            0.0001
+          ]
+        ]
+      },
+      "5901_6000": {
+        "rows": 100,
+        "mean_total_loss": 16.131765764867886,
+        "mean_loss_components": {
+          "loss_ce": 0.46724069978110494,
+          "loss_mask": 0.20362895153462887,
+          "loss_dice": 0.8079208609461784
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 5.102059141248464,
+          "loss_mask": 1.8820133059099318,
+          "loss_dice": 7.668902805447578
+        },
+        "mean_seconds_per_update": 0.3820289720967412,
+        "learning_rates": [
+          [
+            1e-05,
+            0.0001
+          ]
+        ]
+      },
+      "7901_8000": {
+        "rows": 100,
+        "mean_total_loss": 15.30821567265317,
+        "mean_loss_components": {
+          "loss_ce": 0.4565860582143068,
+          "loss_mask": 0.18981467051431536,
+          "loss_dice": 0.800470714122057
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 4.6244551159814,
+          "loss_mask": 1.8116455769911408,
+          "loss_dice": 7.4252435368299485
+        },
+        "mean_seconds_per_update": 0.37460938971489666,
+        "learning_rates": [
+          [
+            1e-05,
+            0.0001
+          ]
+        ]
+      },
+      "9901_10000": {
+        "rows": 100,
+        "mean_total_loss": 15.162662892988884,
+        "mean_loss_components": {
+          "loss_ce": 0.3818167045339942,
+          "loss_mask": 0.21871466306969523,
+          "loss_dice": 0.7865956299006939
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 4.199744898504577,
+          "loss_mask": 2.072928198557347,
+          "loss_dice": 7.502862798422575
+        },
+        "mean_seconds_per_update": 0.3734230885654688,
+        "learning_rates": [
+          [
+            1e-05,
+            0.0001
+          ]
+        ]
+      },
+      "11901_12000": {
+        "rows": 100,
+        "mean_total_loss": 14.685432687648571,
+        "mean_loss_components": {
+          "loss_ce": 0.39228923881426453,
+          "loss_mask": 0.20441309485584497,
+          "loss_dice": 0.7979808475077153
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 4.176430822503753,
+          "loss_mask": 1.8428127975016833,
+          "loss_dice": 7.271505886465311
+        },
+        "mean_seconds_per_update": 0.37138391826301814,
+        "learning_rates": [
+          [
+            1e-05,
+            0.0001
+          ]
+        ]
+      },
+      "13901_14000": {
+        "rows": 100,
+        "mean_total_loss": 13.757740299049765,
+        "mean_loss_components": {
+          "loss_ce": 0.33179799464531246,
+          "loss_mask": 0.16340441113337875,
+          "loss_dice": 0.7766762121021747
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.6554663973022254,
+          "loss_mask": 1.5629691277630626,
+          "loss_dice": 7.267426156103611
+        },
+        "mean_seconds_per_update": 0.3645571120455861,
+        "learning_rates": [
+          [
+            1.0000000000000002e-06,
+            1e-05
+          ]
+        ]
+      },
+      "15901_16000": {
+        "rows": 100,
+        "mean_total_loss": 12.693815780030564,
+        "mean_loss_components": {
+          "loss_ce": 0.28364208376035094,
+          "loss_mask": 0.14863332480192185,
+          "loss_dice": 0.7300188703835011
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.2567278078664095,
+          "loss_mask": 1.4273475462384522,
+          "loss_dice": 6.847446146979928
+        },
+        "mean_seconds_per_update": 0.39620390623807905,
+        "learning_rates": [
+          [
+            1.0000000000000002e-06,
+            1e-05
+          ]
+        ]
+      },
+      "17901_18000": {
+        "rows": 100,
+        "mean_total_loss": 12.545337374657393,
+        "mean_loss_components": {
+          "loss_ce": 0.31338325180113313,
+          "loss_mask": 0.14214700423181056,
+          "loss_dice": 0.7127355016767979
+        },
+        "mean_auxiliary_losses": {
+          "loss_ce": 3.331333846375346,
+          "loss_mask": 1.3511108615249396,
+          "loss_dice": 6.694626909047365
+        },
+        "mean_seconds_per_update": 0.3867553536221385,
+        "learning_rates": [
+          [
+            1.0000000000000002e-07,
+            1.0000000000000002e-06
+          ]
+        ]
+      }
+    },
+    "loss_scales": [
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0,
+      256.0,
+      512.0
+    ],
+    "sampler_epochs": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "learning_rates_at_boundaries": {
+      "5001": [
+        1e-05,
+        0.0001
+      ],
+      "12000": [
+        1e-05,
+        0.0001
+      ],
+      "12001": [
+        1.0000000000000002e-06,
+        1e-05
+      ],
+      "16000": [
+        1.0000000000000002e-06,
+        1e-05
+      ],
+      "16001": [
+        1.0000000000000002e-07,
+        1.0000000000000002e-06
+      ]
+    },
+    "sample_count": 28628,
+    "unique_sample_images": 5000,
+    "augmented_empty_images": 21,
+    "grad_norm_before_clip_min": 6.40730619430542,
+    "grad_norm_before_clip_max": 61338.73828125,
+    "grad_norm_after_clip_max": 0.010000001639127731,
+    "peak_cuda_allocated_bytes": 4720745472,
+    "peak_cuda_reserved_bytes": 5549064192
+  },
+  "evidence_collection_script": {
+    "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/collect_evidence.py",
+    "sha256": "e42a291a6d9c8b3e496cea51e52b660e146e247dd74ecff961d8d1c444181650",
+    "bytes": 8371
+  },
+  "evidence_collection_command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/collect_evidence.py"
+  ],
+  "artifacts": {
+    "phases.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/phases.json",
+      "sha256": "3e54fe5ee4e073a690ec44f48e68ec66a7a8b6f92ececa6eca83b18f525e243e",
+      "bytes": 1080
+    },
+    "stage.log": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/stage.log",
+      "sha256": "990e8db14d3ddd7bb49af95e01ec7ecff37b063d39e0cd3d9f9e7f1a23cebc54",
+      "bytes": 226843
+    },
+    "metric_summary.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/metric_summary.json",
+      "sha256": "df6768a509060a4e394b2bda06b3267bd63327b1fdab56a64bed603bfabe3228",
+      "bytes": 5638
+    },
+    "postflight.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/postflight.json",
+      "sha256": "f5e11f859d9d4e41b136aa84ed6bd7a78082bd1ce1d3fd7a0bf5d1a9264cce8a",
+      "bytes": 481
+    },
+    "checkpoint_recovery.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/checkpoint_recovery.json",
+      "sha256": "0be4a0fd27deb0e5311061ef18bf9d50b9722f45a92b6571ffa067725d34ae49",
+      "bytes": 764
+    },
+    "train/resume_check.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/resume_check.json",
+      "sha256": "5a035612236e81f38ffb7e5a75bc8d9fba762873c0b0adafc95b71e71778dadc",
+      "bytes": 1308
+    },
+    "train/budget_extension.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/budget_extension.json",
+      "sha256": "6e5b98176ee1a02050ee46a0d8c4ec4d01918e9baed554fb6ea3710f74027863",
+      "bytes": 1450
+    },
+    "train/resolved_config.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/resolved_config.json",
+      "sha256": "e1f0502871ced62d2d6301937ed84762cbef46182c76f72d63a84144bcdbc92f",
+      "bytes": 994
+    },
+    "train/initialization.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/initialization.json",
+      "sha256": "c9ba8fc11d54fc5d1d56ddcd149ac059961affad709a8fc565b20208e520ab62",
+      "bytes": 1257
+    },
+    "train/data_check.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/data_check.json",
+      "sha256": "ea729209703032c1857924441bd78c13ea2182119ec89adcf277ff117205bbc3",
+      "bytes": 627
+    },
+    "train/model_config.yaml": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/model_config.yaml",
+      "sha256": "646e9b5c73cdf69812100ecb9d8417a7a9a7ef2f3b8a232b30b15e26265e780b",
+      "bytes": 7735
+    },
+    "train/gradient_failure.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/gradient_failure.json",
+      "sha256": "2cca794980ded085c4613ac4f4f8d04a758e425418f7c6c120febc85a8ecf866",
+      "bytes": 1456
+    },
+    "coordination.json": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/coordination/segmentation-s0-20000-20261115-r01.json",
+      "sha256": "4a93d9b5e87a358f34ff4b68e058eeced1b2338bc57469f83cd779386b29c220",
+      "bytes": 906
+    }
+  },
+  "server_only_artifacts": {
+    "train/metrics.jsonl": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/metrics.jsonl",
+      "sha256": "02948530441b1ae5ec5a4aee7d0cafeaf972769363f9b2d787978da1330ec6fe",
+      "bytes": 22325219
+    },
+    "train/checkpoint_006000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_006000.pth",
+      "bytes": 528466573,
+      "sha256": "962da05307b3ab9c19fbb2a83a2d55ae868684adb1bb63f7da5742d1f2392980",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_008000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_008000.pth",
+      "bytes": 528466573,
+      "sha256": "2f6be1d62de01d0e6de6c97147b778788bd26d321fa1b5417f09b3e4a5643684",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_010000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_010000.pth",
+      "bytes": 528466573,
+      "sha256": "3e589721f014cc1153d1dbcef884e40e3f72ff6a357b072a6a621c5a855e0af7",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_012000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_012000.pth",
+      "bytes": 528466573,
+      "sha256": "cc15a7e313cdf4b8cef3389ad9f394cbdd6775849c7c788f7ac525138c375b92",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_014000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_014000.pth",
+      "bytes": 528466573,
+      "sha256": "8095076bcc220b8466dd61da32b96f7fb45c7bc2ea12ff6b1bbde006e7662d17",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_016000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_016000.pth",
+      "bytes": 528466573,
+      "sha256": "48e792d72eb725faed6ab1cf679dd674cc159debf3dd84aa4b6bf96bb9588c44",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    },
+    "train/checkpoint_018000.pth": {
+      "source_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+      "bytes": 528466573,
+      "sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+      "hash_source": "Existing atomic trainer-save sidecar; no additional weight read by this collector"
+    }
+  }
+}

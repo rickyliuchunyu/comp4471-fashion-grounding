@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-15T14:04:52.300973+00:00",
+  "command": [
+    "/root/autodl-tmp/fashion-grounding/envs/segmentation-v1/bin/python",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/source/analyze_segmentation_training_distribution.py",
+    "--config",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/source/train5000_distribution.json",
+    "--package",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train5000_v1",
+    "--output",
+    "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-train5000-distribution-20261115-r01/analysis",
+    "--source-commit",
+    "a6f8e4c0095a72f9ee5710ee12fe1561e29c1fad"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.46516356617212296,
+  "hard_limit_seconds": 60,
+  "stdout": "{\"run_id\": \"segmentation-train5000-distribution-20261115-r01\", \"total\": {\"instances\": 17775, \"images\": 5000, \"groups\": 4976, \"instance_share\": 1.0, \"image_share\": 1.0, \"small_le1024\": 2165, \"tiny_le256\": 540, \"small_images\": 1482, \"small_groups\": 1478, \"tiny_images\": 431, \"small_fraction\": 0.12180028129395218, \"relative_area_le1pct\": 8394, \"area_p10\": 843.0, \"area_p50\": 9029.0, \"area_p90\": 122641.00000000001, \"relative_area_p50\": 0.01255662060761347, \"le64\": 136, \"gt64_le256\": 404, \"gt256_le1024\": 1625, \"gt1024_le9216\": 6770, \"gt9216\": 8840}, \"elapsed_seconds\": 0.41154686734080315}\n",
+  "stderr": "",
+  "GPU_visible_devices": "",
+  "old_smoke_runs": 0
+}

@@ -1,0 +1,163 @@
+{
+  "status": "completed",
+  "rule": "max_dev_mask_AP_then_earliest_update",
+  "selected": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "completed_updates": 18000,
+    "dev_mask_AP": 63.57916031199592,
+    "compared_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000
+    ]
+  },
+  "prior_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "e56eb7f46fab899d83f668b1878776db50e13cc273c4d4a7fbdc786692444148",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-resume5000-train-20261113-r01/checkpoint_003000.pth",
+    "completed_updates": 3000,
+    "dev_mask_AP": 50.56031359695618,
+    "compared_updates": [
+      3000
+    ]
+  },
+  "new_budget_best": {
+    "rule": "max_dev_mask_AP_then_earliest_update",
+    "checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+    "completed_updates": 18000,
+    "dev_mask_AP": 63.57916031199592,
+    "compared_updates": [
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      16000,
+      18000
+    ]
+  },
+  "group_selections": [
+    {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-20000-20261115-r01/train/checkpoint_018000.pth",
+      "completed_updates": 18000,
+      "dev_mask_AP": 63.57916031199592,
+      "compared_updates": [
+        6000,
+        8000,
+        10000,
+        12000,
+        14000,
+        16000,
+        18000
+      ]
+    },
+    {
+      "rule": "max_dev_mask_AP_then_earliest_update",
+      "checkpoint_sha256": "a16a7d5cf6bd49858a657e99ace13fc6b66950fff6d85bd9cd8ba226ca320744",
+      "checkpoint_path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/train/checkpoint_020000.pth",
+      "completed_updates": 20000,
+      "dev_mask_AP": 63.55953052351325,
+      "compared_updates": [
+        20000
+      ]
+    }
+  ],
+  "old_best_retained": false,
+  "compared_updates": [
+    3000,
+    6000,
+    8000,
+    10000,
+    12000,
+    14000,
+    16000,
+    18000,
+    20000
+  ],
+  "new_best_minus_prior_best_AP": 13.018846715039743,
+  "evaluation_reports": [
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_006000/evaluation_report.json",
+      "sha256": "4507912b7bf49beb32f225839bc7e8f65b9599253510cb42df399dacc079cc94"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_008000/evaluation_report.json",
+      "sha256": "7c955e7a82984e85e0becaaf13b123873a5fba8117efc20f64ceb8cd99b1cc3b"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_010000/evaluation_report.json",
+      "sha256": "d4b9c8dfbfcfab70c4869d16f0c5d1f9d8c2a3df6576b7537c2964e01086dd46"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_012000/evaluation_report.json",
+      "sha256": "a6ba61846ac8aaf9ffd6a60d7883482a6f794d1d891b9a84117aa34d9416f1f1"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_014000/evaluation_report.json",
+      "sha256": "f7c0510b3912d2702cb44c94bb6107877986419ef767868a28fb90d4dbda67e3"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_016000/evaluation_report.json",
+      "sha256": "4855afd1808c2c915aa1707783e82c5c2e4de778884e15d8c2f0e14a3d7ae309"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_018000/evaluation_report.json",
+      "sha256": "713335beffb1f18a2831ef1ea6db89c3f17468850d15bb6ea0481400291644fc"
+    },
+    {
+      "path": "/root/autodl-tmp/fashion-grounding/runs/segmentation/segmentation-s0-recovery20000-20261115-r01/dev/update_020000/evaluation_report.json",
+      "sha256": "126c2be24ca7baf5336527a03f100326dabb6de4813297dd90fcfb163b447cb1"
+    }
+  ],
+  "repair": {
+    "schema_version": 1,
+    "transition_type": "amp_recovery_same_budget_v1",
+    "parent_checkpoint_sha256": "207e2dbe1dcc8b9d0ef936d683d25af33c210347e34506914bbf6dad3426ee01",
+    "parent_git_commit": "d8eb4ef9add29e6ba4750130a39001d7634ec205",
+    "parent_config_sha256": "ac51948eb66f89df978c0cb8db293877e9cfcf38fbebadfdde41065326c9460c",
+    "parent_completed_updates": 18000,
+    "target_config_sha256": "082027ad52aea05413326ea289989ac769bd8b2d15aa17a1d4b3ee9bdd5c64bd",
+    "parent_source_tree": "04e1b66149aa3a0c7c8995176ac7e2bb257b53cb",
+    "target_source_tree": "c0747d2a2e95b5250081f942ec78d8365a2ac8d2",
+    "target_git_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+    "changes": {
+      "run_scope": {
+        "before": "formal_S0_resume_update5000_to20000",
+        "after": "formal_S0_same_budget_AMP_recovery_update18000_to20000"
+      },
+      "amp_recovery": {
+        "before": null,
+        "after": {
+          "max_retries_per_update": 4,
+          "max_overflow_events": 16,
+          "min_loss_scale": 0.0001
+        }
+      }
+    },
+    "changed_source_files": [
+      "src/fashion_grounding/segmentation/amp_recovery.py",
+      "src/fashion_grounding/segmentation/resume_repair.py",
+      "src/fashion_grounding/segmentation/train.py",
+      "src/fashion_grounding/segmentation/training_state.py"
+    ],
+    "reason": "Current user authorizes bounded AMP source-fix recovery from saved update 18000 to the unchanged 20000 target, followed by eight full-dev AP evaluations under one three-hour hard limit. Restore all six states without overrides; no old smoke or automatic stage restart.",
+    "restored_state_overrides": {},
+    "update_budget_extended": false,
+    "policy_sha256": "b9cbfeebdc36e2a4a0383601bbc167e4a96dfc4d41fcbd025e9f16633ea3012e"
+  },
+  "source_commit": "e6637ffab4e7f3a0871810043fee00b586629d12",
+  "prior_best_report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163",
+  "stage_plan_sha256": "6999f3781ca2a2ff0f171ceca0c9d0aa903447c0007824cb6825cfaa9842de21",
+  "prior_inference_repeated": false,
+  "model_runs": 0,
+  "finished_at": "2026-11-15T10:03:06.246160+00:00"
+}

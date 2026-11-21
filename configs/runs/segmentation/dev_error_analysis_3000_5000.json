@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "purpose": "paired_saved_AP_prediction_diagnostics",
+  "package": "shared/processed/fp_dev250_v1",
+  "image_manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+  "annotation_sha256": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+  "diagnostic_high_score": 0.5,
+  "cpu_wall_time_limit_seconds": 600,
+  "inputs": [
+    {
+      "update": 3000,
+      "directory": "runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_003000",
+      "report_sha256": "ed11d80e093050a21c69983eb6f9f293845ca26f82ec8467e559303632c43163"
+    },
+    {
+      "update": 5000,
+      "directory": "runs/segmentation/segmentation-resume5000-ap-20261113-r01/update_005000",
+      "report_sha256": "77b3829ff39e390e7fba29ffaba5754b9c3e1a34a43968dcfe2ccbaa62be074b"
+    }
+  ],
+  "diagnostic_definitions": {
+    "ap": "Original full COCO AP, unchanged raw predictions; matching recomputed on CPU to expose diagnostics; exact agreement with saved reports required.",
+    "matched_gt": "COCO all-area per-class greedy matches at IoU .50/.75, not language query coverage. Small subgroup here filters GT area<=1024 from all-area matching; AP-small itself follows COCO area-specific ignore matching.",
+    "best_iou": "Independent maximum over saved top100 detections, not one-to-one; same/other class separated.",
+    "fp_outcomes": "At IoU .50/.75: ignored, TP, duplicate same-class overlap, wrong-class overlap, max overlap>=.1 localization/mixed, otherwise background/unannotated. These are descriptive, not causal counterfactual AP gains.",
+    "high_score": "Fixed score>=.5 diagnostic slice; no threshold search or language candidate selection.",
+    "sizes": "COCO area ranges including boundary overlap; areas in original-image pixels.",
+    "queries": "No language queries read; GT labels used only for diagnostics, never candidate production."
+  }
+}

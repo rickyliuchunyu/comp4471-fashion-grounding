@@ -1,0 +1,7 @@
+{
+  "tests": 3,
+  "status": "passed",
+  "seconds": 0.005,
+  "command": "PYTHONPATH=src .venv-segmentation/bin/python -m unittest discover -s tests -p test_pipeline_integration.py -v",
+  "scope": "new geometry resolver, frozen-association join, failure denominator and tamper guards; no models or old tests"
+}
