@@ -5,7 +5,7 @@
 ## 1. 一行代表什么
 
 - `record_type=plan`：实验系列定义，experiment_id=S0/B1/M2 等；run_id、实际成员、数据 hash、测量值保持空。
-- `record_type=run`：一个方法、seed、split、候选条件及固定配置的实际执行记录。不同 GT/predicted、dev/test、seed 或重试分别登记。训练 run 可 split=train；评价 run 必须 dev/test，并引用训练权重。
+- `record_type=run`：一个方法、seed、split、候选条件及固定配置的实际执行记录。不同 GT/predicted、dev/test、seed 或重试分别登记。训练 run 可 split=train；正式评价 run 必须 dev/test；训练试点接口诊断允许 train，但必须明确 scope=training_pilot_diagnostic，不作泛化结论，并引用训练权重。
 - 唯一 `run_id` 示例为 `M2-dev-predicted-s42-r01`，实际执行前确认不重名；重跑增加 r02，不覆盖旧产物。D1/D2 派生分析使用自己的 run ID，在 metadata 中列出来源运行。
 - status 可为 queued/running/completed/failed/interrupted；completed 只说明该项执行结束，不自动说明评价完成或达到预期。无实验结果时不填 0。
 
@@ -63,3 +63,24 @@
 ## 4. 状态与交接
 
 项目级当前任务在 [状态表](status.md)，运行证据在 registry/metadata，交接使用 [模板](handoffs/README.md)。B 汇总但不替其他人宣告运行完成；方法负责人核对自己的日志与预测。无完整运行入口时写“尚不可运行”，不能填写未经执行的复现命令作为验证证据。
+
+## 数据准备运行（不属于模型实验指标）
+
+2026-11-12，wkq：20261112-grounded-queries，CPU，看图初标与审核工具验证已完成，人工审核 pending。9 图/18 语义/36 双语，accepted=0；35 测试与 59 源 mask 一致性检查通过。见 [交接](handoffs/data_eval/grounded_query_review_20261112.md)。未往模型实验计划填入虚构指标。
+
+2026-11-12，wkq：B0-train-gt-pilot-r01 已完成，34条accepted训练查询，12选对、22规则不支持，完整分母保留。registry新增run，14条plan不变。见 [P3交接](handoffs/data_eval/p3_reviewed_baseline_20261112.md)。
+
+
+2026-11-16，wkq：20261116-train10000-mirror4，CPU 数据准备完成；新 10k 分割包已发布，旧分区不变，无模型训练或指标。运行元信息：`/root/autodl-tmp/fashion-grounding/runs/data_eval/20261116-train10000-mirror4/run_metadata.json`；见 [10k交接](handoffs/data_eval/train10000_targeted_20261116.md)。数据准备不写入模型实验指标行。
+
+## 2026-11-17 wkq dev250 逐图语义草稿
+
+run_id: 20261117-dev250-language；角色data_eval；CPU，无训练。补齐134图并核查旧290条，发布dev250/331组/662条待审草稿，隔离旧2组，accepted=0。110项测试通过；原分区与mask不变。14页人工审核等待wkq返回。输入/hash/命令/限制见[交接](handoffs/data_eval/dev250_visual_draft_20261117.md)。
+
+## 2026-11-17 wkq dev250 精简v4
+
+run_id: 20261117-dev250-simple-v4；CPU，无训练。重新看图331组，262改写、68保留、1新增隔离；250图/330组/660条待审，accepted=0。审计固定train1000的1580组文字监督覆盖，保留缺口，train/dev/test划分与mask不变。117测试、1277文件校验、14页载荷检查通过，未做浏览器排版自动化。见[交接](handoffs/data_eval/dev250_simple_draft_20261117.md)。
+
+## 2026-11-17 wkq 语言定向扩充
+
+run_id: 20261117-language-targeted-expansion-r02；CPU数据准备完成。220张训练提议逐图筛为149张，50张unused验证图筛为39张；合并训练1149图/3296条机器初标。142测试、wyz只读加载器7122个hash/5908个mask与裁剪、弱标注入口检查通过；未训练、未占用GPU、未产生新模型指标。原主dev/test不变，所有50张开发曝光已登记。[交接](handoffs/data_eval/language_targeted_20261117.md)。

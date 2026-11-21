@@ -1,0 +1,189 @@
+{
+  "source_cutout": "See coverage source_cutout_all/shoe/bag; attribute 308",
+  "new_geometry": {
+    "multiple_foreground_components_None": {
+      "images": 19740,
+      "groups": 19740,
+      "instances": 33155
+    },
+    "multiple_foreground_components_23": {
+      "images": 4866,
+      "groups": 4866,
+      "instances": 6356
+    },
+    "multiple_foreground_components_24": {
+      "images": 1941,
+      "groups": 1941,
+      "instances": 1968
+    },
+    "interior_holes_None": {
+      "images": 14303,
+      "groups": 14303,
+      "instances": 18171
+    },
+    "interior_holes_23": {
+      "images": 2562,
+      "groups": 2562,
+      "instances": 3185
+    },
+    "interior_holes_24": {
+      "images": 948,
+      "groups": 948,
+      "instances": 957
+    }
+  },
+  "geometry_basis": "OpenCV RETR_CCOMP on unscaled native foreground; columns image id/project ann id/source category/foreground components/holes. Older 10k pixel audit reused; old topology unknown.",
+  "prior_AI_review_sha256": "e537ffb9b25dd7f86a81cab0600bb493c01d7ed438d3032e3ddff3de5a9228eb",
+  "prior_AI_images_inspected": 36,
+  "retained_AI_images": 36,
+  "retained_AI_shoe_images": 8,
+  "retained_AI_bag_images": 4,
+  "AI_example_hits": {
+    "shoe_thin_straps": [
+      {
+        "phase": 2,
+        "stratum": "small_shoe",
+        "image_id": 11847,
+        "source_annotation_id": 41296,
+        "project_annotation_id": 41297,
+        "file_name": "images/434376dc2c14246ec2e9e0ee908f2924.jpg",
+        "area": 604,
+        "source_category": "shoe",
+        "delta": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage2_20261118",
+        "preview_page": "page_07.jpg",
+        "tile": 4,
+        "observation": "长裙旁凉鞋的细踝带、鞋带和鞋底可辨，mask保留细长结构及主要露脚间隙。",
+        "assessment": "thin_straps_spot_checked",
+        "basis": "visual_observation",
+        "checker_type": "AI_Codex",
+        "date": "2026-11-18",
+        "not_human_confirmed": true
+      }
+    ],
+    "shoe_open_toe_visible_gap": [
+      {
+        "phase": 1,
+        "stratum": "small_shoe",
+        "image_id": 5780,
+        "source_annotation_id": 148228,
+        "project_annotation_id": 148229,
+        "file_name": "images/f392bf310e3ea1a5870f7e833488fd37.jpg",
+        "area": 729,
+        "source_category": "shoe",
+        "delta": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage1_20261118",
+        "preview_page": "page_03.jpg",
+        "tile": 2,
+        "observation": "露趾鞋的横带和底部可见区域被保留，脚趾处未被整块填满。",
+        "assessment": "spot_alignment_plausible",
+        "basis": "visual_observation",
+        "checker_type": "AI_Codex",
+        "date": "2026-11-18",
+        "not_human_confirmed": true
+      }
+    ],
+    "bag_shoulder_strap": [
+      {
+        "phase": 2,
+        "stratum": "bag_all",
+        "image_id": 26558,
+        "source_annotation_id": 307809,
+        "project_annotation_id": 307810,
+        "file_name": "images/b36a41efc8020175e9710c0e793f0544.jpg",
+        "area": 16680,
+        "source_category": "bag, wallet",
+        "delta": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage2_20261118",
+        "preview_page": "page_08.jpg",
+        "tile": 1,
+        "observation": "包体与跨身细肩带均被源mask保留，可见连接结构；这是实际看图的肩带例子，不是仅按bag类别推断。",
+        "assessment": "visible_bag_strap_spot_checked",
+        "basis": "visual_observation",
+        "checker_type": "AI_Codex",
+        "date": "2026-11-18",
+        "not_human_confirmed": true
+      },
+      {
+        "phase": 2,
+        "stratum": "bag_all",
+        "image_id": 25716,
+        "source_annotation_id": 331715,
+        "project_annotation_id": 331716,
+        "file_name": "images/764f8ec8eb2a46305d767865c44c788c.jpg",
+        "area": 3902,
+        "source_category": "bag, wallet",
+        "delta": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage2_20261118",
+        "preview_page": "page_08.jpg",
+        "tile": 2,
+        "observation": "侧边包体和细链状肩带可见，源mask保留肩带细条；链节内部精细孔隙未逐像素认证。",
+        "assessment": "visible_bag_strap_spot_checked",
+        "basis": "visual_observation",
+        "checker_type": "AI_Codex",
+        "date": "2026-11-18",
+        "not_human_confirmed": true
+      }
+    ],
+    "separated_visible_shoe_regions": [
+      {
+        "phase": 1,
+        "stratum": "geometry_proxy",
+        "image_id": 2911,
+        "source_annotation_id": 146511,
+        "project_annotation_id": 146512,
+        "file_name": "images/d59f9fb3bce5eb2d5d318bc07888f6d4.jpg",
+        "area": 248,
+        "source_category": "shoe",
+        "delta": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261118-segmentation-staged-v1/fp_added5000_stage1_20261118",
+        "preview_page": "page_05.jpg",
+        "tile": 1,
+        "observation": "鞋带/鞋边在腿两侧形成分离细片，符合稀疏几何proxy；保留源实例关系，未补画跨越腿部的区域。",
+        "assessment": "separated_visible_regions_spot_checked",
+        "basis": "visual_observation",
+        "checker_type": "AI_Codex",
+        "date": "2026-11-18",
+        "not_human_confirmed": true
+      }
+    ]
+  },
+  "human_checks_this_run": 0,
+  "interpretation": "Documented visible evidence only. Open toe does not establish cutout manufacture; multiple components do not establish occlusion. Remaining semantic statuses unknown. Prior 10k qualitative observations in referenced parent visual audit.",
+  "new_targeted_AI_review": {
+    "checker": "Codex AI visual inspection, 2026-11-18",
+    "seed": 2026,
+    "scope": "12 distinct newly acquired images outside previous staged pool, 4 per geometric stratum; targeted sample, no prevalence inference",
+    "shoe_hole": {
+      "inspected": 4,
+      "clear_thin_straps": 2,
+      "visible_strap_gaps": 2,
+      "confirmed_manufactured_cutouts": 0,
+      "observations": {
+        "76616": "Closed lace-up shoe. Mask hole alone does not establish cutout.",
+        "96852": "Narrow crossing and ankle straps; source mask appears to include skin within part of forefoot, quality follow-up.",
+        "140940": "Side loop/open space on dark boot; strap construction uncertain.",
+        "322104": "Thin metallic toe and ankle straps with clear open spaces."
+      }
+    },
+    "bag_sparse": {
+      "inspected": 4,
+      "visible_shoulder_or_crossbody_straps": 2,
+      "observations": {
+        "60034": "Long crossbody strap leads to small purse.",
+        "140768": "Shoulder strap and bag body appear on opposite sides of foreground sleeve; separable visible portions.",
+        "315514": "Wide carrying strap visible; shoulder use outside crop.",
+        "325024": "Short loop visible near bag; shoulder use uncertain."
+      }
+    },
+    "separated": {
+      "inspected": 4,
+      "clear_external_occluder_explaining_disconnection": 0,
+      "observations": {
+        "71417": "Sandal upper and outsole separated around toes; construction and toe overlap both possible.",
+        "102925": "Ankle strap separated from front upper. No identifiable external occluder.",
+        "174623": "Overlapping shoes and a small detached patch; assignment of the patch ambiguous.",
+        "231049": "Small side sliver and front upper; line of separation ambiguous."
+      }
+    },
+    "cross_stratum_occlusion_evidence": [
+      140768
+    ],
+    "uncertainty": "Strict external-occlusion criterion; small slivers or ordinary open shoe construction alone were not counted."
+  }
+}

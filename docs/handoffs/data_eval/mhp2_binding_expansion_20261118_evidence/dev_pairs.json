@@ -1,0 +1,2579 @@
+[
+  {
+    "source_id": 21475,
+    "image_id": 2000021475,
+    "source_sheet_index": 2,
+    "category_id": 5,
+    "ordered_targets": [
+      3214750135,
+      3214750335
+    ],
+    "confirmed_colors": [
+      "black",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 21128,
+    "image_id": 2000021128,
+    "source_sheet_index": 3,
+    "category_id": 7,
+    "ordered_targets": [
+      3211280145,
+      3211280245
+    ],
+    "confirmed_colors": [
+      "black",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 1590,
+    "image_id": 2000001590,
+    "source_sheet_index": 5,
+    "category_id": 2,
+    "ordered_targets": [
+      3015900117,
+      3015900217
+    ],
+    "confirmed_colors": [
+      "black",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 25575,
+    "image_id": 2000025575,
+    "source_sheet_index": 6,
+    "category_id": 1,
+    "ordered_targets": [
+      3255750112,
+      3255750212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 14168,
+    "image_id": 2000014168,
+    "source_sheet_index": 8,
+    "category_id": 5,
+    "ordered_targets": [
+      3141680135,
+      3141680335
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 16186,
+    "image_id": 2000016186,
+    "source_sheet_index": 14,
+    "category_id": 5,
+    "ordered_targets": [
+      3161860135,
+      3161860335
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20025,
+    "image_id": 2000020025,
+    "source_sheet_index": 20,
+    "category_id": 5,
+    "ordered_targets": [
+      3200250135,
+      3200250235
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22747,
+    "image_id": 2000022747,
+    "source_sheet_index": 21,
+    "category_id": 7,
+    "ordered_targets": [
+      3227470145,
+      3227470245
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 11616,
+    "image_id": 2000011616,
+    "source_sheet_index": 23,
+    "category_id": 2,
+    "ordered_targets": [
+      3116160118,
+      3116160217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 14556,
+    "image_id": 2000014556,
+    "source_sheet_index": 24,
+    "category_id": 1,
+    "ordered_targets": [
+      3145560115,
+      3145560215
+    ],
+    "confirmed_colors": [
+      "white",
+      "yellow"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 3224,
+    "image_id": 2000003224,
+    "source_sheet_index": 25,
+    "category_id": 3,
+    "ordered_targets": [
+      3032240219,
+      3032240319
+    ],
+    "confirmed_colors": [
+      "white",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 24456,
+    "image_id": 2000024456,
+    "source_sheet_index": 27,
+    "category_id": 7,
+    "ordered_targets": [
+      3244560145,
+      3244560245
+    ],
+    "confirmed_colors": [
+      "pink",
+      "yellow"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 8407,
+    "image_id": 2000008407,
+    "source_sheet_index": 28,
+    "category_id": 4,
+    "ordered_targets": [
+      3084070111,
+      3084070211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 8364,
+    "image_id": 2000008364,
+    "source_sheet_index": 30,
+    "category_id": 1,
+    "ordered_targets": [
+      3083640112,
+      3083640212
+    ],
+    "confirmed_colors": [
+      "red",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 23273,
+    "image_id": 2000023273,
+    "source_sheet_index": 31,
+    "category_id": 3,
+    "ordered_targets": [
+      3232730119,
+      3232730219
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10478,
+    "image_id": 2000010478,
+    "source_sheet_index": 33,
+    "category_id": 7,
+    "ordered_targets": [
+      3104780145,
+      3104780245
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 8764,
+    "image_id": 2000008764,
+    "source_sheet_index": 34,
+    "category_id": 4,
+    "ordered_targets": [
+      3087640134,
+      3087640211
+    ],
+    "confirmed_colors": [
+      "red",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 24509,
+    "image_id": 2000024509,
+    "source_sheet_index": 36,
+    "category_id": 1,
+    "ordered_targets": [
+      3245090112,
+      3245090215
+    ],
+    "confirmed_colors": [
+      "black",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 1391,
+    "image_id": 2000001391,
+    "source_sheet_index": 38,
+    "category_id": 5,
+    "ordered_targets": [
+      3013910135,
+      3013910235
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 18752,
+    "image_id": 2000018752,
+    "source_sheet_index": 39,
+    "category_id": 4,
+    "ordered_targets": [
+      3187520111,
+      3187520234
+    ],
+    "confirmed_colors": [
+      "black",
+      "gray"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 3792,
+    "image_id": 2000003792,
+    "source_sheet_index": 41,
+    "category_id": 1,
+    "ordered_targets": [
+      3037920115,
+      3037920215
+    ],
+    "confirmed_colors": [
+      "blue",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 4628,
+    "image_id": 2000004628,
+    "source_sheet_index": 44,
+    "category_id": 4,
+    "ordered_targets": [
+      3046280111,
+      3046280234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19273,
+    "image_id": 2000019273,
+    "source_sheet_index": 45,
+    "category_id": 2,
+    "ordered_targets": [
+      3192730118,
+      3192730218
+    ],
+    "confirmed_colors": [
+      "blue",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 12684,
+    "image_id": 2000012684,
+    "source_sheet_index": 46,
+    "category_id": 1,
+    "ordered_targets": [
+      3126840112,
+      3126840212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 17139,
+    "image_id": 2000017139,
+    "source_sheet_index": 52,
+    "category_id": 4,
+    "ordered_targets": [
+      3171390211,
+      3171390311
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9533,
+    "image_id": 2000009533,
+    "source_sheet_index": 54,
+    "category_id": 1,
+    "ordered_targets": [
+      3095330115,
+      3095330212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 21539,
+    "image_id": 2000021539,
+    "source_sheet_index": 55,
+    "category_id": 5,
+    "ordered_targets": [
+      3215390135,
+      3215390335
+    ],
+    "confirmed_colors": [
+      "black",
+      "beige"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 8770,
+    "image_id": 2000008770,
+    "source_sheet_index": 56,
+    "category_id": 4,
+    "ordered_targets": [
+      3087700111,
+      3087700234
+    ],
+    "confirmed_colors": [
+      "black",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 13559,
+    "image_id": 2000013559,
+    "source_sheet_index": 57,
+    "category_id": 2,
+    "ordered_targets": [
+      3135590117,
+      3135590317
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4833,
+    "image_id": 2000004833,
+    "source_sheet_index": 59,
+    "category_id": 5,
+    "ordered_targets": [
+      3048330135,
+      3048330235
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20140,
+    "image_id": 2000020140,
+    "source_sheet_index": 60,
+    "category_id": 4,
+    "ordered_targets": [
+      3201400111,
+      3201400211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 25561,
+    "image_id": 2000025561,
+    "source_sheet_index": 61,
+    "category_id": 2,
+    "ordered_targets": [
+      3255610118,
+      3255610218
+    ],
+    "confirmed_colors": [
+      "black",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 20746,
+    "image_id": 2000020746,
+    "source_sheet_index": 62,
+    "category_id": 1,
+    "ordered_targets": [
+      3207460112,
+      3207460212
+    ],
+    "confirmed_colors": [
+      "white",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 376,
+    "image_id": 2000000376,
+    "source_sheet_index": 64,
+    "category_id": 4,
+    "ordered_targets": [
+      3003760111,
+      3003760211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 15270,
+    "image_id": 2000015270,
+    "source_sheet_index": 66,
+    "category_id": 1,
+    "ordered_targets": [
+      3152700115,
+      3152700212
+    ],
+    "confirmed_colors": [
+      "blue",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 9122,
+    "image_id": 2000009122,
+    "source_sheet_index": 68,
+    "category_id": 4,
+    "ordered_targets": [
+      3091220111,
+      3091220211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9241,
+    "image_id": 2000009241,
+    "source_sheet_index": 71,
+    "category_id": 4,
+    "ordered_targets": [
+      3092410134,
+      3092410211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 6993,
+    "image_id": 2000006993,
+    "source_sheet_index": 72,
+    "category_id": 2,
+    "ordered_targets": [
+      3069930117,
+      3069930217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22959,
+    "image_id": 2000022959,
+    "source_sheet_index": 73,
+    "category_id": 1,
+    "ordered_targets": [
+      3229590112,
+      3229590212
+    ],
+    "confirmed_colors": [
+      "white",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 10859,
+    "image_id": 2000010859,
+    "source_sheet_index": 74,
+    "category_id": 4,
+    "ordered_targets": [
+      3108590111,
+      3108590211
+    ],
+    "confirmed_colors": [
+      "black",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 1036,
+    "image_id": 2000001036,
+    "source_sheet_index": 75,
+    "category_id": 2,
+    "ordered_targets": [
+      3010360117,
+      3010360217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1152,
+    "image_id": 2000001152,
+    "source_sheet_index": 77,
+    "category_id": 4,
+    "ordered_targets": [
+      3011520111,
+      3011520211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 12690,
+    "image_id": 2000012690,
+    "source_sheet_index": 80,
+    "category_id": 4,
+    "ordered_targets": [
+      3126900111,
+      3126900211
+    ],
+    "confirmed_colors": [
+      "white",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 20627,
+    "image_id": 2000020627,
+    "source_sheet_index": 82,
+    "category_id": 1,
+    "ordered_targets": [
+      3206270112,
+      3206270212
+    ],
+    "confirmed_colors": [
+      "white",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 6412,
+    "image_id": 2000006412,
+    "source_sheet_index": 83,
+    "category_id": 4,
+    "ordered_targets": [
+      3064120111,
+      3064120211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 6765,
+    "image_id": 2000006765,
+    "source_sheet_index": 85,
+    "category_id": 1,
+    "ordered_targets": [
+      3067650215,
+      3067650115
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5124,
+    "image_id": 2000005124,
+    "source_sheet_index": 87,
+    "category_id": 2,
+    "ordered_targets": [
+      3051240118,
+      3051240217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4013,
+    "image_id": 2000004013,
+    "source_sheet_index": 88,
+    "category_id": 1,
+    "ordered_targets": [
+      3040130112,
+      3040130212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 14633,
+    "image_id": 2000014633,
+    "source_sheet_index": 91,
+    "category_id": 1,
+    "ordered_targets": [
+      3146330113,
+      3146330213
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 17667,
+    "image_id": 2000017667,
+    "source_sheet_index": 92,
+    "category_id": 4,
+    "ordered_targets": [
+      3176670111,
+      3176670211
+    ],
+    "confirmed_colors": [
+      "beige",
+      "green"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 9269,
+    "image_id": 2000009269,
+    "source_sheet_index": 93,
+    "category_id": 2,
+    "ordered_targets": [
+      3092690117,
+      3092690217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9678,
+    "image_id": 2000009678,
+    "source_sheet_index": 95,
+    "category_id": 4,
+    "ordered_targets": [
+      3096780111,
+      3096780211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 21854,
+    "image_id": 2000021854,
+    "source_sheet_index": 96,
+    "category_id": 2,
+    "ordered_targets": [
+      3218540117,
+      3218540317
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1341,
+    "image_id": 2000001341,
+    "source_sheet_index": 98,
+    "category_id": 4,
+    "ordered_targets": [
+      3013410211,
+      3013410111
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5250,
+    "image_id": 2000005250,
+    "source_sheet_index": 99,
+    "category_id": 2,
+    "ordered_targets": [
+      3052500117,
+      3052500217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4406,
+    "image_id": 2000004406,
+    "source_sheet_index": 100,
+    "category_id": 1,
+    "ordered_targets": [
+      3044060112,
+      3044060215
+    ],
+    "confirmed_colors": [
+      "yellow",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 10915,
+    "image_id": 2000010915,
+    "source_sheet_index": 101,
+    "category_id": 4,
+    "ordered_targets": [
+      3109150111,
+      3109150211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20597,
+    "image_id": 2000020597,
+    "source_sheet_index": 103,
+    "category_id": 1,
+    "ordered_targets": [
+      3205970212,
+      3205970112
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10863,
+    "image_id": 2000010863,
+    "source_sheet_index": 104,
+    "category_id": 4,
+    "ordered_targets": [
+      3108630111,
+      3108630211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 11389,
+    "image_id": 2000011389,
+    "source_sheet_index": 106,
+    "category_id": 1,
+    "ordered_targets": [
+      3113890115,
+      3113890212
+    ],
+    "confirmed_colors": [
+      "pink",
+      "yellow"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 12732,
+    "image_id": 2000012732,
+    "source_sheet_index": 107,
+    "category_id": 4,
+    "ordered_targets": [
+      3127320111,
+      3127320211
+    ],
+    "confirmed_colors": [
+      "beige",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 3768,
+    "image_id": 2000003768,
+    "source_sheet_index": 108,
+    "category_id": 2,
+    "ordered_targets": [
+      3037680117,
+      3037680217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 15664,
+    "image_id": 2000015664,
+    "source_sheet_index": 112,
+    "category_id": 1,
+    "ordered_targets": [
+      3156640112,
+      3156640215
+    ],
+    "confirmed_colors": [
+      "gray",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 15700,
+    "image_id": 2000015700,
+    "source_sheet_index": 114,
+    "category_id": 2,
+    "ordered_targets": [
+      3157000117,
+      3157000317
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 2111,
+    "image_id": 2000002111,
+    "source_sheet_index": 115,
+    "category_id": 1,
+    "ordered_targets": [
+      3021110114,
+      3021110214
+    ],
+    "confirmed_colors": [
+      "green",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 8953,
+    "image_id": 2000008953,
+    "source_sheet_index": 116,
+    "category_id": 4,
+    "ordered_targets": [
+      3089530111,
+      3089530211
+    ],
+    "confirmed_colors": [
+      "black",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 21338,
+    "image_id": 2000021338,
+    "source_sheet_index": 117,
+    "category_id": 2,
+    "ordered_targets": [
+      3213380117,
+      3213380217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 23701,
+    "image_id": 2000023701,
+    "source_sheet_index": 120,
+    "category_id": 2,
+    "ordered_targets": [
+      3237010117,
+      3237010217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 2512,
+    "image_id": 2000002512,
+    "source_sheet_index": 121,
+    "category_id": 1,
+    "ordered_targets": [
+      3025120112,
+      3025120212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3769,
+    "image_id": 2000003769,
+    "source_sheet_index": 122,
+    "category_id": 4,
+    "ordered_targets": [
+      3037690111,
+      3037690211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20778,
+    "image_id": 2000020778,
+    "source_sheet_index": 127,
+    "category_id": 1,
+    "ordered_targets": [
+      3207780115,
+      3207780212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 617,
+    "image_id": 2000000617,
+    "source_sheet_index": 128,
+    "category_id": 4,
+    "ordered_targets": [
+      3006170111,
+      3006170311
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 23303,
+    "image_id": 2000023303,
+    "source_sheet_index": 129,
+    "category_id": 2,
+    "ordered_targets": [
+      3233030118,
+      3233030217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 24256,
+    "image_id": 2000024256,
+    "source_sheet_index": 131,
+    "category_id": 4,
+    "ordered_targets": [
+      3242560111,
+      3242560211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3184,
+    "image_id": 2000003184,
+    "source_sheet_index": 132,
+    "category_id": 2,
+    "ordered_targets": [
+      3031840117,
+      3031840217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20434,
+    "image_id": 2000020434,
+    "source_sheet_index": 133,
+    "category_id": 1,
+    "ordered_targets": [
+      3204340112,
+      3204340212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9485,
+    "image_id": 2000009485,
+    "source_sheet_index": 134,
+    "category_id": 4,
+    "ordered_targets": [
+      3094850111,
+      3094850234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 23115,
+    "image_id": 2000023115,
+    "source_sheet_index": 135,
+    "category_id": 2,
+    "ordered_targets": [
+      3231150118,
+      3231150218
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4612,
+    "image_id": 2000004612,
+    "source_sheet_index": 136,
+    "category_id": 1,
+    "ordered_targets": [
+      3046120112,
+      3046120212
+    ],
+    "confirmed_colors": [
+      "blue",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 23302,
+    "image_id": 2000023302,
+    "source_sheet_index": 137,
+    "category_id": 4,
+    "ordered_targets": [
+      3233020111,
+      3233020211
+    ],
+    "confirmed_colors": [
+      "beige",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 16394,
+    "image_id": 2000016394,
+    "source_sheet_index": 138,
+    "category_id": 2,
+    "ordered_targets": [
+      3163940117,
+      3163940217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7309,
+    "image_id": 2000007309,
+    "source_sheet_index": 139,
+    "category_id": 1,
+    "ordered_targets": [
+      3073090112,
+      3073090215
+    ],
+    "confirmed_colors": [
+      "purple",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 14581,
+    "image_id": 2000014581,
+    "source_sheet_index": 140,
+    "category_id": 4,
+    "ordered_targets": [
+      3145810111,
+      3145810211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1807,
+    "image_id": 2000001807,
+    "source_sheet_index": 142,
+    "category_id": 1,
+    "ordered_targets": [
+      3018070112,
+      3018070212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 25416,
+    "image_id": 2000025416,
+    "source_sheet_index": 143,
+    "category_id": 4,
+    "ordered_targets": [
+      3254160111,
+      3254160211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4017,
+    "image_id": 2000004017,
+    "source_sheet_index": 145,
+    "category_id": 1,
+    "ordered_targets": [
+      3040170112,
+      3040170212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10294,
+    "image_id": 2000010294,
+    "source_sheet_index": 146,
+    "category_id": 4,
+    "ordered_targets": [
+      3102940111,
+      3102940234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 2476,
+    "image_id": 2000002476,
+    "source_sheet_index": 148,
+    "category_id": 1,
+    "ordered_targets": [
+      3024760112,
+      3024760212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22755,
+    "image_id": 2000022755,
+    "source_sheet_index": 149,
+    "category_id": 4,
+    "ordered_targets": [
+      3227550211,
+      3227550411
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9518,
+    "image_id": 2000009518,
+    "source_sheet_index": 151,
+    "category_id": 1,
+    "ordered_targets": [
+      3095180115,
+      3095180213
+    ],
+    "confirmed_colors": [
+      "white",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 1972,
+    "image_id": 2000001972,
+    "source_sheet_index": 152,
+    "category_id": 4,
+    "ordered_targets": [
+      3019720111,
+      3019720211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20805,
+    "image_id": 2000020805,
+    "source_sheet_index": 153,
+    "category_id": 2,
+    "ordered_targets": [
+      3208050117,
+      3208050217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1806,
+    "image_id": 2000001806,
+    "source_sheet_index": 154,
+    "category_id": 1,
+    "ordered_targets": [
+      3018060112,
+      3018060212
+    ],
+    "confirmed_colors": [
+      "yellow",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 12722,
+    "image_id": 2000012722,
+    "source_sheet_index": 155,
+    "category_id": 4,
+    "ordered_targets": [
+      3127220111,
+      3127220211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 23739,
+    "image_id": 2000023739,
+    "source_sheet_index": 156,
+    "category_id": 2,
+    "ordered_targets": [
+      3237390118,
+      3237390218
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 16633,
+    "image_id": 2000016633,
+    "source_sheet_index": 157,
+    "category_id": 1,
+    "ordered_targets": [
+      3166330112,
+      3166330212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 25039,
+    "image_id": 2000025039,
+    "source_sheet_index": 158,
+    "category_id": 4,
+    "ordered_targets": [
+      3250390134,
+      3250390234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3022,
+    "image_id": 2000003022,
+    "source_sheet_index": 159,
+    "category_id": 2,
+    "ordered_targets": [
+      3030220117,
+      3030220218
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7650,
+    "image_id": 2000007650,
+    "source_sheet_index": 160,
+    "category_id": 1,
+    "ordered_targets": [
+      3076500115,
+      3076500215
+    ],
+    "confirmed_colors": [
+      "yellow",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 22168,
+    "image_id": 2000022168,
+    "source_sheet_index": 163,
+    "category_id": 1,
+    "ordered_targets": [
+      3221680112,
+      3221680212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 13826,
+    "image_id": 2000013826,
+    "source_sheet_index": 165,
+    "category_id": 2,
+    "ordered_targets": [
+      3138260217,
+      3138260117
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 12647,
+    "image_id": 2000012647,
+    "source_sheet_index": 166,
+    "category_id": 1,
+    "ordered_targets": [
+      3126470112,
+      3126470212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20385,
+    "image_id": 2000020385,
+    "source_sheet_index": 168,
+    "category_id": 2,
+    "ordered_targets": [
+      3203850217,
+      3203850417
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4986,
+    "image_id": 2000004986,
+    "source_sheet_index": 169,
+    "category_id": 1,
+    "ordered_targets": [
+      3049860113,
+      3049860212
+    ],
+    "confirmed_colors": [
+      "light blue",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 8606,
+    "image_id": 2000008606,
+    "source_sheet_index": 170,
+    "category_id": 4,
+    "ordered_targets": [
+      3086060111,
+      3086060211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 8955,
+    "image_id": 2000008955,
+    "source_sheet_index": 171,
+    "category_id": 2,
+    "ordered_targets": [
+      3089550117,
+      3089550217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9246,
+    "image_id": 2000009246,
+    "source_sheet_index": 172,
+    "category_id": 1,
+    "ordered_targets": [
+      3092460115,
+      3092460215
+    ],
+    "confirmed_colors": [
+      "green",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 24326,
+    "image_id": 2000024326,
+    "source_sheet_index": 174,
+    "category_id": 2,
+    "ordered_targets": [
+      3243260117,
+      3243260217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20141,
+    "image_id": 2000020141,
+    "source_sheet_index": 175,
+    "category_id": 1,
+    "ordered_targets": [
+      3201410112,
+      3201410212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 15070,
+    "image_id": 2000015070,
+    "source_sheet_index": 176,
+    "category_id": 4,
+    "ordered_targets": [
+      3150700211,
+      3150700111
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7731,
+    "image_id": 2000007731,
+    "source_sheet_index": 178,
+    "category_id": 1,
+    "ordered_targets": [
+      3077310115,
+      3077310212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 571,
+    "image_id": 2000000571,
+    "source_sheet_index": 180,
+    "category_id": 2,
+    "ordered_targets": [
+      3005710117,
+      3005710217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10737,
+    "image_id": 2000010737,
+    "source_sheet_index": 181,
+    "category_id": 1,
+    "ordered_targets": [
+      3107370113,
+      3107370212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3169,
+    "image_id": 2000003169,
+    "source_sheet_index": 182,
+    "category_id": 4,
+    "ordered_targets": [
+      3031690134,
+      3031690234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 14743,
+    "image_id": 2000014743,
+    "source_sheet_index": 183,
+    "category_id": 2,
+    "ordered_targets": [
+      3147430117,
+      3147430217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5309,
+    "image_id": 2000005309,
+    "source_sheet_index": 186,
+    "category_id": 2,
+    "ordered_targets": [
+      3053090117,
+      3053090217
+    ],
+    "confirmed_colors": [
+      "white",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 5640,
+    "image_id": 2000005640,
+    "source_sheet_index": 187,
+    "category_id": 1,
+    "ordered_targets": [
+      3056400112,
+      3056400212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22346,
+    "image_id": 2000022346,
+    "source_sheet_index": 188,
+    "category_id": 4,
+    "ordered_targets": [
+      3223460134,
+      3223460234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 13439,
+    "image_id": 2000013439,
+    "source_sheet_index": 189,
+    "category_id": 2,
+    "ordered_targets": [
+      3134390117,
+      3134390218
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 18186,
+    "image_id": 2000018186,
+    "source_sheet_index": 190,
+    "category_id": 1,
+    "ordered_targets": [
+      3181860115,
+      3181860215
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19717,
+    "image_id": 2000019717,
+    "source_sheet_index": 191,
+    "category_id": 4,
+    "ordered_targets": [
+      3197170134,
+      3197170211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19884,
+    "image_id": 2000019884,
+    "source_sheet_index": 192,
+    "category_id": 2,
+    "ordered_targets": [
+      3198840118,
+      3198840218
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10290,
+    "image_id": 2000010290,
+    "source_sheet_index": 194,
+    "category_id": 4,
+    "ordered_targets": [
+      3102900111,
+      3102900234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3631,
+    "image_id": 2000003631,
+    "source_sheet_index": 195,
+    "category_id": 2,
+    "ordered_targets": [
+      3036310117,
+      3036310217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3019,
+    "image_id": 2000003019,
+    "source_sheet_index": 196,
+    "category_id": 1,
+    "ordered_targets": [
+      3030190115,
+      3030190212
+    ],
+    "confirmed_colors": [
+      "pink",
+      "yellow"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 1142,
+    "image_id": 2000001142,
+    "source_sheet_index": 200,
+    "category_id": 4,
+    "ordered_targets": [
+      3011420111,
+      3011420211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 2498,
+    "image_id": 2000002498,
+    "source_sheet_index": 202,
+    "category_id": 1,
+    "ordered_targets": [
+      3024980112,
+      3024980212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1634,
+    "image_id": 2000001634,
+    "source_sheet_index": 203,
+    "category_id": 4,
+    "ordered_targets": [
+      3016340111,
+      3016340211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9279,
+    "image_id": 2000009279,
+    "source_sheet_index": 204,
+    "category_id": 2,
+    "ordered_targets": [
+      3092790117,
+      3092790217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9907,
+    "image_id": 2000009907,
+    "source_sheet_index": 205,
+    "category_id": 1,
+    "ordered_targets": [
+      3099070112,
+      3099070212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19667,
+    "image_id": 2000019667,
+    "source_sheet_index": 206,
+    "category_id": 4,
+    "ordered_targets": [
+      3196670111,
+      3196670211
+    ],
+    "confirmed_colors": [
+      "white",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 4413,
+    "image_id": 2000004413,
+    "source_sheet_index": 208,
+    "category_id": 1,
+    "ordered_targets": [
+      3044130112,
+      3044130212
+    ],
+    "confirmed_colors": [
+      "blue",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 6201,
+    "image_id": 2000006201,
+    "source_sheet_index": 210,
+    "category_id": 2,
+    "ordered_targets": [
+      3062010117,
+      3062010217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22385,
+    "image_id": 2000022385,
+    "source_sheet_index": 212,
+    "category_id": 4,
+    "ordered_targets": [
+      3223850134,
+      3223850211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3182,
+    "image_id": 2000003182,
+    "source_sheet_index": 213,
+    "category_id": 2,
+    "ordered_targets": [
+      3031820117,
+      3031820217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7521,
+    "image_id": 2000007521,
+    "source_sheet_index": 214,
+    "category_id": 1,
+    "ordered_targets": [
+      3075210115,
+      3075210215
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22974,
+    "image_id": 2000022974,
+    "source_sheet_index": 216,
+    "category_id": 2,
+    "ordered_targets": [
+      3229740217,
+      3229740317
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5862,
+    "image_id": 2000005862,
+    "source_sheet_index": 217,
+    "category_id": 1,
+    "ordered_targets": [
+      3058620215,
+      3058620115
+    ],
+    "confirmed_colors": [
+      "white",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 13766,
+    "image_id": 2000013766,
+    "source_sheet_index": 218,
+    "category_id": 4,
+    "ordered_targets": [
+      3137660111,
+      3137660311
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20142,
+    "image_id": 2000020142,
+    "source_sheet_index": 220,
+    "category_id": 1,
+    "ordered_targets": [
+      3201420112,
+      3201420212
+    ],
+    "confirmed_colors": [
+      "white",
+      "purple"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 7053,
+    "image_id": 2000007053,
+    "source_sheet_index": 221,
+    "category_id": 4,
+    "ordered_targets": [
+      3070530111,
+      3070530211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 17659,
+    "image_id": 2000017659,
+    "source_sheet_index": 222,
+    "category_id": 2,
+    "ordered_targets": [
+      3176590118,
+      3176590217
+    ],
+    "confirmed_colors": [
+      "green",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 14419,
+    "image_id": 2000014419,
+    "source_sheet_index": 223,
+    "category_id": 1,
+    "ordered_targets": [
+      3144190113,
+      3144190213
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 8809,
+    "image_id": 2000008809,
+    "source_sheet_index": 224,
+    "category_id": 4,
+    "ordered_targets": [
+      3088090111,
+      3088090234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5108,
+    "image_id": 2000005108,
+    "source_sheet_index": 225,
+    "category_id": 2,
+    "ordered_targets": [
+      3051080117,
+      3051080217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 21930,
+    "image_id": 2000021930,
+    "source_sheet_index": 227,
+    "category_id": 4,
+    "ordered_targets": [
+      3219300111,
+      3219300211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4942,
+    "image_id": 2000004942,
+    "source_sheet_index": 228,
+    "category_id": 2,
+    "ordered_targets": [
+      3049420117,
+      3049420217
+    ],
+    "confirmed_colors": [
+      "white",
+      "light blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 3145,
+    "image_id": 2000003145,
+    "source_sheet_index": 229,
+    "category_id": 1,
+    "ordered_targets": [
+      3031450114,
+      3031450212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 18963,
+    "image_id": 2000018963,
+    "source_sheet_index": 231,
+    "category_id": 2,
+    "ordered_targets": [
+      3189630117,
+      3189630217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 16801,
+    "image_id": 2000016801,
+    "source_sheet_index": 232,
+    "category_id": 1,
+    "ordered_targets": [
+      3168010112,
+      3168010212
+    ],
+    "confirmed_colors": [
+      "blue",
+      "purple"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 7282,
+    "image_id": 2000007282,
+    "source_sheet_index": 233,
+    "category_id": 4,
+    "ordered_targets": [
+      3072820134,
+      3072820234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1543,
+    "image_id": 2000001543,
+    "source_sheet_index": 235,
+    "category_id": 1,
+    "ordered_targets": [
+      3015430114,
+      3015430212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 8358,
+    "image_id": 2000008358,
+    "source_sheet_index": 236,
+    "category_id": 4,
+    "ordered_targets": [
+      3083580134,
+      3083580234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 17070,
+    "image_id": 2000017070,
+    "source_sheet_index": 237,
+    "category_id": 2,
+    "ordered_targets": [
+      3170700117,
+      3170700217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 25010,
+    "image_id": 2000025010,
+    "source_sheet_index": 238,
+    "category_id": 1,
+    "ordered_targets": [
+      3250100112,
+      3250100212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7082,
+    "image_id": 2000007082,
+    "source_sheet_index": 239,
+    "category_id": 4,
+    "ordered_targets": [
+      3070820111,
+      3070820211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 5917,
+    "image_id": 2000005917,
+    "source_sheet_index": 240,
+    "category_id": 2,
+    "ordered_targets": [
+      3059170217,
+      3059170117
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 21514,
+    "image_id": 2000021514,
+    "source_sheet_index": 241,
+    "category_id": 1,
+    "ordered_targets": [
+      3215140112,
+      3215140212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 14948,
+    "image_id": 2000014948,
+    "source_sheet_index": 242,
+    "category_id": 4,
+    "ordered_targets": [
+      3149480111,
+      3149480211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 6229,
+    "image_id": 2000006229,
+    "source_sheet_index": 243,
+    "category_id": 2,
+    "ordered_targets": [
+      3062290118,
+      3062290217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3594,
+    "image_id": 2000003594,
+    "source_sheet_index": 245,
+    "category_id": 4,
+    "ordered_targets": [
+      3035940111,
+      3035940211
+    ],
+    "confirmed_colors": [
+      "green",
+      "beige"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 5127,
+    "image_id": 2000005127,
+    "source_sheet_index": 246,
+    "category_id": 2,
+    "ordered_targets": [
+      3051270117,
+      3051270217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7526,
+    "image_id": 2000007526,
+    "source_sheet_index": 247,
+    "category_id": 1,
+    "ordered_targets": [
+      3075260112,
+      3075260214
+    ],
+    "confirmed_colors": [
+      "black",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 2112,
+    "image_id": 2000002112,
+    "source_sheet_index": 249,
+    "category_id": 2,
+    "ordered_targets": [
+      3021120117,
+      3021120217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7735,
+    "image_id": 2000007735,
+    "source_sheet_index": 250,
+    "category_id": 1,
+    "ordered_targets": [
+      3077350112,
+      3077350212
+    ],
+    "confirmed_colors": [
+      "pink",
+      "red"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 24733,
+    "image_id": 2000024733,
+    "source_sheet_index": 253,
+    "category_id": 1,
+    "ordered_targets": [
+      3247330115,
+      3247330215
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 3387,
+    "image_id": 2000003387,
+    "source_sheet_index": 254,
+    "category_id": 4,
+    "ordered_targets": [
+      3033870111,
+      3033870211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 21459,
+    "image_id": 2000021459,
+    "source_sheet_index": 255,
+    "category_id": 2,
+    "ordered_targets": [
+      3214590117,
+      3214590217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 13413,
+    "image_id": 2000013413,
+    "source_sheet_index": 258,
+    "category_id": 2,
+    "ordered_targets": [
+      3134130117,
+      3134130217
+    ],
+    "confirmed_colors": [
+      "light gray",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 14191,
+    "image_id": 2000014191,
+    "source_sheet_index": 259,
+    "category_id": 1,
+    "ordered_targets": [
+      3141910112,
+      3141910212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22430,
+    "image_id": 2000022430,
+    "source_sheet_index": 261,
+    "category_id": 2,
+    "ordered_targets": [
+      3224300117,
+      3224300217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7737,
+    "image_id": 2000007737,
+    "source_sheet_index": 262,
+    "category_id": 1,
+    "ordered_targets": [
+      3077370112,
+      3077370212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19289,
+    "image_id": 2000019289,
+    "source_sheet_index": 264,
+    "category_id": 2,
+    "ordered_targets": [
+      3192890117,
+      3192890217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 6601,
+    "image_id": 2000006601,
+    "source_sheet_index": 265,
+    "category_id": 1,
+    "ordered_targets": [
+      3066010215,
+      3066010112
+    ],
+    "confirmed_colors": [
+      "green",
+      "white"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 20740,
+    "image_id": 2000020740,
+    "source_sheet_index": 266,
+    "category_id": 4,
+    "ordered_targets": [
+      3207400111,
+      3207400211
+    ],
+    "confirmed_colors": [
+      "brown",
+      "navy"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 18800,
+    "image_id": 2000018800,
+    "source_sheet_index": 267,
+    "category_id": 2,
+    "ordered_targets": [
+      3188000117,
+      3188000217
+    ],
+    "confirmed_colors": [
+      "beige",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 6228,
+    "image_id": 2000006228,
+    "source_sheet_index": 268,
+    "category_id": 1,
+    "ordered_targets": [
+      3062280112,
+      3062280212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22147,
+    "image_id": 2000022147,
+    "source_sheet_index": 270,
+    "category_id": 2,
+    "ordered_targets": [
+      3221470117,
+      3221470217
+    ],
+    "confirmed_colors": [
+      "light blue",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 2077,
+    "image_id": 2000002077,
+    "source_sheet_index": 271,
+    "category_id": 1,
+    "ordered_targets": [
+      3020770114,
+      3020770213
+    ],
+    "confirmed_colors": [
+      "blue",
+      "pink"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 19128,
+    "image_id": 2000019128,
+    "source_sheet_index": 272,
+    "category_id": 4,
+    "ordered_targets": [
+      3191280111,
+      3191280211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 22190,
+    "image_id": 2000022190,
+    "source_sheet_index": 273,
+    "category_id": 2,
+    "ordered_targets": [
+      3221900117,
+      3221900217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9906,
+    "image_id": 2000009906,
+    "source_sheet_index": 275,
+    "category_id": 4,
+    "ordered_targets": [
+      3099060111,
+      3099060211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 18395,
+    "image_id": 2000018395,
+    "source_sheet_index": 276,
+    "category_id": 2,
+    "ordered_targets": [
+      3183950117,
+      3183950217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 24244,
+    "image_id": 2000024244,
+    "source_sheet_index": 278,
+    "category_id": 4,
+    "ordered_targets": [
+      3242440111,
+      3242440211
+    ],
+    "confirmed_colors": [
+      "light blue",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 8006,
+    "image_id": 2000008006,
+    "source_sheet_index": 279,
+    "category_id": 2,
+    "ordered_targets": [
+      3080060117,
+      3080060217
+    ],
+    "confirmed_colors": [
+      "purple",
+      "blue"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 25414,
+    "image_id": 2000025414,
+    "source_sheet_index": 280,
+    "category_id": 1,
+    "ordered_targets": [
+      3254140112,
+      3254140212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 7081,
+    "image_id": 2000007081,
+    "source_sheet_index": 282,
+    "category_id": 2,
+    "ordered_targets": [
+      3070810117,
+      3070810217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1742,
+    "image_id": 2000001742,
+    "source_sheet_index": 283,
+    "category_id": 1,
+    "ordered_targets": [
+      3017420112,
+      3017420212
+    ],
+    "confirmed_colors": [
+      "pink",
+      "green"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 9863,
+    "image_id": 2000009863,
+    "source_sheet_index": 285,
+    "category_id": 2,
+    "ordered_targets": [
+      3098630117,
+      3098630217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 9137,
+    "image_id": 2000009137,
+    "source_sheet_index": 286,
+    "category_id": 1,
+    "ordered_targets": [
+      3091370213,
+      3091370312
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 19462,
+    "image_id": 2000019462,
+    "source_sheet_index": 287,
+    "category_id": 4,
+    "ordered_targets": [
+      3194620134,
+      3194620234
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 13831,
+    "image_id": 2000013831,
+    "source_sheet_index": 289,
+    "category_id": 1,
+    "ordered_targets": [
+      3138310115,
+      3138310215
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 20192,
+    "image_id": 2000020192,
+    "source_sheet_index": 292,
+    "category_id": 1,
+    "ordered_targets": [
+      3201920113,
+      3201920213
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 4598,
+    "image_id": 2000004598,
+    "source_sheet_index": 295,
+    "category_id": 1,
+    "ordered_targets": [
+      3045980114,
+      3045980214
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 1813,
+    "image_id": 2000001813,
+    "source_sheet_index": 297,
+    "category_id": 2,
+    "ordered_targets": [
+      3018130117,
+      3018130217
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 23488,
+    "image_id": 2000023488,
+    "source_sheet_index": 298,
+    "category_id": 1,
+    "ordered_targets": [
+      3234880112,
+      3234880212
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 6611,
+    "image_id": 2000006611,
+    "source_sheet_index": 299,
+    "category_id": 4,
+    "ordered_targets": [
+      3066110211,
+      3066110111
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  },
+  {
+    "source_id": 10326,
+    "image_id": 2000010326,
+    "source_sheet_index": 300,
+    "category_id": 2,
+    "ordered_targets": [
+      3103260117,
+      3103260217
+    ],
+    "confirmed_colors": [
+      "beige",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 3392,
+    "image_id": 2000003392,
+    "source_sheet_index": 301,
+    "category_id": 1,
+    "ordered_targets": [
+      3033920115,
+      3033920215
+    ],
+    "confirmed_colors": [
+      "beige",
+      "black"
+    ],
+    "split": "dev"
+  },
+  {
+    "source_id": 5453,
+    "image_id": 2000005453,
+    "source_sheet_index": 302,
+    "category_id": 4,
+    "ordered_targets": [
+      3054530134,
+      3054530211
+    ],
+    "confirmed_colors": null,
+    "split": "dev"
+  }
+]

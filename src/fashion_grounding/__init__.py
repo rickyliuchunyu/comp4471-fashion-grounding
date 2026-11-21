@@ -1,0 +1,1 @@
+"""Fashion grounding course project."""

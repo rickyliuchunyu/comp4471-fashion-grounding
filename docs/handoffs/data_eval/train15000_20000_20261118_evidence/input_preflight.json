@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "input_hashes": {
+    "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261112-grounded-queries/raw/instances_attributes_train2020.json": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+    "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261112-large-data-regrouped/fingerprints.json": "fca5d97f4ebe9c0144ac9b05732a75a41ff2b0c503d6464a35bdc9ced5035aba",
+    "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261116-train10000-mirror4/new_fingerprints.json": "8c65b5218f82d705de4c2d1858b3a7280e1fd0e1b9ad9c930152afa7363d2682",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1/preservation_report.json": "44ad16a5fd6b2937c98e2980a27c1b419789c45610defa3a1236cef41d7c316c",
+    "/root/autodl-tmp/fashion-grounding/shared/processed/fp_train10000_targeted_v1/SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3",
+    "/root/autodl-tmp/fashion-grounding/workspaces/data_eval/docs/handoffs/data_eval/language_targeted_20261117_evidence/dev_exposure_registry.json": "688e8cc101a570f6c7ce012fe3b092dfb0ced637108e1d89555a3210ec959b9b"
+  },
+  "protected_pins": {
+    "fp_dev250_v1": {
+      "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+      "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635"
+    },
+    "fp_test400_holdout_v1": {
+      "image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8"
+    }
+  },
+  "parent_pins": {
+    "image_manifest.json": "9966383f85e1a4223a261f023eb80359b945815dff42ad4965c66c26225250d0",
+    "annotations_coco.json": "780b55fd3965606b41efeee62a7e708fcd45d3bd114b198d70f813f9f93f9f54",
+    "SHA256SUMS.json": "572b6d509f6cd759e697f1aae0280ded91776bc81a3126d2699b50c5d99462e3",
+    "mapping_config.json": "ce88a18ade3f6620eb83335b88da2e062847e033b7b75fd9a4266a480400583f"
+  },
+  "no_old_images_or_masks_decoded": true
+}

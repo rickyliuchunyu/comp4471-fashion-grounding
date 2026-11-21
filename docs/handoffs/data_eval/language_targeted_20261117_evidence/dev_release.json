@@ -1,0 +1,53 @@
+{
+  "release_id": "fp_language_dev39_challenge_draft_v1",
+  "formal_freeze": false,
+  "split": "dev",
+  "source": "/root/autodl-tmp/fashion-grounding/runs/data_eval/20261117-language-targeted-expansion-r02/dev50_source",
+  "base": null,
+  "usage": "Separate targeted dev challenge; human review required before evaluation; never train",
+  "audit": "Full image and cyan target mask contact sheet visually inspected by Codex; not independent human review",
+  "source_annotation_sha256": "bdbd82e0c035df8aaea8a8f77a2036ec3cb31e3bd1535efd2c60bce9b47d1171",
+  "base_queries_sha256": null,
+  "statistics": {
+    "status": "passed",
+    "images": 39,
+    "instances": 200,
+    "candidates": 200,
+    "queries": {
+      "queries_draft.jsonl": 78,
+      "queries_accepted.jsonl": 0
+    },
+    "query_images": 39,
+    "increment_images": 39,
+    "increment_semantic_groups": 39,
+    "semantic_groups": 39,
+    "query_records": 78,
+    "accepted": 0,
+    "rejected_images": 11,
+    "split_overlap": {
+      "fp_train10000_targeted_v1:image_id": 0,
+      "fp_train10000_targeted_v1:group_id": 0,
+      "fp_train10000_targeted_v1:sha256": 0,
+      "fp_dev250_v1:image_id": 0,
+      "fp_dev250_v1:group_id": 0,
+      "fp_dev250_v1:sha256": 0,
+      "fp_test400_holdout_v1:image_id": 0,
+      "fp_test400_holdout_v1:group_id": 0,
+      "fp_test400_holdout_v1:sha256": 0
+    },
+    "base_query_records_preserved": 0,
+    "increment_types": {
+      "appearance": 24,
+      "spatial": 4,
+      "combined": 11
+    },
+    "increment_categories": {
+      "7": 11,
+      "1": 5,
+      "6": 13,
+      "8": 10
+    },
+    "increment_same_category_groups": 25,
+    "increment_same_fine_groups": 23
+  }
+}

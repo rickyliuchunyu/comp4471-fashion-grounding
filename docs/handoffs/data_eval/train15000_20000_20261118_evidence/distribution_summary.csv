@@ -1,0 +1,171 @@
+subset,taxonomy,category_id,name,instances,images,groups,small_instances_le1024,small_images,extreme_instances_le256,extreme_images
+old10k,project_categories,1,top,5612,5236,5229,165,163,45,45
+old10k,project_categories,2,pants,3567,3536,3532,25,24,5,5
+old10k,project_categories,3,skirt,1157,1154,1154,2,1,2,1
+old10k,project_categories,4,outerwear,2802,2714,2712,7,6,5,4
+old10k,project_categories,5,dress,4161,4145,4134,3,3,1,1
+old10k,project_categories,6,shoes,11099,5739,5729,2733,2074,435,408
+old10k,project_categories,7,bag,2203,2077,2075,215,210,23,23
+old10k,project_categories,8,accessory,9098,5086,5082,4016,2757,1359,1004
+old10k,source_categories,0,"shirt, blouse",1436,1427,1425,24,24,7,7
+old10k,source_categories,1,"top, t-shirt, sweatshirt",3713,3619,3614,134,133,37,37
+old10k,source_categories,2,sweater,309,309,309,3,3,1,1
+old10k,source_categories,3,cardigan,220,218,218,0,0,0,0
+old10k,source_categories,4,jacket,1804,1779,1779,3,3,2,2
+old10k,source_categories,5,vest,154,154,154,4,4,0,0
+old10k,source_categories,6,pants,2907,2884,2881,5,5,2,2
+old10k,source_categories,7,shorts,660,657,656,20,19,3,3
+old10k,source_categories,8,skirt,1157,1154,1154,2,1,2,1
+old10k,source_categories,9,coat,747,734,733,4,3,3,2
+old10k,source_categories,10,dress,4161,4145,4134,3,3,1,1
+old10k,source_categories,12,cape,31,31,31,0,0,0,0
+old10k,source_categories,13,glasses,1454,1451,1449,682,680,126,126
+old10k,source_categories,14,hat,639,637,636,34,34,1,1
+old10k,source_categories,15,"headband, head covering, hair accessory",1198,1016,1016,875,719,433,322
+old10k,source_categories,16,tie,351,351,350,106,106,2,2
+old10k,source_categories,17,glove,336,185,184,55,44,5,5
+old10k,source_categories,18,watch,799,795,793,628,626,194,194
+old10k,source_categories,19,belt,1789,1732,1730,719,689,138,136
+old10k,source_categories,20,leg warmer,25,14,14,1,1,0,0
+old10k,source_categories,21,"tights, stockings",988,503,503,36,28,9,8
+old10k,source_categories,22,sock,1120,634,634,870,544,449,314
+old10k,source_categories,23,shoe,11099,5739,5729,2733,2074,435,408
+old10k,source_categories,24,"bag, wallet",2203,2077,2075,215,210,23,23
+old10k,source_categories,25,scarf,363,358,357,10,10,2,2
+old10k,source_categories,26,umbrella,36,36,36,0,0,0,0
+delta1,project_categories,1,top,2894,2673,2673,58,57,12,12
+delta1,project_categories,2,pants,1828,1819,1819,8,8,1,1
+delta1,project_categories,3,skirt,568,565,565,2,2,2,2
+delta1,project_categories,4,outerwear,1446,1415,1415,1,1,1,1
+delta1,project_categories,5,dress,2088,2082,2082,3,3,0,0
+delta1,project_categories,6,shoes,5388,2799,2799,1016,784,280,266
+delta1,project_categories,7,bag,710,688,688,0,0,0,0
+delta1,project_categories,8,accessory,4338,2509,2509,1671,1308,545,403
+delta1,source_categories,0,"shirt, blouse",769,761,761,8,8,2,2
+delta1,source_categories,1,"top, t-shirt, sweatshirt",1858,1804,1804,46,46,10,10
+delta1,source_categories,2,sweater,175,175,175,2,2,0,0
+delta1,source_categories,3,cardigan,148,147,147,0,0,0,0
+delta1,source_categories,4,jacket,944,933,933,1,1,1,1
+delta1,source_categories,5,vest,92,91,91,2,2,0,0
+delta1,source_categories,6,pants,1501,1494,1494,3,3,1,1
+delta1,source_categories,7,shorts,327,326,326,5,5,0,0
+delta1,source_categories,8,skirt,568,565,565,2,2,2,2
+delta1,source_categories,9,coat,332,329,329,0,0,0,0
+delta1,source_categories,10,dress,2088,2082,2082,3,3,0,0
+delta1,source_categories,12,cape,22,22,22,0,0,0,0
+delta1,source_categories,13,glasses,502,502,502,58,58,5,5
+delta1,source_categories,14,hat,300,300,300,4,4,0,0
+delta1,source_categories,15,"headband, head covering, hair accessory",529,407,407,360,255,202,114
+delta1,source_categories,16,tie,217,217,217,51,51,2,2
+delta1,source_categories,17,glove,158,84,84,24,20,4,4
+delta1,source_categories,18,watch,638,634,634,547,543,115,115
+delta1,source_categories,19,belt,881,851,851,309,300,70,70
+delta1,source_categories,20,leg warmer,16,9,9,1,1,0,0
+delta1,source_categories,21,"tights, stockings",526,266,266,9,8,0,0
+delta1,source_categories,22,sock,410,237,237,306,200,146,109
+delta1,source_categories,23,shoe,5388,2799,2799,1016,784,280,266
+delta1,source_categories,24,"bag, wallet",710,688,688,0,0,0,0
+delta1,source_categories,25,scarf,144,144,144,2,2,1,1
+delta1,source_categories,26,umbrella,17,17,17,0,0,0,0
+combined15000,project_categories,1,top,8506,7909,7902,223,220,57,57
+combined15000,project_categories,2,pants,5395,5355,5351,33,32,6,6
+combined15000,project_categories,3,skirt,1725,1719,1719,4,3,4,3
+combined15000,project_categories,4,outerwear,4248,4129,4127,8,7,6,5
+combined15000,project_categories,5,dress,6249,6227,6216,6,6,1,1
+combined15000,project_categories,6,shoes,16487,8538,8528,3749,2858,715,674
+combined15000,project_categories,7,bag,2913,2765,2763,215,210,23,23
+combined15000,project_categories,8,accessory,13436,7595,7591,5687,4065,1904,1407
+combined15000,source_categories,0,"shirt, blouse",2205,2188,2186,32,32,9,9
+combined15000,source_categories,1,"top, t-shirt, sweatshirt",5571,5423,5418,180,179,47,47
+combined15000,source_categories,2,sweater,484,484,484,5,5,1,1
+combined15000,source_categories,3,cardigan,368,365,365,0,0,0,0
+combined15000,source_categories,4,jacket,2748,2712,2712,4,4,3,3
+combined15000,source_categories,5,vest,246,245,245,6,6,0,0
+combined15000,source_categories,6,pants,4408,4378,4375,8,8,3,3
+combined15000,source_categories,7,shorts,987,983,982,25,24,3,3
+combined15000,source_categories,8,skirt,1725,1719,1719,4,3,4,3
+combined15000,source_categories,9,coat,1079,1063,1062,4,3,3,2
+combined15000,source_categories,10,dress,6249,6227,6216,6,6,1,1
+combined15000,source_categories,12,cape,53,53,53,0,0,0,0
+combined15000,source_categories,13,glasses,1956,1953,1951,740,738,131,131
+combined15000,source_categories,14,hat,939,937,936,38,38,1,1
+combined15000,source_categories,15,"headband, head covering, hair accessory",1727,1423,1423,1235,974,635,436
+combined15000,source_categories,16,tie,568,568,567,157,157,4,4
+combined15000,source_categories,17,glove,494,269,268,79,64,9,9
+combined15000,source_categories,18,watch,1437,1429,1427,1175,1169,309,309
+combined15000,source_categories,19,belt,2670,2583,2581,1028,989,208,206
+combined15000,source_categories,20,leg warmer,41,23,23,2,2,0,0
+combined15000,source_categories,21,"tights, stockings",1514,769,769,45,36,9,8
+combined15000,source_categories,22,sock,1530,871,871,1176,744,595,423
+combined15000,source_categories,23,shoe,16487,8538,8528,3749,2858,715,674
+combined15000,source_categories,24,"bag, wallet",2913,2765,2763,215,210,23,23
+combined15000,source_categories,25,scarf,507,502,501,12,12,3,3
+combined15000,source_categories,26,umbrella,53,53,53,0,0,0,0
+delta2,project_categories,1,top,2872,2666,2666,74,72,13,13
+delta2,project_categories,2,pants,1869,1860,1860,9,9,1,1
+delta2,project_categories,3,skirt,571,570,570,2,2,0,0
+delta2,project_categories,4,outerwear,1463,1424,1424,3,1,2,1
+delta2,project_categories,5,dress,2027,2023,2023,4,4,1,1
+delta2,project_categories,6,shoes,5259,2708,2708,921,700,287,257
+delta2,project_categories,7,bag,685,664,664,0,0,0,0
+delta2,project_categories,8,accessory,4243,2490,2490,1610,1306,497,400
+delta2,source_categories,0,"shirt, blouse",775,768,768,9,9,1,1
+delta2,source_categories,1,"top, t-shirt, sweatshirt",1831,1785,1785,60,58,12,12
+delta2,source_categories,2,sweater,178,178,178,0,0,0,0
+delta2,source_categories,3,cardigan,129,128,128,0,0,0,0
+delta2,source_categories,4,jacket,977,964,964,3,1,2,1
+delta2,source_categories,5,vest,88,88,88,5,5,0,0
+delta2,source_categories,6,pants,1507,1500,1500,4,4,0,0
+delta2,source_categories,7,shorts,362,360,360,5,5,1,1
+delta2,source_categories,8,skirt,571,570,570,2,2,0,0
+delta2,source_categories,9,coat,344,334,334,0,0,0,0
+delta2,source_categories,10,dress,2027,2023,2023,4,4,1,1
+delta2,source_categories,12,cape,13,13,13,0,0,0,0
+delta2,source_categories,13,glasses,516,516,516,57,57,7,7
+delta2,source_categories,14,hat,282,282,282,6,6,0,0
+delta2,source_categories,15,"headband, head covering, hair accessory",446,384,384,270,220,125,89
+delta2,source_categories,16,tie,201,201,201,40,40,0,0
+delta2,source_categories,17,glove,184,101,101,21,17,2,2
+delta2,source_categories,18,watch,639,634,634,560,557,131,131
+delta2,source_categories,19,belt,831,799,799,317,300,66,66
+delta2,source_categories,20,leg warmer,11,6,6,1,1,1,1
+delta2,source_categories,21,"tights, stockings",535,269,269,28,21,7,6
+delta2,source_categories,22,sock,439,248,248,309,200,157,116
+delta2,source_categories,23,shoe,5259,2708,2708,921,700,287,257
+delta2,source_categories,24,"bag, wallet",685,664,664,0,0,0,0
+delta2,source_categories,25,scarf,148,148,148,1,1,1,1
+delta2,source_categories,26,umbrella,11,11,11,0,0,0,0
+combined20000,project_categories,1,top,11378,10575,10568,297,292,70,70
+combined20000,project_categories,2,pants,7264,7215,7211,42,41,7,7
+combined20000,project_categories,3,skirt,2296,2289,2289,6,5,4,3
+combined20000,project_categories,4,outerwear,5711,5553,5551,11,8,8,6
+combined20000,project_categories,5,dress,8276,8250,8239,10,10,2,2
+combined20000,project_categories,6,shoes,21746,11246,11236,4670,3558,1002,931
+combined20000,project_categories,7,bag,3598,3429,3427,215,210,23,23
+combined20000,project_categories,8,accessory,17679,10085,10081,7297,5371,2401,1807
+combined20000,source_categories,0,"shirt, blouse",2980,2956,2954,41,41,10,10
+combined20000,source_categories,1,"top, t-shirt, sweatshirt",7402,7208,7203,240,237,59,59
+combined20000,source_categories,2,sweater,662,662,662,5,5,1,1
+combined20000,source_categories,3,cardigan,497,493,493,0,0,0,0
+combined20000,source_categories,4,jacket,3725,3676,3676,7,5,5,4
+combined20000,source_categories,5,vest,334,333,333,11,11,0,0
+combined20000,source_categories,6,pants,5915,5878,5875,12,12,3,3
+combined20000,source_categories,7,shorts,1349,1343,1342,30,29,4,4
+combined20000,source_categories,8,skirt,2296,2289,2289,6,5,4,3
+combined20000,source_categories,9,coat,1423,1397,1396,4,3,3,2
+combined20000,source_categories,10,dress,8276,8250,8239,10,10,2,2
+combined20000,source_categories,12,cape,66,66,66,0,0,0,0
+combined20000,source_categories,13,glasses,2472,2469,2467,797,795,138,138
+combined20000,source_categories,14,hat,1221,1219,1218,44,44,1,1
+combined20000,source_categories,15,"headband, head covering, hair accessory",2173,1807,1807,1505,1194,760,525
+combined20000,source_categories,16,tie,769,769,768,197,197,4,4
+combined20000,source_categories,17,glove,678,370,369,100,81,11,11
+combined20000,source_categories,18,watch,2076,2063,2061,1735,1726,440,440
+combined20000,source_categories,19,belt,3501,3382,3380,1345,1289,274,272
+combined20000,source_categories,20,leg warmer,52,29,29,3,3,1,1
+combined20000,source_categories,21,"tights, stockings",2049,1038,1038,73,57,16,14
+combined20000,source_categories,22,sock,1969,1119,1119,1485,944,752,539
+combined20000,source_categories,23,shoe,21746,11246,11236,4670,3558,1002,931
+combined20000,source_categories,24,"bag, wallet",3598,3429,3427,215,210,23,23
+combined20000,source_categories,25,scarf,655,650,649,13,13,4,4
+combined20000,source_categories,26,umbrella,64,64,64,0,0,0,0

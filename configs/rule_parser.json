@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "lexicon_version": "rules-v1-draft",
-  "status": "proposed_not_implemented_not_dev_frozen",
+  "lexicon_version": "rules-v1-pilot",
+  "status": "implemented_train_pilot_not_dev_frozen",
   "owner": "data_eval",
   "reviewer": "grounding",
   "normalization": "unicode_NFKC_then_casefold_then_collapse_whitespace",
@@ -190,7 +190,9 @@
       "on",
       "at",
       "in",
-      "of"
+      "of",
+      "image",
+      "side"
     ],
     "zh": [
       "的",
@@ -201,7 +203,8 @@
       "只",
       "条",
       "在",
-      "位于"
+      "位于",
+      "画面"
     ]
   },
   "unsupported_operator_terms": {

@@ -1,0 +1,19 @@
+{
+  "annotation_notes.json": "22921d8a45ba19a302360f3281dd292b8c3a556a3ebfdd541b97b5f717666a42",
+  "annotations_coco.json": "f2e19bb3861f5a7b4ca4e6522a0ba509007efefe99b17226845933294fe7afae",
+  "candidates_gt.json": "bf686799e33bd2c63872b956a72357ffe5c35271ccf73b71a2863585d7711870",
+  "coverage_by_image.json": "4566b9b56042ab20bede9403e6c0135303ba1f3ad1f4caa2364aee3ec7cc9a0e",
+  "coverage_by_pair.json": "0333ab6d06f50efd20c136e570df6362422638eb5f29b124e5e80dd48778dee9",
+  "image_manifest.json": "74b6725d991aacc76cc133f28dded8ed5f50cae801b1f920e94a4914f699add0",
+  "mapping_config.json": "1f0d1880f4e87efca6738beb4139f8d69e9d02fa1f761c7daacbbcbf6b7915cb",
+  "pair_decisions.json": "e0029f570a440abefa66b32fd0d32901f5fe58a25e4c13da83eadd7c5db865be",
+  "queries_accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "queries_draft.jsonl": "b46ee6484c15dea81576a0e7bf6658a4d46ade3e291aced7505c7e9f5b55dc77",
+  "queries_increment.jsonl": "b46ee6484c15dea81576a0e7bf6658a4d46ade3e291aced7505c7e9f5b55dc77",
+  "queries_machine_train.jsonl": "b46ee6484c15dea81576a0e7bf6658a4d46ade3e291aced7505c7e9f5b55dc77",
+  "query_index.json": "b5aed455e213350c1d22d597fb3d00270dc26a4e841a6dc57a8caf2047b2e719",
+  "release_summary.json": "e339583650eec2bf670abce994ce5602113c5cbd3b220c3ba7a3ccc10ef52e01",
+  "source_audit.json": "d82a722239f6b2f910ea588abfa81bfd7752b8db9f83a9b2a8c7fd6b04a65221",
+  "source_receipts.json": "f0e4b642c4f54c3a0578a577a2e698391775f9c33d2d7e5de8a02268f1cf7801",
+  "validation_report.json": "5cba6c4a232162d180829bc02446361c3bb1858803069cf99535d864d780b8e9"
+}

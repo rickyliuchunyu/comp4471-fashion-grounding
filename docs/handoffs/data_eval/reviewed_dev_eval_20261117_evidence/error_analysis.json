@@ -1,0 +1,1216 @@
+{
+  "query_records": 642,
+  "semantic_groups": 321,
+  "images": 246,
+  "geometric_failure_decomposition": {
+    "available_but_selected_mask_failed": 66,
+    "target_not_geometrically_available": 38,
+    "geometric_success": 538
+  },
+  "association_failure_decomposition": {
+    "matched_candidate_available_but_not_selected": 121,
+    "no_same_class_unique_match": 62,
+    "matched_and_selected": 459
+  },
+  "same_category_breakdown": {
+    "gt-B1": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 56,
+        "accuracy": 0.7368421052631579,
+        "success": 56,
+        "success_at_0_5": 0.7368421052631579
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 523,
+        "accuracy": 0.9240282685512368,
+        "success": 523,
+        "success_at_0_5": 0.9240282685512368
+      }
+    },
+    "gt-B2": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 67,
+        "accuracy": 0.881578947368421,
+        "success": 67,
+        "success_at_0_5": 0.881578947368421
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 523,
+        "accuracy": 0.9240282685512368,
+        "success": 523,
+        "success_at_0_5": 0.9240282685512368
+      }
+    },
+    "gt-M1": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 52,
+        "accuracy": 0.6842105263157895,
+        "success": 52,
+        "success_at_0_5": 0.6842105263157895
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 536,
+        "accuracy": 0.9469964664310954,
+        "success": 536,
+        "success_at_0_5": 0.9469964664310954
+      }
+    },
+    "predicted-B1": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 32,
+        "accuracy": 0.42105263157894735,
+        "success": 46,
+        "success_at_0_5": 0.6052631578947368
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 413,
+        "accuracy": 0.7296819787985865,
+        "success": 466,
+        "success_at_0_5": 0.823321554770318
+      }
+    },
+    "predicted-B2": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 36,
+        "accuracy": 0.47368421052631576,
+        "success": 50,
+        "success_at_0_5": 0.6578947368421053
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 413,
+        "accuracy": 0.7296819787985865,
+        "success": 466,
+        "success_at_0_5": 0.823321554770318
+      }
+    },
+    "predicted-M1": {
+      "same_category_multiple": {
+        "queries": 76,
+        "images": 32,
+        "correct": 27,
+        "accuracy": 0.35526315789473684,
+        "success": 40,
+        "success_at_0_5": 0.5263157894736842
+      },
+      "single_same_category": {
+        "queries": 566,
+        "images": 228,
+        "correct": 432,
+        "accuracy": 0.7632508833922261,
+        "success": 498,
+        "success_at_0_5": 0.8798586572438163
+      }
+    }
+  },
+  "feature_coverage": {
+    "beige": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 5,
+        "accuracy": 0.8333333333333334,
+        "success": 5,
+        "success_at_0_5": 0.8333333333333334
+      },
+      "predicted_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 6,
+        "accuracy": 1.0,
+        "success": 6,
+        "success_at_0_5": 1.0
+      }
+    },
+    "black": {
+      "training_semantic_mentions": 772,
+      "gt_M1": {
+        "queries": 170,
+        "images": 74,
+        "correct": 152,
+        "accuracy": 0.8941176470588236,
+        "success": 152,
+        "success_at_0_5": 0.8941176470588236
+      },
+      "predicted_M1": {
+        "queries": 170,
+        "images": 74,
+        "correct": 118,
+        "accuracy": 0.6941176470588235,
+        "success": 140,
+        "success_at_0_5": 0.8235294117647058
+      }
+    },
+    "white": {
+      "training_semantic_mentions": 148,
+      "gt_M1": {
+        "queries": 90,
+        "images": 44,
+        "correct": 90,
+        "accuracy": 1.0,
+        "success": 90,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 90,
+        "images": 44,
+        "correct": 75,
+        "accuracy": 0.8333333333333334,
+        "success": 85,
+        "success_at_0_5": 0.9444444444444444
+      }
+    },
+    "gray": {
+      "training_semantic_mentions": 136,
+      "gt_M1": {
+        "queries": 32,
+        "images": 16,
+        "correct": 28,
+        "accuracy": 0.875,
+        "success": 28,
+        "success_at_0_5": 0.875
+      },
+      "predicted_M1": {
+        "queries": 32,
+        "images": 16,
+        "correct": 25,
+        "accuracy": 0.78125,
+        "success": 28,
+        "success_at_0_5": 0.875
+      }
+    },
+    "blue": {
+      "training_semantic_mentions": 86,
+      "gt_M1": {
+        "queries": 62,
+        "images": 31,
+        "correct": 56,
+        "accuracy": 0.9032258064516129,
+        "success": 56,
+        "success_at_0_5": 0.9032258064516129
+      },
+      "predicted_M1": {
+        "queries": 62,
+        "images": 31,
+        "correct": 42,
+        "accuracy": 0.6774193548387096,
+        "success": 56,
+        "success_at_0_5": 0.9032258064516129
+      }
+    },
+    "red": {
+      "training_semantic_mentions": 55,
+      "gt_M1": {
+        "queries": 65,
+        "images": 29,
+        "correct": 59,
+        "accuracy": 0.9076923076923077,
+        "success": 59,
+        "success_at_0_5": 0.9076923076923077
+      },
+      "predicted_M1": {
+        "queries": 65,
+        "images": 29,
+        "correct": 39,
+        "accuracy": 0.6,
+        "success": 50,
+        "success_at_0_5": 0.7692307692307693
+      }
+    },
+    "green": {
+      "training_semantic_mentions": 8,
+      "gt_M1": {
+        "queries": 22,
+        "images": 11,
+        "correct": 21,
+        "accuracy": 0.9545454545454546,
+        "success": 21,
+        "success_at_0_5": 0.9545454545454546
+      },
+      "predicted_M1": {
+        "queries": 22,
+        "images": 11,
+        "correct": 21,
+        "accuracy": 0.9545454545454546,
+        "success": 22,
+        "success_at_0_5": 1.0
+      }
+    },
+    "pink": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 20,
+        "images": 10,
+        "correct": 19,
+        "accuracy": 0.95,
+        "success": 19,
+        "success_at_0_5": 0.95
+      },
+      "predicted_M1": {
+        "queries": 20,
+        "images": 10,
+        "correct": 19,
+        "accuracy": 0.95,
+        "success": 20,
+        "success_at_0_5": 1.0
+      }
+    },
+    "purple": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 14,
+        "images": 7,
+        "correct": 14,
+        "accuracy": 1.0,
+        "success": 14,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 14,
+        "images": 7,
+        "correct": 9,
+        "accuracy": 0.6428571428571429,
+        "success": 13,
+        "success_at_0_5": 0.9285714285714286
+      }
+    },
+    "orange": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 12,
+        "images": 6,
+        "correct": 12,
+        "accuracy": 1.0,
+        "success": 12,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 12,
+        "images": 6,
+        "correct": 9,
+        "accuracy": 0.75,
+        "success": 12,
+        "success_at_0_5": 1.0
+      }
+    },
+    "yellow": {
+      "training_semantic_mentions": 1,
+      "gt_M1": {
+        "queries": 14,
+        "images": 7,
+        "correct": 12,
+        "accuracy": 0.8571428571428571,
+        "success": 12,
+        "success_at_0_5": 0.8571428571428571
+      },
+      "predicted_M1": {
+        "queries": 14,
+        "images": 7,
+        "correct": 10,
+        "accuracy": 0.7142857142857143,
+        "success": 12,
+        "success_at_0_5": 0.8571428571428571
+      }
+    },
+    "brown": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 24,
+        "images": 12,
+        "correct": 23,
+        "accuracy": 0.9583333333333334,
+        "success": 23,
+        "success_at_0_5": 0.9583333333333334
+      },
+      "predicted_M1": {
+        "queries": 24,
+        "images": 12,
+        "correct": 17,
+        "accuracy": 0.7083333333333334,
+        "success": 17,
+        "success_at_0_5": 0.7083333333333334
+      }
+    },
+    "gold": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 6,
+        "accuracy": 1.0,
+        "success": 6,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 4,
+        "accuracy": 0.6666666666666666,
+        "success": 4,
+        "success_at_0_5": 0.6666666666666666
+      }
+    },
+    "silver": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 4,
+        "images": 2,
+        "correct": 4,
+        "accuracy": 1.0,
+        "success": 4,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 4,
+        "images": 2,
+        "correct": 4,
+        "accuracy": 1.0,
+        "success": 4,
+        "success_at_0_5": 1.0
+      }
+    },
+    "light": {
+      "training_semantic_mentions": 3,
+      "gt_M1": {
+        "queries": 70,
+        "images": 34,
+        "correct": 70,
+        "accuracy": 1.0,
+        "success": 70,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 70,
+        "images": 34,
+        "correct": 59,
+        "accuracy": 0.8428571428571429,
+        "success": 64,
+        "success_at_0_5": 0.9142857142857143
+      }
+    },
+    "dark": {
+      "training_semantic_mentions": 1,
+      "gt_M1": {
+        "queries": 72,
+        "images": 35,
+        "correct": 67,
+        "accuracy": 0.9305555555555556,
+        "success": 67,
+        "success_at_0_5": 0.9305555555555556
+      },
+      "predicted_M1": {
+        "queries": 72,
+        "images": 35,
+        "correct": 44,
+        "accuracy": 0.6111111111111112,
+        "success": 57,
+        "success_at_0_5": 0.7916666666666666
+      }
+    },
+    "multicolor": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 17,
+        "images": 9,
+        "correct": 15,
+        "accuracy": 0.8823529411764706,
+        "success": 15,
+        "success_at_0_5": 0.8823529411764706
+      },
+      "predicted_M1": {
+        "queries": 17,
+        "images": 9,
+        "correct": 15,
+        "accuracy": 0.8823529411764706,
+        "success": 15,
+        "success_at_0_5": 0.8823529411764706
+      }
+    },
+    "left": {
+      "training_semantic_mentions": 98,
+      "gt_M1": {
+        "queries": 16,
+        "images": 8,
+        "correct": 4,
+        "accuracy": 0.25,
+        "success": 4,
+        "success_at_0_5": 0.25
+      },
+      "predicted_M1": {
+        "queries": 16,
+        "images": 8,
+        "correct": 5,
+        "accuracy": 0.3125,
+        "success": 5,
+        "success_at_0_5": 0.3125
+      }
+    },
+    "right": {
+      "training_semantic_mentions": 98,
+      "gt_M1": {
+        "queries": 14,
+        "images": 6,
+        "correct": 9,
+        "accuracy": 0.6428571428571429,
+        "success": 9,
+        "success_at_0_5": 0.6428571428571429
+      },
+      "predicted_M1": {
+        "queries": 14,
+        "images": 6,
+        "correct": 7,
+        "accuracy": 0.5,
+        "success": 7,
+        "success_at_0_5": 0.5
+      }
+    },
+    "middle": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 4,
+        "images": 2,
+        "correct": 3,
+        "accuracy": 0.75,
+        "success": 3,
+        "success_at_0_5": 0.75
+      },
+      "predicted_M1": {
+        "queries": 4,
+        "images": 2,
+        "correct": 2,
+        "accuracy": 0.5,
+        "success": 2,
+        "success_at_0_5": 0.5
+      }
+    },
+    "lower": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 2,
+        "images": 1,
+        "correct": 2,
+        "accuracy": 1.0,
+        "success": 2,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 2,
+        "images": 1,
+        "correct": 2,
+        "accuracy": 1.0,
+        "success": 2,
+        "success_at_0_5": 1.0
+      }
+    },
+    "stripe": {
+      "training_semantic_mentions": 115,
+      "gt_M1": {
+        "queries": 44,
+        "images": 20,
+        "correct": 43,
+        "accuracy": 0.9772727272727273,
+        "success": 43,
+        "success_at_0_5": 0.9772727272727273
+      },
+      "predicted_M1": {
+        "queries": 44,
+        "images": 20,
+        "correct": 35,
+        "accuracy": 0.7954545454545454,
+        "success": 40,
+        "success_at_0_5": 0.9090909090909091
+      }
+    },
+    "check": {
+      "training_semantic_mentions": 85,
+      "gt_M1": {
+        "queries": 13,
+        "images": 7,
+        "correct": 12,
+        "accuracy": 0.9230769230769231,
+        "success": 12,
+        "success_at_0_5": 0.9230769230769231
+      },
+      "predicted_M1": {
+        "queries": 13,
+        "images": 7,
+        "correct": 5,
+        "accuracy": 0.38461538461538464,
+        "success": 13,
+        "success_at_0_5": 1.0
+      }
+    },
+    "dots": {
+      "training_semantic_mentions": 41,
+      "gt_M1": {
+        "queries": 4,
+        "images": 3,
+        "correct": 4,
+        "accuracy": 1.0,
+        "success": 4,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 4,
+        "images": 3,
+        "correct": 4,
+        "accuracy": 1.0,
+        "success": 4,
+        "success_at_0_5": 1.0
+      }
+    },
+    "floral": {
+      "training_semantic_mentions": 103,
+      "gt_M1": {
+        "queries": 12,
+        "images": 6,
+        "correct": 12,
+        "accuracy": 1.0,
+        "success": 12,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 12,
+        "images": 6,
+        "correct": 12,
+        "accuracy": 1.0,
+        "success": 12,
+        "success_at_0_5": 1.0
+      }
+    },
+    "pattern": {
+      "training_semantic_mentions": 104,
+      "gt_M1": {
+        "queries": 71,
+        "images": 37,
+        "correct": 69,
+        "accuracy": 0.971830985915493,
+        "success": 69,
+        "success_at_0_5": 0.971830985915493
+      },
+      "predicted_M1": {
+        "queries": 71,
+        "images": 37,
+        "correct": 58,
+        "accuracy": 0.8169014084507042,
+        "success": 67,
+        "success_at_0_5": 0.9436619718309859
+      }
+    },
+    "leopard": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 5,
+        "accuracy": 0.8333333333333334,
+        "success": 5,
+        "success_at_0_5": 0.8333333333333334
+      },
+      "predicted_M1": {
+        "queries": 6,
+        "images": 3,
+        "correct": 4,
+        "accuracy": 0.6666666666666666,
+        "success": 4,
+        "success_at_0_5": 0.6666666666666666
+      }
+    },
+    "camouflage": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 2,
+        "images": 1,
+        "correct": 2,
+        "accuracy": 1.0,
+        "success": 2,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 2,
+        "images": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "success": 2,
+        "success_at_0_5": 1.0
+      }
+    },
+    "denim": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 16,
+        "images": 8,
+        "correct": 16,
+        "accuracy": 1.0,
+        "success": 16,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 16,
+        "images": 8,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "success": 15,
+        "success_at_0_5": 0.9375
+      }
+    },
+    "hooded": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 8,
+        "images": 4,
+        "correct": 8,
+        "accuracy": 1.0,
+        "success": 8,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 8,
+        "images": 4,
+        "correct": 6,
+        "accuracy": 0.75,
+        "success": 6,
+        "success_at_0_5": 0.75
+      }
+    },
+    "long_sleeve": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 40,
+        "images": 20,
+        "correct": 40,
+        "accuracy": 1.0,
+        "success": 40,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 40,
+        "images": 20,
+        "correct": 28,
+        "accuracy": 0.7,
+        "success": 31,
+        "success_at_0_5": 0.775
+      }
+    },
+    "short_sleeve": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 32,
+        "images": 16,
+        "correct": 32,
+        "accuracy": 1.0,
+        "success": 32,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 32,
+        "images": 16,
+        "correct": 25,
+        "accuracy": 0.78125,
+        "success": 29,
+        "success_at_0_5": 0.90625
+      }
+    },
+    "sleeveless": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 44,
+        "images": 22,
+        "correct": 44,
+        "accuracy": 1.0,
+        "success": 44,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 44,
+        "images": 22,
+        "correct": 40,
+        "accuracy": 0.9090909090909091,
+        "success": 43,
+        "success_at_0_5": 0.9772727272727273
+      }
+    },
+    "strapless": {
+      "training_semantic_mentions": 0,
+      "gt_M1": {
+        "queries": 10,
+        "images": 5,
+        "correct": 10,
+        "accuracy": 1.0,
+        "success": 10,
+        "success_at_0_5": 1.0
+      },
+      "predicted_M1": {
+        "queries": 10,
+        "images": 5,
+        "correct": 10,
+        "accuracy": 1.0,
+        "success": 10,
+        "success_at_0_5": 1.0
+      }
+    },
+    "cropped": {
+      "training_semantic_mentions": 1,
+      "gt_M1": {
+        "queries": 7,
+        "images": 4,
+        "correct": 5,
+        "accuracy": 0.7142857142857143,
+        "success": 5,
+        "success_at_0_5": 0.7142857142857143
+      },
+      "predicted_M1": {
+        "queries": 7,
+        "images": 4,
+        "correct": 3,
+        "accuracy": 0.42857142857142855,
+        "success": 5,
+        "success_at_0_5": 0.7142857142857143
+      }
+    }
+  },
+  "image_bootstrap": {
+    "gt_M1_accuracy": {
+      "estimate": 0.9158878504672897,
+      "ci95": [
+        0.887532083755488,
+        0.9432221296351407
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "gt_M1_minus_B1_accuracy": {
+      "estimate": 0.014018691588785047,
+      "ci95": [
+        -0.005780346820809248,
+        0.030030861557760292
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "gt_M1_success": {
+      "estimate": 0.9158878504672897,
+      "ci95": [
+        0.887532083755488,
+        0.9432221296351407
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "gt_M1_minus_B1_success": {
+      "estimate": 0.014018691588785047,
+      "ci95": [
+        -0.005780346820809248,
+        0.030030861557760292
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "predicted_M1_accuracy": {
+      "estimate": 0.7149532710280374,
+      "ci95": [
+        0.6677050053248137,
+        0.7622718321593578
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "predicted_M1_minus_B1_accuracy": {
+      "estimate": 0.021806853582554516,
+      "ci95": [
+        -0.003115753083526206,
+        0.04839101158784841
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "predicted_M1_success": {
+      "estimate": 0.838006230529595,
+      "ci95": [
+        0.7975749069707465,
+        0.8783826413163953
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    },
+    "predicted_M1_minus_B1_success": {
+      "estimate": 0.040498442367601244,
+      "ci95": [
+        0.018347225330051467,
+        0.06372979703063333
+      ],
+      "replicates": 1000,
+      "seed": 42,
+      "unit": "image with all bilingual queries",
+      "images": 246
+    }
+  },
+  "examples": [
+    {
+      "query_id": "fp_language_dev_draft_v2-q00003-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00003",
+      "image_id": 1000017972,
+      "language": "zh",
+      "category_id": 6,
+      "source_category": "shoe",
+      "query_types": [
+        "spatial"
+      ],
+      "same_category_instance_count": 2,
+      "same_source_category_instance_count": 2,
+      "candidate_count": 12,
+      "target_area": 2940,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000017972-query-034",
+      "target_instance_id": 1000003072,
+      "correct": false,
+      "covered": false,
+      "geometric_recalled": false,
+      "target_mask_iou": 0.04574111334674715,
+      "success_at_0_5": false,
+      "reason": "candidate_missing",
+      "query": "画面左边的鞋"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00005-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00005",
+      "image_id": 1000019876,
+      "language": "zh",
+      "category_id": 4,
+      "source_category": "coat",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 11,
+      "target_area": 69305,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000019876-query-008",
+      "target_instance_id": 1000004480,
+      "correct": false,
+      "covered": false,
+      "geometric_recalled": false,
+      "target_mask_iou": 0.48541598897098687,
+      "success_at_0_5": false,
+      "reason": "candidate_missing",
+      "query": "白色的大衣"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00007-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00007",
+      "image_id": 1000015460,
+      "language": "zh",
+      "category_id": 5,
+      "source_category": "dress",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 6,
+      "target_area": 17655,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000015460-query-008",
+      "target_instance_id": 1000000326,
+      "correct": false,
+      "covered": false,
+      "geometric_recalled": false,
+      "target_mask_iou": 0.2655688170418492,
+      "success_at_0_5": false,
+      "reason": "candidate_missing",
+      "query": "红色的连衣裙"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00015-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00015",
+      "image_id": 1000010823,
+      "language": "zh",
+      "category_id": 8,
+      "source_category": "belt",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 5,
+      "target_area": 1418,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000010823-query-036",
+      "target_instance_id": 1000006903,
+      "correct": false,
+      "covered": false,
+      "geometric_recalled": false,
+      "target_mask_iou": 0.07826540669024291,
+      "success_at_0_5": false,
+      "reason": "candidate_missing",
+      "query": "黑色的腰带"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00001-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00001",
+      "image_id": 1000016542,
+      "language": "zh",
+      "category_id": 7,
+      "source_category": "bag, wallet",
+      "query_types": [
+        "combined"
+      ],
+      "same_category_instance_count": 2,
+      "same_source_category_instance_count": 2,
+      "candidate_count": 14,
+      "target_area": 13757,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000016542-query-090",
+      "target_instance_id": 1000001260,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0,
+      "success_at_0_5": false,
+      "reason": "candidate_present_selection_failure",
+      "query": "画面左边的彩色包"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00009-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00009",
+      "image_id": 1000017379,
+      "language": "zh",
+      "category_id": 2,
+      "source_category": "pants",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 10,
+      "target_area": 10151,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000017379-query-068",
+      "target_instance_id": 1000001951,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.46081688489349226,
+      "success_at_0_5": false,
+      "reason": "candidate_present_selection_failure",
+      "query": "黑色的长裤"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00018-en",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00018",
+      "image_id": 1000019769,
+      "language": "en",
+      "category_id": 6,
+      "source_category": "shoe",
+      "query_types": [
+        "combined"
+      ],
+      "same_category_instance_count": 2,
+      "same_source_category_instance_count": 2,
+      "candidate_count": 6,
+      "target_area": 4884,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000019769-query-065",
+      "target_instance_id": 1000004306,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0,
+      "success_at_0_5": false,
+      "reason": "candidate_present_selection_failure",
+      "query": "the black shoe on the left side of the image"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00020-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00020",
+      "image_id": 1000015529,
+      "language": "zh",
+      "category_id": 1,
+      "source_category": "top, t-shirt, sweatshirt",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 11,
+      "target_area": 12587,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "image-1000015529-query-008",
+      "target_instance_id": 1000000413,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.005337524068410918,
+      "success_at_0_5": false,
+      "reason": "candidate_present_selection_failure",
+      "query": "有条纹的上衣"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00033-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00033",
+      "image_id": 1000017770,
+      "language": "zh",
+      "category_id": 6,
+      "source_category": "shoe",
+      "query_types": [
+        "combined"
+      ],
+      "same_category_instance_count": 2,
+      "same_source_category_instance_count": 2,
+      "candidate_count": 6,
+      "target_area": 10189,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "fp-val-gt-1000002305",
+      "target_instance_id": 1000002306,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0,
+      "success_at_0_5": false,
+      "reason": "GT_selection_failure",
+      "query": "画面左边的黑色鞋"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00054-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00054",
+      "image_id": 1000019772,
+      "language": "zh",
+      "category_id": 3,
+      "source_category": "skirt",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 3,
+      "target_area": 103830,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "fp-val-gt-1000004316",
+      "target_instance_id": 1000004315,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0,
+      "success_at_0_5": false,
+      "reason": "GT_selection_failure",
+      "query": "黑色的半身裙"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00064-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00064",
+      "image_id": 1000010765,
+      "language": "zh",
+      "category_id": 4,
+      "source_category": "jacket",
+      "query_types": [
+        "appearance"
+      ],
+      "same_category_instance_count": 1,
+      "same_source_category_instance_count": 1,
+      "candidate_count": 3,
+      "target_area": 222117,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "fp-val-gt-1000006834",
+      "target_instance_id": 1000006835,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0003845733462334077,
+      "success_at_0_5": false,
+      "reason": "GT_selection_failure",
+      "query": "蓝色的夹克"
+    },
+    {
+      "query_id": "fp_language_dev_draft_v2-q00066-zh",
+      "semantic_query_id": "fp_language_dev_draft_v2-q00066",
+      "image_id": 1000012527,
+      "language": "zh",
+      "category_id": 6,
+      "source_category": "shoe",
+      "query_types": [
+        "spatial"
+      ],
+      "same_category_instance_count": 2,
+      "same_source_category_instance_count": 2,
+      "candidate_count": 6,
+      "target_area": 1107,
+      "contrast_set_id": null,
+      "paraphrase_group_id": null,
+      "status": "success",
+      "selected_candidate_id": "fp-val-gt-1000008365",
+      "target_instance_id": 1000008367,
+      "correct": false,
+      "covered": true,
+      "geometric_recalled": true,
+      "target_mask_iou": 0.0,
+      "success_at_0_5": false,
+      "reason": "GT_selection_failure",
+      "query": "画面左边的鞋"
+    }
+  ],
+  "caveats": [
+    "Reviewed subset only; nine pending semantic groups excluded before predictions.",
+    "Single seed42 M1 trained on old machine_v2, not new visual_v3.",
+    "B2 lambda1 fixed diagnostic, not selected on this dev.",
+    "Segmentation u18000 and threshold0.3 previously selected using dev; this is development, not held-out final-test performance.",
+    "Bootstrap reflects image sampling, not training-seed uncertainty.",
+    "Text feature counts are correlational, not proof of why an example failed."
+  ]
+}

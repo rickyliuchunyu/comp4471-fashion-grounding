@@ -1,0 +1,711 @@
+{
+  "release": "fp_train_full_eligible_v1",
+  "review_scope": "Five listed components, same-photo variants and visually identifiable same merchandise/look; no inference, test labels or metrics. AI inspection only.",
+  "release_file_hashes": {
+    "RELEASE.json": "7567710f2d8446fd106a646051de2e6a4748c31f22252dab07940fbf234e1d35",
+    "image_manifest.json": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "annotations_coco.json": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340",
+    "SHA256SUMS.json": "37d64b68185c99926e49bee3bae7a64dcc6b92cffbf4224011766322e4895948",
+    "old_subset_membership.json": "0afd5b8ff16f556a242a7cc3d55b7ee9d99bc98c76e05a125e2babed504ac2e9",
+    "added_subset_membership.json": "aca44cc62104b84c303863f2aa479c9332499f575698fb0e803f36c817a270d9"
+  },
+  "clues_sha256": "a5579332b51c4001433e35dcf732526d61a86af4c1ef2a92573e55316cdbb034",
+  "consumer_receipt_sha256": "728dacad8e236a32e8a8d0528313dbd44909f1d8deae8c8beb98b62fe8e68547",
+  "selection_sha256": "0c256a918fae8614fe962cbbc7121ffcb2bcebb6710e8b6898f6ef3f103f9a14",
+  "checkpoint_sha256": "1ed0f913602746e027ae84ec9a84c98a80306b34820a824d39ddafba1671208a",
+  "checkpoint_decision": "eligible_as_model_initialization_for_this_duplicate_review",
+  "member_id_changes": [],
+  "protected_test_images_viewed_for_dedup_only": 3,
+  "groups": [
+    {
+      "group": 1,
+      "review": "AI_visual_data_integrity_review",
+      "disposition": "retain_existing_members_and_keep_new_quarantined",
+      "confirmed_cross_split_source_matches": 0,
+      "members_in_original_clue": 86,
+      "endpoints": [
+        {
+          "source_key": "train-10636",
+          "partition": "parent",
+          "image_id": 10637,
+          "sha256": "d1a6cee19a4767edaf78211c7bd7ecc0fd4bf80e4edbfda47a73bae9bbc70736",
+          "flickr_photo_id": "17015799452"
+        },
+        {
+          "source_key": "train-11493",
+          "partition": "parent",
+          "image_id": 11494,
+          "sha256": "4c886b097a886715b99fcb6aab231273b8fba0a8577c707d97aa8262911d2a9f",
+          "flickr_photo_id": "13513632724"
+        },
+        {
+          "source_key": "train-14778",
+          "partition": "parent",
+          "image_id": 14779,
+          "sha256": "12af6ea7494b870fda388c34ec47c5e9a550a7f237ea94522335ebc84f08515c",
+          "flickr_photo_id": "21482708488"
+        },
+        {
+          "source_key": "train-15898",
+          "partition": "parent",
+          "image_id": 15899,
+          "sha256": "cbef45216573f8188787a5ab4cc7a17e6d97b7c5cfd422fc816637371ffcafb4",
+          "flickr_photo_id": "21556580410"
+        },
+        {
+          "source_key": "train-16807",
+          "partition": "parent",
+          "image_id": 16808,
+          "sha256": "768a387853a71a26ea4d481f9e798bb907306396f9d8d4e980de59c9945f6e46",
+          "flickr_photo_id": "29220138294"
+        },
+        {
+          "source_key": "train-17812",
+          "partition": "parent",
+          "image_id": 17813,
+          "sha256": "057b1e1ff798fb737aed586513deb109b2c26e2d55f5a7645678c460024939cb",
+          "flickr_photo_id": "26049981226"
+        },
+        {
+          "source_key": "train-18576",
+          "partition": "parent",
+          "image_id": 18577,
+          "sha256": "6a3591e7a025310862a93ffc418f1780897347091445b2ca79046806331c1f22",
+          "flickr_photo_id": "9875697614"
+        },
+        {
+          "source_key": "train-19464",
+          "partition": "parent",
+          "image_id": 19465,
+          "sha256": "9dde08ee153169e40c8b2720d917fe6fcdf1b839313e17524a67c26e57bfd698",
+          "flickr_photo_id": "29217185013"
+        },
+        {
+          "source_key": "train-20222",
+          "partition": "parent",
+          "image_id": 20223,
+          "sha256": "ef4bdb0f85ee36500db067bec90907be7636ca472a3e9e819b4a16f2d3d61f80",
+          "flickr_photo_id": "15286854756"
+        },
+        {
+          "source_key": "train-21637",
+          "partition": "parent",
+          "image_id": 21638,
+          "sha256": "71e754cd0354d00af251a20a49f5818559d82fa6f1b104bf45c77faace6d4c60",
+          "flickr_photo_id": "8598779962"
+        },
+        {
+          "source_key": "train-24997",
+          "partition": "parent",
+          "image_id": 24998,
+          "sha256": "5c100d19a517c76455c9924e460cc0c1d4cb4b7708f41512fae0571916e61975",
+          "flickr_photo_id": "13574926733"
+        },
+        {
+          "source_key": "train-619",
+          "partition": "parent",
+          "image_id": 620,
+          "sha256": "66c06e4dbe3186a589536f5b417021797000c3d3ce6f9a2661620633b959476e",
+          "flickr_photo_id": "15318812956"
+        },
+        {
+          "source_key": "train-6813",
+          "partition": "parent",
+          "image_id": 6814,
+          "sha256": "99b1f34c6f98d5da8412a1a83935aa4312e1cad89863d36d92914dce77c0b83f",
+          "flickr_photo_id": "26016184821"
+        },
+        {
+          "source_key": "train-8233",
+          "partition": "parent",
+          "image_id": 8234,
+          "sha256": "aa4e209b1744647864ddd2afc45c7117e6b8a3ca5ed89bc20491d39f4c097675",
+          "flickr_photo_id": "9951386734"
+        },
+        {
+          "source_key": "val-10643",
+          "partition": "dev",
+          "image_id": 1000010644,
+          "sha256": "ca1f8a865e97cabe9d2f613c0134919edab32d84dd6097b5ad86598b2380de14",
+          "flickr_photo_id": "9875597453"
+        },
+        {
+          "source_key": "val-17285",
+          "partition": "test",
+          "image_id": 1000017286,
+          "sha256": "846a00760766467511a71ff468644a1ebf07f6b704adaf041f75587334bf62b3",
+          "flickr_photo_id": "15354927656"
+        },
+        {
+          "source_key": "val-17906",
+          "partition": "dev",
+          "image_id": 1000017907,
+          "sha256": "1b2851eabab9340346d1c3ef5f8729f2268e74c5f58a225b5920ecf8a51e503b",
+          "flickr_photo_id": "16829713760"
+        },
+        {
+          "source_key": "val-9204",
+          "partition": "test",
+          "image_id": 1000009205,
+          "sha256": "886a93e596902d97dd29b36d06bc48f64ff45109c5c4098d2acb77ab5458815b",
+          "flickr_photo_id": "21343914788"
+        }
+      ],
+      "direct_comparisons": [
+        {
+          "parent": "train-10636",
+          "protected": "val-10643",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-10636",
+          "protected": "val-17285",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-10636",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-10636",
+          "protected": "val-9204",
+          "min_phash4": 8
+        },
+        {
+          "parent": "train-11493",
+          "protected": "val-10643",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-11493",
+          "protected": "val-17285",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-11493",
+          "protected": "val-17906",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-11493",
+          "protected": "val-9204",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-14778",
+          "protected": "val-10643",
+          "min_phash4": 20
+        },
+        {
+          "parent": "train-14778",
+          "protected": "val-17285",
+          "min_phash4": 20
+        },
+        {
+          "parent": "train-14778",
+          "protected": "val-17906",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-14778",
+          "protected": "val-9204",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-15898",
+          "protected": "val-10643",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-15898",
+          "protected": "val-17285",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-15898",
+          "protected": "val-17906",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-15898",
+          "protected": "val-9204",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-16807",
+          "protected": "val-10643",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-16807",
+          "protected": "val-17285",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-16807",
+          "protected": "val-17906",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-16807",
+          "protected": "val-9204",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-17812",
+          "protected": "val-10643",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-17812",
+          "protected": "val-17285",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-17812",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-17812",
+          "protected": "val-9204",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-18576",
+          "protected": "val-10643",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-18576",
+          "protected": "val-17285",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-18576",
+          "protected": "val-17906",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-18576",
+          "protected": "val-9204",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-19464",
+          "protected": "val-10643",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-19464",
+          "protected": "val-17285",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-19464",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-19464",
+          "protected": "val-9204",
+          "min_phash4": 8
+        },
+        {
+          "parent": "train-20222",
+          "protected": "val-10643",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-20222",
+          "protected": "val-17285",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-20222",
+          "protected": "val-17906",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-20222",
+          "protected": "val-9204",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-21637",
+          "protected": "val-10643",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-21637",
+          "protected": "val-17285",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-21637",
+          "protected": "val-17906",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-21637",
+          "protected": "val-9204",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-24997",
+          "protected": "val-10643",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-24997",
+          "protected": "val-17285",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-24997",
+          "protected": "val-17906",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-24997",
+          "protected": "val-9204",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-619",
+          "protected": "val-10643",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-619",
+          "protected": "val-17285",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-619",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-619",
+          "protected": "val-9204",
+          "min_phash4": 8
+        },
+        {
+          "parent": "train-6813",
+          "protected": "val-10643",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-6813",
+          "protected": "val-17285",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-6813",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-6813",
+          "protected": "val-9204",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-8233",
+          "protected": "val-10643",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-8233",
+          "protected": "val-17285",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-8233",
+          "protected": "val-17906",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-8233",
+          "protected": "val-9204",
+          "min_phash4": 14
+        }
+      ],
+      "recorded_edges": {
+        "phash4": 112
+      },
+      "frozen_auxiliary_keys": [
+        "train-22502"
+      ],
+      "quarantined_new": 67
+    },
+    {
+      "group": 2,
+      "review": "AI_visual_data_integrity_review",
+      "disposition": "retain_existing_members_and_keep_new_quarantined",
+      "confirmed_cross_split_source_matches": 0,
+      "members_in_original_clue": 27,
+      "endpoints": [
+        {
+          "source_key": "train-19880",
+          "partition": "parent",
+          "image_id": 19881,
+          "sha256": "b03510a9843d3b09adb5b6a15894540b5bccefbbe029a705123eeb9f09b26b87",
+          "flickr_photo_id": "21505555416"
+        },
+        {
+          "source_key": "train-21535",
+          "partition": "parent",
+          "image_id": 21536,
+          "sha256": "56fcd04c28f357fc5cdfb92a6946d10528569578210e8feb3a2d947814bfeeeb",
+          "flickr_photo_id": "6834234216"
+        },
+        {
+          "source_key": "train-8749",
+          "partition": "parent",
+          "image_id": 8750,
+          "sha256": "f9376ddb28c2b2eaab9b24fffa5f32f8609408163b326bae60727f2cb7f24c7e",
+          "flickr_photo_id": "6980363133"
+        },
+        {
+          "source_key": "train-9183",
+          "partition": "parent",
+          "image_id": 9184,
+          "sha256": "11a1df8a65871ce7b0b470f445f7b1a8877404f252df0a89dd35c6351a5d2e3f",
+          "flickr_photo_id": "9951502073"
+        },
+        {
+          "source_key": "train-964",
+          "partition": "parent",
+          "image_id": 965,
+          "sha256": "c15e6583da86d0484019b47a3e9f85da2d4222c8edfe35500cb8339d9e54eb3d",
+          "flickr_photo_id": "7029544505"
+        },
+        {
+          "source_key": "val-10424",
+          "partition": "dev_challenge_draft",
+          "image_id": 1000010425,
+          "sha256": "2ef5b0e37d20d43a54e59c91a3ac19c7655b843326b9a9fd76f750dd51344d60",
+          "flickr_photo_id": "15307792321"
+        },
+        {
+          "source_key": "val-12974",
+          "partition": "test",
+          "image_id": 1000012975,
+          "sha256": "2c1776c1dc9aef922e0816c62e605ecdc7652052759dc14578c692ef895f093c",
+          "flickr_photo_id": "8589166123"
+        },
+        {
+          "source_key": "val-23337",
+          "partition": "dev",
+          "image_id": 1000023338,
+          "sha256": "c64de2587bf85685bcf990c6d7cc15dd491dc49afda4b7a7e6fc966715a8cfb5",
+          "flickr_photo_id": "15347588582"
+        }
+      ],
+      "direct_comparisons": [
+        {
+          "parent": "train-19880",
+          "protected": "val-10424",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-19880",
+          "protected": "val-12974",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-19880",
+          "protected": "val-23337",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-21535",
+          "protected": "val-10424",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-21535",
+          "protected": "val-12974",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-21535",
+          "protected": "val-23337",
+          "min_phash4": 18
+        },
+        {
+          "parent": "train-8749",
+          "protected": "val-10424",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-8749",
+          "protected": "val-12974",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-8749",
+          "protected": "val-23337",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-9183",
+          "protected": "val-10424",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-9183",
+          "protected": "val-12974",
+          "min_phash4": 10
+        },
+        {
+          "parent": "train-9183",
+          "protected": "val-23337",
+          "min_phash4": 12
+        },
+        {
+          "parent": "train-964",
+          "protected": "val-10424",
+          "min_phash4": 16
+        },
+        {
+          "parent": "train-964",
+          "protected": "val-12974",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-964",
+          "protected": "val-23337",
+          "min_phash4": 16
+        }
+      ],
+      "recorded_edges": {
+        "phash4": 32
+      },
+      "frozen_auxiliary_keys": [
+        "train-23777"
+      ],
+      "quarantined_new": 18
+    },
+    {
+      "group": 3,
+      "review": "AI_visual_data_integrity_review",
+      "disposition": "retain_existing_members_and_keep_new_quarantined",
+      "confirmed_cross_split_source_matches": 0,
+      "members_in_original_clue": 8,
+      "endpoints": [
+        {
+          "source_key": "train-21149",
+          "partition": "parent",
+          "image_id": 21150,
+          "sha256": "c0407cdd26d8b379b65feb39363ebb5ec5a80d01564e520004a947ff33bc63c9",
+          "flickr_photo_id": "26172678346"
+        },
+        {
+          "source_key": "val-10184",
+          "partition": "dev",
+          "image_id": 1000010185,
+          "sha256": "96f70a4f6d4f404516f5bae09ecc997e35ece339cb4576f8db37782d039df0ba",
+          "flickr_photo_id": "29129502844"
+        }
+      ],
+      "direct_comparisons": [
+        {
+          "parent": "train-21149",
+          "protected": "val-10184",
+          "min_phash4": 10
+        }
+      ],
+      "recorded_edges": {
+        "phash4": 14
+      },
+      "frozen_auxiliary_keys": [],
+      "quarantined_new": 6
+    },
+    {
+      "group": 4,
+      "review": "AI_visual_data_integrity_review",
+      "disposition": "retain_existing_members_and_keep_new_quarantined",
+      "confirmed_cross_split_source_matches": 0,
+      "members_in_original_clue": 9,
+      "endpoints": [
+        {
+          "source_key": "train-2428",
+          "partition": "parent",
+          "image_id": 2429,
+          "sha256": "3ac37a62ae78fcc3df094e0cf543ba8e0583f8506e983b6f7c568191c5648e99",
+          "flickr_photo_id": "29755657265"
+        },
+        {
+          "source_key": "val-11120",
+          "partition": "dev",
+          "image_id": 1000011121,
+          "sha256": "43bb53dabe1e3253fa71578f2543e494f6f369e954fbd1babd6c623388cdd738",
+          "flickr_photo_id": "7072740811"
+        }
+      ],
+      "direct_comparisons": [
+        {
+          "parent": "train-2428",
+          "protected": "val-11120",
+          "min_phash4": 10
+        }
+      ],
+      "recorded_edges": {
+        "phash4": 9
+      },
+      "frozen_auxiliary_keys": [],
+      "quarantined_new": 7
+    },
+    {
+      "group": 5,
+      "review": "AI_visual_data_integrity_review",
+      "disposition": "retain_existing_members_and_keep_new_quarantined",
+      "confirmed_cross_split_source_matches": 0,
+      "members_in_original_clue": 28,
+      "endpoints": [
+        {
+          "source_key": "train-34751",
+          "partition": "parent",
+          "image_id": 34752,
+          "sha256": "8f48b816106b677432b818f299eaf8b5ed7b9e2a9d95ecb57fe21f9b15ea1fd8",
+          "flickr_photo_id": "11853841054"
+        },
+        {
+          "source_key": "train-45054",
+          "partition": "parent",
+          "image_id": 45055,
+          "sha256": "13ea2651d2ab9e30c067436c308ded913c28fd96ba3ea5f2d680060fb9e61dfc",
+          "flickr_photo_id": "9294646349"
+        },
+        {
+          "source_key": "val-15106",
+          "partition": "dev_challenge_draft",
+          "image_id": 1000015107,
+          "sha256": "6c732ae942a90d03238daa0ccc345202067954a6c3970af1af77238d287219af",
+          "flickr_photo_id": "24025260386"
+        }
+      ],
+      "direct_comparisons": [
+        {
+          "parent": "train-34751",
+          "protected": "val-15106",
+          "min_phash4": 14
+        },
+        {
+          "parent": "train-45054",
+          "protected": "val-15106",
+          "min_phash4": 10
+        }
+      ],
+      "recorded_edges": {
+        "phash4": 34
+      },
+      "frozen_auxiliary_keys": [],
+      "quarantined_new": 25
+    }
+  ]
+}

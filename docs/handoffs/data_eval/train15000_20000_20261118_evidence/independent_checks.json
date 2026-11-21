@@ -1,0 +1,278 @@
+{
+  "status": "passed",
+  "new_images": 10000,
+  "protected_fingerprints": 10761,
+  "new_duplicate_conflicts": 0,
+  "new_vs_old_and_new_only": true,
+  "old_old_comparisons": 0,
+  "phash_orientations": 4,
+  "phash_threshold": 6,
+  "source_identity_namespace": "fashionpedia/official_train2020/source_id vs fashionpedia/official_val2020/source_id",
+  "phases": [
+    {
+      "phase": 1,
+      "new_images": 5000,
+      "new_annotations": 19260,
+      "source_masks_checked": 19260,
+      "source_supported_boundary_images": 300,
+      "proxy_images": 630
+    },
+    {
+      "phase": 2,
+      "new_images": 5000,
+      "new_annotations": 18989,
+      "source_masks_checked": 18989,
+      "source_supported_boundary_images": 264,
+      "proxy_images": 643
+    }
+  ],
+  "parent_pins_and_protection_manifests_unchanged": true,
+  "not_claimed": "No new exhaustive human review or proof that perceptual hashing finds all related products.",
+  "bridge_audit": {
+    "count": 7,
+    "active_frozen_train_dev_test_exposure_bridge_count": 2,
+    "cross_train_validation_components": [
+      {
+        "component": [
+          "train-1019",
+          "train-1151",
+          "val-20066"
+        ],
+        "frozen_train_keys": [
+          "train-1019"
+        ],
+        "protected_val_keys": [
+          "val-20066"
+        ],
+        "actual_old10k_keys": [
+          "train-1019"
+        ],
+        "validation_roles": {
+          "val-20066": "associated_group_member_not_fixed_dev_test_or_exposed50"
+        },
+        "active_split_bridge": false,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-10459",
+          "train-10510",
+          "train-10636",
+          "train-11493",
+          "train-1167",
+          "train-12190",
+          "train-12972",
+          "train-13569",
+          "train-13615",
+          "train-14085",
+          "train-14778",
+          "train-15382",
+          "train-15898",
+          "train-16001",
+          "train-16552",
+          "train-16720",
+          "train-16807",
+          "train-18576",
+          "train-19464",
+          "train-19628",
+          "train-20694",
+          "train-21637",
+          "train-21946",
+          "train-22282",
+          "train-22502",
+          "train-22844",
+          "train-23879",
+          "train-23909",
+          "train-23966",
+          "train-2540",
+          "train-2898",
+          "train-3526",
+          "train-4482",
+          "train-4569",
+          "train-619",
+          "train-6445",
+          "train-6446",
+          "train-6656",
+          "train-6813",
+          "train-7305",
+          "train-8233",
+          "train-8974",
+          "val-17906",
+          "val-9204"
+        ],
+        "frozen_train_keys": [
+          "train-10636",
+          "train-11493",
+          "train-14778",
+          "train-15898",
+          "train-16807",
+          "train-18576",
+          "train-19464",
+          "train-21637",
+          "train-22502",
+          "train-619",
+          "train-6813",
+          "train-8233"
+        ],
+        "protected_val_keys": [
+          "val-17906",
+          "val-9204"
+        ],
+        "actual_old10k_keys": [
+          "train-10636",
+          "train-11493",
+          "train-14778",
+          "train-15898",
+          "train-16807",
+          "train-18576",
+          "train-19464",
+          "train-21637",
+          "train-619",
+          "train-6813",
+          "train-8233"
+        ],
+        "validation_roles": {
+          "val-17906": "fixed_dev250",
+          "val-9204": "fixed_test400"
+        },
+        "active_split_bridge": true,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-11496",
+          "train-19622",
+          "train-22408",
+          "train-6277",
+          "train-6608",
+          "val-17204"
+        ],
+        "frozen_train_keys": [
+          "train-19622",
+          "train-22408"
+        ],
+        "protected_val_keys": [
+          "val-17204"
+        ],
+        "actual_old10k_keys": [
+          "train-19622",
+          "train-22408"
+        ],
+        "validation_roles": {
+          "val-17204": "associated_group_member_not_fixed_dev_test_or_exposed50"
+        },
+        "active_split_bridge": false,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-12020",
+          "train-1207",
+          "train-1771",
+          "train-19103",
+          "train-8127",
+          "train-8362",
+          "val-15665"
+        ],
+        "frozen_train_keys": [
+          "train-12020"
+        ],
+        "protected_val_keys": [
+          "val-15665"
+        ],
+        "actual_old10k_keys": [
+          "train-12020"
+        ],
+        "validation_roles": {
+          "val-15665": "associated_group_member_not_fixed_dev_test_or_exposed50"
+        },
+        "active_split_bridge": false,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-12602",
+          "train-14541",
+          "train-1503",
+          "train-21238",
+          "train-6170",
+          "train-8040",
+          "val-9636"
+        ],
+        "frozen_train_keys": [
+          "train-14541",
+          "train-1503",
+          "train-21238"
+        ],
+        "protected_val_keys": [
+          "val-9636"
+        ],
+        "actual_old10k_keys": [
+          "train-14541",
+          "train-1503",
+          "train-21238"
+        ],
+        "validation_roles": {
+          "val-9636": "associated_group_member_not_fixed_dev_test_or_exposed50"
+        },
+        "active_split_bridge": false,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-21697",
+          "train-2359",
+          "train-24565",
+          "val-15890"
+        ],
+        "frozen_train_keys": [
+          "train-2359"
+        ],
+        "protected_val_keys": [
+          "val-15890"
+        ],
+        "actual_old10k_keys": [
+          "train-2359"
+        ],
+        "validation_roles": {
+          "val-15890": "associated_group_member_not_fixed_dev_test_or_exposed50"
+        },
+        "active_split_bridge": false,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      },
+      {
+        "component": [
+          "train-25884",
+          "train-31031",
+          "train-32055",
+          "train-45054",
+          "train-48478",
+          "val-15106"
+        ],
+        "frozen_train_keys": [
+          "train-45054"
+        ],
+        "protected_val_keys": [
+          "val-15106"
+        ],
+        "actual_old10k_keys": [
+          "train-45054"
+        ],
+        "validation_roles": {
+          "val-15106": "dev_challenge_draft"
+        },
+        "active_split_bridge": true,
+        "action": "all_new_members_quarantined; frozen_groups_unchanged",
+        "interpretation": "perceptual/URL component clue, not visually confirmed leakage"
+      }
+    ],
+    "test_pixels_viewed": false,
+    "review_status": "active bridge clues require separate data-owner disposition; no old split changed"
+  }
+}

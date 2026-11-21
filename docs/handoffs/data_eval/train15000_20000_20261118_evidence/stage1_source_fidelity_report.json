@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "new_images": 5000,
+  "source_masks_pixel_identical": 19260,
+  "geometry_and_source_fields_checked": 19260,
+  "old_masks_decoded": 0,
+  "source_annotation_sha256": "f6af94fb8712bd8170a49c857e842e1227e6806c4f33f32340db0c849133e006",
+  "manifest_sha256": "8e9874f447aa5f77aae2c5b0b0bb0d934fc77e0ab7dca832b76add2eac2630ac",
+  "annotations_sha256": "ef94a3f1e0dc4a8367c54f126ddffa7da882c436b9323832e309ba0d4032e4f2",
+  "source_supported_complex_images": 300,
+  "geometry_proxy_images": 630,
+  "all_source_annotations_retained_for_selected_images": true,
+  "human_confirmed_images": 0
+}

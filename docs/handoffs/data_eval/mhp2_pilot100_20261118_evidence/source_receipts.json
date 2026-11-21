@@ -1,0 +1,22 @@
+{
+  "fp_language_direction_pairs_train_v1": {
+    "image_manifest.json": "1f85cf1800a1c7fd4e1276aa98c42c17c298e206af09604d665cd8676e9672bb",
+    "annotations_coco.json": "96595ded6bed06cb0bd70654619a742ce28ae61f0a93d44876d162b5152bfc5c",
+    "candidates_gt.json": "7bde751fc00332286b3272e76e8edf6b8399d434956d4111a24b652b71e70c5a"
+  },
+  "fp_train_full_eligible_v1": {
+    "image_manifest.json": "7174024e0b70db3f3911b1f9a7153a240bd228367505e247215edb8b1434a107",
+    "annotations_coco.json": "567c2b6e76cdca50bc55682f17f232dedea05b80c836c000c43b2d75fe0c0340",
+    "candidates_gt.json": "cd6ce66fd3de112edc81174b78eab36aa8e564a501096bdb53e966c5e08c7078"
+  },
+  "fp_dev250_v1": {
+    "image_manifest.json": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc",
+    "annotations_coco.json": "74837c386c4bbd2805f9976fcfd796931b2f6cfa72693b91d2f441bee473c635",
+    "candidates_gt.json": "0f8885a0d1dc9381a699408cdace1c2fc4b83291a09bbc4d77300e31f6ad15bf"
+  },
+  "fp_test400_holdout_v1": {
+    "image_manifest.json": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8",
+    "annotations_coco.json": "283e5b7d868326c8267475495ac0e044720aaf2dc704b44da689c6c667e8d047",
+    "candidates_gt.json": "0521dc83205c017f221f561c4c3dcc8a83c60e602e9126f61bb85239b2e3e574"
+  }
+}

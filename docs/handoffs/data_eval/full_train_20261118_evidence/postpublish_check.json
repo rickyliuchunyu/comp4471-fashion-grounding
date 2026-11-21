@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "retained_new_images": 32476,
+  "all_new_legal_instances": 113149,
+  "protected_fingerprints": 10761,
+  "retained_duplicate_flags": 0,
+  "parent_and_delta_union_verified": true,
+  "checksums_sha256": "37d64b68185c99926e49bee3bae7a64dcc6b92cffbf4224011766322e4895948"
+}

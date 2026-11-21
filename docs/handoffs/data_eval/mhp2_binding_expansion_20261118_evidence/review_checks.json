@@ -1,0 +1,14 @@
+{
+  "train": {
+    "pages": 34,
+    "semantic_groups": 846,
+    "archive_sha256": "7886ff7ff44d6015c06a826d553b142752097dd9b2bde2b4a4a7c0c91abc40ec",
+    "blind_and_answer_targets_verified": true
+  },
+  "dev": {
+    "pages": 21,
+    "semantic_groups": 518,
+    "archive_sha256": "666b8656f25a5119600ed96395a540d8483bbe5c0bfa5ed2630c921728178bad",
+    "blind_and_answer_targets_verified": true
+  }
+}

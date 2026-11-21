@@ -1,0 +1,238 @@
+{
+  "0": {
+    "name": "background",
+    "project_id": null
+  },
+  "1": {
+    "name": "cap/hat",
+    "project_id": 8
+  },
+  "2": {
+    "name": "helmet",
+    "project_id": null
+  },
+  "3": {
+    "name": "face",
+    "project_id": null
+  },
+  "4": {
+    "name": "hair",
+    "project_id": null
+  },
+  "5": {
+    "name": "left-arm",
+    "project_id": null
+  },
+  "6": {
+    "name": "right-arm",
+    "project_id": null
+  },
+  "7": {
+    "name": "left-hand",
+    "project_id": null
+  },
+  "8": {
+    "name": "right-hand",
+    "project_id": null
+  },
+  "9": {
+    "name": "protector",
+    "project_id": null
+  },
+  "10": {
+    "name": "bikini/bra",
+    "project_id": null
+  },
+  "11": {
+    "name": "jacket/windbreaker/hoodie",
+    "project_id": 4
+  },
+  "12": {
+    "name": "t-shirt",
+    "project_id": 1
+  },
+  "13": {
+    "name": "polo-shirt",
+    "project_id": 1
+  },
+  "14": {
+    "name": "sweater",
+    "project_id": 1
+  },
+  "15": {
+    "name": "singlet",
+    "project_id": 1
+  },
+  "16": {
+    "name": "torso-skin",
+    "project_id": null
+  },
+  "17": {
+    "name": "pants",
+    "project_id": 2
+  },
+  "18": {
+    "name": "shorts/swim-shorts",
+    "project_id": 2
+  },
+  "19": {
+    "name": "skirt",
+    "project_id": 3
+  },
+  "20": {
+    "name": "stockings",
+    "project_id": null
+  },
+  "21": {
+    "name": "socks",
+    "project_id": 8
+  },
+  "22": {
+    "name": "left-boot",
+    "project_id": 6
+  },
+  "23": {
+    "name": "right-boot",
+    "project_id": 6
+  },
+  "24": {
+    "name": "left-shoe",
+    "project_id": 6
+  },
+  "25": {
+    "name": "right-shoe",
+    "project_id": 6
+  },
+  "26": {
+    "name": "left-highheel",
+    "project_id": 6
+  },
+  "27": {
+    "name": "right-highheel",
+    "project_id": 6
+  },
+  "28": {
+    "name": "left-sandal",
+    "project_id": 6
+  },
+  "29": {
+    "name": "right-sandal",
+    "project_id": 6
+  },
+  "30": {
+    "name": "left-leg",
+    "project_id": null
+  },
+  "31": {
+    "name": "right-leg",
+    "project_id": null
+  },
+  "32": {
+    "name": "left-foot",
+    "project_id": null
+  },
+  "33": {
+    "name": "right-foot",
+    "project_id": null
+  },
+  "34": {
+    "name": "coat",
+    "project_id": 4
+  },
+  "35": {
+    "name": "dress",
+    "project_id": 5
+  },
+  "36": {
+    "name": "robe",
+    "project_id": null
+  },
+  "37": {
+    "name": "jumpsuit",
+    "project_id": null
+  },
+  "38": {
+    "name": "other-full-body-clothes",
+    "project_id": null
+  },
+  "39": {
+    "name": "headwear",
+    "project_id": 8
+  },
+  "40": {
+    "name": "backpack",
+    "project_id": 7
+  },
+  "41": {
+    "name": "ball",
+    "project_id": null
+  },
+  "42": {
+    "name": "bats",
+    "project_id": null
+  },
+  "43": {
+    "name": "belt",
+    "project_id": 8
+  },
+  "44": {
+    "name": "bottle",
+    "project_id": null
+  },
+  "45": {
+    "name": "carrybag",
+    "project_id": 7
+  },
+  "46": {
+    "name": "cases",
+    "project_id": null
+  },
+  "47": {
+    "name": "sunglasses",
+    "project_id": 8
+  },
+  "48": {
+    "name": "eyewear",
+    "project_id": 8
+  },
+  "49": {
+    "name": "glove",
+    "project_id": 8
+  },
+  "50": {
+    "name": "scarf",
+    "project_id": 8
+  },
+  "51": {
+    "name": "umbrella",
+    "project_id": null
+  },
+  "52": {
+    "name": "wallet/purse",
+    "project_id": 7
+  },
+  "53": {
+    "name": "watch",
+    "project_id": 8
+  },
+  "54": {
+    "name": "wristband",
+    "project_id": null
+  },
+  "55": {
+    "name": "tie",
+    "project_id": 8
+  },
+  "56": {
+    "name": "other-accessory",
+    "project_id": null
+  },
+  "57": {
+    "name": "other-upper-body-clothes",
+    "project_id": null
+  },
+  "58": {
+    "name": "other-lower-body-clothes",
+    "project_id": null
+  }
+}

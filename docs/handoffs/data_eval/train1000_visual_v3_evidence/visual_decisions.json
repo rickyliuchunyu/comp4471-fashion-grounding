@@ -1,0 +1,1393 @@
+{
+  "viewed_sheets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "overrides": {
+    "159022": {
+      "action": "quarantine",
+      "reason": "Dress mask overlaps the separately annotated dotted top; garment identity unclear."
+    },
+    "99459": {
+      "zh": "画面左边的黑色夹克",
+      "en": "the black jacket on the left"
+    },
+    "99448": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "288336": {
+      "zh": "橙色花纹连衣裙",
+      "en": "the orange patterned dress"
+    },
+    "102953": {
+      "action": "quarantine",
+      "reason": "Tiny shoe fragment among multiple people's shoes; cannot confidently verify unique referent."
+    },
+    "102954": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "199476": {
+      "action": "quarantine",
+      "reason": "Almost completely occluded shoe fragment; inadequate visible evidence."
+    },
+    "18298": {
+      "action": "quarantine",
+      "reason": "Skirt target only a small black fragment beneath another garment; source boundary unclear."
+    },
+    "66725": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "40761": {
+      "zh": "灰绿色长裤",
+      "en": "the gray-green trousers"
+    },
+    "135494": {
+      "zh": "浅色连衣裙",
+      "en": "the light-colored dress"
+    },
+    "300457": {
+      "zh": "画面下方左侧的黑色长靴",
+      "en": "the black boot at the lower left of the image"
+    },
+    "20585": {
+      "zh": "蓝绿色长连衣裙",
+      "en": "the long teal dress"
+    },
+    "40472": {
+      "zh": "红色花纹上衣",
+      "en": "the red patterned top"
+    },
+    "156167": {
+      "zh": "浅色无袖连衣裙",
+      "en": "the light-colored sleeveless dress"
+    },
+    "212950": {
+      "zh": "蓝紫色花纹连衣裙",
+      "en": "the blue and purple patterned dress"
+    },
+    "280243": {
+      "action": "quarantine",
+      "reason": "Only a small exposed hem of the top is visible; reliable garment-level appearance cannot be verified."
+    },
+    "298358": {
+      "zh": "黑色长袖连衣裙",
+      "en": "the black long-sleeved dress"
+    },
+    "68986": {
+      "action": "quarantine",
+      "reason": "Head accessory is extremely low contrast against mannequin and cannot reliably identify an accessory."
+    },
+    "121618": {
+      "zh": "棕色长连衣裙",
+      "en": "the long brown dress"
+    },
+    "122899": {
+      "zh": "浅色长袖连衣裙",
+      "en": "the light-colored long-sleeved dress"
+    },
+    "206433": {
+      "zh": "浅蓝色连衣裙",
+      "en": "the light blue dress"
+    },
+    "230548": {
+      "action": "quarantine",
+      "reason": "Only tiny shoe tip visible beneath trousers."
+    },
+    "278486": {
+      "zh": "浅色花纹连衣裙",
+      "en": "the light-colored patterned dress"
+    },
+    "13122": {
+      "zh": "粉色衬衫",
+      "en": "the pink shirt"
+    },
+    "92716": {
+      "zh": "浅色领带",
+      "en": "the light-colored tie"
+    },
+    "140236": {
+      "zh": "白色连衣裙",
+      "en": "the white dress"
+    },
+    "147662": {
+      "zh": "画面下方右侧的灰色鞋",
+      "en": "the gray shoe at the lower right of the image"
+    },
+    "147889": {
+      "zh": "深色花纹上衣",
+      "en": "the dark patterned top"
+    },
+    "178578": {
+      "zh": "黑色夹克",
+      "en": "the black jacket"
+    },
+    "203876": {
+      "zh": "浅色衬衫",
+      "en": "the light-colored shirt"
+    },
+    "316385": {
+      "zh": "粉色花纹半身裙",
+      "en": "the pink patterned skirt"
+    },
+    "318335": {
+      "zh": "灰绿色无袖连衣裙",
+      "en": "the gray-green sleeveless dress"
+    },
+    "58486": {
+      "zh": "画面左边的黑色夹克",
+      "en": "the black jacket on the left"
+    },
+    "70235": {
+      "action": "quarantine",
+      "reason": "Tiny almost hidden shoe tip."
+    },
+    "143709": {
+      "zh": "彩色花纹长连衣裙",
+      "en": "the long multicolored patterned dress"
+    },
+    "177515": {
+      "zh": "粉色外套",
+      "en": "the pink coat"
+    },
+    "193702": {
+      "zh": "浅绿色夹克",
+      "en": "the light green jacket"
+    },
+    "241528": {
+      "action": "quarantine",
+      "reason": "Three pairs of black trousers; target cannot be assigned confidently from crop alone; needs full-mask overlay adjudication."
+    },
+    "316347": {
+      "action": "quarantine",
+      "reason": "Multiple black shoes on two people; relative right descriptor does not uniquely locate target."
+    },
+    "316348": {
+      "zh": "画面最左边的黑色鞋",
+      "en": "the leftmost black shoe in the image"
+    },
+    "13813": {
+      "zh": "浅色宽檐帽",
+      "en": "the light-colored wide-brimmed hat"
+    },
+    "46701": {
+      "zh": "浅粉色连衣裙",
+      "en": "the light pink dress"
+    },
+    "86809": {
+      "action": "quarantine",
+      "reason": "Skirt only a narrow occluded strip; garment boundary uncertain."
+    },
+    "119794": {
+      "zh": "画面中间的灰色花纹短上衣",
+      "en": "the gray patterned cropped top in the middle of the image"
+    },
+    "119795": {
+      "zh": "画面中间的条纹长裙",
+      "en": "the long striped skirt in the middle of the image"
+    },
+    "204219": {
+      "zh": "蓝色花纹半身裙",
+      "en": "the blue patterned skirt"
+    },
+    "239859": {
+      "zh": "深灰色半身裙",
+      "en": "the dark gray skirt"
+    },
+    "267499": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "54603": {
+      "action": "quarantine",
+      "reason": "Two white shirts; cannot confidently determine target person from crop without overlay."
+    },
+    "89947": {
+      "zh": "绿色衬衫",
+      "en": "the green shirt"
+    },
+    "218352": {
+      "action": "quarantine",
+      "reason": "Three dark shirts; needs full-mask overlay to identify intended person."
+    },
+    "230535": {
+      "zh": "绿色上衣",
+      "en": "the green top"
+    },
+    "243638": {
+      "zh": "白色上衣",
+      "en": "the white top"
+    },
+    "300177": {
+      "action": "quarantine",
+      "reason": "Only skirt hem visible beneath coat; unclear whole garment boundary."
+    },
+    "311759": {
+      "zh": "画面右边的黑色长裤",
+      "en": "the black trousers on the right"
+    },
+    "324879": {
+      "zh": "浅色半身裙",
+      "en": "the light-colored skirt"
+    },
+    "39256": {
+      "action": "quarantine",
+      "reason": "Visible garment is ambiguous between a skirt and wide pleated trousers; do not change GT category without adjudication."
+    },
+    "137081": {
+      "action": "quarantine",
+      "reason": "Target is almost entirely occluded; only a small hem is visible."
+    },
+    "140756": {
+      "zh": "画面左边的黑色无袖上衣",
+      "en": "the black sleeveless top on the left"
+    },
+    "199961": {
+      "zh": "深灰色半身裙",
+      "en": "the dark gray skirt"
+    },
+    "239093": {
+      "zh": "浅色衬衫",
+      "en": "the light-colored shirt"
+    },
+    "239098": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "11792": {
+      "zh": "浅灰色衬衫",
+      "en": "the light gray shirt"
+    },
+    "39230": {
+      "zh": "浅粉色上衣",
+      "en": "the light pink top"
+    },
+    "53344": {
+      "zh": "浅色镜框的眼镜",
+      "en": "the glasses with light-colored frames"
+    },
+    "55140": {
+      "action": "quarantine",
+      "reason": "Only a small black neckline fragment is visible."
+    },
+    "109388": {
+      "action": "quarantine",
+      "reason": "Skirt query points to an apparently full-length garment including torso; category/mask extent requires adjudication."
+    },
+    "181201": {
+      "action": "quarantine",
+      "reason": "Tiny partially occluded wrist accessory cannot be verified confidently."
+    },
+    "187396": {
+      "zh": "浅蓝色连衣裙",
+      "en": "the light blue dress"
+    },
+    "189275": {
+      "action": "quarantine",
+      "reason": "Top mask is almost entirely occluded; visible fragment resembles waistband."
+    },
+    "226722": {
+      "zh": "画面左边的白色上衣",
+      "en": "the white top on the left"
+    },
+    "226730": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "236162": {
+      "zh": "深绿色上衣",
+      "en": "the dark green top"
+    },
+    "257672": {
+      "action": "quarantine",
+      "reason": "Visible strap is ambiguous between belt and bag strap."
+    },
+    "297545": {
+      "action": "quarantine",
+      "reason": "Garment appears to have two wide legs; skirt versus trousers GT requires adjudication."
+    },
+    "8118": {
+      "zh": "灰色无袖上衣",
+      "en": "the gray sleeveless top"
+    },
+    "8120": {
+      "zh": "灰色长裙",
+      "en": "the gray long skirt"
+    },
+    "36629": {
+      "zh": "米色半身裙",
+      "en": "the beige skirt"
+    },
+    "36633": {
+      "zh": "米色外套",
+      "en": "the beige jacket"
+    },
+    "37885": {
+      "zh": "深色长裤",
+      "en": "the dark trousers"
+    },
+    "37887": {
+      "zh": "深色短袖衬衫",
+      "en": "the dark short-sleeved shirt"
+    },
+    "46520": {
+      "action": "quarantine",
+      "reason": "Only a strap is visible; bag body outside image/occluded."
+    },
+    "99491": {
+      "action": "quarantine",
+      "reason": "Only upper boot shafts visible at bottom edge; shoe category not independently verifiable."
+    },
+    "99492": {
+      "action": "quarantine",
+      "reason": "Only upper boot shafts visible at bottom edge; shoe category not independently verifiable."
+    },
+    "118732": {
+      "zh": "黑白外套",
+      "en": "the black and white jacket"
+    },
+    "128335": {
+      "zh": "黑色半身裙",
+      "en": "the black skirt"
+    },
+    "141097": {
+      "action": "quarantine",
+      "reason": "Only trouser fragments visible below coat at image edge."
+    },
+    "144093": {
+      "zh": "蓝色长裤",
+      "en": "the blue trousers"
+    },
+    "158372": {
+      "zh": "浅色连衣裙",
+      "en": "the light-colored dress"
+    },
+    "198805": {
+      "action": "quarantine",
+      "reason": "Only narrow waistband strip visible; skirt identity cannot be verified."
+    },
+    "230755": {
+      "action": "quarantine",
+      "reason": "Overexposed tiny shoe crop cannot be identified confidently."
+    },
+    "267373": {
+      "action": "quarantine",
+      "reason": "Shirt is almost fully hidden by jacket; only collar/sliver visible."
+    },
+    "305735": {
+      "action": "quarantine",
+      "reason": "Only tiny lower-edge black fragment is visible; skirt not verifiable."
+    },
+    "5990": {
+      "zh": "浅蓝色半身裙",
+      "en": "the light blue skirt"
+    },
+    "23999": {
+      "zh": "深蓝色大衣",
+      "en": "the dark blue coat"
+    },
+    "94738": {
+      "action": "quarantine",
+      "reason": "Small head accessory cannot be reliably distinguished from hair/highlights."
+    },
+    "129671": {
+      "action": "quarantine",
+      "reason": "Skirt almost entirely hidden behind cardigan; ambiguous visible fragment."
+    },
+    "136853": {
+      "zh": "粉色半身裙",
+      "en": "the pink skirt"
+    },
+    "160658": {
+      "action": "quarantine",
+      "reason": "Dress upper part is hidden; visible skirt-only mask/category extent needs adjudication."
+    },
+    "160659": {
+      "zh": "灰色外套",
+      "en": "the gray jacket"
+    },
+    "214702": {
+      "zh": "画面前方的黑色大衣",
+      "en": "the black coat in the foreground"
+    },
+    "214704": {
+      "zh": "画面左下方的黑色鞋子",
+      "en": "the black shoe at the lower left"
+    },
+    "240572": {
+      "action": "quarantine",
+      "reason": "Top visible only as narrow strip and hem; strongly occluded by jacket."
+    },
+    "306636": {
+      "zh": "画面右边的深色长裤",
+      "en": "the dark trousers on the right"
+    },
+    "306638": {
+      "zh": "画面右边的黑色无袖上衣",
+      "en": "the black sleeveless top on the right"
+    },
+    "39346": {
+      "action": "quarantine",
+      "reason": "Dress mostly hidden by coat and bag; only disconnected fragments visible."
+    },
+    "71152": {
+      "zh": "画面左边的黑色长裤",
+      "en": "the black trousers on the left"
+    },
+    "71155": {
+      "zh": "画面左边的黑色上衣",
+      "en": "the black top on the left"
+    },
+    "87648": {
+      "zh": "浅粉色上衣",
+      "en": "the light pink top"
+    },
+    "88772": {
+      "zh": "酒红色长袖上衣",
+      "en": "the burgundy long-sleeved top"
+    },
+    "107652": {
+      "zh": "深蓝色长裙",
+      "en": "the dark blue long skirt"
+    },
+    "115028": {
+      "action": "quarantine",
+      "reason": "Only neckline fragment of black top visible under jacket."
+    },
+    "126011": {
+      "action": "quarantine",
+      "reason": "Dress visible only as neckline and hem under jacket; extent ambiguous."
+    },
+    "164042": {
+      "zh": "画面中央的白色上衣",
+      "en": "the white top in the center"
+    },
+    "193946": {
+      "action": "quarantine",
+      "reason": "Tiny largely hidden black bag cannot be confidently identified."
+    },
+    "253091": {
+      "zh": "画面左边的深色上衣",
+      "en": "the dark top on the left"
+    },
+    "270373": {
+      "action": "quarantine",
+      "reason": "Only two trouser hems and thin sliver visible below coat."
+    },
+    "281415": {
+      "action": "quarantine",
+      "reason": "Dress largely hidden by similarly red coat; extent and identity ambiguous."
+    },
+    "323196": {
+      "action": "quarantine",
+      "reason": "Two similar black trousers in group image; original category-only query ambiguous and crop alone insufficient to assign position."
+    },
+    "67518": {
+      "zh": "画面左边的黑色外套",
+      "en": "the black jacket on the left"
+    },
+    "86562": {
+      "zh": "碎花半身裙",
+      "en": "the floral skirt"
+    },
+    "122740": {
+      "zh": "白色开衫",
+      "en": "the white cardigan"
+    },
+    "151886": {
+      "zh": "黑色连衣裙",
+      "en": "the black dress"
+    },
+    "179184": {
+      "zh": "多色半身裙",
+      "en": "the multicolored skirt"
+    },
+    "184508": {
+      "zh": "浅蓝绿色连衣裙",
+      "en": "the light teal dress"
+    },
+    "186603": {
+      "action": "quarantine",
+      "reason": "Only collar sliver visible, shirt color/identity not reliably verifiable."
+    },
+    "186607": {
+      "action": "quarantine",
+      "reason": "Small dark seated trouser patch obscured by table; insufficient target visibility."
+    },
+    "197979": {
+      "action": "quarantine",
+      "reason": "Only small neckline triangle visible below multiple outer layers."
+    },
+    "219227": {
+      "action": "quarantine",
+      "reason": "Skirt is cropped to a narrow waist strip at image edge."
+    },
+    "223462": {
+      "zh": "白色上衣",
+      "en": "the white top"
+    },
+    "247273": {
+      "action": "quarantine",
+      "reason": "Only a small lower-edge patch is visible; skirt shape and dot pattern not verifiable."
+    },
+    "277134": {
+      "zh": "白色头饰",
+      "en": "the white head accessory"
+    },
+    "277135": {
+      "zh": "米白色连衣裙",
+      "en": "the ivory dress"
+    },
+    "302478": {
+      "zh": "白色领结",
+      "en": "the white bow tie"
+    },
+    "305870": {
+      "zh": "橙色半身裙",
+      "en": "the orange skirt"
+    },
+    "320958": {
+      "action": "quarantine",
+      "reason": "Only neckline strip of red underlayer visible; could be scarf or top without full target context."
+    },
+    "326032": {
+      "action": "quarantine",
+      "reason": "Only narrow skirt fragment at lower edge, partly hidden by hands/jacket."
+    },
+    "2900": {
+      "zh": "深色外套",
+      "en": "the dark jacket"
+    },
+    "52258": {
+      "action": "quarantine",
+      "reason": "Top cropped to hem strip at upper image edge."
+    },
+    "54893": {
+      "zh": "浅色短袖衬衫",
+      "en": "the light-colored short-sleeved shirt"
+    },
+    "57007": {
+      "zh": "画面左边的浅灰色衬衫",
+      "en": "the light gray shirt on the left"
+    },
+    "57008": {
+      "zh": "画面左边的黑色外套",
+      "en": "the black jacket on the left"
+    },
+    "77403": {
+      "zh": "粉色上衣",
+      "en": "the pink top"
+    },
+    "85223": {
+      "action": "quarantine",
+      "reason": "Trousers cropped to tiny bottom-edge fragment in group image."
+    },
+    "87145": {
+      "zh": "画面最左边的黑色鞋子",
+      "en": "the leftmost black shoe"
+    },
+    "87146": {
+      "zh": "画面从左往右第二只黑色鞋",
+      "en": "the second black shoe from the left in the image"
+    },
+    "110012": {
+      "action": "quarantine",
+      "reason": "Bag visible only as thin edge; body strongly occluded."
+    },
+    "128388": {
+      "zh": "灰色长裤",
+      "en": "the gray trousers"
+    },
+    "185903": {
+      "zh": "白色上衣",
+      "en": "the white top"
+    },
+    "215293": {
+      "action": "quarantine",
+      "reason": "Multiple gray shoes in group image; original right-side wording ambiguous, needs full candidate adjudication."
+    },
+    "234702": {
+      "action": "quarantine",
+      "reason": "Trousers cropped to waistband strip only."
+    },
+    "255966": {
+      "action": "quarantine",
+      "reason": "Shoe mostly occluded by tires, only tiny dark fragment visible."
+    },
+    "286554": {
+      "action": "quarantine",
+      "reason": "Skirt visible only as narrow red strip under long coat."
+    },
+    "311016": {
+      "action": "quarantine",
+      "reason": "Only small shirt collar visible under zipped hoodie."
+    },
+    "325352": {
+      "action": "quarantine",
+      "reason": "Dress almost fully hidden by coat; disconnected narrow fragments only."
+    },
+    "16861": {
+      "action": "quarantine",
+      "reason": "Dress mostly occluded by jacket."
+    },
+    "29753": {
+      "zh": "蓝绿色长裤",
+      "en": "the teal trousers"
+    },
+    "53154": {
+      "zh": "画面中央的黑色半身裙",
+      "en": "the black skirt in the center"
+    },
+    "53156": {
+      "zh": "画面中央的黑色短袖衬衫",
+      "en": "the black short-sleeved shirt in the center"
+    },
+    "94126": {
+      "zh": "棕色衬衫",
+      "en": "the brown shirt"
+    },
+    "113822": {
+      "action": "quarantine",
+      "reason": "Skirt versus shorts category ambiguous; several background skirts."
+    },
+    "136667": {
+      "zh": "橙色上衣",
+      "en": "the orange top"
+    },
+    "136671": {
+      "zh": "橙色半身裙",
+      "en": "the orange skirt"
+    },
+    "151379": {
+      "action": "quarantine",
+      "reason": "Only narrow hem visible."
+    },
+    "159128": {
+      "zh": "黑色拼浅色袖子的外套",
+      "en": "the black jacket with light-colored sleeves"
+    },
+    "159133": {
+      "action": "quarantine",
+      "reason": "Dress mostly occluded; visible fragments insufficient to verify category."
+    },
+    "178814": {
+      "zh": "深紫色衬衫",
+      "en": "the dark purple shirt"
+    },
+    "200977": {
+      "zh": "深色半身裙",
+      "en": "the dark skirt"
+    },
+    "212500": {
+      "zh": "灰褐色上衣",
+      "en": "the taupe top"
+    },
+    "215337": {
+      "action": "quarantine",
+      "reason": "Several black trousers; target cropped at edge, position requires adjudication."
+    },
+    "220054": {
+      "zh": "浅绿色衬衫",
+      "en": "the light green shirt"
+    },
+    "220822": {
+      "action": "quarantine",
+      "reason": "Garment silhouette ambiguous between long skirt and flared trousers; original GT category needs adjudication."
+    },
+    "232841": {
+      "action": "quarantine",
+      "reason": "Trousers cropped to narrow strip; category not verifiable."
+    },
+    "237947": {
+      "action": "quarantine",
+      "reason": "Multiple black jackets in group image; require candidate overlay to establish unambiguous position."
+    },
+    "237953": {
+      "action": "quarantine",
+      "reason": "Multiple black trousers in group image; require candidate overlay to establish unambiguous position."
+    },
+    "252675": {
+      "zh": "粉色印花衬衫",
+      "en": "the pink printed shirt"
+    },
+    "257604": {
+      "zh": "紫色衬衫",
+      "en": "the purple shirt"
+    },
+    "257606": {
+      "action": "quarantine",
+      "reason": "Only boot shaft at lower image boundary; foot invisible."
+    },
+    "282678": {
+      "action": "quarantine",
+      "reason": "Only bag handles and tiny rim visible at image edge."
+    },
+    "325055": {
+      "action": "quarantine",
+      "reason": "Tiny sunglasses on head insufficiently visible."
+    },
+    "326862": {
+      "zh": "多色印花连衣裙",
+      "en": "the multicolored printed dress"
+    },
+    "52723": {
+      "action": "quarantine",
+      "reason": "Only tiny neckline and hem visible."
+    },
+    "77637": {
+      "action": "quarantine",
+      "reason": "Swimwear bottom mask/category shorts mismatch; needs adjudication."
+    },
+    "99580": {
+      "zh": "印花半身裙",
+      "en": "the printed skirt"
+    },
+    "160043": {
+      "zh": "画面左侧的红色鞋子",
+      "en": "the red shoe on the left side of the image"
+    },
+    "182110": {
+      "action": "quarantine",
+      "reason": "Scarf versus dress panel ambiguous."
+    },
+    "195726": {
+      "action": "quarantine",
+      "reason": "Only sleeves visible; top category not verifiable."
+    },
+    "208951": {
+      "zh": "浅粉色印花外套",
+      "en": "the light pink printed jacket"
+    },
+    "242712": {
+      "action": "quarantine",
+      "reason": "Top almost entirely hidden by coat."
+    },
+    "243257": {
+      "action": "quarantine",
+      "reason": "Visible garment appears dress; skirt annotation requires adjudication."
+    },
+    "262069": {
+      "zh": "浅粉色毛衣",
+      "en": "the light pink sweater"
+    },
+    "266181": {
+      "action": "quarantine",
+      "reason": "Waist drawstring annotated as belt; category ambiguity."
+    },
+    "271965": {
+      "zh": "蓝色印花上衣",
+      "en": "the blue printed top"
+    },
+    "278905": {
+      "zh": "蓝绿色印花半身裙",
+      "en": "the teal printed skirt"
+    },
+    "299219": {
+      "zh": "多色印花上衣",
+      "en": "the multicolored printed top"
+    },
+    "320369": {
+      "zh": "画面左侧的黑色长裤",
+      "en": "the black trousers on the left side of the image"
+    },
+    "320374": {
+      "zh": "画面左侧的黑色外套",
+      "en": "the black jacket on the left side of the image"
+    },
+    "4338": {
+      "zh": "灰色长裤",
+      "en": "the gray trousers"
+    },
+    "4339": {
+      "zh": "灰色外套",
+      "en": "the gray jacket"
+    },
+    "39520": {
+      "zh": "多色印花衬衫",
+      "en": "the multicolored printed shirt"
+    },
+    "46307": {
+      "action": "quarantine",
+      "reason": "Shoe annotation at image bottom without visible foot."
+    },
+    "59082": {
+      "zh": "画面左侧的黑色长裤",
+      "en": "the black trousers on the left side of the image"
+    },
+    "59085": {
+      "zh": "画面左侧的黑色腰带",
+      "en": "the black belt on the left side of the image"
+    },
+    "62494": {
+      "zh": "紫色腰带",
+      "en": "the purple belt"
+    },
+    "147171": {
+      "action": "quarantine",
+      "reason": "Seated garment category skirt not verifiable."
+    },
+    "147174": {
+      "action": "quarantine",
+      "reason": "Sock visible only as tiny strip; competing sock ambiguous."
+    },
+    "165120": {
+      "action": "quarantine",
+      "reason": "Dress mostly occluded; only hem and neckline visible."
+    },
+    "183128": {
+      "zh": "蓝白格纹长裤",
+      "en": "the blue and white checked trousers"
+    },
+    "189339": {
+      "action": "quarantine",
+      "reason": "Skirt versus dress hidden by jacket; category not verifiable."
+    },
+    "209147": {
+      "action": "quarantine",
+      "reason": "Head accessory indistinguishable from hair."
+    },
+    "210063": {
+      "action": "quarantine",
+      "reason": "Drawstring annotated belt; category ambiguity."
+    },
+    "319107": {
+      "zh": "深灰色长裤",
+      "en": "the dark gray trousers"
+    },
+    "18851": {
+      "zh": "浅粉色连衣裙",
+      "en": "the light pink dress"
+    },
+    "44594": {
+      "zh": "灰色长裤",
+      "en": "the gray trousers"
+    },
+    "57053": {
+      "zh": "白色长款连衣裙",
+      "en": "the long white dress"
+    },
+    "57054": {
+      "zh": "银色头饰",
+      "en": "the silver head accessory"
+    },
+    "68840": {
+      "zh": "深蓝色衬衫",
+      "en": "the dark blue shirt"
+    },
+    "115362": {
+      "action": "quarantine",
+      "reason": "Top visible only as neckline and hem."
+    },
+    "122137": {
+      "action": "quarantine",
+      "reason": "Dress hidden almost entirely by top."
+    },
+    "155059": {
+      "zh": "蓝色印花连衣裙",
+      "en": "the blue printed dress"
+    },
+    "160582": {
+      "zh": "蓝白印花连衣裙",
+      "en": "the blue and white printed dress"
+    },
+    "160584": {
+      "action": "quarantine",
+      "reason": "Several dark bags in crowded scene; tiny occluded target ambiguous."
+    },
+    "183000": {
+      "action": "quarantine",
+      "reason": "Sweater visible only as neckline and cuffs."
+    },
+    "206241": {
+      "zh": "白色头纱",
+      "en": "the white veil"
+    },
+    "213328": {
+      "zh": "灰绿色连衣裙",
+      "en": "the gray-green dress"
+    },
+    "213843": {
+      "zh": "画面左侧的格纹长裤",
+      "en": "the checked trousers on the left side of the image"
+    },
+    "213844": {
+      "zh": "画面左侧的格纹外套",
+      "en": "the checked jacket on the left side of the image"
+    },
+    "215260": {
+      "zh": "深绿色上衣",
+      "en": "the dark green top"
+    },
+    "218513": {
+      "zh": "灰褐色外套",
+      "en": "the taupe jacket"
+    },
+    "231812": {
+      "action": "quarantine",
+      "reason": "Top cropped to narrow lower edge."
+    },
+    "272693": {
+      "action": "quarantine",
+      "reason": "Skirt versus dress boundary unclear."
+    },
+    "305163": {
+      "zh": "红黑色上衣",
+      "en": "the red and black top"
+    },
+    "307822": {
+      "action": "quarantine",
+      "reason": "Trousers cropped to tiny wedge."
+    },
+    "311546": {
+      "zh": "粉色印花连衣裙",
+      "en": "the pink printed dress"
+    },
+    "20876": {
+      "action": "quarantine",
+      "reason": "Dress mostly hidden by coat."
+    },
+    "36694": {
+      "zh": "黑白印花上衣",
+      "en": "the black and white printed top"
+    },
+    "71666": {
+      "action": "quarantine",
+      "reason": "Dress mostly hidden by jacket."
+    },
+    "123080": {
+      "zh": "橙红色上衣",
+      "en": "the orange-red top"
+    },
+    "123081": {
+      "action": "quarantine",
+      "reason": "Skirt cropped to upper strip; category uncertain."
+    },
+    "169177": {
+      "action": "quarantine",
+      "reason": "Only small fabric patch visible; shorts category cannot be verified."
+    },
+    "173323": {
+      "zh": "画面最左侧的黑色外套",
+      "en": "the leftmost black jacket"
+    },
+    "173330": {
+      "action": "quarantine",
+      "reason": "Tiny shirt fragments in group image; ambiguous."
+    },
+    "234331": {
+      "action": "quarantine",
+      "reason": "Skirt versus lower dress panel ambiguous."
+    },
+    "234332": {
+      "action": "quarantine",
+      "reason": "Top versus upper dress panel ambiguous."
+    },
+    "236419": {
+      "zh": "画面最左侧的黑色鞋子",
+      "en": "the leftmost black shoe"
+    },
+    "236420": {
+      "zh": "画面左起第二只黑色鞋子",
+      "en": "the second black shoe from the left"
+    },
+    "257865": {
+      "action": "quarantine",
+      "reason": "Only narrow black shirt fragments visible."
+    },
+    "275187": {
+      "zh": "多色印花连衣裙",
+      "en": "the multicolored printed dress"
+    },
+    "322884": {
+      "action": "quarantine",
+      "reason": "Only hem visible; skirt versus dress unclear."
+    },
+    "304": {
+      "action": "quarantine",
+      "reason": "Dress mostly hidden by coat."
+    },
+    "68227": {
+      "action": "quarantine",
+      "reason": "Top only tiny fragment at upper image boundary."
+    },
+    "88060": {
+      "zh": "画面左侧的黑色外套",
+      "en": "the black jacket on the left side of the image"
+    },
+    "88061": {
+      "zh": "画面左侧的黑色长裤",
+      "en": "the black trousers on the left side of the image"
+    },
+    "98580": {
+      "action": "quarantine",
+      "reason": "Trousers cropped to tiny fragments at boundary."
+    },
+    "110027": {
+      "zh": "黑白印花长裤",
+      "en": "the black and white printed trousers"
+    },
+    "147967": {
+      "zh": "黑色连衣裙",
+      "en": "the black dress"
+    },
+    "178411": {
+      "zh": "画面左侧的黑色外套",
+      "en": "the black jacket on the left side of the image"
+    },
+    "178423": {
+      "action": "quarantine",
+      "reason": "Two black trousers; target identity requires overlay."
+    },
+    "309585": {
+      "action": "quarantine",
+      "reason": "Only sleeves visible; jacket versus dress component unclear."
+    },
+    "319918": {
+      "action": "quarantine",
+      "reason": "Trousers only tiny upper strip at image boundary."
+    },
+    "64643": {
+      "zh": "浅棕色半身裙",
+      "en": "the light brown skirt"
+    },
+    "157695": {
+      "action": "quarantine",
+      "reason": "Only collar and tiny hem visible."
+    },
+    "184066": {
+      "action": "quarantine",
+      "reason": "Top cropped to tiny hem at upper edge."
+    },
+    "196908": {
+      "action": "quarantine",
+      "reason": "Only tiny top fragments visible."
+    },
+    "196909": {
+      "zh": "画面左侧的黑色长裤",
+      "en": "the black trousers on the left side of the image"
+    },
+    "244762": {
+      "action": "quarantine",
+      "reason": "Only neckline visible; top category unverifiable."
+    },
+    "250156": {
+      "action": "quarantine",
+      "reason": "Three black trousers; target requires position adjudication."
+    },
+    "250157": {
+      "action": "quarantine",
+      "reason": "Three black jackets; target requires position adjudication."
+    },
+    "18558": {
+      "zh": "黑色包",
+      "en": "the black bag"
+    },
+    "302724": {
+      "zh": "白色无肩带长连衣裙",
+      "en": "the long white strapless dress"
+    }
+  },
+  "default_for_viewed_only": "retain pending human review",
+  "status": "visual_adjudication_complete_pending_human_review",
+  "replacements": [
+    [
+      18794,
+      18294,
+      "多色印花连衣裙",
+      "the multicolored printed dress"
+    ],
+    [
+      48179,
+      68987,
+      "米色长连衣裙",
+      "the long beige dress"
+    ],
+    [
+      48403,
+      70234,
+      "紫色长连衣裙",
+      "the long purple dress"
+    ],
+    [
+      39339,
+      86807,
+      "白色上衣",
+      "the white top"
+    ],
+    [
+      25272,
+      300170,
+      "白色大衣",
+      "the white coat"
+    ],
+    [
+      11333,
+      39257,
+      "蓝绿色上衣",
+      "the teal top"
+    ],
+    [
+      13630,
+      109387,
+      "粉色发带",
+      "the pink headband"
+    ],
+    [
+      35999,
+      230753,
+      "深蓝色连衣裙",
+      "the dark blue dress"
+    ],
+    [
+      43977,
+      198801,
+      "紫色毛衣",
+      "the purple sweater"
+    ],
+    [
+      41521,
+      99493,
+      "橙色大衣",
+      "the orange coat"
+    ],
+    [
+      26281,
+      305734,
+      "灰紫色印花衬衫",
+      "the gray-purple printed shirt"
+    ],
+    [
+      40730,
+      94737,
+      "白色连衣裙",
+      "the white dress"
+    ],
+    [
+      29313,
+      247267,
+      "紫色开衫",
+      "the purple cardigan"
+    ],
+    [
+      7710,
+      186608,
+      "黑色夹克",
+      "the black jacket"
+    ],
+    [
+      35764,
+      219228,
+      "浅灰色吊带上衣",
+      "the light gray camisole"
+    ],
+    [
+      35098,
+      215287,
+      "深蓝色夹克",
+      "the dark blue jacket"
+    ],
+    [
+      27584,
+      237947,
+      "画面最左边的黑色夹克",
+      "the leftmost black jacket in the image"
+    ],
+    [
+      32051,
+      325054,
+      "画面中央的白色短袖上衣",
+      "the white short-sleeved top in the center of the image"
+    ],
+    [
+      14292,
+      113818,
+      "黑色马甲",
+      "the black vest"
+    ],
+    [
+      32393,
+      266180,
+      "黑白印花短裤",
+      "the black and white printed shorts"
+    ],
+    [
+      28578,
+      243259,
+      "画面右边的红色鞋",
+      "the red shoe on the right of the image"
+    ],
+    [
+      2010,
+      189346,
+      "白色夹克",
+      "the white jacket"
+    ],
+    [
+      3057,
+      147172,
+      "画面左边的黑色靴子",
+      "the black boot on the left of the image"
+    ],
+    [
+      34024,
+      209140,
+      "深蓝色长袖上衣",
+      "the dark blue long-sleeved top"
+    ],
+    [
+      37862,
+      231804,
+      "深灰色长裤",
+      "the dark gray pants"
+    ],
+    [
+      20901,
+      272692,
+      "画面右边的浅粉色鞋",
+      "the light pink shoe on the right of the image"
+    ],
+    [
+      30951,
+      257861,
+      "深蓝色夹克",
+      "the dark blue jacket"
+    ],
+    [
+      48042,
+      68223,
+      "深绿色长裤",
+      "the dark green pants"
+    ],
+    [
+      29793,
+      250157,
+      "画面最左边的黑色夹克",
+      "the leftmost black jacket in the image"
+    ],
+    [
+      5478,
+      184063,
+      "红色腰带",
+      "the red belt"
+    ]
+  ],
+  "focused_viewed_sheets": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "unresolved_images": [
+    {
+      "image_id": 38309,
+      "reason": "Full dress incorrectly split into skirt/top masks; no clear alternative target. Preserve image and masks; exclude semantic query pending human adjudication."
+    }
+  ],
+  "parent_queries_sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d"
+}

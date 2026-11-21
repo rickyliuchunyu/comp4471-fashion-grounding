@@ -1,0 +1,26 @@
+{
+  "fp_dev250_v1": {
+    "image_id_overlap": 0,
+    "group_id_overlap": 0,
+    "sha256_overlap": 0,
+    "source_image_id_overlap": 0,
+    "previous_checksums_verified": true,
+    "manifest_sha256": "c8c3b24d5a21f93a32060d2fdd9772102bf48b0d6504d60a3466444c7866ecdc"
+  },
+  "fp_test400_holdout_v1": {
+    "image_id_overlap": 0,
+    "group_id_overlap": 0,
+    "sha256_overlap": 0,
+    "source_image_id_overlap": 0,
+    "previous_checksums_verified": true,
+    "manifest_sha256": "ca8f5738c18cf800091e87eb36b86e80c9fe465c3de2adb4db7549f474419cf8"
+  },
+  "fp_language_dev250_simple_draft_v4": {
+    "image_id_overlap": 0,
+    "group_id_overlap": 0,
+    "sha256_overlap": 0,
+    "source_image_id_overlap": 0,
+    "previous_checksums_verified": true,
+    "manifest_sha256": "98957cc700fb40957f94f76c9c367874f5959eae932ad86f7130d4cceed2936a"
+  }
+}

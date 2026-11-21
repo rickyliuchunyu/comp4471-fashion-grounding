@@ -1,0 +1,48 @@
+{
+  "release_id": "fp_language1000_visual_draft_v3",
+  "parent": "fp_language1000_machine_v2",
+  "parent_queries_sha256": "c577a56575e12e1dbf7072a294ef97674dbb4bf3f6f4ed2a8de645ac3177b49d",
+  "formal_freeze": false,
+  "accepted_language_queries": 0,
+  "usage": "Experimental machine-label training and human review only; not human-accepted or formal evaluation.",
+  "dev_unchanged_sha256": "970dc962ae93484ec80cfe00af74969b88d5bb74c06e56f28e3d17f804da8489",
+  "statistics": {
+    "status": "passed",
+    "images": 1000,
+    "instances": 4784,
+    "candidates": 4784,
+    "queries": {
+      "queries_draft.jsonl": 2998,
+      "queries_accepted.jsonl": 0
+    },
+    "query_images": 999,
+    "semantic_groups": 1499,
+    "query_records": 2998,
+    "human_accepted": 0,
+    "quarantined_groups": 109,
+    "actions": {
+      "retained": 1309,
+      "quarantine": 109,
+      "revised": 162,
+      "replacement": 28
+    },
+    "source_masks_unchanged": true,
+    "parent_partitions_unchanged": true,
+    "train_dev_overlap": {
+      "image_id": 0,
+      "group_id": 0,
+      "sha256": 0,
+      "source_id": 0
+    },
+    "same_category_competition": 198,
+    "query_types": {
+      "spatial": 21,
+      "appearance": 1273,
+      "combined": 205
+    }
+  },
+  "code_base_commit": "c514a4fc1d0ee3d28ba0dc6ac4fb4c6d11dee4e0",
+  "implementation": "scripts/build_train_visual_draft.py",
+  "implementation_sha256": "65f4bd90ad8bd069cd2c1dc40f9da525144ed79c63bdfd7ac9825f638ffc886e",
+  "test_count": 126
+}
